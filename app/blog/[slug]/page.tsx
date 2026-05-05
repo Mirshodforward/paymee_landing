@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { blogPosts, getPostBySlug, type BlogCategory } from "@/lib/blog-posts";
 import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
@@ -85,19 +86,15 @@ export default async function BlogArticlePage({ params }: Props) {
         <meta itemProp="headline" content={post.title} />
         <meta itemProp="datePublished" content={post.datePublished} />
 
-        <nav aria-label="Yo‘lak" className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
+        <nav aria-label="Yo‘lak" className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
           <Link href="/" className="hover:text-[#229ED9]">
             Bosh sahifa
           </Link>
-          <span className="text-slate-400" aria-hidden>
-            /
-          </span>
+          <ChevronRight className="size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} />
           <Link href="/blog" className="hover:text-[#229ED9]">
             Blog
           </Link>
-          <span className="text-slate-400" aria-hidden>
-            /
-          </span>
+          <ChevronRight className="size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} />
           <span className="line-clamp-2 font-medium text-slate-800 dark:text-slate-200">{post.title}</span>
         </nav>
 
@@ -138,9 +135,10 @@ export default async function BlogArticlePage({ params }: Props) {
             href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center rounded-full bg-[#229ED9] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#1e8dc4]"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#1e8dc4]"
           >
-            Mini App ochish →
+            Mini App ochish
+            <ArrowRight className="size-4 shrink-0" aria-hidden strokeWidth={2} />
           </a>
         </section>
 
@@ -149,7 +147,8 @@ export default async function BlogArticlePage({ params }: Props) {
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#229ED9] hover:text-[#1e8dc4] dark:text-[#229ED9]"
           >
-            ← Barcha maqolalar
+            <ArrowLeft className="size-4 shrink-0" aria-hidden strokeWidth={2} />
+            Barcha maqolalar
           </Link>
         </footer>
       </article>

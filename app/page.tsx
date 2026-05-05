@@ -1,3 +1,22 @@
+import {
+  ArrowLeftRight,
+  ArrowRight,
+  BadgeCheck,
+  ChevronDown,
+  ClipboardList,
+  CreditCard,
+  Gem,
+  Gift,
+  Gauge,
+  LayoutGrid,
+  KeyRound,
+  Send,
+  Shield,
+  Smartphone,
+  Sparkles,
+  Star,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -46,57 +65,65 @@ const faqLd = {
   })),
 };
 
-const services = [
+const services: {
+  Icon: LucideIcon;
+  title: string;
+  body: string;
+  tag: string;
+}[] = [
   {
-    emoji: "⭐",
+    Icon: Star,
     title: "Telegram Stars",
-    body: "Kerakli miqdorda yulduz tanlang — slot asosidagi narx, buyurtma holati polling orqali: to‘lov → yuborish → tasdiqlangan.",
+    body: "Kerakli miqdorda yulduz tanlang — slot asosidagi narx, buyurtma holati polling orqali: toʻlov → yuborish → tasdiqlangan.",
     tag: "/stars",
   },
   {
-    emoji: "💎",
+    Icon: Gem,
     title: "Telegram Premium",
     body: "3, 6 yoki 12 oy obuna. Foydalanuvchini qidirish, Premium mavjudligi tekshiruvi va promokoddan keyingi buyurtma oqimi.",
     tag: "/premium",
   },
   {
-    emoji: "🎁",
+    Icon: Gift,
     title: "Telegram Gift",
-    body: "Katalogdan sovg‘a tanlash, anonim yuborish, izoh va TGS ko‘rinishi — jo‘natish Telegram sendGift akasi orqali.",
+    body: "Katalogdan sovg‘a tanlash, anonim yuborish, izoh va TGS koʻrinishi — joʻnatish Telegram sendGift akasi orqali.",
     tag: "/gift",
   },
   {
-    emoji: "✨",
+    Icon: Sparkles,
     title: "Eski va limited giftlar",
-    body: "Muddati o‘tgan yoki koleksiyasiz qolgan Telegram giftlar bilan ishlash: ularni Stars formatiga o‘tkazish va akkaunt bo‘ylab boshqarish uchun qulay interfeys.",
+    body: "Muddati oʻtgan yoki koleksiyasiz qolgan Telegram giftlar bilan ishlash: ularni Stars formatiga oʻtkazish va akkaunt boʻylab boshqarish uchun qulay interfeys.",
     tag: "Gift va Stars",
   },
-] as const;
+];
 
-const steps = [
+const steps: { k: string; title: string; desc: string; Icon: LucideIcon }[] = [
   {
     k: "1",
+    Icon: Smartphone,
     title: "Botda oching",
     desc: "Telegramda havolani bosing va StarsPaymee Mini App ni ishga tushiring — profilingiz Telegram orqali avtomatik aniqlanadi.",
   },
   {
     k: "2",
+    Icon: LayoutGrid,
     title: "Xizmatni tanlang",
     desc: "Stars, Premium yoki Gift: qabul qiluvchini tasdiqlang, miqdorni tanlang va narxni so‘mda ko‘ring.",
   },
   {
     k: "3",
+    Icon: CreditCard,
     title: "To‘lang va qabul qiling",
     desc: "UzCard/HUMO bilan to‘lang; buyurtma tarixi va statuslar History bo‘limida — muvaffaqiyatda yulduz yoki Premium yoki Gift hisoblanadi.",
   },
-] as const;
+];
 
-const trust = [
-  { label: "initData HMAC", detail: "Serverda Telegram imzosini tekshirish" },
-  { label: "Rate limit", detail: "IP bo‘yicha so‘rovlar cheklangan" },
-  { label: "CORS va Helmet", detail: "Faqat ruxsat etilgan domenlar" },
-  { label: "Buyurtma kuzatuv", detail: "ID bo‘yicha status API" },
-] as const;
+const trust: { label: string; detail: string; Icon: LucideIcon }[] = [
+  { Icon: KeyRound, label: "initData HMAC", detail: "Serverda Telegram imzosini tekshirish" },
+  { Icon: Gauge, label: "Rate limit", detail: "IP bo‘yicha so‘rovlar cheklangan" },
+  { Icon: Shield, label: "CORS va Helmet", detail: "Faqat ruxsat etilgan domenlar" },
+  { Icon: ClipboardList, label: "Buyurtma kuzatuv", detail: "ID bo‘yicha status API" },
+];
 
 export default function Home() {
   return (
@@ -128,10 +155,12 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.95fr)] lg:items-center">
               <div>
                 <p className="inline-flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#229ED9] sm:text-sm">
+                  <Send className="size-4 shrink-0 opacity-90" aria-hidden strokeWidth={2} />
                   <span>Telegram Mini App</span>
                   <span className="hidden text-slate-400 sm:inline" aria-hidden>
                     ·
                   </span>
+                  <CreditCard className="size-4 shrink-0 text-slate-500 dark:text-slate-400" aria-hidden strokeWidth={2} />
                   <span className="text-slate-600 dark:text-slate-400">UzCard · HUMO</span>
                 </p>
                 <h1
@@ -155,7 +184,7 @@ export default function Home() {
                     className="inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#229ED9]/25 transition hover:bg-[#1e8dc4]"
                   >
                     Mini App ni ochish
-                    <span aria-hidden>→</span>
+                    <ArrowRight className="size-4 shrink-0" aria-hidden strokeWidth={2} />
                   </a>
                   <a
                     href="#xizmatlar"
@@ -166,21 +195,15 @@ export default function Home() {
                 </div>
                 <ul className="mt-14 flex flex-wrap gap-x-10 gap-y-3 text-sm text-slate-600 dark:text-slate-400">
                   <li className="flex items-center gap-2">
-                    <span className="text-green-600 dark:text-green-400" aria-hidden>
-                      ●
-                    </span>
+                    <BadgeCheck className="size-5 shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden strokeWidth={2} />
                     So‘mda shaffof narxlash
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-green-600 dark:text-green-400" aria-hidden>
-                      ●
-                    </span>
+                    <BadgeCheck className="size-5 shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden strokeWidth={2} />
                     Eskirgan giftlar bilan ishlash
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-green-600 dark:text-green-400" aria-hidden>
-                      ●
-                    </span>
+                    <BadgeCheck className="size-5 shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden strokeWidth={2} />
                     Referral bonuslari
                   </li>
                 </ul>
@@ -193,21 +216,25 @@ export default function Home() {
                   aria-label="StarsPaymee xizmatlari qisqacha"
                 >
                   <header className="flex items-center gap-3 border-b border-slate-200 pb-5 dark:border-slate-700">
-                    <span className="text-3xl" aria-hidden>
-                      📱
-                    </span>
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#229ED9]/15 text-[#229ED9] dark:bg-[#229ED9]/20">
+                      <Smartphone className="size-6" aria-hidden strokeWidth={2} />
+                    </div>
                     <div>
                       <p className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
                         Live flow
                       </p>
-                      <p className="font-semibold text-slate-900 dark:text-white">Dashboard → Stars / Premium / Gift</p>
+                      <p className="flex flex-wrap items-center gap-1 font-semibold text-slate-900 dark:text-white">
+                        Dashboard{" "}
+                        <ArrowRight className="mx-0.5 size-4 shrink-0 text-slate-400" aria-hidden strokeWidth={2} /> Stars / Premium / Gift
+                      </p>
                     </div>
                   </header>
                   <dl className="mt-6 space-y-5 text-sm">
                     <div className="flex justify-between gap-4 border-b border-slate-100 pb-5 dark:border-slate-800">
                       <dt className="text-slate-500 dark:text-slate-400">Stars buyurtmasi</dt>
-                      <dd className="font-medium text-right text-slate-900 dark:text-slate-100">
-                        narxi ↔ slot / polling
+                      <dd className="flex items-center justify-end gap-1 font-medium text-right text-slate-900 dark:text-slate-100">
+                        narxi{" "}
+                        <ArrowLeftRight className="size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} /> slot / polling
                       </dd>
                     </div>
                     <div className="flex justify-between gap-4 border-b border-slate-100 pb-5 dark:border-slate-800">
@@ -251,9 +278,7 @@ export default function Home() {
                     key={s.title}
                     className="group flex flex-col rounded-2xl border border-slate-200 bg-slate-50/80 p-6 transition hover:border-[#229ED9]/35 hover:bg-white hover:shadow-lg dark:border-slate-800 dark:bg-slate-950/50 dark:hover:border-[#229ED9]/35 dark:hover:bg-slate-950"
                   >
-                    <span className="text-4xl drop-shadow-sm" aria-hidden>
-                      {s.emoji}
-                    </span>
+                    <s.Icon className="size-8 text-[#229ED9]" strokeWidth={1.85} aria-hidden />
                     <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{s.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                       {s.body}
@@ -274,16 +299,22 @@ export default function Home() {
               Uch bosqichda
             </h2>
             <ol className="mt-14 grid gap-8 md:grid-cols-3">
-              {steps.map((s) => (
-                <li key={s.k} className="relative rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-800 dark:bg-slate-900/40">
-                  <span className="absolute -top-3 left-8 flex h-9 w-9 items-center justify-center rounded-full bg-[#229ED9] text-sm font-bold text-white shadow-md">
-                    {s.k}
-                  </span>
-                  <h3 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">{s.title}</h3>
-                  <p className="mt-3 text-slate-600 dark:text-slate-400">{s.desc}</p>
-                </li>
-              ))}
-            </ol>
+                {steps.map((s) => (
+                  <li
+                    key={s.k}
+                    className="relative rounded-2xl border border-slate-200 bg-white p-8 pt-10 dark:border-slate-800 dark:bg-slate-900/40"
+                  >
+                    <span className="absolute -top-3 left-8 flex h-9 w-9 items-center justify-center rounded-full bg-[#229ED9] text-sm font-bold text-white shadow-md">
+                      {s.k}
+                    </span>
+                    <div className="flex justify-end">
+                      <s.Icon className="size-7 text-[#229ED9]/80" strokeWidth={1.75} aria-hidden />
+                    </div>
+                    <h3 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">{s.title}</h3>
+                    <p className="mt-3 text-slate-600 dark:text-slate-400">{s.desc}</p>
+                  </li>
+                ))}
+              </ol>
           </section>
 
           <section
@@ -305,7 +336,8 @@ export default function Home() {
                     key={t.label}
                     className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-950"
                   >
-                    <span className="text-sm font-bold text-[#229ED9]">{t.label}</span>
+                    <t.Icon className="size-7 text-[#229ED9]" strokeWidth={1.85} aria-hidden />
+                    <span className="mt-3 block text-sm font-bold text-slate-900 dark:text-white">{t.label}</span>
                     <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">{t.detail}</p>
                   </li>
                 ))}
@@ -325,9 +357,10 @@ export default function Home() {
                 href={telegramBotUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-flex items-center rounded-full bg-white px-8 py-3.5 text-sm font-bold text-sky-800 shadow-xl transition hover:bg-slate-100"
+                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-sky-800 shadow-xl transition hover:bg-slate-100"
               >
                 {siteConfig.name} · Telegram
+                <ArrowRight className="size-4" aria-hidden strokeWidth={2.5} />
               </a>
             </div>
           </section>
@@ -346,12 +379,11 @@ export default function Home() {
                     <summary className="cursor-pointer list-none px-6 py-5 font-semibold text-slate-900 outline-none marker:content-none [&::-webkit-details-marker]:hidden dark:text-white">
                       <span className="flex items-start justify-between gap-4">
                         <span>{item.question}</span>
-                        <span
+                        <ChevronDown
+                          className="mt-0.5 size-5 shrink-0 text-slate-400 transition-transform group-open:rotate-180 dark:text-slate-500"
                           aria-hidden
-                          className="mt-1 shrink-0 text-slate-400 transition-transform group-open:rotate-180 dark:text-slate-500"
-                        >
-                          ▼
-                        </span>
+                          strokeWidth={2}
+                        />
                       </span>
                     </summary>
                     <div className="border-t border-slate-100 px-6 pb-5 pt-1 text-sm leading-relaxed text-slate-600 dark:border-slate-800 dark:text-slate-400">

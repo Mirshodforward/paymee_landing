@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Send } from "lucide-react";
 import { getTelegramBotUrl, siteConfig } from "@/lib/site";
 
 const navLink =
@@ -51,8 +52,9 @@ export function SiteHeader({ blogActive = false }: { blogActive?: boolean }) {
           href={telegramBotUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#229ED9] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-[#1e8dc4] md:px-5"
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#229ED9] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-[#1e8dc4] md:px-5"
         >
+          <Send className="size-4 shrink-0 opacity-95" aria-hidden strokeWidth={2} />
           Telegramda ochish
         </a>
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ArrowRight, BookOpenText, ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { blogCategories, blogPosts, getPostsByCategory, type BlogCategory } from "@/lib/blog-posts";
 import { getSiteUrl, siteConfig } from "@/lib/site";
@@ -62,18 +63,21 @@ export default async function BlogPage({
   return (
     <main className="relative mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:pb-28">
       <JsonLd data={blogIndexLd} />
-      <nav aria-label="Yo‘lak" className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
+      <nav aria-label="Yo‘lak" className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
         <Link href="/" className="transition hover:text-[#229ED9]">
           Bosh sahifa
         </Link>
-        <span aria-hidden className="text-slate-400">
-          /
-        </span>
+        <ChevronRight className="size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} />
         <span className="font-medium text-slate-900 dark:text-white">Blog</span>
       </nav>
 
       <header className="mt-8 max-w-3xl">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Blog</h1>
+        <h1 className="flex flex-wrap items-center gap-3 text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <span className="flex size-11 items-center justify-center rounded-xl bg-[#229ED9]/15 text-[#229ED9] dark:bg-[#229ED9]/20">
+            <BookOpenText className="size-6" strokeWidth={2} aria-hidden />
+          </span>
+          Blog
+        </h1>
         <p className="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
           Telegram Stars, Premium va Gifts haqida yangiliklar va qo‘llanmalar — O‘zbekistonda kartadan toʻlovlar,
           reseller va xavfsizlik mavzulari.
@@ -110,11 +114,9 @@ export default async function BlogPage({
                 {post.title}
               </h2>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{post.excerpt}</p>
-              <p className="mt-5 font-semibold text-[#229ED9] dark:text-[#229ED9]">
-                O‘qish{" "}
-                <span aria-hidden className="inline-block transition-transform group-hover:translate-x-1">
-                  →
-                </span>
+              <p className="mt-5 flex items-center gap-1.5 font-semibold text-[#229ED9] dark:text-[#229ED9]">
+                O‘qish
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden strokeWidth={2} />
               </p>
             </Link>
           </li>
