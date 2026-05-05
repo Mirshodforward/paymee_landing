@@ -22,6 +22,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Link } from "@/i18n/navigation";
+import { GiftTgsShowcase } from "@/components/home/gift-tgs-showcase";
 import { GiftDashboardIcon } from "@/components/icons/gift-dashboard-icon";
 import { getTelegramBotUrl, siteConfig } from "@/lib/site";
 
@@ -272,9 +273,7 @@ export default async function HomePage({ params }: PageProps) {
                     </div>
                   </div>
                   <div className="flex justify-center lg:justify-end">
-                    <div className="rounded-3xl border border-white/60 bg-white/50 p-6 shadow-lg shadow-fuchsia-500/10 backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/55">
-                      <GiftDashboardIcon color="#c026d3" size={108} />
-                    </div>
+                    <GiftTgsShowcase />
                   </div>
                 </div>
               </div>
