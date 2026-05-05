@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 
-const logo = "/starspaymeelogo.jpg";
+const logo = "/icon.jpg";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {

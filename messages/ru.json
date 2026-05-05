@@ -1,0 +1,169 @@
+{
+  "seo": {
+    "titleDefault": "StarsPaymee — Telegram Stars, Premium и подарки | Mini App",
+    "description": "StarsPaymee — мини-приложение в Telegram: покупка Stars, Telegram Premium на 3/6/12 месяцев и отправка подарков, работа со старыми или ограниченными подарками. Оплата картами UzCard/HUMO в сумах.",
+    "ogLocale": "ru_RU",
+    "keywordsList": [
+      "StarsPaymee",
+      "Telegram Stars",
+      "Telegram Premium",
+      "Telegram Gift",
+      "мини приложение Telegram",
+      "UzCard",
+      "HUMO",
+      "Узбекистан"
+    ]
+  },
+  "nav": {
+    "services": "Сервисы",
+    "process": "Процесс",
+    "trustLabel": "Надежность",
+    "faq": "FAQ",
+    "blog": "Блог",
+    "openTelegram": "Открыть в Telegram"
+  },
+  "locales": {
+    "uz": "O‘zbekcha",
+    "ru": "Ruscha",
+    "en": "Inglizcha",
+    "switchAria": "Tilni tanlang"
+  },
+  "footer": {
+    "tagline": "Stars, Premium, подарки и работа со старыми подарками — оплата в сумах узбекскими картами.",
+    "miniAppHeading": "Мини-приложение",
+    "blog": "Блог"
+  },
+  "blogIndex": {
+    "breadcrumbHome": "Главная",
+    "title": "Блог",
+    "subtitle": "Материалы про Telegram Stars, Premium и Gifts: оплаты в Узбекистане, реселлер и безопасность.",
+    "filterAria": "Категория",
+    "filterAll": "Все",
+    "read": "Читать",
+    "totalPostsSuffix": "Всего {count} материалов",
+    "footerNote": "Обновляем регулярно"
+  },
+  "blogArticle": {
+    "openMiniApp": "Открыть Mini App",
+    "tryTitle": "Попробуйте в приложении",
+    "tryBody": "Создавайте заказы Stars/Premium/Gift в StarsPaymee Mini App и отслеживайте статус в одном окне.",
+    "backList": "Все материалы"
+  },
+  "categories": {
+    "Stars": "Stars",
+    "Premium": "Premium",
+    "Gifts": "Gifts",
+    "Biznes": "Бизнес",
+    "Telegram": "Telegram",
+    "Xavfsizlik": "Безопасность"
+  },
+  "home": {
+    "skipToMain": "Перейти к содержимому",
+    "heroBadgeTelegram": "Telegram Mini App",
+    "heroBadgeCards": "UzCard · HUMO",
+    "heroHeadline": "<stars>Stars</stars>, <premium>Premium</premium> и <gift>Gift</gift> в Telegram — в одном месте",
+    "heroCtaMiniApp": "Открыть Mini App",
+    "heroCtaServices": "Сервисы",
+    "bulletTransparent": "Прозрачные цены в сумах",
+    "bulletOldGifts": "Работа со старыми подарками",
+    "bulletReferral": "Реферальные бонусы",
+    "cardAria": "Краткий обзор StarsPaymee",
+    "cardLiveFlow": "Live flow",
+    "cardDashboardFlow": "Dashboard",
+    "starsOrder": "Заказ Stars",
+    "ddPriceSlot": "цена <arrow/> слот / polling",
+    "premiumDd": "поиск + 3|6|12 мес",
+    "giftDd": "выбор TGS и отправка",
+    "giftLimitedLabel": "Gift + limited",
+    "premiumLabelShort": "Premium",
+    "heroQuickActions": "Быстрые разделы Mini App",
+    "buyStarsShort": "Купить Stars",
+    "buyPremiumShort": "Купить Premium",
+    "svcHeading": "Что можно сделать?",
+    "svcIntro": "Модули на базе Telegram-бота, Express REST и PostgreSQL и React/Vite Mini App: дашборд, Stars, Premium, Gift, история и рефералка — здесь они сведены в маркетинговый блок.",
+    "svcItems": [
+      {
+        "title": "Telegram Stars",
+        "body": "Выберите количество — цена зависит от слота; статус заказа обновляется через polling после оплаты.",
+        "tag": "/stars"
+      },
+      {
+        "title": "Telegram Premium",
+        "body": "Пакеты 3, 6 и 12 месяцев с поиском пользователя и проверкой активного Premium перед оплатой.",
+        "tag": "/premium"
+      },
+      {
+        "title": "Telegram Gift",
+        "body": "Каталог, анонимная отправка, комментарий и TGS; доставка через Telegram sendGift.",
+        "tag": "/gift"
+      },
+      {
+        "title": "Legacy / limited подарки",
+        "body": "Работа с истёкшими или limited-подарками: конвертация в Stars и удобное управление в интерфейсе.",
+        "tag": "Gift и Stars"
+      }
+    ],
+    "giftStickerHeading": "Telegram Gift — примеры TGS-анимаций",
+    "giftStickerCaption": "Наведите курсор на стикер — анимация проиграется и остановится на первом кадре (как превью в Mini App).",
+    "processHeading": "Три простых шага",
+    "steps": [
+      {
+        "title": "Откройте в боте",
+        "desc": "Перейдите по ссылке и запустите StarsPaymee Mini App — профиль Telegram подтягивается автоматически."
+      },
+      {
+        "title": "Выберите сервис",
+        "desc": "Stars, Premium или Gift: проверьте получателя и суммы в сумах перед оплатой."
+      },
+      {
+        "title": "Оплатите и получите",
+        "desc": "UzCard/HUMO оплата, статусы заказов в разделе History — после успеха приходят Stars, Premium или Gift."
+      }
+    ],
+    "trustHeading": "Инженерное доверие",
+    "trustItems": [
+      {
+        "label": "initData HMAC",
+        "detail": "Проверка подписи Telegram на сервере"
+      },
+      {
+        "label": "Rate limit",
+        "detail": "Ограничение запросов по IP по правилам API"
+      },
+      {
+        "label": "CORS + Helmet",
+        "detail": "Только доверенные домены"
+      },
+      {
+        "label": "Статус заказа",
+        "detail": "API по ID без лишней болтовни"
+      }
+    ],
+    "ctaHeading": "Загрузите Mini App и оформите первый заказ Stars или Premium уже сегодня",
+    "ctaBody": "Акции, промокоды и вывод реф-баланса — всё находится рядом в навигации Mini App.",
+    "ctaButton": "{brand} · Telegram",
+    "faqHeading": "Частые вопросы",
+    "faqItems": [
+      {
+        "question": "Что такое StarsPaymee и где оно открывается?",
+        "answer": "StarsPaymee — мини-приложение Telegram (WebApp): вы авторизуетесь аккаунтом, покупаете Telegram Stars, продлеваете Telegram Premium и отправляете Telegram Gift из одного места. Интерфейс согласован с Telegram WebApp API и практикой @twa-dev/sdk."
+      },
+      {
+        "question": "Какие способы оплаты поддерживаются?",
+        "answer": "Основной поток — банковские карты Узбекистана: UzCard и HUMO в сумах (UZS). После оплаты бэкенд проверяет заказ и при подтверждении отправляет Stars, Premium или Gift."
+      },
+      {
+        "question": "Что можно сделать со старыми или ограниченными Telegram gift?",
+        "answer": "Платформа использует допустимые механизмы Telegram для работы с limited и устаревшими подарками, при необходимости направляет Stars и даёт понятную логику в разделе Gift мини-приложения."
+      },
+      {
+        "question": "Как устроены безопасность и проверка аккаунта?",
+        "answer": "initData WebApp проверяется через HMAC-SHA256 на сервере; CORS только для доверенных доменов; rate limiting и Helmet для HTTP-безопасности. Сервер-сервер вызовы защищены внутренними ключами."
+      },
+      {
+        "question": "Есть ли реферальная программа и скидки?",
+        "answer": "Да: по реферальной ссылке за покупки начисляются бонусы звёзд; доступны промокоды и пакеты скидок для Stars, Premium и Gift."
+      }
+    ]
+  }
+}

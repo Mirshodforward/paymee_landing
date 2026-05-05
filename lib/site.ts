@@ -16,6 +16,6 @@ export const siteConfig = {
   name: "StarsPaymee",
   titleDefault: "StarsPaymee — Telegram Stars, Premium va Giftlar | Mini App",
   description:
-    "StarsPaymee — Telegram ichida ishlaydigan Mini App: Telegram Stars sotib olish, Telegram Premium obunasi (3/6/12 oy), Telegram Gift yuborish va eski yoki cheklangan muddatli giftlarni yulduzlarga yo‘naltirish. To‘lov: UzCard va HUMO (so‘m).",
+    "StarsPaymee — Telegramda Stars, Premium va Giftlar uchun Mini App.",
   locale: "uz_UZ",
 } as const;

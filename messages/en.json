@@ -1,0 +1,169 @@
+{
+  "seo": {
+    "titleDefault": "StarsPaymee — Telegram Stars, Premium & Gifts | Mini App",
+    "description": "StarsPaymee — a Telegram Mini App to buy Telegram Stars & Premium (3/6/12 mo), send Telegram Gifts, and manage older/limited gifts with conversion to Stars. Pays with UzCard/HUMO in UZS.",
+    "ogLocale": "en_US",
+    "keywordsList": [
+      "StarsPaymee",
+      "Telegram Stars",
+      "Telegram Premium",
+      "Telegram Gift",
+      "Telegram Mini App",
+      "UzCard",
+      "HUMO",
+      "Uzbekistan"
+    ]
+  },
+  "nav": {
+    "services": "Services",
+    "process": "Flow",
+    "trustLabel": "Trust",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "openTelegram": "Open in Telegram"
+  },
+  "locales": {
+    "uz": "O‘zbekcha",
+    "ru": "Ruscha",
+    "en": "Inglizcha",
+    "switchAria": "Tilni tanlang"
+  },
+  "footer": {
+    "tagline": "Telegram Stars, Premium, Gifts, and legacy-present workflows—checkout with Uzbek cards in UZS.",
+    "miniAppHeading": "Mini App link",
+    "blog": "Blog"
+  },
+  "blogIndex": {
+    "breadcrumbHome": "Home",
+    "title": "Blog",
+    "subtitle": "Guides about Telegram Stars, Premium, and Gifts—cards in Uzbekistan, reseller models, security.",
+    "filterAria": "Category",
+    "filterAll": "All",
+    "read": "Read article",
+    "totalPostsSuffix": "{count} articles total",
+    "footerNote": "Updated regularly"
+  },
+  "blogArticle": {
+    "openMiniApp": "Open Mini App",
+    "tryTitle": "Try it in the app",
+    "tryBody": "Create Stars/Premium/Gift orders inside StarsPaymee Mini App and watch status updates in real time.",
+    "backList": "All articles"
+  },
+  "categories": {
+    "Stars": "Stars",
+    "Premium": "Premium",
+    "Gifts": "Gifts",
+    "Biznes": "Business",
+    "Telegram": "Telegram",
+    "Xavfsizlik": "Security"
+  },
+  "home": {
+    "skipToMain": "Skip to main content",
+    "heroBadgeTelegram": "Telegram Mini App",
+    "heroBadgeCards": "UzCard · HUMO",
+    "heroHeadline": "Telegram <stars>Stars</stars>, <premium>Premium</premium>, and <gift>Gifts</gift>—one cockpit",
+    "heroCtaMiniApp": "Open Mini App",
+    "heroCtaServices": "Explore services",
+    "bulletTransparent": "Transparent UZS pricing",
+    "bulletOldGifts": "Support for ageing gifts",
+    "bulletReferral": "Referral rewards",
+    "cardAria": "StarsPaymee live flow snapshot",
+    "cardLiveFlow": "Live flow",
+    "cardDashboardFlow": "Dashboard",
+    "starsOrder": "Stars checkout",
+    "ddPriceSlot": "price <arrow/> slot / polling",
+    "premiumDd": "recipient search + 3|6|12 mo",
+    "giftDd": "pick TGS + deliver",
+    "giftLimitedLabel": "Gift + limited",
+    "premiumLabelShort": "Premium",
+    "heroQuickActions": "Quick actions in Mini App",
+    "buyStarsShort": "Get Stars",
+    "buyPremiumShort": "Get Premium",
+    "svcHeading": "What can you accomplish?",
+    "svcIntro": "Our Telegram bot pairs with Express/Postgres/React (Vite) Mini App dashboards—Stars, Premium, Gifts, receipts, referrals—marketing copy below mirrors the modular build.",
+    "svcItems": [
+      {
+        "title": "Telegram Stars",
+        "body": "Select the Stars amount—slot-priced quotes, deterministic polling updates after checkout.",
+        "tag": "/stars"
+      },
+      {
+        "title": "Telegram Premium",
+        "body": "3/6/12 month passes with recipient lookups and sanity checks prior to issuing Premium.",
+        "tag": "/premium"
+      },
+      {
+        "title": "Telegram Gifts",
+        "body": "Curated catalogue, anonymity, notes, sticker previews—issued through Telegram gift APIs.",
+        "tag": "/gift"
+      },
+      {
+        "title": "Legacy gifts",
+        "body": "Handle limited/expired presets, convert Stars where allowed, consolidate account-wide controls.",
+        "tag": "Gift + Stars"
+      }
+    ],
+    "giftStickerHeading": "Telegram Gifts — sample TGS animations",
+    "giftStickerCaption": "Hover a sticker to play the loop—release to freeze on frame zero, similar to the selection preview in Mini App.",
+    "processHeading": "Three calm steps",
+    "steps": [
+      {
+        "title": "Launch Mini App",
+        "desc": "Open the Telegram link—StarsPaymee attaches your Telegram profile instantly."
+      },
+      {
+        "title": "Choose a product",
+        "desc": "Stars, Premium or Gift—verify the recipient plus UZS totals before settling."
+      },
+      {
+        "title": "Pay & receive",
+        "desc": "Pay with UzCard/HUMO; History tab tracks progress until Stars/Premium/Gift drop."
+      }
+    ],
+    "trustHeading": "Engineering trust cues",
+    "trustItems": [
+      {
+        "label": "initData HMAC",
+        "detail": "Server verifies Telegram payloads"
+      },
+      {
+        "label": "Rate limit",
+        "detail": "IP scoped throttles for APIs"
+      },
+      {
+        "label": "CORS + Helmet",
+        "detail": "Headers align with allow-list"
+      },
+      {
+        "label": "Order tracking",
+        "detail": "Status APIs keyed by order id"
+      }
+    ],
+    "ctaHeading": "Load the Mini App and place your first Stars or Premium order right now",
+    "ctaBody": "Promos, promo codes, referral withdrawals—everything lives inside Mini App navigation.",
+    "ctaButton": "{brand} · Telegram",
+    "faqHeading": "Common questions",
+    "faqItems": [
+      {
+        "question": "What is StarsPaymee and where do I open it?",
+        "answer": "StarsPaymee is a Telegram Mini App (Web App): once you authenticate, you buy Telegram Stars, extend Telegram Premium, and send Telegram Gifts—everything from one hub. Built with Telegram Web App patterns and tooling similar to @twa-dev/sdk."
+      },
+      {
+        "question": "Which payment methods are supported?",
+        "answer": "Primarily Uzbek cards—UzCard & HUMO—in UZS. After payment succeeds, our backend verifies the order then delivers Stars, Premium, or a Gift."
+      },
+      {
+        "question": "What about old / limited Telegram gifts?",
+        "answer": "We rely on Telegram-allowed workflows for limited/outdated gifts, help convert value into Stars when applicable, and present the UX inside the Gift area of the mini app."
+      },
+      {
+        "question": "How secure is onboarding?",
+        "answer": "We validate Telegram initData with HMAC-SHA256, lock CORS to trusted origins, enforce rate limiting, standard Helmet headers, and server-to-server secrets for internal APIs."
+      },
+      {
+        "question": "Are referrals and promos supported?",
+        "answer": "Yes—friends who join via your link yield bonus Stars; curated campaigns and promo codes apply across Stars, Premium, and Gifts."
+      }
+    ]
+  }
+}

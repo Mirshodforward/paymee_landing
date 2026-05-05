@@ -1,8 +1,21 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
-import { JsonLd } from "@/components/seo/json-ld";
-import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { headers } from "next/headers";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
+  icons: {
+    icon: [
+      { url: "/icon.jpg", type: "image/jpeg", sizes: "32x32" },
+      { url: "/icon.jpg", type: "image/jpeg", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-icon.jpg", type: "image/jpeg", sizes: "180x180" }],
+    shortcut: "/icon.jpg",
+  },
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,142 +27,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = getSiteUrl();
-const telegramUrl = getTelegramBotUrl();
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#020617" },
-  ],
-  width: "device-width",
-  initialScale: 1,
-};
-
-/** Brauzer yorlig‘i va PWA uchun logo ( `/public/starspaymeelogo.jpg` ). */
-const brandLogoPath = "/starspaymeelogo.jpg";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  icons: {
-    icon: [{ url: brandLogoPath, type: "image/jpeg" }],
-    apple: [{ url: brandLogoPath, type: "image/jpeg" }],
-  },
-  title: {
-    default: siteConfig.titleDefault,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  applicationName: siteConfig.name,
-  alternates: {
-    canonical: "/",
-    languages: {
-      uz: "/",
-      ru: "/",
-    },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: siteConfig.locale,
-    url: siteUrl,
-    siteName: siteConfig.name,
-    title: siteConfig.titleDefault,
-    description: siteConfig.description,
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.titleDefault,
-    description: siteConfig.description,
-  },
-  keywords: [
-    "StarsPaymee",
-    "Telegram Stars",
-    "Telegram Stars sotib olish",
-    "Telegram Premium",
-    "Telegram Premium O‘zbekiston",
-    "Telegram Gift",
-    "Telegram Gift yuborish",
-    "eski Telegram gift",
-    "gift yulduzga",
-    "Telegram Mini App",
-    "UzCard",
-    "HUMO",
-    "so‘m bilan Stars",
-    "Telegram WebApp",
-  ],
-  category: "finance",
-  authors: [{ name: siteConfig.name, url: siteUrl }],
-  creator: siteConfig.name,
-};
-
-const rootGraphLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: siteConfig.name,
-      url: siteUrl,
-      logo: `${siteUrl}${brandLogoPath}`,
-      description: siteConfig.description,
-      sameAs: telegramUrl.startsWith("http") ? [telegramUrl] : undefined,
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      name: siteConfig.name,
-      url: siteUrl,
-      description: siteConfig.description,
-      publisher: { "@id": `${siteUrl}/#organization` },
-      inLanguage: ["uz", "ru"],
-    },
-    {
-      "@type": "WebApplication",
-      "@id": `${siteUrl}/#miniapp`,
-      name: `${siteConfig.name} — Telegram Mini App`,
-      url: siteUrl,
-      description: siteConfig.description,
-      applicationCategory: "FinanceApplication",
-      operatingSystem: "Web",
-      browserRequirements:
-        "JavaScript ishlaydi. Telegram ilovasida StarsPaymee Mini App sifatida ochiladi.",
-    },
-  ],
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
+  const h = await headers();
+  const loc = (h.get("x-next-intl-locale") as "uz" | "ru" | "en" | null) ?? "uz";
+  const htmlLang = loc === "ru" ? "ru" : loc === "en" ? "en" : "uz";
+
   return (
-    <html
-      lang="uz"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}
-    >
-      <body className="min-h-screen bg-background font-sans text-foreground">
-        <JsonLd data={rootGraphLd} />
-        {children}
-      </body>
+    <html lang={htmlLang} className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}>
+      <body className="min-h-screen bg-background font-sans text-foreground">{children}</body>
     </html>
   );
 }
