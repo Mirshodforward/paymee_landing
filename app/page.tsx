@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getTelegramBotUrl, siteConfig } from "@/lib/site";
 
@@ -117,47 +118,7 @@ export default function Home() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(245,165,36,0.06),transparent_40%)]"
         />
 
-        <header className="relative z-10 border-b border-slate-200/80 bg-white/75 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/75">
-          <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-            <Link
-              href="/"
-              className="flex shrink-0 items-center gap-2 font-semibold tracking-tight text-slate-900 dark:text-white"
-            >
-              <span
-                aria-hidden
-                className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#229ED9] text-lg text-white shadow-sm"
-              >
-                ★
-              </span>
-              <span>{siteConfig.name}</span>
-            </Link>
-            <nav
-              aria-label="Asosiy navigatsiya"
-              className="hidden items-center gap-6 text-sm font-medium md:flex"
-            >
-              <a href="#xizmatlar" className="text-slate-600 hover:text-[#229ED9] dark:text-slate-400 dark:hover:text-[#229ED9]">
-                Xizmatlar
-              </a>
-              <a href="#jarayon" className="text-slate-600 hover:text-[#229ED9] dark:text-slate-400 dark:hover:text-[#229ED9]">
-                Jarayon
-              </a>
-              <a href="#ishonch" className="text-slate-600 hover:text-[#229ED9] dark:text-slate-400 dark:hover:text-[#229ED9]">
-                Ishonch
-              </a>
-              <a href="#faq" className="text-slate-600 hover:text-[#229ED9] dark:text-slate-400 dark:hover:text-[#229ED9]">
-                FAQ
-              </a>
-            </nav>
-            <a
-              href={telegramBotUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#229ED9] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-[#1e8dc4] md:px-5"
-            >
-              Telegramda ochish
-            </a>
-          </div>
-        </header>
+        <SiteHeader />
 
         <main id="asosiy">
           <section
@@ -403,27 +364,7 @@ export default function Home() {
           </section>
         </main>
 
-        <footer className="border-t border-slate-200 bg-slate-900 py-14 text-slate-300 dark:border-slate-800">
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:grid-cols-2 sm:gap-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div>
-              <p className="text-lg font-bold text-white">{siteConfig.name}</p>
-              <p className="mt-2 max-w-md text-sm leading-relaxed opacity-90">
-                Telegram Stars, Premium, Gift va eski giftlar bilan ishlash — O‘zbekiston kartalari bilan so‘m to‘lov.
-              </p>
-            </div>
-            <address id="aloqa" className="not-italic">
-              <p className="text-xs uppercase tracking-wider text-slate-500">Mini App havolasi</p>
-              <a
-                href={telegramBotUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 block text-[#229ED9] hover:text-sky-300"
-              >
-                {telegramBotUrl.replace(/^https?:\/\//, "")}
-              </a>
-            </address>
-          </div>
-        </footer>
+        <SiteFooter />
       </div>
     </>
   );

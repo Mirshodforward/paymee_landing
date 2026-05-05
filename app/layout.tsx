@@ -26,8 +26,15 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+/** Brauzer yorlig‘i va PWA uchun logo ( `/public/starspaymeelogo.jpg` ). */
+const brandLogoPath = "/starspaymeelogo.jpg";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [{ url: brandLogoPath, type: "image/jpeg" }],
+    apple: [{ url: brandLogoPath, type: "image/jpeg" }],
+  },
   title: {
     default: siteConfig.titleDefault,
     template: `%s | ${siteConfig.name}`,
@@ -102,6 +109,7 @@ const rootGraphLd = {
       "@id": `${siteUrl}/#organization`,
       name: siteConfig.name,
       url: siteUrl,
+      logo: `${siteUrl}${brandLogoPath}`,
       description: siteConfig.description,
       sameAs: telegramUrl.startsWith("http") ? [telegramUrl] : undefined,
     },

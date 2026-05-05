@@ -1,18 +1,15 @@
-/** Base URL — productionda `.env.local` ichida NEXT_PUBLIC_SITE_URL ni o‘rnating */
+/** Yakuniy sayt manzili (envsiz, loyiha konfiguratsiyasi). Trailing slash qo‘shilmaydi. */
+export const SITE_URL_PUBLIC = "https://starstg.uz";
+
+/** Telegram bot / Mini App havolasi. */
+export const TELEGRAM_BOT_URL_PUBLIC = "https://t.me/StarsPaymee_bot";
+
 export function getSiteUrl(): string {
-  const url = process.env.NEXT_PUBLIC_SITE_URL;
-  if (url?.trim()) return url.replace(/\/$/, "");
-  return "http://localhost:3000";
+  return SITE_URL_PUBLIC.replace(/\/$/, "");
 }
 
-/**
- * Telegram bot yoki Mini App ochiladigan havola.
- * Masalan: https://t.me/sizning_bot
- */
 export function getTelegramBotUrl(): string {
-  const u = process.env.NEXT_PUBLIC_TELEGRAM_BOT_URL?.trim();
-  if (u) return u.replace(/\/$/, "");
-  return "https://t.me/StarsPaymee_bot";
+  return TELEGRAM_BOT_URL_PUBLIC.replace(/\/$/, "");
 }
 
 export const siteConfig = {
