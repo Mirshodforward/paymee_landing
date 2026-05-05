@@ -5,13 +5,84 @@
     "ogLocale": "uz_UZ",
     "keywordsList": [
       "StarsPaymee",
-      "Telegram Stars",
+      "telegram stars",
+      "telegram premium",
+      "telegram gifts",
+      "telegram gift",
       "Telegram Stars sotib olish",
-      "Telegram Premium",
-      "Telegram Gift",
-      "Telegram Mini App",
+      "telegram premium sotib olish",
+      "telegram yulduzlar",
+      "telegram yulduzlar sotib olish",
+      "telegram hadyalar",
+      "telegram hadya yuborish",
+      "telegram sovg'a yuborish",
+      "telegram sovg'alar",
+      "telegram stars narxi",
+      "telegram premium narxi",
+      "telegram stars va premium narxlari",
+      "telegram stars to'ldirish",
+      "telegram stars to'ldirish usullari",
+      "telegram premium qanday olish",
+      "telegram stars qanday olish",
+      "telegram stars nima",
+      "telegram premium nima",
+      "telegram stars qanday ishlaydi",
+      "telegram premium qanday ishlaydi",
+      "telegram stars foydasi nima",
+      "telegram premium foydalari",
+      "telegram hadyalar qanday yuboriladi",
+      "telegram gift yuborish",
+      "telegram stars sovg'a qilish",
+      "telegram premium sovg'a qilish",
+      "telegram stars arzon sotib olish",
+      "telegram premium arzon olish",
+      "telegram stars tez va ishonchli sotib olish",
+      "telegram stars tez yetkazib berish",
+      "telegram premium darhol olish",
+      "telegram premium darhol aktivatsiya qilish",
+      "telegram premium eng arzon narxda olish",
+      "telegram stars arzon narxda sotib olish",
+      "telegram stars online sotib olish",
+      "telegram premium online sotib olish",
+      "telegram stars karta orqali to'lash",
+      "telegram premium uzcard orqali olish",
+      "telegram stars uzcard",
+      "telegram premium humo orqali",
+      "telegram stars visa orqali sotib olish",
+      "telegram stars visa orqali",
+      "telegram premium mastercard orqali",
+      "telegram stars crypto orqali olish",
+      "telegram premium chegirma bilan olish",
+      "telegram stars to'lov qilish",
+      "telegram premium to'lash",
+      "telegram hadyalar online yuborish",
+      "telegram sovg'alar olish",
+      "telegram premium gift qilish",
+      "telegram hadyalar do'koni",
+      "telegram stars bot",
+      "telegram premium bot",
+      "telegram to'lov boti",
+      "telegram stars xizmat",
+      "telegram premium xizmat",
+      "telegram stars xizmatlari",
+      "telegram premium xizmatlari",
+      "telegram stars va premium sotib olish",
+      "telegram yulduzlar va sovg'alar",
+      "telegram stars O'zbekiston",
+      "telegram premium O'zbekiston",
+      "telegram stars O'zbekistonda",
+      "telegram premium O'zbekistonda",
+      "telegram stars O'zbekistonda sotib olish",
+      "telegram premium O'zbekistonda qanday olish",
+      "telegram stars Toshkent",
+      "telegram premium Toshkent",
+      "telegram hadyalar O'zbekistonda",
+      "telegram stars purchase",
+      "telegram premium subscription",
+      "telegram gifts send",
       "UzCard",
-      "HUMO"
+      "HUMO",
+      "Telegram Mini App"
     ]
   },
   "nav": {
@@ -40,7 +111,7 @@
     "filterAria": "Turkum",
     "filterAll": "Hammasi",
     "read": "O‘qish",
-    "totalPostsSuffix": "Jami {count} ta maqola",
+    "totalPostsSuffix": "{count} ta maqola",
     "footerNote": "Yangilanishi doimiy"
   },
   "blogArticle": {
@@ -79,6 +150,17 @@
     "heroQuickActions": "Mini App ichida tezkor yo‘nalishlar",
     "buyStarsShort": "Stars olish",
     "buyPremiumShort": "Premium olish",
+    "giftsBannerBadge": "Telegram Gifts",
+    "giftsBannerHeading": "Sovg‘a yuborish — bir joydan boshlang",
+    "giftsBannerLead": "StarsPaymee Mini App Telegram Gifts katalogidan sovg‘a tanlash, izoh va anonim yuborish oqimini UzCard/HUMO bilan so‘mda yakunlashni soddalashtiradi.",
+    "giftsBannerBullets": [
+      "Tanlangan gift va oluvchini aniq tasdiqlash",
+      "Katalogdagi yozuvlar va cheklovlar Mini App bilan sinxron",
+      "Eski va cheklangan giftlar bilan ishlash alohida modulda ko‘riladi",
+      "\"Giftlar haqida\" batafsil ma’lumot alohida sahifada"
+    ],
+    "giftsBannerDetails": "Giftlar sahifasi",
+    "giftsBannerOpenMini": "Mini Appda ochish",
     "svcHeading": "Nimalarni qilish mumkin?",
     "svcIntro": "Loyiha modullari Telegram bot + Express REST + Postgres va React (Vite) Mini App tuzilmasida ishlaydi; asosiy sahifalar: boshqaruv paneli, Stars, Premium, Gift, tarix va referral — bularning barchasi marketing uchun quyidagi ustunvorlik bilan ifodalangan.",
     "svcItems": [
@@ -103,8 +185,6 @@
         "tag": "Gift va Stars"
       }
     ],
-    "giftStickerHeading": "Telegram Gift — namuna TGS animatsiyalari",
-    "giftStickerCaption": "Stikerni ustiga keltiring — animatsiya ijro etiladi va birinchi kadrda to‘xtaydi (Mini Appdagi tanlash ko‘rinishiga oʻxshash).",
     "processHeading": "Uch bosqichda",
     "steps": [
       {
@@ -165,5 +245,68 @@
         "answer": "Ha: referral havola orqali kelgan foydalanuvchilar xarid qilganda referrerga bonus yulduzlar hisoblanadi; chegirma paketlari va promokodlar Stars, Premium va Gift buyurtmalarida ishlatilishi mumkin."
       }
     ]
+  },
+  "landing": {
+    "ctaMiniApp": "Mini App ni ochish",
+    "backHome": "Bosh sahifa — xizmatlar",
+    "sectionsHeading": "Bo‘limlar",
+    "nav": {
+      "stars": "Stars",
+      "premium": "Premium",
+      "gifts": "Giftlar",
+      "about": "Haqimizda"
+    },
+    "stars": {
+      "metaTitle": "Telegram Stars sotib olish va to‘ldirish",
+      "metaDescription": "O‘zbekiston: UzCard va HUMO bilan so‘m to‘lov. StarsPaymee Mini App orqali Telegram Stars narxi, buyurtma va yuborish jarayoni.",
+      "h1": "Telegram Stars sotib olish va balansni to‘ldirish",
+      "intro": "StarsPaymee Telegram ichidagi Mini App orqali Telegram Stars xaridini soddalashtiradi: kerakli miqdorni tanlaysiz, so‘mdagi narx va buyurtma bosqichlarini ko‘rasiz; to‘lovdan keyin yulduzlar qabul qiluvchi akkaunt uchun hisoblanadi.",
+      "bullets": [
+        "Slot va kursga mos shaffof narxlash, buyurtmani kuzatish",
+        "UzCard va HUMO orqali so‘m (UZS)da to‘lov",
+        "Stars, Premium va boshqa modullar bilan bir xil boshqaruv paneli",
+        "Referral bonuslari va chegirmalar bilan ishlaydigan oqimlar"
+      ],
+      "footnote": "Xizmat Telegram qoidalari va StarsPaymee siyosatiga muvofiq bo‘lishi kerak. Aniq miqdorlar, cheklovlar va chegirmalar Mini App ichida yangilanadi."
+    },
+    "premium": {
+      "metaTitle": "Telegram Premium obunasi — 3 / 6 / 12 oy",
+      "metaDescription": "Telegram Premium uchun foydalanuvchini aniqlash, 3–6–12 oylik paketlar, UzCard/HUMO bilan so‘mda to‘lov. StarsPaymee Mini App.",
+      "h1": "Telegram Premium obunasi",
+      "intro": "Premium obunasi yuborilishidan oldin akkauntni tekshirib, Telegramning ruxsat etilgan muddatli paketlari (3, 6 yoki 12 oy) bo‘yicha buyurtma tasdiqlanadi. To‘langan buyurtma tarixda va status orqali kuzatiladi.",
+      "bullets": [
+        "Qidiruv va oluvchining holatini tekshirish",
+        "3, 6 va 12 oy variantlari",
+        "So‘m to‘lovi O‘zbekiston kartalari bilan",
+        "Buyurtma hollati va tarix bo‘limlari bilan integratsiya"
+      ],
+      "footnote": "Premium faollashtirish Telegram tomonidan yakunlanadi; StarsPaymee buyurtma ma’lumotlaringizni xavfsiz uzatish uchun server imzolari va HTTPS ishlatadi."
+    },
+    "gifts": {
+      "metaTitle": "Telegram Gift yuborish va TGS tanlash",
+      "metaDescription": "Telegram Gifts: katalog, TGS koʻrinishi, izoh va anonim yuborish. StarsPaymee Mini App.",
+      "h1": "Telegram Gift yuborish",
+      "intro": "Sovg‘a (Gift) yo‘naltiriladigan foydalanuvchini tasdiqlaysiz, Telegram katalogidagi sovg‘ani tanlaysiz va TGS namoyishini ko‘rasiz. Yuborish Telegramning ruxsat etilgan API oqimlari orqali amalga oshiriladi.",
+      "bullets": [
+        "Gift ID va qabul qiluvchini aniq belgilash",
+        "TGS stikerlar va katalog elementlari bilan tanishish",
+        "Anonim yuborish va sharh maydonlari",
+        "Cheklangan yoki eskirgan giftlar bilan ishlash — alohida Gift/Stars modullari bilan"
+      ],
+      "footnote": "Har bir sovg‘aning mavjudligi va qiymati Telegram siyosatiga bog‘liq; mavjud bo‘lmagan elementlar katalogda chiqmasligi mumkin."
+    },
+    "about": {
+      "metaTitle": "StarsPaymee haqida",
+      "metaDescription": "StarsPaymee — O‘zbekistonda kartalar bilan so‘m to‘loviga e’tibor qaratgan Telegram Mini App: Stars, Premium va Gifts.",
+      "h1": "StarsPaymee haqida",
+      "intro": "StarsPaymee foydalanuvchilarga Telegram Stars sotib olish, Telegram Premium muddatlarini uzaytirish va Telegram Gifts yuborishni Telegram ichidagi Mini App va bot orqali yig‘ishtirilgan interfeysda bajarish imkonini beradi. Asosiy to‘lov oqimi O‘zbekiston bank kartalari (UzCard, HUMO) va so‘m valyutasiga qurilgan.",
+      "bullets": [
+        "initData tekshiruvi, CORS va tezlik cheklovlari kabi asosiy texnik choralari bilan xavfsizlik",
+        "Blog va ustun ustiga marketing sahifalar orqali aniq havolalar (Stars, Premium, Gifts)",
+        "Referral bonuslari va chegirmalar bilan marketing qo‘llab-quvvlanadi",
+        "Texnik dokumentatsiya va jamoa mijoz uchun izohlangan oqimlarni taʼminlashga harakat qiladi"
+      ],
+      "footnote": "Savollar uchun FAQ va Telegram orqali bevosita Mini App mavjud. Google sitelinks kabi bloklar strukturadan va tashqi havolalar orqali shakllanadi — har bir boʻlim uchun alohida sahifa mazkur saytda qoʻshildi."
+    }
   }
 }

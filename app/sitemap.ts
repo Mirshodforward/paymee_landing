@@ -15,6 +15,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     });
     out.push({
+      url: `${base}/${locale}/stars`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    });
+    out.push({
+      url: `${base}/${locale}/premium`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    });
+    out.push({
+      url: `${base}/${locale}/gifts`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    });
+    out.push({
+      url: `${base}/${locale}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    });
+    out.push({
       url: `${base}/${locale}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",

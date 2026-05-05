@@ -1,0 +1,102 @@
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getTelegramBotUrl, getSiteUrl } from "@/lib/site";
+
+export type LandingTopic = "stars" | "premium" | "gifts" | "about";
+
+const topicPath: Record<LandingTopic, `/${string}`> = {
+  stars: "/stars",
+  premium: "/premium",
+  gifts: "/gifts",
+  about: "/about",
+};
+
+type Props = {
+  locale: string;
+  topic: LandingTopic;
+};
+
+export async function LandingTopicArticle({ locale, topic }: Props) {
+  const t = await getTranslations({ locale, namespace: "landing" });
+  const tHome = await getTranslations({ locale, namespace: "blogIndex" });
+  const telegramBotUrl = getTelegramBotUrl();
+  const base = getSiteUrl();
+  const path = topicPath[topic];
+  const canonical = `${base}/${locale}${path}`;
+
+  const bullets = (t.raw(`${topic}.bullets`) as string[]) ?? [];
+  const navKey = topic === "about" ? "about" : topic;
+  const crumbCurrent = t(`nav.${navKey}`);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": canonical,
+    name: t(`${topic}.h1`),
+    description: t(`${topic}.metaDescription`),
+    url: canonical,
+    inLanguage: locale,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "StarsPaymee",
+      url: base,
+    },
+  };
+
+  return (
+    <main className="mx-auto max-w-3xl px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10">
+      <JsonLd data={jsonLd} />
+      <nav
+        aria-label="Breadcrumb"
+        className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-slate-600 dark:text-slate-400"
+      >
+        <Link href="/" className="transition hover:text-[#229ED9]">
+          {tHome("breadcrumbHome")}
+        </Link>
+        <ChevronRight className="size-3.5 shrink-0 opacity-70" aria-hidden strokeWidth={2} />
+        <span className="font-medium text-slate-900 dark:text-white">{crumbCurrent}</span>
+      </nav>
+
+      <article className="mt-10">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+          {t(`${topic}.h1`)}
+        </h1>
+        <p className="mt-5 text-lg leading-relaxed text-slate-600 dark:text-slate-400">{t(`${topic}.intro`)}</p>
+
+        {bullets.length > 0 ? (
+          <ul className="mt-8 list-inside list-disc space-y-3 text-slate-700 dark:text-slate-300">
+            {bullets.map((b) => (
+              <li key={b} className="leading-relaxed">
+                {b}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <a
+            href={telegramBotUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#229ED9] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#229ED9]/20 transition hover:bg-[#1e8dc4]"
+          >
+            {t("ctaMiniApp")}
+            <ArrowRight className="size-4" aria-hidden strokeWidth={2} />
+          </a>
+          <Link
+            href="/#xizmatlar"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-8 py-3.5 text-sm font-semibold text-slate-800 transition hover:border-slate-400 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-500"
+          >
+            {t("backHome")}
+          </Link>
+        </div>
+
+        <p className="mt-10 rounded-2xl border border-slate-200 bg-white/70 p-6 text-sm leading-relaxed text-slate-600 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
+          {t(`${topic}.footnote`)}
+        </p>
+      </article>
+    </main>
+  );
+}

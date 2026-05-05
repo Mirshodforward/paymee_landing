@@ -5,13 +5,64 @@
     "ogLocale": "en_US",
     "keywordsList": [
       "StarsPaymee",
-      "Telegram Stars",
-      "Telegram Premium",
-      "Telegram Gift",
-      "Telegram Mini App",
+      "telegram stars",
+      "telegram premium",
+      "telegram gifts",
+      "telegram gift",
+      "buy telegram stars",
+      "telegram stars buy",
+      "telegram stars purchase",
+      "telegram premium buy",
+      "buy telegram stars online",
+      "buy telegram premium instantly",
+      "buy telegram stars cheap",
+      "cheap telegram premium subscription",
+      "telegram stars instant delivery",
+      "telegram stars fast delivery",
+      "telegram premium discount",
+      "telegram gifts send",
+      "send telegram gifts online",
+      "telegram stars price",
+      "telegram premium price",
+      "telegram premium cheap price",
+      "telegram premium cost",
+      "telegram stars recharge",
+      "telegram stars recharge online",
+      "telegram stars payment method",
+      "telegram stars payment uzcard",
+      "telegram stars payment visa",
+      "telegram stars with crypto",
+      "telegram premium gift purchase",
+      "telegram gift cards",
+      "telegram gifts shop",
+      "send gift telegram stars",
+      "telegram gift premium",
+      "telegram gift subscription",
+      "how to buy telegram stars",
+      "how to get telegram premium",
+      "telegram stars for bots",
+      "telegram monetization how it works",
+      "telegram stars vs premium",
+      "telegram gifts how to send",
+      "telegram stars bot",
+      "telegram premium bot",
+      "telegram payment bot",
+      "telegram stars API",
+      "telegram premium service",
+      "telegram stars Uzbekistan payment",
+      "telegram premium subscription Uzbekistan",
+      "telegram stars Uzbekistan",
+      "telegram premium Uzbekistan",
+      "where to buy telegram stars cheap online",
+      "best site to buy telegram premium 2026",
+      "how to send telegram gifts without bot",
       "UzCard",
       "HUMO",
-      "Uzbekistan"
+      "Uzbekistan",
+      "Telegram Mini App",
+      "Telegram Stars",
+      "Telegram Premium",
+      "Telegram Gift"
     ]
   },
   "nav": {
@@ -40,7 +91,7 @@
     "filterAria": "Category",
     "filterAll": "All",
     "read": "Read article",
-    "totalPostsSuffix": "{count} articles total",
+    "totalPostsSuffix": "{count} articles",
     "footerNote": "Updated regularly"
   },
   "blogArticle": {
@@ -79,6 +130,17 @@
     "heroQuickActions": "Quick actions in Mini App",
     "buyStarsShort": "Get Stars",
     "buyPremiumShort": "Get Premium",
+    "giftsBannerBadge": "Telegram Gifts",
+    "giftsBannerHeading": "Send gifts from one cockpit",
+    "giftsBannerLead": "StarsPaymee wraps Telegram Gifts selection—notes, anonymity where supported—and checkout with Uzbek cards (UzCard/HUMO) in UZS right inside Mini App.",
+    "giftsBannerBullets": [
+      "Crystal-clear recipient plus gift IDs before charging the card",
+      "Catalog wording and Telegram guardrails surfaced where you buy",
+      "Legacy or limited presets are routed through the Gifts + Stars tooling",
+      "Need the long read? Dedicated /gifts page explains the playbook"
+    ],
+    "giftsBannerDetails": "Gifts landing page",
+    "giftsBannerOpenMini": "Open in Mini App",
     "svcHeading": "What can you accomplish?",
     "svcIntro": "Our Telegram bot pairs with Express/Postgres/React (Vite) Mini App dashboards—Stars, Premium, Gifts, receipts, referrals—marketing copy below mirrors the modular build.",
     "svcItems": [
@@ -103,8 +165,6 @@
         "tag": "Gift + Stars"
       }
     ],
-    "giftStickerHeading": "Telegram Gifts — sample TGS animations",
-    "giftStickerCaption": "Hover a sticker to play the loop—release to freeze on frame zero, similar to the selection preview in Mini App.",
     "processHeading": "Three calm steps",
     "steps": [
       {
@@ -165,5 +225,68 @@
         "answer": "Yes—friends who join via your link yield bonus Stars; curated campaigns and promo codes apply across Stars, Premium, and Gifts."
       }
     ]
+  },
+  "landing": {
+    "ctaMiniApp": "Open Mini App",
+    "backHome": "Home — services",
+    "sectionsHeading": "Sections",
+    "nav": {
+      "stars": "Stars",
+      "premium": "Premium",
+      "gifts": "Gifts",
+      "about": "About"
+    },
+    "stars": {
+      "metaTitle": "Buy Telegram Stars & top up",
+      "metaDescription": "Uzbekistan: pay in UZS with UzCard / HUMO. StarsPaymee Mini App — transparent pricing, checkout, and delivery flow for Telegram Stars.",
+      "h1": "Buy Telegram Stars online",
+      "intro": "StarsPaymee streamlines purchasing Telegram Stars inside a Telegram Mini App: pick the amount, confirm the UZS quote, pay with local cards, then track the order until Stars are issued to the recipient account.",
+      "bullets": [
+        "Slot-based quotes and order status you can follow end-to-end",
+        "UzCard & HUMO in UZS alongside the same dashboard as Premium & Gifts",
+        "History-friendly flows for repeat purchases",
+        "Works with referral perks and promo-aware pricing when available"
+      ],
+      "footnote": "Delivery must stay compliant with Telegram and StarsPaymee policies. Live limits, bundles, and eligibility are always shown inside the Mini App."
+    },
+    "premium": {
+      "metaTitle": "Telegram Premium subscription (3 / 6 / 12 months)",
+      "metaDescription": "Buy Telegram Premium for 3, 6 or 12 months through StarsPaymee. Search the recipient, confirm coverage, pay with UzCard/HUMO in UZS.",
+      "h1": "Telegram Premium subscription",
+      "intro": "We focus on the Uzbekistan checkout experience: verify the account, choose a 3-, 6-, or 12-month pass, pay in soʻm, then follow the order until Telegram finishes activation.",
+      "bullets": [
+        "Recipient discovery + sanity checks before issuing Premium",
+        "All major term lengths in one flow",
+        "Local card acquiring in UZS",
+        "Shared order history with Stars & Gifts purchases"
+      ],
+      "footnote": "Activation is finalized by Telegram once payment succeeds. StarsPaymee secures WebApp initData, HTTPS, and hardened API access on our side."
+    },
+    "gifts": {
+      "metaTitle": "Send Telegram Gifts with TGS previews",
+      "metaDescription": "Explore curated Telegram Gifts, preview animated TGS packs, add optional notes, and send through StarsPaymee Mini App.",
+      "h1": "Send Telegram Gifts",
+      "intro": "Gift sending starts with a clear recipient, the right gift_id from Telegram’s catalogue, and contextual TGS previews—then we route the order through sanctioned Telegram gift APIs.",
+      "bullets": [
+        "Catalogue-driven selection with sticker previews",
+        "Optional anonymity and short notes when supported",
+        "Deep links into the same referral and promo engine as Stars",
+        "Legacy or limited gifts are explained in the Gifts & Stars modules"
+      ],
+      "footnote": "Availability, star pricing, and policy guardrails come from Telegram—the Mini App surfaces what is currently purchasable."
+    },
+    "about": {
+      "metaTitle": "About StarsPaymee",
+      "metaDescription": "StarsPaymee is a Uzbekistan-first Telegram Mini App for Stars, Premium, and Gifts—with UzCard/HUMO payouts in UZS.",
+      "h1": "About StarsPaymee",
+      "intro": "We combine Telegram WebApp UX with server-side verification (initData HMAC, rate limits, CORS) so marketing pages, blog, and checkout all point to the same trusted bot + Mini App bundle.",
+      "bullets": [
+        "Transparent product split: Stars, Premium, Gifts, legacy gifts",
+        "Blog + dedicated landing URLs for search engines to discover each offer",
+        "Security-minded architecture described in both marketing and FAQ sections",
+        "Built for operators who need receipts, referrals, and status visibility"
+      ],
+      "footnote": "Search “sitelinks” (the extra links under a brand result) are decided by Google—we add crawlable URLs, internal links, and sitemap coverage to improve the odds."
+    }
   }
 }

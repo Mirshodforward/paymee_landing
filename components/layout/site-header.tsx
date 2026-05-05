@@ -1,17 +1,26 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { LocaleSwitcher } from "@/components/layout/locale-switcher";
+import type { LandingTopic } from "@/components/landing/landing-topic-article";
 import { getTranslations } from "next-intl/server";
 import { Send } from "lucide-react";
 import { getTelegramBotUrl, siteConfig } from "@/lib/site";
-import { LocaleSwitcher } from "@/components/layout/locale-switcher";
 
 const navLink =
   "text-slate-600 hover:text-[#229ED9] dark:text-slate-400 dark:hover:text-[#229ED9]";
 const navActive = "text-[#229ED9] font-semibold dark:text-[#229ED9]";
 
-export async function SiteHeader({ blogActive = false }: { blogActive?: boolean }) {
+export async function SiteHeader({
+  highlight = null,
+}: {
+  /** `blog` — blog bo‘limi; qolganlari marketing ichki sahifalar */
+  highlight?: LandingTopic | "blog" | null;
+}) {
   const telegramBotUrl = getTelegramBotUrl();
   const n = await getTranslations("nav");
+  const lg = await getTranslations("landing");
+
+  const prod = (key: LandingTopic) => (highlight === key ? navActive : navLink);
 
   return (
     <header className="relative z-10 border-b border-slate-200/80 bg-white/75 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/75">
@@ -31,10 +40,22 @@ export async function SiteHeader({ blogActive = false }: { blogActive?: boolean 
           />
           <span className="truncate">{siteConfig.name}</span>
         </Link>
-        <div className="hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:justify-end xl:gap-5">
-          <nav aria-label="Asosiy navigatsiya" className="flex items-center gap-5 text-sm font-medium xl:gap-6">
+        <div className="hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:justify-end xl:gap-4">
+          <nav aria-label="Asosiy navigatsiya" className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 text-[13px] font-medium xl:gap-x-5">
             <Link href="/#xizmatlar" className={navLink}>
               {n("services")}
+            </Link>
+            <Link href="/stars" className={prod("stars")}>
+              {lg("nav.stars")}
+            </Link>
+            <Link href="/premium" className={prod("premium")}>
+              {lg("nav.premium")}
+            </Link>
+            <Link href="/gifts" className={prod("gifts")}>
+              {lg("nav.gifts")}
+            </Link>
+            <Link href="/about" className={prod("about")}>
+              {lg("nav.about")}
             </Link>
             <Link href="/#jarayon" className={navLink}>
               {n("process")}
@@ -45,14 +66,14 @@ export async function SiteHeader({ blogActive = false }: { blogActive?: boolean 
             <Link href="/#faq" className={navLink}>
               {n("faq")}
             </Link>
-            <Link href="/blog" className={blogActive ? navActive : navLink}>
+            <Link href="/blog" className={highlight === "blog" ? navActive : navLink}>
               {n("blog")}
             </Link>
           </nav>
           <LocaleSwitcher />
         </div>
         <div className="flex shrink-0 items-center gap-2">
-          <Link href="/blog" className={`text-sm font-medium lg:hidden ${blogActive ? navActive : navLink}`}>
+          <Link href="/blog" className={`text-sm font-medium lg:hidden ${highlight === "blog" ? navActive : navLink}`}>
             {n("blog")}
           </Link>
           <div className="lg:hidden">

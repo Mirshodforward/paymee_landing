@@ -1,6 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  ArrowLeftRight,
   ArrowRight,
   BadgeCheck,
   ChevronDown,
@@ -22,8 +21,8 @@ import { getTranslations } from "next-intl/server";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
+import { Link } from "@/i18n/navigation";
 import { GiftDashboardIcon } from "@/components/icons/gift-dashboard-icon";
-import { GiftStickerShowcase } from "@/components/tgs/gift-sticker-showcase";
 import { getTelegramBotUrl, siteConfig } from "@/lib/site";
 
 const serviceIcons = [Star, Gem, Gift, Sparkles] as const;
@@ -81,6 +80,8 @@ export default async function HomePage({ params }: PageProps) {
     label: tr.label,
     detail: tr.detail,
   }));
+
+  const giftsBannerBullets = (t.raw("giftsBannerBullets") as string[]) ?? [];
 
   return (
     <>
@@ -184,25 +185,7 @@ export default async function HomePage({ params }: PageProps) {
                       </p>
                     </div>
                   </header>
-                  <dl className="mt-6 space-y-5 text-sm">
-                    <div className="flex justify-between gap-4 border-b border-slate-100 pb-5 dark:border-slate-800">
-                      <dt className="text-slate-500 dark:text-slate-400">{t("starsOrder")}</dt>
-                      <dd className="flex items-center justify-end gap-1 font-medium text-right text-slate-900 dark:text-slate-100">
-                        {t.rich("ddPriceSlot", {
-                          arrow: () => <ArrowLeftRight className="mx-1 size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} />,
-                        })}
-                      </dd>
-                    </div>
-                    <div className="flex justify-between gap-4 border-b border-slate-100 pb-5 dark:border-slate-800">
-                      <dt className="text-slate-500 dark:text-slate-400">{t("premiumLabelShort")}</dt>
-                      <dd className="font-medium text-right text-slate-900 dark:text-slate-100">{t("premiumDd")}</dd>
-                    </div>
-                    <div className="flex justify-between gap-4 pb-2">
-                      <dt className="text-slate-500 dark:text-slate-400">{t("giftLimitedLabel")}</dt>
-                      <dd className="font-medium text-right text-slate-900 dark:text-slate-100">{t("giftDd")}</dd>
-                    </div>
-                  </dl>
-                  <div className="mt-6 border-t border-slate-200 pt-6 dark:border-slate-700">
+                  <div className="mt-6">
                     <p className="mb-4 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                       {t("heroQuickActions")}
                     </p>
@@ -239,6 +222,66 @@ export default async function HomePage({ params }: PageProps) {
           </section>
 
           <section
+            id="giftlar"
+            aria-labelledby="gifts-banner-heading"
+            className="relative scroll-mt-24 border-y border-fuchsia-200/55 bg-gradient-to-b from-fuchsia-50/90 via-white to-slate-50 py-14 dark:border-fuchsia-900/35 dark:from-fuchsia-950/35 dark:via-slate-950 dark:to-slate-950 sm:py-16"
+          >
+            <div className="mx-auto max-w-6xl px-4 sm:px-6">
+              <div className="rounded-3xl border border-fuchsia-200/55 bg-gradient-to-br from-fuchsia-50/90 via-white to-sky-50/85 p-6 shadow-inner ring-1 ring-fuchsia-100/60 dark:border-fuchsia-900/40 dark:from-fuchsia-950/35 dark:via-slate-900 dark:to-sky-950/25 dark:ring-fuchsia-900/40 sm:p-10">
+                <div className="grid gap-10 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:items-center">
+                  <div>
+                    <p className="inline-flex items-center gap-2 rounded-full border border-fuchsia-200/75 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-fuchsia-900 dark:border-fuchsia-700/60 dark:bg-fuchsia-950/45 dark:text-fuchsia-100">
+                      <Gift className="size-3.5 text-fuchsia-600 dark:text-fuchsia-300" strokeWidth={2} aria-hidden />
+                      {t("giftsBannerBadge")}
+                    </p>
+                    <h2
+                      id="gifts-banner-heading"
+                      className="mt-5 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white"
+                    >
+                      {t("giftsBannerHeading")}
+                    </h2>
+                    <p className="mt-4 leading-relaxed text-slate-600 dark:text-slate-400">{t("giftsBannerLead")}</p>
+                    <ul className="mt-6 space-y-3 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                      {giftsBannerBullets.map((line) => (
+                        <li key={line} className="flex gap-2">
+                          <BadgeCheck
+                            className="mt-0.5 size-4 shrink-0 text-fuchsia-600 dark:text-fuchsia-400"
+                            aria-hidden
+                            strokeWidth={2}
+                          />
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-9 flex flex-wrap gap-3">
+                      <Link
+                        href="/gifts"
+                        className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/55 bg-white px-6 py-3 text-sm font-semibold text-fuchsia-950 shadow-sm transition hover:border-fuchsia-500 hover:bg-fuchsia-50/90 dark:border-fuchsia-600/55 dark:bg-slate-950 dark:text-fuchsia-50 dark:hover:bg-fuchsia-950/40"
+                      >
+                        {t("giftsBannerDetails")}
+                        <ArrowRight className="size-4 shrink-0" aria-hidden strokeWidth={2} />
+                      </Link>
+                      <a
+                        href={telegramBotUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-full bg-[#229ED9] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#229ED9]/20 transition hover:bg-[#1e8dc4]"
+                      >
+                        {t("giftsBannerOpenMini")}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center lg:justify-end">
+                    <div className="rounded-3xl border border-white/60 bg-white/50 p-6 shadow-lg shadow-fuchsia-500/10 backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/55">
+                      <GiftDashboardIcon color="#c026d3" size={108} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
             id="xizmatlar"
             className="relative border-y border-slate-200 bg-white py-20 dark:border-slate-800 dark:bg-slate-900/35"
             aria-labelledby="svc-heading"
@@ -261,7 +304,6 @@ export default async function HomePage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <GiftStickerShowcase heading={t("giftStickerHeading")} caption={t("giftStickerCaption")} />
             </div>
           </section>
 
