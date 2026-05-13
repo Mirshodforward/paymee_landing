@@ -13,6 +13,21 @@ export interface BlogPost {
 /** Maqolalar mavzusi [StarsJoy blog](https://www.starsjoy.uz/blog) dagi strukturaga oʻxshash; matnlar StarsPaymee uchun asl yozuv. */
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "starspaymee-mini-app-may-2026-yangilik",
+    category: "Telegram",
+    datePublished: "2026-05-13",
+    title:
+      "StarsPaymee Mini App: 2026-yil maydagi yangiliklar — Telegram Gifts, TGS va Oʻzbekistonga mos toʻlov",
+    excerpt:
+      "Katalog va slotlar yangilanishi, TGS koʻrinishi va UzCard/HUMO bilan soʻmda yakunlash: may relizida nimalar paydo boʻldi va nimalarni kuzatish kerak.",
+    paragraphs: [
+      "StarsPaymee Mini App Telegram Gifts katalogi, Stars xaridlari va Premium yoʻnalishlarini bitta interfeysda jamlaydi. Maydagi yangilanish foydalanuvchilarga yangilangan buyurtma statuslari va joriy narx/slot maʼlumotlarini ochiqroq koʻrish imkonini beradi — bu esa xariddan oldin qarorni tezlashtiradi.",
+      "Telegram Gifts boʻyicha TGS animatsiyalaridan foydalanib, sovgʻani tanlashdan oldin vizual dasturiy koʻrinishni koʻrish mumkin; izoh va anonim yuborish opsiyalari esa ijtimoiy kontekstga moslashuvchan qolmoqda.",
+      "Toʻlovlar mahalliy UzCard va HUMO kartalari orqali soʻmda amalga oshiriladi — OTP va bank bildirishnomalari odatiy tartibda ishlaydi. Yakunlangan har bir buyurtma uchun identifikator saqlansa, keyinchalik billing yoki qoʻllab-quvvatlash bilan aloqa osonlashadi.",
+      "Keyingi bosqichlarda katalog qidiruvi va avtomatik eslatmalar kabi qulayliklar kengayishi mumkin; barcha oʻzgarishlar Telegram va mahalliy toʻlov qoidalariga muvofiqlikda eʼlon qilinadi.",
+    ],
+  },
+  {
     slug: "telegram-premium-muddati-yangilash-2026",
     category: "Premium",
     datePublished: "2026-05-05",

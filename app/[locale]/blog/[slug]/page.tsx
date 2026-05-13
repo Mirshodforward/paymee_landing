@@ -27,6 +27,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: ui.title,
     description: ui.excerpt,
+    keywords: [
+      siteConfig.name,
+      "Telegram",
+      "Mini App",
+      "Telegram Stars",
+      "Telegram Premium",
+      "Telegram Gifts",
+      "UzCard",
+      "HUMO",
+      post.category,
+    ],
     alternates: {
       canonical: `/${locale}/blog/${slug}`,
       languages: Object.fromEntries(
