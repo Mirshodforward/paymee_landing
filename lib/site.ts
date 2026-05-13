@@ -14,8 +14,7 @@ export function getTelegramBotUrl(): string {
 
 export const siteConfig = {
   name: "StarsPaymee",
-  titleDefault: "StarsPaymee — Telegram Stars, Premium va Giftlar | Mini App",
-  description:
-    "StarsPaymee — Telegramda Stars, Premium va Giftlar uchun Mini App.",
+  titleDefault: "Stars X Premium",
+  description: "Telegram Stars platformasi",
   locale: "uz_UZ",
 } as const;

@@ -80,10 +80,8 @@ function mkFaq(pairs) {
 
 const baseUz = {
   seo: {
-    titleDefault:
-      "StarsPaymee — Telegram Stars, Premium va Giftlar | Mini App",
-    description:
-      "StarsPaymee — Telegramda Stars, Premium va Giftlar uchun Mini App.",
+    titleDefault: "Stars X Premium",
+    description: "Telegram Stars platformasi",
     ogLocale: "uz_UZ",
     keywordsList: [
       "StarsPaymee",
@@ -310,10 +308,8 @@ const baseUz = {
 
 const baseRu = structuredClone(baseUz);
 baseRu.seo = {
-  titleDefault:
-    "StarsPaymee — Telegram Stars, Premium и подарки | Mini App",
-  description:
-    "StarsPaymee — мини-приложение в Telegram: покупка Stars, Telegram Premium на 3/6/12 месяцев и отправка подарков, работа со старымиограниченными gift. Оплата картами UzCard/HUMO в сумах.",
+  titleDefault: "Stars X Premium",
+  description: "Платформа Telegram Stars",
   ogLocale: "ru_RU",
   keywordsList: [
     "StarsPaymee",
@@ -494,10 +490,8 @@ baseRu.locales = baseUz.locales;
 
 const baseEn = structuredClone(baseUz);
 baseEn.seo = {
-  titleDefault:
-    "StarsPaymee — Telegram Stars, Premium & Gifts | Mini App",
-  description:
-    "StarsPaymee — a Telegram Mini App to buy Telegram Stars & Premium (3/6/12 mo), send Telegram Gifts, and manage older/limited gifts with conversion to Stars. Pays with UzCard/HUMO in UZS.",
+  titleDefault: "Stars X Premium",
+  description: "Telegram Stars platform",
   ogLocale: "en_US",
   keywordsList: [
     "StarsPaymee",

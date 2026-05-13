@@ -7,13 +7,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
+  title: "Stars X Premium",
+  description: "Telegram Stars platformasi",
   icons: {
-    icon: [
-      { url: "/icon.jpg", type: "image/jpeg", sizes: "32x32" },
-      { url: "/icon.jpg", type: "image/jpeg", sizes: "192x192" },
-    ],
-    apple: [{ url: "/apple-icon.jpg", type: "image/jpeg", sizes: "180x180" }],
-    shortcut: "/icon.jpg",
+    icon: [{ url: "/starspaymeelogo.jpg", type: "image/jpeg", sizes: "any" }],
+    apple: [{ url: "/starspaymeelogo.jpg", type: "image/jpeg", sizes: "180x180" }],
+    shortcut: "/starspaymeelogo.jpg",
   },
 };
 
