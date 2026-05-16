@@ -87,12 +87,6 @@ export default async function HomePage({ params }: PageProps) {
   return (
     <>
       <JsonLd data={faqLd} />
-      <a
-        href="#asosiy"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-[#229ED9] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
-      >
-        {t("skipToMain")}
-      </a>
       <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
         <div
           aria-hidden
@@ -115,11 +109,6 @@ export default async function HomePage({ params }: PageProps) {
                 <p className="inline-flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#229ED9] sm:text-sm">
                   <Send className="size-4 shrink-0 opacity-90" aria-hidden strokeWidth={2} />
                   <span>{t("heroBadgeTelegram")}</span>
-                  <span className="hidden text-slate-400 sm:inline" aria-hidden>
-                    ·
-                  </span>
-                  <CreditCard className="size-4 shrink-0 text-slate-500 dark:text-slate-400" aria-hidden strokeWidth={2} />
-                  <span className="text-slate-600 dark:text-slate-400">{t("heroBadgeCards")}</span>
                 </p>
                 <h1
                   id="hero-heading"
@@ -167,30 +156,16 @@ export default async function HomePage({ params }: PageProps) {
 
               <div className="relative">
                 <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[#229ED9]/15 via-transparent to-fuchsia-500/10 blur-2xl" aria-hidden />
+                <GiftTgsShowcase
+                  compact
+                  hideUntilVisible
+                  className="relative mb-6 w-full overflow-hidden rounded-2xl border border-fuchsia-200/45 bg-gradient-to-br from-white/90 via-white/80 to-fuchsia-50/45 p-3 shadow-lg shadow-fuchsia-500/[0.08] ring-1 ring-fuchsia-100/55 backdrop-blur-sm dark:border-fuchsia-900/35 dark:from-slate-900/85 dark:via-slate-900/75 dark:to-fuchsia-950/28 dark:ring-fuchsia-900/35 sm:p-4"
+                />
                 <article
                   className="relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white/90 p-6 shadow-xl shadow-slate-900/[0.06] backdrop-blur dark:border-slate-700/90 dark:bg-slate-900/90"
                   aria-label={t("cardAria")}
                 >
-                  <header className="flex items-center gap-3 border-b border-slate-200 pb-5 dark:border-slate-700">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#229ED9]/15 text-[#229ED9] dark:bg-[#229ED9]/20">
-                      <Smartphone className="size-6" aria-hidden strokeWidth={2} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                        {t("cardLiveFlow")}
-                      </p>
-                      <p className="flex flex-wrap items-center gap-1 font-semibold text-slate-900 dark:text-white">
-                        {t("cardDashboardFlow")}{" "}
-                        <ArrowRight className="mx-0.5 size-4 shrink-0 text-slate-400" aria-hidden strokeWidth={2} /> Stars / Premium /
-                        Gift
-                      </p>
-                    </div>
-                  </header>
-                  <div className="mt-6">
-                    <p className="mb-4 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                      {t("heroQuickActions")}
-                    </p>
-                    <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 gap-3">
                       <a
                         href={telegramBotUrl}
                         target="_blank"
@@ -216,7 +191,6 @@ export default async function HomePage({ params }: PageProps) {
                         </span>
                       </a>
                     </div>
-                  </div>
                 </article>
               </div>
             </div>
@@ -273,7 +247,9 @@ export default async function HomePage({ params }: PageProps) {
                     </div>
                   </div>
                   <div className="flex justify-center lg:justify-end">
-                    <GiftTgsShowcase />
+                    <div className="rounded-3xl border border-white/60 bg-white/50 p-6 shadow-lg shadow-fuchsia-500/10 backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/55">
+                      <GiftDashboardIcon color="#c026d3" size={108} />
+                    </div>
                   </div>
                 </div>
               </div>

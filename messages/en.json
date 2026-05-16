@@ -66,12 +66,17 @@
     ]
   },
   "nav": {
+    "home": "Home",
     "services": "Services",
     "process": "Flow",
     "trustLabel": "Trust",
     "faq": "FAQ",
     "blog": "Blog",
-    "openTelegram": "Open in Telegram"
+    "openTelegram": "Open in Telegram",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "menuTitle": "Menu",
+    "menuNavAria": "Mobile navigation"
   },
   "locales": {
     "uz": "O‘zbekcha",
@@ -109,7 +114,6 @@
     "Xavfsizlik": "Security"
   },
   "home": {
-    "skipToMain": "Skip to main content",
     "heroBadgeTelegram": "Telegram Mini App",
     "heroBadgeCards": "UzCard · HUMO",
     "heroHeadline": "Telegram <stars>Stars</stars>, <premium>Premium</premium>, and <gift>Gifts</gift>—one cockpit",

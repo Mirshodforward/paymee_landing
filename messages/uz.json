@@ -86,12 +86,17 @@
     ]
   },
   "nav": {
+    "home": "Asosiy",
     "services": "Xizmatlar",
     "process": "Jarayon",
     "trustLabel": "Ishonch",
     "faq": "FAQ",
     "blog": "Blog",
-    "openTelegram": "Telegramda ochish"
+    "openTelegram": "Telegramda ochish",
+    "menuOpen": "Menyu ochish",
+    "menuClose": "Menyu yopish",
+    "menuTitle": "Menyu",
+    "menuNavAria": "Mobil navigatsiya"
   },
   "locales": {
     "uz": "O‘zbekcha",
@@ -129,7 +134,6 @@
     "Xavfsizlik": "Xavfsizlik"
   },
   "home": {
-    "skipToMain": "Asosiy kontentga o‘tish",
     "heroBadgeTelegram": "Telegram Mini App",
     "heroBadgeCards": "UzCard · HUMO",
     "heroHeadline": "Telegram <stars>Stars</stars>, <premium>Premium</premium> va <gift>Gift</gift> — bitta platformada",

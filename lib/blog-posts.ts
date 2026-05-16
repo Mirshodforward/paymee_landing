@@ -13,6 +13,20 @@ export interface BlogPost {
 /** Maqolalar mavzusi [StarsJoy blog](https://www.starsjoy.uz/blog) dagi strukturaga oʻxshash; matnlar StarsPaymee uchun asl yozuv. */
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "durov-figurkasi-skinlar-telegram-konkurs-2026",
+    category: "Gifts",
+    datePublished: "2026-05-16",
+    title: "Durov figurkasi uchun mumkin bo‘lgan skinlar",
+    excerpt:
+      "Telegramda Durov figurkalari tanlovi: 52 430 $ mukofot jamg‘armasi, g‘oliblar Emoji Packlari va kelajakdagi Gift/skin yangilanishlariga oid qisqa sharh.",
+    paragraphs: [
+      "Kecha eng yaxshi modellarga yo‘naltirilgan maxsus tanlov bo‘lib o‘tdi — https://t.me/contest/453 . Undada 🎁 Durov figurkalari mavzusi bo‘yicha umumiy mukofot jamg‘armasi 52 430 AQSH dollari eʼlon qilingan.",
+      "G‘oliblar uchun ikki Emoji Pack mashhur qilindi; ularni Telegramda qoʻshishingiz mumkin: birinchi to‘plam https://t.me/addstickers/PDContest_winners , ikkinchi to‘plam https://t.me/addstickers/PDContest_winners2 .",
+      "Bu ishlar jamiyatda kelajakda Telegram Gifts figurkalari uchun yangi skinlar (tashqi koʻrinish variantlari) sifatida qabul qilinishi mumkinligi haqida taxminlar uyg‘otmoqda. Aniq jadval va qoidalar har doim Telegramning rasmiy eʼlonlari va Gifts qoidalariga tayangan holda tekshirilishi kerak.",
+      "Telegram Stars va tezkor yangiliklar oqimini kuzatishda ⭐️ @tezstar_bot ham qoʻshimcha manba boʻlishi mumkin.",
+    ],
+  },
+  {
     slug: "starspaymee-mini-app-may-2026-yangilik",
     category: "Telegram",
     datePublished: "2026-05-13",

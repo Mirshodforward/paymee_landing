@@ -46,12 +46,17 @@
     ]
   },
   "nav": {
+    "home": "Главная",
     "services": "Сервисы",
     "process": "Процесс",
     "trustLabel": "Надежность",
     "faq": "FAQ",
     "blog": "Блог",
-    "openTelegram": "Открыть в Telegram"
+    "openTelegram": "Открыть в Telegram",
+    "menuOpen": "Открыть меню",
+    "menuClose": "Закрыть меню",
+    "menuTitle": "Меню",
+    "menuNavAria": "Мобильная навигация"
   },
   "locales": {
     "uz": "O‘zbekcha",
@@ -89,7 +94,6 @@
     "Xavfsizlik": "Безопасность"
   },
   "home": {
-    "skipToMain": "Перейти к содержимому",
     "heroBadgeTelegram": "Telegram Mini App",
     "heroBadgeCards": "UzCard · HUMO",
     "heroHeadline": "<stars>Stars</stars>, <premium>Premium</premium> и <gift>Gift</gift> в Telegram — в одном месте",

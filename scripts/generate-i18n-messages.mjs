@@ -166,12 +166,17 @@ const baseUz = {
     ],
   },
   nav: {
+    home: "Asosiy",
     services: "Xizmatlar",
     process: "Jarayon",
     trustLabel: "Ishonch",
     faq: "FAQ",
     blog: "Blog",
     openTelegram: "Telegramda ochish",
+    menuOpen: "Menyu ochish",
+    menuClose: "Menyu yopish",
+    menuTitle: "Menyu",
+    menuNavAria: "Mobil navigatsiya",
   },
   locales: {
     uz: "O‘zbekcha",
@@ -212,7 +217,6 @@ const baseUz = {
     Xavfsizlik: "Xavfsizlik",
   },
   home: {
-    skipToMain: "Asosiy kontentga o‘tish",
     heroBadgeTelegram: "Telegram Mini App",
     heroBadgeCards: "UzCard · HUMO",
     heroHeadline:
@@ -354,12 +358,17 @@ baseRu.seo = {
   ],
 };
 baseRu.nav = {
+  home: "Главная",
   services: "Сервисы",
   process: "Процесс",
   trustLabel: "Надежность",
   faq: "FAQ",
   blog: "Блог",
   openTelegram: "Открыть в Telegram",
+  menuOpen: "Открыть меню",
+  menuClose: "Закрыть меню",
+  menuTitle: "Меню",
+  menuNavAria: "Мобильная навигация",
 };
 baseRu.footer = {
   tagline:
@@ -394,7 +403,6 @@ baseRu.categories = {
   Xavfsizlik: "Безопасность",
 };
 baseRu.home = {
-  skipToMain: "Перейти к содержимому",
   heroBadgeTelegram: "Telegram Mini App",
   heroBadgeCards: "UzCard · HUMO",
   heroHeadline:
@@ -556,12 +564,17 @@ baseEn.seo = {
   ],
 };
 baseEn.nav = {
+  home: "Home",
   services: "Services",
   process: "Flow",
   trustLabel: "Trust",
   faq: "FAQ",
   blog: "Blog",
   openTelegram: "Open in Telegram",
+  menuOpen: "Open menu",
+  menuClose: "Close menu",
+  menuTitle: "Menu",
+  menuNavAria: "Mobile navigation",
 };
 baseEn.footer = {
   tagline:
@@ -596,7 +609,6 @@ baseEn.categories = {
   Xavfsizlik: "Security",
 };
 baseEn.home = {
-  skipToMain: "Skip to main content",
   heroBadgeTelegram: "Telegram Mini App",
   heroBadgeCards: "UzCard · HUMO",
   heroHeadline:
