@@ -8,10 +8,36 @@ export interface BlogPost {
   /** ISO yyyy-mm-dd */
   datePublished: string;
   paragraphs: string[];
+  /** Meta keywords (qo'shimcha SEO) */
+  seoKeywords?: string[];
 }
 
 /** Maqolalar mavzusi [StarsJoy blog](https://www.starsjoy.uz/blog) dagi strukturaga oʻxshash; matnlar StarsPaymee uchun asl yozuv. */
 export const blogPosts: BlogPost[] = ([
+  {
+    slug: "telegram-stars-uzcard-humo-mini-app-2026",
+    category: "Stars",
+    datePublished: "2026-05-20",
+    title: "2026-yilda Telegram Stars sotib olish: UzCard, HUMO va Mini App — O‘zbekiston foydalanuvchilari uchun qisqa qo‘llanma",
+    excerpt:
+      "Telegram Stars xaridi: so‘mda narx, UzCard/HUMO bilan toʻlov, buyurtma ID va firibgarlikdan saqlanish. StarsPaymee Mini App orqali qanday tekshirish va nimalarga e’tibor berish kerak.",
+    paragraphs: [
+      "Telegram Stars kanal egalari, botlar va kontent yaratuvchilari uchun ichki hisob birligi boʻlib qolmoqda. O‘zbekistonda xarid odatda mahalliy bank kartalari orqali so‘m (UZS)da amalga oshiriladi — shuning uchun karta limitingiz, 3-D Secure va SMS/ilova bildirishnomalari tayyor boʻlishi muhim.",
+      "Mini App orqali xarid qilganda narx va slot maʼlumotlari interface’da bir joyda chiqadi; toʻlovdan keyin buyurtma identifikatori va status ketma-ketligi keyingi murojaatlar uchun saqlanadi. Agar kutilgan yulduzlar qisqa vaqt ichida aks etmasa, avvalo statusni yangilab, keyin supportga aynan shu ID bilan murojaat qiling.",
+      "Firibgarlikdan saqlanish uchun juda past narx, shubhali toʻgʻridan-toʻgʻri oʻtkazmalar va rasmiy boʻlmagan kanallarga ehtiyot boʻling. Ishonchli xizmat odatda aniq oferta, bot/Mini App manzili va yozma qoidalar bilan ochiq boʻladi.",
+      "Telegram Premium yoki Gifts bilan birga byudjet rejalashtirgan holda bir xil platformada operatsiyalarni yuritish operatsion xatolarni kamaytiradi; har bir mahsulot uchun Telegramning ruxsat etilgan API va siyosat doirasida qolish shart.",
+    ],
+    seoKeywords: [
+      "Telegram Stars sotib olish",
+      "Telegram Stars O‘zbekiston",
+      "UzCard",
+      "HUMO",
+      "UZS",
+      "Mini App",
+      "Telegram Stars narxi",
+      "Stars to‘ldirish",
+    ],
+  },
   {
     slug: "durov-figurkasi-skinlar-telegram-konkurs-2026",
     category: "Gifts",

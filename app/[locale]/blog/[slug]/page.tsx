@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "UzCard",
       "HUMO",
       post.category,
+      ...(post.seoKeywords ?? []),
     ],
     alternates: {
       canonical: `/${locale}/blog/${slug}`,
@@ -86,7 +87,7 @@ export default async function BlogArticlePage({ params }: Props) {
       url: base,
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    keywords: [post.category, "Telegram", siteConfig.name].join(", "),
+    keywords: [post.category, "Telegram", siteConfig.name, ...(post.seoKeywords ?? [])].join(", "),
   };
 
   const breadcrumbLd = {

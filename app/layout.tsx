@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
-  title: "Stars X Premium",
+  title: "StarsPaymee",
   description: "Telegram Stars platformasi",
   icons: {
     icon: [{ url: "/starspaymeelogo.jpg", type: "image/jpeg", sizes: "any" }],
