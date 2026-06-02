@@ -86,7 +86,7 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
             <ArrowRight className="size-4" aria-hidden strokeWidth={2} />
           </a>
           <Link
-            href="/#xizmatlar"
+            href="/#narxlar"
             className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-8 py-3.5 text-sm font-semibold text-slate-800 transition hover:border-slate-400 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-500"
           >
             {t("backHome")}

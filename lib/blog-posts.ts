@@ -15,6 +15,40 @@ export interface BlogPost {
 /** Maqolalar mavzusi [StarsJoy blog](https://www.starsjoy.uz/blog) dagi strukturaga oʻxshash; matnlar StarsPaymee uchun asl yozuv. */
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "telegram-premium-narxlari-arzon-qulay-2026",
+    category: "Premium",
+    datePublished: "2026-06-02",
+    title:
+      "Telegram Premium narxlari 2026: eng arzon va qulay paketlar — 3, 6, 12 oy hamda 1 oylik va 1 yillik",
+    excerpt:
+      "StarsPaymee'da Telegram Premium endi yanada qulay narxda: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. Akkauntga kirish shart emas — username bilan 10 soniyada faollashadi. Hamda alohida 1 oylik (50 000) va 1 yillik (300 000) variantlar ham olib beriladi. Arzon, qulay, ishonchli.",
+    paragraphs: [
+      "Telegram Premium 2026-yilda O‘zbekistonda har qachongidan arzon va qulay bo‘ldi. StarsPaymee orqali asosiy paketlar quyidagicha: 3 oylik Premium — 172 000 so‘m, 6 oylik — 232 000 so‘m, 12 oylik (1 yil) — atigi 422 000 so‘m. Bu bozordagi eng arzon narxlardan biri bo‘lib, oyiga hisoblaganda 12 oylik paket eng tejamkor variant hisoblanadi.",
+      "Eng muhimi — bu paketlarda akkauntingizga kirish (login, parol yoki SMS-kod) umuman talab qilinmaydi. Faqat @username yetarli, va Premium o‘rtacha 10 soniyada avtomatik faollashadi. Bu usul tez, xavfsiz va sizdan hech qanday maxfiy maʼlumot so‘ramaydi.",
+      "Bundan tashqari, agar sizga qisqaroq yoki rasmiy «akkauntga kirib berish» orqali faollashtirish kerak bo‘lsa, alohida variantlar ham olib beriladi: 1 oylik Premium — 50 000 so‘m, 1 yillik — 300 000 so‘m. Bu oqim login orqali rasmiy tarzda amalga oshiriladi va qo‘shimcha ehtiyojlar uchun mo‘ljallangan.",
+      "To‘lovni o‘zingizga qulay usulda qilishingiz mumkin: Click, Payme, Paynet, UzCard, HUMO yoki istalgan O‘zbekiston bank kartasi orqali so‘mda. Chet el kartasi yoki kripto kerak emas — barchasi mahalliy va oddiy.",
+      "StarsPaymee 1 yildan ortiq xizmat ko‘rsatib kelmoqda: 4000 dan ortiq faol foydalanuvchi va 100 000 dan ortiq muvaffaqiyatli buyurtma. Shuning uchun arzon narx bilan birga ishonchni ham olasiz — buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi.",
+      "Buyurtma berish uchun @StarsPaymee_bot Telegram botini yoki Telegram Mini App ni oching, Premium muddatini tanlang va kimga ekanini username bilan kiriting. Savol yoki yordam kerak bo‘lsa, @StarsPaymeeSupport orqali bog‘laning — qo‘llab-quvvatlash xizmati tezda javob beradi.",
+    ],
+    seoKeywords: [
+      "telegram premium narxlari",
+      "telegram premium arzon",
+      "telegram premium sotib olish",
+      "telegram premium 3 oy narxi",
+      "telegram premium 6 oy narxi",
+      "telegram premium 12 oy narxi",
+      "telegram premium 1 oylik",
+      "telegram premium 1 yillik",
+      "telegram premium username bilan",
+      "telegram premium 10 soniyada",
+      "telegram premium click payme",
+      "telegram premium uzcard humo",
+      "telegram premium o‘zbekistonda",
+      "StarsPaymee premium",
+      "@StarsPaymeeSupport",
+    ],
+  },
+  {
     slug: "telegram-stars-uzcard-humo-mini-app-2026",
     category: "Stars",
     datePublished: "2026-05-20",

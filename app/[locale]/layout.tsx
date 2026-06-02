@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import type { Viewport } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing } from "@/i18n/routing";
-import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 
 const brandLogoPath = "/starspaymeelogo.jpg";
 
@@ -108,6 +108,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const siteUrl = getSiteUrl();
   const telegramUrl = getTelegramBotUrl();
+  const supportUrl = getTelegramSupportUrl();
 
   const tSeo = await getTranslations({ locale, namespace: "seo" });
 
@@ -121,7 +122,13 @@ export default async function LocaleLayout({ children, params }: Props) {
         url: siteUrl,
         logo: `${siteUrl}${brandLogoPath}`,
         description: tSeo("description"),
-        sameAs: telegramUrl.startsWith("http") ? [telegramUrl] : undefined,
+        sameAs: [telegramUrl, supportUrl].filter((u) => u.startsWith("http")),
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          url: supportUrl,
+          availableLanguage: ["uz", "ru", "en"],
+        },
       },
       {
         "@type": "WebSite",

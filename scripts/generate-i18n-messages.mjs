@@ -5,72 +5,104 @@ const root = path.join(import.meta.dirname, "..");
 const outDir = path.join(root, "messages");
 fs.mkdirSync(outDir, { recursive: true });
 
+/* ──────────────────────────────────────────────────────────────────────────
+ * StarsPaymee — Telegram Stars, Premium va Gift xizmati (O‘zbekiston).
+ * Buyurtmalar @StarsPaymee_bot bot va Telegram Mini App orqali.
+ * Asosiy afzalliklar: 10 soniyada avtomatik yetkazish, eng arzon narxlar,
+ * Click / Payme / Paynet / UzCard / HUMO va istalgan bank kartasi.
+ * Raqamli narxlar lib/products.ts da; bu yerda faqat matn.
+ * ────────────────────────────────────────────────────────────────────────── */
+
 const faqUz = [
   [
-    "StarsPaymee nima va qayerda ochiladi?",
-    "StarsPaymee — Telegram ichida ishlaydigan Mini App (WebApp): siz akkaunt orqali kirib, Telegram Stars sotib olish, Telegram Premium obunasini uzaytirish yoki Telegram Gift jo‘natishni bitta joydan bajarolasiz. Interfeys @twa-dev/sdk va Telegram WebApp API bilan moslangan.",
+    "StarsPaymee nima va qanday ishlaydi?",
+    "StarsPaymee — O‘zbekistonda Telegram Stars (yulduz), Telegram Premium va Telegram Gift (sovg‘a) sotib olish xizmati. Buyurtma @StarsPaymee_bot Telegram boti yoki Telegram Mini App orqali beriladi: username yoziladi, mahsulot tanlanadi, to‘lov qilinadi — va buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi.",
   ],
   [
-    "Qanday to‘lov vositalari qo‘llab-quvvatlanadi?",
-    "Asosiy oqim O‘zbekiston bank kartalari — UzCard va HUMO orqali so‘m (UZS) da to‘lov. Buyurtmadan keyin backend buyurtmani tekshiradi va tasdiqlangach Stars, Premium yoki Gift yuboriladi.",
+    "Qanday to‘lov qilsam bo‘ladi?",
+    "Click, Payme, Paynet, UzCard, HUMO va istalgan O‘zbekiston bank kartasi orqali so‘mda to‘lashingiz mumkin. Hech qanday chet el kartasi yoki kripto kerak emas.",
   ],
   [
-    "Eski yoki cheklangan muddatli Telegram giftlar bilan nima qilish mumkin?",
-    "Platforma Telegramning ruxsat etilgan mexanizmalaridan foydalanib: cheklangan (limited), avvalgi sessiyadagi yoki endi oddiy koleksiya sifatida saqlanmayotgan giftlarni yulduz (Stars) balansiga yo‘naltirish yoki Telegram qoidalariga mos holda qayta ishlash bo‘yicha yo‘l-yo‘riq beradi. Aniq funksiya Mini App ichidagi Gift bo‘limida ko‘rsatiladi.",
+    "Telegram Premium uchun akkauntimga kirishim kerakmi?",
+    "Yo‘q. Premium «username bilan» oqimida akkauntga kirish (login, parol, SMS-kod) talab qilinmaydi — faqat @username yetarli va Premium 10 soniyada avtomatik faollashadi. Agar xohlasangiz, alohida «akkauntga kirib berish» xizmati ham bor.",
   ],
   [
-    "Xavfsizlik va akkaunt tekshiruvi qanday?",
-    "Telegram WebApp initData HMAC-SHA256 bilan serverda tekshiriladi; CORS faqat ruxsat etilgan domenlar uchun; rate limiting va Helmet kabi HTTP xavfsizlik sarlavhalari qo‘llaniladi. Bu loyiha arxitekturasida server-to-server ichki kalitlar bilan himoyalangan.",
+    "Narxlar qancha?",
+    "Telegram Stars donasi atigi 220 so‘mdan — 50 yulduz 11 000 so‘m. Telegram Premium: 3 oy 172 000 so‘m, 6 oy 232 000 so‘m, 12 oy 422 000 so‘m. Bu bozordagi eng arzon narxlardan biri.",
   ],
   [
-    "Referral va chegirmalar bormi?",
-    "Ha: referral havola orqali kelgan foydalanuvchilar xarid qilganda referrerga bonus yulduzlar hisoblanadi; chegirma paketlari va promokodlar Stars, Premium va Gift buyurtmalarida ishlatilishi mumkin.",
+    "Telegram sovg‘alarini qanday yuboraman?",
+    "Telegram noyob (unique) sovg‘alarini o‘zingiz uchun sotib olishingiz yoki do‘stingizga yuborishingiz mumkin. Sovg‘ani anonim tarzda yoki tabrik so‘zi (izoh) bilan jo‘natish ham mumkin.",
+  ],
+  [
+    "Do‘st taklif qilsam nima bo‘ladi?",
+    "Referral havolangiz orqali kelgan do‘stlaringiz xarid qilsa, sizga bonus hisoblanadi. Bonuslarni keyingi buyurtmalarda ishlatishingiz mumkin.",
+  ],
+  [
+    "StarsPaymee ishonchlimi?",
+    "StarsPaymee 1 yildan ortiq xizmat ko‘rsatadi, 4000 dan ortiq faol O‘zbekiston foydalanuvchisi va 100 000 dan ortiq bajarilgan buyurtmaga ega. Buyurtma texnik sabab bilan yetkazilmasa — to‘lov to‘liq qaytariladi.",
   ],
 ];
 
 const faqRu = [
   [
-    "Что такое StarsPaymee и где оно открывается?",
-    "StarsPaymee — мини-приложение Telegram (WebApp): вы авторизуетесь аккаунтом, покупаете Telegram Stars, продлеваете Telegram Premium и отправляете Telegram Gift из одного места. Интерфейс согласован с Telegram WebApp API и практикой @twa-dev/sdk.",
+    "Что такое StarsPaymee и как это работает?",
+    "StarsPaymee — сервис покупки Telegram Stars, Telegram Premium и Telegram Gift в Узбекистане. Заказ оформляется в Telegram-боте @StarsPaymee_bot или в Telegram Mini App: указываете username, выбираете товар, оплачиваете — и заказ доставляется автоматически в среднем за 10 секунд.",
   ],
   [
-    "Какие способы оплаты поддерживаются?",
-    "Основной поток — банковские карты Узбекистана: UzCard и HUMO в сумах (UZS). После оплаты бэкенд проверяет заказ и при подтверждении отправляет Stars, Premium или Gift.",
+    "Чем можно оплатить?",
+    "Click, Payme, Paynet, UzCard, HUMO и любая банковская карта Узбекистана — оплата в сумах. Иностранная карта или крипта не нужны.",
   ],
   [
-    "Что можно сделать со старыми или ограниченными Telegram gift?",
-    "Платформа использует допустимые механизмы Telegram для работы с limited и устаревшими подарками, при необходимости направляет Stars и даёт понятную логику в разделе Gift мини-приложения.",
+    "Нужно ли входить в аккаунт для Telegram Premium?",
+    "Нет. В потоке «по username» вход в аккаунт (логин, пароль, SMS-код) не требуется — достаточно @username, и Premium активируется автоматически за 10 секунд. При желании есть отдельная услуга «активация со входом в аккаунт».",
   ],
   [
-    "Как устроены безопасность и проверка аккаунта?",
-    "initData WebApp проверяется через HMAC-SHA256 на сервере; CORS только для доверенных доменов; rate limiting и Helmet для HTTP-безопасности. Сервер-сервер вызовы защищены внутренними ключами.",
+    "Сколько стоит?",
+    "Telegram Stars — от 220 сум за штуку; 50 звёзд — 11 000 сум. Telegram Premium: 3 месяца 172 000 сум, 6 месяцев 232 000 сум, 12 месяцев 422 000 сум. Это одни из самых низких цен на рынке.",
   ],
   [
-    "Есть ли реферальная программа и скидки?",
-    "Да: по реферальной ссылке за покупки начисляются бонусы звёзд; доступны промокоды и пакеты скидок для Stars, Premium и Gift.",
+    "Как отправить Telegram-подарки?",
+    "Уникальные подарки Telegram можно купить себе или отправить другу. Подарок можно отправить анонимно или с поздравительным комментарием.",
+  ],
+  [
+    "Что даёт приглашение друзей?",
+    "Когда приглашённый по вашей реферальной ссылке друг совершает покупку, вам начисляется бонус. Бонусы можно использовать в следующих заказах.",
+  ],
+  [
+    "Можно ли доверять StarsPaymee?",
+    "StarsPaymee работает больше года, у сервиса более 4000 активных пользователей из Узбекистана и более 100 000 выполненных заказов. Если заказ не доставлен по технической причине — полный возврат средств.",
   ],
 ];
 
 const faqEn = [
   [
-    "What is StarsPaymee and where do I open it?",
-    "StarsPaymee is a Telegram Mini App (Web App): once you authenticate, you buy Telegram Stars, extend Telegram Premium, and send Telegram Gifts—everything from one hub. Built with Telegram Web App patterns and tooling similar to @twa-dev/sdk.",
+    "What is StarsPaymee and how does it work?",
+    "StarsPaymee is a service for buying Telegram Stars, Telegram Premium and Telegram Gifts in Uzbekistan. You order through the @StarsPaymee_bot Telegram bot or the Telegram Mini App: enter a username, pick a product, pay — and the order is delivered automatically in about 10 seconds.",
   ],
   [
-    "Which payment methods are supported?",
-    "Primarily Uzbek cards—UzCard & HUMO—in UZS. After payment succeeds, our backend verifies the order then delivers Stars, Premium, or a Gift.",
+    "How can I pay?",
+    "Click, Payme, Paynet, UzCard, HUMO and any Uzbek bank card — paid in UZS. No foreign card or crypto required.",
   ],
   [
-    "What about old / limited Telegram gifts?",
-    "We rely on Telegram-allowed workflows for limited/outdated gifts, help convert value into Stars when applicable, and present the UX inside the Gift area of the mini app.",
+    "Do I need to log into my account for Telegram Premium?",
+    "No. In the “by username” flow no account login (password, SMS code) is needed — just the @username, and Premium activates automatically in 10 seconds. A separate “activation via account login” option is also available.",
   ],
   [
-    "How secure is onboarding?",
-    "We validate Telegram initData with HMAC-SHA256, lock CORS to trusted origins, enforce rate limiting, standard Helmet headers, and server-to-server secrets for internal APIs.",
+    "How much does it cost?",
+    "Telegram Stars from 220 so‘m each; 50 Stars for 11,000 so‘m. Telegram Premium: 3 months 172,000 so‘m, 6 months 232,000 so‘m, 12 months 422,000 so‘m — among the cheapest prices on the market.",
   ],
   [
-    "Are referrals and promos supported?",
-    "Yes—friends who join via your link yield bonus Stars; curated campaigns and promo codes apply across Stars, Premium, and Gifts.",
+    "How do I send Telegram gifts?",
+    "You can buy Telegram unique gifts for yourself or send them to a friend. A gift can be sent anonymously or with a congratulatory comment.",
+  ],
+  [
+    "What do I get for inviting friends?",
+    "When a friend who joined via your referral link makes a purchase, you earn a bonus. Bonuses can be used on your next orders.",
+  ],
+  [
+    "Is StarsPaymee trustworthy?",
+    "StarsPaymee has run for over a year, with 4,000+ active users in Uzbekistan and 100,000+ completed orders. If an order is not delivered due to a technical issue, you get a full refund.",
   ],
 ];
 
@@ -78,91 +110,47 @@ function mkFaq(pairs) {
   return pairs.map(([question, answer]) => ({ question, answer }));
 }
 
+/* ── O‘ZBEK (asosiy) ──────────────────────────────────────────────────────── */
 const baseUz = {
   seo: {
-    titleDefault: "Stars X Premium",
-    description: "Telegram Stars platformasi",
+    titleDefault: "StarsPaymee",
+    titleTemplate: "%s · StarsPaymee",
+    description:
+      "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik yetkaziladi. Click, Payme, Paynet, UzCard, HUMO orqali to‘lov. Eng arzon narxlar.",
     ogLocale: "uz_UZ",
     keywordsList: [
       "StarsPaymee",
-      "telegram stars",
-      "telegram premium",
-      "telegram gifts",
-      "telegram gift",
-      "Telegram Stars sotib olish",
+      "telegram stars sotib olish",
       "telegram premium sotib olish",
-      "telegram yulduzlar",
-      "telegram yulduzlar sotib olish",
-      "telegram hadyalar",
-      "telegram hadya yuborish",
-      "telegram sovg'a yuborish",
-      "telegram sovg'alar",
       "telegram stars narxi",
       "telegram premium narxi",
-      "telegram stars va premium narxlari",
-      "telegram stars to'ldirish",
-      "telegram stars to'ldirish usullari",
-      "telegram premium qanday olish",
-      "telegram stars qanday olish",
-      "telegram stars nima",
-      "telegram premium nima",
-      "telegram stars qanday ishlaydi",
-      "telegram premium qanday ishlaydi",
-      "telegram stars foydasi nima",
-      "telegram premium foydalari",
-      "telegram hadyalar qanday yuboriladi",
-      "telegram gift yuborish",
-      "telegram stars sovg'a qilish",
-      "telegram premium sovg'a qilish",
-      "telegram stars arzon sotib olish",
-      "telegram premium arzon olish",
-      "telegram stars tez va ishonchli sotib olish",
-      "telegram stars tez yetkazib berish",
-      "telegram premium darhol olish",
-      "telegram premium darhol aktivatsiya qilish",
-      "telegram premium eng arzon narxda olish",
-      "telegram stars arzon narxda sotib olish",
-      "telegram stars online sotib olish",
-      "telegram premium online sotib olish",
-      "telegram stars karta orqali to'lash",
-      "telegram premium uzcard orqali olish",
+      "telegram stars arzon",
+      "telegram premium arzon",
+      "telegram stars o‘zbekistonda",
+      "telegram premium o‘zbekistonda",
       "telegram stars uzcard",
-      "telegram premium humo orqali",
-      "telegram stars visa orqali sotib olish",
-      "telegram stars visa orqali",
-      "telegram premium mastercard orqali",
-      "telegram stars crypto orqali olish",
-      "telegram premium chegirma bilan olish",
-      "telegram stars to'lov qilish",
-      "telegram premium to'lash",
-      "telegram hadyalar online yuborish",
-      "telegram sovg'alar olish",
-      "telegram premium gift qilish",
-      "telegram hadyalar do'koni",
+      "telegram premium humo",
+      "telegram stars click orqali",
+      "telegram premium payme",
+      "telegram stars paynet",
+      "telegram premium karta orqali",
+      "telegram premium username bilan",
+      "telegram premium 10 soniyada",
+      "telegram premium avtomatik faollashtirish",
+      "telegram sovg‘a yuborish",
+      "telegram gift yuborish",
+      "telegram noyob sovg‘alar",
+      "telegram gift anonim",
       "telegram stars bot",
       "telegram premium bot",
-      "telegram to'lov boti",
-      "telegram stars xizmat",
-      "telegram premium xizmat",
-      "telegram stars xizmatlari",
-      "telegram premium xizmatlari",
-      "telegram stars va premium sotib olish",
-      "telegram yulduzlar va sovg'alar",
-      "telegram stars O'zbekiston",
-      "telegram premium O'zbekiston",
-      "telegram stars O'zbekistonda",
-      "telegram premium O'zbekistonda",
-      "telegram stars O'zbekistonda sotib olish",
-      "telegram premium O'zbekistonda qanday olish",
-      "telegram stars Toshkent",
-      "telegram premium Toshkent",
-      "telegram hadyalar O'zbekistonda",
-      "telegram stars purchase",
-      "telegram premium subscription",
-      "telegram gifts send",
+      "starspaymee bot",
+      "telegram stars toshkent",
+      "telegram premium toshkent",
       "UzCard",
       "HUMO",
-      "Telegram Mini App",
+      "Click",
+      "Payme",
+      "Paynet",
     ],
   },
   nav: {
@@ -172,7 +160,7 @@ const baseUz = {
     trustLabel: "Ishonch",
     faq: "FAQ",
     blog: "Blog",
-    openTelegram: "Telegramda ochish",
+    openTelegram: "Botni ochish",
     menuOpen: "Menyu ochish",
     menuClose: "Menyu yopish",
     menuTitle: "Menyu",
@@ -186,185 +174,237 @@ const baseUz = {
   },
   footer: {
     tagline:
-      "Telegram Stars, Premium, Gift va eski giftlar bilan ishlash — O‘zbekiston kartalari bilan so‘m to‘lov.",
-    miniAppHeading: "Mini App havolasi",
+      "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik. Click, Payme, Paynet, UzCard, HUMO va istalgan bank kartasi bilan so‘mda to‘lov.",
+    miniAppHeading: "Telegram bot",
     blog: "Blog",
+    supportHeading: "Qo‘llab-quvvatlash",
+    rights: "Barcha huquqlar himoyalangan.",
   },
   blogIndex: {
     breadcrumbHome: "Bosh sahifa",
     title: "Blog",
     subtitle:
-      "Telegram Stars, Premium va Gifts haqida yangiliklar va qo‘llanmalar — O‘zbekistonda kartadan toʻlovlar, reseller va xavfsizlik mavzulari.",
+      "Telegram Stars, Premium va sovg‘alar haqida qo‘llanmalar — O‘zbekistonda kartadan to‘lov, narxlar va xavfsizlik.",
     filterAria: "Turkum",
     filterAll: "Hammasi",
     read: "O‘qish",
     totalPostsSuffix: "{count} ta maqola",
-    footerNote: "Yangilanishi doimiy",
+    footerNote: "Doimiy yangilanadi",
   },
   blogArticle: {
-    openMiniApp: "Mini App ochish",
-    tryTitle: "Amaliyotda sinab ko‘ring",
+    openMiniApp: "Botni ochish",
+    tryTitle: "Hoziroq sinab ko‘ring",
     tryBody:
-      "StarsPaymee Mini App orqali Stars, Premium va Gifts bo‘yicha buyurtmani bir joyda yarating va statusni kuzating.",
+      "@StarsPaymee_bot orqali Stars, Premium yoki sovg‘a buyurtmasini bering — 10 soniyada avtomatik yetkaziladi.",
     backList: "Barcha maqolalar",
   },
   categories: {
     Stars: "Stars",
     Premium: "Premium",
-    Gifts: "Gifts",
+    Gifts: "Sovg‘alar",
     Biznes: "Biznes",
     Telegram: "Telegram",
     Xavfsizlik: "Xavfsizlik",
   },
   home: {
-    heroBadgeTelegram: "Telegram Mini App",
-    heroBadgeCards: "UzCard · HUMO",
+    heroBadge: "1 yildan ortiq · O‘zbekiston bo‘ylab",
     heroHeadline:
-      "Telegram <stars>Stars</stars>, <premium>Premium</premium> va <gift>Gift</gift> — bitta platformada",
-    heroCtaMiniApp: "Mini App ni ochish",
-    heroCtaServices: "Xizmatlar",
-    bulletTransparent: "So‘mda shaffof narxlash",
-    bulletOldGifts: "Eskirgan giftlar bilan ishlash",
-    bulletReferral: "Referral bonuslari",
-    cardAria: "StarsPaymee xizmatlari qisqacha",
-    cardLiveFlow: "Live flow",
-    cardDashboardFlow: "Dashboard",
-    starsOrder: "Stars buyurtmasi",
-    ddPriceSlot: 'narxi <arrow/> slot / polling',
-    premiumDd: "qidiruv + 3|6|12 oy",
-    giftDd: "TGS tanlash va jo‘natish",
-    giftLimitedLabel: "Gift + limited",
-    premiumLabelShort: "Premium",
-    heroQuickActions: "Mini App ichida tezkor yo‘nalishlar",
-    buyStarsShort: "Stars olish",
-    buyPremiumShort: "Premium olish",
-    giftsBannerBadge: "Telegram Gifts",
-    giftsBannerHeading: "Sovg‘a yuborish — bir joydan boshlang",
-    giftsBannerLead:
-      "StarsPaymee Mini App Telegram Gifts katalogidan sovg‘a tanlash, izoh va anonim yuborish oqimini UzCard/HUMO bilan so‘mda yakunlashni soddalashtiradi.",
-    giftsBannerBullets: [
-      "Tanlangan gift va oluvchini aniq tasdiqlash",
-      "Katalogdagi yozuvlar va cheklovlar Mini App bilan sinxron",
-      "Eski va cheklangan giftlar bilan ishlash alohida modulda ko‘riladi",
-      "\"Giftlar haqida\" batafsil ma’lumot alohida sahifada",
+      "Telegram <stars>Stars</stars>, <premium>Premium</premium> va <gift>Sovg‘alar</gift> — 10 soniyada",
+    heroSubtitle:
+      "O‘zbekistonda eng tez, arzon va ishonchli xizmat. Username yozasiz, to‘laysiz — buyurtma avtomatik yetadi. Akkauntga kirish shart emas.",
+    heroCtaBot: "Botni ochish",
+    heroCtaMiniApp: "Mini App",
+    heroCtaPrices: "Narxlarni ko‘rish",
+    heroBullets: [
+      "10 soniyada avtomatik yetkazish",
+      "Akkauntga kirish shart emas — username yetarli",
+      "Click, Payme, Paynet, UzCard, HUMO",
     ],
-    giftsBannerDetails: "Giftlar sahifasi",
-    giftsBannerOpenMini: "Mini Appda ochish",
-    svcHeading: "Nimalarni qilish mumkin?",
-    svcIntro:
-      "Loyiha modullari Telegram bot + Express REST + Postgres va React (Vite) Mini App tuzilmasida ishlaydi; asosiy sahifalar: boshqaruv paneli, Stars, Premium, Gift, tarix va referral — bularning barchasi marketing uchun quyidagi ustunvorlik bilan ifodalangan.",
-    svcItems: [
-      {
-        title: "Telegram Stars",
-        body: "Kerakli miqdorda yulduz tanlang — slot asosidagi narx, buyurtma holati polling orqali: toʻlov → yuborish → tasdiqlangan.",
-        tag: "/stars",
-      },
-      {
-        title: "Telegram Premium",
-        body: "3, 6 yoki 12 oy obuna. Foydalanuvchini qidirish, Premium mavjudligi tekshiruvi va promokoddan keyingi buyurtma oqimi.",
-        tag: "/premium",
-      },
-      {
-        title: "Telegram Gift",
-        body: "Katalogdan sovg‘a tanlash, anonim yuborish, izoh va TGS koʻrinishi — yoʻnatish Telegram sendGift akasi orqali.",
-        tag: "/gift",
-      },
-      {
-        title: "Eski va limited giftlar",
-        body: "Muddati oʻtgan yoki koleksiyasiz qolgan Telegram giftlar bilan ishlash: ularni Stars formatiga oʻtkazish va akkaunt boʻylab boshqarish uchun qulay interfeys.",
-        tag: "Gift va Stars",
-      },
+    statsDelivery: "Avtomatik yetkazish",
+    statsUsers: "Faol foydalanuvchi",
+    statsOrders: "Bajarilgan buyurtma",
+    statsYears: "Xizmatda",
+    statsYearsValue: "1 yil+",
+    paymentsTitle: "Istalgan karta bilan to‘lov",
+    paymentsNote: "va istalgan O‘zbekiston bank kartasi",
+    starsTitle: "Telegram Stars",
+    starsLead:
+      "Yulduz donasi atigi 220 so‘mdan. Kerakli miqdorni tanlang — bot 10 soniyada hisobingizga yetkazadi.",
+    starsPerUnitLabel: "donasi",
+    starsCta: "Stars sotib olish",
+    starsPopular: "Ommabop",
+    starsAmountUnit: "yulduz",
+    premiumTitle: "Telegram Premium",
+    premiumLead:
+      "Bozordagi eng arzon narxlardan biri. Ikki xil oqim: tez «username bilan» yoki rasmiy «akkauntga kirib berish».",
+    premiumAutoTitle: "Username bilan",
+    premiumAutoDesc: "Akkauntga kirmasdan, 10 soniyada avtomatik faollashadi.",
+    premiumAutoBadge: "10 soniyada · login shart emas",
+    premiumLoginTitle: "Akkauntga kirib berish",
+    premiumLoginDesc: "Login orqali rasmiy faollashtirish — alohida xizmat.",
+    premiumLoginBadge: "Login bilan",
+    premiumPopular: "Ommabop",
+    premiumCta: "Premium olish",
+    unitMonth: "oy",
+    unitYear: "yil",
+    perMonth: "oyiga",
+    giftsTitle: "Telegram noyob sovg‘alar",
+    giftsLead:
+      "Telegramning noyob sovg‘alarini o‘zingizga sotib oling yoki do‘stlaringizga yuboring — oson, qulay va ishonchli.",
+    giftsBullets: [
+      "Sovg‘ani o‘zingizga yoki do‘stingizga yuboring",
+      "Anonim tarzda yuborish imkoniyati",
+      "Tabrik so‘zini (izoh) qo‘shib yuboring",
+      "To‘lov so‘mda — Click, Payme, UzCard, HUMO",
     ],
-    processHeading: "Uch bosqichda",
+    giftsCta: "Sovg‘alar",
+    whyTitle: "Nega StarsPaymee?",
+    whyLead:
+      "1 yildan ortiq tajriba, 100 000 dan ortiq buyurtma va 4000 dan ortiq doimiy foydalanuvchi.",
+    whyItems: [
+      { title: "Eng tezkor", body: "Buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi." },
+      { title: "Eng arzon", body: "Yulduz 220 so‘mdan, Premium 3 oy 172 000 so‘mdan." },
+      { title: "Ishonchli", body: "1 yildan ortiq xizmat, 100 000+ bajarilgan buyurtma." },
+      { title: "Login shart emas", body: "Premium uchun faqat username — parol yoki kod kerak emas." },
+      { title: "Qulay to‘lov", body: "Click, Payme, Paynet, UzCard, HUMO va istalgan karta." },
+      { title: "Referral bonus", body: "Do‘st taklif qiling va bonuslar yig‘ing." },
+    ],
+    processTitle: "Uch bosqichda",
     steps: [
       {
-        title: "Botda oching",
-        desc: "Telegramda havolani bosing va StarsPaymee Mini App ni ishga tushiring — profilingiz Telegram orqali avtomatik aniqlanadi.",
+        title: "Botni oching",
+        desc: "@StarsPaymee_bot ni Telegramda oching yoki Mini App ni ishga tushiring.",
       },
       {
-        title: "Xizmatni tanlang",
-        desc: "Stars, Premium yoki Gift: qabul qiluvchini tasdiqlang, miqdorni tanlang va narxni so‘mda ko‘ring.",
+        title: "Tanlang va username yozing",
+        desc: "Stars, Premium yoki sovg‘ani tanlang, kimga ekanini username bilan kiriting.",
       },
       {
         title: "To‘lang va qabul qiling",
-        desc: "UzCard/HUMO bilan to‘lang; buyurtma tarixi va statuslar History bo‘limida — muvaffaqiyatda yulduz yoki Premium yoki Gift hisoblanadi.",
+        desc: "Click/Payme/UzCard/HUMO bilan to‘lang — 10 soniyada avtomatik yetadi.",
       },
     ],
-    trustHeading: "Texnik ishonch",
-    trustItems: [
-      {
-        label: "initData HMAC",
-        detail: "Serverda Telegram imzosini tekshirish",
-      },
-      { label: "Rate limit", detail: "IP bo‘yicha so‘rovlar cheklangan" },
-      { label: "CORS va Helmet", detail: "Faqat ruxsat etilgan domenlar" },
-      { label: "Buyurtma kuzatuv", detail: "ID bo‘yicha status API" },
-    ],
-    ctaHeading:
-      "Telegramda sahifani yuklang va birinchi Stars yoki Premium buyurtmangizni qiling",
+    ctaTitle: "Birinchi buyurtmangizni hoziroq bering",
     ctaBody:
-      "Chegirmalar va promokodlar, referral balansidan yechib olish — barchasi Mini App navigatsiyasida mavjud.",
-    ctaButton: "{brand} · Telegram",
-    faqHeading: "Ko‘p so‘raladigan savollar",
+      "Telegramda @StarsPaymee_bot ni oching — Stars, Premium yoki sovg‘a 10 soniyada hisobingizda.",
+    ctaButton: "{brand} botini ochish",
+    faqTitle: "Ko‘p so‘raladigan savollar",
     faqItems: mkFaq(faqUz),
+  },
+  landing: {
+    ctaMiniApp: "Botni ochish",
+    backHome: "Bosh sahifa",
+    sectionsHeading: "Bo‘limlar",
+    nav: { stars: "Stars", premium: "Premium", gifts: "Sovg‘alar", about: "Biz haqimizda" },
+    stars: {
+      metaTitle: "Telegram Stars sotib olish — arzon narx, 10 soniyada | StarsPaymee",
+      metaDescription:
+        "O‘zbekistonda Telegram Stars sotib oling: donasi 220 so‘mdan, 50 ta 11 000 so‘m. Click, Payme, UzCard, HUMO orqali to‘lov, 10 soniyada avtomatik yetkazish.",
+      h1: "Telegram Stars sotib olish",
+      intro:
+        "StarsPaymee orqali Telegram Stars (yulduz) ni O‘zbekistonda eng arzon narxda sotib oling. Yulduz donasi atigi 220 so‘mdan, bazaviy 50 yulduz 11 000 so‘m. Buyurtma @StarsPaymee_bot orqali beriladi va o‘rtacha 10 soniyada avtomatik yetkaziladi.",
+      bullets: [
+        "Donasi 220 so‘mdan — 50 yulduz 11 000 so‘m",
+        "Click, Payme, Paynet, UzCard, HUMO va istalgan karta",
+        "10 soniyada avtomatik yetkazish, akkauntga kirish shart emas",
+        "O‘zingizga yoki boshqa username’ga yuborish",
+      ],
+      footnote:
+        "Narx tanlangan yulduz miqdoriga qarab hisoblanadi. Aniq summani @StarsPaymee_bot yoki Mini App da ko‘rasiz.",
+    },
+    premium: {
+      metaTitle: "Telegram Premium sotib olish — 3/6/12 oy, arzon | StarsPaymee",
+      metaDescription:
+        "Telegram Premium: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
+      h1: "Telegram Premium sotib olish",
+      intro:
+        "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 10 soniyada avtomatik faollashadi. Alohida «akkauntga kirib berish» xizmati ham mavjud (1 oy 50 000, 1 yil 300 000 so‘m).",
+      bullets: [
+        "3 oy 172 000 · 6 oy 232 000 · 12 oy 422 000 so‘m",
+        "Username bilan 10 soniyada avtomatik faollashish",
+        "Akkauntga kirish, parol yoki SMS-kod talab qilinmaydi",
+        "Alohida login bilan faollashtirish: 1 oy 50 000, 1 yil 300 000 so‘m",
+      ],
+      footnote:
+        "Username bilan oqimda faqat @username kifoya. Login bilan oqim alohida xizmat sifatida amalga oshiriladi.",
+    },
+    gifts: {
+      metaTitle: "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan | StarsPaymee",
+      metaDescription:
+        "Telegram noyob sovg‘alarini sotib oling yoki do‘stlaringizga yuboring. Anonim yoki tabrik izohi bilan. So‘mda to‘lov, oson va ishonchli.",
+      h1: "Telegram sovg‘alari yuborish",
+      intro:
+        "Telegramning noyob (unique) sovg‘alarini StarsPaymee orqali o‘zingizga sotib oling yoki do‘stlaringizga yuboring. Sovg‘ani anonim tarzda yoki tabrik so‘zi bilan jo‘natishingiz mumkin. To‘lov so‘mda — Click, Payme, UzCard, HUMO orqali.",
+      bullets: [
+        "Noyob Telegram sovg‘alarini sotib olish yoki yuborish",
+        "Anonim yuborish imkoniyati",
+        "Tabrik so‘zini (izoh) qo‘shish",
+        "So‘mda qulay to‘lov, ishonchli yetkazish",
+      ],
+      footnote:
+        "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi.",
+    },
+    about: {
+      metaTitle: "Biz haqimizda — StarsPaymee Telegram Stars va Premium xizmati",
+      metaDescription:
+        "StarsPaymee — 1 yildan ortiq, 4000+ foydalanuvchi va 100 000+ buyurtma. O‘zbekistonda Telegram Stars, Premium va sovg‘alar bo‘yicha ishonchli xizmat.",
+      h1: "Biz haqimizda",
+      intro:
+        "StarsPaymee — O‘zbekistonda Telegram Stars, Premium va sovg‘alar sotib olish uchun tez, arzon va ishonchli xizmat. 1 yildan ortiq vaqt davomida 4000 dan ortiq foydalanuvchiga 100 000 dan ortiq buyurtmani yetkazib berdik.",
+      bullets: [
+        "1 yildan ortiq uzluksiz xizmat",
+        "4000+ faol O‘zbekiston foydalanuvchisi",
+        "100 000+ muvaffaqiyatli buyurtma",
+        "Click, Payme, Paynet, UzCard, HUMO bilan so‘mda to‘lov",
+      ],
+      footnote:
+        "Savollar bo‘lsa @StarsPaymee_bot orqali murojaat qiling — qo‘llab-quvvatlash xizmati yordam beradi.",
+    },
   },
 };
 
+/* ── RUS ───────────────────────────────────────────────────────────────────── */
 const baseRu = structuredClone(baseUz);
 baseRu.seo = {
-  titleDefault: "Stars X Premium",
-  description: "Платформа Telegram Stars",
+  titleDefault: "StarsPaymee",
+  titleTemplate: "%s · StarsPaymee",
+  description:
+    "Telegram Stars, Premium и подарки в Узбекистане — доставка автоматически за 10 секунд. Оплата Click, Payme, Paynet, UzCard, HUMO. Самые низкие цены.",
   ogLocale: "ru_RU",
   keywordsList: [
     "StarsPaymee",
-    "telegram stars",
-    "telegram premium",
-    "telegram gifts",
-    "telegram gift",
     "купить telegram stars",
     "купить telegram premium",
     "telegram stars цена",
     "telegram premium цена",
-    "telegram подарки",
+    "telegram stars дёшево",
+    "telegram premium узбекистан",
+    "telegram stars узбекистан",
+    "telegram stars uzcard",
+    "telegram premium humo",
+    "telegram stars click",
+    "telegram premium payme",
+    "telegram premium по username",
+    "telegram premium за 10 секунд",
     "отправить подарок telegram",
-    "telegram stars пополнить",
-    "telegram premium подписка",
-    "telegram stars покупка",
-    "telegram premium купить дешево",
-    "мини приложение Telegram",
-    "telegram stars Uzbekistan",
-    "telegram premium Uzbekistan",
-    "telegram подарки Uzbekistan",
-    "купить stars telegram Uzbekistan",
-    "telegram stars UzCard",
-    "telegram premium HUMO",
-    "telegram stars оплата картой",
-    "telegram premium оплата",
-    "telegram stars мгновенная доставка",
-    "telegram premium скидка",
-    "telegram bot stars",
-    "telegram bot premium",
-    "telegram stars сервис",
-    "telegram premium сервис",
-    "telegram gift отправить",
-    "telegram подарочные звезды",
+    "telegram подарки анонимно",
+    "telegram stars бот",
+    "starspaymee бот",
     "UzCard",
     "HUMO",
-    "Узбекистан",
-    "Ташкент",
-    "Telegram Stars",
-    "Telegram Premium",
-    "Telegram Gift",
+    "Click",
+    "Payme",
+    "Paynet",
   ],
 };
 baseRu.nav = {
   home: "Главная",
   services: "Сервисы",
   process: "Процесс",
-  trustLabel: "Надежность",
+  trustLabel: "Надёжность",
   faq: "FAQ",
   blog: "Блог",
-  openTelegram: "Открыть в Telegram",
+  openTelegram: "Открыть бота",
   menuOpen: "Открыть меню",
   menuClose: "Закрыть меню",
   menuTitle: "Меню",
@@ -372,195 +412,222 @@ baseRu.nav = {
 };
 baseRu.footer = {
   tagline:
-    "Stars, Premium, подарки и работа со старыми подарками — оплата в сумах узбекскими картами.",
-  miniAppHeading: "Мини-приложение",
+    "Telegram Stars, Premium и подарки в Узбекистане — автоматически за 10 секунд. Оплата Click, Payme, Paynet, UzCard, HUMO и любой банковской картой в сумах.",
+  miniAppHeading: "Telegram-бот",
   blog: "Блог",
+  supportHeading: "Поддержка",
+  rights: "Все права защищены.",
 };
 baseRu.blogIndex = {
   breadcrumbHome: "Главная",
   title: "Блог",
   subtitle:
-    "Материалы про Telegram Stars, Premium и Gifts: оплаты в Узбекистане, реселлер и безопасность.",
+    "Гайды про Telegram Stars, Premium и подарки — оплата картой в Узбекистане, цены и безопасность.",
   filterAria: "Категория",
   filterAll: "Все",
   read: "Читать",
   totalPostsSuffix: "{count} материалов",
-  footerNote: "Обновляем регулярно",
+  footerNote: "Регулярно обновляем",
 };
 baseRu.blogArticle = {
-  openMiniApp: "Открыть Mini App",
-  tryTitle: "Попробуйте в приложении",
+  openMiniApp: "Открыть бота",
+  tryTitle: "Попробуйте сейчас",
   tryBody:
-    "Создавайте заказы Stars/Premium/Gift в StarsPaymee Mini App и отслеживайте статус в одном окне.",
+    "Оформите заказ Stars, Premium или подарка в @StarsPaymee_bot — доставка автоматически за 10 секунд.",
   backList: "Все материалы",
 };
 baseRu.categories = {
   Stars: "Stars",
   Premium: "Premium",
-  Gifts: "Gifts",
+  Gifts: "Подарки",
   Biznes: "Бизнес",
   Telegram: "Telegram",
   Xavfsizlik: "Безопасность",
 };
 baseRu.home = {
-  heroBadgeTelegram: "Telegram Mini App",
-  heroBadgeCards: "UzCard · HUMO",
+  heroBadge: "Больше года · по всему Узбекистану",
   heroHeadline:
-    "<stars>Stars</stars>, <premium>Premium</premium> и <gift>Gift</gift> в Telegram — в одном месте",
-  heroCtaMiniApp: "Открыть Mini App",
-  heroCtaServices: "Сервисы",
-  bulletTransparent: "Прозрачные цены в сумах",
-  bulletOldGifts: "Работа со старыми подарками",
-  bulletReferral: "Реферальные бонусы",
-  cardAria: "Краткий обзор StarsPaymee",
-  cardLiveFlow: "Live flow",
-  cardDashboardFlow: "Dashboard",
-  starsOrder: "Заказ Stars",
-  ddPriceSlot: 'цена <arrow/> слот / polling',
-  premiumDd: "поиск + 3|6|12 мес",
-  giftDd: "выбор TGS и отправка",
-  giftLimitedLabel: "Gift + limited",
-  premiumLabelShort: "Premium",
-  heroQuickActions: "Быстрые разделы Mini App",
-  buyStarsShort: "Купить Stars",
-  buyPremiumShort: "Купить Premium",
-  giftsBannerBadge: "Telegram Gifts",
-  giftsBannerHeading: "Отправка подарков — с одной площадки",
-  giftsBannerLead:
-    "StarsPaymee в Mini App соединяет каталог Telegram Gifts, комментарий, аноним (если разрешено) и оплату UzCard/HUMO в сумах.",
-  giftsBannerBullets: [
-    "Фиксируем получателя и gift_id перед списанием",
-    "Актуальные статусы и ограничения Telegram видны перед оплатой",
-    "Legacy/limited-сценарии ведём через отдельные модули",
-    "Подробности — отдельная страница /gifts для SEO и пользователей",
+    "Telegram <stars>Stars</stars>, <premium>Premium</premium> и <gift>подарки</gift> — за 10 секунд",
+  heroSubtitle:
+    "Самый быстрый, дешёвый и надёжный сервис в Узбекистане. Указываете username, оплачиваете — заказ приходит автоматически. Вход в аккаунт не нужен.",
+  heroCtaBot: "Открыть бота",
+  heroCtaMiniApp: "Mini App",
+  heroCtaPrices: "Смотреть цены",
+  heroBullets: [
+    "Автодоставка за 10 секунд",
+    "Без входа в аккаунт — достаточно username",
+    "Click, Payme, Paynet, UzCard, HUMO",
   ],
-  giftsBannerDetails: "Страница Gifts",
-  giftsBannerOpenMini: "Открыть в Mini App",
-  svcHeading: "Что можно сделать?",
-  svcIntro:
-    "Модули на базе Telegram-бота, Express REST и PostgreSQL и React/Vite Mini App: дашборд, Stars, Premium, Gift, история и рефералка — здесь они сведены в маркетинговый блок.",
-  svcItems: [
-    {
-      title: "Telegram Stars",
-      body: "Выберите количество — цена зависит от слота; статус заказа обновляется через polling после оплаты.",
-      tag: "/stars",
-    },
-    {
-      title: "Telegram Premium",
-      body: "Пакеты 3, 6 и 12 месяцев с поиском пользователя и проверкой активного Premium перед оплатой.",
-      tag: "/premium",
-    },
-    {
-      title: "Telegram Gift",
-      body: "Каталог, анонимная отправка, комментарий и TGS; доставка через Telegram sendGift.",
-      tag: "/gift",
-    },
-    {
-      title: "Legacy / limited подарки",
-      body: "Работа с истёкшими или limited-подарками: конвертация в Stars и удобное управление в интерфейсе.",
-      tag: "Gift и Stars",
-    },
+  statsDelivery: "Автодоставка",
+  statsUsers: "Активных пользователей",
+  statsOrders: "Выполненных заказов",
+  statsYears: "В работе",
+  statsYearsValue: "1 год+",
+  paymentsTitle: "Оплата любой картой",
+  paymentsNote: "и любой банковской картой Узбекистана",
+  starsTitle: "Telegram Stars",
+  starsLead:
+    "Звезда от 220 сум за штуку. Выберите нужное количество — бот доставит за 10 секунд.",
+  starsPerUnitLabel: "за шт.",
+  starsCta: "Купить Stars",
+  starsPopular: "Популярно",
+  starsAmountUnit: "звёзд",
+  premiumTitle: "Telegram Premium",
+  premiumLead:
+    "Одни из самых низких цен. Два потока: быстрый «по username» или официальный «вход в аккаунт».",
+  premiumAutoTitle: "По username",
+  premiumAutoDesc: "Без входа в аккаунт, активируется автоматически за 10 секунд.",
+  premiumAutoBadge: "10 секунд · без входа",
+  premiumLoginTitle: "Со входом в аккаунт",
+  premiumLoginDesc: "Официальная активация через вход — отдельная услуга.",
+  premiumLoginBadge: "Со входом",
+  premiumPopular: "Популярно",
+  premiumCta: "Купить Premium",
+  unitMonth: "мес",
+  unitYear: "год",
+  perMonth: "в месяц",
+  giftsTitle: "Уникальные подарки Telegram",
+  giftsLead:
+    "Покупайте уникальные подарки Telegram себе или отправляйте друзьям — просто, удобно и надёжно.",
+  giftsBullets: [
+    "Подарок себе или другу",
+    "Возможность анонимной отправки",
+    "Добавьте поздравительный комментарий",
+    "Оплата в сумах — Click, Payme, UzCard, HUMO",
   ],
-  processHeading: "Три простых шага",
+  giftsCta: "Подарки",
+  whyTitle: "Почему StarsPaymee?",
+  whyLead: "Больше года опыта, свыше 100 000 заказов и более 4000 постоянных пользователей.",
+  whyItems: [
+    { title: "Самый быстрый", body: "Заказ доставляется автоматически в среднем за 10 секунд." },
+    { title: "Самый дешёвый", body: "Звезда от 220 сум, Premium 3 месяца от 172 000 сум." },
+    { title: "Надёжный", body: "Больше года работы, 100 000+ выполненных заказов." },
+    { title: "Без входа", body: "Для Premium нужен только username — без пароля и кода." },
+    { title: "Удобная оплата", body: "Click, Payme, Paynet, UzCard, HUMO и любая карта." },
+    { title: "Реферальный бонус", body: "Приглашайте друзей и копите бонусы." },
+  ],
+  processTitle: "Три простых шага",
   steps: [
+    { title: "Откройте бота", desc: "Откройте @StarsPaymee_bot в Telegram или запустите Mini App." },
     {
-      title: "Откройте в боте",
-      desc: "Перейдите по ссылке и запустите StarsPaymee Mini App — профиль Telegram подтягивается автоматически.",
-    },
-    {
-      title: "Выберите сервис",
-      desc: "Stars, Premium или Gift: проверьте получателя и суммы в сумах перед оплатой.",
+      title: "Выберите и укажите username",
+      desc: "Выберите Stars, Premium или подарок и укажите получателя по username.",
     },
     {
       title: "Оплатите и получите",
-      desc: "UzCard/HUMO оплата, статусы заказов в разделе History — после успеха приходят Stars, Premium или Gift.",
+      desc: "Оплатите Click/Payme/UzCard/HUMO — придёт автоматически за 10 секунд.",
     },
   ],
-  trustHeading: "Инженерное доверие",
-  trustItems: [
-    { label: "initData HMAC", detail: "Проверка подписи Telegram на сервере" },
-    {
-      label: "Rate limit",
-      detail: "Ограничение запросов по IP по правилам API",
-    },
-    { label: "CORS + Helmet", detail: "Только доверенные домены" },
-    { label: "Статус заказа", detail: "API по ID без лишней болтовни" },
-  ],
-  ctaHeading:
-    "Загрузите Mini App и оформите первый заказ Stars или Premium уже сегодня",
+  ctaTitle: "Оформите первый заказ прямо сейчас",
   ctaBody:
-    "Акции, промокоды и вывод реф-баланса — всё находится рядом в навигации Mini App.",
-  ctaButton: "{brand} · Telegram",
-  faqHeading: "Частые вопросы",
+    "Откройте @StarsPaymee_bot в Telegram — Stars, Premium или подарок будут на счету за 10 секунд.",
+  ctaButton: "Открыть бота {brand}",
+  faqTitle: "Частые вопросы",
   faqItems: mkFaq(faqRu),
 };
 baseRu.locales = baseUz.locales;
+baseRu.landing = {
+  ctaMiniApp: "Открыть бота",
+  backHome: "Главная",
+  sectionsHeading: "Разделы",
+  nav: { stars: "Stars", premium: "Premium", gifts: "Подарки", about: "О нас" },
+  stars: {
+    metaTitle: "Купить Telegram Stars — дёшево, за 10 секунд | StarsPaymee",
+    metaDescription:
+      "Купить Telegram Stars в Узбекистане: от 220 сум за штуку, 50 шт. — 11 000 сум. Оплата Click, Payme, UzCard, HUMO. Автодоставка за 10 секунд.",
+    h1: "Купить Telegram Stars",
+    intro:
+      "Покупайте Telegram Stars в Узбекистане по самой низкой цене через StarsPaymee. Звезда от 220 сум, базовый пакет 50 звёзд — 11 000 сум. Заказ оформляется в @StarsPaymee_bot и доставляется автоматически в среднем за 10 секунд.",
+    bullets: [
+      "От 220 сум за штуку — 50 звёзд 11 000 сум",
+      "Click, Payme, Paynet, UzCard, HUMO и любая карта",
+      "Автодоставка за 10 секунд, без входа в аккаунт",
+      "Себе или на другой username",
+    ],
+    footnote:
+      "Цена зависит от выбранного количества звёзд. Точную сумму вы увидите в @StarsPaymee_bot или Mini App.",
+  },
+  premium: {
+    metaTitle: "Купить Telegram Premium — 3/6/12 мес, дёшево | StarsPaymee",
+    metaDescription:
+      "Telegram Premium: 3 мес 172 000, 6 мес 232 000, 12 мес 422 000 сум. По username активируется автоматически за 10 секунд, без входа в аккаунт.",
+    h1: "Купить Telegram Premium",
+    intro:
+      "Оформите подписку Telegram Premium в Узбекистане по низкой цене: 3 месяца 172 000, 6 месяцев 232 000, 12 месяцев 422 000 сум. В потоке «по username» вход в аккаунт не нужен — Premium активируется автоматически за 10 секунд. Есть и отдельная услуга «со входом в аккаунт» (1 мес 50 000, 1 год 300 000 сум).",
+    bullets: [
+      "3 мес 172 000 · 6 мес 232 000 · 12 мес 422 000 сум",
+      "По username — автоактивация за 10 секунд",
+      "Без входа в аккаунт, пароля и SMS-кода",
+      "Отдельно со входом: 1 мес 50 000, 1 год 300 000 сум",
+    ],
+    footnote:
+      "В потоке по username достаточно @username. Поток со входом — отдельная услуга.",
+  },
+  gifts: {
+    metaTitle: "Отправить уникальные подарки Telegram — анонимно | StarsPaymee",
+    metaDescription:
+      "Покупайте уникальные подарки Telegram или отправляйте друзьям. Анонимно или с поздравлением. Оплата в сумах, просто и надёжно.",
+    h1: "Отправка подарков Telegram",
+    intro:
+      "Покупайте уникальные подарки Telegram себе или отправляйте друзьям через StarsPaymee. Подарок можно отправить анонимно или с поздравительным комментарием. Оплата в сумах — Click, Payme, UzCard, HUMO.",
+    bullets: [
+      "Покупка или отправка уникальных подарков Telegram",
+      "Возможность анонимной отправки",
+      "Поздравительный комментарий",
+      "Удобная оплата в сумах, надёжная доставка",
+    ],
+    footnote:
+      "Список доступных подарков и цены показываются в @StarsPaymee_bot или Mini App.",
+  },
+  about: {
+    metaTitle: "О нас — сервис Telegram Stars и Premium StarsPaymee",
+    metaDescription:
+      "StarsPaymee — больше года, 4000+ пользователей и 100 000+ заказов. Надёжный сервис Telegram Stars, Premium и подарков в Узбекистане.",
+    h1: "О нас",
+    intro:
+      "StarsPaymee — быстрый, дешёвый и надёжный сервис покупки Telegram Stars, Premium и подарков в Узбекистане. За более чем год мы доставили свыше 100 000 заказов более чем 4000 пользователям.",
+    bullets: [
+      "Больше года непрерывной работы",
+      "4000+ активных пользователей из Узбекистана",
+      "100 000+ успешных заказов",
+      "Оплата в сумах: Click, Payme, Paynet, UzCard, HUMO",
+    ],
+    footnote: "По вопросам пишите в @StarsPaymee_bot — поддержка поможет.",
+  },
+};
 
+/* ── ENGLISH ─────────────────────────────────────────────────────────────── */
 const baseEn = structuredClone(baseUz);
 baseEn.seo = {
-  titleDefault: "Stars X Premium",
-  description: "Telegram Stars platform",
+  titleDefault: "StarsPaymee",
+  titleTemplate: "%s · StarsPaymee",
+  description:
+    "Telegram Stars, Premium and gifts in Uzbekistan — delivered automatically in 10 seconds. Pay via Click, Payme, Paynet, UzCard, HUMO. Lowest prices.",
   ogLocale: "en_US",
   keywordsList: [
     "StarsPaymee",
-    "telegram stars",
-    "telegram premium",
-    "telegram gifts",
-    "telegram gift",
     "buy telegram stars",
-    "telegram stars buy",
-    "telegram stars purchase",
-    "telegram premium buy",
-    "buy telegram stars online",
-    "buy telegram premium instantly",
-    "buy telegram stars cheap",
-    "cheap telegram premium subscription",
-    "telegram stars instant delivery",
-    "telegram stars fast delivery",
-    "telegram premium discount",
-    "telegram gifts send",
-    "send telegram gifts online",
+    "buy telegram premium",
     "telegram stars price",
     "telegram premium price",
-    "telegram premium cheap price",
-    "telegram premium cost",
-    "telegram stars recharge",
-    "telegram stars recharge online",
-    "telegram stars payment method",
-    "telegram stars payment uzcard",
-    "telegram stars payment visa",
-    "telegram stars with crypto",
-    "telegram premium gift purchase",
-    "telegram gift cards",
-    "telegram gifts shop",
-    "send gift telegram stars",
-    "telegram gift premium",
-    "telegram gift subscription",
-    "how to buy telegram stars",
-    "how to get telegram premium",
-    "telegram stars for bots",
-    "telegram monetization how it works",
-    "telegram stars vs premium",
-    "telegram gifts how to send",
+    "cheap telegram stars",
+    "telegram stars uzbekistan",
+    "telegram premium uzbekistan",
+    "telegram stars uzcard",
+    "telegram premium humo",
+    "telegram stars click",
+    "telegram premium payme",
+    "telegram premium by username",
+    "telegram premium 10 seconds",
+    "send telegram gifts",
+    "telegram gifts anonymous",
     "telegram stars bot",
-    "telegram premium bot",
-    "telegram payment bot",
-    "telegram stars API",
-    "telegram premium service",
-    "telegram stars Uzbekistan payment",
-    "telegram premium subscription Uzbekistan",
-    "telegram stars Uzbekistan",
-    "telegram premium Uzbekistan",
-    "where to buy telegram stars cheap online",
-    "best site to buy telegram premium 2026",
-    "how to send telegram gifts without bot",
+    "starspaymee bot",
     "UzCard",
     "HUMO",
-    "Uzbekistan",
-    "Telegram Mini App",
-    "Telegram Stars",
-    "Telegram Premium",
-    "Telegram Gift",
+    "Click",
+    "Payme",
+    "Paynet",
   ],
 };
 baseEn.nav = {
@@ -570,7 +637,7 @@ baseEn.nav = {
   trustLabel: "Trust",
   faq: "FAQ",
   blog: "Blog",
-  openTelegram: "Open in Telegram",
+  openTelegram: "Open bot",
   menuOpen: "Open menu",
   menuClose: "Close menu",
   menuTitle: "Menu",
@@ -578,15 +645,17 @@ baseEn.nav = {
 };
 baseEn.footer = {
   tagline:
-    "Telegram Stars, Premium, Gifts, and legacy-present workflows—checkout with Uzbek cards in UZS.",
-  miniAppHeading: "Mini App link",
+    "Telegram Stars, Premium and gifts in Uzbekistan — automatic in 10 seconds. Pay with Click, Payme, Paynet, UzCard, HUMO and any bank card in UZS.",
+  miniAppHeading: "Telegram bot",
   blog: "Blog",
+  supportHeading: "Support",
+  rights: "All rights reserved.",
 };
 baseEn.blogIndex = {
   breadcrumbHome: "Home",
   title: "Blog",
   subtitle:
-    "Guides about Telegram Stars, Premium, and Gifts—cards in Uzbekistan, reseller models, security.",
+    "Guides about Telegram Stars, Premium and gifts — card payments in Uzbekistan, prices and security.",
   filterAria: "Category",
   filterAll: "All",
   read: "Read article",
@@ -594,10 +663,10 @@ baseEn.blogIndex = {
   footerNote: "Updated regularly",
 };
 baseEn.blogArticle = {
-  openMiniApp: "Open Mini App",
-  tryTitle: "Try it in the app",
+  openMiniApp: "Open bot",
+  tryTitle: "Try it now",
   tryBody:
-    "Create Stars/Premium/Gift orders inside StarsPaymee Mini App and watch status updates in real time.",
+    "Place a Stars, Premium or gift order in @StarsPaymee_bot — delivered automatically in 10 seconds.",
   backList: "All articles",
 };
 baseEn.categories = {
@@ -609,111 +678,156 @@ baseEn.categories = {
   Xavfsizlik: "Security",
 };
 baseEn.home = {
-  heroBadgeTelegram: "Telegram Mini App",
-  heroBadgeCards: "UzCard · HUMO",
+  heroBadge: "1+ year · across Uzbekistan",
   heroHeadline:
-    "Telegram <stars>Stars</stars>, <premium>Premium</premium>, and <gift>Gifts</gift>—one cockpit",
-  heroCtaMiniApp: "Open Mini App",
-  heroCtaServices: "Explore services",
-  bulletTransparent: "Transparent UZS pricing",
-  bulletOldGifts: "Support for ageing gifts",
-  bulletReferral: "Referral rewards",
-  cardAria: "StarsPaymee live flow snapshot",
-  cardLiveFlow: "Live flow",
-  cardDashboardFlow: "Dashboard",
-  starsOrder: "Stars checkout",
-  ddPriceSlot: 'price <arrow/> slot / polling',
-  premiumDd: "recipient search + 3|6|12 mo",
-  giftDd: "pick TGS + deliver",
-  giftLimitedLabel: "Gift + limited",
-  premiumLabelShort: "Premium",
-  heroQuickActions: "Quick actions in Mini App",
-  buyStarsShort: "Get Stars",
-  buyPremiumShort: "Get Premium",
-  giftsBannerBadge: "Telegram Gifts",
-  giftsBannerHeading: "Send gifts from one cockpit",
-  giftsBannerLead:
-    "StarsPaymee wraps Telegram Gifts selection—notes, anonymity where supported—and checkout with Uzbek cards (UzCard/HUMO) in UZS right inside Mini App.",
-  giftsBannerBullets: [
-    "Crystal-clear recipient plus gift IDs before charging the card",
-    "Catalog wording and Telegram guardrails surfaced where you buy",
-    "Legacy or limited presets are routed through the Gifts + Stars tooling",
-    "Need the long read? Dedicated /gifts page explains the playbook",
+    "Telegram <stars>Stars</stars>, <premium>Premium</premium> and <gift>Gifts</gift> — in 10 seconds",
+  heroSubtitle:
+    "The fastest, cheapest and most reliable service in Uzbekistan. Enter a username, pay — your order arrives automatically. No account login required.",
+  heroCtaBot: "Open bot",
+  heroCtaMiniApp: "Mini App",
+  heroCtaPrices: "See prices",
+  heroBullets: [
+    "Automatic delivery in 10 seconds",
+    "No account login — username is enough",
+    "Click, Payme, Paynet, UzCard, HUMO",
   ],
-  giftsBannerDetails: "Gifts landing page",
-  giftsBannerOpenMini: "Open in Mini App",
-  svcHeading: "What can you accomplish?",
-  svcIntro:
-    "Our Telegram bot pairs with Express/Postgres/React (Vite) Mini App dashboards—Stars, Premium, Gifts, receipts, referrals—marketing copy below mirrors the modular build.",
-  svcItems: [
-    {
-      title: "Telegram Stars",
-      body: "Select the Stars amount—slot-priced quotes, deterministic polling updates after checkout.",
-      tag: "/stars",
-    },
-    {
-      title: "Telegram Premium",
-      body: "3/6/12 month passes with recipient lookups and sanity checks prior to issuing Premium.",
-      tag: "/premium",
-    },
-    {
-      title: "Telegram Gifts",
-      body: "Curated catalogue, anonymity, notes, sticker previews—issued through Telegram gift APIs.",
-      tag: "/gift",
-    },
-    {
-      title: "Legacy gifts",
-      body: "Handle limited/expired presets, convert Stars where allowed, consolidate account-wide controls.",
-      tag: "Gift + Stars",
-    },
+  statsDelivery: "Auto delivery",
+  statsUsers: "Active users",
+  statsOrders: "Completed orders",
+  statsYears: "In service",
+  statsYearsValue: "1 yr+",
+  paymentsTitle: "Pay with any card",
+  paymentsNote: "and any Uzbek bank card",
+  starsTitle: "Telegram Stars",
+  starsLead:
+    "Stars from 220 so‘m each. Pick the amount you need — the bot delivers in 10 seconds.",
+  starsPerUnitLabel: "each",
+  starsCta: "Buy Stars",
+  starsPopular: "Popular",
+  starsAmountUnit: "stars",
+  premiumTitle: "Telegram Premium",
+  premiumLead:
+    "Among the lowest prices around. Two flows: the fast “by username” or the official “account login”.",
+  premiumAutoTitle: "By username",
+  premiumAutoDesc: "No account login — activates automatically in 10 seconds.",
+  premiumAutoBadge: "10 seconds · no login",
+  premiumLoginTitle: "Via account login",
+  premiumLoginDesc: "Official activation through login — a separate service.",
+  premiumLoginBadge: "With login",
+  premiumPopular: "Popular",
+  premiumCta: "Buy Premium",
+  unitMonth: "mo",
+  unitYear: "yr",
+  perMonth: "per month",
+  giftsTitle: "Telegram unique gifts",
+  giftsLead:
+    "Buy Telegram unique gifts for yourself or send them to friends — easy, convenient and reliable.",
+  giftsBullets: [
+    "Gift for yourself or a friend",
+    "Send anonymously if you like",
+    "Add a congratulatory comment",
+    "Pay in UZS — Click, Payme, UzCard, HUMO",
   ],
-  processHeading: "Three calm steps",
+  giftsCta: "Gifts",
+  whyTitle: "Why StarsPaymee?",
+  whyLead: "Over a year of experience, 100,000+ orders and 4,000+ returning users.",
+  whyItems: [
+    { title: "Fastest", body: "Orders are delivered automatically in about 10 seconds." },
+    { title: "Cheapest", body: "Stars from 220 so‘m, Premium 3 months from 172,000 so‘m." },
+    { title: "Reliable", body: "Over a year in service, 100,000+ completed orders." },
+    { title: "No login", body: "Premium needs only a username — no password or code." },
+    { title: "Easy payment", body: "Click, Payme, Paynet, UzCard, HUMO and any card." },
+    { title: "Referral bonus", body: "Invite friends and collect bonuses." },
+  ],
+  processTitle: "Three simple steps",
   steps: [
+    { title: "Open the bot", desc: "Open @StarsPaymee_bot in Telegram or launch the Mini App." },
     {
-      title: "Launch Mini App",
-      desc: "Open the Telegram link—StarsPaymee attaches your Telegram profile instantly.",
-    },
-    {
-      title: "Choose a product",
-      desc: "Stars, Premium or Gift—verify the recipient plus UZS totals before settling.",
+      title: "Choose & enter username",
+      desc: "Pick Stars, Premium or a gift and enter the recipient by username.",
     },
     {
       title: "Pay & receive",
-      desc: "Pay with UzCard/HUMO; History tab tracks progress until Stars/Premium/Gift drop.",
+      desc: "Pay with Click/Payme/UzCard/HUMO — arrives automatically in 10 seconds.",
     },
   ],
-  trustHeading: "Engineering trust cues",
-  trustItems: [
-    { label: "initData HMAC", detail: "Server verifies Telegram payloads" },
-    { label: "Rate limit", detail: "IP scoped throttles for APIs" },
-    { label: "CORS + Helmet", detail: "Headers align with allow-list" },
-    { label: "Order tracking", detail: "Status APIs keyed by order id" },
-  ],
-  ctaHeading:
-    "Load the Mini App and place your first Stars or Premium order right now",
+  ctaTitle: "Place your first order right now",
   ctaBody:
-    "Promos, promo codes, referral withdrawals—everything lives inside Mini App navigation.",
-  ctaButton: "{brand} · Telegram",
-  faqHeading: "Common questions",
+    "Open @StarsPaymee_bot in Telegram — Stars, Premium or a gift lands in 10 seconds.",
+  ctaButton: "Open {brand} bot",
+  faqTitle: "Common questions",
   faqItems: mkFaq(faqEn),
 };
 baseEn.locales = baseUz.locales;
-
-/** Mavjud messages fayllaridan landing bo‘limini saqlab qoladi (generator boshqa kalitlarni yozadi). */
-function mergePreserveLanding(locale, blob) {
-  const messagePath = path.join(outDir, `${locale}.json`);
-  try {
-    if (!fs.existsSync(messagePath)) return;
-    const prev = JSON.parse(fs.readFileSync(messagePath, "utf8"));
-    if (prev.landing) blob.landing = prev.landing;
-  } catch {
-    /* ignore merge errors */
-  }
-}
-
-mergePreserveLanding("uz", baseUz);
-mergePreserveLanding("ru", baseRu);
-mergePreserveLanding("en", baseEn);
+baseEn.landing = {
+  ctaMiniApp: "Open bot",
+  backHome: "Home",
+  sectionsHeading: "Sections",
+  nav: { stars: "Stars", premium: "Premium", gifts: "Gifts", about: "About" },
+  stars: {
+    metaTitle: "Buy Telegram Stars — cheap, in 10 seconds | StarsPaymee",
+    metaDescription:
+      "Buy Telegram Stars in Uzbekistan: from 220 so‘m each, 50 for 11,000 so‘m. Pay via Click, Payme, UzCard, HUMO. Auto delivery in 10 seconds.",
+    h1: "Buy Telegram Stars",
+    intro:
+      "Buy Telegram Stars in Uzbekistan at the lowest price through StarsPaymee. Stars from 220 so‘m each, base pack of 50 for 11,000 so‘m. Orders are placed in @StarsPaymee_bot and delivered automatically in about 10 seconds.",
+    bullets: [
+      "From 220 so‘m each — 50 stars for 11,000 so‘m",
+      "Click, Payme, Paynet, UzCard, HUMO and any card",
+      "Auto delivery in 10 seconds, no account login",
+      "To yourself or another username",
+    ],
+    footnote:
+      "Price depends on the amount of Stars you choose. You’ll see the exact total in @StarsPaymee_bot or the Mini App.",
+  },
+  premium: {
+    metaTitle: "Buy Telegram Premium — 3/6/12 months, cheap | StarsPaymee",
+    metaDescription:
+      "Telegram Premium: 3 mo 172,000, 6 mo 232,000, 12 mo 422,000 so‘m. By username it activates automatically in 10 seconds, no account login.",
+    h1: "Buy Telegram Premium",
+    intro:
+      "Get a Telegram Premium subscription in Uzbekistan at a low price: 3 months 172,000, 6 months 232,000, 12 months 422,000 so‘m. In the “by username” flow no account login is needed — Premium activates automatically in 10 seconds. A separate “account login” service is also available (1 month 50,000, 1 year 300,000 so‘m).",
+    bullets: [
+      "3 mo 172,000 · 6 mo 232,000 · 12 mo 422,000 so‘m",
+      "By username — auto activation in 10 seconds",
+      "No account login, password or SMS code",
+      "Separate login flow: 1 month 50,000, 1 year 300,000 so‘m",
+    ],
+    footnote:
+      "The by-username flow needs only a @username. The login flow is a separate service.",
+  },
+  gifts: {
+    metaTitle: "Send Telegram unique gifts — anonymously | StarsPaymee",
+    metaDescription:
+      "Buy Telegram unique gifts or send them to friends. Anonymously or with a greeting. Pay in UZS, simple and reliable.",
+    h1: "Send Telegram gifts",
+    intro:
+      "Buy Telegram unique gifts for yourself or send them to friends through StarsPaymee. A gift can be sent anonymously or with a congratulatory comment. Pay in UZS — Click, Payme, UzCard, HUMO.",
+    bullets: [
+      "Buy or send Telegram unique gifts",
+      "Send anonymously if you like",
+      "Add a congratulatory comment",
+      "Convenient UZS payment, reliable delivery",
+    ],
+    footnote:
+      "Available gifts and prices are shown in @StarsPaymee_bot or the Mini App.",
+  },
+  about: {
+    metaTitle: "About — StarsPaymee Telegram Stars & Premium service",
+    metaDescription:
+      "StarsPaymee — 1+ year, 4,000+ users and 100,000+ orders. A reliable Telegram Stars, Premium and gifts service in Uzbekistan.",
+    h1: "About us",
+    intro:
+      "StarsPaymee is a fast, cheap and reliable service for buying Telegram Stars, Premium and gifts in Uzbekistan. In over a year we’ve delivered more than 100,000 orders to more than 4,000 users.",
+    bullets: [
+      "Over a year of continuous service",
+      "4,000+ active users in Uzbekistan",
+      "100,000+ successful orders",
+      "Pay in UZS: Click, Payme, Paynet, UzCard, HUMO",
+    ],
+    footnote: "For questions, reach us via @StarsPaymee_bot — support is happy to help.",
+  },
+};
 
 for (const [name, blob] of [
   ["uz", baseUz],

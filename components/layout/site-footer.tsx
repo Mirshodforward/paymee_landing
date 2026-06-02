@@ -1,9 +1,10 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 
 export async function SiteFooter() {
   const telegramBotUrl = getTelegramBotUrl();
+  const telegramSupportUrl = getTelegramSupportUrl();
   const f = await getTranslations("footer");
   const lg = await getTranslations("landing");
   const footerLink =
@@ -45,6 +46,15 @@ export async function SiteFooter() {
             className="mt-2 block text-[#229ED9] hover:text-sky-300"
           >
             {telegramBotUrl.replace(/^https?:\/\//, "")}
+          </a>
+          <p className="mt-6 text-xs uppercase tracking-wider text-slate-500">{f("supportHeading")}</p>
+          <a
+            href={telegramSupportUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 block text-[#229ED9] hover:text-sky-300"
+          >
+            {telegramSupportUrl.replace(/^https?:\/\//, "")}
           </a>
         </address>
       </div>

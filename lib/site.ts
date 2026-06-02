@@ -4,6 +4,9 @@ export const SITE_URL_PUBLIC = "https://starstg.uz";
 /** Telegram bot / Mini App havolasi. */
 export const TELEGRAM_BOT_URL_PUBLIC = "https://t.me/StarsPaymee_bot";
 
+/** Qo‘llab-quvvatlash (support) Telegram havolasi. */
+export const TELEGRAM_SUPPORT_URL_PUBLIC = "https://t.me/StarsPaymeeSupport";
+
 export function getSiteUrl(): string {
   return SITE_URL_PUBLIC.replace(/\/$/, "");
 }
@@ -12,9 +15,13 @@ export function getTelegramBotUrl(): string {
   return TELEGRAM_BOT_URL_PUBLIC.replace(/\/$/, "");
 }
 
+export function getTelegramSupportUrl(): string {
+  return TELEGRAM_SUPPORT_URL_PUBLIC.replace(/\/$/, "");
+}
+
 export const siteConfig = {
   name: "StarsPaymee",
-  titleDefault: "Stars X Premium",
+  titleDefault: "StarsPaymee",
   description: "Telegram Stars platformasi",
   locale: "uz_UZ",
 } as const;
