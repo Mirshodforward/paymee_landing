@@ -24,7 +24,9 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Link } from "@/i18n/navigation";
 import { GiftTgsShowcase } from "@/components/home/gift-tgs-showcase";
 import { HeroDecor } from "@/components/home/hero-decor";
-import { getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { TiltCard } from "@/components/home/tilt-card";
+import { StickyCta } from "@/components/home/sticky-cta";
+import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import {
   PAYMENT_METHODS,
   PREMIUM_LOGIN_PLANS,
@@ -41,6 +43,26 @@ type FaqItem = { question: string; answer: string };
 
 const whyIcons = [Gauge, Tag, ShieldCheck, UserCheck, Wallet, Users] as const;
 
+/** Bento panjarasi uchun katak o‘lchamlari (6 ta «nega biz» element). */
+const whyBentoSpan = [
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2",
+  "",
+  "",
+  "sm:col-span-2",
+  "sm:col-span-2",
+] as const;
+
+/** Har bir bento katagi uchun aksent ranglar (ikon plitkasi). */
+const whyAccent = [
+  "from-[#229ED9] to-sky-400 shadow-[#229ED9]/30",
+  "from-amber-400 to-orange-400 shadow-amber-500/30",
+  "from-emerald-400 to-teal-400 shadow-emerald-500/30",
+  "from-violet-500 to-indigo-400 shadow-violet-500/30",
+  "from-fuchsia-500 to-pink-400 shadow-fuchsia-500/30",
+  "from-rose-400 to-red-400 shadow-rose-500/30",
+] as const;
+
 type PageProps = { params: Promise<{ locale: string }> };
 
 export default async function HomePage({ params }: PageProps) {
@@ -49,6 +71,7 @@ export default async function HomePage({ params }: PageProps) {
 
   const botUrl = getTelegramBotUrl();
   const t = await getTranslations("home");
+  const lg = await getTranslations("landing");
 
   const nf = new Intl.NumberFormat(locale === "ru" ? "ru-RU" : "en-US");
   const grp = (n: number) => nf.format(n).replace(/,/g, " ");
@@ -179,6 +202,37 @@ export default async function HomePage({ params }: PageProps) {
                   hideUntilVisible
                   className="relative w-full overflow-hidden rounded-3xl border border-fuchsia-200/45 bg-gradient-to-br from-white/90 via-white/80 to-fuchsia-50/45 p-4 shadow-xl shadow-fuchsia-500/[0.08] ring-1 ring-fuchsia-100/55 backdrop-blur-sm dark:border-fuchsia-900/35 dark:from-slate-900/85 dark:via-slate-900/75 dark:to-fuchsia-950/28 dark:ring-fuchsia-900/35"
                 />
+
+                {/* Suzuvchi xizmat chiplari — Stars · Premium · Gift */}
+                <div
+                  className="absolute -left-3 -top-4 z-10 flex items-center gap-1.5 rounded-full border border-amber-200/70 bg-white/90 py-1.5 pl-1.5 pr-3 shadow-lg shadow-amber-500/20 backdrop-blur-md motion-safe:animate-float dark:border-amber-400/30 dark:bg-slate-900/90"
+                  aria-hidden
+                >
+                  <span className="flex size-7 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-400 text-white shadow-inner">
+                    <Star className="size-4 fill-white" strokeWidth={1.8} />
+                  </span>
+                  <span className="text-xs font-bold tracking-tight text-slate-800 dark:text-slate-100">Stars</span>
+                </div>
+
+                <div
+                  className="absolute -right-3 top-1/2 z-10 flex -translate-y-1/2 items-center gap-1.5 rounded-full border border-[#229ED9]/30 bg-white/90 py-1.5 pl-1.5 pr-3 shadow-lg shadow-[#229ED9]/20 backdrop-blur-md motion-safe:animate-float-slow dark:border-[#229ED9]/40 dark:bg-slate-900/90"
+                  aria-hidden
+                >
+                  <span className="flex size-7 items-center justify-center rounded-full bg-gradient-to-br from-[#229ED9] to-sky-500 text-white shadow-inner">
+                    <Crown className="size-4" strokeWidth={2} />
+                  </span>
+                  <span className="text-xs font-bold tracking-tight text-slate-800 dark:text-slate-100">Premium</span>
+                </div>
+
+                <div
+                  className="absolute -bottom-4 right-8 z-10 flex items-center gap-1.5 rounded-full border border-fuchsia-200/70 bg-white/90 py-1.5 pl-1.5 pr-3 shadow-lg shadow-fuchsia-500/20 backdrop-blur-md motion-safe:animate-float-delayed dark:border-fuchsia-400/30 dark:bg-slate-900/90"
+                  aria-hidden
+                >
+                  <span className="flex size-7 items-center justify-center rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-500 text-white shadow-inner">
+                    <Gift className="size-4" strokeWidth={2} />
+                  </span>
+                  <span className="text-xs font-bold tracking-tight text-slate-800 dark:text-slate-100">{lg("nav.gifts")}</span>
+                </div>
               </div>
             </div>
 
@@ -188,10 +242,10 @@ export default async function HomePage({ params }: PageProps) {
                 <div
                   key={s.label}
                   style={{ animationDelay: `${i * 90}ms` }}
-                  className="reveal rounded-2xl border border-slate-200 bg-white/80 px-5 py-5 text-center shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-[#229ED9]/35 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/60"
+                  className="reveal group rounded-2xl border border-white/60 bg-white/70 px-5 py-5 text-center shadow-sm backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#229ED9]/35 hover:shadow-xl hover:shadow-[#229ED9]/10 dark:border-slate-700/60 dark:bg-slate-900/60"
                 >
                   <dt className="sr-only">{s.label}</dt>
-                  <dd className="bg-gradient-to-r from-[#229ED9] to-sky-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">{s.value}</dd>
+                  <dd className="bg-gradient-to-r from-[#229ED9] to-sky-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent transition group-hover:scale-105 sm:text-3xl">{s.value}</dd>
                   <p className="mt-1 text-xs font-medium text-slate-600 dark:text-slate-400 sm:text-sm">{s.label}</p>
                 </div>
               ))}
@@ -242,10 +296,10 @@ export default async function HomePage({ params }: PageProps) {
                     href={botUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`sheen group relative flex h-full flex-col items-center justify-center gap-1 rounded-2xl border bg-white px-3 py-5 text-center transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10 dark:bg-slate-900/60 ${
+                    className={`sheen group relative flex h-full flex-col items-center justify-center gap-1 rounded-2xl border bg-white/80 px-3 py-5 text-center backdrop-blur-xl transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10 dark:bg-slate-900/60 ${
                       p.popular
                         ? "border-amber-400/70 ring-1 ring-amber-300/50 dark:border-amber-400/50"
-                        : "border-slate-200 hover:border-amber-400/50 dark:border-slate-800 dark:hover:border-amber-400/35"
+                        : "border-slate-200/70 hover:border-amber-400/50 dark:border-slate-800 dark:hover:border-amber-400/35"
                     }`}
                   >
                     {p.popular ? (
@@ -294,59 +348,39 @@ export default async function HomePage({ params }: PageProps) {
               <ul className="mt-5 grid gap-4 sm:grid-cols-3">
                 {PREMIUM_PLANS.map((p, i) => (
                   <li key={p.months} style={{ animationDelay: `${i * 90}ms` }} className="reveal">
-                    <a
-                      href={botUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`sheen group relative flex h-full flex-col rounded-2xl border bg-white p-6 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#229ED9]/10 dark:bg-slate-950/50 ${
-                        p.popular
-                          ? "border-[#229ED9]/70 ring-1 ring-[#229ED9]/40"
-                          : "border-slate-200 hover:border-[#229ED9]/45 dark:border-slate-800"
-                      }`}
-                    >
-                      {p.popular ? (
-                        <span className="absolute -top-2.5 left-6 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-[#229ED9] to-sky-400 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
-                          <Sparkles className="size-2.5" aria-hidden strokeWidth={2.5} />
-                          {t("premiumPopular")}
+                    <TiltCard className="h-full">
+                      <a
+                        href={botUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`sheen group relative flex h-full flex-col rounded-2xl border bg-white/85 p-6 backdrop-blur-xl transition-shadow hover:shadow-xl hover:shadow-[#229ED9]/10 dark:bg-slate-950/55 ${
+                          p.popular
+                            ? "border-[#229ED9]/70 ring-1 ring-[#229ED9]/40"
+                            : "border-slate-200/70 hover:border-[#229ED9]/45 dark:border-slate-800"
+                        }`}
+                      >
+                        {p.popular ? (
+                          <span className="absolute -top-2.5 left-6 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-[#229ED9] to-sky-400 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+                            <Sparkles className="size-2.5" aria-hidden strokeWidth={2.5} />
+                            {t("premiumPopular")}
+                          </span>
+                        ) : null}
+                        <span className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                          {periodLabel(p.months)}
                         </span>
-                      ) : null}
-                      <span className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                        {periodLabel(p.months)}
-                      </span>
-                      <span className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">{money(p.priceUzs)}</span>
-                      <span className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                        {money(Math.round(p.priceUzs / p.months))} / {t("perMonth")}
-                      </span>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#229ED9] group-hover:gap-2.5">
-                        {t("premiumCta")}
-                        <ArrowRight className="size-4 shrink-0 transition-all" aria-hidden strokeWidth={2} />
-                      </span>
-                    </a>
+                        <span className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">{money(p.priceUzs)}</span>
+                        <span className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                          {money(Math.round(p.priceUzs / p.months))} / {t("perMonth")}
+                        </span>
+                        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#229ED9] group-hover:gap-2.5">
+                          {t("premiumCta")}
+                          <ArrowRight className="size-4 shrink-0 transition-all" aria-hidden strokeWidth={2} />
+                        </span>
+                      </a>
+                    </TiltCard>
                   </li>
                 ))}
               </ul>
-
-              {/* Login flow */}
-              <div className="mt-10 rounded-2xl border border-slate-200 bg-slate-50/80 p-6 dark:border-slate-800 dark:bg-slate-950/40">
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t("premiumLoginTitle")}</h3>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-slate-200 px-2.5 py-0.5 text-xs font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                    {t("premiumLoginBadge")}
-                  </span>
-                </div>
-                <p className="mt-1.5 text-sm text-slate-500 dark:text-slate-400">{t("premiumLoginDesc")}</p>
-                <ul className="mt-4 flex flex-wrap gap-3">
-                  {PREMIUM_LOGIN_PLANS.map((p) => (
-                    <li
-                      key={p.months}
-                      className="flex items-baseline gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-[#229ED9]/40 dark:border-slate-700 dark:bg-slate-900"
-                    >
-                      <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">{periodLabel(p.months)}</span>
-                      <span className="text-base font-bold text-slate-900 dark:text-white">{money(p.priceUzs)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </section>
 
@@ -400,24 +434,28 @@ export default async function HomePage({ params }: PageProps) {
             </div>
           </section>
 
-          {/* WHY US */}
+          {/* WHY US — bento */}
           <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20" aria-labelledby="why-heading">
             <h2 id="why-heading" className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">{t("whyTitle")}</h2>
             <p className="mt-3 max-w-2xl text-slate-600 dark:text-slate-400">{t("whyLead")}</p>
-            <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-12 grid auto-rows-[minmax(0,1fr)] grid-cols-2 gap-4 sm:grid-cols-4">
               {whyItems.map((w, i) => {
                 const Icon = whyIcons[i] ?? Sparkles;
+                const big = i === 0;
                 return (
                   <li
                     key={w.title}
-                    style={{ animationDelay: `${(i % 3) * 90}ms` }}
-                    className="reveal group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-[#229ED9]/35 hover:shadow-xl hover:shadow-[#229ED9]/5 dark:border-slate-800 dark:bg-slate-900/50"
+                    style={{ animationDelay: `${i * 70}ms` }}
+                    className={`reveal group relative flex flex-col overflow-hidden rounded-3xl border border-white/60 bg-white/70 p-6 backdrop-blur-xl transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#229ED9]/10 dark:border-slate-700/60 dark:bg-slate-900/55 ${whyBentoSpan[i] ?? ""} ${big ? "sm:p-8" : ""}`}
                   >
-                    <span className="flex size-12 items-center justify-center rounded-2xl bg-[#229ED9]/10 ring-1 ring-[#229ED9]/15 transition group-hover:scale-110 group-hover:bg-[#229ED9]/15">
-                      <Icon className="size-6 text-[#229ED9]" strokeWidth={1.85} aria-hidden />
+                    {big ? (
+                      <Star aria-hidden className="pointer-events-none absolute -right-4 -top-4 size-24 fill-amber-300/10 text-amber-300/20 motion-safe:animate-float" strokeWidth={1} />
+                    ) : null}
+                    <span className={`relative flex items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-lg transition group-hover:scale-110 ${whyAccent[i] ?? whyAccent[0]} ${big ? "size-16" : "size-12"}`}>
+                      <Icon className={big ? "size-8" : "size-6"} strokeWidth={1.85} aria-hidden />
                     </span>
-                    <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{w.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{w.body}</p>
+                    <h3 className={`relative mt-4 font-semibold text-slate-900 dark:text-white ${big ? "text-2xl" : "text-lg"}`}>{w.title}</h3>
+                    <p className={`relative mt-2 leading-relaxed text-slate-600 dark:text-slate-400 ${big ? "text-base" : "text-sm"}`}>{w.body}</p>
                   </li>
                 );
               })}
@@ -430,7 +468,7 @@ export default async function HomePage({ params }: PageProps) {
               <h2 id="process-heading" className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">{t("processTitle")}</h2>
               <ol className="mt-12 grid gap-8 md:grid-cols-3">
                 {steps.map((s, i) => (
-                  <li key={s.title} style={{ animationDelay: `${i * 110}ms` }} className="reveal relative rounded-2xl border border-slate-200 bg-white p-8 pt-10 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900/60">
+                  <li key={s.title} style={{ animationDelay: `${i * 110}ms` }} className="reveal relative rounded-2xl border border-white/60 bg-white/80 p-8 pt-10 backdrop-blur-xl transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/60 dark:bg-slate-900/60">
                     <span className="absolute -top-3 left-8 flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#229ED9] to-sky-500 text-sm font-bold text-white shadow-md ring-4 ring-slate-100/80 dark:ring-slate-900/80">
                       {i + 1}
                     </span>
@@ -489,6 +527,7 @@ export default async function HomePage({ params }: PageProps) {
         </main>
 
         <SiteFooter />
+        <StickyCta botUrl={botUrl} botLabel={t("heroCtaBot")} pricesLabel={t("heroCtaPrices")} />
       </div>
     </>
   );

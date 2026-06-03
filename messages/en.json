@@ -38,9 +38,11 @@
     "faq": "FAQ",
     "blog": "Blog",
     "openTelegram": "Open bot",
+    "support": "Support",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "menuTitle": "Menu",
+    "menuSubtitle": "Telegram Stars, Premium & gifts",
     "menuNavAria": "Mobile navigation"
   },
   "locales": {

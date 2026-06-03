@@ -38,9 +38,11 @@
     "faq": "FAQ",
     "blog": "Блог",
     "openTelegram": "Открыть бота",
+    "support": "Поддержка",
     "menuOpen": "Открыть меню",
     "menuClose": "Закрыть меню",
     "menuTitle": "Меню",
+    "menuSubtitle": "Telegram Stars, Premium и подарки",
     "menuNavAria": "Мобильная навигация"
   },
   "locales": {

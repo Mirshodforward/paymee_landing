@@ -161,9 +161,11 @@ const baseUz = {
     faq: "FAQ",
     blog: "Blog",
     openTelegram: "Botni ochish",
+    support: "Qo‘llab-quvvatlash",
     menuOpen: "Menyu ochish",
     menuClose: "Menyu yopish",
     menuTitle: "Menyu",
+    menuSubtitle: "Telegram Stars, Premium va sovg‘alar",
     menuNavAria: "Mobil navigatsiya",
   },
   locales: {
@@ -230,7 +232,7 @@ const baseUz = {
     starsTitle: "Telegram Stars",
     starsLead:
       "Yulduz donasi atigi 220 so‘mdan. Kerakli miqdorni tanlang — bot 10 soniyada hisobingizga yetkazadi.",
-    starsUnitBadge: "Donasi {price} — narx standart, o‘zgarmagan",
+    starsUnitBadge: "Donasi {price} — narx standart!",
     starsPerUnitLabel: "donasi",
     starsCta: "Stars sotib olish",
     starsPopular: "Ommabop",
@@ -406,9 +408,11 @@ baseRu.nav = {
   faq: "FAQ",
   blog: "Блог",
   openTelegram: "Открыть бота",
+  support: "Поддержка",
   menuOpen: "Открыть меню",
   menuClose: "Закрыть меню",
   menuTitle: "Меню",
+  menuSubtitle: "Telegram Stars, Premium и подарки",
   menuNavAria: "Мобильная навигация",
 };
 baseRu.footer = {
@@ -640,9 +644,11 @@ baseEn.nav = {
   faq: "FAQ",
   blog: "Blog",
   openTelegram: "Open bot",
+  support: "Support",
   menuOpen: "Open menu",
   menuClose: "Close menu",
   menuTitle: "Menu",
+  menuSubtitle: "Telegram Stars, Premium & gifts",
   menuNavAria: "Mobile navigation",
 };
 baseEn.footer = {

@@ -6,11 +6,12 @@ import { MobileNavMenu } from "@/components/layout/mobile-nav-menu";
 import type { LandingTopic } from "@/components/landing/landing-topic-article";
 import { getTranslations } from "next-intl/server";
 import { Send } from "lucide-react";
-import { getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 
 const navLink =
-  "text-slate-600 hover:text-[#229ED9] dark:text-slate-400 dark:hover:text-[#229ED9]";
-const navActive = "text-[#229ED9] font-semibold dark:text-[#229ED9]";
+  "relative py-1 text-slate-600 transition-colors hover:text-[#229ED9] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-[#229ED9] after:to-sky-400 after:transition-transform after:duration-300 hover:after:scale-x-100 dark:text-slate-400 dark:hover:text-[#229ED9]";
+const navActive =
+  "relative py-1 font-semibold text-[#229ED9] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:scale-x-100 after:rounded-full after:bg-gradient-to-r after:from-[#229ED9] after:to-sky-400 dark:text-[#229ED9]";
 
 export async function SiteHeader({
   highlight = null,
@@ -19,6 +20,7 @@ export async function SiteHeader({
   highlight?: LandingTopic | "blog" | null;
 }) {
   const telegramBotUrl = getTelegramBotUrl();
+  const telegramSupportUrl = getTelegramSupportUrl();
   const n = await getTranslations("nav");
   const lg = await getTranslations("landing");
 
@@ -32,7 +34,7 @@ export async function SiteHeader({
         : null;
 
   return (
-    <header className="relative z-50 border-b border-slate-200/80 bg-white/75 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/75">
+    <header className="relative z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80">
       <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 lg:gap-4">
         <Link
           href="/"
@@ -72,19 +74,24 @@ export async function SiteHeader({
         <div className="flex shrink-0 items-center gap-2 sm:gap-2.5">
           <MobileNavMenu
             highlight={mobileNavHighlight}
+            botUrl={telegramBotUrl}
+            supportUrl={telegramSupportUrl}
             labels={{
               home: n("home"),
               stars: lg("nav.stars"),
               premium: lg("nav.premium"),
               gifts: lg("nav.gifts"),
               blog: n("blog"),
+              openTelegram: n("openTelegram"),
+              support: n("support"),
               menuOpen: n("menuOpen"),
               menuClose: n("menuClose"),
               menuTitle: n("menuTitle"),
+              menuSubtitle: n("menuSubtitle"),
               menuNavAria: n("menuNavAria"),
             }}
           />
-          <div className="lg:hidden">
+          <div className="hidden">
             <LocaleSwitcher />
           </div>
           <a

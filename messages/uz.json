@@ -47,9 +47,11 @@
     "faq": "FAQ",
     "blog": "Blog",
     "openTelegram": "Botni ochish",
+    "support": "Qo‘llab-quvvatlash",
     "menuOpen": "Menyu ochish",
     "menuClose": "Menyu yopish",
     "menuTitle": "Menyu",
+    "menuSubtitle": "Telegram Stars, Premium va sovg‘alar",
     "menuNavAria": "Mobil navigatsiya"
   },
   "locales": {
@@ -110,7 +112,7 @@
     "paymentsNote": "va istalgan O‘zbekiston bank kartasi",
     "starsTitle": "Telegram Stars",
     "starsLead": "Yulduz donasi atigi 220 so‘mdan. Kerakli miqdorni tanlang — bot 10 soniyada hisobingizga yetkazadi.",
-    "starsUnitBadge": "Donasi {price} — narx standart, o‘zgarmagan",
+    "starsUnitBadge": "Donasi {price} — narx standart!",
     "starsPerUnitLabel": "donasi",
     "starsCta": "Stars sotib olish",
     "starsPopular": "Ommabop",
