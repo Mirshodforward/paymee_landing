@@ -101,6 +101,7 @@
     "paymentsNote": "and any Uzbek bank card",
     "starsTitle": "Telegram Stars",
     "starsLead": "Stars from 220 so‘m each. Pick the amount you need — the bot delivers in 10 seconds.",
+    "starsUnitBadge": "{price} each — standard price, unchanged",
     "starsPerUnitLabel": "each",
     "starsCta": "Buy Stars",
     "starsPopular": "Popular",

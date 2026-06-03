@@ -101,6 +101,7 @@
     "paymentsNote": "и любой банковской картой Узбекистана",
     "starsTitle": "Telegram Stars",
     "starsLead": "Звезда от 220 сум за штуку. Выберите нужное количество — бот доставит за 10 секунд.",
+    "starsUnitBadge": "{price} за штуку — стандартная цена, без изменений",
     "starsPerUnitLabel": "за шт.",
     "starsCta": "Купить Stars",
     "starsPopular": "Популярно",

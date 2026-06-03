@@ -201,7 +201,7 @@ export const blogPosts: BlogPost[] = ([
     excerpt:
       "Mobil ilova, desktop va @PremiumBot kabi vositalar orqali qoldiq va tarixni aniqlash.",
     paragraphs: [
-      "Stars balansi odatda sozlamalar yoki akkaunt bo‘limida ko‘rinadi; platforma yangilanganda joylashuv ozg‘arishi mumkin.",
+      "Stars balansi odatda sozlamalar yoki akkaunt bo‘limida ko‘rinadi; platforma yangilanganda uning joylashuvi o‘zgarishi mumkin.",
       "Tranzaksiya tarixini koʻrish noqulay toʻlovlar uchun foydali.",
       "Agar boshqa xizmat orqali yulduz olgan boʻlsangiz, buyurtma ID bilan supportga murojaat qilish tezlashadi.",
     ],
@@ -216,7 +216,7 @@ export const blogPosts: BlogPost[] = ([
     paragraphs: [
       "Karta limitingiz va 3-D Secure tayyorgarligi bor-yoʻqligiga qarab toʻlov bir daqiqa yoki bir necha daqiqa oladi.",
       "Mini App ichida narx va buyurtma ID bir joyda bo‘lgani xato ehtimolini kamaytiradi.",
-      "Muvaffaqiyatsiz toʻlovdan keyin statusni yangilab, qayta urinib koʻring; bank sometimes vaqtinchalik bloklaydi.",
+      "Muvaffaqiyatsiz toʻlovdan keyin statusni yangilab, qayta urinib koʻring; bank baʼzan toʻlovni vaqtinchalik bloklashi mumkin.",
     ],
   },
   {
@@ -298,7 +298,7 @@ export const blogPosts: BlogPost[] = ([
     ],
   },
   {
-    slug: "telegram-premium-tez-oʻtkazilish-2026",
+    slug: "telegram-premium-tez-otkazilish-2026",
     category: "Premium",
     datePublished: "2026-03-31",
     title: "2026-da Telegram Premium: eng tezkor toʻlov yoʻllari (UzCard, aggregatorlar)",
@@ -333,7 +333,7 @@ export const blogPosts: BlogPost[] = ([
     paragraphs: [
       "Havolani brauzerda ochishdan oldin domen Telegram’ning rasmiy havolalari bilan ustma-usta turishiga qarang.",
       "Keraksiz moderator huquqlarini bermang.",
-      "Toʻlov toʻgʻridan toʻgʻri shaxsingiz uchun kelishidagi xatolarni kamaytirish uchun aniqlanga.",
+      "Toʻlovni amalga oshirishdan oldin qabul qiluvchi maʼlumotlarini aniqlab oling — bu xatolarni kamaytiradi.",
     ],
   },
   {
@@ -357,8 +357,8 @@ export const blogPosts: BlogPost[] = ([
     excerpt:
       "Oʻrtacha foydalanish oraligʻi va byudjetga qarab ustun paket qoʻshilishini solishtirish.",
     paragraphs: [
-      "Yarim yil profil uchun yaxshi narxlash uchun sinov uchun eng yirik tanlov yoʻq boʻlganida qulay.",
-      "Ikki oyga yaqin toʻlov uchun soʻrov boʻlsa 3 oy tegishli boʻladi.",
+      "6 oylik paket oyiga hisoblaganda yaxshi narx beradi va eng uzun muddatga shoshilmaganlar uchun qulay oraliq hisoblanadi.",
+      "Agar atigi bir necha oyga ehtiyoj boʻlsa, 3 oylik paket koʻproq mos keladi.",
       "Paket oʻzgarishida tarixni saqlab qoling.",
     ],
   },
@@ -383,7 +383,7 @@ export const blogPosts: BlogPost[] = ([
     excerpt:
       "Mahalliy toʻlov yoʻnalishlari uchun qaysi kartalar toʻgʻri kelishi mumkinligi bankdan aniqlangan.",
     paragraphs: [
-      "Visa Mastercard talab qoʻyadigan boshqa scenariylardan farq ravishdan mahalliy mahsulotlar boshqacha boʻlishi mumkin.",
+      "Visa yoki Mastercard talab qiladigan ssenariylardan farqli oʻlaroq, mahalliy mahsulotlar boshqacha ishlashi mumkin.",
       "Aggregatorlar uchun karta yoʻnalishi ilovadan tekshiring.",
       "StarsPaymee uchun ham xuddi oʻsha kartalar taʼsiri taʼsir qiladi.",
     ],
@@ -398,11 +398,11 @@ export const blogPosts: BlogPost[] = ([
     paragraphs: [
       "Bank karta yoʻnalishi uchun ilovadan limit va toʻlov bloklarini tekshiring.",
       "Xarid uchun yagona taʼriflangan summa boʻlgan yaxshi.",
-      "Ikki faktor taʼsdiqlamasini tayyor qiling.",
+      "Ikki bosqichli tasdiqlashni (2FA) oldindan tayyorlab qoʻying.",
     ],
   },
   {
-    slug: "fragment-muqosidida-stars-ozbekiston",
+    slug: "fragment-muqobillari-stars-ozbekiston",
     category: "Stars",
     datePublished: "2026-03-19",
     title: "Fragment muqobilari va Oʻzbekistonda kartadan Stars olish",
@@ -467,7 +467,7 @@ export const blogPosts: BlogPost[] = ([
     ],
   },
   {
-    slug: "telegram-stars-nima-toʻliq",
+    slug: "telegram-stars-nima-toliq",
     category: "Stars",
     datePublished: "2026-03-08",
     title: "Telegram Stars nima va qayerda ishlatiladi",

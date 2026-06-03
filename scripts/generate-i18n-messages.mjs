@@ -230,6 +230,7 @@ const baseUz = {
     starsTitle: "Telegram Stars",
     starsLead:
       "Yulduz donasi atigi 220 so‘mdan. Kerakli miqdorni tanlang — bot 10 soniyada hisobingizga yetkazadi.",
+    starsUnitBadge: "Donasi {price} — narx standart, o‘zgarmagan",
     starsPerUnitLabel: "donasi",
     starsCta: "Stars sotib olish",
     starsPopular: "Ommabop",
@@ -468,6 +469,7 @@ baseRu.home = {
   starsTitle: "Telegram Stars",
   starsLead:
     "Звезда от 220 сум за штуку. Выберите нужное количество — бот доставит за 10 секунд.",
+  starsUnitBadge: "{price} за штуку — стандартная цена, без изменений",
   starsPerUnitLabel: "за шт.",
   starsCta: "Купить Stars",
   starsPopular: "Популярно",
@@ -701,6 +703,7 @@ baseEn.home = {
   starsTitle: "Telegram Stars",
   starsLead:
     "Stars from 220 so‘m each. Pick the amount you need — the bot delivers in 10 seconds.",
+  starsUnitBadge: "{price} each — standard price, unchanged",
   starsPerUnitLabel: "each",
   starsCta: "Buy Stars",
   starsPopular: "Popular",
