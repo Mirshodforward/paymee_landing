@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
-import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
+import { ArrowIcon, TelegramIcon } from "@/components/v2/icons";
 import { blogPosts, getPostBySlug, type BlogCategory } from "@/lib/blog-posts";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
@@ -68,8 +67,7 @@ export default async function BlogArticlePage({ params }: Props) {
   const url = `${base}/${locale}/blog/${post.slug}`;
   const telegramBotUrl = getTelegramBotUrl();
 
-  const tblog = await getTranslations("blogIndex");
-  const tArt = await getTranslations("blogArticle");
+  const t = await getTranslations("v2");
   const tc = await getTranslations("categories");
 
   const articleLd = {
@@ -81,11 +79,7 @@ export default async function BlogArticlePage({ params }: Props) {
     dateModified: post.datePublished,
     inLanguage: locale,
     author: { "@type": "Organization", name: siteConfig.name, url: base },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: base,
-    },
+    publisher: { "@type": "Organization", name: siteConfig.name, url: base },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: [post.category, "Telegram", siteConfig.name, ...(post.seoKeywords ?? [])].join(", "),
   };
@@ -94,19 +88,20 @@ export default async function BlogArticlePage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: tblog("breadcrumbHome"), item: `${base}/${locale}` },
-      { "@type": "ListItem", position: 2, name: tblog("title"), item: `${base}/${locale}/blog` },
+      { "@type": "ListItem", position: 1, name: t("blogHome"), item: `${base}/${locale}` },
+      { "@type": "ListItem", position: 2, name: t("blogTitle"), item: `${base}/${locale}/blog` },
       { "@type": "ListItem", position: 3, name: copy.title, item: url },
     ],
   };
 
   return (
-    <>
+    <section className="sec" style={{ paddingTop: 150 }}>
       <JsonLd data={articleLd} />
       <JsonLd data={breadcrumbLd} />
 
       <article
-        className="relative mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:py-16"
+        className="wrap"
+        style={{ maxWidth: 820 }}
         itemScope
         itemType="https://schema.org/BlogPosting"
       >
@@ -115,41 +110,45 @@ export default async function BlogArticlePage({ params }: Props) {
 
         <nav
           aria-label="Breadcrumb"
-          className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-slate-600 dark:text-slate-400"
+          className="rv"
+          style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center", fontSize: 13.5, color: "var(--muted)" }}
         >
-          <Link href="/" className="hover:text-[#229ED9]">
-            {tblog("breadcrumbHome")}
-          </Link>
-          <ChevronRight className="size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} />
-          <Link href="/blog" className="hover:text-[#229ED9]">
-            {tblog("title")}
-          </Link>
-          <ChevronRight className="size-3.5 shrink-0 text-slate-400" aria-hidden strokeWidth={2} />
-          <span className="line-clamp-2 font-medium text-slate-800 dark:text-slate-200">{copy.title}</span>
+          <Link href="/">{t("blogHome")}</Link>
+          <span>/</span>
+          <Link href="/blog">{t("blogTitle")}</Link>
+          <span>/</span>
+          <span style={{ color: "var(--text)", fontWeight: 600 }}>{copy.title}</span>
         </nav>
 
-        <header className="mt-10">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
-            <span className="rounded-full bg-sky-100 px-3 py-0.5 font-semibold uppercase tracking-wide text-sky-800 dark:bg-sky-950/70 dark:text-sky-300">
-              {tc(post.category as BlogCategory)}
-            </span>
+        <header className="rv" style={{ marginTop: 30 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
+            <span className="btag">{tc(post.category as BlogCategory)}</span>
             <time
               dateTime={post.datePublished}
-              className="text-slate-500 dark:text-slate-400"
+              style={{ fontFamily: "var(--mono2)", fontSize: 12, color: "var(--muted)" }}
               itemProp="datePublished"
             >
               {post.datePublished}
             </time>
           </div>
-          <h1 className="mt-6 text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+          <h1
+            style={{
+              fontFamily: "var(--disp)",
+              fontWeight: 800,
+              fontSize: "clamp(1.9rem,4vw,2.8rem)",
+              lineHeight: 1.15,
+              letterSpacing: "-.01em",
+              marginTop: 22,
+            }}
+          >
             {copy.title}
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-slate-600 dark:text-slate-400" itemProp="description">
+          <p className="sec-sub" itemProp="description" style={{ marginTop: 18 }}>
             {copy.excerpt}
           </p>
         </header>
 
-        <div className="prose-blog mt-12 space-y-6 text-[1.05rem] leading-[1.75] text-slate-700 dark:text-slate-300">
+        <div className="prose-v2 rv" style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 22 }}>
           {copy.paragraphs.map((p, i) => (
             <p key={i} itemProp="articleBody">
               {p}
@@ -158,32 +157,38 @@ export default async function BlogArticlePage({ params }: Props) {
         </div>
 
         <section
-          className="mt-14 rounded-2xl border border-slate-200 bg-gradient-to-br from-sky-50 to-white px-6 py-8 dark:border-slate-800 dark:from-slate-900/70 dark:to-slate-900"
-          aria-label={siteConfig.name}
+          className="rv"
+          style={{
+            marginTop: 48,
+            borderRadius: 24,
+            border: "1px solid var(--line)",
+            background: "rgba(217,70,239,.05)",
+            padding: "30px 28px",
+          }}
         >
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{tArt("tryTitle")}</h2>
-          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">{tArt("tryBody")}</p>
+          <h2 className="h3" style={{ fontFamily: "var(--disp)", fontWeight: 700, fontSize: 19 }}>
+            {t("blogTryTitle")}
+          </h2>
+          <p style={{ marginTop: 8, color: "var(--muted)", fontSize: 14.5 }}>{t("blogTryBody")}</p>
           <a
+            className="btn btn-grad mag"
             href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#1e8dc4]"
+            style={{ marginTop: 20 }}
           >
-            {tArt("openMiniApp")}
-            <ArrowRight className="size-4 shrink-0" aria-hidden strokeWidth={2} />
+            <TelegramIcon />
+            {t("openBot")}
           </a>
         </section>
 
-        <footer className="mt-14 border-t border-slate-200 pt-10 dark:border-slate-800">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#229ED9] hover:text-[#1e8dc4] dark:text-[#229ED9]"
-          >
-            <ArrowLeft className="size-4 shrink-0" aria-hidden strokeWidth={2} />
-            {tArt("backList")}
+        <footer style={{ marginTop: 48, borderTop: "1px solid var(--line)", paddingTop: 34 }}>
+          <Link href="/blog" className="prod-link" style={{ color: "var(--fuch)" }}>
+            <ArrowIcon style={{ transform: "rotate(180deg)" }} />
+            {t("blogBack")}
           </Link>
         </footer>
       </article>
-    </>
+    </section>
   );
 }

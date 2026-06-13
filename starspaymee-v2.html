@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarsPaymee — Telegram Stars, Premium va Gifts | 10 soniyada</title>
+<meta name="description" content="Telegram Stars, Premium va sovg'alarni O'zbek so'mida xarid qiling. UzCard, HUMO, Click, Payme — istalgan bank ilovasidan. 24/7 avtomatik tizim, 10 soniyada yetkazish, kechiksa avto-bonus.">
+<meta property="og:title" content="StarsPaymee — Telegram Stars 10 soniyada">
+<meta property="og:description" content="Stars, Premium va Gifts — O'zbek so'mida, istalgan bank ilovasidan. 24/7 avtomatik.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06030C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B5CF6'/%3E%3Cstop offset='.5' stop-color='%23D946EF'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --void:#06030C;
+  --void2:#0B0614;
+  --panel:#0D0917;
+  --panel2:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.09);
+  --line2:rgba(255,255,255,.16);
+  --text:#F5F2FC;
+  --muted:#A09AB8;
+  --vio:#8B5CF6;
+  --fuch:#D946EF;
+  --pink:#F472B6;
+  --cyan:#22D3EE;
+  --grad:linear-gradient(110deg,#8B5CF6,#D946EF 48%,#22D3EE);
+  --disp:'Syne',sans-serif;
+  --body:'Instrument Sans',sans-serif;
+  --mono:'Space Mono',monospace;
+}
+html{scroll-behavior:smooth;scroll-padding-top:110px;background:var(--void)}
+body{background:var(--void);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+::selection{background:rgba(217,70,239,.35)}
+:focus-visible{outline:2px solid var(--fuch);outline-offset:3px;border-radius:8px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--void)}
+::-webkit-scrollbar-thumb{background:#251C3D;border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:#372A5C}
+
+/* ===== Gradient matn ===== */
+.gt{background:var(--grad);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gtmove 7s ease-in-out infinite alternate}
+@keyframes gtmove{to{background-position:100% 0}}
+
+/* ===== Preloader ===== */
+#loader{position:fixed;inset:0;z-index:200;background:var(--void);display:grid;place-items:center;transition:opacity .55s ease,visibility .55s}
+#loader.done{opacity:0;visibility:hidden}
+.ld{display:flex;flex-direction:column;align-items:center;gap:18px}
+.ld-star{width:54px;height:54px;animation:ldspin 1.4s cubic-bezier(.6,.05,.3,.95) infinite}
+@keyframes ldspin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(.78)}100%{transform:rotate(360deg) scale(1)}}
+.ld-num{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:2px}
+
+/* ===== Maxsus kursor ===== */
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:150;transform:translate(-50%,-50%);display:none}
+body.fine .cur-dot,body.fine .cur-ring{display:block}
+body.fine,body.fine a,body.fine button{cursor:none}
+.cur-dot{width:7px;height:7px;background:#fff}
+.cur-ring{width:36px;height:36px;border:1.5px solid rgba(217,70,239,.75);transition:width .25s,height .25s,background .25s,border-color .25s}
+.cur-ring.hov{width:58px;height:58px;background:rgba(217,70,239,.1);border-color:rgba(34,211,238,.8)}
+
+/* ===== Aurora fon + shovqin ===== */
+.aurora{position:fixed;inset:0;z-index:-3;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.5;will-change:transform}
+.b1{width:58vw;height:58vw;left:-14vw;top:-20vw;background:radial-gradient(circle at 35% 35%,#6D28D9,transparent 65%);animation:bl1 26s ease-in-out infinite alternate}
+.b2{width:48vw;height:48vw;right:-16vw;top:6vw;background:radial-gradient(circle at 60% 40%,#C026D3,transparent 65%);animation:bl2 32s ease-in-out infinite alternate}
+.b3{width:54vw;height:54vw;left:16vw;bottom:-26vw;background:radial-gradient(circle at 50% 50%,#0E7490,transparent 65%);animation:bl3 38s ease-in-out infinite alternate}
+@keyframes bl1{to{transform:translate(9vw,7vw) scale(1.22) rotate(20deg)}}
+@keyframes bl2{to{transform:translate(-10vw,9vw) scale(1.15) rotate(-16deg)}}
+@keyframes bl3{to{transform:translate(8vw,-8vw) scale(1.25) rotate(14deg)}}
+.noise{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E")}
+.vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(120% 90% at 50% 30%,transparent 55%,rgba(3,1,8,.7))}
+
+/* ===== Scroll progress ===== */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--grad);z-index:120;box-shadow:0 0 14px rgba(217,70,239,.6)}
+
+/* ===== Suzuvchi navigatsiya ===== */
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;width:min(1080px,calc(100% - 28px));border:1px solid var(--line);border-radius:100px;background:rgba(10,6,18,.5);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:background .35s,box-shadow .35s,border-color .35s}
+.nav.scrolled{background:rgba(9,5,17,.82);border-color:var(--line2);box-shadow:0 14px 50px rgba(0,0,0,.5)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 9px 9px 20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:16px}
+.logo .mark{width:36px;height:36px;border-radius:11px;background:var(--grad);display:grid;place-items:center;box-shadow:0 6px 22px rgba(168,85,247,.45)}
+.logo .mark svg{width:18px;height:18px;fill:#fff}
+.nav-links{display:flex;gap:26px;font-size:14px;font-weight:600;color:var(--muted)}
+.nav-links a{position:relative;transition:color .25s;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--grad);transition:width .3s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+
+/* ===== Tugmalar ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:700;font-size:15px;padding:15px 28px;border-radius:100px;border:1px solid transparent;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s,background-position .5s;will-change:transform}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+.btn-grad{background:linear-gradient(110deg,#8B5CF6,#D946EF 55%,#22D3EE);background-size:190% 100%;color:#fff;box-shadow:0 10px 36px rgba(168,85,247,.42),inset 0 1px 0 rgba(255,255,255,.28)}
+.btn-grad svg{fill:#fff}
+.btn-grad:hover{background-position:95% 0;box-shadow:0 16px 50px rgba(217,70,239,.55)}
+.btn-ghost{border-color:var(--line2);color:var(--text);background:rgba(255,255,255,.04);backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:rgba(217,70,239,.6);background:rgba(217,70,239,.07)}
+.btn-sm{padding:11px 20px;font-size:13.5px}
+.btn-xl{padding:19px 38px;font-size:16.5px}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding:168px 0 40px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;padding:9px 18px;border-radius:100px;border:1px solid var(--line2);background:rgba(255,255,255,.04);backdrop-filter:blur(10px);font-size:13px;font-weight:600;color:var(--muted);margin-bottom:30px}
+.hero-badge b{color:var(--text)}
+.pulse{width:8px;height:8px;border-radius:50%;background:#34D399;position:relative;flex-shrink:0}
+.pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(52,211,153,.7);animation:pls 2s ease-out infinite}
+@keyframes pls{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.7);opacity:0}}
+.hero-h{font-family:var(--disp);font-weight:800;font-size:clamp(2.3rem,6.6vw,4.8rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:26px}
+.rl{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.rw{display:inline-block;transform:translateY(118%);transition:transform 1s cubic-bezier(.16,1,.3,1);transition-delay:var(--wd,0s)}
+.hero-h.go .rw{transform:translateY(0)}
+.hero-sub{color:var(--muted);font-size:17.5px;max-width:580px;margin:0 auto 38px}
+.hero-sub b{color:var(--text)}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ===== 3D telefon sahnasi ===== */
+.stage{position:relative;max-width:960px;margin:70px auto 0;perspective:1500px;padding-bottom:26px}
+.stage::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:620px;height:620px;background:conic-gradient(from 0deg,rgba(139,92,246,.22),rgba(217,70,239,.16),rgba(34,211,238,.18),rgba(139,92,246,.22));border-radius:50%;filter:blur(70px);pointer-events:none}
+.phone{position:relative;width:328px;margin:0 auto;border-radius:48px;border:1px solid var(--line2);background:linear-gradient(180deg,#171022,#0B0714);padding:11px;box-shadow:0 50px 130px -20px rgba(139,92,246,.4),0 34px 90px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.1);transform-style:preserve-3d;will-change:transform}
+.screen{border-radius:38px;background:#08050F;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.isl{width:88px;height:25px;background:#000;border-radius:100px;margin:11px auto 2px;border:1px solid rgba(255,255,255,.06)}
+.ch-head{display:flex;align-items:center;gap:11px;padding:13px 16px;border-bottom:1px solid var(--line)}
+.ch-ava{width:40px;height:40px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 5px 16px rgba(168,85,247,.5);flex-shrink:0}
+.ch-ava svg{width:19px;height:19px;fill:#fff}
+.ch-name{font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px;line-height:1.3}
+.ch-name svg{width:14px;height:14px;flex-shrink:0}
+.ch-status{font-size:11.5px;color:#34D399;font-weight:600}
+.ch-body{padding:16px 14px 18px;min-height:330px;display:flex;flex-direction:column;gap:10px;position:relative}
+.bbl{max-width:86%;padding:10px 14px;border-radius:15px;font-size:13.5px;line-height:1.5;opacity:0;transform:translateY(12px) scale(.97);transition:opacity .45s,transform .45s}
+.bbl.show{opacity:1;transform:none}
+.bbl-in{background:rgba(255,255,255,.06);border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start}
+.bbl-out{background:linear-gradient(120deg,#8B5CF6,#C026D3);border-bottom-right-radius:5px;align-self:flex-end;font-weight:700;box-shadow:0 6px 20px rgba(168,85,247,.35)}
+.bbl .mut{color:var(--muted);font-size:11.5px;font-weight:600}
+.pay-row{display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px}
+.pr-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.08);font-size:16px;flex-shrink:0}
+.pay-row small{display:block;font-weight:600;color:var(--muted);font-size:11px}
+.pay-row small.ok{color:#34D399}
+.ph-timer{margin-top:2px;opacity:0;transition:opacity .4s}
+.ph-timer.show{opacity:1}
+.pht-num{font-family:var(--mono);font-weight:700;font-size:30px;letter-spacing:1px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pht-num span{font-size:14px;-webkit-text-fill-color:var(--muted);font-weight:400}
+.pht-bar{height:5px;border-radius:10px;background:rgba(255,255,255,.08);margin-top:10px;overflow:hidden}
+.pht-fill{height:100%;width:0;border-radius:10px;background:var(--grad)}
+.pht-lbl{font-size:10.5px;color:var(--muted);margin-top:7px;font-weight:600;letter-spacing:.3px}
+.ph-burst{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.bstar{position:absolute;left:50%;top:58%;width:14px;height:14px;fill:url(#starGrad);opacity:1;transition:transform 1.15s cubic-bezier(.16,.8,.3,1),opacity 1.15s}
+.ch-foot{display:flex;justify-content:space-between;gap:10px;padding:12px 16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.ch-foot b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* suzuvchi chiplar */
+.chips{position:absolute;inset:0;pointer-events:none}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:11px 17px;border-radius:100px;background:rgba(16,10,26,.55);border:1px solid var(--line2);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-weight:700;font-size:13px;box-shadow:0 14px 40px rgba(0,0,0,.4);pointer-events:auto;animation:chipFl 6.5s ease-in-out infinite;will-change:transform}
+.chip .cd{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.chip small{font-family:var(--mono);font-size:10.5px;color:var(--muted);font-weight:400}
+.c1{left:4%;top:13%}
+.c2{right:5%;top:9%;animation-delay:1.2s}
+.c3{left:1%;bottom:30%;animation-delay:2.4s}
+.c4{right:2%;bottom:24%;animation-delay:3.4s}
+.c5{right:14%;top:46%;animation-delay:4.4s}
+@keyframes chipFl{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+
+/* ===== Marquee ===== */
+.marquee{overflow:hidden;padding:22px 0;margin-top:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq-track{display:flex;width:max-content;animation:mq 30s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-in{display:flex;align-items:center}
+.mq-it{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:3px;color:var(--muted);padding:0 26px;white-space:nowrap}
+.mq-sep{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== Umumiy seksiyalar ===== */
+.sec{padding:clamp(80px,9.5vw,124px) 0;position:relative}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.kicker{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.14;letter-spacing:-.01em}
+.sec-sub{color:var(--muted);margin-top:15px;font-size:16.5px}
+
+/* ===== Statistika ===== */
+.stats-wrap{border:1px solid var(--line);border-radius:26px;background:rgba(255,255,255,.02);backdrop-filter:blur(6px);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:38px 24px;text-align:center;position:relative}
+.stat+.stat::before{content:"";position:absolute;left:0;top:22%;bottom:22%;width:1px;background:var(--line)}
+.stat-num{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,3.8vw,2.9rem);line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-num .u{font-size:.4em}
+.stat-lbl{color:var(--muted);font-size:13.5px;font-weight:600;margin-top:10px}
+
+/* ===== Bento ===== */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(190px,auto);gap:18px}
+.cell{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:var(--panel);padding:30px;transition:transform .35s,border-color .35s,box-shadow .35s}
+.cell:hover{transform:translateY(-5px);border-color:rgba(217,70,239,.45);box-shadow:0 26px 60px -28px rgba(168,85,247,.4)}
+.cell-a{grid-column:1/3;grid-row:1/3;display:flex;flex-direction:column}
+.cell-b{grid-column:3/5}
+.cell-c{grid-column:3/4}
+.cell-d{grid-column:4/5}
+.cell-e{grid-column:1/5;display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:space-between}
+.cell-tag{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;margin-bottom:14px}
+.cell h3{font-family:var(--disp);font-weight:700;font-size:19px;margin-bottom:10px;line-height:1.25}
+.cell p{color:var(--muted);font-size:14px;max-width:420px}
+.cell p b{color:var(--text)}
+/* spotlight */
+.spot::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(168,85,247,.14),transparent 62%);opacity:0;transition:opacity .35s;pointer-events:none}
+.spot:hover::after{opacity:1}
+/* halqa taymer */
+.ring-wrap{flex:1;display:grid;place-items:center;padding:18px 0 4px}
+.ring{position:relative;width:200px;height:200px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .track{fill:none;stroke:rgba(255,255,255,.07);stroke-width:11}
+.ring .bar{fill:none;stroke:url(#ringGrad);stroke-width:11;stroke-linecap:round;stroke-dasharray:540;stroke-dashoffset:540}
+.ring-c{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring-num{font-family:var(--mono);font-weight:700;font-size:36px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ring-lbl{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-top:6px}
+.big-ic{width:46px;height:46px;border-radius:14px;background:rgba(217,70,239,.13);display:grid;place-items:center;margin-bottom:18px}
+.big-ic svg{width:22px;height:22px;fill:var(--fuch)}
+.cell-c .big-ic{background:rgba(34,211,238,.12)}
+.cell-c .big-ic svg{fill:var(--cyan)}
+.cell-d .big-ic{background:rgba(139,92,246,.14)}
+.cell-d .big-ic svg{fill:var(--vio)}
+.bank-pills{display:flex;gap:10px;flex-wrap:wrap}
+.bp{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font-family:var(--disp);font-weight:700;font-size:13.5px;letter-spacing:.4px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.bp .cd{width:8px;height:8px;border-radius:50%}
+.bp:hover{transform:translateY(-3px);border-color:var(--bc);box-shadow:0 12px 30px -10px var(--bcg)}
+.bp-uz{--bc:#3D8BFD;--bcg:rgba(61,139,253,.45)}
+.bp-hu{--bc:#1BC9B7;--bcg:rgba(27,201,183,.45)}
+.bp-cl{--bc:#00A6FF;--bcg:rgba(0,166,255,.45)}
+.bp-pa{--bc:#33CCBE;--bcg:rgba(51,204,190,.45)}
+
+/* ===== Mahsulotlar ===== */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod{display:block;position:relative;overflow:hidden;border-radius:26px;padding:34px 30px;border:1px solid transparent;background:linear-gradient(var(--panel),var(--panel)) padding-box,conic-gradient(from var(--a),rgba(139,92,246,.55),rgba(217,70,239,.5),rgba(34,211,238,.5),rgba(139,92,246,.55)) border-box;transition:transform .35s,box-shadow .35s;will-change:transform}
+.prod:hover{transform:translateY(-8px);box-shadow:0 30px 70px -28px rgba(168,85,247,.5);animation:rot 4.5s linear infinite}
+@keyframes rot{to{--a:360deg}}
+.prod-ic{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;margin-bottom:22px;background:var(--accS);transition:transform .35s}
+.prod-ic svg{width:28px;height:28px;fill:var(--acc)}
+.prod:hover .prod-ic{transform:scale(1.1) rotate(-7deg)}
+.p-st{--acc:#FBBF24;--accS:rgba(251,191,36,.13)}
+.p-pr{--acc:#A78BFA;--accS:rgba(167,139,250,.14)}
+.p-gf{--acc:#F472B6;--accS:rgba(244,114,182,.13)}
+.prod h3{font-family:var(--disp);font-weight:700;font-size:18.5px;margin-bottom:11px}
+.prod > p{color:var(--muted);font-size:14.5px;margin-bottom:20px}
+.prod ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:26px}
+.prod li{font-size:13.5px;display:flex;gap:9px;align-items:center;font-weight:600}
+.prod li svg{width:15px;height:15px;fill:var(--acc);flex-shrink:0}
+.prod-link{font-weight:700;font-size:14px;color:var(--acc);display:inline-flex;align-items:center;gap:7px}
+.prod-link svg{width:15px;height:15px;stroke:currentColor;stroke-width:2.2;fill:none;transition:transform .25s}
+.prod:hover .prod-link svg{transform:translateX(5px)}
+
+/* ===== Qanday ishlaydi (timeline) ===== */
+.tl{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:10px}
+.tl-track{position:absolute;top:31px;left:10%;right:10%;height:2px;background:rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+.tl-fill{height:100%;width:0;background:var(--grad);transition:width 1.7s cubic-bezier(.6,.05,.3,.95);box-shadow:0 0 16px rgba(217,70,239,.7)}
+.tl.live .tl-fill{width:100%}
+.tstep{text-align:center;padding:0 8px}
+.tnode{width:62px;height:62px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:16px;color:var(--muted);background:var(--void);border:1px solid var(--line2);position:relative;z-index:1;transition:color .5s,border-color .5s,box-shadow .5s,transform .5s}
+.tl.live .tstep:nth-child(2) .tnode{transition-delay:.15s}
+.tl.live .tstep:nth-child(3) .tnode{transition-delay:.75s}
+.tl.live .tstep:nth-child(4) .tnode{transition-delay:1.45s}
+.tl.live .tnode{color:#fff;border-color:rgba(217,70,239,.7);box-shadow:0 0 0 7px var(--void),0 0 34px rgba(217,70,239,.45);transform:scale(1.06)}
+.tstep h3{font-family:var(--disp);font-weight:700;font-size:16.5px;margin-bottom:10px}
+.tstep p{color:var(--muted);font-size:14.5px}
+.tstep p b{color:var(--text)}
+
+/* ===== Ishonch banneri ===== */
+.trust-band{position:relative;overflow:hidden;border-radius:28px;padding:clamp(36px,5.5vw,54px);border:1px solid transparent;background:linear-gradient(#0F0A1A,#0F0A1A) padding-box,conic-gradient(from var(--a),rgba(139,92,246,.6),rgba(217,70,239,.55),rgba(34,211,238,.55),rgba(139,92,246,.6)) border-box;animation:rot 8s linear infinite;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.tb-it{display:flex;gap:16px;align-items:flex-start}
+.tb-ic{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+.tb-ic svg{width:21px;height:21px;fill:url(#starGrad)}
+.tb-it h3{font-family:var(--disp);font-weight:700;font-size:15.5px;margin-bottom:6px}
+.tb-it p{color:var(--muted);font-size:13.5px}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-it{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.025);overflow:hidden;transition:border-color .3s,background .3s}
+.faq-it.open{border-color:rgba(217,70,239,.5);background:rgba(217,70,239,.04)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:21px 24px;background:none;border:none;color:var(--text);font-family:var(--body);font-size:15.5px;font-weight:700;cursor:pointer;text-align:left}
+.fx{width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;flex-shrink:0;transition:transform .4s,background .3s,border-color .3s}
+.fx svg{width:14px;height:14px;stroke:var(--fuch);stroke-width:2.4;fill:none}
+.faq-it.open .fx{transform:rotate(135deg);background:rgba(217,70,239,.15);border-color:rgba(217,70,239,.6)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted);font-size:14.5px}
+.faq-a b{color:var(--text)}
+
+/* ===== Yakuniy CTA ===== */
+.cta-final{position:relative;text-align:center;padding:clamp(100px,12vw,150px) 0;overflow:hidden}
+.cta-final::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:760px;height:760px;background:conic-gradient(from 0deg,rgba(139,92,246,.16),rgba(217,70,239,.12),rgba(34,211,238,.13),rgba(139,92,246,.16));border-radius:50%;filter:blur(80px);pointer-events:none}
+.cta-final h2{font-size:clamp(2.2rem,6vw,4.2rem);margin-bottom:18px}
+.cta-final .sec-sub{max-width:520px;margin:0 auto 42px}
+.cta-tg{font-family:var(--mono);margin-top:22px;color:var(--muted);font-size:13px}
+.cta-tg a{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+.cta-burst{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.fs{position:absolute;fill:url(#starGrad);animation:fl 6s ease-in-out infinite}
+.fs1{width:26px;top:16%;left:12%;opacity:.8}
+.fs2{width:15px;top:26%;right:14%;opacity:.5;animation-delay:1.4s}
+.fs3{width:20px;bottom:20%;left:22%;opacity:.6;animation-delay:2.6s}
+.fs4{width:12px;bottom:30%;right:20%;opacity:.45;animation-delay:3.8s}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(16deg)}}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--line);padding:36px 0;background:rgba(255,255,255,.012)}
+.foot-in{display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
+.foot-in a:hover{color:var(--text)}
+
+/* ===== Reveal variantlari ===== */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s;transition-delay:var(--d,0s)}
+.rv-blur{filter:blur(10px)}
+.rv-scale{transform:translateY(16px) scale(.94)}
+.rv.in{opacity:1;transform:none;filter:none}
+
+/* ===== Moslashuvchanlik ===== */
+@media(max-width:1000px){
+  .nav-links{display:none}
+  .hero{padding-top:140px}
+  .chips{position:static;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px;pointer-events:auto}
+  .chip{position:static;animation:none}
+  .stats-wrap{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3)::before{display:none}
+  .stat:nth-child(odd)::before{display:none}
+  .stat{padding:28px 18px}
+  .bento{grid-template-columns:1fr 1fr}
+  .cell-a{grid-column:1/3;grid-row:auto}
+  .cell-b{grid-column:1/3}
+  .cell-c{grid-column:1/2}
+  .cell-d{grid-column:2/3}
+  .cell-e{grid-column:1/3}
+  .prod-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .tl{grid-template-columns:1fr;gap:38px}
+  .tl-track{top:0;bottom:0;left:30px;right:auto;width:2px;height:auto}
+  .tl-fill{width:100%!important;height:0;transition:height 1.7s cubic-bezier(.6,.05,.3,.95)}
+  .tl.live .tl-fill{height:100%}
+  .tstep{text-align:left;display:grid;grid-template-columns:62px 1fr;gap:18px}
+  .tnode{margin:0}
+  .tstep h3{margin-top:8px}
+  .tstep div{grid-column:2}
+  .trust-band{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .hero-cta .btn{width:100%;justify-content:center}
+  .phone{width:min(310px,88vw)}
+  .cell{padding:24px}
+  .cell-e{flex-direction:column;align-items:flex-start}
+  .ring{width:170px;height:170px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv,.rw{opacity:1;transform:none;filter:none}
+  .hero-h .rw{transform:none}
+  #loader{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="loader" aria-hidden="true">
+  <div class="ld">
+    <svg class="ld-star" viewBox="0 0 24 24"><path fill="url(#starGradL)" d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/>
+      <defs><linearGradient id="starGradL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset=".5" stop-color="#D946EF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+    </svg>
+    <div class="ld-num" id="ldNum">0%</div>
+  </div>
+</div>
+
+<!-- Global SVG gradientlar -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B5CF6"/><stop offset=".5" stop-color="#D946EF"/><stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B5CF6"/><stop offset=".55" stop-color="#D946EF"/><stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- Fon qatlamlari -->
+<div class="aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Maxsus kursor -->
+<div class="cur-dot" id="curDot" aria-hidden="true"></div>
+<div class="cur-ring" id="curRing" aria-hidden="true"></div>
+
+<!-- Navigatsiya -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="StarsPaymee bosh sahifa">
+      <span class="mark"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg></span>
+      <span><span class="gt">Stars</span>Paymee</span>
+    </a>
+    <nav class="nav-links" aria-label="Asosiy menyu">
+      <a href="#afzallik">Afzalliklar</a>
+      <a href="#mahsulotlar">Mahsulotlar</a>
+      <a href="#qanday">Qanday ishlaydi</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-grad btn-sm mag" href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21.9 3.2 2.75 10.68c-1.05.42-1 1.62.07 1.97l4.86 1.58 1.86 5.63c.28.86 1.4 1.07 1.98.38l2.6-2.64 4.94 3.62c.78.57 1.9.14 2.1-.83l3.02-15.1c.21-1.08-.85-1.96-1.85-1.57Z"/></svg>
+      Botni ochish
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge rv"><span class="pulse"></span><b>Onlayn</b>&nbsp;&middot;&nbsp;1 yildan beri uzluksiz xizmatda</div>
+    <h1 class="hero-h" id="heroH" aria-label="Stars, Premium, Gifts — 10 soniyada qo'lingizda.">
+      <span class="rl"><span class="rw" style="--wd:.05s">Stars,</span></span>
+      <span class="rl"><span class="rw" style="--wd:.13s">Premium,</span></span>
+      <span class="rl"><span class="rw" style="--wd:.21s">Gifts&nbsp;&mdash;</span></span><br>
+      <span class="rl"><span class="rw gt" style="--wd:.32s">10&nbsp;soniyada</span></span>
+      <span class="rl"><span class="rw" style="--wd:.42s">qo&#8217;lingizda.</span></span>
+    </h1>
+    <p class="hero-sub rv" style="--d:.5s">To&#8217;liq avtomatlashtirilgan tizim. <b>Istalgan bank ilovasidan</b> O&#8217;zbek so&#8217;mida to&#8217;lang &mdash; qolganini StarsPaymee <b>24/7</b> o&#8217;zi bajaradi.</p>
+    <div class="hero-cta rv" style="--d:.6s">
+      <a class="btn btn-grad mag" href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M21.9 3.2 2.75 10.68c-1.05.42-1 1.62.07 1.97l4.86 1.58 1.86 5.63c.28.86 1.4 1.07 1.98.38l2.6-2.64 4.94 3.62c.78.57 1.9.14 2.1-.83l3.02-15.1c.21-1.08-.85-1.96-1.85-1.57Z"/></svg>
+        Botda xarid qilish
+      </a>
+      <a class="btn btn-ghost mag" href="#qanday">Qanday ishlaydi?</a>
+    </div>
+
+    <!-- 3D telefon sahnasi -->
+    <div class="stage rv-scale rv" style="--d:.45s" id="stage">
+      <div class="phone" id="phone">
+        <div class="screen">
+          <div class="isl"></div>
+          <div class="ch-head">
+            <span class="ch-ava"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg></span>
+            <div>
+              <div class="ch-name">StarsPaymee_bot
+                <svg viewBox="0 0 24 24"><path fill="#2AABEE" d="M12 1.6 14.7 4l3.6-.3.6 3.6 3.1 1.9-1.5 3.3 1.5 3.3-3.1 1.9-.6 3.6-3.6-.3L12 23l-2.7-2.4-3.6.3-.6-3.6-3.1-1.9 1.5-3.3-1.5-3.3 3.1-1.9.6-3.6 3.6.3z"/><path fill="#fff" d="m10.7 15.6-3-3 1.3-1.3 1.7 1.7 4.3-4.3 1.3 1.3z"/></svg>
+              </div>
+              <div class="ch-status">onlayn &middot; avtomatik</div>
+            </div>
+          </div>
+          <div class="ch-body">
+            <div class="bbl bbl-in" id="m1">Salom! &#11088; Nimani olamiz?</div>
+            <div class="bbl bbl-out" id="m2">&#11088; 500 Stars</div>
+            <div class="bbl bbl-in pay-row" id="m3">
+              <span class="pr-ic" id="payIc">&#128179;</span>
+              <span>84 500 so&#8217;m &middot; 8600 &#8226;&#8226; 4521<small id="payTxt">To&#8217;lov kutilmoqda&#8230;</small></span>
+            </div>
+            <div class="ph-timer" id="phTimer">
+              <div class="pht-num" id="tNum">00.00<span> s</span></div>
+              <div class="pht-bar"><div class="pht-fill" id="tFill"></div></div>
+              <div class="pht-lbl">Buyurtma yetkazilmoqda &mdash; tizim avtomatik</div>
+            </div>
+            <div class="bbl bbl-in" id="m4">&#9989; <b>500 &#11088; yetkazildi!</b><br><span class="mut">Xaridingiz uchun rahmat &#128640;</span></div>
+            <div class="ph-burst" id="phBurst"></div>
+          </div>
+          <div class="ch-foot"><span>O&#8217;rtacha: <b>9.4 s</b></span><span>24/7 &middot; avto</span></div>
+        </div>
+      </div>
+      <div class="chips" id="chips" aria-hidden="true">
+        <span class="chip c1" data-depth="22"><span class="cd" style="background:#3D8BFD"></span>UzCard <small>8600</small></span>
+        <span class="chip c2" data-depth="30"><span class="cd" style="background:#1BC9B7"></span>HUMO <small>9860</small></span>
+        <span class="chip c3" data-depth="26"><span class="cd" style="background:#00A6FF"></span>Click</span>
+        <span class="chip c4" data-depth="34"><span class="cd" style="background:#33CCBE"></span>Payme</span>
+        <span class="chip c5" data-depth="18">&#9889; o&#8217;rtacha 9.4 s</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track">
+      <div class="mq-in">
+        <span class="mq-it">UZCARD</span><span class="mq-sep"></span>
+        <span class="mq-it">HUMO</span><span class="mq-sep"></span>
+        <span class="mq-it">CLICK</span><span class="mq-sep"></span>
+        <span class="mq-it">PAYME</span><span class="mq-sep"></span>
+        <span class="mq-it">24/7 AVTOMATIK</span><span class="mq-sep"></span>
+        <span class="mq-it">O&#8217;ZBEK SO&#8217;MIDA</span><span class="mq-sep"></span>
+        <span class="mq-it">10 SONIYADA YETKAZISH</span><span class="mq-sep"></span>
+        <span class="mq-it">AVTO-BONUS KAFOLATI</span><span class="mq-sep"></span>
+      </div>
+      <div class="mq-in">
+        <span class="mq-it">UZCARD</span><span class="mq-sep"></span>
+        <span class="mq-it">HUMO</span><span class="mq-sep"></span>
+        <span class="mq-it">CLICK</span><span class="mq-sep"></span>
+        <span class="mq-it">PAYME</span><span class="mq-sep"></span>
+        <span class="mq-it">24/7 AVTOMATIK</span><span class="mq-sep"></span>
+        <span class="mq-it">O&#8217;ZBEK SO&#8217;MIDA</span><span class="mq-sep"></span>
+        <span class="mq-it">10 SONIYADA YETKAZISH</span><span class="mq-sep"></span>
+        <span class="mq-it">AVTO-BONUS KAFOLATI</span><span class="mq-sep"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Statistika ===== -->
+<section class="sec" style="padding-top:54px;padding-bottom:30px">
+  <div class="container">
+    <div class="stats-wrap rv">
+      <div class="stat"><div class="stat-num"><span class="cnt" data-target="1">0</span><span class="u">+ yil</span></div><div class="stat-lbl">Bozorda uzluksiz xizmatda</div></div>
+      <div class="stat"><div class="stat-num"><span class="cnt" data-target="10">0</span><span class="u"> s</span></div><div class="stat-lbl">O&#8217;rtacha yetkazish vaqti</div></div>
+      <div class="stat"><div class="stat-num"><span class="cnt" data-target="24">0</span><span class="u">/7</span></div><div class="stat-lbl">Tizim avtomatik ishlaydi</div></div>
+      <div class="stat"><div class="stat-num"><span class="cnt" data-target="100">0</span><span class="u">%</span></div><div class="stat-lbl">Kechikishda avto-bonus</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Bento: Afzalliklar ===== -->
+<section class="sec" id="afzallik">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="kicker">Afzalliklar</div>
+      <h2>Nega aynan StarsPaymee?</h2>
+      <p class="sec-sub">Tezlik, qulaylik va kafolat &mdash; bitta tizimda.</p>
+    </div>
+    <div class="bento">
+      <div class="cell cell-a spot rv">
+        <div class="cell-tag">Tezlik</div>
+        <h3>Buyurtma o&#8217;rtacha 10 soniyada</h3>
+        <p>To&#8217;lov tushgan zahoti tizim avtomatik ishga tushadi &mdash; <b>kutish, operator, navbat yo&#8217;q</b>.</p>
+        <div class="ring-wrap">
+          <div class="ring">
+            <svg viewBox="0 0 200 200">
+              <circle class="track" cx="100" cy="100" r="86"></circle>
+              <circle class="bar" id="ringBar" cx="100" cy="100" r="86"></circle>
+            </svg>
+            <div class="ring-c"><div><div class="ring-num" id="ringNum">0.00</div><div class="ring-lbl">soniya</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cell cell-b spot rv" style="--d:.08s">
+        <div class="big-ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div>
+        <div class="cell-tag">Kafolat</div>
+        <h3>Kechiksa &mdash; avto-bonus</h3>
+        <p>Yetkazish cho&#8217;zilsa, bonus hisobingizga <b>o&#8217;zi qo&#8217;shiladi</b> &mdash; murojaat shart emas.</p>
+      </div>
+      <div class="cell cell-c spot rv" style="--d:.14s">
+        <div class="big-ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.2 14.2L11 13.3V7h1.8v5.4l4.3 2.5z"/></svg></div>
+        <div class="cell-tag">Rejim</div>
+        <h3>24/7</h3>
+        <p>Kecha-yu kunduz, bayramda ham.</p>
+      </div>
+      <div class="cell cell-d spot rv" style="--d:.2s">
+        <div class="big-ic"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm-1 14-3.5-3.5 1.4-1.4L11 12.2l4.6-4.6 1.4 1.4z"/></svg></div>
+        <div class="cell-tag">Xavfsizlik</div>
+        <h3>Parolsiz</h3>
+        <p>Faqat @username yetarli.</p>
+      </div>
+      <div class="cell cell-e spot rv" style="--d:.26s">
+        <div style="max-width:380px">
+          <div class="cell-tag">To&#8217;lov</div>
+          <h3>Istalgan bank ilovasidan</h3>
+          <p>Kartadan kartaga o&#8217;tkazing &mdash; tizim tushumni <b>avtomatik aniqlaydi</b>. Hammasi so&#8217;mda.</p>
+        </div>
+        <div class="bank-pills">
+          <span class="bp bp-uz"><span class="cd" style="background:#3D8BFD"></span>UZCARD</span>
+          <span class="bp bp-hu"><span class="cd" style="background:#1BC9B7"></span>HUMO</span>
+          <span class="bp bp-cl"><span class="cd" style="background:#00A6FF"></span>CLICK</span>
+          <span class="bp bp-pa"><span class="cd" style="background:#33CCBE"></span>PAYME</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Mahsulotlar ===== -->
+<section class="sec" id="mahsulotlar">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="kicker">Mahsulotlar</div>
+      <h2>Nimalarni xarid qilish mumkin?</h2>
+      <p class="sec-sub">Barchasi bitta botda &mdash; tanlang, to&#8217;lang va soniyalarda qabul qiling.</p>
+    </div>
+    <div class="prod-grid">
+      <a class="prod p-st spot rv" href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">
+        <span class="prod-ic"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg></span>
+        <h3>Telegram Stars</h3>
+        <p>Istalgan miqdordagi Star paketlari &mdash; kichik sovg&#8217;adan yirik xaridgacha.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>So&#8217;mdagi qulay kurs</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>Hisobingizga to&#8217;g&#8217;ridan-to&#8217;g&#8217;ri</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>10 soniyada yetkaziladi</li>
+        </ul>
+        <span class="prod-link">Botda ko&#8217;rish <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="prod p-pr spot rv" style="--d:.1s" href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">
+        <span class="prod-ic"><svg viewBox="0 0 24 24"><path d="M12 1.8l2.3 4.6 5.1.74-3.7 3.6.87 5.07L12 13.42l-4.57 2.4.87-5.08-3.7-3.6 5.1-.73zM12 16.6l3.4 1.8-.3 3.1L12 20l-3.1 1.5-.3-3.1z"/></svg></span>
+        <h3>Telegram Premium</h3>
+        <p>Premium obuna &mdash; barcha eksklyuziv imkoniyatlar bilan birga.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>3, 6 va 12 oylik tariflar</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>Rasmiy faollashtirish</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>Do&#8217;stga sovg&#8217;a qilish mumkin</li>
+        </ul>
+        <span class="prod-link">Botda ko&#8217;rish <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="prod p-gf spot rv" style="--d:.2s" href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">
+        <span class="prod-ic"><svg viewBox="0 0 24 24"><path d="M20 7h-1.3c.19-.46.3-.97.3-1.5A3.5 3.5 0 0 0 15.5 2c-1.4 0-2.6.83-3.5 2.05C11.1 2.83 9.9 2 8.5 2A3.5 3.5 0 0 0 5 5.5c0 .53.11 1.04.3 1.5H4c-1.1 0-2 .9-2 2v2c0 .55.45 1 1 1h8V9h2v3h8c.55 0 1-.45 1-1V9c0-1.1-.9-2-2-2ZM8.5 6C7.67 6 7 5.33 7 4.5S7.67 3 8.5 3c.83 0 1.5.67 1.5 1.5V6H8.5Zm7 0H14V4.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S16.33 6 15.5 6ZM3 13.5V19c0 1.1.9 2 2 2h6v-7.5H3Zm10 7.5h6c1.1 0 2-.9 2-2v-5.5h-8V21Z"/></svg></span>
+        <h3>Telegram Gifts</h3>
+        <p>Do&#8217;stlaringizga eksklyuziv Telegram sovg&#8217;alarini yuboring.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>Eksklyuziv kolleksiyalar</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>Anonim yuborish imkoni</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9.55 17.05 4.9 12.4l1.6-1.6 3.05 3.05 7.95-7.95 1.6 1.6z"/></svg>Bayramlar uchun ideal</li>
+        </ul>
+        <span class="prod-link">Botda ko&#8217;rish <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Qanday ishlaydi ===== -->
+<section class="sec" id="qanday">
+  <div class="container">
+    <div class="sec-head center rv">
+      <div class="kicker">Jarayon</div>
+      <h2>Qanday ishlaydi?</h2>
+      <p class="sec-sub">Uch oddiy qadam &mdash; ro&#8217;yxatdan o&#8217;tish ham shart emas.</p>
+    </div>
+    <div class="tl rv" id="tl">
+      <div class="tl-track"><div class="tl-fill"></div></div>
+      <div class="tstep">
+        <div class="tnode">01</div>
+        <div><h3>Botni oching</h3>
+        <p><b>@StarsPaymee_bot</b> da kerakli mahsulotni tanlang: Stars, Premium yoki Gift.</p></div>
+      </div>
+      <div class="tstep">
+        <div class="tnode">02</div>
+        <div><h3>To&#8217;lovni qiling</h3>
+        <p>Istalgan bank ilovasidan: <b>UzCard, HUMO, Click yoki Payme</b> orqali so&#8217;mda.</p></div>
+      </div>
+      <div class="tstep">
+        <div class="tnode">03</div>
+        <div><h3>10 soniyada qabul qiling</h3>
+        <p>Tizim to&#8217;lovni avtomatik aniqlaydi va darhol yetkazadi. Kechiksa &mdash; <b>avto-bonus!</b></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ishonch banneri ===== -->
+<section class="sec" style="padding-top:20px">
+  <div class="container">
+    <div class="trust-band rv">
+      <div class="tb-it">
+        <span class="tb-ic"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm-1 14-3.5-3.5 1.4-1.4L11 12.2l4.6-4.6 1.4 1.4z"/></svg></span>
+        <div><h3>Login va parol so&#8217;ralmaydi</h3><p>Faqat @username yetarli &mdash; hisobingiz to&#8217;liq xavfsiz qoladi.</p></div>
+      </div>
+      <div class="tb-it">
+        <span class="tb-ic"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg></span>
+        <div><h3>1 yildan beri faoliyatda</h3><p>Minglab buyurtma muvaffaqiyatli bajarilgan ishonchli servis.</p></div>
+      </div>
+      <div class="tb-it">
+        <span class="tb-ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+        <div><h3>Avto-bonus kafolati</h3><p>Buyurtma kechiksa, bonus hisobingizga avtomatik qo&#8217;shiladi.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec" id="faq">
+  <div class="container">
+    <div class="sec-head center rv">
+      <div class="kicker">Savol-javob</div>
+      <h2>Ko&#8217;p so&#8217;raladigan savollar</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-it rv">
+        <button class="faq-q" type="button" aria-expanded="false">To&#8217;lov qanday amalga oshiriladi?<span class="fx"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Botda buyurtma yarating va ko&#8217;rsatilgan kartaga istalgan bank ilovasi (UzCard, HUMO, Click, Payme) orqali to&#8217;lov qiling. Tizim to&#8217;lovni <b>avtomatik aniqlaydi</b> &mdash; chek yuborish shart emas.</p></div>
+      </div>
+      <div class="faq-it rv" style="--d:.06s">
+        <button class="faq-q" type="button" aria-expanded="false">Buyurtma qancha vaqtda yetib keladi?<span class="fx"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>O&#8217;rtacha <b>10 soniya</b>. Tizim 24/7 avtomatik ishlaydi &mdash; kechasi ham, bayramda ham.</p></div>
+      </div>
+      <div class="faq-it rv" style="--d:.12s">
+        <button class="faq-q" type="button" aria-expanded="false">Hisobimga kirish ma&#8217;lumotlari kerakmi?<span class="fx"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Yo&#8217;q. Stars va Premium uchun faqat <b>@username</b> yetarli &mdash; parol yoki tasdiqlash kodi hech qachon so&#8217;ralmaydi.</p></div>
+      </div>
+      <div class="faq-it rv" style="--d:.18s">
+        <button class="faq-q" type="button" aria-expanded="false">Bu xavfsizmi?<span class="fx"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Ha. StarsPaymee <b>1 yildan beri</b> uzluksiz ishlaydi va minglab buyurtmani muvaffaqiyatli bajargan ishonchli servis.</p></div>
+      </div>
+      <div class="faq-it rv" style="--d:.24s">
+        <button class="faq-q" type="button" aria-expanded="false">Kechikkanda bonus qanday beriladi?<span class="fx"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Agar buyurtma belgilangan vaqtdan kechiksa, bot hisobingizga bonusni <b>avtomatik</b> qo&#8217;shadi &mdash; murojaat qilish shart emas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Yakuniy CTA ===== -->
+<section class="cta-final" id="boshlash">
+  <svg class="fs fs1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg>
+  <svg class="fs fs2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg>
+  <svg class="fs fs3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg>
+  <svg class="fs fs4" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg>
+  <div class="cta-burst" id="ctaBurst" aria-hidden="true"></div>
+  <div class="container rv">
+    <h2>Hozir <span class="gt">boshlang.</span></h2>
+    <p class="sec-sub">Birinchi buyurtmangiz 10 soniyada yetib keladi. 1 yildan beri minglab mijozlar ishonchini qozongan xizmat.</p>
+    <a class="btn btn-grad btn-xl mag" id="ctaBtn" href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21.9 3.2 2.75 10.68c-1.05.42-1 1.62.07 1.97l4.86 1.58 1.86 5.63c.28.86 1.4 1.07 1.98.38l2.6-2.64 4.94 3.62c.78.57 1.9.14 2.1-.83l3.02-15.1c.21-1.08-.85-1.96-1.85-1.57Z"/></svg>
+      @StarsPaymee_bot ni ochish
+    </a>
+    <p class="cta-tg"><a href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">@StarsPaymee_bot</a> &middot; 24/7 onlayn &middot; bepul</p>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container foot-in">
+    <a class="logo" href="#top">
+      <span class="mark"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z"/></svg></span>
+      <span><span class="gt">Stars</span>Paymee</span>
+    </a>
+    <span>&copy; <span id="yr"></span> StarsPaymee &middot; Avtomatik, tez, ishonchli</span>
+    <a href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener">@StarsPaymee_bot</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE = window.matchMedia('(pointer: fine)').matches;
+function $(s){return document.querySelector(s)}
+function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+var STAR = 'M12 2.5l2.65 5.86 6.4.62-4.8 4.3 1.4 6.27L12 16.9l-5.65 2.65 1.4-6.27-4.8-4.3 6.4-.62z';
+
+/* ===== Preloader ===== */
+var loader = $('#loader'), ldNum = $('#ldNum'), heroH = $('#heroH');
+function finishLoad(){
+  loader.classList.add('done');
+  heroH.classList.add('go');
+}
+if(RM){ finishLoad(); }
+else{
+  var lt0 = performance.now();
+  (function lf(n){
+    var p = Math.min(1,(n-lt0)/850);
+    ldNum.textContent = Math.round(p*100)+'%';
+    if(p<1) requestAnimationFrame(lf); else setTimeout(finishLoad,120);
+  })(lt0);
+}
+
+/* ===== Scroll progress + nav ===== */
+var prog = $('#progress'), nav = $('#nav');
+function onScroll(){
+  var h = document.documentElement;
+  var p = h.scrollTop/(h.scrollHeight-h.clientHeight);
+  prog.style.width = (p*100)+'%';
+  nav.classList.toggle('scrolled', h.scrollTop > 30);
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* ===== Maxsus kursor ===== */
+if(FINE && !RM){
+  document.body.classList.add('fine');
+  var dot = $('#curDot'), ring = $('#curRing');
+  var cx2=innerWidth/2, cy2=innerHeight/2, rx=cx2, ry=cy2;
+  window.addEventListener('pointermove', function(e){
+    cx2=e.clientX; cy2=e.clientY;
+    dot.style.left=cx2+'px'; dot.style.top=cy2+'px';
+  }, {passive:true});
+  (function rf(){
+    rx += (cx2-rx)*.16; ry += (cy2-ry)*.16;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(rf);
+  })();
+  document.addEventListener('mouseover', function(e){
+    ring.classList.toggle('hov', !!(e.target.closest && e.target.closest('a,button,.faq-q')));
+  });
+}
+
+/* ===== Reveal ===== */
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.13});
+$$('.rv').forEach(function(el){ io.observe(el); });
+
+/* ===== Sanagichlar ===== */
+function animNum(el){
+  var t=+el.dataset.target, dur=1500, st=performance.now();
+  (function f(n){
+    var p=Math.min(1,(n-st)/dur), e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(t*e);
+    if(p<1) requestAnimationFrame(f); else el.textContent=t;
+  })(st);
+}
+var cio = new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      if(RM){ e.target.textContent=e.target.dataset.target; } else { animNum(e.target); }
+      cio.unobserve(e.target);
+    }
+  });
+},{threshold:.5});
+$$('.cnt').forEach(function(el){ cio.observe(el); });
+
+/* ===== 3D telefon tilt + chip parallaks ===== */
+var stage = $('#stage'), phone = $('#phone'), chips = $$('.chip');
+if(FINE && !RM){
+  var tx=0,ty=0,ctx2=0,cty=0,px=0,py=0;
+  stage.addEventListener('mousemove', function(e){
+    var r = stage.getBoundingClientRect();
+    px = (e.clientX-r.left)/r.width-.5;
+    py = (e.clientY-r.top)/r.height-.5;
+    tx = px*13; ty = -py*9;
+  });
+  stage.addEventListener('mouseleave', function(){ tx=0; ty=0; px=0; py=0; });
+  (function tf(){
+    ctx2 += (tx-ctx2)*.07; cty += (ty-cty)*.07;
+    phone.style.transform = 'rotateY('+ctx2.toFixed(2)+'deg) rotateX('+cty.toFixed(2)+'deg)';
+    chips.forEach(function(c){
+      var d = +c.dataset.depth||20;
+      c.style.translate = (px*d).toFixed(1)+'px '+(py*d*.7).toFixed(1)+'px';
+    });
+    requestAnimationFrame(tf);
+  })();
+}
+
+/* ===== Spotlight kartalar ===== */
+if(FINE){
+  $$('.spot').forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx',(e.clientX-r.left)+'px');
+      card.style.setProperty('--my',(e.clientY-r.top)+'px');
+    });
+  });
+}
+
+/* ===== Magnit tugmalar ===== */
+if(FINE && !RM){
+  $$('.mag').forEach(function(b){
+    b.style.transition = 'transform .2s ease-out, box-shadow .3s, background-position .5s, border-color .3s, background .3s';
+    b.addEventListener('mousemove', function(e){
+      var r=b.getBoundingClientRect();
+      var x=(e.clientX-r.left-r.width/2)*.22, y=(e.clientY-r.top-r.height/2)*.35;
+      b.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px)';
+    });
+    b.addEventListener('mouseleave', function(){ b.style.transform=''; });
+  });
+}
+
+/* ===== Halqa taymer (bento) ===== */
+var ringBar = $('#ringBar'), ringNum = $('#ringNum');
+var C = 2*Math.PI*86;
+ringBar.style.strokeDasharray = C;
+ringBar.style.strokeDashoffset = C;
+var ringOn = false;
+function ringLoop(){
+  var dur=4600, target=9.42, t0=performance.now();
+  (function f(n){
+    var p=Math.min(1,(n-t0)/dur);
+    ringNum.textContent=(target*p).toFixed(2);
+    ringBar.style.strokeDashoffset = C*(1-p);
+    if(p<1){ requestAnimationFrame(f); }
+    else { setTimeout(function(){ ringBar.style.strokeDashoffset=C; ringNum.textContent='0.00'; setTimeout(ringLoop,400); },1100); }
+  })(t0);
+}
+var rio = new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting && !ringOn){
+      ringOn = true;
+      if(RM){ ringNum.textContent='9.42'; ringBar.style.strokeDashoffset=0; }
+      else { ringLoop(); }
+      rio.unobserve(e.target);
+    }
+  });
+},{threshold:.4});
+rio.observe($('.ring'));
+
+/* ===== Telefon ichidagi jonli buyurtma ===== */
+var sim = {
+  m1:$('#m1'), m2:$('#m2'), m3:$('#m3'), m4:$('#m4'),
+  payTxt:$('#payTxt'), payIc:$('#payIc'),
+  timer:$('#phTimer'), num:$('#tNum'), fill:$('#tFill'),
+  burst:$('#phBurst')
+};
+var simTimers = [];
+function st(fn,ms){ simTimers.push(setTimeout(fn,ms)); }
+function tickTimer(){
+  var dur=4200, target=9.42, t0=performance.now();
+  (function f(n){
+    var p=Math.min(1,(n-t0)/dur), v=target*p;
+    sim.num.firstChild.nodeValue=(v<10?'0':'')+v.toFixed(2);
+    sim.fill.style.width=(p*100)+'%';
+    if(p<1) requestAnimationFrame(f);
+  })(t0);
+}
+function starBurst(host, ox, oy, count){
+  for(var i=0;i<count;i++){
+    (function(){
+      var s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+      s.setAttribute('viewBox','0 0 24 24');
+      s.classList.add('bstar');
+      if(ox!==null){ s.style.left=ox+'px'; s.style.top=oy+'px'; }
+      s.innerHTML='<path d="'+STAR+'"/>';
+      host.appendChild(s);
+      var a=Math.random()*Math.PI*2, d=60+Math.random()*130,
+          rx=Math.cos(a)*d, ry=Math.sin(a)*d-40,
+          rot=Math.random()*260-130, sc=.6+Math.random()*1.2;
+      requestAnimationFrame(function(){requestAnimationFrame(function(){
+        s.style.transform='translate('+rx+'px,'+ry+'px) rotate('+rot+'deg) scale('+sc+')';
+        s.style.opacity='0';
+      });});
+      setTimeout(function(){ s.remove(); },1400);
+    })();
+  }
+}
+function setPayDone(){
+  sim.payTxt.textContent='Click orqali qabul qilindi';
+  sim.payTxt.classList.add('ok');
+  sim.payIc.textContent='\u2705';
+}
+function runSim(){
+  simTimers.forEach(clearTimeout); simTimers=[];
+  [sim.m1,sim.m2,sim.m3,sim.m4,sim.timer].forEach(function(el){ el.classList.remove('show'); });
+  sim.fill.style.width='0%';
+  sim.num.firstChild.nodeValue='00.00';
+  sim.payTxt.textContent='To\u2019lov kutilmoqda\u2026';
+  sim.payTxt.classList.remove('ok');
+  sim.payIc.textContent='\uD83D\uDCB3';
+  st(function(){ sim.m1.classList.add('show'); },420);
+  st(function(){ sim.m2.classList.add('show'); },1350);
+  st(function(){ sim.m3.classList.add('show'); },2150);
+  st(setPayDone,3050);
+  st(function(){ sim.timer.classList.add('show'); tickTimer(); },3450);
+  st(function(){ sim.m4.classList.add('show'); starBurst(sim.burst,null,null,14); },7850);
+  st(runSim,11600);
+}
+if(RM){
+  [sim.m1,sim.m2,sim.m3,sim.m4,sim.timer].forEach(function(el){ el.classList.add('show'); });
+  setPayDone();
+  sim.num.firstChild.nodeValue='09.42';
+  sim.fill.style.width='100%';
+}else{
+  runSim();
+}
+
+/* ===== Timeline ===== */
+var tl = $('#tl');
+var tio = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ tl.classList.add('live'); tio.unobserve(tl);} });
+},{threshold:.3});
+tio.observe(tl);
+
+/* ===== FAQ ===== */
+$$('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    var it=q.parentElement, a=it.querySelector('.faq-a'), open=it.classList.contains('open');
+    $$('.faq-it.open').forEach(function(o){
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight=null;
+      o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if(!open){
+      it.classList.add('open');
+      a.style.maxHeight=a.scrollHeight+'px';
+      q.setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+/* ===== CTA yulduz portlashi ===== */
+var ctaBtn = $('#ctaBtn'), ctaBurst = $('#ctaBurst');
+ctaBtn.addEventListener('click', function(){
+  if(RM) return;
+  var r=ctaBtn.getBoundingClientRect(), h=ctaBurst.getBoundingClientRect();
+  starBurst(ctaBurst, r.left-h.left+r.width/2, r.top-h.top+r.height/2, 20);
+});
+
+$('#yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
