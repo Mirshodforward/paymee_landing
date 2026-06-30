@@ -2,7 +2,8 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getTelegramBotUrl, getSiteUrl } from "@/lib/site";
+import { getTelegramBotUrl, getSiteUrl, siteConfig } from "@/lib/site";
+import { PREMIUM_LOGIN_PLANS, PREMIUM_PLANS, STARS_PACKS } from "@/lib/products";
 
 export type LandingTopic = "stars" | "premium" | "gifts" | "about";
 
@@ -30,7 +31,7 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
   const navKey = topic === "about" ? "about" : topic;
   const crumbCurrent = t(`nav.${navKey}`);
 
-  const jsonLd = {
+  const webPageLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": canonical,
@@ -40,14 +41,75 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
-      name: "StarsPaymee",
+      name: siteConfig.name,
       url: base,
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: tHome("breadcrumbHome"), item: `${base}/${locale}` },
+      { "@type": "ListItem", position: 2, name: crumbCurrent, item: canonical },
+    ],
+  };
+
+  // Mahsulot sahifalari uchun Product + AggregateOffer (real narxlar lib/products.ts dan).
+  const productLd =
+    topic === "stars"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: t("stars.h1"),
+          description: t("stars.metaDescription"),
+          brand: { "@type": "Brand", name: siteConfig.name },
+          category: "Telegram Stars",
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "UZS",
+            lowPrice: Math.min(...STARS_PACKS.map((p) => p.priceUzs)),
+            highPrice: Math.max(...STARS_PACKS.map((p) => p.priceUzs)),
+            offerCount: STARS_PACKS.length,
+            availability: "https://schema.org/InStock",
+            url: canonical,
+            seller: { "@type": "Organization", name: siteConfig.name },
+          },
+        }
+      : topic === "premium"
+        ? {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: t("premium.h1"),
+            description: t("premium.metaDescription"),
+            brand: { "@type": "Brand", name: siteConfig.name },
+            category: "Telegram Premium",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "UZS",
+              lowPrice: Math.min(
+                ...PREMIUM_PLANS.map((p) => p.priceUzs),
+                ...PREMIUM_LOGIN_PLANS.map((p) => p.priceUzs),
+              ),
+              highPrice: Math.max(
+                ...PREMIUM_PLANS.map((p) => p.priceUzs),
+                ...PREMIUM_LOGIN_PLANS.map((p) => p.priceUzs),
+              ),
+              offerCount: PREMIUM_PLANS.length + PREMIUM_LOGIN_PLANS.length,
+              availability: "https://schema.org/InStock",
+              url: canonical,
+              seller: { "@type": "Organization", name: siteConfig.name },
+            },
+          }
+        : null;
+
+  const schemas = [webPageLd, breadcrumbLd, ...(productLd ? [productLd] : [])];
+
   return (
     <main className="mx-auto max-w-3xl px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10">
-      <JsonLd data={jsonLd} />
+      {schemas.map((s, i) => (
+        <JsonLd key={i} data={s} />
+      ))}
       <nav
         aria-label="Breadcrumb"
         className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-slate-600 dark:text-slate-400"

@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  // Rasm optimizatsiyasi: AVIF/WebP (kichikroq hajm), uzoq muddatli kesh.
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 2678400, // 31 kun — logotip kabi o‘zgarmas rasmlar uchun
+  },
 };
 
 export default withNextIntl(nextConfig);

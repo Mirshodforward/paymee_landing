@@ -4,19 +4,50 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ArrowIcon, TelegramIcon } from "@/components/v2/icons";
-import { blogPosts, getPostBySlug, type BlogCategory } from "@/lib/blog-posts";
+import { getPostBySlug, type BlogCategory } from "@/lib/blog-posts";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
 import { localizeBlogPost } from "@/lib/blog-i18n";
+import { getAeoPostBySlug } from "@/lib/blog-aeo";
+import { resolveAeoContent } from "@/lib/blog-aeo/types";
+import { AeoArticle } from "@/components/blog/aeo-article";
+import { allBlogSlugInfos, getRelatedSummaries } from "@/lib/blog/all";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) => blogPosts.map((post) => ({ locale, slug: post.slug })));
+  return routing.locales.flatMap((locale) =>
+    allBlogSlugInfos().map(({ slug }) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
+
+  const aeo = getAeoPostBySlug(slug);
+  if (aeo) {
+    const c = resolveAeoContent(aeo, locale === "ru" ? "ru" : locale === "en" ? "en" : "uz");
+    const siteUrl = getSiteUrl();
+    return {
+      title: c.metaTitle,
+      description: c.metaDescription,
+      keywords: [siteConfig.name, "Telegram", aeo.category, ...aeo.keywords],
+      alternates: {
+        canonical: `/${locale}/blog/${slug}`,
+        languages: Object.fromEntries(routing.locales.map((l) => [l, `${siteUrl}/${l}/blog/${slug}`])),
+      },
+      openGraph: {
+        type: "article",
+        publishedTime: aeo.datePublished,
+        modifiedTime: aeo.dateModified,
+        locale: locale === "ru" ? "ru_RU" : locale === "en" ? "en_US" : "uz_UZ",
+        title: `${c.title} — ${siteConfig.name}`,
+        description: c.metaDescription,
+        url: `${siteUrl}/${locale}/blog/${slug}`,
+      },
+    };
+  }
+
   const post = getPostBySlug(slug);
   if (!post) return { title: "404" };
 
@@ -58,6 +89,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogArticlePage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+
+  const aeoPost = getAeoPostBySlug(slug);
+  if (aeoPost) {
+    const related = getRelatedSummaries(locale, slug, aeoPost.category, 3).map((r) => ({
+      slug: r.slug,
+      title: r.title,
+      excerpt: r.excerpt,
+    }));
+    return <AeoArticle post={aeoPost} locale={locale} related={related} />;
+  }
 
   const post = getPostBySlug(slug);
   if (!post) notFound();

@@ -205,6 +205,30 @@
       {
         "question": "Is StarsPaymee trustworthy?",
         "answer": "StarsPaymee has run for over a year, with 4,000+ active users in Uzbekistan and 100,000+ completed orders. If an order is not delivered due to a technical issue, you get a full refund."
+      },
+      {
+        "question": "How fast is the order delivered?",
+        "answer": "In the “by username” flow the order is delivered automatically in about 10 seconds: once payment is confirmed the system starts instantly — no operator, no queue. In rare high-load cases it may take a little longer, but the order still completes automatically."
+      },
+      {
+        "question": "Is there a refund?",
+        "answer": "Yes. If an order is not delivered due to a technical issue, the payment is refunded in full. Although Telegram Stars and Premium are usually a final sale, if the failure is on StarsPaymee’s side the money is returned — contact @StarsPaymeeSupport with your order ID."
+      },
+      {
+        "question": "Does Premium activate automatically?",
+        "answer": "In the “by username” flow Premium activates automatically in about 10 seconds after payment — no account login required. In the “activation via account login” flow it is activated officially through login."
+      },
+      {
+        "question": "What if I mistype the username or it changes?",
+        "answer": "The order is sent to the @username you enter, so double-check it before paying. If you made a mistake or the username changed recently, contact @StarsPaymeeSupport right away with your order ID and we’ll help."
+      },
+      {
+        "question": "Can a gift be returned?",
+        "answer": "The recipient can keep a Telegram unique gift in their profile or, in many cases, convert it back into Stars. If a mistake happens before delivery, you can request a cancellation or swap via support."
+      },
+      {
+        "question": "Why is it cheaper than the App Store or the official price?",
+        "answer": "App Store/Google Play prices include a store markup and require a foreign card. StarsPaymee works directly through local payment systems — UzCard, HUMO, Click, Payme, Paynet — so it’s cheaper and more convenient for users in Uzbekistan."
       }
     ]
   },
@@ -261,14 +285,17 @@
       "metaTitle": "About — StarsPaymee Telegram Stars & Premium service",
       "metaDescription": "StarsPaymee — 1+ year, 4,000+ users and 100,000+ orders. A reliable Telegram Stars, Premium and gifts service in Uzbekistan.",
       "h1": "About us",
-      "intro": "StarsPaymee is a fast, cheap and reliable service for buying Telegram Stars, Premium and gifts in Uzbekistan. In over a year we’ve delivered more than 100,000 orders to more than 4,000 users.",
+      "intro": "StarsPaymee is a fast, cheap and reliable service for buying Telegram Stars, Premium and gifts in Uzbekistan. Apple/Google in-app purchase, Fragment and the official @PremiumBot don’t accept Uzbek cards (UzCard/HUMO) — we bridge exactly that gap through local payment systems. You order in @StarsPaymee_bot or the Telegram Mini App: enter a username, pay — and the order is delivered automatically in about 10 seconds. In over a year we’ve delivered more than 100,000 orders to more than 4,000 users.",
       "bullets": [
         "Over a year of continuous service",
-        "4,000+ active users in Uzbekistan",
-        "100,000+ successful orders",
-        "Pay in UZS: Click, Payme, Paynet, UzCard, HUMO"
+        "4,000+ active users in Uzbekistan, 100,000+ completed orders",
+        "Orders delivered automatically in about 10 seconds",
+        "Premium “by username”: no password, SMS code or login — your account stays safe",
+        "Stars are credited to your account directly through Telegram",
+        "Pay in UZS: Click, Payme, Paynet, UzCard, HUMO",
+        "Full refund if an order is not delivered due to a technical issue"
       ],
-      "footnote": "For questions, reach us via @StarsPaymee_bot — support is happy to help."
+      "footnote": "For questions, reach us via @StarsPaymeeSupport — support replies quickly. If an order is not delivered due to a technical issue, your payment is refunded in full."
     }
   },
   "v2": {

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Tashqi malumot uchun klonlangan repolar — bizning kod emas, lint qilinmaydi.
+    "starsjoy/**",
   ]),
 ]);
 

@@ -214,6 +214,30 @@
       {
         "question": "StarsPaymee ishonchlimi?",
         "answer": "StarsPaymee 1 yildan ortiq xizmat ko‘rsatadi, 4000 dan ortiq faol O‘zbekiston foydalanuvchisi va 100 000 dan ortiq bajarilgan buyurtmaga ega. Buyurtma texnik sabab bilan yetkazilmasa — to‘lov to‘liq qaytariladi."
+      },
+      {
+        "question": "Buyurtma qancha vaqtda yetkaziladi?",
+        "answer": "«Username bilan» oqimda buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi: to‘lov tasdiqlangach tizim darhol ishga tushadi, operator yoki navbat kutilmaydi. Kamdan-kam yuklama holatlarida biroz cho‘zilsa ham, buyurtma baribir avtomatik yakunlanadi."
+      },
+      {
+        "question": "Pulni qaytarish (refund) bormi?",
+        "answer": "Ha. Agar buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi. Telegram Stars va Premium odatda «final sale» bo‘lsa-da, nosozlik StarsPaymee tomonida yuz bersa — pul qaytariladi. @StarsPaymeeSupport bilan buyurtma ID orqali bog‘laning."
+      },
+      {
+        "question": "Premium avtomatik faollashadimi?",
+        "answer": "«Username bilan» oqimda Premium to‘lovdan so‘ng o‘rtacha 10 soniyada avtomatik faollashadi — akkauntga kirish shart emas. «Akkauntga kirib berish» oqimida esa faollashtirish login orqali rasmiy tarzda amalga oshiriladi."
+      },
+      {
+        "question": "Username’ni noto‘g‘ri yozsam yoki u o‘zgargan bo‘lsa-chi?",
+        "answer": "Buyurtma siz kiritgan @username’ga yuboriladi, shuning uchun to‘lovdan oldin uni tekshiring. Xato yozilgan yoki username yaqinda o‘zgargan bo‘lsa, darhol @StarsPaymeeSupport’ga buyurtma ID bilan murojaat qiling — yordam beramiz."
+      },
+      {
+        "question": "Telegram sovg‘asi (Gift) qaytariladimi?",
+        "answer": "Telegram noyob sovg‘asini qabul qiluvchi o‘z profilida saqlashi yoki ko‘p hollarda qayta Stars’ga aylantirishi mumkin. Yetkazishdan oldin xatolik yuz bersa, support orqali bekor qilish yoki almashtirishni so‘rashingiz mumkin."
+      },
+      {
+        "question": "Nega App Store yoki rasmiy narxdan arzon?",
+        "answer": "App Store/Google Play narxiga do‘kon ustamasi qo‘shiladi va xorijiy karta talab qilinadi. StarsPaymee mahalliy to‘lov tizimlari — UzCard, HUMO, Click, Payme, Paynet orqali to‘g‘ridan-to‘g‘ri ishlaydi, shuning uchun O‘zbekiston foydalanuvchisi uchun arzonroq va qulayroq."
       }
     ]
   },
@@ -270,14 +294,17 @@
       "metaTitle": "Biz haqimizda — StarsPaymee Telegram Stars va Premium xizmati",
       "metaDescription": "StarsPaymee — 1 yildan ortiq, 4000+ foydalanuvchi va 100 000+ buyurtma. O‘zbekistonda Telegram Stars, Premium va sovg‘alar bo‘yicha ishonchli xizmat.",
       "h1": "Biz haqimizda",
-      "intro": "StarsPaymee — O‘zbekistonda Telegram Stars, Premium va sovg‘alar sotib olish uchun tez, arzon va ishonchli xizmat. 1 yildan ortiq vaqt davomida 4000 dan ortiq foydalanuvchiga 100 000 dan ortiq buyurtmani yetkazib berdik.",
+      "intro": "StarsPaymee — O‘zbekistonda Telegram Stars, Premium va sovg‘alar sotib olish uchun tez, arzon va ishonchli xizmat. Apple/Google ilova xaridi, Fragment va rasmiy @PremiumBot O‘zbekiston kartalarini (UzCard/HUMO) qabul qilmaydi — biz aynan shu bo‘shliqni mahalliy to‘lov tizimlari bilan to‘ldiramiz. Buyurtma @StarsPaymee_bot yoki Telegram Mini App orqali beriladi: username yozasiz, to‘laysiz — va buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi. 1 yildan ortiq vaqt davomida 4000 dan ortiq foydalanuvchiga 100 000 dan ortiq buyurtmani yetkazib berdik.",
       "bullets": [
         "1 yildan ortiq uzluksiz xizmat",
-        "4000+ faol O‘zbekiston foydalanuvchisi",
-        "100 000+ muvaffaqiyatli buyurtma",
-        "Click, Payme, Paynet, UzCard, HUMO bilan so‘mda to‘lov"
+        "4000+ faol O‘zbekiston foydalanuvchisi, 100 000+ bajarilgan buyurtma",
+        "Buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi",
+        "Premium «username bilan»: parol, SMS-kod yoki login so‘ralmaydi — hisobingiz xavfsiz",
+        "Yulduzlar to‘g‘ridan-to‘g‘ri Telegram orqali hisobingizga ulanadi",
+        "Click, Payme, Paynet, UzCard, HUMO bilan so‘mda to‘lov",
+        "Texnik sabab bilan yetkazilmasa — to‘lov to‘liq qaytariladi"
       ],
-      "footnote": "Savollar bo‘lsa @StarsPaymee_bot orqali murojaat qiling — qo‘llab-quvvatlash xizmati yordam beradi."
+      "footnote": "Savol yoki yordam kerak bo‘lsa @StarsPaymeeSupport orqali murojaat qiling — qo‘llab-quvvatlash xizmati tezda javob beradi. Buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi."
     }
   },
   "v2": {

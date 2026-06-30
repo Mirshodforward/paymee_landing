@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 
-const brandLogoPath = "/starspaymeelogo.jpg";
+const brandLogoPath = "/logo-512.png";
 
 export const viewport: Viewport = {
   themeColor: [

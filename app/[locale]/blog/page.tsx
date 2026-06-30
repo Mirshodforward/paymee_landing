@@ -3,7 +3,8 @@ import type { CSSProperties, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ArrowIcon } from "@/components/v2/icons";
-import { blogCategories, blogPosts, getPostsByCategory, type BlogCategory } from "@/lib/blog-posts";
+import { blogCategories, type BlogCategory } from "@/lib/blog-posts";
+import { getBlogSummariesByCategory, getBlogCount } from "@/lib/blog/all";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -49,7 +50,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
 
   const resolved = await searchParams;
   const active = normalizeCat(resolved?.cat);
-  const listed = getPostsByCategory(active);
+  const listed = getBlogSummariesByCategory(locale, active);
   const base = getSiteUrl();
 
   const t = await getTranslations("v2");
@@ -146,7 +147,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
         </ul>
 
         <p style={{ marginTop: 44, textAlign: "center", color: "var(--muted)", fontSize: 13.5 }}>
-          {t("blogTotal", { count: blogPosts.length })}
+          {t("blogTotal", { count: getBlogCount() })}
         </p>
       </div>
     </section>

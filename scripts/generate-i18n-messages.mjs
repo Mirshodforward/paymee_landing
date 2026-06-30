@@ -847,3 +847,4 @@ for (const [name, blob] of [
 }
 
 console.log("messages/*.json yozildi.");
+

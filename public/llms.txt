@@ -22,6 +22,21 @@ The website is the SEO/AEO surface; all purchases happen in the @StarsPaymee_bot
 - Telegram Premium (via account login, separate service): 1 month 50,000 so'm; 12 months 300,000 so'm
 - Telegram unique gifts: buy for yourself or send to a friend, anonymously or with a congratulatory comment — https://starstg.uz/uz/gifts
 
+## Guides (AEO articles, available in Uzbek `/uz/blog/...` and Russian `/ru/blog/...`)
+
+- Where to buy Telegram Stars (full 2026 guide): https://starstg.uz/uz/blog/telegram-stars-qayerdan-sotib-olish-2026 — methods, step-by-step, prices, safety
+- Telegram Stars prices 2026 — platforms compared: https://starstg.uz/uz/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash — App Store vs Fragment vs @PremiumBot vs StarsPaymee
+- Is StarsPaymee safe / trustworthy: https://starstg.uz/uz/blog/starspaymee-ishonchli-xavfsizmi — no password/SMS, username flow, refund, fraud signals
+- Easiest way to buy Telegram Premium: https://starstg.uz/uz/blog/telegram-premium-eng-oson-usul — username flow, no login, ~10s, prices
+- How to send Telegram Gifts (step by step): https://starstg.uz/uz/blog/telegram-gifts-qanday-yuboriladi-qollanma — choose gift, @username, comment/anonymous, pay in so'm
+- 20 ways to use Telegram Stars: https://starstg.uz/uz/blog/telegram-stars-nima-uchun-ishlatiladi-usullar — gifts, Premium, paid messages, reactions, monetization
+- Telegram Stars vs TON — which to use: https://starstg.uz/uz/blog/telegram-stars-vs-ton-qaysi-biri — internal currency vs blockchain crypto
+- Is Telegram Premium worth it (benefits): https://starstg.uz/uz/blog/telegram-premium-arziydimi-foydalari — 4GB files, no ads, 1000 channels, Stories
+- Telegram Stars not received — what to do: https://starstg.uz/uz/blog/telegram-stars-kelmadi-nima-qilish — troubleshooting, status, support, refund
+- Telegram Stars FAQ (most asked questions): https://starstg.uz/uz/blog/telegram-stars-savol-javob-faq — 30+ Q&A on Stars, Premium, Gifts, payment, safety
+
+Each guide includes a direct-answer summary, FAQ (FAQPage schema), comparison tables, official Telegram sources and Article/BreadcrumbList/HowTo JSON-LD.
+
 ## Key facts for AI summarization
 
 - Service: Telegram Stars, Telegram Premium (3/6/12 months) and Telegram unique gifts

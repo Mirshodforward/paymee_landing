@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { StarIcon, TelegramIcon } from "@/components/v2/icons";
+import { TelegramIcon } from "@/components/v2/icons";
 import { V2LocaleSwitcher } from "@/components/v2/v2-locale-switcher";
 
 export type V2NavLabels = {
@@ -46,9 +47,16 @@ export function V2Nav({
     <header className="nav2" data-v2-nav>
       <div className="nav2-in">
         <Link className="logo2" href="/" aria-label="StarsPaymee">
-          <span className="mark">
-            <StarIcon />
-          </span>
+          <Image
+            className="logo2-img"
+            src="/logo-128.png"
+            alt="StarsPaymee logotipi"
+            width={36}
+            height={36}
+            sizes="36px"
+            loading="eager"
+            fetchPriority="high"
+          />
           <span>
             <span className="gt">Stars</span>Paymee
           </span>

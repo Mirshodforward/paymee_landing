@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 
-const logo = "/starspaymeelogo.jpg";
+const logo = "/logo-512.png";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -16,9 +16,15 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["finance", "shopping", "utilities"],
     icons: [
       {
+        src: "/logo-128.png",
+        sizes: "128x128",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
         src: logo,
         sizes: "512x512",
-        type: "image/jpeg",
+        type: "image/png",
         purpose: "any",
       },
     ],

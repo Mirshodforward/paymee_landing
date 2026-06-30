@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog-posts";
+import { allBlogSlugInfos } from "@/lib/blog/all";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl } from "@/lib/site";
 
@@ -44,10 +44,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85,
     });
-    for (const p of blogPosts) {
+    for (const p of allBlogSlugInfos()) {
       out.push({
         url: `${base}/${locale}/blog/${p.slug}`,
-        lastModified: new Date(p.datePublished),
+        lastModified: new Date(p.dateModified),
         changeFrequency: "monthly",
         priority: 0.7,
       });

@@ -41,13 +41,14 @@ export async function SiteHeader({
           className="flex min-w-0 shrink-0 items-center gap-2.5 font-semibold tracking-tight text-slate-900 dark:text-white"
         >
           <Image
-            src="/starspaymeelogo.jpg"
+            src="/logo-128.png"
             alt={`${siteConfig.name} logotipi`}
             width={36}
             height={36}
             sizes="36px"
-            className="h-9 w-9 shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 dark:ring-white/10"
-            priority
+            className="h-9 w-9 shrink-0 object-contain drop-shadow-sm"
+            loading="eager"
+            fetchPriority="high"
           />
           <span className="truncate">{siteConfig.name}</span>
         </Link>

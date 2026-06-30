@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Geist, Geist_Mono, Syne, Space_Mono } from "next/font/google";
+import { Geist, Syne, Space_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
@@ -11,22 +11,20 @@ export const metadata: Metadata = {
   description: "Telegram Stars platformasi",
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/starspaymeelogo.jpg", type: "image/jpeg", sizes: "any" },
+      { url: "/logo-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/logo-128.png", type: "image/png", sizes: "128x128" },
+      { url: "/logo-512.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/starspaymeelogo.jpg", type: "image/jpeg", sizes: "180x180" }],
-    shortcut: "/icon.svg",
+    apple: [{ url: "/apple-icon-180.png", type: "image/png", sizes: "180x180" }],
+    shortcut: "/logo-128.png",
   },
 };
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 // V2 «Aurora» dizayni uchun display va mono fontlar.
@@ -56,7 +54,7 @@ export default async function RootLayout({
   return (
     <html
       lang={htmlLang}
-      className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${spaceMono.variable} scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${syne.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
       <body className="min-h-screen bg-background font-sans text-foreground">{children}</body>
     </html>
