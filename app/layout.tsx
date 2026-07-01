@@ -2,13 +2,23 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Syne, Space_Mono } from "next/font/google";
 import { headers } from "next/headers";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, SITE_VERIFICATION } from "@/lib/site";
 import "./globals.css";
+
+/** Faqat to‘ldirilgan kodlar uchun verification meta-teglarini chiqaradi. */
+function buildVerification(): Metadata["verification"] {
+  const v: NonNullable<Metadata["verification"]> = {};
+  if (SITE_VERIFICATION.google) v.google = SITE_VERIFICATION.google;
+  if (SITE_VERIFICATION.yandex) v.yandex = SITE_VERIFICATION.yandex;
+  if (SITE_VERIFICATION.bing) v.other = { "msvalidate.01": SITE_VERIFICATION.bing };
+  return v;
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: "StarsPaymee",
   description: "Telegram Stars platformasi",
+  verification: buildVerification(),
   icons: {
     icon: [
       { url: "/logo-32.png", type: "image/png", sizes: "32x32" },
@@ -56,6 +66,13 @@ export default async function RootLayout({
       lang={htmlLang}
       className={`${geistSans.variable} ${syne.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
+      {/* RSS discovery — React 19 buni <head> ga ko‘taradi (barcha sahifalarda). */}
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="StarsPaymee — Blog"
+        href="/rss.xml"
+      />
       <body className="min-h-screen bg-background font-sans text-foreground">{children}</body>
     </html>
   );

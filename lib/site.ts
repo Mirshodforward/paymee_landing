@@ -25,3 +25,18 @@ export const siteConfig = {
   description: "Telegram Stars platformasi",
   locale: "uz_UZ",
 } as const;
+
+/**
+ * Qidiruv tizimlari uchun tasdiqlash (verification) kodlari.
+ * Har bir panel «HTML tag» usulini bersa, faqat `content="..."` qiymatini qo‘ying.
+ * Bo‘sh qoldirilgan qiymat uchun hech qanday meta-teg chiqmaydi.
+ *
+ * - google:  Search Console → Settings → Ownership verification → HTML tag
+ * - bing:    Bing Webmaster Tools → HTML Meta Tag (msvalidate.01)
+ * - yandex:  Yandex Webmaster → Meta tag (yandex-verification)
+ */
+export const SITE_VERIFICATION = {
+  google: "",
+  bing: "",
+  yandex: "",
+} as const;

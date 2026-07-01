@@ -19,11 +19,22 @@ import { post as p17 } from "./posts/17-telegram-stars-xavfsiz-sotib-olish-qolla
 import { post as p18 } from "./posts/18-telegram-stars-eng-yaxshi-botlar";
 import { post as p19 } from "./posts/19-telegram-premium-avtomatik-aktivatsiya";
 import { post as p20 } from "./posts/20-telegram-stars-haqida-hamma-narsa";
+import { post as p21 } from "./posts/21-telegram-kanal-stars-monetizatsiya";
+import { post as p22 } from "./posts/22-telegram-stars-daromad-qilish-mumkinmi";
+import { post as p23 } from "./posts/23-telegram-stars-app-store-narx-farqi";
+import { post as p24 } from "./posts/24-telegram-stars-sotib-olishda-xatolar";
+import { post as p25 } from "./posts/25-telegram-gifts-kolleksiya-rare-sovgalar";
+import { post as p26 } from "./posts/26-telegram-premium-vs-stars-farqi";
+import { post as p27 } from "./posts/27-telegram-creator-economy-stars";
+import { post as p28 } from "./posts/28-telegram-stars-yangilanishlar-tarixi";
+import { post as p29 } from "./posts/29-telegram-premium-vs-discord-whatsapp";
+import { post as p30 } from "./posts/30-telegram-ekotizimi-stars-premium-gifts-ton";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
   p01, p02, p03, p04, p05, p06, p07, p08, p09, p10,
   p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
+  p21, p22, p23, p24, p25, p26, p27, p28, p29, p30,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
