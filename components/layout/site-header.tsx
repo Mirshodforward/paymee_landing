@@ -35,18 +35,18 @@ export async function SiteHeader({
 
   return (
     <header className="relative z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80">
-      <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 lg:gap-4">
+      <div className="mx-auto flex h-[4.75rem] max-w-6xl items-center justify-between gap-2 px-3 sm:h-20 sm:gap-3 sm:px-6 lg:gap-4">
         <Link
           href="/"
-          className="flex min-w-0 shrink-0 items-center gap-2.5 font-semibold tracking-tight text-slate-900 dark:text-white"
+          className="flex min-w-0 shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-tight text-slate-900 sm:gap-3 sm:text-[17px] dark:text-white"
         >
           <Image
             src="/logo-128.png"
             alt={`${siteConfig.name} logotipi`}
-            width={36}
-            height={36}
-            sizes="36px"
-            className="h-9 w-9 shrink-0 object-contain drop-shadow-sm"
+            width={60}
+            height={60}
+            sizes="(min-width: 640px) 60px, 50px"
+            className="h-[50px] w-[50px] shrink-0 object-contain drop-shadow-sm sm:h-[60px] sm:w-[60px]"
             loading="eager"
             fetchPriority="high"
           />

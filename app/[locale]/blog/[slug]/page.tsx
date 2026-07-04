@@ -136,7 +136,7 @@ export default async function BlogArticlePage({ params }: Props) {
   };
 
   return (
-    <section className="sec" style={{ paddingTop: 150 }}>
+    <section className="sec v2-blog-page">
       <JsonLd data={articleLd} />
       <JsonLd data={breadcrumbLd} />
 

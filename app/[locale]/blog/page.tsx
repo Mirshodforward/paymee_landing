@@ -74,7 +74,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
   };
 
   return (
-    <section className="sec" style={{ paddingTop: 150 }}>
+    <section className="sec v2-blog-page">
       <JsonLd data={blogIndexLd} />
       <div className="wrap">
         <nav
@@ -106,15 +106,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
           ))}
         </div>
 
-        <ul
-          style={{
-            listStyle: "none",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))",
-            gap: 20,
-            padding: 0,
-          }}
-        >
+        <ul className="v2-blog-grid">
           {listed.map((post, i) => (
             <li key={post.slug} style={{ height: "100%" }}>
               <Link

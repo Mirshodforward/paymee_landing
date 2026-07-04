@@ -171,17 +171,10 @@ body {
   }
 }
 
-/* ============================================================
-   V2 «Aurora» mavzusi — bosh sahifa va blog uchun qorong‘u dizayn.
+/* ===== V2 «Aurora» mavzusi — bosh sahifa va blog uchun qorong‘u dizayn.
    Barcha qoidalar .v2 ildizi ostida scoped: boshqa sahifalarga
    ta’sir qilmaydi.
    ============================================================ */
-
-@property --a {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 
 .v2 {
   --void: #06030c;
@@ -255,104 +248,14 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: v2gtmove 7s ease-in-out infinite alternate;
-}
-@keyframes v2gtmove {
-  to {
-    background-position: 100% 0;
-  }
 }
 
 /* ===== Preloader ===== */
 .v2 .ld-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: var(--void);
-  display: grid;
-  place-items: center;
-  transition: opacity 0.55s ease, visibility 0.55s;
-  /* JS ishlamasa ham kontentni berkitib qo‘ymaslik uchun zaxira animatsiya */
-  animation: v2ldhide 0.5s ease 2.6s forwards;
-}
-.v2 .ld-screen.done {
-  opacity: 0;
-  visibility: hidden;
-}
-@keyframes v2ldhide {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-.v2 .ld {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-.v2 .ld-star {
-  width: 54px;
-  height: 54px;
-  animation: v2ldspin 1.4s cubic-bezier(0.6, 0.05, 0.3, 0.95) infinite;
-}
-@keyframes v2ldspin {
-  0% {
-    transform: rotate(0) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.78);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-.v2 .ld-num {
-  font-family: var(--mono2);
-  font-size: 13px;
-  color: var(--muted);
-  letter-spacing: 2px;
-}
-
-/* ===== Maxsus kursor ===== */
-.v2 .cur-dot,
-.v2 .cur-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 150;
-  transform: translate(-50%, -50%);
   display: none;
 }
-html.v2-fine .v2 .cur-dot,
-html.v2-fine .v2 .cur-ring {
-  display: block;
-}
-html.v2-fine .v2,
-html.v2-fine .v2 a,
-html.v2-fine .v2 button,
-html.v2-fine .v2 summary {
-  cursor: none;
-}
-.v2 .cur-dot {
-  width: 7px;
-  height: 7px;
-  background: #fff;
-}
-.v2 .cur-ring {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(217, 70, 239, 0.75);
-  transition: width 0.25s, height 0.25s, background 0.25s, border-color 0.25s;
-}
-.v2 .cur-ring.hov {
-  width: 58px;
-  height: 58px;
-  background: rgba(217, 70, 239, 0.1);
-  border-color: rgba(34, 211, 238, 0.8);
-}
+
+/* Maxsus kursor olib tashlangan (performans) */
 
 /* ===== Aurora fon + shovqin ===== */
 .v2 .aurora {
@@ -365,9 +268,8 @@ html.v2-fine .v2 summary {
 .v2 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(95px);
-  opacity: 0.5;
-  will-change: transform;
+  filter: blur(72px);
+  opacity: 0.38;
 }
 .v2 .b1 {
   width: 58vw;
@@ -375,7 +277,6 @@ html.v2-fine .v2 summary {
   left: -14vw;
   top: -20vw;
   background: radial-gradient(circle at 35% 35%, #6d28d9, transparent 65%);
-  animation: v2bl1 26s ease-in-out infinite alternate;
 }
 .v2 .b2 {
   width: 48vw;
@@ -383,7 +284,6 @@ html.v2-fine .v2 summary {
   right: -16vw;
   top: 6vw;
   background: radial-gradient(circle at 60% 40%, #c026d3, transparent 65%);
-  animation: v2bl2 32s ease-in-out infinite alternate;
 }
 .v2 .b3 {
   width: 54vw;
@@ -391,30 +291,6 @@ html.v2-fine .v2 summary {
   left: 16vw;
   bottom: -26vw;
   background: radial-gradient(circle at 50% 50%, #0e7490, transparent 65%);
-  animation: v2bl3 38s ease-in-out infinite alternate;
-}
-@keyframes v2bl1 {
-  to {
-    transform: translate(9vw, 7vw) scale(1.22) rotate(20deg);
-  }
-}
-@keyframes v2bl2 {
-  to {
-    transform: translate(-10vw, 9vw) scale(1.15) rotate(-16deg);
-  }
-}
-@keyframes v2bl3 {
-  to {
-    transform: translate(8vw, -8vw) scale(1.25) rotate(14deg);
-  }
-}
-.v2 .noise {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
 }
 .v2 .vignette {
   position: fixed;
@@ -428,17 +304,7 @@ html.v2-fine .v2 summary {
   z-index: 1;
 }
 
-/* ===== Scroll progress ===== */
-.v2 .progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: var(--grad);
-  z-index: 120;
-  box-shadow: 0 0 14px rgba(217, 70, 239, 0.6);
-}
+/* Scroll progress olib tashlangan */
 
 /* ===== Suzuvchi navigatsiya ===== */
 .v2 .nav2 {
@@ -450,10 +316,8 @@ html.v2-fine .v2 summary {
   width: min(1080px, calc(100% - 28px));
   border: 1px solid var(--line);
   border-radius: 100px;
-  background: rgba(10, 6, 18, 0.5);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  transition: background 0.35s, box-shadow 0.35s, border-color 0.35s;
+  background: rgba(9, 5, 17, 0.9);
+  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 .v2 .nav2.scrolled {
   background: rgba(9, 5, 17, 0.82);
@@ -465,15 +329,15 @@ html.v2-fine .v2 summary {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 9px 9px 9px 20px;
+  padding: 10px 10px 10px 18px;
 }
 .v2 .logo2 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--disp);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }
 .v2 .logo2 .mark {
   width: 36px;
@@ -491,8 +355,8 @@ html.v2-fine .v2 summary {
   fill: #fff;
 }
 .v2 .logo2 .logo2-img {
-  width: 36px;
-  height: 36px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   object-fit: contain;
   filter: drop-shadow(0 4px 14px rgba(168, 85, 247, 0.45));
@@ -528,6 +392,109 @@ html.v2-fine .v2 summary {
   width: 100%;
 }
 
+/* Nav yon amallar: locale + CTA + burger */
+.v2 .nav2-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.v2 .nav2-cta {
+  padding: 10px 18px;
+}
+.v2 .nav2-burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid var(--line2);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+.v2 .nav2-burger:hover {
+  background: rgba(217, 70, 239, 0.08);
+  border-color: rgba(217, 70, 239, 0.5);
+}
+.v2 .nav2-burger:active {
+  transform: scale(0.94);
+}
+.v2 .nav2-burger-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.v2 .nav2-burger-icon .bmi {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s, transform 0.25s;
+}
+.v2 .nav2-burger-icon .bmi.hide {
+  opacity: 0;
+  transform: scale(0.6) rotate(-30deg);
+  pointer-events: none;
+}
+
+/* Mobile menyu skreeni va drawer */
+.v2 .nav2-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: rgba(3, 1, 8, 0.65);
+  border: 0;
+  cursor: pointer;
+}
+.v2 .nav2-drawer {
+  position: fixed;
+  top: 84px;
+  left: 14px;
+  right: 14px;
+  z-index: 115;
+  border: 1px solid var(--line2);
+  border-radius: 22px;
+  background: rgba(11, 6, 22, 0.98);
+  box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.75);
+  padding: 14px;
+  max-height: calc(100dvh - 100px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.v2 .nav2-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.v2 .nav2-drawer-links a {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-family: var(--disp);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+.v2 .nav2-drawer-links a:hover,
+.v2 .nav2-drawer-links a:focus-visible {
+  background: rgba(217, 70, 239, 0.1);
+  color: #fff;
+}
+.v2 .nav2-drawer-links a[aria-current="page"] {
+  background: rgba(217, 70, 239, 0.14);
+  color: #fff;
+}
+.v2 .nav2-drawer-cta {
+  margin-top: 10px;
+  width: 100%;
+}
 /* ===== Tugmalar ===== */
 .v2 .btn {
   display: inline-flex;
@@ -619,18 +586,7 @@ html.v2-fine .v2 summary {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 1.5px solid rgba(52, 211, 153, 0.7);
-  animation: v2pls 2s ease-out infinite;
-}
-@keyframes v2pls {
-  0% {
-    transform: scale(0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.7);
-    opacity: 0;
-  }
+  border: 1.5px solid rgba(52, 211, 153, 0.5);
 }
 .v2 .hero-h {
   font-family: var(--disp);
@@ -693,8 +649,6 @@ html.v2-fine .v2 summary {
   padding: 11px;
   box-shadow: 0 50px 130px -20px rgba(139, 92, 246, 0.4), 0 34px 90px rgba(0, 0, 0, 0.65),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transform-style: preserve-3d;
-  will-change: transform;
 }
 .v2 .screen {
   border-radius: 38px;
@@ -766,11 +720,6 @@ html.v2-fine .v2 summary {
   border-radius: 15px;
   font-size: 13.5px;
   line-height: 1.5;
-  opacity: 0;
-  transform: translateY(12px) scale(0.97);
-  transition: opacity 0.45s, transform 0.45s;
-}
-.v2 .bbl.show {
   opacity: 1;
   transform: none;
 }
@@ -820,10 +769,6 @@ html.v2-fine .v2 summary {
 }
 .v2 .ph-timer {
   margin-top: 2px;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-.v2 .ph-timer.show {
   opacity: 1;
 }
 .v2 .pht-num {
@@ -907,16 +852,12 @@ html.v2-fine .v2 summary {
   gap: 8px;
   padding: 11px 17px;
   border-radius: 100px;
-  background: rgba(16, 10, 26, 0.55);
+  background: rgba(16, 10, 26, 0.85);
   border: 1px solid var(--line2);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   font-weight: 700;
   font-size: 13px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
   pointer-events: auto;
-  animation: v2chipFl 6.5s ease-in-out infinite;
-  will-change: transform;
 }
 .v2 .chip .cd {
   width: 8px;
@@ -937,74 +878,23 @@ html.v2-fine .v2 summary {
 .v2 .c2 {
   right: 5%;
   top: 9%;
-  animation-delay: 1.2s;
 }
 .v2 .c3 {
   left: 1%;
   bottom: 30%;
-  animation-delay: 2.4s;
 }
 .v2 .c4 {
   right: 2%;
   bottom: 24%;
-  animation-delay: 3.4s;
 }
 .v2 .c5 {
   right: 14%;
   top: 46%;
-  animation-delay: 4.4s;
-}
-@keyframes v2chipFl {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-13px);
-  }
 }
 
-/* ===== Marquee ===== */
+/* Marquee olib tashlangan (cheksiz animatsiya) */
 .v2 .marquee {
-  overflow: hidden;
-  padding: 22px 0;
-  margin-top: 40px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-}
-.v2 .mq-track {
-  display: flex;
-  width: max-content;
-  animation: v2mq 30s linear infinite;
-}
-.v2 .marquee:hover .mq-track {
-  animation-play-state: paused;
-}
-.v2 .mq-in {
-  display: flex;
-  align-items: center;
-}
-.v2 .mq-it {
-  font-family: var(--mono2);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: var(--muted);
-  padding: 0 26px;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-.v2 .mq-sep {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--grad);
-  flex-shrink: 0;
-}
-@keyframes v2mq {
-  to {
-    transform: translateX(-50%);
-  }
+  display: none;
 }
 
 /* ===== Umumiy seksiyalar ===== */
@@ -1205,7 +1095,7 @@ html.v2-fine .v2 summary {
   stroke-width: 11;
   stroke-linecap: round;
   stroke-dasharray: 540;
-  stroke-dashoffset: 540;
+  stroke-dashoffset: 0;
 }
 .v2 .ring-c {
   position: absolute;
@@ -1316,28 +1206,14 @@ html.v2-fine .v2 summary {
   overflow: hidden;
   border-radius: 26px;
   padding: 34px 30px;
-  border: 1px solid transparent;
-  background: linear-gradient(var(--panel), var(--panel)) padding-box,
-    conic-gradient(
-        from var(--a),
-        rgba(139, 92, 246, 0.55),
-        rgba(217, 70, 239, 0.5),
-        rgba(34, 211, 238, 0.5),
-        rgba(139, 92, 246, 0.55)
-      )
-      border-box;
-  transition: transform 0.35s, box-shadow 0.35s;
-  will-change: transform;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 .v2 .prod:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 70px -28px rgba(168, 85, 247, 0.5);
-  animation: v2rot 4.5s linear infinite;
-}
-@keyframes v2rot {
-  to {
-    --a: 360deg;
-  }
+  transform: translateY(-6px);
+  border-color: rgba(217, 70, 239, 0.45);
+  box-shadow: 0 26px 60px -28px rgba(168, 85, 247, 0.4);
 }
 .v2 .prod-ic {
   width: 60px;
@@ -1488,11 +1364,11 @@ html.v2-fine .v2 summary {
   height: 100%;
   width: 0;
   background: var(--grad);
-  transition: width 1.7s cubic-bezier(0.6, 0.05, 0.3, 0.95);
   box-shadow: 0 0 16px rgba(217, 70, 239, 0.7);
 }
 .v2 .tl.live .tl-fill {
   width: 100%;
+  height: 100%;
 }
 .v2 .tstep {
   text-align: center;
@@ -1550,17 +1426,8 @@ html.v2-fine .v2 summary {
   overflow: hidden;
   border-radius: 28px;
   padding: clamp(36px, 5.5vw, 54px);
-  border: 1px solid transparent;
-  background: linear-gradient(#0f0a1a, #0f0a1a) padding-box,
-    conic-gradient(
-        from var(--a),
-        rgba(139, 92, 246, 0.6),
-        rgba(217, 70, 239, 0.55),
-        rgba(34, 211, 238, 0.55),
-        rgba(139, 92, 246, 0.6)
-      )
-      border-box;
-  animation: v2rot 8s linear infinite;
+  border: 1px solid var(--line2);
+  background: #0f0a1a;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -1721,45 +1588,7 @@ html.v2-fine .v2 summary {
   overflow: hidden;
 }
 .v2 .fs {
-  position: absolute;
-  fill: url(#starGrad);
-  animation: v2fl 6s ease-in-out infinite;
-}
-.v2 .fs1 {
-  width: 26px;
-  top: 16%;
-  left: 12%;
-  opacity: 0.8;
-}
-.v2 .fs2 {
-  width: 15px;
-  top: 26%;
-  right: 14%;
-  opacity: 0.5;
-  animation-delay: 1.4s;
-}
-.v2 .fs3 {
-  width: 20px;
-  bottom: 20%;
-  left: 22%;
-  opacity: 0.6;
-  animation-delay: 2.6s;
-}
-.v2 .fs4 {
-  width: 12px;
-  bottom: 30%;
-  right: 20%;
-  opacity: 0.45;
-  animation-delay: 3.8s;
-}
-@keyframes v2fl {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-18px) rotate(16deg);
-  }
+  display: none;
 }
 
 /* ===== Footer ===== */
@@ -1850,21 +1679,22 @@ html.v2-fine .v2 summary {
   color: var(--text);
 }
 
+/* Blog sahifasi — nav ostida to‘g‘ri joylashuv */
+.v2 .v2-blog-page {
+  padding-top: clamp(108px, 18vw, 150px);
+  min-height: 50vh;
+}
+.v2 .v2-blog-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
 /* ===== Reveal variantlari ===== */
 .v2 .rv {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.9s;
-  transition-delay: var(--d, 0s);
-}
-.v2 .rv-blur {
-  filter: blur(10px);
-}
-.v2 .rv-scale {
-  transform: translateY(16px) scale(0.94);
-}
-.v2 .rv.in {
   opacity: 1;
   transform: none;
   filter: none;
@@ -1879,7 +1709,7 @@ html:not(.v2-js) .v2 .rv {
 /* ===== Moslashuvchanlik ===== */
 @media (max-width: 1000px) {
   .v2 .hero {
-    padding-top: 140px;
+    padding-top: 130px;
   }
   .v2 .chips {
     position: static;
@@ -1944,10 +1774,6 @@ html:not(.v2-js) .v2 .rv {
   }
   .v2 .tl-fill {
     width: 100% !important;
-    height: 0;
-    transition: height 1.7s cubic-bezier(0.6, 0.05, 0.3, 0.95);
-  }
-  .v2 .tl.live .tl-fill {
     height: 100%;
   }
   .v2 .tstep {
@@ -1969,24 +1795,336 @@ html:not(.v2-js) .v2 .rv {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 560px) {
-  .v2 .hero-cta .btn {
-    width: 100%;
-    justify-content: center;
+
+/* Planshet va telefon uchun: nav-links yashirin, hamburger ko‘rinadi */
+@media (max-width: 900px) {
+  html:has(.v2) {
+    scroll-padding-top: 96px;
   }
-  .v2 .phone {
-    width: min(310px, 88vw);
+  .v2 .nav2 {
+    width: min(1080px, calc(100% - 20px));
+    top: 12px;
   }
-  .v2 .cell {
-    padding: 24px;
+  .v2 .nav2-in {
+    padding: 7px 7px 7px 14px;
+    gap: 8px;
+  }
+  .v2 .logo2 {
+    font-size: 16px;
+    gap: 10px;
+  }
+  .v2 .logo2 .logo2-img {
+    width: 54px;
+    height: 54px;
+  }
+  /* Mobilda faqat Blog havolasi ko‘rinadi (boshqalar drawerda) */
+  .v2 .nav2-links {
+    display: flex;
+    gap: 0;
+  }
+  .v2 .nav2-links a:not(:last-child) {
+    display: none;
+  }
+  .v2 .nav2-links a:last-child {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .v2 .nav2-burger {
+    display: inline-flex;
+  }
+  .v2 .nav2-actions {
+    gap: 8px;
+  }
+  .v2 .nav2-cta {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+  .v2 .wrap {
+    padding: 0 18px;
+  }
+  .v2 .sec {
+    padding: clamp(56px, 12vw, 88px) 0;
+  }
+  .v2 .sec-head {
+    margin-bottom: 36px;
+  }
+  .v2 .marquee {
+    padding: 18px 0;
+    margin-top: 28px;
+  }
+  .v2 .mq-it {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 0 18px;
+  }
+  .v2 .stage {
+    margin-top: 40px;
   }
   .v2 .cell-e {
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
+  }
+  .v2 .trust-band {
+    padding: 32px 24px;
+    gap: 22px;
+  }
+  .v2 .footer2 {
+    padding: 40px 0 28px;
+  }
+}
+
+/* Telefon (kichik ekran) */
+@media (max-width: 560px) {
+  .v2 .hero {
+    padding-top: 118px;
+    padding-bottom: 20px;
+  }
+  .v2 .hero-badge {
+    font-size: 12px;
+    padding: 8px 15px;
+    margin-bottom: 22px;
+  }
+  .v2 .hero-h {
+    margin-bottom: 20px;
+  }
+  .v2 .hero-sub {
+    font-size: 15.5px;
+    margin-bottom: 30px;
+    padding: 0 4px;
+  }
+  .v2 .hero-cta {
+    gap: 10px;
+  }
+  .v2 .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .v2 .stage {
+    margin-top: 34px;
+    padding-bottom: 10px;
+  }
+  .v2 .phone {
+    width: min(320px, 92vw);
+  }
+  .v2 .ch-body {
+    min-height: 300px;
+  }
+  .v2 .marquee {
+    padding: 14px 0;
+    margin-top: 22px;
+  }
+  .v2 .mq-sep {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Statistika: 2×2 bo‘lib qoladi, ammo padding kichrayadi */
+  .v2 .stat {
+    padding: 22px 12px;
+  }
+  .v2 .stat-lbl {
+    font-size: 12.5px;
+  }
+
+  /* Bento: bir ustunga o‘tadi */
+  .v2 .bento {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .v2 .cell-a,
+  .v2 .cell-b,
+  .v2 .cell-c,
+  .v2 .cell-d,
+  .v2 .cell-e {
+    grid-column: 1;
+  }
+  .v2 .cell {
+    padding: 22px 20px;
+    border-radius: 22px;
   }
   .v2 .ring {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
+  }
+  .v2 .ring-num {
+    font-size: 30px;
+  }
+  .v2 .bank-pills {
+    gap: 8px;
+  }
+  .v2 .bp {
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+
+  /* Mahsulot kartalari */
+  .v2 .prod {
+    padding: 26px 22px;
+  }
+  .v2 .prod-ic {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+  .v2 .prod-ic svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Narx kartalari */
+  .v2 .pcard {
+    padding: 20px 12px;
+    border-radius: 18px;
+  }
+
+  /* Timeline mobil */
+  .v2 .tl {
+    gap: 30px;
+  }
+  .v2 .tstep {
+    grid-template-columns: 52px 1fr;
+    gap: 14px;
+  }
+  .v2 .tnode {
+    width: 52px;
+    height: 52px;
+    font-size: 14px;
+  }
+  .v2 .tl-track {
+    left: 25px;
+  }
+
+  /* Ishonch banneri */
+  .v2 .trust-band {
+    padding: 26px 20px;
+  }
+
+  /* FAQ */
+  .v2 .faq-q {
+    padding: 17px 18px;
+    gap: 12px;
+    font-size: 14.5px;
+  }
+  .v2 .fx {
+    width: 28px;
+    height: 28px;
+  }
+  .v2 .faq-a p {
+    padding: 0 18px 18px;
+    font-size: 13.8px;
+  }
+
+  /* Yakuniy CTA */
+  .v2 .cta-final {
+    padding: 70px 0 60px;
+  }
+  .v2 .cta-final .h2 {
+    font-size: clamp(1.9rem, 8vw, 2.4rem);
+  }
+  .v2 .cta-final .sec-sub {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  .v2 .btn-xl {
+    padding: 16px 28px;
+    font-size: 15.5px;
+  }
+
+  /* Umumiy tugmalar to‘liq width */
+  .v2 .sec .btn-grad,
+  .v2 .cta-final .btn {
+    max-width: 380px;
+  }
+
+  /* Blog kartalari */
+  .v2 .bcard {
+    padding: 22px 20px;
+    border-radius: 22px;
+  }
+
+  /* Prose (blog) */
+  .v2 .prose-v2 {
+    font-size: 1rem;
+  }
+  .v2 .answer-box {
+    padding: 16px 18px;
+  }
+  .v2 .answer-box p {
+    font-size: 1rem;
+  }
+  .v2 .steps li {
+    padding: 14px 16px 14px 58px;
+  }
+  .v2 .steps li::before {
+    left: 14px;
+    top: 14px;
+    width: 30px;
+    height: 30px;
+  }
+  .v2 .info-card {
+    padding: 14px 16px;
+  }
+  .v2 .aeo-faq summary {
+    padding: 14px 44px 14px 16px;
+    font-size: 0.98rem;
+  }
+  .v2 .aeo-faq .faq-body {
+    padding: 0 16px 14px;
+  }
+  .v2 .cta-final .btn-xl,
+  .v2 .cta-final .btn-grad {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* Juda kichik ekranlar (≤400px) */
+@media (max-width: 400px) {
+  .v2 .nav2 {
+    width: calc(100% - 14px);
+  }
+  .v2 .nav2-in {
+    padding: 6px 6px 6px 12px;
+    gap: 6px;
+  }
+  .v2 .logo2 {
+    font-size: 15px;
+    gap: 9px;
+  }
+  .v2 .logo2 .logo2-img {
+    width: 50px;
+    height: 50px;
+  }
+  .v2 .nav2-cta .nav2-cta-txt {
+    display: none;
+  }
+  .v2 .nav2-cta {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    gap: 0;
+  }
+  .v2 .nav2-cta svg {
+    margin: 0;
+  }
+  .v2 .nav2-burger {
+    width: 40px;
+    height: 40px;
+  }
+  .v2 .stat {
+    padding: 20px 10px;
+  }
+  .v2 .stat-lbl {
+    font-size: 12px;
+  }
+  .v2 .h2 {
+    font-size: clamp(1.55rem, 7.2vw, 2rem);
+  }
+  .v2 .sec-sub {
+    font-size: 15px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

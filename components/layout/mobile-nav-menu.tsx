@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ArrowUpRight,
   ChevronRight,
@@ -10,7 +11,6 @@ import {
   Menu,
   Newspaper,
   Send,
-  Sparkles,
   Star,
   X,
   type LucideIcon,
@@ -20,6 +20,7 @@ import { createPortal } from "react-dom";
 import type { LandingTopic } from "@/components/landing/landing-topic-article";
 import { HomeTopLink } from "@/components/layout/home-top-link";
 import { Link, usePathname } from "@/i18n/navigation";
+import { siteConfig } from "@/lib/site";
 
 export type MobileNavLabels = {
   home: string;
@@ -149,7 +150,7 @@ export function MobileNavMenu({
             type="button"
             aria-label={labels.menuClose}
             onClick={close}
-            className={`fixed inset-0 top-[4.25rem] z-[60] bg-slate-950/50 backdrop-blur-[3px] transition-opacity duration-300 dark:bg-black/60 ${
+            className={`fixed inset-0 top-[4.75rem] z-[60] bg-slate-950/55 transition-opacity duration-200 dark:bg-black/65 ${
               shown ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -158,7 +159,7 @@ export function MobileNavMenu({
             role="dialog"
             aria-modal="true"
             aria-label={labels.menuNavAria}
-            className={`fixed bottom-0 right-0 top-[4.25rem] z-[61] flex w-[min(90vw,320px)] flex-col border-l border-slate-200/80 bg-white/98 shadow-[-16px_0_60px_-15px_rgba(15,23,42,0.28)] backdrop-blur-xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] dark:border-slate-700/70 dark:bg-slate-950/98 dark:shadow-black/50 ${
+            className={`fixed bottom-0 right-0 top-[4.75rem] z-[61] flex w-[min(90vw,320px)] flex-col border-l border-slate-200/80 bg-white shadow-[-16px_0_60px_-15px_rgba(15,23,42,0.28)] transition-transform duration-200 ease-out dark:border-slate-700/70 dark:bg-slate-950 dark:shadow-black/50 ${
               shown ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -168,12 +169,17 @@ export function MobileNavMenu({
                 aria-hidden
                 className="pointer-events-none absolute -right-8 -top-10 size-32 rounded-full bg-[radial-gradient(circle,rgba(34,158,217,0.18),transparent_70%)] blur-xl"
               />
-              <div className="relative flex items-center gap-2">
-                <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#229ED9] to-sky-500 text-white shadow-sm">
-                  <Sparkles className="size-[1.15rem]" strokeWidth={2} aria-hidden />
-                </span>
+              <div className="relative flex items-center gap-3">
+                <Image
+                  src="/logo-128.png"
+                  alt={`${siteConfig.name} logotipi`}
+                  width={48}
+                  height={48}
+                  sizes="48px"
+                  className="h-12 w-12 shrink-0 object-contain"
+                />
                 <div className="min-w-0">
-                  <h2 className="text-base font-bold tracking-tight text-slate-900 dark:text-white">{labels.menuTitle}</h2>
+                  <h2 className="text-base font-bold tracking-tight text-slate-900 dark:text-white">{siteConfig.name}</h2>
                   <p className="truncate text-xs text-slate-500 dark:text-slate-400">{labels.menuSubtitle}</p>
                 </div>
               </div>
@@ -181,7 +187,7 @@ export function MobileNavMenu({
 
             {/* Nav */}
             <nav aria-label={labels.menuNavAria} className="flex flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-3 py-4">
-              <div className="motion-safe:animate-rise" style={{ animationDelay: "60ms" }}>
+              <div>
                 <HomeTopLink
                   activeClassName={`${rowBase} ${rowActive}`}
                   inactiveClassName={`${rowBase} ${rowInactive}`}
@@ -202,8 +208,7 @@ export function MobileNavMenu({
                     key={item.href}
                     href={item.href}
                     onClick={close}
-                    style={{ animationDelay: `${(i + 2) * 55}ms` }}
-                    className={`${rowBase} motion-safe:animate-rise ${active ? rowActive : rowInactive}`}
+                    className={`${rowBase} ${active ? rowActive : rowInactive}`}
                   >
                     <span className={active ? iconWrapActive : iconWrap} aria-hidden>
                       <item.Icon className="size-[1.15rem]" strokeWidth={2} />
