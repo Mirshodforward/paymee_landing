@@ -87,16 +87,18 @@ export function V2Nav({
             aria-label="StarsPaymee"
             onClick={() => setOpen(false)}
           >
-            <Image
-              className="logo2-img"
-              src="/logo-128.png"
-              alt="StarsPaymee logotipi"
-              width={60}
-              height={60}
-              sizes="60px"
-              loading="eager"
-              fetchPriority="high"
-            />
+            <span className="logo2-mark" aria-hidden="true">
+              <Image
+                className="logo2-img"
+                src="/logo-mark.png"
+                alt="StarsPaymee logotipi"
+                width={120}
+                height={120}
+                sizes="56px"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </span>
             <span>
               <span className="gt">Stars</span>Paymee
             </span>

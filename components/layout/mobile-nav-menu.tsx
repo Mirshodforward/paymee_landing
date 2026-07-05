@@ -150,7 +150,7 @@ export function MobileNavMenu({
             type="button"
             aria-label={labels.menuClose}
             onClick={close}
-            className={`fixed inset-0 top-[4.75rem] z-[60] bg-slate-950/55 transition-opacity duration-200 dark:bg-black/65 ${
+            className={`fixed inset-0 top-24 z-[60] bg-slate-950/55 transition-opacity duration-200 dark:bg-black/65 ${
               shown ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -159,7 +159,7 @@ export function MobileNavMenu({
             role="dialog"
             aria-modal="true"
             aria-label={labels.menuNavAria}
-            className={`fixed bottom-0 right-0 top-[4.75rem] z-[61] flex w-[min(90vw,320px)] flex-col border-l border-slate-200/80 bg-white shadow-[-16px_0_60px_-15px_rgba(15,23,42,0.28)] transition-transform duration-200 ease-out dark:border-slate-700/70 dark:bg-slate-950 dark:shadow-black/50 ${
+            className={`fixed bottom-0 right-0 top-24 z-[61] flex w-[min(90vw,320px)] flex-col border-l border-slate-200/80 bg-white shadow-[-16px_0_60px_-15px_rgba(15,23,42,0.28)] transition-transform duration-200 ease-out dark:border-slate-700/70 dark:bg-slate-950 dark:shadow-black/50 sm:top-28 ${
               shown ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -169,17 +169,17 @@ export function MobileNavMenu({
                 aria-hidden
                 className="pointer-events-none absolute -right-8 -top-10 size-32 rounded-full bg-[radial-gradient(circle,rgba(34,158,217,0.18),transparent_70%)] blur-xl"
               />
-              <div className="relative flex items-center gap-3">
+              <div className="relative flex items-center gap-4">
                 <Image
-                  src="/logo-128.png"
+                  src="/logo-mark.png"
                   alt={`${siteConfig.name} logotipi`}
-                  width={48}
-                  height={48}
-                  sizes="48px"
-                  className="h-12 w-12 shrink-0 object-contain"
+                  width={96}
+                  height={96}
+                  sizes="96px"
+                  className="h-24 w-24 shrink-0 object-contain"
                 />
                 <div className="min-w-0">
-                  <h2 className="text-base font-bold tracking-tight text-slate-900 dark:text-white">{siteConfig.name}</h2>
+                  <h2 className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">{siteConfig.name}</h2>
                   <p className="truncate text-xs text-slate-500 dark:text-slate-400">{labels.menuSubtitle}</p>
                 </div>
               </div>

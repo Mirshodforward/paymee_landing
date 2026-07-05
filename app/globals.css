@@ -338,6 +338,7 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   font-family: var(--disp);
   font-weight: 700;
   font-size: 18px;
+  overflow: visible;
 }
 .v2 .logo2 .mark {
   width: 36px;
@@ -354,9 +355,17 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   height: 18px;
   fill: #fff;
 }
+.v2 .logo2-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
 .v2 .logo2 .logo2-img {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   object-fit: contain;
   filter: drop-shadow(0 4px 14px rgba(168, 85, 247, 0.45));
@@ -1813,9 +1822,13 @@ html:not(.v2-js) .v2 .rv {
     font-size: 16px;
     gap: 10px;
   }
+  .v2 .logo2-mark {
+    width: 52px;
+    height: 52px;
+  }
   .v2 .logo2 .logo2-img {
-    width: 54px;
-    height: 54px;
+    width: 52px;
+    height: 52px;
   }
   /* Mobilda faqat Blog havolasi ko‘rinadi (boshqalar drawerda) */
   .v2 .nav2-links {
@@ -2093,9 +2106,13 @@ html:not(.v2-js) .v2 .rv {
     font-size: 15px;
     gap: 9px;
   }
+  .v2 .logo2-mark {
+    width: 48px;
+    height: 48px;
+  }
   .v2 .logo2 .logo2-img {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
   .v2 .nav2-cta .nav2-cta-txt {
     display: none;
