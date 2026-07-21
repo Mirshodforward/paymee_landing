@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 type Props = {
   children: ReactNode;
   /** Marketing ichki sahifa — headerda ustunlangan bo‘lim */
-  highlight?: LandingTopic;
+  highlight?: LandingTopic | "business";
 };
 
 /** Blogdan tashqari marketing ichki sahifalar fon va header/footer uchun */

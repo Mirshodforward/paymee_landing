@@ -240,7 +240,8 @@
       "stars": "Stars",
       "premium": "Premium",
       "gifts": "Gifts",
-      "about": "About"
+      "about": "About",
+      "business": "Business"
     },
     "stars": {
       "metaTitle": "Buy Telegram Stars — cheap, in 10 seconds | StarsPaymee",
@@ -296,6 +297,51 @@
         "Full refund if an order is not delivered due to a technical issue"
       ],
       "footnote": "For questions, reach us via @StarsPaymeeSupport — support replies quickly. If an order is not delivered due to a technical issue, your payment is refunded in full."
+    },
+    "business": {
+      "metaTitle": "StarsPaymee Business — Telegram Stars API, Click and SBP integration",
+      "metaDescription": "StarsPaymee Business: Telegram Stars, Premium and Gifts API, official Click integration, SBP (ruble) payments, White Label and a reseller program. Connect to your bot or site with one key.",
+      "kicker": "Business / API",
+      "h1": "StarsPaymee Business — API and payment integrations",
+      "intro": "StarsPaymee Business is a single API for auto‑selling Telegram Stars, Premium and Gifts. Connect it to your bot or site with one key: product delivery, Click and SBP (ruble) payments and statuses are managed automatically. White Label and a reseller program are also available.",
+      "ctaContact": "Contact us to get the API",
+      "ctaDocs": "Read the guides",
+      "sections": [
+        {
+          "title": "Telegram Stars, Premium and Gifts API",
+          "body": "Sell Stars, Premium and Gifts automatically via a REST/JSON API. An order is created, the product is delivered to the @username in about 10 seconds, and the status returns via webhook.",
+          "items": ["REST/JSON API and webhook", "Sandbox — test with no real money", "Auto‑delivery in 10 seconds"]
+        },
+        {
+          "title": "Click — official payment integration",
+          "body": "Accept payments in so‘m automatically via the Click merchant and callback (prepare/complete). Secure with signature verification and idempotency; after payment the product is delivered automatically.",
+          "items": ["Official Click callback and signature", "UzCard, HUMO, Payme — in so‘m", "Auto‑confirmation and delivery"]
+        },
+        {
+          "title": "SBP (СБП) — ruble payments",
+          "body": "Accept instant payments from Russia in rubles via a QR code or phone number. Auto‑confirmation via webhook — expand your market to customers in Russia.",
+          "items": ["Payment via QR and phone number", "Instant confirmation in rubles", "Webhook and auto‑delivery"]
+        },
+        {
+          "title": "White Label platform",
+          "body": "A full platform under your own brand, name and design — with the StarsPaymee API on the backend. The customer sees only you, and we carry the technical load.",
+          "items": ["Your brand and domain", "Full payment integration", "Fast launch"]
+        },
+        {
+          "title": "Reseller program",
+          "body": "Take Stars, Premium and Gifts at a wholesale price and resell with your own markup. The price drops as volume grows; delivery and settlement are automatic.",
+          "items": ["Wholesale price and your markup", "Auto‑delivery and status", "Special tariff for volume"]
+        },
+        {
+          "title": "Why StarsPaymee Business?",
+          "body": "Over a year in service, 100,000+ orders and a high success rate. All products and payments under one key, transparent pricing and 24/7 support.",
+          "items": ["Among the lowest prices on the market", "One API — all products and payments", "24/7 technical support"]
+        }
+      ],
+      "articlesHeading": "Detailed guides",
+      "ctaHeading": "Ready to connect the API?",
+      "ctaBody": "Submit a request — the API key, docs and Sandbox are provided quickly. Questions — @StarsPaymeeSupport.",
+      "footnote": "The StarsPaymee Business API and integrations are provided by StarsPaymee. Click and SBP are trademarks of the Click and Faster Payments System payment systems respectively. Exact pricing and terms are agreed by volume."
     }
   },
   "v2": {
@@ -424,6 +470,10 @@
     "ctaSub": "Your first order arrives in 10 seconds. A service trusted by thousands of customers for over a year.",
     "ctaButton": "Open @StarsPaymee_bot",
     "ctaTgLine": "24/7 online · free",
+    "bizKicker": "Business / API",
+    "bizTitle": "An API for your bot or website",
+    "bizBody": "Sell Telegram Stars, Premium and Gifts automatically. Official Click integration, SBP (ruble) payments, White Label and a reseller program — under one key.",
+    "bizCta": "Learn more about Business",
     "footerTagline": "Telegram Stars, Premium and Gifts in Uzbekistan — automatic in 10 seconds. Pay in so‘m via Click, Payme, Paynet, UzCard, HUMO and any bank card.",
     "footerSections": "Sections",
     "footerSupport": "Support",

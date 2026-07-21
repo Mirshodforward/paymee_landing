@@ -1,5 +1,6 @@
 import { Fragment, type CSSProperties } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { V2Shell } from "@/components/v2/v2-shell";
 import { V2Nav } from "@/components/v2/v2-nav";
@@ -673,6 +674,40 @@ export default async function HomePage({ params }: PageProps) {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===== Business / API teaser ===== */}
+        <section className="sec" id="business">
+          <div className="wrap">
+            <div
+              className="rv"
+              style={{
+                borderRadius: 28,
+                border: "1px solid var(--line)",
+                background: "linear-gradient(135deg, rgba(34,158,217,.10), rgba(168,85,247,.08))",
+                padding: "40px 32px",
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 24,
+              }}
+            >
+              <div style={{ maxWidth: 620 }}>
+                <div className="kicker">{t("bizKicker")}</div>
+                <h2 className="h2" style={{ marginTop: 6 }}>
+                  {t("bizTitle")}
+                </h2>
+                <p className="sec-sub" style={{ marginTop: 12 }}>
+                  {t("bizBody")}
+                </p>
+              </div>
+              <Link className="btn btn-grad mag" href="/business">
+                {t("bizCta")}
+                <ArrowIcon style={{ stroke: "#fff" }} />
+              </Link>
             </div>
           </div>
         </section>

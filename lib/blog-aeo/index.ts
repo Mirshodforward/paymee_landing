@@ -59,6 +59,25 @@ import { post as p57 } from "./posts/57-onlayn-tolovda-karta-xavfsizligi";
 import { post as p58 } from "./posts/58-farzandingiz-stars-sorasa-ota-onalar";
 import { post as p59 } from "./posts/59-telegram-business-nima";
 import { post as p60 } from "./posts/60-telegram-kanal-boost-nima";
+import { post as p61 } from "./posts/61-telegram-stars-api-nima-ulanish";
+import { post as p62 } from "./posts/62-telegram-premium-api-avtomatik-sotuv";
+import { post as p63 } from "./posts/63-eng-arzon-telegram-api-xizmati-ozbekiston";
+import { post as p64 } from "./posts/64-click-api-rasmiy-integratsiya";
+import { post as p65 } from "./posts/65-click-api-avtomatik-tolov-qabul";
+import { post as p66 } from "./posts/66-click-api-faq-savollar";
+import { post as p67 } from "./posts/67-sbp-api-rossiya-rubl-tolov";
+import { post as p68 } from "./posts/68-sbp-tolov-tizimi-qanday-ishlaydi";
+import { post as p69 } from "./posts/69-sbp-api-faq-savollar";
+import { post as p70 } from "./posts/70-telegram-gifts-api-avtomatik-sovga";
+import { post as p71 } from "./posts/71-white-label-telegram-stars-platforma";
+import { post as p72 } from "./posts/72-telegram-reseller-dasturi-qanday-boshlash";
+import { post as p73 } from "./posts/73-telegram-stars-api-webhook-integratsiya";
+import { post as p74 } from "./posts/74-payment-api-uzbekistan-tolov-integratsiya";
+import { post as p75 } from "./posts/75-reseller-vs-white-label-farqi";
+import { post as p76 } from "./posts/76-botga-tolov-api-ulash-qollanma";
+import { post as p77 } from "./posts/77-sbp-vs-click-vs-uzcard-tolov-solishtirish";
+import { post as p78 } from "./posts/78-telegram-business-api-umumiy-faq";
+import { post as p79 } from "./posts/79-telegram-stars-biznes-reseller-daromad";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -68,6 +87,8 @@ export const aeoPosts: AeoPost[] = [
   p31, p32, p33, p34, p35, p36, p37, p38, p39, p40,
   p41, p42, p43, p44, p45, p46, p47, p48, p49, p50,
   p51, p52, p53, p54, p55, p56, p57, p58, p59, p60,
+  p61, p62, p63, p64, p65, p66, p67, p68, p69, p70,
+  p71, p72, p73, p74, p75, p76, p77, p78, p79,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

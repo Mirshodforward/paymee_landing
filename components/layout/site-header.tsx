@@ -17,7 +17,7 @@ export async function SiteHeader({
   highlight = null,
 }: {
   /** `blog` — blog bo‘limi; qolganlari marketing ichki sahifalar */
-  highlight?: LandingTopic | "blog" | null;
+  highlight?: LandingTopic | "blog" | "business" | null;
 }) {
   const telegramBotUrl = getTelegramBotUrl();
   const telegramSupportUrl = getTelegramSupportUrl();
@@ -27,8 +27,8 @@ export async function SiteHeader({
   const prod = (key: LandingTopic) => (highlight === key ? navActive : navLink);
 
   const mobileNavHighlight =
-    highlight === "blog"
-      ? "blog"
+    highlight === "blog" || highlight === "business"
+      ? highlight
       : highlight === "stars" || highlight === "premium" || highlight === "gifts" || highlight === "about"
         ? highlight
         : null;
@@ -69,6 +69,9 @@ export async function SiteHeader({
             <Link href="/blog" className={highlight === "blog" ? navActive : navLink}>
               {n("blog")}
             </Link>
+            <Link href="/business" className={highlight === "business" ? navActive : navLink}>
+              {lg("nav.business")}
+            </Link>
           </nav>
           <LocaleSwitcher />
         </div>
@@ -83,6 +86,7 @@ export async function SiteHeader({
               premium: lg("nav.premium"),
               gifts: lg("nav.gifts"),
               blog: n("blog"),
+              business: lg("nav.business"),
               openTelegram: n("openTelegram"),
               support: n("support"),
               menuOpen: n("menuOpen"),

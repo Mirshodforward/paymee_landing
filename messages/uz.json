@@ -249,7 +249,8 @@
       "stars": "Stars",
       "premium": "Premium",
       "gifts": "Sovg‘alar",
-      "about": "Biz haqimizda"
+      "about": "Biz haqimizda",
+      "business": "Business"
     },
     "stars": {
       "metaTitle": "Telegram Stars sotib olish — arzon narx, 10 soniyada | StarsPaymee",
@@ -305,6 +306,51 @@
         "Texnik sabab bilan yetkazilmasa — to‘lov to‘liq qaytariladi"
       ],
       "footnote": "Savol yoki yordam kerak bo‘lsa @StarsPaymeeSupport orqali murojaat qiling — qo‘llab-quvvatlash xizmati tezda javob beradi. Buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi."
+    },
+    "business": {
+      "metaTitle": "StarsPaymee Business — Telegram Stars API, Click va SBP integratsiyasi",
+      "metaDescription": "StarsPaymee Business: Telegram Stars, Premium va Gifts API, Click rasmiy integratsiyasi, SBP (rubl) to‘lovi, White Label va reseller dasturi. Botingiz yoki saytingizga bir kalitda ulang.",
+      "kicker": "Business / API",
+      "h1": "StarsPaymee Business — API va to‘lov integratsiyalari",
+      "intro": "StarsPaymee Business — Telegram Stars, Premium va Gifts’ni avtomatik sotish uchun yagona API. Bot yoki saytingizga bitta kalit bilan ulaysiz: mahsulot yetkazish, Click va SBP (rubl) to‘lovlari hamda status avtomatik boshqariladi. White Label va reseller dasturi ham mavjud.",
+      "ctaContact": "API olish uchun bog‘lanish",
+      "ctaDocs": "Qo‘llanmalarni o‘qish",
+      "sections": [
+        {
+          "title": "Telegram Stars, Premium va Gifts API",
+          "body": "REST/JSON API orqali Stars, Premium va Gifts’ni avtomatik soting. Buyurtma yaratiladi, mahsulot @username’ga o‘rtacha 10 soniyada yetkaziladi, status webhook orqali qaytadi.",
+          "items": ["REST/JSON API va webhook", "Sandbox — jonli pulsiz test", "10 soniyada avtomatik yetkazish"]
+        },
+        {
+          "title": "Click — rasmiy to‘lov integratsiyasi",
+          "body": "Click merchant va callback (prepare/complete) orqali so‘mda avtomatik to‘lov qabul qiling. Imzo tekshiruvi va idempotency bilan xavfsiz; to‘lovdan so‘ng mahsulot avtomatik yetkaziladi.",
+          "items": ["Click rasmiy callback va imzo", "UzCard, HUMO, Payme — so‘mda", "Avtomatik tasdiqlash va yetkazish"]
+        },
+        {
+          "title": "SBP (СБП) — rubl to‘lovlari",
+          "body": "Rossiyadan rublda QR-kod yoki telefon raqami orqali tezkor to‘lov qabul qiling. Webhook orqali avtomatik tasdiqlash — bozoringizni Rossiya mijozlariga kengaytiring.",
+          "items": ["QR va telefon raqami orqali to‘lov", "Rublda tezkor tasdiqlash", "Webhook va avtomatik yetkazish"]
+        },
+        {
+          "title": "White Label platforma",
+          "body": "O‘z brendingiz, nomingiz va dizayningiz ostida to‘liq platforma — orqa tomonda StarsPaymee API ishlaydi. Mijoz faqat sizni ko‘radi, texnik yukni biz ko‘taramiz.",
+          "items": ["O‘z brend va domeningiz", "To‘liq to‘lov integratsiyasi", "Tez ishga tushirish"]
+        },
+        {
+          "title": "Reseller dasturi",
+          "body": "Stars, Premium va Gifts’ni ulgurji narxda olib, o‘z ustamangiz bilan qayta soting. Hajm oshgani sari narx pasayadi; yetkazish va hisob-kitob avtomatik.",
+          "items": ["Ulgurji narx va o‘z ustamangiz", "Avtomatik yetkazish va status", "Yuqori hajmga maxsus tarif"]
+        },
+        {
+          "title": "Nega StarsPaymee Business?",
+          "body": "1 yildan ortiq xizmat, 100 000+ buyurtma va yuqori muvaffaqiyat foizi. Bitta kalit ostida barcha mahsulot va to‘lovlar, aniq narx va 24/7 qo‘llab-quvvatlash.",
+          "items": ["Bozordagi eng arzon narxlardan", "Bitta API — barcha mahsulot va to‘lov", "24/7 texnik qo‘llab-quvvatlash"]
+        }
+      ],
+      "articlesHeading": "Batafsil qo‘llanmalar",
+      "ctaHeading": "API ulashni boshlaysizmi?",
+      "ctaBody": "Ariza qoldiring — API kaliti, hujjat va Sandbox tez taqdim etiladi. Savollar uchun @StarsPaymeeSupport.",
+      "footnote": "StarsPaymee Business API va integratsiyalari StarsPaymee tomonidan taqdim etiladi. Click va SBP — mos ravishda Click va Система быстрых платежей to‘lov tizimlarining tovar belgilaridir. Aniq narx va shartlar hajmga qarab kelishiladi."
     }
   },
   "v2": {
@@ -433,6 +479,10 @@
     "ctaSub": "Birinchi buyurtmangiz 10 soniyada yetib keladi. 1 yildan beri minglab mijozlar ishonchini qozongan xizmat.",
     "ctaButton": "@StarsPaymee_bot ni ochish",
     "ctaTgLine": "24/7 onlayn · bepul",
+    "bizKicker": "Business / API",
+    "bizTitle": "Botingiz yoki saytingiz uchun API",
+    "bizBody": "Telegram Stars, Premium va Gifts’ni avtomatik soting. Click rasmiy integratsiyasi, SBP (rubl) to‘lovi, White Label va reseller dasturi — bitta kalitda.",
+    "bizCta": "Business haqida batafsil",
     "footerTagline": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik. Click, Payme, Paynet, UzCard, HUMO va istalgan bank kartasi bilan so‘mda to‘lov.",
     "footerSections": "Bo‘limlar",
     "footerSupport": "Qo‘llab-quvvatlash",

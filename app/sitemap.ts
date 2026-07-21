@@ -39,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     });
     out.push({
+      url: `${base}/${locale}/business`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    });
+    out.push({
       url: `${base}/${locale}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",

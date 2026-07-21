@@ -35,6 +35,9 @@ export async function SiteFooter() {
             <Link href="/about" className={footerLink}>
               {lg("nav.about")}
             </Link>
+            <Link href="/business" className={footerLink}>
+              {lg("nav.business")}
+            </Link>
           </nav>
         </div>
         <address id="aloqa" className="not-italic">

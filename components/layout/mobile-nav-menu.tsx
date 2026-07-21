@@ -12,6 +12,7 @@ import {
   Newspaper,
   Send,
   Star,
+  Briefcase,
   X,
   type LucideIcon,
 } from "lucide-react";
@@ -28,6 +29,7 @@ export type MobileNavLabels = {
   premium: string;
   gifts: string;
   blog: string;
+  business: string;
   openTelegram: string;
   support: string;
   menuOpen: string;
@@ -37,7 +39,7 @@ export type MobileNavLabels = {
   menuNavAria: string;
 };
 
-export type MobileNavHighlight = LandingTopic | "blog" | null;
+export type MobileNavHighlight = LandingTopic | "blog" | "business" | null;
 
 const rowBase =
   "group flex min-h-[3.25rem] items-center gap-3 rounded-2xl px-3.5 py-3 text-[15px] font-semibold tracking-tight transition-colors";
@@ -110,6 +112,7 @@ export function MobileNavMenu({
     { key: "premium", href: "/premium", label: labels.premium, Icon: Crown },
     { key: "gifts", href: "/gifts", label: labels.gifts, Icon: Gift },
     { key: "blog", href: "/blog", label: labels.blog, Icon: Newspaper },
+    { key: "business", href: "/business", label: labels.business, Icon: Briefcase },
   ];
 
   return (
