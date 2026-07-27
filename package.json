@@ -6,7 +6,8 @@
     "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:seo": "node scripts/verify-blog-seo.mjs"
   },
   "dependencies": {
     "lottie-web": "^5.13.0",

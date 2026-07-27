@@ -10,7 +10,8 @@ export const dynamic = "force-static";
 export const revalidate = 3600;
 
 const LOCALE = "uz";
-const MAX_ITEMS = 50;
+/** Barcha bloglar RSSda (AI agregatorlar uchun to‘liq ro‘yxat). */
+const MAX_ITEMS = 200;
 
 function escapeXml(input: string): string {
   return input
@@ -50,7 +51,7 @@ export function GET(): Response {
   <channel>
     <title>${escapeXml(siteConfig.name)} — Blog</title>
     <link>${blogUrl}</link>
-    <description>${escapeXml(siteConfig.name)}: Telegram Stars, Premium va Gifts bo‘yicha qo‘llanmalar va yangiliklar.</description>
+    <description>${escapeXml(siteConfig.name)}: Telegram Stars, Premium, Gifts, virtual raqam, NFT Gift Market, Boost ijarasi — qo‘llanmalar.</description>
     <language>${LOCALE}</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />

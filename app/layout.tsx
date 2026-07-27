@@ -73,6 +73,7 @@ export default async function RootLayout({
         title="StarsPaymee — Blog"
         href="/rss.xml"
       />
+      <link rel="author" type="text/plain" title="LLMs.txt" href="/llms.txt" />
       <body className="min-h-screen bg-background font-sans text-foreground">{children}</body>
     </html>
   );

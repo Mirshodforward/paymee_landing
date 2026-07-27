@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ArrowIcon } from "@/components/v2/icons";
 import { blogCategories, type BlogCategory } from "@/lib/blog-posts";
-import { getBlogSummariesByCategory, getBlogCount } from "@/lib/blog/all";
+import { getBlogSummariesByCategory, getBlogCount, getGrowthSeriesSummaries, getNftGiftSeriesSummaries, getBoostSeriesSummaries } from "@/lib/blog/all";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -51,6 +51,9 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
   const resolved = await searchParams;
   const active = normalizeCat(resolved?.cat);
   const listed = getBlogSummariesByCategory(locale, active);
+  const series = getGrowthSeriesSummaries(locale);
+  const nftSeries = getNftGiftSeriesSummaries(locale);
+  const boostSeries = getBoostSeriesSummaries(locale);
   const base = getSiteUrl();
 
   const t = await getTranslations("v2");
@@ -64,18 +67,46 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
     description: t("blogSubtitle"),
     url: `${base}/${locale}/blog`,
     inLanguage: locale,
-    blogPost: listed.map((post) => ({
+    blogPost: listed.slice(0, 50).map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
       description: post.excerpt,
       url: `${base}/${locale}/blog/${post.slug}`,
       datePublished: post.datePublished,
+      dateModified: post.dateModified,
     })),
+  };
+
+  const seriesItemListLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "StarsPaymee blog SEO seriyalari",
+    itemListElement: [
+      ...getGrowthSeriesSummaries(locale).map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${base}/${locale}/blog/${p.slug}`,
+        name: p.title,
+      })),
+      ...getNftGiftSeriesSummaries(locale).map((p, i) => ({
+        "@type": "ListItem",
+        position: 10 + i + 1,
+        url: `${base}/${locale}/blog/${p.slug}`,
+        name: p.title,
+      })),
+      ...getBoostSeriesSummaries(locale).map((p, i) => ({
+        "@type": "ListItem",
+        position: 20 + i + 1,
+        url: `${base}/${locale}/blog/${p.slug}`,
+        name: p.title,
+      })),
+    ],
   };
 
   return (
     <section className="sec v2-blog-page">
       <JsonLd data={blogIndexLd} />
+      <JsonLd data={seriesItemListLd} />
       <div className="wrap">
         <nav
           aria-label="Breadcrumb"
@@ -105,6 +136,83 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
             </FilterPill>
           ))}
         </div>
+
+        {active === "hammasi" && series.length > 0 ? (
+          <div className="blog-series rv" style={{ marginBottom: 40 }}>
+            <div className="kicker">{t("blogSeriesBadge")}</div>
+            <h2 className="h3" style={{ marginTop: 8, marginBottom: 6 }}>
+              {t("blogSeriesTitle")}
+            </h2>
+            <p className="sec-sub" style={{ marginBottom: 0, fontSize: 14, maxWidth: 720 }}>
+              {t("blogSeriesSubtitle")}
+            </p>
+            <ul className="blog-series-grid" style={{ listStyle: "none", padding: 0, marginTop: 18 }}>
+              {series.map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} className="blog-series-card">
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    <span className="prod-link" style={{ color: "var(--fuch)" }}>
+                      {t("blogRead")} <ArrowIcon />
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        {active === "hammasi" && nftSeries.length > 0 ? (
+          <div className="blog-series rv" style={{ marginBottom: 40, borderColor: "rgba(245,158,11,0.35)" }}>
+            <div className="kicker">
+              {t("blogNftSeriesBadge")}
+            </div>
+            <h2 className="h3" style={{ marginTop: 8, marginBottom: 6 }}>
+              {t("blogNftSeriesTitle")}
+            </h2>
+            <p className="sec-sub" style={{ marginBottom: 0, fontSize: 14, maxWidth: 720 }}>
+              {t("blogNftSeriesSubtitle")}
+            </p>
+            <ul className="blog-series-grid" style={{ listStyle: "none", padding: 0, marginTop: 18 }}>
+              {nftSeries.map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} className="blog-series-card">
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    <span className="prod-link" style={{ color: "var(--fuch)" }}>
+                      {t("blogRead")} <ArrowIcon />
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        {active === "hammasi" && boostSeries.length > 0 ? (
+          <div className="blog-series rv" style={{ marginBottom: 40, borderColor: "rgba(139,92,246,0.4)" }}>
+            <div className="kicker">{t("blogBoostSeriesBadge")}</div>
+            <h2 className="h3" style={{ marginTop: 8, marginBottom: 6 }}>
+              {t("blogBoostSeriesTitle")}
+            </h2>
+            <p className="sec-sub" style={{ marginBottom: 0, fontSize: 14, maxWidth: 720 }}>
+              {t("blogBoostSeriesSubtitle")}
+            </p>
+            <ul className="blog-series-grid" style={{ listStyle: "none", padding: 0, marginTop: 18 }}>
+              {boostSeries.map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} className="blog-series-card">
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    <span className="prod-link" style={{ color: "var(--fuch)" }}>
+                      {t("blogRead")} <ArrowIcon />
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
 
         <ul className="v2-blog-grid">
           {listed.map((post, i) => (

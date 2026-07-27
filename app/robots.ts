@@ -17,6 +17,7 @@ const AI_AND_SEARCH_BOTS = [
   "Perplexity-User",
   "Google-Extended",
   "Googlebot",
+  "Googlebot-Image",
   "Applebot",
   "Applebot-Extended",
   "Bingbot",
@@ -33,7 +34,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "*", allow: "/" },
       ...AI_AND_SEARCH_BOTS.map((userAgent) => ({ userAgent, allow: "/" })),
     ],
-    sitemap: `${base}/sitemap.xml`,
+    sitemap: [`${base}/sitemap.xml`],
     host: base.replace(/^https?:\/\//, ""),
   };
 }

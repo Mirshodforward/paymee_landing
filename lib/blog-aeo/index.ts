@@ -78,6 +78,36 @@ import { post as p76 } from "./posts/76-botga-tolov-api-ulash-qollanma";
 import { post as p77 } from "./posts/77-sbp-vs-click-vs-uzcard-tolov-solishtirish";
 import { post as p78 } from "./posts/78-telegram-business-api-umumiy-faq";
 import { post as p79 } from "./posts/79-telegram-stars-biznes-reseller-daromad";
+import { post as p80 } from "./posts/80-telegram-raqam-sotib-olish";
+import { post as p81 } from "./posts/81-virtual-telegram-raqam-nima";
+import { post as p82 } from "./posts/82-telegram-premium-sotib-olish-2026";
+import { post as p83 } from "./posts/83-telegram-akkaunt-sotib-olish";
+import { post as p84 } from "./posts/84-telegram-biznes-akkaunt-ochish";
+import { post as p85 } from "./posts/85-telegram-kanal-boost-olish-qollanma";
+import { post as p86 } from "./posts/86-telegram-stars-sotib-olish-to-liq-qollanma";
+import { post as p87 } from "./posts/87-telegram-gifts-yuborish-qollanma";
+import { post as p88 } from "./posts/88-telegram-username-sotib-olish";
+import { post as p89 } from "./posts/89-telegram-kanal-guruh-reklama-xizmatlari";
+import { post as p90 } from "./posts/90-telegram-nft-gift-nima";
+import { post as p91 } from "./posts/91-telegram-nft-gift-sotib-olish";
+import { post as p92 } from "./posts/92-limited-edition-telegram-gifts";
+import { post as p93 } from "./posts/93-telegram-nft-market";
+import { post as p94 } from "./posts/94-telegram-gift-price";
+import { post as p95 } from "./posts/95-telegram-nft-investitsiya";
+import { post as p96 } from "./posts/96-top-telegram-rare-gifts";
+import { post as p97 } from "./posts/97-telegram-gift-sotish";
+import { post as p98 } from "./posts/98-telegram-gift-kolleksiya";
+import { post as p99 } from "./posts/99-starspaymee-nft-market";
+import { post as p100 } from "./posts/100-telegram-kanalga-boost-sotib-olish";
+import { post as p101 } from "./posts/101-telegram-boost-ijarasi";
+import { post as p102 } from "./posts/102-telegram-kanalni-boost-qilish";
+import { post as p103 } from "./posts/103-telegram-kanal-reytingi";
+import { post as p104 } from "./posts/104-telegram-premium-boost";
+import { post as p105 } from "./posts/105-telegram-kanal-rivojlantirish";
+import { post as p106 } from "./posts/106-telegram-boost-narxlari";
+import { post as p107 } from "./posts/107-telegram-boost-avtomatik";
+import { post as p108 } from "./posts/108-arzon-telegram-boost";
+import { post as p109 } from "./posts/109-starspaymee-boost-market";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -89,6 +119,9 @@ export const aeoPosts: AeoPost[] = [
   p51, p52, p53, p54, p55, p56, p57, p58, p59, p60,
   p61, p62, p63, p64, p65, p66, p67, p68, p69, p70,
   p71, p72, p73, p74, p75, p76, p77, p78, p79,
+  p80, p81, p82, p83, p84, p85, p86, p87, p88, p89,
+  p90, p91, p92, p93, p94, p95, p96, p97, p98, p99,
+  p100, p101, p102, p103, p104, p105, p106, p107, p108, p109,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

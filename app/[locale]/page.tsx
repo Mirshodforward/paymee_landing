@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { V2Shell } from "@/components/v2/v2-shell";
 import { V2Nav } from "@/components/v2/v2-nav";
 import { V2Footer } from "@/components/v2/v2-footer";
+import { V2NftMarketSection } from "@/components/v2/v2-nft-market-section";
+import { V2BoostMarketSection } from "@/components/v2/v2-boost-market-section";
 import {
   ArrowIcon,
   BoltIcon,
@@ -54,6 +56,8 @@ export default async function HomePage({ params }: PageProps) {
   const prodStarsB = t.raw("prodStarsB") as string[];
   const prodPremiumB = t.raw("prodPremiumB") as string[];
   const prodGiftsB = t.raw("prodGiftsB") as string[];
+  const nftBullets = t.raw("nftBullets") as string[];
+  const boostBullets = t.raw("boostBullets") as string[];
 
   const navLabels = {
     why: t("navWhy"),
@@ -453,6 +457,37 @@ export default async function HomePage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        <V2NftMarketSection
+          kicker={t("nftKicker")}
+          title={t("nftTitle")}
+          subtitle={t("nftSub")}
+          balanceLabel={t("nftBalance")}
+          myGifts={t("nftMyGifts")}
+          ctaBot={t("nftCtaBot")}
+          ctaBlog={t("nftCtaBlog")}
+          blogHref="/blog/telegram-nft-gift-nima"
+          botUrl={botUrl}
+          newBadge={t("nftNewBadge")}
+          bullets={nftBullets}
+        />
+
+        <V2BoostMarketSection
+          kicker={t("boostKicker")}
+          title={t("boostTitle")}
+          subtitle={t("boostSub")}
+          availableLabel={t("boostAvailable")}
+          channelLabel={t("boostChannel")}
+          boostsLabel={t("boostCount")}
+          durationLabel={t("boostDuration")}
+          days30={t("boostDays30")}
+          ctaBot={t("boostCtaBot")}
+          ctaBlog={t("boostCtaBlog")}
+          blogHref="/blog/telegram-kanalga-boost-sotib-olish"
+          botUrl={botUrl}
+          newBadge={t("boostNewBadge")}
+          bullets={boostBullets}
+        />
 
         {/* ===== Stars narxlari ===== */}
         <section className="sec" id="stars-narx" style={{ paddingTop: 0 }}>
