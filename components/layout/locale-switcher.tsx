@@ -55,7 +55,8 @@ export function LocaleSwitcher() {
         aria-label={`${loc("switchAria")}: ${locale.toUpperCase()}`}
         onClick={() => setOpen((v) => !v)}
         className={[
-          "inline-flex items-center gap-2 rounded-xl border border-slate-200/90 bg-slate-100/70 px-2.5 py-2 shadow-inner shadow-slate-900/[0.04] ring-1 ring-slate-900/[0.03]",
+          "inline-flex items-center gap-1.5 rounded-xl border border-slate-200/90 bg-slate-100/70 px-2 py-2 shadow-inner shadow-slate-900/[0.04] ring-1 ring-slate-900/[0.03]",
+          "sm:gap-2 sm:px-2.5",
           "backdrop-blur-sm transition hover:bg-slate-100 dark:border-slate-600/60 dark:bg-slate-900/70 dark:shadow-black/20 dark:ring-white/[0.06] dark:hover:bg-slate-800/90",
           "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#229ED9]",
           open ? "ring-[#229ED9]/40 dark:ring-[#229ED9]/35" : "",

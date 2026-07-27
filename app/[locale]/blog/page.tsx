@@ -126,7 +126,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
           <p className="sec-sub">{t("blogSubtitle")}</p>
         </div>
 
-        <div className="rv" style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40 }} role="tablist">
+        <div className="blog-cat-filters rv" role="tablist">
           <FilterPill active={active === "hammasi"} href="/blog">
             {t("blogAll")}
           </FilterPill>

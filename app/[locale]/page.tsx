@@ -497,14 +497,7 @@ export default async function HomePage({ params }: PageProps) {
               <h2 className="h2">{t("starsTitle")}</h2>
               <p className="sec-sub">{t("starsLead", { price: money(STARS_PER_UNIT_UZS) })}</p>
             </div>
-            <div
-              className="rv"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill,minmax(150px,1fr))",
-                gap: 16,
-              }}
-            >
+            <div className="rv price-pack-grid">
               {STARS_PACKS.map((p, i) => (
                 <a
                   key={p.amount}
@@ -579,10 +572,7 @@ export default async function HomePage({ params }: PageProps) {
                 {t("premiumAutoBadge")}
               </span>
             </div>
-            <div
-              className="rv"
-              style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 16 }}
-            >
+            <div className="rv premium-pack-grid">
               {PREMIUM_PLANS.map((p, i) => (
                 <a
                   key={p.months}
@@ -614,10 +604,7 @@ export default async function HomePage({ params }: PageProps) {
               </h3>
               <span className="btag">{t("premiumLoginBadge")}</span>
             </div>
-            <div
-              className="rv"
-              style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 16 }}
-            >
+            <div className="rv premium-pack-grid">
               {PREMIUM_LOGIN_PLANS.map((p, i) => (
                 <a
                   key={p.months}

@@ -70,7 +70,7 @@ export function V2Footer({
           </div>
         </div>
       </div>
-      <div className="wrap mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.07] pt-7">
+      <div className="wrap mt-12 flex flex-col items-start gap-4 border-t border-white/[0.07] pt-7 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <span className="foot-muted">
           © {year} StarsPaymee · {labels.rights}
         </span>

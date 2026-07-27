@@ -34,19 +34,19 @@ export async function SiteHeader({
         : null;
 
   return (
-    <header className="relative z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80">
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-2 px-3 sm:h-28 sm:gap-3 sm:px-6 lg:gap-4">
+    <header className="site-header sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 pt-[env(safe-area-inset-top)] backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/90">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-3 sm:h-16 sm:gap-3 sm:px-6 lg:h-28 lg:gap-4">
         <Link
           href="/"
-          className="flex min-w-0 shrink-0 items-center gap-3 text-base font-semibold tracking-tight text-slate-900 sm:gap-3.5 sm:text-lg dark:text-white"
+          className="flex min-w-0 max-w-[58%] shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-tight text-slate-900 sm:max-w-none sm:gap-3 sm:text-base lg:gap-3.5 lg:text-lg dark:text-white"
         >
           <Image
             src="/logo-mark.png"
             alt={`${siteConfig.name} logotipi`}
             width={120}
             height={120}
-            sizes="(min-width: 640px) 120px, 100px"
-            className="h-[100px] w-[100px] shrink-0 object-contain drop-shadow-sm sm:h-[120px] sm:w-[120px]"
+            sizes="(min-width: 1024px) 120px, 44px"
+            className="h-11 w-11 shrink-0 object-contain drop-shadow-sm sm:h-14 sm:w-14 lg:h-[120px] lg:w-[120px]"
             loading="eager"
             fetchPriority="high"
           />
@@ -75,7 +75,10 @@ export async function SiteHeader({
           </nav>
           <LocaleSwitcher />
         </div>
-        <div className="flex shrink-0 items-center gap-2 sm:gap-2.5">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
+          <div className="lg:hidden">
+            <LocaleSwitcher />
+          </div>
           <MobileNavMenu
             highlight={mobileNavHighlight}
             botUrl={telegramBotUrl}
@@ -96,9 +99,6 @@ export async function SiteHeader({
               menuNavAria: n("menuNavAria"),
             }}
           />
-          <div className="hidden">
-            <LocaleSwitcher />
-          </div>
           <a
             href={telegramBotUrl}
             target="_blank"

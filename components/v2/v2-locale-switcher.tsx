@@ -46,7 +46,7 @@ export function V2LocaleSwitcher() {
         aria-controls={listId}
         aria-label={`${loc("switchAria")}: ${locale.toUpperCase()}`}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-[#A09AB8] transition hover:border-fuchsia-400/50 hover:text-white"
+        className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[11px] font-semibold uppercase tracking-wide text-[#A09AB8] transition hover:border-fuchsia-400/50 hover:text-white sm:gap-1.5 sm:px-3 sm:text-[12px]"
       >
         <Globe className="size-3.5 shrink-0" aria-hidden strokeWidth={2} />
         {locale.toUpperCase()}

@@ -106,7 +106,7 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
   const schemas = [webPageLd, breadcrumbLd, ...(productLd ? [productLd] : [])];
 
   return (
-    <main className="mx-auto max-w-3xl px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10">
+    <main className="mx-auto max-w-3xl px-4 pb-[max(6rem,env(safe-area-inset-bottom))] pt-6 sm:px-6 sm:pb-28 sm:pt-10">
       {schemas.map((s, i) => (
         <JsonLd key={i} data={s} />
       ))}

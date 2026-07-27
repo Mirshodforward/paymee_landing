@@ -1808,7 +1808,7 @@ html:not(.v2-js) .v2 .rv {
 /* Planshet va telefon uchun: nav-links yashirin, hamburger ko‘rinadi */
 @media (max-width: 900px) {
   html:has(.v2) {
-    scroll-padding-top: 96px;
+    scroll-padding-top: calc(88px + env(safe-area-inset-top));
   }
   .v2 .nav2 {
     width: min(1080px, calc(100% - 20px));
@@ -3037,3 +3037,220 @@ html:not(.v2-js) .v2 .rv {
   font-family: var(--mono2); font-weight: 800; color: #a78bfa; text-align: right;
 }
 
+/* ===================================================================
+   Mobil optimizatsiya (marketing + V2)
+   =================================================================== */
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Marketing header + drawer (stars/premium/gifts/blog) */
+.site-header {
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+}
+
+.mobile-nav-scrim {
+  top: calc(3.5rem + env(safe-area-inset-top));
+}
+
+@media (min-width: 640px) {
+  .mobile-nav-scrim {
+    top: calc(4rem + env(safe-area-inset-top));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-nav-scrim {
+    top: calc(7rem + env(safe-area-inset-top));
+  }
+}
+
+.mobile-nav-drawer {
+  top: calc(3.5rem + env(safe-area-inset-top));
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+@media (min-width: 640px) {
+  .mobile-nav-drawer {
+    top: calc(4rem + env(safe-area-inset-top));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-nav-drawer {
+    top: calc(7rem + env(safe-area-inset-top));
+  }
+}
+
+/* V2: notch / home indicator */
+.v2 .nav2 {
+  top: max(12px, env(safe-area-inset-top));
+}
+.v2 .nav2-drawer {
+  top: calc(76px + env(safe-area-inset-top));
+  max-height: calc(100dvh - 88px - env(safe-area-inset-bottom));
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
+.v2 .footer2 {
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+}
+
+/* Bosh sahifa narx panellari */
+.v2 .price-pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 132px), 1fr));
+  gap: 12px;
+}
+.v2 .premium-pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 14px;
+}
+
+/* Blog kategoriya pill — gorizontal scroll */
+.v2 .blog-cat-filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding: 4px 4px 10px;
+}
+.v2 .blog-cat-filters::-webkit-scrollbar {
+  display: none;
+}
+.v2 .blog-cat-filters .fpill {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .v2 .price-pack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .v2 .premium-pack-grid {
+    grid-template-columns: 1fr;
+  }
+  .v2 .nft-chips,
+  .v2 .nft-sort {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+  .v2 .nft-chips::-webkit-scrollbar,
+  .v2 .nft-sort::-webkit-scrollbar {
+    display: none;
+  }
+  .v2 .nft-chip,
+  .v2 .nft-sort span {
+    flex-shrink: 0;
+  }
+  .v2 .nft-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .v2 .nft-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .v2 .nft-title-row {
+    flex-wrap: wrap;
+  }
+  .v2 .nft-title-row strong {
+    font-size: 13px;
+  }
+  .v2 .boost-input-row {
+    flex-wrap: wrap;
+  }
+  .v2 .boost-input {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .v2 .blog-series {
+    padding: 18px 14px 8px;
+    border-radius: 18px;
+  }
+  .v2 .v2-blog-page {
+    padding-top: clamp(92px, 15vw, 120px);
+  }
+  .v2 .v2-blog-grid {
+    gap: 14px;
+    grid-template-columns: 1fr;
+  }
+  .v2 .nav2-links a:last-child {
+    display: none;
+  }
+  .v2 .kicker {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .v2 .nft-new-pill,
+  .v2 .boost-new-pill {
+    margin-left: 0;
+  }
+  .v2 .boost-blog-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 12px;
+  }
+  .v2 .boost-blog-price {
+    text-align: left;
+  }
+  .v2 .nft-blog-row {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .v2 .nft-blog-price {
+    grid-column: 1 / -1;
+    text-align: left;
+    padding-left: 52px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .v2 .logo2 > span:last-child {
+    font-size: 14px;
+    max-width: 10.5ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .v2 .nav2-actions .relative button {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .v2 .hero-h {
+    font-size: clamp(2rem, 9.5vw, 2.65rem);
+  }
+  .v2 .stat-num {
+    font-size: clamp(1.65rem, 7vw, 2rem);
+  }
+}
+
+/* AEO jadvallar — kichik ekranda gorizontal scroll */
+.v2 .prose-v2 table,
+.v2 .data-table-wrap {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

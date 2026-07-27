@@ -153,7 +153,7 @@ export function MobileNavMenu({
             type="button"
             aria-label={labels.menuClose}
             onClick={close}
-            className={`fixed inset-0 top-24 z-[60] bg-slate-950/55 transition-opacity duration-200 dark:bg-black/65 ${
+            className={`fixed inset-0 z-[60] bg-slate-950/55 transition-opacity duration-200 dark:bg-black/65 mobile-nav-scrim ${
               shown ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -162,7 +162,7 @@ export function MobileNavMenu({
             role="dialog"
             aria-modal="true"
             aria-label={labels.menuNavAria}
-            className={`fixed bottom-0 right-0 top-24 z-[61] flex w-[min(90vw,320px)] flex-col border-l border-slate-200/80 bg-white shadow-[-16px_0_60px_-15px_rgba(15,23,42,0.28)] transition-transform duration-200 ease-out dark:border-slate-700/70 dark:bg-slate-950 dark:shadow-black/50 sm:top-28 ${
+            className={`fixed bottom-0 right-0 z-[61] flex w-[min(92vw,340px)] max-w-full flex-col border-l border-slate-200/80 bg-white shadow-[-16px_0_60px_-15px_rgba(15,23,42,0.28)] transition-transform duration-200 ease-out dark:border-slate-700/70 dark:bg-slate-950 dark:shadow-black/50 mobile-nav-drawer ${
               shown ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -178,8 +178,8 @@ export function MobileNavMenu({
                   alt={`${siteConfig.name} logotipi`}
                   width={96}
                   height={96}
-                  sizes="96px"
-                  className="h-24 w-24 shrink-0 object-contain"
+                  sizes="64px"
+                  className="h-16 w-16 shrink-0 object-contain"
                 />
                 <div className="min-w-0">
                   <h2 className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">{siteConfig.name}</h2>

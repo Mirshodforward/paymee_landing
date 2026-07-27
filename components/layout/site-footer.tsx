@@ -12,7 +12,7 @@ export async function SiteFooter() {
 
   return (
     <footer className="border-t border-slate-200 bg-slate-900 py-14 text-slate-300 dark:border-slate-800">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:grid-cols-2 sm:gap-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-start">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 pb-[max(2rem,env(safe-area-inset-bottom))] sm:grid-cols-2 sm:gap-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-10">
         <div>
           <p className="text-lg font-bold text-white">{siteConfig.name}</p>
           <p className="mt-2 max-w-md text-sm leading-relaxed opacity-90">{f("tagline")}</p>

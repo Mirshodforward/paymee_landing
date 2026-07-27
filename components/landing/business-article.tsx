@@ -67,7 +67,7 @@ export async function BusinessArticle({ locale }: { locale: string }) {
   };
 
   return (
-    <main className="mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10">
+    <main className="mx-auto max-w-4xl px-4 pb-[max(6rem,env(safe-area-inset-bottom))] pt-6 sm:px-6 sm:pb-28 sm:pt-10">
       <JsonLd data={webPageLd} />
       <JsonLd data={breadcrumbLd} />
       <JsonLd data={serviceLd} />
