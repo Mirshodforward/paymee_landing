@@ -119,6 +119,16 @@ import { post as p117 } from "./posts/117-steam-balansi-tushmadi";
 import { post as p118 } from "./posts/118-steam-wallet-xavfsizmi";
 import { post as p119 } from "./posts/119-steam-hisobini-himoya-qilish-10-maslahat";
 import { post as p120 } from "./posts/120-steam-gift-card-nima";
+import { post as p121 } from "./posts/121-stars-olish";
+import { post as p122 } from "./posts/122-stars-sotib-olish";
+import { post as p123 } from "./posts/123-som-evaziga-stars-olish";
+import { post as p124 } from "./posts/124-telegram-yulduz-sotib-olish";
+import { post as p125 } from "./posts/125-yulduz-olish";
+import { post as p126 } from "./posts/126-visa-kartasiz-stars-olish";
+import { post as p127 } from "./posts/127-premium-olish";
+import { post as p128 } from "./posts/128-telegram-premium-sotib-olish";
+import { post as p129 } from "./posts/129-visa-kartasiz-premium-olish";
+import { post as p130 } from "./posts/130-bir-oylik-premium-olish";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -134,7 +144,8 @@ export const aeoPosts: AeoPost[] = [
   p90, p91, p92, p93, p94, p95, p96, p97, p98, p99,
   p100, p101, p102, p103, p104, p105, p106, p107, p108, p109,
   p110, p111, p112, p113, p114, p115, p116, p117, p118, p119,
-  p120,
+  p120, p121, p122, p123, p124, p125, p126, p127, p128, p129,
+  p130,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

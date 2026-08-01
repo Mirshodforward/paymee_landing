@@ -3085,6 +3085,20 @@ html:not(.v2-js) .v2 .rv {
 .v2 .boost-blog-price {
   font-family: var(--mono2); font-weight: 800; color: #a78bfa; text-align: right;
 }
+/* Ikki ustunli variant — Stars paketlari va Premium tariflari uchun.
+   Kichik ekranda ham ikki ustun qoladi: «50 ⭐» va narxni ajratib tashlash
+   o‘qishni yomonlashtiradi, ikkalasi 320px ga bemalol sig‘adi. */
+.v2 .boost-blog-board.cols-2 .boost-blog-row {
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+.v2 .boost-blog-board.cols-2 .boost-blog-price {
+  text-align: right;
+}
+.v2 .pack-hot {
+  font-style: normal;
+  color: #fbbf24;
+}
 
 /* ===================================================================
    Mobil optimizatsiya (marketing + V2)
