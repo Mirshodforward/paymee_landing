@@ -108,6 +108,17 @@ import { post as p106 } from "./posts/106-telegram-boost-narxlari";
 import { post as p107 } from "./posts/107-telegram-boost-avtomatik";
 import { post as p108 } from "./posts/108-arzon-telegram-boost";
 import { post as p109 } from "./posts/109-starspaymee-boost-market";
+import { post as p110 } from "./posts/110-ozbek-somida-steam-balansini-toldirish";
+import { post as p111 } from "./posts/111-steam-wallet-nima";
+import { post as p112 } from "./posts/112-steam-hisobini-qanday-toldirish-mumkin";
+import { post as p113 } from "./posts/113-steam-login-nima";
+import { post as p114 } from "./posts/114-steam-wallet-uzcard-orqali-toldirish";
+import { post as p115 } from "./posts/115-steam-wallet-humo-orqali-toldirish";
+import { post as p116 } from "./posts/116-steam-wallet-narxlari";
+import { post as p117 } from "./posts/117-steam-balansi-tushmadi";
+import { post as p118 } from "./posts/118-steam-wallet-xavfsizmi";
+import { post as p119 } from "./posts/119-steam-hisobini-himoya-qilish-10-maslahat";
+import { post as p120 } from "./posts/120-steam-gift-card-nima";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -122,6 +133,8 @@ export const aeoPosts: AeoPost[] = [
   p80, p81, p82, p83, p84, p85, p86, p87, p88, p89,
   p90, p91, p92, p93, p94, p95, p96, p97, p98, p99,
   p100, p101, p102, p103, p104, p105, p106, p107, p108, p109,
+  p110, p111, p112, p113, p114, p115, p116, p117, p118, p119,
+  p120,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

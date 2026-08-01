@@ -61,8 +61,14 @@ export async function generateMetadata({
       languages: altLocales,
     },
     robots: {
+      // Umumiy `robots` direktivasi — Yandex, Bing va AI kraulerlari (GPTBot,
+      // ClaudeBot, PerplexityBot) aynan shuni o‘qiydi. Cheklovsiz snippet va
+      // katta rasm — to‘liq iqtibos va rich natijalar uchun.
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
       googleBot: {
         index: true,
         follow: true,

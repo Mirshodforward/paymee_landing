@@ -1,6 +1,7 @@
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
+import { steamSeriesSlugs } from "@/lib/blog-aeo/steam-series";
 import type { BlogSlugInfo, BlogSummary } from "@/lib/blog/all";
 import { getSiteUrl } from "@/lib/site";
 
@@ -11,6 +12,7 @@ export const NEW_BLOG_SERIES_SLUGS = [
   ...telegramGrowthSeriesSlugs,
   ...nftGiftSeriesSlugs,
   ...boostSeriesSlugs,
+  ...steamSeriesSlugs,
 ] as const;
 
 export function isRecentBlogPost(dateModified: string, now = new Date()): boolean {

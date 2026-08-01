@@ -2,6 +2,7 @@ import { getBlogSummaries, getBlogCount } from "@/lib/blog/all";
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
+import { steamSeriesSlugs } from "@/lib/blog-aeo/steam-series";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { blogUrl, formatLlmsLine } from "@/lib/seo/blog-discoverability";
 
@@ -30,7 +31,7 @@ export function GET(): Response {
 
   const body = `# ${siteConfig.name}
 
-> ${siteConfig.name} — O'zbekistonda Telegram Stars, Premium, Gifts, virtual raqam, NFT Gift Market va kanal Boost ijarasi (so'mda to'lov). Buyurtma: @StarsPaymee_bot va Mini App, ~10 soniyada avtomatik yetkazish.
+> ${siteConfig.name} — O'zbekistonda Telegram Stars, Premium, Gifts, virtual raqam, NFT Gift Market, kanal Boost ijarasi va Steam Wallet balansini to'ldirish (so'mda to'lov). Buyurtma: @StarsPaymee_bot va Mini App, ~10 soniyada avtomatik yetkazish. Steam balansi UzCard/HUMO/Click/Payme orqali UZS da to'ldiriladi — Steam paroli so'ralmaydi.
 
 ## Machine discovery (AI & qidiruv)
 
@@ -50,6 +51,8 @@ Har bir AEO blogda: meta title/description, canonical, hreflang (uz/ru/en), Open
 - Gift Market (NFT kolleksion sovg'alar, so'm): ${base}/uz/blog/starspaymee-nft-market
 - Kanal Boost arenda (1–30 kun): ${base}/uz/blog/starspaymee-boost-market
 - Virtual raqam / SMS: ${base}/uz/blog/telegram-raqam-sotib-olish
+- Steam Wallet to'ldirish (UZS, UzCard/HUMO): ${base}/uz/blog/ozbek-somida-steam-balansini-toldirish
+- Business / API (Stars, Premium, Gifts API + Click va SBP integratsiyasi): ${base}/uz/business
 - Bot: https://t.me/StarsPaymee_bot
 - Support: https://t.me/StarsPaymeeSupport
 
@@ -60,6 +63,7 @@ ${recent30.map((p) => formatLlmsLine("uz", p)).join("\n")}
 ${sectionSeries("Seriya: Telegram raqam & xizmatlar (10)", telegramGrowthSeriesSlugs, uz, "uz")}
 ${sectionSeries("Seriya: Telegram NFT Gift Market (10)", nftGiftSeriesSlugs, uz, "uz")}
 ${sectionSeries("Seriya: Telegram Boost ijarasi (10)", boostSeriesSlugs, uz, "uz")}
+${sectionSeries("Seriya: Steam Wallet to'ldirish (11)", steamSeriesSlugs, uz, "uz")}
 
 ## Klassik qo'llanmalar (Stars / Premium)
 
