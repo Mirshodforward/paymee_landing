@@ -38,7 +38,7 @@ export async function SiteHeader({
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-3 sm:h-16 sm:gap-3 sm:px-6 lg:h-28 lg:gap-4">
         <Link
           href="/"
-          className="flex min-w-0 max-w-[58%] shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-tight text-slate-900 sm:max-w-none sm:gap-3 sm:text-base lg:gap-3.5 lg:text-lg dark:text-white"
+          className="flex min-w-0 max-w-[58%] shrink items-center gap-2.5 text-[15px] font-semibold tracking-tight text-slate-900 sm:max-w-none sm:gap-3 sm:text-base lg:gap-3.5 lg:text-lg dark:text-white"
         >
           <Image
             src="/logo-mark.png"

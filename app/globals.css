@@ -196,6 +196,8 @@ body {
 
   position: relative;
   min-height: 100vh;
+  /* Mobil brauzerlarda URL paneli 100vh’ni «sakratadi» — svh barqarorroq */
+  min-height: 100svh;
   overflow-x: clip;
   background: var(--void);
   color: var(--text);
@@ -1702,6 +1704,43 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   margin: 0;
 }
 
+/* Blog kartochkasi ichi — o‘lchamlar breakpointlarda sozlanadi */
+.v2 .bcard-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.v2 .bcard-date {
+  font-family: var(--mono2);
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.v2 .bcard-title {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.v2 .bcard-excerpt {
+  flex: 1;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.v2 .bcard-more {
+  color: var(--fuch);
+  margin-top: 18px;
+}
+.v2 .blog-total {
+  margin-top: 44px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
 /* ===== Reveal variantlari ===== */
 .v2 .rv {
   opacity: 1;
@@ -2316,7 +2355,7 @@ html:not(.v2-js) .v2 .rv {
 /* Info-grid (use-case / xususiyat kartochkalari) */
 .v2 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   gap: 14px;
   margin: 1.6em 0;
 }
@@ -2592,6 +2631,10 @@ html:not(.v2-js) .v2 .rv {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.04);
+}
+/* 1fr ustun grid ichida kontentdan kichrayolmaydi — min-width: 0 buni ochadi */
+.v2 .tn-meta {
+  min-width: 0;
 }
 .v2 .tn-code {
   font-family: var(--disp);
@@ -2905,6 +2948,9 @@ html:not(.v2-js) .v2 .rv {
   padding: 12px 14px;
   border-bottom: 1px solid var(--line);
 }
+.v2 .nft-blog-row > * {
+  min-width: 0;
+}
 .v2 .nft-blog-row.feat {
   background: rgba(245, 158, 11, 0.06);
 }
@@ -3029,6 +3075,9 @@ html:not(.v2-js) .v2 .rv {
 .v2 .boost-blog-row {
   display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 8px;
   padding: 10px 14px; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.v2 .boost-blog-row > * {
+  min-width: 0;
 }
 .v2 .boost-blog-cols {
   font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700;
@@ -3253,4 +3302,263 @@ body {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+/* ===================================================================
+   TO‘LIQ MOBIL MOSLASHUVCHANLIK
+   Tartib: matn → teginish nishoni → teginish javobi → gorizontal
+   lenta → jadval → kichik ekran → yotiq ekran → mobil GPU
+   =================================================================== */
+
+/* --- 1. Matn: iOS avto-kattalashtirish va uzilmas satrlar --- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* URL, slug, @username kabi uzun uzilmas satrlar konteynerdan chiqmasin */
+.v2 .prose-v2,
+.v2 .bcard,
+.v2 .blog-series-card,
+.v2 .answer-box,
+.v2 .info-card,
+.v2 .aeo-faq,
+.v2 .tn-name,
+.v2 .footer2 a {
+  overflow-wrap: break-word;
+}
+.v2 .hero-h,
+.v2 .h2,
+.v2 .h3,
+.v2 .prose-v2 h2,
+.v2 .prose-v2 h3 {
+  overflow-wrap: break-word;
+}
+
+/* --- 1b. Navigatsiya hech qachon ekrandan chiqmasin ---
+   Logotip matni birinchi bo‘lib qisqaradi; til tanlagich, CTA va burger
+   har doim ko‘rinib turadi (avval 320–360px’da burger kesilib qolardi). */
+.v2 .nav2-in {
+  min-width: 0;
+}
+.v2 .nav2 .logo2 {
+  min-width: 0;
+  flex: 0 1 auto;
+}
+.v2 .nav2 .logo2 > span:last-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.v2 .nav2-actions {
+  min-width: max-content;
+}
+
+/* --- 2. Teginish nishonlari: barmoq uchun kamida 44px --- */
+@media (pointer: coarse) {
+  .v2 .fpill,
+  .v2 .btn-sm,
+  .v2 .nav2-cta,
+  .v2 .bp {
+    min-height: 44px;
+  }
+  .v2 .nav2-burger {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  /* Til tanlagich — V2 va marketing sahifalarida bir xil balandlik */
+  .v2 .nav2-actions .relative > button,
+  .site-header .relative > button {
+    min-height: 44px;
+  }
+  .v2 .nav2-drawer-links a {
+    min-height: 48px;
+  }
+  .v2 .aeo-faq summary,
+  .v2 .faq-q {
+    min-height: 48px;
+  }
+  /* Zich ustundagi va matn qatoridagi havolalar — bosish maydoni kengroq */
+  .v2 .footer2 a:not(.logo2),
+  .site-footer-main a {
+    display: inline-block;
+    padding-block: 5px;
+  }
+  .v2 nav[aria-label="Breadcrumb"] a,
+  .site-header + * nav[aria-label="Breadcrumb"] a,
+  .v2 a.prod-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+  }
+}
+
+/* --- 3. Teginishda hover holati «yopishib qolmasin» --- */
+@media (hover: none) {
+  .v2 .bcard:hover,
+  .v2 .cell:hover,
+  .v2 .prod:hover,
+  .v2 .fpill:hover,
+  .v2 .bp:hover,
+  .v2 .blog-series-card:hover,
+  .v2 .info-card:hover {
+    transform: none;
+  }
+  .v2 .bcard:hover,
+  .v2 .cell:hover,
+  .v2 .prod:hover {
+    box-shadow: none;
+    border-color: var(--line);
+  }
+  .v2 .spot:hover::after {
+    opacity: 0;
+  }
+  .v2 .sheen:hover::after {
+    transform: translateX(-130%);
+  }
+  /* Hover o‘rniga — bosishda aniq, qisqa javob */
+  .v2 .bcard:active,
+  .v2 .prod:active,
+  .v2 .blog-series-card:active,
+  .v2 .cell:active,
+  .v2 .fpill:active,
+  .v2 .btn:active {
+    transform: scale(0.985);
+    transition-duration: 0.1s;
+  }
+}
+.v2 a,
+.v2 button,
+.v2 summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- 4. Kategoriya lentasi: snap + davom etayotganini ko‘rsatuvchi chekka --- */
+.v2 .blog-cat-filters {
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 4px;
+}
+.v2 .blog-cat-filters .fpill {
+  scroll-snap-align: start;
+}
+@media (max-width: 720px) {
+  /* O‘ng chekka so‘nadi — ro‘yxat ekrandan tashqarida davom etadi.
+     Qo‘shimcha padding tufayli so‘nish oxirida matn emas, bo‘sh joy qoladi. */
+  .v2 .blog-cat-filters {
+    padding-right: 26px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent 100%);
+    mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent 100%);
+  }
+}
+
+/* --- 5. Jadvallar: kichik ekranda o‘qilishi --- */
+@media (max-width: 560px) {
+  .v2 .cmp table {
+    font-size: 0.86rem;
+  }
+  .v2 .cmp th,
+  .v2 .cmp td {
+    padding: 10px 12px;
+  }
+  .v2 .prose-v2 table,
+  .v2 .data-table-wrap,
+  .v2 .cmp {
+    overscroll-behavior-x: contain;
+  }
+}
+
+/* --- 6. Kichik ekran: blog ro‘yxati va maqola --- */
+@media (max-width: 560px) {
+  .v2 .bcard-title {
+    font-size: 17.5px;
+  }
+  .v2 .bcard-excerpt {
+    font-size: 13.5px;
+  }
+  .v2 .bcard-meta {
+    margin-bottom: 13px;
+  }
+  .v2 .bcard-more {
+    margin-top: 15px;
+  }
+  .v2 .blog-total {
+    margin-top: 34px;
+  }
+  /* Kichik ekranda 10.5px belgi juda mayda — 11px o‘qilishi sezilarli yaxshi */
+  .v2 .btag {
+    font-size: 11px;
+  }
+  .v2 .inline-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .v2 .inline-cta .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .v2 .wrap {
+    padding: 0 14px;
+  }
+  /* Til tanlagichdagi chevron — bu kenglikda o‘rin qimmat, «UZ» yetarli */
+  .v2 .nav2-actions .relative > button > svg:last-child {
+    display: none;
+  }
+  .v2 .bcard {
+    padding: 18px 16px;
+    border-radius: 20px;
+  }
+  .v2 .fpill {
+    padding-inline: 14px;
+    font-size: 13px;
+  }
+  .v2 .btag {
+    letter-spacing: 1.1px;
+  }
+  .v2 .blog-series-card {
+    padding: 14px 15px;
+  }
+}
+
+/* --- 7. Yotiq telefon: balandlik cheklangan --- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .v2 .v2-blog-page {
+    padding-top: 92px;
+  }
+  .v2 .hero {
+    padding-top: 96px;
+  }
+  .v2 .sec {
+    padding: 48px 0;
+  }
+  .v2 .nav2-drawer {
+    max-height: calc(100dvh - 72px - env(safe-area-inset-bottom));
+  }
+}
+
+/* --- 8. Mobil GPU: og‘ir blur qatlamlarini yengillashtirish --- */
+@media (max-width: 720px) {
+  .v2 .blob {
+    filter: blur(46px);
+    opacity: 0.32;
+  }
+  .v2 .stage::before {
+    width: 380px;
+    height: 380px;
+    filter: blur(52px);
+  }
+  .v2 .cta-final::before {
+    width: 420px;
+    height: 420px;
+    filter: blur(56px);
+  }
+  /* Deyarli shaffof fon ustidagi backdrop-blur mobil uchun sezilmaydi */
+  .v2 .hero-badge,
+  .v2 .btn-ghost,
+  .v2 .stats-wrap {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }

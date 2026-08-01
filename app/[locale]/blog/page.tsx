@@ -51,9 +51,6 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
   const resolved = await searchParams;
   const active = normalizeCat(resolved?.cat);
   const listed = getBlogSummariesByCategory(locale, active);
-  const series = getGrowthSeriesSummaries(locale);
-  const nftSeries = getNftGiftSeriesSummaries(locale);
-  const boostSeries = getBoostSeriesSummaries(locale);
   const base = getSiteUrl();
 
   const t = await getTranslations("v2");
@@ -77,6 +74,9 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
     })),
   };
 
+  // Seriyalar ro‘yxatda alohida blok sifatida chiqmaydi — har bir maqola
+  // umumiy panjarada o‘z kartochkasi bilan turadi. ItemList faqat qidiruv
+  // tizimlari uchun ichki bog‘lanish signali sifatida qoladi.
   const seriesItemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -111,7 +111,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
         <nav
           aria-label="Breadcrumb"
           className="rv"
-          style={{ display: "flex", gap: 8, alignItems: "center", fontSize: 13.5, color: "var(--muted)" }}
+          style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center", fontSize: 13.5, color: "var(--muted)" }}
         >
           <Link href="/" style={{ transition: "color .25s" }}>
             {t("blogHome")}
@@ -137,83 +137,6 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
           ))}
         </div>
 
-        {active === "hammasi" && series.length > 0 ? (
-          <div className="blog-series rv" style={{ marginBottom: 40 }}>
-            <div className="kicker">{t("blogSeriesBadge")}</div>
-            <h2 className="h3" style={{ marginTop: 8, marginBottom: 6 }}>
-              {t("blogSeriesTitle")}
-            </h2>
-            <p className="sec-sub" style={{ marginBottom: 0, fontSize: 14, maxWidth: 720 }}>
-              {t("blogSeriesSubtitle")}
-            </p>
-            <ul className="blog-series-grid" style={{ listStyle: "none", padding: 0, marginTop: 18 }}>
-              {series.map((post) => (
-                <li key={post.slug}>
-                  <Link href={`/blog/${post.slug}`} className="blog-series-card">
-                    <h3>{post.title}</h3>
-                    <p>{post.excerpt}</p>
-                    <span className="prod-link" style={{ color: "var(--fuch)" }}>
-                      {t("blogRead")} <ArrowIcon />
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-
-        {active === "hammasi" && nftSeries.length > 0 ? (
-          <div className="blog-series rv" style={{ marginBottom: 40, borderColor: "rgba(245,158,11,0.35)" }}>
-            <div className="kicker">
-              {t("blogNftSeriesBadge")}
-            </div>
-            <h2 className="h3" style={{ marginTop: 8, marginBottom: 6 }}>
-              {t("blogNftSeriesTitle")}
-            </h2>
-            <p className="sec-sub" style={{ marginBottom: 0, fontSize: 14, maxWidth: 720 }}>
-              {t("blogNftSeriesSubtitle")}
-            </p>
-            <ul className="blog-series-grid" style={{ listStyle: "none", padding: 0, marginTop: 18 }}>
-              {nftSeries.map((post) => (
-                <li key={post.slug}>
-                  <Link href={`/blog/${post.slug}`} className="blog-series-card">
-                    <h3>{post.title}</h3>
-                    <p>{post.excerpt}</p>
-                    <span className="prod-link" style={{ color: "var(--fuch)" }}>
-                      {t("blogRead")} <ArrowIcon />
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-
-        {active === "hammasi" && boostSeries.length > 0 ? (
-          <div className="blog-series rv" style={{ marginBottom: 40, borderColor: "rgba(139,92,246,0.4)" }}>
-            <div className="kicker">{t("blogBoostSeriesBadge")}</div>
-            <h2 className="h3" style={{ marginTop: 8, marginBottom: 6 }}>
-              {t("blogBoostSeriesTitle")}
-            </h2>
-            <p className="sec-sub" style={{ marginBottom: 0, fontSize: 14, maxWidth: 720 }}>
-              {t("blogBoostSeriesSubtitle")}
-            </p>
-            <ul className="blog-series-grid" style={{ listStyle: "none", padding: 0, marginTop: 18 }}>
-              {boostSeries.map((post) => (
-                <li key={post.slug}>
-                  <Link href={`/blog/${post.slug}`} className="blog-series-card">
-                    <h3>{post.title}</h3>
-                    <p>{post.excerpt}</p>
-                    <span className="prod-link" style={{ color: "var(--fuch)" }}>
-                      {t("blogRead")} <ArrowIcon />
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-
         <ul className="v2-blog-grid">
           {listed.map((post, i) => (
             <li key={post.slug} style={{ height: "100%" }}>
@@ -222,23 +145,15 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
                 className="bcard rv spot"
                 style={{ "--d": `${Math.min(i, 6) * 0.05}s` } as CSSProperties}
               >
-                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginBottom: 16 }}>
+                <div className="bcard-meta">
                   <span className="btag">{tc(post.category)}</span>
-                  <time
-                    dateTime={post.datePublished}
-                    style={{ fontFamily: "var(--mono2)", fontSize: 11.5, color: "var(--muted)" }}
-                  >
+                  <time dateTime={post.datePublished} className="bcard-date">
                     {post.datePublished}
                   </time>
                 </div>
-                <h2
-                  className="h3"
-                  style={{ fontFamily: "var(--disp)", fontWeight: 700, fontSize: 19, lineHeight: 1.3, marginBottom: 10 }}
-                >
-                  {post.title}
-                </h2>
-                <p style={{ flex: 1, color: "var(--muted)", fontSize: 14, lineHeight: 1.6 }}>{post.excerpt}</p>
-                <span className="prod-link" style={{ color: "var(--fuch)", marginTop: 18 }}>
+                <h2 className="h3 bcard-title">{post.title}</h2>
+                <p className="bcard-excerpt">{post.excerpt}</p>
+                <span className="prod-link bcard-more">
                   {t("blogRead")} <ArrowIcon />
                 </span>
               </Link>
@@ -246,9 +161,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
           ))}
         </ul>
 
-        <p style={{ marginTop: 44, textAlign: "center", color: "var(--muted)", fontSize: 13.5 }}>
-          {t("blogTotal", { count: getBlogCount() })}
-        </p>
+        <p className="blog-total">{t("blogTotal", { count: getBlogCount() })}</p>
       </div>
     </section>
   );

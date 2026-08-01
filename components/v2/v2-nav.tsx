@@ -44,6 +44,16 @@ export function V2Nav({
   useEffect(() => setMounted(true), []);
   useEffect(() => setOpen(false), [pathname]);
 
+  /**
+   * Drawer `.v2` ildizi ichiga portal qilinadi — `document.body`ga emas.
+   * Barcha `.nav2-drawer` / `.nav2-scrim` uslublari va dizayn tokenlari
+   * (`--line2`, `--grad`, `--disp` …) `.v2` ostida scoped: body’ga portal
+   * qilinganda ular mos kelmay, menyu umuman uslubsiz chiqib ketardi.
+   */
+  const portalTarget = mounted
+    ? document.querySelector<HTMLElement>(".v2") ?? document.body
+    : null;
+
   useEffect(() => {
     if (!open) return;
     const prev = document.documentElement.style.overflow;
@@ -156,7 +166,7 @@ export function V2Nav({
         </div>
       </header>
 
-      {mounted && open
+      {portalTarget && open
         ? createPortal(
             <>
               <button
@@ -212,7 +222,7 @@ export function V2Nav({
                 </a>
               </div>
             </>,
-            document.body,
+            portalTarget,
           )
         : null}
     </>

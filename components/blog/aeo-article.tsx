@@ -191,7 +191,7 @@ export async function AeoArticle({
             <h2 id="aeo-related" className="h3" style={{ fontFamily: "var(--disp)", fontWeight: 700, fontSize: 19, marginBottom: 16 }}>
               {labels.relatedHeading}
             </h2>
-            <ul style={{ listStyle: "none", display: "grid", gap: 14, padding: 0, gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))" }}>
+            <ul style={{ listStyle: "none", display: "grid", gap: 14, padding: 0, gridTemplateColumns: "repeat(auto-fill,minmax(min(100%,260px),1fr))" }}>
               {related.map((r, i) => (
                 <li key={r.slug} style={{ height: "100%" }}>
                   <Link
