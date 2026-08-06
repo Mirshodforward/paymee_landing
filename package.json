@@ -10,6 +10,7 @@
     "verify:seo": "node scripts/verify-blog-seo.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "lottie-web": "^5.13.0",
     "lucide-react": "^1.14.0",
     "next": "16.2.4",
