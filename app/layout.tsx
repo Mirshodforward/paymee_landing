@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Syne, Space_Mono } from "next/font/google";
 import { headers } from "next/headers";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getSiteUrl, SITE_VERIFICATION } from "@/lib/site";
 import "./globals.css";
 
@@ -74,7 +76,13 @@ export default async function RootLayout({
         href="/rss.xml"
       />
       <link rel="author" type="text/plain" title="LLMs.txt" href="/llms.txt" />
-      <body className="min-h-screen bg-background font-sans text-foreground">{children}</body>
+      <body className="min-h-screen bg-background font-sans text-foreground">
+        {children}
+        {/* Vercel Web Analytics — tashriflar va sahifa ko‘rishlarini sanaydi. */}
+        <Analytics />
+        {/* Speed Insights — real foydalanuvchilarda Core Web Vitals (LCP/CLS/INP). */}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
