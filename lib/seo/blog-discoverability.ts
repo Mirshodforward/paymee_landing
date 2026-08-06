@@ -1,6 +1,7 @@
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
+import { starsPremiumGuideSeriesSlugs } from "@/lib/blog-aeo/stars-premium-guide-series";
 import { starsPremiumSeriesSlugs } from "@/lib/blog-aeo/stars-premium-series";
 import { steamSeriesSlugs } from "@/lib/blog-aeo/steam-series";
 import type { BlogSlugInfo, BlogSummary } from "@/lib/blog/all";
@@ -15,6 +16,7 @@ export const NEW_BLOG_SERIES_SLUGS = [
   ...boostSeriesSlugs,
   ...steamSeriesSlugs,
   ...starsPremiumSeriesSlugs,
+  ...starsPremiumGuideSeriesSlugs,
 ] as const;
 
 /**

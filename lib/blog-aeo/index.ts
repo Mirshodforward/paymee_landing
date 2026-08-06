@@ -129,6 +129,26 @@ import { post as p127 } from "./posts/127-premium-olish";
 import { post as p128 } from "./posts/128-telegram-premium-sotib-olish";
 import { post as p129 } from "./posts/129-visa-kartasiz-premium-olish";
 import { post as p130 } from "./posts/130-bir-oylik-premium-olish";
+import { post as p131 } from "./posts/131-telegram-stars-qanday-olinadi";
+import { post as p132 } from "./posts/132-telegram-stars-kerak";
+import { post as p133 } from "./posts/133-telegram-yulduz-kerak";
+import { post as p134 } from "./posts/134-stars-olish-tez-usul";
+import { post as p135 } from "./posts/135-telegram-stars-narxi";
+import { post as p136 } from "./posts/136-stars-orqali-sovga-yuborish";
+import { post as p137 } from "./posts/137-telegram-botlar-uchun-stars";
+import { post as p138 } from "./posts/138-telegram-stars-kartasiz-sotib-olish";
+import { post as p139 } from "./posts/139-telegram-premium-kerak";
+import { post as p140 } from "./posts/140-telegram-premium-narxi";
+import { post as p141 } from "./posts/141-telegram-premium-imkoniyatlari";
+import { post as p142 } from "./posts/142-premium-va-oddiy-hisob-farqi";
+import { post as p143 } from "./posts/143-arzon-telegram-premium";
+import { post as p144 } from "./posts/144-telegram-premium-sovga-qilish";
+import { post as p145 } from "./posts/145-stars-va-premium-farqi";
+import { post as p146 } from "./posts/146-telegram-stars-xavfsizmi";
+import { post as p147 } from "./posts/147-ozbekistonda-telegram-stars-sotib-olish";
+import { post as p148 } from "./posts/148-telegram-premium-fayl-yuklash";
+import { post as p149 } from "./posts/149-kanal-egalari-uchun-stars";
+import { post as p150 } from "./posts/150-ishonchli-stars-xizmatini-tanlash";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -145,7 +165,9 @@ export const aeoPosts: AeoPost[] = [
   p100, p101, p102, p103, p104, p105, p106, p107, p108, p109,
   p110, p111, p112, p113, p114, p115, p116, p117, p118, p119,
   p120, p121, p122, p123, p124, p125, p126, p127, p128, p129,
-  p130,
+  p130, p131, p132, p133, p134, p135, p136, p137, p138, p139,
+  p140, p141, p142, p143, p144, p145, p146, p147, p148, p149,
+  p150,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

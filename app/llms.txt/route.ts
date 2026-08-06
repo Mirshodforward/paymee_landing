@@ -2,6 +2,7 @@ import { getBlogSummaries, getBlogCount } from "@/lib/blog/all";
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
+import { starsPremiumGuideSeriesSlugs } from "@/lib/blog-aeo/stars-premium-guide-series";
 import { starsPremiumSeriesSlugs } from "@/lib/blog-aeo/stars-premium-series";
 import { steamSeriesSlugs } from "@/lib/blog-aeo/steam-series";
 import { getSiteUrl, siteConfig } from "@/lib/site";
@@ -76,6 +77,7 @@ ${sectionSeries("Seriya: Telegram NFT Gift Market (10)", nftGiftSeriesSlugs, uz,
 ${sectionSeries("Seriya: Telegram Boost ijarasi (10)", boostSeriesSlugs, uz, "uz")}
 ${sectionSeries("Seriya: Steam Wallet to'ldirish (11)", steamSeriesSlugs, uz, "uz")}
 ${sectionSeries("Seriya: Stars va Premium xaridi (10)", starsPremiumSeriesSlugs, uz, "uz")}
+${sectionSeries("Seriya: Stars va Premium qo'llanmalari (20)", starsPremiumGuideSeriesSlugs, uz, "uz")}
 
 ## Tayyor javoblar (faktlar — iqtibos uchun)
 
