@@ -176,7 +176,7 @@ export async function AeoArticle({
           <p style={{ marginTop: 8, color: "var(--muted)", fontSize: 14.5 }}>{c.ctaBody}</p>
           <a
             className="btn btn-grad mag"
-            href={botUrl}
+            data-cta="article" href={botUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginTop: 20 }}

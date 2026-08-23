@@ -5,11 +5,57 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Viewport } from "next";
+import { Geist, Syne, Space_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { TelegramClickTracker } from "@/components/analytics/telegram-click-tracker";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing } from "@/i18n/routing";
-import { getSiteUrl, getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import {
+  getSiteUrl,
+  getTelegramBotUrl,
+  getTelegramSupportUrl,
+  siteConfig,
+  SITE_VERIFICATION,
+} from "@/lib/site";
+import "../globals.css";
 
 const brandLogoPath = "/logo-512.png";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+// V2 «Aurora» dizayni uchun display va mono fontlar.
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
+
+/** HTML `lang` atributi uchun til kodi. */
+function htmlLangFor(locale: string): string {
+  return locale === "ru" ? "ru" : locale === "en" ? "en" : "uz";
+}
+
+/** Faqat to‘ldirilgan kodlar uchun verification meta-teglarini chiqaradi. */
+function buildVerification(): Metadata["verification"] {
+  const v: NonNullable<Metadata["verification"]> = {};
+  if (SITE_VERIFICATION.google) v.google = SITE_VERIFICATION.google;
+  if (SITE_VERIFICATION.yandex) v.yandex = SITE_VERIFICATION.yandex;
+  if (SITE_VERIFICATION.bing) v.other = { "msvalidate.01": SITE_VERIFICATION.bing };
+  return v;
+}
 
 export const viewport: Viewport = {
   themeColor: [
@@ -100,6 +146,17 @@ export async function generateMetadata({
     category: "finance",
     authors: [{ name: siteConfig.name, url: siteUrl }],
     creator: siteConfig.name,
+    verification: buildVerification(),
+    icons: {
+      icon: [
+        { url: "/logo-32.png", type: "image/png", sizes: "32x32" },
+        { url: "/logo-48.png", type: "image/png", sizes: "48x48" },
+        { url: "/logo-128.png", type: "image/png", sizes: "128x128" },
+        { url: "/logo-512.png", type: "image/png", sizes: "512x512" },
+      ],
+      apple: [{ url: "/apple-icon-180.png", type: "image/png", sizes: "180x180" }],
+      shortcut: "/logo-128.png",
+    },
   };
 }
 
@@ -165,9 +222,30 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <JsonLd data={rootGraphLd} />
-      {children}
-    </NextIntlClientProvider>
+    <html
+      lang={htmlLangFor(locale)}
+      className={`${geistSans.variable} ${syne.variable} ${spaceMono.variable} scroll-smooth antialiased`}
+    >
+      {/* RSS discovery — React 19 buni <head> ga ko‘taradi (barcha sahifalarda). */}
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="StarsPaymee — Blog"
+        href="/rss.xml"
+      />
+      <link rel="author" type="text/plain" title="LLMs.txt" href="/llms.txt" />
+      <body className="min-h-screen bg-background font-sans text-foreground">
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <JsonLd data={rootGraphLd} />
+          {children}
+        </NextIntlClientProvider>
+        {/* Vercel Web Analytics — tashriflar va sahifa ko‘rishlarini sanaydi. */}
+        <Analytics />
+        {/* Botga bosishlarni konversiya hodisasi sifatida yozadi. */}
+        <TelegramClickTracker />
+        {/* Speed Insights — real foydalanuvchilarda Core Web Vitals (LCP/CLS/INP). */}
+        <SpeedInsights />
+      </body>
+    </html>
   );
 }

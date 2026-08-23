@@ -1,7 +1,6 @@
 {
   "seo": {
-    "titleDefault": "StarsPaymee",
-    "titleTemplate": "%s · StarsPaymee",
+    "titleDefault": "Telegram Stars и Premium — дёшево, за 10 секунд | StarsPaymee",
     "description": "Telegram Stars, Premium и подарки в Узбекистане — доставка автоматически за 10 секунд. Оплата Click, Payme, Paynet, UzCard, HUMO. Самые низкие цены.",
     "ogLocale": "ru_RU",
     "keywordsList": [
@@ -245,7 +244,7 @@
       "business": "Business"
     },
     "stars": {
-      "metaTitle": "Купить Telegram Stars — дёшево, за 10 секунд | StarsPaymee",
+      "metaTitle": "Купить Telegram Stars — дёшево, за 10 секунд",
       "metaDescription": "Купить Telegram Stars в Узбекистане: от 220 сум за штуку, 50 шт. — 11 000 сум. Оплата Click, Payme, UzCard, HUMO. Автодоставка за 10 секунд.",
       "h1": "Купить Telegram Stars",
       "intro": "Покупайте Telegram Stars в Узбекистане по самой низкой цене через StarsPaymee. Звезда от 220 сум, базовый пакет 50 звёзд — 11 000 сум. Заказ оформляется в @StarsPaymee_bot и доставляется автоматически в среднем за 10 секунд.",
@@ -258,7 +257,7 @@
       "footnote": "Цена зависит от выбранного количества звёзд. Точную сумму вы увидите в @StarsPaymee_bot или Mini App."
     },
     "premium": {
-      "metaTitle": "Купить Telegram Premium — 3/6/12 мес, дёшево | StarsPaymee",
+      "metaTitle": "Купить Telegram Premium — 3/6/12 мес, дёшево",
       "metaDescription": "Telegram Premium: 3 мес 172 000, 6 мес 232 000, 12 мес 422 000 сум. По username активируется автоматически за 10 секунд, без входа в аккаунт.",
       "h1": "Купить Telegram Premium",
       "intro": "Оформите подписку Telegram Premium в Узбекистане по низкой цене: 3 месяца 172 000, 6 месяцев 232 000, 12 месяцев 422 000 сум. В потоке «по username» вход в аккаунт не нужен — Premium активируется автоматически за 10 секунд. Есть и отдельная услуга «со входом в аккаунт» (1 мес 50 000, 1 год 300 000 сум).",
@@ -271,7 +270,7 @@
       "footnote": "В потоке по username достаточно @username. Поток со входом — отдельная услуга."
     },
     "gifts": {
-      "metaTitle": "Отправить уникальные подарки Telegram — анонимно | StarsPaymee",
+      "metaTitle": "Отправить уникальные подарки Telegram — анонимно",
       "metaDescription": "Покупайте уникальные подарки Telegram или отправляйте друзьям. Анонимно или с поздравлением. Оплата в сумах, просто и надёжно.",
       "h1": "Отправка подарков Telegram",
       "intro": "Покупайте уникальные подарки Telegram себе или отправляйте друзьям через StarsPaymee. Подарок можно отправить анонимно или с поздравительным комментарием. Оплата в сумах — Click, Payme, UzCard, HUMO.",
@@ -284,7 +283,7 @@
       "footnote": "Список доступных подарков и цены показываются в @StarsPaymee_bot или Mini App."
     },
     "about": {
-      "metaTitle": "О нас — сервис Telegram Stars и Premium StarsPaymee",
+      "metaTitle": "О нас — сервис Telegram Stars и Premium",
       "metaDescription": "StarsPaymee — больше года, 4000+ пользователей и 100 000+ заказов. Надёжный сервис Telegram Stars, Premium и подарков в Узбекистане.",
       "h1": "О нас",
       "intro": "StarsPaymee — быстрый, дешёвый и надёжный сервис покупки Telegram Stars, Premium и подарков в Узбекистане. Apple/Google, Fragment и официальный @PremiumBot не принимают карты Узбекистана (UzCard/HUMO) — мы закрываем именно этот пробел через локальные платёжные системы. Заказ оформляется в @StarsPaymee_bot или Telegram Mini App: указываете username, оплачиваете — и заказ доставляется автоматически в среднем за 10 секунд. За более чем год мы доставили свыше 100 000 заказов более чем 4000 пользователям.",
@@ -300,7 +299,7 @@
       "footnote": "По вопросам пишите в @StarsPaymeeSupport — поддержка ответит быстро. Если заказ не доставлен по технической причине, оплата возвращается полностью."
     },
     "business": {
-      "metaTitle": "StarsPaymee Business — Telegram Stars API, интеграция Click и SBP",
+      "metaTitle": "Business — Telegram Stars API, интеграция Click и СБП",
       "metaDescription": "StarsPaymee Business: API Telegram Stars, Premium и Gifts, официальная интеграция Click, оплата SBP (рубли), White Label и программа реселлера. Подключите к боту или сайту одним ключом.",
       "kicker": "Business / API",
       "h1": "StarsPaymee Business — API и платёжные интеграции",
@@ -512,6 +511,8 @@
     "footerRights": "Автоматически, быстро, надёжно",
     "blogBadge": "Блог",
     "blogTitle": "Блог",
+    "blogH1": "Руководства по Telegram Stars и Premium",
+    "blogMetaTitle": "Руководства по Telegram Stars и Premium",
     "blogSubtitle": "Руководства по Telegram Stars, Premium и подаркам — оплата картой, цены и безопасность в Узбекистане.",
     "blogAll": "Все",
     "blogRead": "Читать",

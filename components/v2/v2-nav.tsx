@@ -135,7 +135,7 @@ export function V2Nav({
             <V2LocaleSwitcher />
             <a
               className="btn btn-grad btn-sm mag nav2-cta"
-              href={botUrl}
+              data-cta="nav" href={botUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={labels.openBot}
@@ -212,7 +212,7 @@ export function V2Nav({
                 </nav>
                 <a
                   className="btn btn-grad mag nav2-drawer-cta"
-                  href={botUrl}
+                  data-cta="nav" href={botUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}

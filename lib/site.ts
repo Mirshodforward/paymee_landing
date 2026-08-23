@@ -1,5 +1,12 @@
-/** Yakuniy sayt manzili (envsiz, loyiha konfiguratsiyasi). Trailing slash qo‘shilmaydi. */
-export const SITE_URL_PUBLIC = "https://starstg.uz";
+/**
+ * Yakuniy sayt manzili (envsiz, loyiha konfiguratsiyasi). Trailing slash qo‘shilmaydi.
+ *
+ * MUHIM: bu qiymat saytga xizmat qilayotgan host bilan aynan bir xil bo‘lishi shart.
+ * Vercel apex domenni (starstg.uz) www‘ga yo‘naltiradi, shuning uchun kanonik host — www.
+ * Nomuvofiqlik sitemapdagi har bir manzilni redirect‘ga aylantiradi va Google ularni
+ * «Page with redirect» deb indeksdan chiqaradi.
+ */
+export const SITE_URL_PUBLIC = "https://www.starstg.uz";
 
 /** Telegram bot / Mini App havolasi. */
 export const TELEGRAM_BOT_URL_PUBLIC = "https://t.me/StarsPaymee_bot";

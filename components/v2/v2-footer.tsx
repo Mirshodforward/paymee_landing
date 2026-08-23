@@ -61,7 +61,7 @@ export function V2Footer({
         <div>
           <p className="foot-head">Telegram</p>
           <div className="mt-4 flex flex-col gap-2.5">
-            <a href={botUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>
+            <a data-cta="footer" href={botUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>
               {botUrl.replace(/^https?:\/\//, "")}
             </a>
             <a href={supportUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>
@@ -75,7 +75,7 @@ export function V2Footer({
           © {year} StarsPaymee · {labels.rights}
         </span>
         <a
-          href={botUrl}
+          data-cta="footer" href={botUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="foot-muted transition hover:text-white"

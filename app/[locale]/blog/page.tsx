@@ -1,31 +1,32 @@
 import type { Metadata } from "next";
-import type { CSSProperties, ReactNode } from "react";
+import { Suspense, type CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ArrowIcon } from "@/components/v2/icons";
-import { blogCategories, type BlogCategory } from "@/lib/blog-posts";
-import { getBlogSummariesByCategory, getBlogCount, getGrowthSeriesSummaries, getNftGiftSeriesSummaries, getBoostSeriesSummaries } from "@/lib/blog/all";
+import { BlogCategoryFilter } from "@/components/blog/blog-category-filter";
+import { blogCategories } from "@/lib/blog-posts";
+import { getBlogSummaries, getBlogCount, getGrowthSeriesSummaries, getNftGiftSeriesSummaries, getBoostSeriesSummaries } from "@/lib/blog/all";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
-function normalizeCat(cat: string | undefined): BlogCategory | "hammasi" {
-  if (!cat) return "hammasi";
-  if (blogCategories.includes(cat as BlogCategory)) return cat as BlogCategory;
-  return "hammasi";
-}
-
 type PageProps = {
   params: Promise<{ locale: string }>;
-  searchParams?: Promise<{ cat?: string }>;
 };
+
+/** Statik prerender — kategoriya filtri mijoz tomonida ishlaydi. */
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "v2" });
   const tSeo = await getTranslations({ locale, namespace: "seo" });
   const siteUrl = getSiteUrl();
-  const title = t("blogTitle");
+  const title = t("blogMetaTitle");
   const desc = t("blogSubtitle");
 
   return {
@@ -44,13 +45,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function BlogPage({ params, searchParams }: PageProps) {
+export default async function BlogPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const resolved = await searchParams;
-  const active = normalizeCat(resolved?.cat);
-  const listed = getBlogSummariesByCategory(locale, active);
+  // Barcha maqolalar bir marta render qilinadi; kategoriya filtri mijozda.
+  const listed = getBlogSummaries(locale);
   const base = getSiteUrl();
 
   const t = await getTranslations("v2");
@@ -122,24 +122,20 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
 
         <div className="sec-head rv" style={{ marginTop: 26, marginBottom: 36 }}>
           <div className="kicker">{t("blogBadge")}</div>
-          <h1 className="h2">{t("blogTitle")}</h1>
+          <h1 className="h2">{t("blogH1")}</h1>
           <p className="sec-sub">{t("blogSubtitle")}</p>
         </div>
 
-        <div className="blog-cat-filters rv" role="tablist">
-          <FilterPill active={active === "hammasi"} href="/blog">
-            {t("blogAll")}
-          </FilterPill>
-          {blogCategories.map((c) => (
-            <FilterPill key={c} active={active === c} href={`/blog?cat=${encodeURIComponent(c)}`}>
-              {tc(c)}
-            </FilterPill>
-          ))}
-        </div>
+        <Suspense fallback={<div className="blog-cat-filters rv" />}>
+          <BlogCategoryFilter
+            allLabel={t("blogAll")}
+            categories={blogCategories.map((c) => ({ key: c, label: tc(c) }))}
+          />
+        </Suspense>
 
         <ul className="v2-blog-grid">
           {listed.map((post, i) => (
-            <li key={post.slug} style={{ height: "100%" }}>
+            <li key={post.slug} data-cat={post.category} style={{ height: "100%" }}>
               <Link
                 href={`/blog/${post.slug}`}
                 className="bcard rv spot"
@@ -161,30 +157,8 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
           ))}
         </ul>
 
-        <p className="blog-total">{t("blogTotal", { count: getBlogCount() })}</p>
+        <p className="blog-total">{t("blogTotal", { count: getBlogCount(locale) })}</p>
       </div>
     </section>
-  );
-}
-
-function FilterPill({
-  active,
-  href,
-  children,
-}: {
-  active: boolean;
-  href: string;
-  children: ReactNode;
-}) {
-  return (
-    <Link
-      href={href}
-      role="tab"
-      aria-selected={active}
-      prefetch={false}
-      className={`fpill${active ? " active" : ""}`}
-    >
-      {children}
-    </Link>
   );
 }

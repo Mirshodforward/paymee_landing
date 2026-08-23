@@ -39,7 +39,7 @@ export function StickyCta({
           {pricesLabel}
         </a>
         <a
-          href={botUrl}
+          data-cta="sticky" href={botUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="group flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#229ED9] to-[#1c84b8] px-3 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#229ED9]/30 transition active:scale-[0.97]"

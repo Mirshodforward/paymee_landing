@@ -20,6 +20,7 @@ import {
   VerifiedIcon,
 } from "@/components/v2/icons";
 import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { getFeaturedSummaries } from "@/lib/blog/all";
 import {
   PAYMENT_METHODS,
   PREMIUM_LOGIN_PLANS,
@@ -40,6 +41,7 @@ export default async function HomePage({ params }: PageProps) {
 
   const t = await getTranslations("v2");
   const th = await getTranslations("home");
+  const featured = getFeaturedSummaries(locale, 8);
   const botUrl = getTelegramBotUrl();
   const supportUrl = getTelegramSupportUrl();
 
@@ -699,6 +701,34 @@ export default async function HomePage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* ===== Mashhur qo‘llanmalar — blogga ichki linklar ===== */}
+        {featured.length > 0 ? (
+          <section className="sec" id="qollanmalar" style={{ paddingTop: 0 }}>
+            <div className="wrap">
+              <div className="sec-head center rv">
+                <div className="kicker">{t("blogBadge")}</div>
+                <h2 className="h2">{t("blogH1")}</h2>
+                <p className="sec-sub">{t("blogSubtitle")}</p>
+              </div>
+              <ul className="home-guides">
+                {featured.map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`} className="home-guide rv">
+                      <span className="home-guide-title">{post.title}</span>
+                      <ArrowIcon />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="center rv" style={{ marginTop: 26 }}>
+                <Link href="/blog" className="prod-link">
+                  {t("blogTitle")} <ArrowIcon />
+                </Link>
+              </p>
+            </div>
+          </section>
+        ) : null}
 
         {/* ===== Business / API teaser ===== */}
         <section className="sec" id="business">

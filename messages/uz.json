@@ -1,7 +1,6 @@
 {
   "seo": {
-    "titleDefault": "StarsPaymee",
-    "titleTemplate": "%s · StarsPaymee",
+    "titleDefault": "Telegram Stars va Premium — arzon, 10 soniyada | StarsPaymee",
     "description": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik yetkaziladi. Click, Payme, Paynet, UzCard, HUMO orqali to‘lov. Eng arzon narxlar.",
     "ogLocale": "uz_UZ",
     "keywordsList": [
@@ -254,7 +253,7 @@
       "business": "Business"
     },
     "stars": {
-      "metaTitle": "Telegram Stars sotib olish — arzon narx, 10 soniyada | StarsPaymee",
+      "metaTitle": "Telegram Stars sotib olish — arzon narx, 10 soniyada",
       "metaDescription": "O‘zbekistonda Telegram Stars sotib oling: donasi 220 so‘mdan, 50 ta 11 000 so‘m. Click, Payme, UzCard, HUMO orqali to‘lov, 10 soniyada avtomatik yetkazish.",
       "h1": "Telegram Stars sotib olish",
       "intro": "StarsPaymee orqali Telegram Stars (yulduz) ni O‘zbekistonda eng arzon narxda sotib oling. Yulduz donasi atigi 220 so‘mdan, bazaviy 50 yulduz 11 000 so‘m. Buyurtma @StarsPaymee_bot orqali beriladi va o‘rtacha 10 soniyada avtomatik yetkaziladi.",
@@ -267,7 +266,7 @@
       "footnote": "Narx tanlangan yulduz miqdoriga qarab hisoblanadi. Aniq summani @StarsPaymee_bot yoki Mini App da ko‘rasiz."
     },
     "premium": {
-      "metaTitle": "Telegram Premium sotib olish — 3/6/12 oy, arzon | StarsPaymee",
+      "metaTitle": "Telegram Premium sotib olish — 3/6/12 oy, arzon",
       "metaDescription": "Telegram Premium: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
       "h1": "Telegram Premium sotib olish",
       "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 10 soniyada avtomatik faollashadi. Alohida «akkauntga kirib berish» xizmati ham mavjud (1 oy 50 000, 1 yil 300 000 so‘m).",
@@ -280,7 +279,7 @@
       "footnote": "Username bilan oqimda faqat @username kifoya. Login bilan oqim alohida xizmat sifatida amalga oshiriladi."
     },
     "gifts": {
-      "metaTitle": "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan | StarsPaymee",
+      "metaTitle": "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan",
       "metaDescription": "Telegram noyob sovg‘alarini sotib oling yoki do‘stlaringizga yuboring. Anonim yoki tabrik izohi bilan. So‘mda to‘lov, oson va ishonchli.",
       "h1": "Telegram sovg‘alari yuborish",
       "intro": "Telegramning noyob (unique) sovg‘alarini StarsPaymee orqali o‘zingizga sotib oling yoki do‘stlaringizga yuboring. Sovg‘ani anonim tarzda yoki tabrik so‘zi bilan jo‘natishingiz mumkin. To‘lov so‘mda — Click, Payme, UzCard, HUMO orqali.",
@@ -293,7 +292,7 @@
       "footnote": "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi."
     },
     "about": {
-      "metaTitle": "Biz haqimizda — StarsPaymee Telegram Stars va Premium xizmati",
+      "metaTitle": "Biz haqimizda — Telegram Stars va Premium xizmati",
       "metaDescription": "StarsPaymee — 1 yildan ortiq, 4000+ foydalanuvchi va 100 000+ buyurtma. O‘zbekistonda Telegram Stars, Premium va sovg‘alar bo‘yicha ishonchli xizmat.",
       "h1": "Biz haqimizda",
       "intro": "StarsPaymee — O‘zbekistonda Telegram Stars, Premium va sovg‘alar sotib olish uchun tez, arzon va ishonchli xizmat. Apple/Google ilova xaridi, Fragment va rasmiy @PremiumBot O‘zbekiston kartalarini (UzCard/HUMO) qabul qilmaydi — biz aynan shu bo‘shliqni mahalliy to‘lov tizimlari bilan to‘ldiramiz. Buyurtma @StarsPaymee_bot yoki Telegram Mini App orqali beriladi: username yozasiz, to‘laysiz — va buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi. 1 yildan ortiq vaqt davomida 4000 dan ortiq foydalanuvchiga 100 000 dan ortiq buyurtmani yetkazib berdik.",
@@ -309,7 +308,7 @@
       "footnote": "Savol yoki yordam kerak bo‘lsa @StarsPaymeeSupport orqali murojaat qiling — qo‘llab-quvvatlash xizmati tezda javob beradi. Buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi."
     },
     "business": {
-      "metaTitle": "StarsPaymee Business — Telegram Stars API, Click va SBP integratsiyasi",
+      "metaTitle": "Business — Telegram Stars API, Click va SBP integratsiyasi",
       "metaDescription": "StarsPaymee Business: Telegram Stars, Premium va Gifts API, Click rasmiy integratsiyasi, SBP (rubl) to‘lovi, White Label va reseller dasturi. Botingiz yoki saytingizga bir kalitda ulang.",
       "kicker": "Business / API",
       "h1": "StarsPaymee Business — API va to‘lov integratsiyalari",
@@ -521,6 +520,8 @@
     "footerRights": "Avtomatik, tez, ishonchli",
     "blogBadge": "Blog",
     "blogTitle": "Blog",
+    "blogH1": "Telegram Stars va Premium bo‘yicha qo‘llanmalar",
+    "blogMetaTitle": "Telegram Stars va Premium qo‘llanmalari",
     "blogSubtitle": "Telegram Stars, Premium va sovg‘alar haqida qo‘llanmalar — O‘zbekistonda kartadan to‘lov, narxlar va xavfsizlik.",
     "blogAll": "Hammasi",
     "blogRead": "O‘qish",

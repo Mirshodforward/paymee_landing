@@ -43,7 +43,7 @@ export async function SiteFooter() {
         <address id="aloqa" className="not-italic">
           <p className="text-xs uppercase tracking-wider text-slate-500">{f("miniAppHeading")}</p>
           <a
-            href={telegramBotUrl}
+            data-cta="footer" href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 block text-[#229ED9] hover:text-sky-300"

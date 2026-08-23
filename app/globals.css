@@ -3576,3 +3576,41 @@ html {
     -webkit-backdrop-filter: none;
   }
 }
+
+/* ===== Bosh sahifadagi «mashhur qo‘llanmalar» bloki =====
+   183 ta maqolaga bosh sahifadan ichki link berish uchun. */
+.home-guides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+.home-guide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  height: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.45;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+}
+.home-guide:hover,
+.home-guide:focus-visible {
+  border-color: var(--fuch);
+  background: rgba(217, 70, 239, 0.06);
+  transform: translateY(-2px);
+}
+.home-guide-title { font-weight: 600; }
+.home-guide svg { flex: none; opacity: 0.55; }
+@media (prefers-reduced-motion: reduce) {
+  .home-guide { transition: none; }
+  .home-guide:hover, .home-guide:focus-visible { transform: none; }
+}

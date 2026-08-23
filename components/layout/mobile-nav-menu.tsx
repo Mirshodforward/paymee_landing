@@ -226,7 +226,7 @@ export function MobileNavMenu({
             {/* Footer actions */}
             <div className="border-t border-slate-200/80 px-4 py-4 dark:border-slate-800/80">
               <a
-                href={botUrl}
+                data-cta="mobile-nav" href={botUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={close}

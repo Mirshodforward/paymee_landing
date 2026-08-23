@@ -139,7 +139,7 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
 
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <a
-            href={telegramBotUrl}
+            data-cta="landing" href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#229ED9] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#229ED9]/20 transition hover:bg-[#1e8dc4]"

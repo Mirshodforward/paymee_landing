@@ -11,14 +11,36 @@ import { localizeBlogPost } from "@/lib/blog-i18n";
 import { getAeoPostBySlug } from "@/lib/blog-aeo";
 import { resolveAeoContent } from "@/lib/blog-aeo/types";
 import { AeoArticle } from "@/components/blog/aeo-article";
-import { allBlogSlugInfos, getRelatedSummaries } from "@/lib/blog/all";
+import { allBlogSlugInfos, getRelatedSummaries, hasTranslation } from "@/lib/blog/all";
+import { blogHreflangAlternates } from "@/lib/hreflang-alternates";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
+
+/** Statik prerender — maqola tarkibi so‘rovga bog‘liq emas, CDN keshlay oladi. */
+export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
     allBlogSlugInfos().map(({ slug }) => ({ locale, slug })),
   );
+}
+
+/**
+ * Tarjimasi yo‘q maqola shu tilda o‘zbekcha nusxani ko‘rsatadi — bu dublikat.
+ * Sahifa ochiq qoladi (mavjud havolalar buzilmasin), lekin indekslanmaydi.
+ */
+function blogAlternatesAndRobots(slug: string, locale: string): Pick<Metadata, "alternates" | "robots"> {
+  const translated = routing.locales.filter((l) => hasTranslation(slug, l));
+  const indexable = hasTranslation(slug, locale);
+  return {
+    alternates: {
+      canonical: `/${locale}/blog/${slug}`,
+      languages: blogHreflangAlternates(slug, translated),
+    },
+    robots: indexable
+      ? undefined
+      : { index: false, follow: true, googleBot: { index: false, follow: true } },
+  };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -32,10 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: c.metaTitle,
       description: c.metaDescription,
       keywords: [siteConfig.name, "Telegram", aeo.category, ...aeo.keywords],
-      alternates: {
-        canonical: `/${locale}/blog/${slug}`,
-        languages: Object.fromEntries(routing.locales.map((l) => [l, `${siteUrl}/${l}/blog/${slug}`])),
-      },
+      ...blogAlternatesAndRobots(slug, locale),
       openGraph: {
         type: "article",
         publishedTime: aeo.datePublished,
@@ -69,12 +88,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       post.category,
       ...(post.seoKeywords ?? []),
     ],
-    alternates: {
-      canonical: `/${locale}/blog/${slug}`,
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${siteUrl}/${l}/blog/${slug}`]),
-      ),
-    },
+    ...blogAlternatesAndRobots(slug, locale),
     openGraph: {
       type: "article",
       publishedTime: post.datePublished,
@@ -213,7 +227,7 @@ export default async function BlogArticlePage({ params }: Props) {
           <p style={{ marginTop: 8, color: "var(--muted)", fontSize: 14.5 }}>{t("blogTryBody")}</p>
           <a
             className="btn btn-grad mag"
-            href={telegramBotUrl}
+            data-cta="article" href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginTop: 20 }}

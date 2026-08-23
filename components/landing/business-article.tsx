@@ -95,7 +95,7 @@ export async function BusinessArticle({ locale }: { locale: string }) {
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
-            href={telegramBotUrl}
+            data-cta="business" href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#229ED9] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#229ED9]/20 transition hover:bg-[#1e8dc4]"
@@ -170,7 +170,7 @@ export async function BusinessArticle({ locale }: { locale: string }) {
         <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-300">{t("business.ctaBody")}</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
-            href={telegramBotUrl}
+            data-cta="business" href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#229ED9] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#229ED9]/20 transition hover:bg-[#1e8dc4]"

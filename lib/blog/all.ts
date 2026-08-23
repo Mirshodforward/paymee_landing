@@ -1,5 +1,5 @@
 import { blogPosts, type BlogCategory } from "@/lib/blog-posts";
-import { aeoPosts } from "@/lib/blog-aeo";
+import { aeoPosts, getAeoPostBySlug } from "@/lib/blog-aeo";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
@@ -23,6 +23,22 @@ function uiLoc(locale: string): AeoUiLocale {
   return locale === "ru" ? "ru" : locale === "en" ? "en" : "uz";
 }
 
+/**
+ * Maqolaning shu til uchun HAQIQIY tarjimasi bormi.
+ *
+ * AEO maqolalarda `locales.en` ixtiyoriy — bo‘lmasa `resolveAeoContent`
+ * jimgina o‘zbekchaga qaytadi. Eski «flat» maqolalar esa umuman tarjima
+ * qilinmagan: `localizeBlogPost` uchala til uchun ham bitta matn qaytaradi.
+ * Ikkala holatda ham natija — boshqa til nomi ostidagi o‘zbekcha nusxa, ya’ni
+ * qidiruv tizimlari uchun dublikat. Shuning uchun bunday sahifalar ro‘yxatlarga
+ * ham, sitemapga ham tushmaydi va `noindex` oladi.
+ */
+export function hasTranslation(slug: string, locale: string): boolean {
+  const aeo = getAeoPostBySlug(slug);
+  if (aeo) return Boolean(aeo.locales[uiLoc(locale)]);
+  return uiLoc(locale) === "uz";
+}
+
 function byDateDesc(a: { datePublished: string }, b: { datePublished: string }): number {
   return a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0;
 }
@@ -30,7 +46,8 @@ function byDateDesc(a: { datePublished: string }, b: { datePublished: string }):
 /** Berilgan til uchun barcha bloglarning ro‘yxat kartochkasi ma’lumoti. */
 export function getBlogSummaries(locale: string): BlogSummary[] {
   const ui = uiLoc(locale);
-  const flat: BlogSummary[] = blogPosts.map((p) => ({
+  // Tarjimasi yo‘q maqolalar shu til ro‘yxatida ko‘rinmaydi.
+  const flat: BlogSummary[] = (ui === "uz" ? blogPosts : []).map((p) => ({
     slug: p.slug,
     title: p.title,
     excerpt: p.excerpt,
@@ -39,7 +56,7 @@ export function getBlogSummaries(locale: string): BlogSummary[] {
     dateModified: p.datePublished,
     source: "flat",
   }));
-  const aeo: BlogSummary[] = aeoPosts.map((p) => {
+  const aeo: BlogSummary[] = aeoPosts.filter((p) => Boolean(p.locales[ui])).map((p) => {
     const c = resolveAeoContent(p, ui);
     return {
       slug: p.slug,
@@ -64,8 +81,9 @@ export function getBlogSummariesByCategory(
   return all.filter((s) => s.category === cat);
 }
 
-export function getBlogCount(): number {
-  return aeoPosts.length + blogPosts.length;
+/** Shu tilda o‘qish mumkin bo‘lgan maqolalar soni. */
+export function getBlogCount(locale = "uz"): number {
+  return getBlogSummaries(locale).length;
 }
 
 /** SEO seriyasi: telegram raqam + 9 ta bog‘liq mavzu (tartib saqlanadi). */
@@ -97,7 +115,41 @@ export function getRelatedSummaries(locale: string, slug: string, category: Blog
   return [...sameCat, ...rest].slice(0, limit);
 }
 
+
+/**
+ * Bosh sahifadagi «mashhur qo‘llanmalar» bloki uchun tanlangan maqolalar.
+ *
+ * Ilgari bosh sahifada blogga atigi 2 ta havola bor edi, ya’ni 183 ta maqola
+ * saytdagi eng nufuzli sahifadan deyarli hech qanday ichki link olmasdi.
+ * Ro‘yxat tijoriy qidiruv niyati bo‘yicha qo‘lda tanlangan; tarjimasi yo‘q
+ * maqolalar avtomatik tushib qoladi, shuning uchun har uchala tilda ishlaydi.
+ */
+const FEATURED_SLUGS = [
+  "telegram-stars-qayerdan-sotib-olish-2026",
+  "telegram-premium-narxi-ozbekistonda-2026",
+  "telegram-stars-necha-som-kalkulyator",
+  "telegram-stars-kartasiz-sotib-olish",
+  "ozbekistonda-telegram-stars-sotib-olish",
+  "telegram-stars-narxlari-2026-platformalar-taqqoslash",
+  "telegram-premium-sotib-olish-2026",
+  "telegram-stars-xavfsizmi",
+  "telegram-gifts-narxlari-royxati",
+  "visa-kartasiz-stars-olish",
+] as const;
+
+export function getFeaturedSummaries(locale: string, limit = 8): BlogSummary[] {
+  const bySlug = new Map(getBlogSummaries(locale).map((s) => [s.slug, s]));
+  return FEATURED_SLUGS.map((slug) => bySlug.get(slug))
+    .filter((s): s is BlogSummary => Boolean(s))
+    .slice(0, limit);
+}
+
 export type BlogSlugInfo = { slug: string; datePublished: string; dateModified: string };
+
+/** Sitemap uchun: shu tilda haqiqiy tarkibi bor maqolalar. */
+export function blogSlugInfosForLocale(locale: string): BlogSlugInfo[] {
+  return allBlogSlugInfos().filter((p) => hasTranslation(p.slug, locale));
+}
 
 /** Sitemap va static params uchun barcha bloglarning slug + sana ma’lumoti (AEO ustun). */
 export function allBlogSlugInfos(): BlogSlugInfo[] {

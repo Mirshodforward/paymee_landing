@@ -1,3 +1,11 @@
+/**
+ * OGOHLANTIRISH — bu skript hozir messages/*.json ni TO‘LIQ qayta yarata olmaydi.
+ *
+ * Fayllarga keyinchalik qo‘lda qo‘shilgan `v2` va `landing.business` kabi
+ * namespace‘lar bu yerda yo‘q, shuning uchun skriptni ishga tushirish mavjud
+ * tarjimalarni o‘chirib yuboradi va sayt build bo‘lmay qoladi.
+ * Ishlatishdan oldin yetishmayotgan namespace‘larni shu faylga ko‘chiring.
+ */
 import fs from "fs";
 import path from "path";
 
@@ -113,8 +121,7 @@ function mkFaq(pairs) {
 /* ── O‘ZBEK (asosiy) ──────────────────────────────────────────────────────── */
 const baseUz = {
   seo: {
-    titleDefault: "StarsPaymee",
-    titleTemplate: "%s · StarsPaymee",
+    titleDefault: "Telegram Stars va Premium — arzon, 10 soniyada | StarsPaymee",
     description:
       "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik yetkaziladi. Click, Payme, Paynet, UzCard, HUMO orqali to‘lov. Eng arzon narxlar.",
     ogLocale: "uz_UZ",
@@ -300,7 +307,7 @@ const baseUz = {
     sectionsHeading: "Bo‘limlar",
     nav: { stars: "Stars", premium: "Premium", gifts: "Sovg‘alar", about: "Biz haqimizda" },
     stars: {
-      metaTitle: "Telegram Stars sotib olish — arzon narx, 10 soniyada | StarsPaymee",
+      metaTitle: "Telegram Stars sotib olish — arzon narx, 10 soniyada",
       metaDescription:
         "O‘zbekistonda Telegram Stars sotib oling: donasi 220 so‘mdan, 50 ta 11 000 so‘m. Click, Payme, UzCard, HUMO orqali to‘lov, 10 soniyada avtomatik yetkazish.",
       h1: "Telegram Stars sotib olish",
@@ -316,7 +323,7 @@ const baseUz = {
         "Narx tanlangan yulduz miqdoriga qarab hisoblanadi. Aniq summani @StarsPaymee_bot yoki Mini App da ko‘rasiz.",
     },
     premium: {
-      metaTitle: "Telegram Premium sotib olish — 3/6/12 oy, arzon | StarsPaymee",
+      metaTitle: "Telegram Premium sotib olish — 3/6/12 oy, arzon",
       metaDescription:
         "Telegram Premium: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
       h1: "Telegram Premium sotib olish",
@@ -332,7 +339,7 @@ const baseUz = {
         "Username bilan oqimda faqat @username kifoya. Login bilan oqim alohida xizmat sifatida amalga oshiriladi.",
     },
     gifts: {
-      metaTitle: "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan | StarsPaymee",
+      metaTitle: "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan",
       metaDescription:
         "Telegram noyob sovg‘alarini sotib oling yoki do‘stlaringizga yuboring. Anonim yoki tabrik izohi bilan. So‘mda to‘lov, oson va ishonchli.",
       h1: "Telegram sovg‘alari yuborish",
@@ -348,7 +355,7 @@ const baseUz = {
         "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi.",
     },
     about: {
-      metaTitle: "Biz haqimizda — StarsPaymee Telegram Stars va Premium xizmati",
+      metaTitle: "Biz haqimizda — Telegram Stars va Premium xizmati",
       metaDescription:
         "StarsPaymee — 1 yildan ortiq, 4000+ foydalanuvchi va 100 000+ buyurtma. O‘zbekistonda Telegram Stars, Premium va sovg‘alar bo‘yicha ishonchli xizmat.",
       h1: "Biz haqimizda",
@@ -369,8 +376,7 @@ const baseUz = {
 /* ── RUS ───────────────────────────────────────────────────────────────────── */
 const baseRu = structuredClone(baseUz);
 baseRu.seo = {
-  titleDefault: "StarsPaymee",
-  titleTemplate: "%s · StarsPaymee",
+  titleDefault: "Telegram Stars и Premium — дёшево, за 10 секунд | StarsPaymee",
   description:
     "Telegram Stars, Premium и подарки в Узбекистане — доставка автоматически за 10 секунд. Оплата Click, Payme, Paynet, UzCard, HUMO. Самые низкие цены.",
   ogLocale: "ru_RU",
@@ -538,7 +544,7 @@ baseRu.landing = {
   sectionsHeading: "Разделы",
   nav: { stars: "Stars", premium: "Premium", gifts: "Подарки", about: "О нас" },
   stars: {
-    metaTitle: "Купить Telegram Stars — дёшево, за 10 секунд | StarsPaymee",
+    metaTitle: "Купить Telegram Stars — дёшево, за 10 секунд",
     metaDescription:
       "Купить Telegram Stars в Узбекистане: от 220 сум за штуку, 50 шт. — 11 000 сум. Оплата Click, Payme, UzCard, HUMO. Автодоставка за 10 секунд.",
     h1: "Купить Telegram Stars",
@@ -554,7 +560,7 @@ baseRu.landing = {
       "Цена зависит от выбранного количества звёзд. Точную сумму вы увидите в @StarsPaymee_bot или Mini App.",
   },
   premium: {
-    metaTitle: "Купить Telegram Premium — 3/6/12 мес, дёшево | StarsPaymee",
+    metaTitle: "Купить Telegram Premium — 3/6/12 мес, дёшево",
     metaDescription:
       "Telegram Premium: 3 мес 172 000, 6 мес 232 000, 12 мес 422 000 сум. По username активируется автоматически за 10 секунд, без входа в аккаунт.",
     h1: "Купить Telegram Premium",
@@ -570,7 +576,7 @@ baseRu.landing = {
       "В потоке по username достаточно @username. Поток со входом — отдельная услуга.",
   },
   gifts: {
-    metaTitle: "Отправить уникальные подарки Telegram — анонимно | StarsPaymee",
+    metaTitle: "Отправить уникальные подарки Telegram — анонимно",
     metaDescription:
       "Покупайте уникальные подарки Telegram или отправляйте друзьям. Анонимно или с поздравлением. Оплата в сумах, просто и надёжно.",
     h1: "Отправка подарков Telegram",
@@ -586,7 +592,7 @@ baseRu.landing = {
       "Список доступных подарков и цены показываются в @StarsPaymee_bot или Mini App.",
   },
   about: {
-    metaTitle: "О нас — сервис Telegram Stars и Premium StarsPaymee",
+    metaTitle: "О нас — сервис Telegram Stars и Premium",
     metaDescription:
       "StarsPaymee — больше года, 4000+ пользователей и 100 000+ заказов. Надёжный сервис Telegram Stars, Premium и подарков в Узбекистане.",
     h1: "О нас",
@@ -605,8 +611,7 @@ baseRu.landing = {
 /* ── ENGLISH ─────────────────────────────────────────────────────────────── */
 const baseEn = structuredClone(baseUz);
 baseEn.seo = {
-  titleDefault: "StarsPaymee",
-  titleTemplate: "%s · StarsPaymee",
+  titleDefault: "Buy Telegram Stars & Premium in Uzbekistan | StarsPaymee",
   description:
     "Telegram Stars, Premium and gifts in Uzbekistan — delivered automatically in 10 seconds. Pay via Click, Payme, Paynet, UzCard, HUMO. Lowest prices.",
   ogLocale: "en_US",
@@ -774,7 +779,7 @@ baseEn.landing = {
   sectionsHeading: "Sections",
   nav: { stars: "Stars", premium: "Premium", gifts: "Gifts", about: "About" },
   stars: {
-    metaTitle: "Buy Telegram Stars — cheap, in 10 seconds | StarsPaymee",
+    metaTitle: "Buy Telegram Stars — cheap, in 10 seconds",
     metaDescription:
       "Buy Telegram Stars in Uzbekistan: from 220 so‘m each, 50 for 11,000 so‘m. Pay via Click, Payme, UzCard, HUMO. Auto delivery in 10 seconds.",
     h1: "Buy Telegram Stars",
@@ -790,7 +795,7 @@ baseEn.landing = {
       "Price depends on the amount of Stars you choose. You’ll see the exact total in @StarsPaymee_bot or the Mini App.",
   },
   premium: {
-    metaTitle: "Buy Telegram Premium — 3/6/12 months, cheap | StarsPaymee",
+    metaTitle: "Buy Telegram Premium — 3/6/12 months, cheap",
     metaDescription:
       "Telegram Premium: 3 mo 172,000, 6 mo 232,000, 12 mo 422,000 so‘m. By username it activates automatically in 10 seconds, no account login.",
     h1: "Buy Telegram Premium",
@@ -806,7 +811,7 @@ baseEn.landing = {
       "The by-username flow needs only a @username. The login flow is a separate service.",
   },
   gifts: {
-    metaTitle: "Send Telegram unique gifts — anonymously | StarsPaymee",
+    metaTitle: "Send Telegram unique gifts — anonymously",
     metaDescription:
       "Buy Telegram unique gifts or send them to friends. Anonymously or with a greeting. Pay in UZS, simple and reliable.",
     h1: "Send Telegram gifts",
@@ -822,7 +827,7 @@ baseEn.landing = {
       "Available gifts and prices are shown in @StarsPaymee_bot or the Mini App.",
   },
   about: {
-    metaTitle: "About — StarsPaymee Telegram Stars & Premium service",
+    metaTitle: "About — Telegram Stars & Premium service",
     metaDescription:
       "StarsPaymee — 1+ year, 4,000+ users and 100,000+ orders. A reliable Telegram Stars, Premium and gifts service in Uzbekistan.",
     h1: "About us",

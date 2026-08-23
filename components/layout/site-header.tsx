@@ -100,7 +100,7 @@ export async function SiteHeader({
             }}
           />
           <a
-            href={telegramBotUrl}
+            data-cta="nav" href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-[#229ED9] px-3 text-sm font-semibold text-white shadow-md shadow-[#229ED9]/18 ring-1 ring-[#229ED9]/90 transition hover:bg-[#1e8dc4] active:scale-[0.97] sm:min-w-0 sm:px-5"
