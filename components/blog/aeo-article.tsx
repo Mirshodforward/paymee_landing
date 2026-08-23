@@ -4,7 +4,8 @@ import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { AnswerBox, BlogFaq } from "@/components/blog/aeo-blocks";
 import { ArrowIcon, TelegramIcon } from "@/components/v2/icons";
-import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, siteConfig } from "@/lib/site";
+import { botDeepLink } from "@/lib/telegram-deeplink";
 import type { AeoPost, AeoUiLocale } from "@/lib/blog-aeo/types";
 import { resolveAeoContent } from "@/lib/blog-aeo/types";
 import { getAeoUi } from "@/lib/blog-aeo/ui";
@@ -30,7 +31,7 @@ export async function AeoArticle({
   const labels = getAeoUi(ui);
   const base = getSiteUrl();
   const url = `${base}/${locale}/blog/${post.slug}`;
-  const botUrl = getTelegramBotUrl();
+  const botUrl = botDeepLink({ page: "blog", placement: "article" });
   const tc = await getTranslations("categories");
 
   const Body = c.Body;

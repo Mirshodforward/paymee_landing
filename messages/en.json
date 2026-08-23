@@ -79,6 +79,7 @@
     "Gifts": "Gifts",
     "Biznes": "Business",
     "Steam": "Steam",
+    "O‘yinlar": "Games",
     "Telegram": "Telegram",
     "Xavfsizlik": "Security"
   },
@@ -297,6 +298,64 @@
         "Full refund if an order is not delivered due to a technical issue"
       ],
       "footnote": "For questions, reach us via @StarsPaymeeSupport — support replies quickly. If an order is not delivered due to a technical issue, your payment is refunded in full."
+    },
+    "gampay": {
+      "metaTitle": "Game top-up — PUBG UC, MLBB diamonds, Free Fire",
+      "metaDescription": "PUBG Mobile UC, Mobile Legends and Free Fire diamonds, CODM CP, Honor of Kings tokens — in Uzbekistan, in so‘m, with UzCard and HUMO. Only a Player ID is needed.",
+      "kicker": "GamPay",
+      "h1": "Top up your game account in so‘m",
+      "intro": "GamPay is the gaming section of StarsPaymee. PUBG Mobile UC, Mobile Legends and Free Fire diamonds, CODM CP, Honor of Kings tokens and Steam Wallet — all in Uzbek so‘m via UzCard, HUMO, Click or Payme. No international Visa/Mastercard, VPN or foreign account required: you just enter your in-game Player ID.",
+      "howHeading": "How it works — 4 steps",
+      "steps": [
+        {
+          "title": "Pick your game",
+          "body": "Open the GamPay section in the bot and find your game in the list."
+        },
+        {
+          "title": "Enter your Player ID",
+          "body": "Which ID is needed and where to find it is listed below for each game. A password is never requested."
+        },
+        {
+          "title": "Choose a package",
+          "body": "The price is shown in so‘m — no conversion and no hidden fees."
+        },
+        {
+          "title": "Pay and receive",
+          "body": "Pay via UzCard, HUMO, Click or Payme; the funds reach your game account automatically."
+        }
+      ],
+      "gamesHeading": "Supported games",
+      "gamesNote": "Prices follow the provider catalogue and the exchange rate, so the final amount is always shown in the bot — you see it before confirming the order.",
+      "tableGame": "Game",
+      "tableUnit": "What you buy",
+      "tableId": "What to enter",
+      "tableEta": "Delivery",
+      "whyHeading": "Why GamPay",
+      "why": [
+        {
+          "title": "Pay in so‘m",
+          "body": "UzCard, HUMO, Click, Payme — with local cards. No currency exchange needed."
+        },
+        {
+          "title": "Works without a card",
+          "body": "No international Visa or Mastercard required — that was the main barrier in Uzbekistan."
+        },
+        {
+          "title": "No password asked",
+          "body": "Only a public Player ID is needed. Never give your game password to any service."
+        },
+        {
+          "title": "Inside Telegram",
+          "body": "No separate app to install and no sign-up — the bot runs 24/7."
+        }
+      ],
+      "safetyHeading": "Safety",
+      "safetyBody": "We never ask for your game password, an SMS code or a Telegram login code. A public Player ID is all a top-up needs. If someone asks for those details — it is a scam.",
+      "articlesHeading": "Game guides",
+      "ctaHeading": "Top up your game account now",
+      "ctaBody": "Open the GamPay section in the bot, pick your game and pay in so‘m.",
+      "ctaButton": "Open GamPay",
+      "footnote": "Questions? Message @StarsPaymeeSupport — with an order ID you'll be helped faster."
     },
     "business": {
       "metaTitle": "Business — Telegram Stars API, Click and SBP integration",

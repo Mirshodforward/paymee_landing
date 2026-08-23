@@ -3,6 +3,7 @@ import { aeoPosts, getAeoPostBySlug } from "@/lib/blog-aeo";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
+import { gampaySeriesSlugs } from "@/lib/blog-aeo/gampay-series";
 import { resolveAeoContent, type AeoUiLocale } from "@/lib/blog-aeo/types";
 
 /**
@@ -107,6 +108,13 @@ export function getBoostSeriesSummaries(locale: string): BlogSummary[] {
   return boostSeriesSlugs.map((slug) => bySlug.get(slug)).filter((s): s is BlogSummary => Boolean(s));
 }
 
+/** GamPay o‘yin seriyasi (hub + 9 o‘yin). */
+export function getGamPaySeriesSummaries(locale: string): BlogSummary[] {
+  const all = getBlogSummaries(locale);
+  const bySlug = new Map(all.map((s) => [s.slug, s]));
+  return gampaySeriesSlugs.map((slug) => bySlug.get(slug)).filter((s): s is BlogSummary => Boolean(s));
+}
+
 /** O‘xshash maqolalar: avval bir xil kategoriya, keyin eng yangilari. */
 export function getRelatedSummaries(locale: string, slug: string, category: BlogCategory, limit = 3): BlogSummary[] {
   const all = getBlogSummaries(locale).filter((s) => s.slug !== slug);
@@ -135,6 +143,8 @@ const FEATURED_SLUGS = [
   "telegram-stars-xavfsizmi",
   "telegram-gifts-narxlari-royxati",
   "visa-kartasiz-stars-olish",
+  "oyin-hisobini-toldirish",
+  "pubg-mobile-uc-sotib-olish",
 ] as const;
 
 export function getFeaturedSummaries(locale: string, limit = 8): BlogSummary[] {

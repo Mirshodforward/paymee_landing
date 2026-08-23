@@ -2,7 +2,8 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getTelegramBotUrl, getSiteUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, siteConfig } from "@/lib/site";
+import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 import { PREMIUM_LOGIN_PLANS, PREMIUM_PLANS, STARS_PACKS } from "@/lib/products";
 
 export type LandingTopic = "stars" | "premium" | "gifts" | "about";
@@ -22,7 +23,15 @@ type Props = {
 export async function LandingTopicArticle({ locale, topic }: Props) {
   const t = await getTranslations({ locale, namespace: "landing" });
   const tHome = await getTranslations({ locale, namespace: "blogIndex" });
-  const telegramBotUrl = getTelegramBotUrl();
+  // Har bir mavzu sahifasi o‘z manbasini botga uzatadi.
+  const telegramBotUrl = botDeepLink({
+    page: topic as DeepLinkPage,
+    placement: "cta",
+    product:
+      topic === "stars" ? { kind: "stars", amount: 100 }
+      : topic === "premium" ? { kind: "premium", months: 3 }
+      : undefined,
+  });
   const base = getSiteUrl();
   const path = topicPath[topic];
   const canonical = `${base}/${locale}${path}`;

@@ -1,9 +1,10 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 
-export async function SiteFooter() {
-  const telegramBotUrl = getTelegramBotUrl();
+export async function SiteFooter({ page = "home" }: { page?: DeepLinkPage } = {}) {
+  const telegramBotUrl = botDeepLink({ page, placement: "footer" });
   const telegramSupportUrl = getTelegramSupportUrl();
   const f = await getTranslations("footer");
   const lg = await getTranslations("landing");
@@ -34,6 +35,9 @@ export async function SiteFooter() {
             </Link>
             <Link href="/about" className={footerLink}>
               {lg("nav.about")}
+            </Link>
+            <Link href="/gampay" className={footerLink}>
+              GamPay
             </Link>
             <Link href="/business" className={footerLink}>
               {lg("nav.business")}

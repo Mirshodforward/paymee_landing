@@ -3,11 +3,13 @@ import { getTranslations } from "next-intl/server";
 import { V2Shell } from "@/components/v2/v2-shell";
 import { V2Nav } from "@/components/v2/v2-nav";
 import { V2Footer } from "@/components/v2/v2-footer";
-import { getTelegramBotUrl, getTelegramSupportUrl } from "@/lib/site";
+import { getTelegramSupportUrl } from "@/lib/site";
+import { botDeepLink } from "@/lib/telegram-deeplink";
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
   const t = await getTranslations("v2");
-  const botUrl = getTelegramBotUrl();
+  const navBotUrl = botDeepLink({ page: "blog", placement: "nav" });
+  const footerBotUrl = botDeepLink({ page: "blog", placement: "footer" });
   const supportUrl = getTelegramSupportUrl();
 
   const navLabels = {
@@ -32,8 +34,8 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
 
   return (
     <V2Shell
-      nav={<V2Nav labels={navLabels} botUrl={botUrl} variant="inner" activeBlog />}
-      footer={<V2Footer labels={footerLabels} botUrl={botUrl} supportUrl={supportUrl} />}
+      nav={<V2Nav labels={navLabels} botUrl={navBotUrl} variant="inner" activeBlog />}
+      footer={<V2Footer labels={footerLabels} botUrl={footerBotUrl} supportUrl={supportUrl} />}
     >
       {children}
     </V2Shell>

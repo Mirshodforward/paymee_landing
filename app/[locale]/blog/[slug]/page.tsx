@@ -6,7 +6,8 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { ArrowIcon, TelegramIcon } from "@/components/v2/icons";
 import { getPostBySlug, type BlogCategory } from "@/lib/blog-posts";
 import { routing } from "@/i18n/routing";
-import { getSiteUrl, getTelegramBotUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, siteConfig } from "@/lib/site";
+import { botDeepLink } from "@/lib/telegram-deeplink";
 import { localizeBlogPost } from "@/lib/blog-i18n";
 import { getAeoPostBySlug } from "@/lib/blog-aeo";
 import { resolveAeoContent } from "@/lib/blog-aeo/types";
@@ -120,7 +121,7 @@ export default async function BlogArticlePage({ params }: Props) {
   const copy = localizeBlogPost(post);
   const base = getSiteUrl();
   const url = `${base}/${locale}/blog/${post.slug}`;
-  const telegramBotUrl = getTelegramBotUrl();
+  const telegramBotUrl = botDeepLink({ page: "blog", placement: "article" });
 
   const t = await getTranslations("v2");
   const tc = await getTranslations("categories");

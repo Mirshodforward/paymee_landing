@@ -1,12 +1,13 @@
 import type { ReactNode } from "react";
 import type { LandingTopic } from "@/components/landing/landing-topic-article";
 import { SiteFooter } from "@/components/layout/site-footer";
+import type { DeepLinkPage } from "@/lib/telegram-deeplink";
 import { SiteHeader } from "@/components/layout/site-header";
 
 type Props = {
   children: ReactNode;
   /** Marketing ichki sahifa — headerda ustunlangan bo‘lim */
-  highlight?: LandingTopic | "business";
+  highlight?: LandingTopic | "business" | "gampay";
 };
 
 /** Blogdan tashqari marketing ichki sahifalar fon va header/footer uchun */
@@ -19,7 +20,7 @@ export function MarketingShell({ children, highlight }: Props) {
       />
       <SiteHeader highlight={highlight ?? null} />
       {children}
-      <SiteFooter />
+      <SiteFooter page={(highlight ?? "home") as DeepLinkPage} />
     </div>
   );
 }

@@ -3614,3 +3614,33 @@ html {
   .home-guide { transition: none; }
   .home-guide:hover, .home-guide:focus-visible { transform: none; }
 }
+
+/* ===== Bosh sahifadagi GamPay chizig‘i ===== */
+.home-gampay {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(34, 158, 217, 0.08), rgba(217, 70, 239, 0.05));
+  color: var(--text);
+  transition: border-color 0.25s, transform 0.25s;
+}
+.home-gampay:hover,
+.home-gampay:focus-visible { border-color: var(--fuch); transform: translateY(-2px); }
+.home-gampay__icon { font-size: 26px; flex: none; }
+.home-gampay__text { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.home-gampay__title { font-family: var(--disp); font-weight: 700; font-size: 17px; }
+.home-gampay__sub {
+  font-size: 13px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.home-gampay svg { flex: none; opacity: 0.55; }
+@media (prefers-reduced-motion: reduce) {
+  .home-gampay { transition: none; }
+  .home-gampay:hover, .home-gampay:focus-visible { transform: none; }
+}

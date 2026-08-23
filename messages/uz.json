@@ -88,6 +88,7 @@
     "Gifts": "Sovg‘alar",
     "Biznes": "Biznes",
     "Steam": "Steam",
+    "O‘yinlar": "O‘yinlar",
     "Telegram": "Telegram",
     "Xavfsizlik": "Xavfsizlik"
   },
@@ -306,6 +307,64 @@
         "Texnik sabab bilan yetkazilmasa — to‘lov to‘liq qaytariladi"
       ],
       "footnote": "Savol yoki yordam kerak bo‘lsa @StarsPaymeeSupport orqali murojaat qiling — qo‘llab-quvvatlash xizmati tezda javob beradi. Buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi."
+    },
+    "gampay": {
+      "metaTitle": "O‘yin hisobini to‘ldirish — PUBG UC, MLBB olmos, Free Fire",
+      "metaDescription": "PUBG Mobile UC, Mobile Legends va Free Fire olmos, CODM CP, Honor of Kings token — O‘zbekistonda so‘mda, UzCard va HUMO bilan. Faqat Player ID kerak.",
+      "kicker": "GamPay",
+      "h1": "O‘yin hisobini so‘mda to‘ldirish",
+      "intro": "GamPay — StarsPaymee’ning o‘yin bo‘limi. PUBG Mobile UC, Mobile Legends va Free Fire olmoslari, CODM CP, Honor of Kings tokenlari va Steam hamyoni — hammasi O‘zbek so‘mida, UzCard, HUMO, Click yoki Payme orqali. Xalqaro Visa/Mastercard, VPN yoki chet el hisobi kerak emas: faqat o‘yindagi Player ID ni kiritasiz.",
+      "howHeading": "Qanday ishlaydi — 4 qadam",
+      "steps": [
+        {
+          "title": "O‘yinni tanlang",
+          "body": "Botda GamPay bo‘limini oching va ro‘yxatdan o‘yiningizni toping."
+        },
+        {
+          "title": "Player ID ni kiriting",
+          "body": "Har bir o‘yin uchun qaysi ID kerakligi va uni qayerdan topish quyida yozilgan. Parol hech qachon so‘ralmaydi."
+        },
+        {
+          "title": "Paketni tanlang",
+          "body": "Narx so‘mda ko‘rinadi — konvertatsiya va yashirin komissiya yo‘q."
+        },
+        {
+          "title": "To‘lang va kuting",
+          "body": "UzCard, HUMO, Click yoki Payme orqali to‘laysiz; mablag‘ o‘yin hisobingizga o‘zi tushadi."
+        }
+      ],
+      "gamesHeading": "Qo‘llab-quvvatlanadigan o‘yinlar",
+      "gamesNote": "Narxlar provayder katalogi va valyuta kursiga qarab o‘zgaradi, shuning uchun aniq summa har doim botda ko‘rsatiladi — buyurtmani tasdiqlashdan oldin ko‘rasiz.",
+      "tableGame": "O‘yin",
+      "tableUnit": "Nima olinadi",
+      "tableId": "Nima so‘raladi",
+      "tableEta": "Yetkazish",
+      "whyHeading": "Nega GamPay",
+      "why": [
+        {
+          "title": "So‘mda to‘lov",
+          "body": "UzCard, HUMO, Click, Payme — mahalliy kartalar bilan. Valyuta ayirboshlash shart emas."
+        },
+        {
+          "title": "Kartasiz ham bo‘ladi",
+          "body": "Xalqaro Visa yoki Mastercard talab qilinmaydi — bu O‘zbekistondagi asosiy to‘siq edi."
+        },
+        {
+          "title": "Parol so‘ralmaydi",
+          "body": "Faqat ochiq Player ID kerak. Hech bir xizmatga o‘yin parolingizni bermang."
+        },
+        {
+          "title": "Telegram ichida",
+          "body": "Alohida ilova o‘rnatish yoki ro‘yxatdan o‘tish yo‘q — bot 24/7 ishlaydi."
+        }
+      ],
+      "safetyHeading": "Xavfsizlik",
+      "safetyBody": "Biz hech qachon o‘yin parolingizni, SMS kodini yoki Telegram kirish kodini so‘ramaymiz. To‘ldirish uchun faqat ommaviy Player ID yetarli. Kimdir shu ma’lumotlarni so‘rasa — bu firibgarlik.",
+      "articlesHeading": "O‘yin bo‘yicha qo‘llanmalar",
+      "ctaHeading": "O‘yin hisobingizni hoziroq to‘ldiring",
+      "ctaBody": "Botda GamPay bo‘limini oching, o‘yinni tanlang va so‘mda to‘lang.",
+      "ctaButton": "GamPay’ni ochish",
+      "footnote": "Savol bo‘lsa @StarsPaymeeSupport ga yozing — buyurtma ID bilan tezroq yordam beriladi."
     },
     "business": {
       "metaTitle": "Business — Telegram Stars API, Click va SBP integratsiyasi",

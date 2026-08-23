@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { ArrowIcon } from "@/components/v2/icons";
 import { BlogCategoryFilter } from "@/components/blog/blog-category-filter";
 import { blogCategories } from "@/lib/blog-posts";
-import { getBlogSummaries, getBlogCount, getGrowthSeriesSummaries, getNftGiftSeriesSummaries, getBoostSeriesSummaries } from "@/lib/blog/all";
+import { getBlogSummaries, getBlogCount, getGrowthSeriesSummaries, getNftGiftSeriesSummaries, getBoostSeriesSummaries, getGamPaySeriesSummaries } from "@/lib/blog/all";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -97,6 +97,12 @@ export default async function BlogPage({ params }: PageProps) {
       ...getBoostSeriesSummaries(locale).map((p, i) => ({
         "@type": "ListItem",
         position: 20 + i + 1,
+        url: `${base}/${locale}/blog/${p.slug}`,
+        name: p.title,
+      })),
+      ...getGamPaySeriesSummaries(locale).map((p, i) => ({
+        "@type": "ListItem",
+        position: 30 + i + 1,
         url: `${base}/${locale}/blog/${p.slug}`,
         name: p.title,
       })),

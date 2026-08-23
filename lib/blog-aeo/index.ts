@@ -149,6 +149,17 @@ import { post as p147 } from "./posts/147-ozbekistonda-telegram-stars-sotib-olis
 import { post as p148 } from "./posts/148-telegram-premium-fayl-yuklash";
 import { post as p149 } from "./posts/149-kanal-egalari-uchun-stars";
 import { post as p150 } from "./posts/150-ishonchli-stars-xizmatini-tanlash";
+// GamPay — o'yin to'ldirish seriyasi (hub + 9 o'yin)
+import { post as p151 } from "./posts/151-pubgm";
+import { post as p152 } from "./posts/152-mlbb-global";
+import { post as p153 } from "./posts/153-freefire-global";
+import { post as p154 } from "./posts/154-codm-sgmy";
+import { post as p155 } from "./posts/155-hok";
+import { post as p156 } from "./posts/156-magic-chess-gogo";
+import { post as p157 } from "./posts/157-deltaforce";
+import { post as p158 } from "./posts/158-asphalt9";
+import { post as p159 } from "./posts/159-bigo";
+import { post as p160 } from "./posts/160-oyin-hisobini-toldirish";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -168,6 +179,7 @@ export const aeoPosts: AeoPost[] = [
   p130, p131, p132, p133, p134, p135, p136, p137, p138, p139,
   p140, p141, p142, p143, p144, p145, p146, p147, p148, p149,
   p150,
+  p151, p152, p153, p154, p155, p156, p157, p158, p159, p160,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

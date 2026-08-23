@@ -6,7 +6,8 @@ import { MobileNavMenu } from "@/components/layout/mobile-nav-menu";
 import type { LandingTopic } from "@/components/landing/landing-topic-article";
 import { getTranslations } from "next-intl/server";
 import { Send } from "lucide-react";
-import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 
 const navLink =
   "relative py-1 text-slate-600 transition-colors hover:text-[#229ED9] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-[#229ED9] after:to-sky-400 after:transition-transform after:duration-300 hover:after:scale-x-100 dark:text-slate-400 dark:hover:text-[#229ED9]";
@@ -17,9 +18,14 @@ export async function SiteHeader({
   highlight = null,
 }: {
   /** `blog` — blog bo‘limi; qolganlari marketing ichki sahifalar */
-  highlight?: LandingTopic | "blog" | "business" | null;
+  highlight?: LandingTopic | "blog" | "business" | "gampay" | null;
 }) {
-  const telegramBotUrl = getTelegramBotUrl();
+  // `highlight` — foydalanuvchi turgan bo‘lim; manba yorlig‘i shundan olinadi,
+  // aks holda barcha ichki sahifalar botga «home» deb ko‘rinardi.
+  const telegramBotUrl = botDeepLink({
+    page: (highlight ?? "home") as DeepLinkPage,
+    placement: "nav",
+  });
   const telegramSupportUrl = getTelegramSupportUrl();
   const n = await getTranslations("nav");
   const lg = await getTranslations("landing");
@@ -65,6 +71,9 @@ export async function SiteHeader({
             </Link>
             <Link href="/gifts" className={prod("gifts")}>
               {lg("nav.gifts")}
+            </Link>
+            <Link href="/gampay" className={highlight === "gampay" ? navActive : navLink}>
+              GamPay
             </Link>
             <Link href="/blog" className={highlight === "blog" ? navActive : navLink}>
               {n("blog")}

@@ -1,4 +1,4 @@
-export type BlogCategory = "Stars" | "Premium" | "Gifts" | "Biznes" | "Steam" | "Telegram" | "Xavfsizlik";
+export type BlogCategory = "Stars" | "Premium" | "Gifts" | "Biznes" | "Steam" | "O‘yinlar" | "Telegram" | "Xavfsizlik";
 
 export interface BlogPost {
   slug: string;
@@ -492,4 +492,4 @@ export function getPostsByCategory(category: BlogCategory | "hammasi"): BlogPost
   return blogPosts.filter((p) => p.category === category);
 }
 
-export const blogCategories: BlogCategory[] = ["Stars", "Premium", "Gifts", "Biznes", "Steam", "Telegram", "Xavfsizlik"];
+export const blogCategories: BlogCategory[] = ["Stars", "Premium", "Gifts", "Biznes", "Steam", "O‘yinlar", "Telegram", "Xavfsizlik"];

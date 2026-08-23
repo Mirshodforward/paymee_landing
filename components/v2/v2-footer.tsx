@@ -52,6 +52,9 @@ export function V2Footer({
             <Link href="/gifts" className={linkCls}>
               {labels.gifts}
             </Link>
+            <Link href="/gampay" className={linkCls}>
+              GamPay
+            </Link>
             <Link href="/blog" className={linkCls}>
               {labels.blog}
             </Link>

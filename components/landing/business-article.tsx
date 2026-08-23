@@ -2,7 +2,8 @@ import { ArrowRight, ChevronRight, Check } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getTelegramBotUrl, getTelegramSupportUrl, getSiteUrl, siteConfig } from "@/lib/site";
+import { getTelegramSupportUrl, getSiteUrl, siteConfig } from "@/lib/site";
+import { botDeepLink } from "@/lib/telegram-deeplink";
 import { getBlogSummaries } from "@/lib/blog/all";
 
 type Section = { title: string; body: string; items?: string[] };
@@ -20,7 +21,7 @@ const FEATURED_SLUGS = [
 export async function BusinessArticle({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "landing" });
   const tHome = await getTranslations({ locale, namespace: "blogIndex" });
-  const telegramBotUrl = getTelegramBotUrl();
+  const telegramBotUrl = botDeepLink({ page: "business", placement: "cta" });
   const supportUrl = getTelegramSupportUrl();
   const base = getSiteUrl();
   const canonical = `${base}/${locale}/business`;

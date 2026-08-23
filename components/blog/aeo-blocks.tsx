@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { TelegramIcon } from "@/components/v2/icons";
-import { getTelegramBotUrl } from "@/lib/site";
+import { botDeepLink, type DeepLinkProduct } from "@/lib/telegram-deeplink";
 import type { FaqItem } from "@/lib/blog-aeo/types";
 
 /** Sahifa boshidagi to‘g‘ridan-to‘g‘ri javob bloki (AEO uchun eng muhim). */
@@ -15,9 +15,15 @@ export function AnswerBox({ label, children }: { label: string; children: ReactN
   );
 }
 
-/** Maqola ichidagi bot CTA — o‘qish davomida konvertatsiya nuqtasi. */
-export function InlineCta({ text }: { text: string }) {
-  const url = getTelegramBotUrl();
+/**
+ * Maqola ichidagi bot CTA — o‘qish davomida konvertatsiya nuqtasi.
+ *
+ * `product` berilsa, bot kerakli ekranni oldindan to‘ldirilgan holda ochadi:
+ * masalan Stars maqolasida `{ kind: "stars", amount: 100 }` — odam botda
+ * qaytadan bo‘lim qidirmaydi.
+ */
+export function InlineCta({ text, product }: { text: string; product?: DeepLinkProduct }) {
+  const url = botDeepLink({ page: "blog", placement: "article", product });
   return (
     <div className="inline-cta">
       <p>{text}</p>

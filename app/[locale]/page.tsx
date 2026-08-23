@@ -19,8 +19,10 @@ import {
   TelegramIcon,
   VerifiedIcon,
 } from "@/components/v2/icons";
-import { getTelegramBotUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import { getFeaturedSummaries } from "@/lib/blog/all";
+import { GAMES } from "@/lib/games";
+import { botDeepLink } from "@/lib/telegram-deeplink";
 import {
   PAYMENT_METHODS,
   PREMIUM_LOGIN_PLANS,
@@ -42,7 +44,11 @@ export default async function HomePage({ params }: PageProps) {
   const t = await getTranslations("v2");
   const th = await getTranslations("home");
   const featured = getFeaturedSummaries(locale, 8);
-  const botUrl = getTelegramBotUrl();
+  const tg = await getTranslations("landing");
+  // Har bir CTA o‘z manbasini olib boradi — bot foydalanuvchi qaysi bo‘limdan
+  // kelganini biladi va mahsulotni oldindan tanlab qo‘yadi.
+  const link = (placement: Parameters<typeof botDeepLink>[0]["placement"], product?: Parameters<typeof botDeepLink>[0]["product"]) =>
+    botDeepLink({ page: "home", placement, product });
   const supportUrl = getTelegramSupportUrl();
 
   const nf = new Intl.NumberFormat(locale === "ru" ? "ru-RU" : "en-US");
@@ -157,8 +163,8 @@ export default async function HomePage({ params }: PageProps) {
       <JsonLd data={faqLd} />
       <JsonLd data={offersLd} />
       <V2Shell
-        nav={<V2Nav labels={navLabels} botUrl={botUrl} variant="home" />}
-        footer={<V2Footer labels={footerLabels} botUrl={botUrl} supportUrl={supportUrl} />}
+        nav={<V2Nav labels={navLabels} botUrl={link("nav")} variant="home" />}
+        footer={<V2Footer labels={footerLabels} botUrl={link("footer")} supportUrl={supportUrl} />}
       >
         {/* ===== Hero ===== */}
         <section className="hero">
@@ -177,7 +183,7 @@ export default async function HomePage({ params }: PageProps) {
             <div className="hero-cta rv" style={{ "--d": ".25s" } as CSSProperties}>
               <a
                 className="btn btn-grad mag"
-                href={botUrl}
+                href={link("hero")}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -436,7 +442,7 @@ export default async function HomePage({ params }: PageProps) {
                   key={p.title}
                   className={`prod ${p.cls} spot rv`}
                   style={{ "--d": `${i * 0.1}s` } as CSSProperties}
-                  href={botUrl}
+                  href={link("card")}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -469,7 +475,7 @@ export default async function HomePage({ params }: PageProps) {
           ctaBot={t("nftCtaBot")}
           ctaBlog={t("nftCtaBlog")}
           blogHref="/blog/telegram-nft-gift-nima"
-          botUrl={botUrl}
+          botUrl={link("card")}
           newBadge={t("nftNewBadge")}
           bullets={nftBullets}
         />
@@ -486,7 +492,7 @@ export default async function HomePage({ params }: PageProps) {
           ctaBot={t("boostCtaBot")}
           ctaBlog={t("boostCtaBlog")}
           blogHref="/blog/telegram-kanalga-boost-sotib-olish"
-          botUrl={botUrl}
+          botUrl={link("card")}
           newBadge={t("boostNewBadge")}
           bullets={boostBullets}
         />
@@ -505,7 +511,7 @@ export default async function HomePage({ params }: PageProps) {
                   key={p.amount}
                   className={`pcard${p.popular ? " popular" : ""}`}
                   style={{ "--d": `${i * 0.04}s` } as CSSProperties}
-                  href={botUrl}
+                  href={link("price", { kind: "stars", amount: p.amount })}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -532,7 +538,7 @@ export default async function HomePage({ params }: PageProps) {
             </div>
             <a
               className="btn btn-grad mag rv"
-              href={botUrl}
+              href={link("cta")}
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginTop: 34 }}
@@ -580,7 +586,7 @@ export default async function HomePage({ params }: PageProps) {
                   key={p.months}
                   className={`pcard${p.popular ? " popular-pr" : ""}`}
                   style={{ "--d": `${i * 0.08}s`, alignItems: "flex-start", textAlign: "left", padding: "26px 24px" } as CSSProperties}
-                  href={botUrl}
+                  href={link("price", { kind: "premium", months: p.months })}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -612,7 +618,7 @@ export default async function HomePage({ params }: PageProps) {
                   key={p.months}
                   className="pcard"
                   style={{ "--d": `${i * 0.08}s`, alignItems: "flex-start", textAlign: "left", padding: "26px 24px" } as CSSProperties}
-                  href={botUrl}
+                  href={link("price", { kind: "premium", months: p.months })}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -702,6 +708,25 @@ export default async function HomePage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* ===== GamPay — o‘yin to‘ldirish bo‘limi =====
+             Botda bu 9 o‘yin + Steam’dan iborat alohida vertikal, lekin
+             marketing saytida umuman ko‘rinmasdi. Bosh sahifadan havola
+             bo‘lmasa, /gampay sahifasi ichki link olmay qolardi. */}
+        <section className="sec" id="gampay" style={{ paddingTop: 0 }}>
+          <div className="wrap">
+            <Link href="/gampay" className="home-gampay rv">
+              <span className="home-gampay__icon" aria-hidden>🎮</span>
+              <span className="home-gampay__text">
+                <span className="home-gampay__title">{tg("gampay.h1")}</span>
+                <span className="home-gampay__sub">
+                  {GAMES.slice(0, 5).map((g) => g.title).join(" · ")} · Steam
+                </span>
+              </span>
+              <ArrowIcon />
+            </Link>
+          </div>
+        </section>
+
         {/* ===== Mashhur qo‘llanmalar — blogga ichki linklar ===== */}
         {featured.length > 0 ? (
           <section className="sec" id="qollanmalar" style={{ paddingTop: 0 }}>
@@ -779,7 +804,7 @@ export default async function HomePage({ params }: PageProps) {
             <a
               className="btn btn-grad btn-xl mag"
               data-v2-cta-btn
-              href={botUrl}
+              href={link("cta")}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -787,7 +812,7 @@ export default async function HomePage({ params }: PageProps) {
               {t("ctaButton")}
             </a>
             <p className="cta-tg">
-              <a href={botUrl} target="_blank" rel="noopener noreferrer">
+              <a href={link("cta")} target="_blank" rel="noopener noreferrer">
                 @StarsPaymee_bot
               </a>{" "}
               · {t("ctaTgLine")}
