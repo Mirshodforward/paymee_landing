@@ -160,6 +160,10 @@ import { post as p157 } from "./posts/157-deltaforce";
 import { post as p158 } from "./posts/158-asphalt9";
 import { post as p159 } from "./posts/159-bigo";
 import { post as p160 } from "./posts/160-oyin-hisobini-toldirish";
+// «Kupit» seriyasi — Stars, Premium va sovg‘alarni so‘m/rublda sotib olish
+import { post as p161 } from "./posts/161-click-payme-orqali-telegram-stars-sotib-olish";
+import { post as p162 } from "./posts/162-telegram-premium-3-6-12-oy-sotib-olish";
+import { post as p163 } from "./posts/163-telegram-sovga-va-nft-sovga-sotib-olish";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -180,6 +184,7 @@ export const aeoPosts: AeoPost[] = [
   p140, p141, p142, p143, p144, p145, p146, p147, p148, p149,
   p150,
   p151, p152, p153, p154, p155, p156, p157, p158, p159, p160,
+  p161, p162, p163,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
