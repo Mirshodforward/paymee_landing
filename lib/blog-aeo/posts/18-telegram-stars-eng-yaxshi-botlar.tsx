@@ -18,27 +18,45 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
-      <h2 id="mezonlar">Yaxshi Stars botini qanday tanlash kerak?</h2>
+      <h2 id="reyting-yoq">Nega bu yerda «top-10 bot» reytingi yo‘q</h2>
       <p>
-        «Eng yaxshi bot» — bu sizning to‘lov usulingizni qo‘llab-quvvatlaydigan, tez va ishonchli bot. Asosiy mezonlar:
+        Internetdagi «eng yaxshi botlar» ro‘yxatlarining aksariyati hech qanday tekshiruvga asoslanmaydi: ular
+        odatda reklama joylashuviga qarab tuziladi va bir necha oyda eskirib qoladi. O‘zimiz sinab ko‘rmagan
+        xizmatlarni tartiblab bera olmaymiz, shuning uchun bu maqolada reyting yo‘q.
       </p>
-      <KeyFacts label="Tanlash mezonlari">
+      <p>
+        Buning o‘rniga — <b>har birini o‘zingiz bir necha daqiqada tekshiradigan mezonlar</b>. Shu ro‘yxatdan
+        o‘tgan bot sizga mos; o‘tmagani esa, qanchalik ko‘p reklama qilinmasin, mos emas.
+      </p>
+
+      <h2 id="mezonlar">Tekshiriladigan tanlash mezonlari</h2>
+      <KeyFacts label="Beshta mezon va ularni qanday tekshirish">
         <li>
-          <b>So‘mda to‘lov:</b> UzCard, HUMO, Click, Payme, Paynet — xorijiy karta shart emas.
+          <b>So‘mda mahalliy to‘lov.</b> Qanday tekshirish: botni ochib to‘lov usullari ro‘yxatiga qarang —
+          UzCard, HUMO, Click, Payme yoki Paynet bo‘lishi kerak. Faqat kripto yoki xorijiy karta taklif qilinsa,
+          bu O‘zbekiston foydalanuvchisiga mos emas.
         </li>
         <li>
-          <b>Parolsiz:</b> faqat @username; login/parol so‘ralmaydi.
+          <b>Parol so‘ralmasligi.</b> Qanday tekshirish: buyurtmani boshlang va qaysi ma’lumot so‘ralishini
+          ko‘ring. Faqat @username so‘ralishi kerak. Parol, SMS-kod yoki 2FA so‘ralsa — darhol to‘xtang.
         </li>
         <li>
-          <b>Tezlik:</b> to‘lovdan keyin avtomatik, soniyalarda yetkazish.
+          <b>Narx to‘lovdan oldin ko‘rinishi.</b> Qanday tekshirish: yakuniy summa to‘lash tugmasidan oldin
+          so‘mda yozilganmi? «Keyin aytamiz» degan oqim shaffof emas.
         </li>
         <li>
-          <b>Shaffoflik:</b> aniq narx, oferta va support kanali.
+          <b>Ochiq support kanali.</b> Qanday tekshirish: botda alohida qo‘llab-quvvatlash havolasi bormi va
+          unga yozilganda javob keladimi? Test xabari yuborib ko‘rish eng ishonchli usul.
         </li>
         <li>
-          <b>Kafolat:</b> texnik nosozlikda to‘lov qaytarilishi.
+          <b>Buyurtma raqami va status.</b> Qanday tekshirish: to‘lovdan keyin buyurtma ID beriladimi va uni
+          keyin ko‘rish mumkinmi? ID bo‘lmasa, muammo chiqqanda murojaat qilishga asos qolmaydi.
         </li>
       </KeyFacts>
+      <p>
+        Beshtasidan kamida bittasi bajarilmasa, boshqa xizmatni qidirgan ma’qul — tejalgan bir necha ming so‘m
+        yo‘qolgan buyurtmaga arzimaydi.
+      </p>
 
       <InlineCta text="Shu mezonlarga mos bot — @StarsPaymee_bot. Sinab ko‘ring." />
 
@@ -89,25 +107,45 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
-      <h2 id="mezonlar">Как выбрать хороший бот для Stars?</h2>
-      <p>«Лучший бот» — тот, что поддерживает ваш способ оплаты, быстрый и надёжный. Основные критерии:</p>
-      <KeyFacts label="Критерии выбора">
+      <h2 id="reyting-yoq">Почему здесь нет рейтинга «топ-10 ботов»</h2>
+      <p>
+        Большинство списков «лучших ботов» в интернете не опирается ни на какую проверку: их обычно составляют по
+        рекламным размещениям, и уже через несколько месяцев они устаревают. Ранжировать сервисы, которые мы сами
+        не тестировали, мы не можем — поэтому рейтинга в статье нет.
+      </p>
+      <p>
+        Вместо него — <b>критерии, каждый из которых вы проверяете сами за пару минут</b>. Бот, прошедший этот
+        список, вам подходит; не прошедший — не подходит, сколько бы его ни рекламировали.
+      </p>
+
+      <h2 id="mezonlar">Проверяемые критерии выбора</h2>
+      <KeyFacts label="Пять критериев и как их проверить">
         <li>
-          <b>Оплата в сумах:</b> UzCard, HUMO, Click, Payme, Paynet — иностранная карта не нужна.
+          <b>Местная оплата в сумах.</b> Как проверить: откройте бота и посмотрите список способов оплаты — там
+          должны быть UzCard, HUMO, Click, Payme или Paynet. Если предлагают только крипту или зарубежную карту,
+          пользователю из Узбекистана это не подходит.
         </li>
         <li>
-          <b>Без пароля:</b> только @username; логин/пароль не запрашивают.
+          <b>Пароль не запрашивается.</b> Как проверить: начните оформление и посмотрите, какие данные просят.
+          Требоваться должен только @username. Просят пароль, SMS-код или 2FA — сразу останавливайтесь.
         </li>
         <li>
-          <b>Скорость:</b> после оплаты — автоматически, за секунды.
+          <b>Цена видна до оплаты.</b> Как проверить: итоговая сумма написана в сумах до кнопки оплаты? Схема
+          «скажем позже» непрозрачна.
         </li>
         <li>
-          <b>Прозрачность:</b> понятная цена, оферта и канал поддержки.
+          <b>Открытый канал поддержки.</b> Как проверить: есть ли в боте отдельная ссылка на поддержку и отвечают
+          ли там? Самый надёжный способ — отправить тестовое сообщение.
         </li>
         <li>
-          <b>Гарантия:</b> возврат при техническом сбое.
+          <b>Номер заказа и статус.</b> Как проверить: выдаётся ли после оплаты ID заказа и можно ли посмотреть
+          его позже? Без ID не с чем обращаться, если что-то пойдёт не так.
         </li>
       </KeyFacts>
+      <p>
+        Если не выполняется хотя бы один из пяти пунктов, лучше поискать другой сервис — сэкономленные пара тысяч
+        сумов не стоят потерянного заказа.
+      </p>
 
       <InlineCta text="Бот под эти критерии — @StarsPaymee_bot. Попробуйте." />
 
@@ -149,7 +187,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "comparison",
   datePublished: "2026-06-08",
-  dateModified: "2026-06-08",
+  dateModified: "2026-09-08",
   keywords: [
     "telegram stars bot",
     "telegram stars eng yaxshi bot",
@@ -159,12 +197,12 @@ export const post: AeoPost = {
   ],
   locales: {
     uz: {
-      title: "Telegram Stars olish uchun eng yaxshi botlar (2026) — qanday tanlash",
+      title: "Telegram Stars uchun eng yaxshi botni qanday tanlash (2026)",
       excerpt:
-        "O‘zbekistonda Stars olish uchun botni qanday tanlash: so‘mda to‘lov, parolsiz, tez avtomatik yetkazish, oferta va support. Yo‘llar taqqoslandi.",
-      metaTitle: "Telegram Stars olish uchun eng yaxshi botlar 2026",
+        "Reyting emas — o‘zingiz tekshiradigan beshta mezon: so‘mda to‘lov, parolsiz @username, narx shaffofligi, ochiq support va buyurtma ID. Yo‘llar taqqoslandi.",
+      metaTitle: "Telegram Stars uchun bot tanlash — 2026 mezonlari",
       metaDescription:
-        "Telegram Stars olish uchun bot qanday tanlanadi: so‘mda to‘lov (UzCard/HUMO/Click/Payme), parolsiz @username, tez avtomatik, oferta, support. Yo‘llar taqqoslovi.",
+        "Telegram Stars uchun bot tanlash mezonlari va ularni qanday tekshirish: so‘mda to‘lov, parolsiz @username, narx shaffofligi, support va buyurtma ID.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -196,12 +234,12 @@ export const post: AeoPost = {
       ],
     },
     ru: {
-      title: "Лучшие боты для покупки Telegram Stars (2026) — как выбрать",
+      title: "Как выбрать лучшего бота для Telegram Stars (2026)",
       excerpt:
-        "Как выбрать бот для покупки Stars в Узбекистане: оплата в сумах, без пароля, быстрая автодоставка, оферта и поддержка. Сравнение способов.",
-      metaTitle: "Лучшие боты для покупки Telegram Stars 2026",
+        "Не рейтинг, а пять критериев, которые вы проверяете сами: оплата в сумах, без пароля, прозрачная цена, открытая поддержка и ID заказа.",
+      metaTitle: "Выбор бота для Telegram Stars — критерии 2026",
       metaDescription:
-        "Как выбрать бот для Telegram Stars: оплата в сумах (UzCard/HUMO/Click/Payme), без пароля по @username, быстрая автодоставка, оферта, поддержка. Сравнение способов.",
+        "Как выбрать бота для Telegram Stars: пять проверяемых критериев — оплата в сумах, без пароля, цена до оплаты, поддержка и номер заказа.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,

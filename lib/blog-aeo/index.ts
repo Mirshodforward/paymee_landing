@@ -126,9 +126,7 @@ import { post as p124 } from "./posts/124-telegram-yulduz-sotib-olish";
 import { post as p125 } from "./posts/125-yulduz-olish";
 import { post as p126 } from "./posts/126-visa-kartasiz-stars-olish";
 import { post as p127 } from "./posts/127-premium-olish";
-import { post as p128 } from "./posts/128-telegram-premium-sotib-olish";
 import { post as p129 } from "./posts/129-visa-kartasiz-premium-olish";
-import { post as p130 } from "./posts/130-bir-oylik-premium-olish";
 import { post as p131 } from "./posts/131-telegram-stars-qanday-olinadi";
 import { post as p132 } from "./posts/132-telegram-stars-kerak";
 import { post as p133 } from "./posts/133-telegram-yulduz-kerak";
@@ -142,7 +140,6 @@ import { post as p140 } from "./posts/140-telegram-premium-narxi";
 import { post as p141 } from "./posts/141-telegram-premium-imkoniyatlari";
 import { post as p142 } from "./posts/142-premium-va-oddiy-hisob-farqi";
 import { post as p143 } from "./posts/143-arzon-telegram-premium";
-import { post as p144 } from "./posts/144-telegram-premium-sovga-qilish";
 import { post as p145 } from "./posts/145-stars-va-premium-farqi";
 import { post as p146 } from "./posts/146-telegram-stars-xavfsizmi";
 import { post as p147 } from "./posts/147-ozbekistonda-telegram-stars-sotib-olish";
@@ -164,6 +161,8 @@ import { post as p160 } from "./posts/160-oyin-hisobini-toldirish";
 import { post as p161 } from "./posts/161-click-payme-orqali-telegram-stars-sotib-olish";
 import { post as p162 } from "./posts/162-telegram-premium-3-6-12-oy-sotib-olish";
 import { post as p163 } from "./posts/163-telegram-sovga-va-nft-sovga-sotib-olish";
+// Konsolidatsiya: eski flat maqola AEO ga o‘tkazildi, URL saqlandi
+import { post as p164 } from "./posts/164-ozbekistonda-oylik-premium-uza-humo";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -179,12 +178,12 @@ export const aeoPosts: AeoPost[] = [
   p90, p91, p92, p93, p94, p95, p96, p97, p98, p99,
   p100, p101, p102, p103, p104, p105, p106, p107, p108, p109,
   p110, p111, p112, p113, p114, p115, p116, p117, p118, p119,
-  p120, p121, p122, p123, p124, p125, p126, p127, p128, p129,
-  p130, p131, p132, p133, p134, p135, p136, p137, p138, p139,
-  p140, p141, p142, p143, p144, p145, p146, p147, p148, p149,
+  p120, p121, p122, p123, p124, p125, p126, p127, p129,
+  p131, p132, p133, p134, p135, p136, p137, p138, p139,
+  p140, p141, p142, p143, p145, p146, p147, p148, p149,
   p150,
   p151, p152, p153, p154, p155, p156, p157, p158, p159, p160,
-  p161, p162, p163,
+  p161, p162, p163, p164,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

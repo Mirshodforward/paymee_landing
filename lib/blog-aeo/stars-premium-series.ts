@@ -11,9 +11,9 @@ export const starsPremiumSeriesSlugs = [
   "yulduz-olish",
   "visa-kartasiz-stars-olish",
   "premium-olish",
-  "telegram-premium-sotib-olish",
+  "telegram-premium-eng-oson-usul",
   "visa-kartasiz-premium-olish",
-  "bir-oylik-premium-olish",
+  "ozbekistonda-oylik-premium-uza-humo",
 ] as const;
 
 export type StarsPremiumSeriesSlug = (typeof starsPremiumSeriesSlugs)[number];

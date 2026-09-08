@@ -220,19 +220,6 @@ export const blogPosts: BlogPost[] = ([
     ],
   },
   {
-    slug: "click-payme-telegram-stars-2026",
-    category: "Stars",
-    datePublished: "2026-04-30",
-    title: "Click va Payme orqali Telegram Stars: yoʻl va taʼsir",
-    excerpt:
-      "Aggregator orqali toʻlov qulay bo‘lsa ham, yakuniy oqim siz tanlagan platforma bilan bog‘langan.",
-    paragraphs: [
-      "Click va Payme O‘zbekiston foydalanuvchilari uchun odatiy; ular kartadan mablag‘ yechish va bildirishnomalarni boshqarishni soddalashtiradi.",
-      "Stars yetkazib berish uchun bot tomonidagi tasdiqlash bosqichi muhim — toʻlov aggregatorda muvaffaqiyat bo‘lishi Telegram tomonda avtomatik yulduz degani emas.",
-      "StarsPaymee oʻz slot va internal tekshirish oqimi bilan yakunlangan buyurtmani kuzatish imkonini beradi.",
-    ],
-  },
-  {
     slug: "ton-vs-telegram-stars-farq",
     category: "Telegram",
     datePublished: "2026-04-20",
@@ -282,19 +269,6 @@ export const blogPosts: BlogPost[] = ([
       "Haqiqiy xizmat odatda aniq taʼrif, yozma oferta va support kanaliga ega.",
       "Kattagina chegirmalar uchun oldindan toʻlov soʻragan manbalarga ehtiyot boʻling.",
       "StarsPaymee kabi tuzilmalar buyurtmani ID bilan kuzatish va tekshirish imkoniyatini berishi kerak.",
-    ],
-  },
-  {
-    slug: "ozbekistonda-oylik-premium-uza-humo",
-    category: "Premium",
-    datePublished: "2026-04-07",
-    title: "1 oylik Telegram Premiumni UzCard va Humo orqali olish mumkinmi?",
-    excerpt:
-      "Qisqa muddat uchun bank kartalari orqali xarid odatda mumkin — platforma esa paket toʻgʻriligini tekshirishi kerak.",
-    paragraphs: [
-      "Bir oylik paket boshqa muddat bilan bir xil oqimdagi boshqa miqdorda koʻrinadi.",
-      "UzCard va Humo toʻlovlarda mahalliy OTP va sms bilan ishlaydi.",
-      "StarsPaymee da toʻlovdan keyin statusni sahifadan kuzating.",
     ],
   },
   {

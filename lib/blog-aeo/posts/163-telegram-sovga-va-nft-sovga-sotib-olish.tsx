@@ -6,8 +6,6 @@ import {
   InlineCta,
   KeyFacts,
   Sources,
-  Step,
-  Steps,
   Toc,
 } from "@/components/blog/aeo-blocks";
 import { NftGiftMarketBoard } from "@/components/blog/nft-gift-market-board";
@@ -82,7 +80,7 @@ function UzBody() {
           { href: "#nft", label: "NFT sovg‘alar nima" },
           { href: "#farq", label: "Farqi nimada" },
           { href: "#tolov", label: "To‘lov: so‘m va rubl" },
-          { href: "#qadamlar", label: "Qadam-baqadam" },
+          { href: "#tanlash", label: "Qaysi turini tanlash" },
           { href: "#bepul", label: "Do‘st taklif qilib bepul sovg‘a" },
         ]}
       />
@@ -194,24 +192,37 @@ function UzBody() {
 
       <InlineCta text="Sovg‘ani so‘mda yoki rublda tanlang — Gift Market botda ochiq." />
 
-      <h2 id="qadamlar">Qadam-baqadam: xarid qanday kechadi</h2>
-      <Steps>
-        <Step title="1. Botni oching">
-          Telegramda{" "}
-          <a href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener noreferrer">
-            @StarsPaymee_bot
-          </a>{" "}
-          ni ishga tushiring.
-        </Step>
-        <Step title="2. Sovg‘alar bo‘limini tanlang">Oddiy Gifts yoki NFT sovg‘alar — ehtiyojingizga qarab.</Step>
-        <Step title="3. Sovg‘a yoki kolleksiyani tanlang">
-          NFT sovg‘alarda odatda turli seriya va noyoblik darajalari mavjud.
-        </Step>
-        <Step title="4. Qabul qiluvchini ko‘rsating">O‘zingiz yoki boshqa Telegram foydalanuvchisi.</Step>
-        <Step title="5. To‘lov usulini tanlang">So‘m uchun — Click, UzCard, HUMO yoki Payme; rubl uchun — SBP.</Step>
-        <Step title="6. Buyurtmani to‘lang">Summa tanlangan valyutada ko‘rsatiladi.</Step>
-        <Step title="7. Tasdiqni oling">Sovg‘a to‘lovdan keyin deyarli darhol qabul qiluvchiga yuboriladi.</Step>
-      </Steps>
+      <h2 id="tanlash">Qaysi turini tanlash kerak</h2>
+      <p>
+        Tanlov ikkita savolga bog‘liq: sovg‘a <b>kimga</b> va <b>nima uchun</b>. Quyidagi qoida ko‘pchilik holatni
+        yopadi:
+      </p>
+      <KeyFacts label="Qisqa qoida">
+        <li>
+          <b>Kundalik e’tibor, tabrik, minnatdorchilik</b> — oddiy sovg‘a. Arzon, cheksiz mavjud va darhol
+          yetkaziladi.
+        </li>
+        <li>
+          <b>Yodda qoladigan, qadrli tuhfa</b> — cheklangan seriyadagi NFT sovg‘a. Qimmatroq, lekin noyob.
+        </li>
+        <li>
+          <b>Kolleksiya yoki uzoq muddatli aktiv</b> — NFT sovg‘a. Tiraji cheklangani uchun qayta sotish imkoni
+          bor, ammo narx kafolatlanmaydi.
+        </li>
+        <li>
+          <b>Kanal yoki konkurs uchun ko‘p miqdorda</b> — oddiy sovg‘alar; ular soni cheklanmagani uchun
+          byudjetga mos.
+        </li>
+      </KeyFacts>
+      <p>
+        Xarid tartibi ikkala tur uchun bir xil: botning sovg‘alar bo‘limini oching, sovg‘ani tanlang, qabul
+        qiluvchining @username’ini kiriting va to‘lov usulini belgilang — so‘m uchun Click, UzCard, HUMO yoki
+        Payme, rubl uchun SBP. To‘liq qadamlar, anonim yuborish, izoh qoldirish va ko‘p uchraydigan xatolar —{" "}
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
+          «Telegram Gifts qanday yuboriladi» qo‘llanmasida
+        </Link>
+        .
+      </p>
 
       <h2 id="bepul">Do‘st taklif qilib bepul sovg‘a olish</h2>
       <p>
@@ -295,7 +306,7 @@ function RuBody() {
           { href: "#nft", label: "Что такое NFT-подарки" },
           { href: "#farq", label: "В чём разница" },
           { href: "#tolov", label: "Оплата: сумы и рубли" },
-          { href: "#qadamlar", label: "Пошаговая инструкция" },
+          { href: "#tanlash", label: "Какой вид выбрать" },
           { href: "#bepul", label: "Бесплатные подарки за друзей" },
         ]}
       />
@@ -411,24 +422,37 @@ function RuBody() {
 
       <InlineCta text="Выберите подарок и оплатите в сумах или рублях — Gift Market открыт в боте." />
 
-      <h2 id="qadamlar">Пошаговая инструкция по покупке</h2>
-      <Steps>
-        <Step title="1. Откройте бота">
-          Запустите{" "}
-          <a href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener noreferrer">
-            @StarsPaymee_bot
-          </a>{" "}
-          в Telegram.
-        </Step>
-        <Step title="2. Выберите раздел с подарками">Обычные Gifts или NFT-подарки — в зависимости от задачи.</Step>
-        <Step title="3. Выберите подарок или коллекцию">
-          Для NFT-подарков часто доступны разные серии и уровни редкости.
-        </Step>
-        <Step title="4. Укажите получателя">Себя или другого пользователя Telegram.</Step>
-        <Step title="5. Выберите способ оплаты">Для сумов — Click, Uzcard, Humo или Payme; для рублей — СБП.</Step>
-        <Step title="6. Оплатите заказ">Сумма показывается в выбранной валюте.</Step>
-        <Step title="7. Получите подтверждение">Подарок отправляется получателю практически сразу после оплаты.</Step>
-      </Steps>
+      <h2 id="tanlash">Какой вид подарка выбрать</h2>
+      <p>
+        Выбор упирается в два вопроса: <b>кому</b> подарок и <b>зачем</b>. Правило ниже закрывает большинство
+        ситуаций:
+      </p>
+      <KeyFacts label="Короткое правило">
+        <li>
+          <b>Знак внимания, поздравление, благодарность</b> — обычный подарок. Недорого, доступен всегда и
+          доходит сразу.
+        </li>
+        <li>
+          <b>Запоминающийся, ценный подарок</b> — NFT из ограниченной серии. Дороже, зато уникален.
+        </li>
+        <li>
+          <b>Коллекция или долгосрочный актив</b> — NFT-подарок. Тираж ограничен, поэтому перепродажа возможна,
+          но цена не гарантирована.
+        </li>
+        <li>
+          <b>Много подарков для канала или конкурса</b> — обычные: их количество не ограничено, и это выгоднее по
+          бюджету.
+        </li>
+      </KeyFacts>
+      <p>
+        Порядок покупки одинаков для обоих видов: откройте раздел подарков в боте, выберите подарок, введите
+        @username получателя и способ оплаты — для сумов Click, Uzcard, Humo или Payme, для рублей СБП. Полные
+        шаги, анонимная отправка, комментарий и частые ошибки —{" "}
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
+          в руководстве «Как отправить подарок в Telegram»
+        </Link>
+        .
+      </p>
 
       <h2 id="bepul">Бесплатные подарки за приглашение друзей</h2>
       <p>
@@ -513,7 +537,7 @@ function EnBody() {
           { href: "#nft", label: "What NFT gifts are" },
           { href: "#farq", label: "The difference" },
           { href: "#tolov", label: "Payment: so‘m and roubles" },
-          { href: "#qadamlar", label: "Step by step" },
+          { href: "#tanlash", label: "Which type to choose" },
           { href: "#bepul", label: "Free gifts for invites" },
         ]}
       />
@@ -620,24 +644,36 @@ function EnBody() {
 
       <InlineCta text="Pick a gift and pay in so‘m or roubles — the Gift Market is open in the bot." />
 
-      <h2 id="qadamlar">Step by step: how the purchase goes</h2>
-      <Steps>
-        <Step title="1. Open the bot">
-          Start{" "}
-          <a href="https://t.me/StarsPaymee_bot" target="_blank" rel="noopener noreferrer">
-            @StarsPaymee_bot
-          </a>{" "}
-          in Telegram.
-        </Step>
-        <Step title="2. Pick the gifts section">Regular Gifts or NFT gifts, depending on what you need.</Step>
-        <Step title="3. Choose a gift or a collection">
-          NFT gifts usually come in several series and rarity tiers.
-        </Step>
-        <Step title="4. Name the recipient">Yourself or another Telegram user.</Step>
-        <Step title="5. Choose a payment method">For so‘m — Click, UzCard, HUMO or Payme; for roubles — SBP.</Step>
-        <Step title="6. Pay for the order">The total is shown in the currency you picked.</Step>
-        <Step title="7. Get the confirmation">The gift is sent to the recipient almost immediately after payment.</Step>
-      </Steps>
+      <h2 id="tanlash">Which type of gift to choose</h2>
+      <p>
+        The choice comes down to two questions: <b>who</b> the gift is for and <b>why</b>. The rule below covers
+        most situations:
+      </p>
+      <KeyFacts label="The short rule">
+        <li>
+          <b>A token of attention, a greeting, a thank-you</b> — a regular gift. Cheap, always available and
+          delivered instantly.
+        </li>
+        <li>
+          <b>Something memorable and valuable</b> — an NFT from a limited series. Pricier, but unique.
+        </li>
+        <li>
+          <b>A collection or a long-term asset</b> — an NFT gift. The capped supply makes resale possible, though
+          the price is never guaranteed.
+        </li>
+        <li>
+          <b>Many gifts for a channel or a giveaway</b> — regular ones: unlimited supply and easier on the budget.
+        </li>
+      </KeyFacts>
+      <p>
+        The buying flow is the same for both: open the gifts section in the bot, pick a gift, enter the
+        recipient’s @username and choose a payment method — Click, UzCard, HUMO or Payme for so‘m, SBP for
+        roubles. The full steps, anonymous sending, notes and the usual mistakes live in{" "}
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
+          the “How to send a Telegram gift” guide
+        </Link>
+        .
+      </p>
 
       <h2 id="bepul">Free gifts for inviting friends</h2>
       <p>
@@ -798,9 +834,9 @@ const enFaq = [
 export const post: AeoPost = {
   slug: SLUG,
   category: "Gifts",
-  type: "howto",
+  type: "info",
   datePublished: "2026-08-28",
-  dateModified: "2026-08-28",
+  dateModified: "2026-09-08",
   keywords: [
     "telegram sovga sotib olish",
     "telegram nft sovga somda",
@@ -809,15 +845,6 @@ export const post: AeoPost = {
     "bepul telegram sovga dost taklif",
     "купить подарки telegram за сум",
     "купить nft подарок telegram за рубли",
-  ],
-  howToSteps: [
-    { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
-    { name: "Sovg‘alar bo‘limini tanlang", text: "Oddiy Gifts yoki NFT sovg‘alar." },
-    { name: "Sovg‘a yoki kolleksiyani tanlang", text: "NFT sovg‘alarda turli seriya va noyoblik darajalari mavjud." },
-    { name: "Qabul qiluvchini ko‘rsating", text: "O‘zingiz yoki boshqa Telegram foydalanuvchisi." },
-    { name: "To‘lov usulini tanlang", text: "So‘m uchun Click, UzCard, HUMO yoki Payme; rubl uchun SBP." },
-    { name: "Buyurtmani to‘lang", text: "Summa tanlangan valyutada ko‘rsatiladi." },
-    { name: "Tasdiqni oling", text: "Sovg‘a to‘lovdan keyin deyarli darhol qabul qiluvchiga yuboriladi." },
   ],
   locales: {
     uz: {

@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { InlineCta, Sources } from "@/components/blog/aeo-blocks";
+import { InfoCard, InfoGrid, InlineCta, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-stars-savol-javob-faq";
@@ -30,9 +30,36 @@ function UzBody() {
 
       <InlineCta text="Savolingizga javob topdingizmi? Botda buyurtma bering." />
 
+      <h2 id="qayerga">Mavzu bo‘yicha qayerga borish kerak</h2>
+      <p>
+        Bu sahifadagi javoblar ataylab qisqa. Batafsil qadamlar, narx hisobi va muammo yechimlari alohida
+        maqolalarda — bu yerda ular takrorlanmaydi:
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="⭐" title="Stars sotib olish">
+          So‘mda to‘lov, Click va Payme qadamlari, chek va yetkazish —{" "}
+          <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">to‘liq qo‘llanma</Link>.
+        </InfoCard>
+        <InfoCard emoji="💎" title="Premium">
+          Ikki oqim, tariflar va faollashuvni tekshirish —{" "}
+          <Link href="/blog/telegram-premium-eng-oson-usul">eng oson usul</Link>; narxlar —{" "}
+          <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">narx maqolasi</Link>.
+        </InfoCard>
+        <InfoCard emoji="🎁" title="Sovg‘alar">
+          Yuborish qadamlari —{" "}
+          <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">Gifts qo‘llanmasi</Link>; turlarni tanlash —{" "}
+          <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">oddiy va NFT</Link>.
+        </InfoCard>
+        <InfoCard emoji="🛟" title="Muammo chiqsa">
+          Yulduz kelmasa —{" "}
+          <Link href="/blog/telegram-stars-kelmadi-nima-qilish">nima qilish kerak</Link>; xizmat tanlash —{" "}
+          <Link href="/blog/ishonchli-stars-xizmatini-tanlash">mezonlar</Link>.
+        </InfoCard>
+      </InfoGrid>
+
       <h2 id="savollar">Batafsil savollar</h2>
       <p>
-        Quyidagi ro‘yxatda Stars nimaligi, narxi, xavfsizligi, Premium va sovg‘alar bo‘yicha barcha asosiy savollar
+        Quyidagi ro‘yxatda Stars nimaligi, narxi, xavfsizligi, Premium va sovg‘alar bo‘yicha asosiy savollar
         yig‘ilgan. Kerakli savolni bosib, javobni oching.
       </p>
 
@@ -74,9 +101,36 @@ function RuBody() {
 
       <InlineCta text="Нашли ответ на свой вопрос? Оформите заказ в боте." />
 
+      <h2 id="qayerga">Куда идти по каждой теме</h2>
+      <p>
+        Ответы на этой странице намеренно короткие. Подробные шаги, расчёт цены и решение проблем — в отдельных
+        статьях, здесь они не дублируются:
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="⭐" title="Покупка Stars">
+          Оплата в сумах, шаги Click и Payme, чек и доставка —{" "}
+          <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">полное руководство</Link>.
+        </InfoCard>
+        <InfoCard emoji="💎" title="Premium">
+          Два сценария, тарифы и проверка активации —{" "}
+          <Link href="/blog/telegram-premium-eng-oson-usul">самый простой способ</Link>; цены —{" "}
+          <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">статья о ценах</Link>.
+        </InfoCard>
+        <InfoCard emoji="🎁" title="Подарки">
+          Шаги отправки —{" "}
+          <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">руководство по Gifts</Link>; выбор вида —{" "}
+          <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">обычные и NFT</Link>.
+        </InfoCard>
+        <InfoCard emoji="🛟" title="Если возникла проблема">
+          Звёзды не пришли —{" "}
+          <Link href="/blog/telegram-stars-kelmadi-nima-qilish">что делать</Link>; выбор сервиса —{" "}
+          <Link href="/blog/ishonchli-stars-xizmatini-tanlash">критерии</Link>.
+        </InfoCard>
+      </InfoGrid>
+
       <h2 id="savollar">Подробные вопросы</h2>
       <p>
-        В списке ниже собраны все основные вопросы: что такое Stars, цена, безопасность, Premium и подарки. Нажмите на
+        В списке ниже собраны основные вопросы: что такое Stars, цена, безопасность, Premium и подарки. Нажмите на
         нужный вопрос, чтобы открыть ответ.
       </p>
 
@@ -163,7 +217,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-09-08",
   keywords: [
     "telegram stars savol javob",
     "telegram stars faq",

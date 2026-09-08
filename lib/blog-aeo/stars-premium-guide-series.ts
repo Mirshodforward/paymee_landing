@@ -20,7 +20,7 @@ export const starsPremiumGuideSeriesSlugs = [
   "telegram-premium-imkoniyatlari",
   "premium-va-oddiy-hisob-farqi",
   "arzon-telegram-premium",
-  "telegram-premium-sovga-qilish",
+  "telegram-premium-sovga-username-orqali",
   "stars-va-premium-farqi",
   "telegram-stars-xavfsizmi",
   "ozbekistonda-telegram-stars-sotib-olish",

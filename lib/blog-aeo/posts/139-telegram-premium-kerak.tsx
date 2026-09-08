@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { InlineCta, Sources, KeyFacts, Steps, Step, InfoGrid, InfoCard } from "@/components/blog/aeo-blocks";
+import { InlineCta, Sources, KeyFacts, InfoGrid, InfoCard } from "@/components/blog/aeo-blocks";
 import { PremiumPlanBoard } from "@/components/blog/premium-plan-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -27,7 +27,6 @@ function UzBody() {
         <li>Maxsus emoji va stikerlar.</li>
         <li>Animatsion profil rasmi.</li>
         <li>Ko‘proq kanal va papkaga obuna bo‘lish.</li>
-        <li>Xabar tahrirlash tarixini yashirish.</li>
       </KeyFacts>
 
       <h2 id="kimlar">Kimlar uchun ayniqsa foydali?</h2>
@@ -46,28 +45,32 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <h2 id="narx">Narxi va olish usullari</h2>
+      <h2 id="narx">Narxi va qanday olinishi</h2>
       <p>
-        Obuna turli muddatlarga mo‘ljallangan; muddat oshgani sari oyiga tushadigan xarajat kamayadi. Rasmiy yo‘l
-        ba’zan xalqaro karta talab qilishi sababli qiyinchilik tug‘diradi.
+        Muddat uzaygani sari oyiga tushadigan xarajat kamayadi. StarsPaymee’da ikki xil oqim bor va ular bir xil
+        emas: <b>username orqali</b> — 3, 6 va 12 oy, akkauntga kirish shart emas; <b>login orqali</b> — 1 oy
+        (50 000 so‘m) va 1 yil, rasmiy faollashtirish bilan. Ya’ni <b>1 oylik variant username oqimida yo‘q</b>.
       </p>
       <PremiumPlanBoard locale="uz" flow="username" />
-      <PremiumPlanBoard locale="uz" flow="login" />
 
-      <InlineCta text="O‘zingizga mos muddatni tanlang." />
+      <InlineCta text="O‘zingizga mos muddatni tanlang." product={{ kind: "premium", months: 6 }} />
 
-      <h2 id="muqobil">Muqobil yechim</h2>
-      <Steps>
-        <Step title="1. Muddatni tanlang">1, 3, 6 yoki 12 oy.</Step>
-        <Step title="2. Username kiriting">Obuna faollashadigan hisob.</Step>
-        <Step title="3. To‘lovni bajaring">UzCard, HUMO, Click, Payme, Paynet.</Step>
-        <Step title="4. Faollashuvni kuting">Profilda Premium belgisi chiqadi.</Step>
-      </Steps>
-
-      <h2 id="uzaytirish">Obunani uzaytirish haqida</h2>
       <p>
-        Muddat tugashiga yaqinlashganda obunani oldindan uzaytirib qo‘yish mumkin. Bu imkoniyatlardan uzluksiz
-        foydalanish imkonini beradi va har safar qaytadan jarayonni boshlash zaruratini yo‘qqa chiqaradi.
+        Xarid tartibi, to‘lov qadamlari va faollashuvni tekshirish —{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">Premium olishning eng oson usuli</Link> maqolasida.
+        Narxlar tahlili — <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">Premium narxi</Link>, 1 oylik
+        tarif esa <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">alohida maqolada</Link>.
+      </p>
+
+      <h2 id="uzaytirish">Obunani uzaytirish qanday ishlaydi</h2>
+      <p>
+        Avtoto‘lov ulanmaydi: muddat tugagach hisobingizdan hech narsa yechilmaydi va akkaunt bloklanmaydi — faqat
+        Premium imtiyozlari to‘xtaydi. Uzaytirish har safar yangi buyurtma orqali amalga oshiriladi.
+      </p>
+      <p>
+        Muddat tugashini kutish shart emas. <b>Username oqimida</b> amaldagi Premium ustiga buyurtma bersangiz,
+        yangi muddat joriysiga qo‘shiladi. <b>Login oqimidagi 1 oylik</b> tarifda esa faollashtirish operator
+        orqali bajarilgani uchun muddatni oldindan qo‘llab-quvvatlash bilan aniqlashtirib olgan ma’qul.
       </p>
 
       <p>
@@ -92,7 +95,7 @@ function RuAnswer() {
   return (
     <p>
       Нужен ли вам Premium — зависит от стиля использования. Если часто работаете с крупными файлами, подписаны на
-      много каналов или хотите тайтл без рекламы, подписка экономит время и нервы. При редком использовании обычного
+      много каналов или хотите ленту без рекламы, подписка экономит время и нервы. При редком использовании обычного
       аккаунта достаточно.
     </p>
   );
@@ -109,7 +112,6 @@ function RuBody() {
         <li>Особые эмодзи и стикеры.</li>
         <li>Анимированное фото профиля.</li>
         <li>Больше подписок на каналы и папок.</li>
-        <li>Скрытие истории редактирования сообщений.</li>
       </KeyFacts>
 
       <h2 id="kimlar">Кому особенно полезно?</h2>
@@ -128,28 +130,32 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <h2 id="narx">Цена и способы оформления</h2>
+      <h2 id="narx">Цена и как оформляется</h2>
       <p>
-        Подписка рассчитана на разные сроки; чем больше срок, тем меньше стоимость в пересчёте на месяц. Официальный
-        путь иногда осложняется требованием международной карты.
+        Чем больше срок, тем меньше стоимость в пересчёте на месяц. В StarsPaymee есть два разных сценария:{" "}
+        <b>по username</b> — 3, 6 и 12 месяцев, без входа в аккаунт; <b>через логин</b> — 1 месяц (50 000 сум) и
+        1 год, с официальной активацией. То есть <b>месячного варианта в сценарии по username нет</b>.
       </p>
       <PremiumPlanBoard locale="ru" flow="username" />
-      <PremiumPlanBoard locale="ru" flow="login" />
 
-      <InlineCta text="Выберите подходящий вам срок." />
+      <InlineCta text="Выберите подходящий вам срок." product={{ kind: "premium", months: 6 }} />
 
-      <h2 id="muqobil">Альтернативное решение</h2>
-      <Steps>
-        <Step title="1. Выберите срок">1, 3, 6 или 12 месяцев.</Step>
-        <Step title="2. Укажите username">Аккаунт, где активируется подписка.</Step>
-        <Step title="3. Оплатите">UzCard, HUMO, Click, Payme, Paynet.</Step>
-        <Step title="4. Дождитесь активации">В профиле появится значок Premium.</Step>
-      </Steps>
-
-      <h2 id="uzaytirish">О продлении подписки</h2>
       <p>
-        Ближе к окончанию срока подписку можно продлить заранее. Это позволяет пользоваться возможностями без
-        перерыва и не начинать процесс заново каждый раз.
+        Порядок покупки, шаги оплаты и проверка активации — в статье{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">самый простой способ купить Premium</Link>. Разбор цен —{" "}
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">цена Premium</Link>, а месячный тариф —{" "}
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">в отдельной статье</Link>.
+      </p>
+
+      <h2 id="uzaytirish">Как работает продление</h2>
+      <p>
+        Автоплатёж не подключается: по окончании срока с вас ничего не спишется и аккаунт не заблокируется —
+        отключатся только привилегии Premium. Продление каждый раз оформляется новым заказом.
+      </p>
+      <p>
+        Дожидаться конца срока не обязательно. <b>В сценарии по username</b> заказ поверх действующего Premium
+        добавляет новый срок к текущему. А для <b>месячного тарифа через логин</b> активацию выполняет оператор,
+        поэтому срок лучше заранее уточнить в поддержке.
       </p>
 
       <p>
@@ -191,7 +197,6 @@ function EnBody() {
         <li>Exclusive emoji and stickers.</li>
         <li>An animated profile photo.</li>
         <li>More channel subscriptions and folders.</li>
-        <li>Hiding the message edit history.</li>
       </KeyFacts>
 
       <h2 id="kimlar">Who benefits most?</h2>
@@ -210,28 +215,33 @@ function EnBody() {
         </InfoCard>
       </InfoGrid>
 
-      <h2 id="narx">Price and how to get it</h2>
+      <h2 id="narx">Price and how it is arranged</h2>
       <p>
-        The subscription comes in several terms; the longer the term, the lower the effective monthly cost. The
-        official route is sometimes complicated by the international card requirement.
+        The longer the term, the lower the effective monthly cost. StarsPaymee runs two different flows, and they
+        are not interchangeable: <b>by username</b> — 3, 6 and 12 months, with no account sign-in; and{" "}
+        <b>through sign-in</b> — 1 month (50,000 UZS) and 1 year, with an official activation. In other words,{" "}
+        <b>the monthly option does not exist in the username flow</b>.
       </p>
       <PremiumPlanBoard locale="en" flow="username" />
-      <PremiumPlanBoard locale="en" flow="login" />
 
-      <InlineCta text="Choose the term that suits you." />
+      <InlineCta text="Choose the term that suits you." product={{ kind: "premium", months: 6 }} />
 
-      <h2 id="muqobil">The alternative</h2>
-      <Steps>
-        <Step title="1. Choose a term">1, 3, 6 or 12 months.</Step>
-        <Step title="2. Enter a username">The account the subscription activates on.</Step>
-        <Step title="3. Pay">UzCard, HUMO, Click, Payme, Paynet.</Step>
-        <Step title="4. Wait for activation">The Premium badge appears on the profile.</Step>
-      </Steps>
-
-      <h2 id="uzaytirish">About renewing</h2>
       <p>
-        As the term nears its end you can extend the subscription in advance. That keeps the features running without
-        a gap and saves starting the process from scratch each time.
+        The buying order, the payment steps and how to verify activation live in{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">the easiest way to buy Premium</Link>. For the price
+        breakdown see <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">Premium pricing</Link>, and the
+        monthly plan has <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">its own article</Link>.
+      </p>
+
+      <h2 id="uzaytirish">How renewing works</h2>
+      <p>
+        No auto-renewal is attached: when the term ends nothing is charged and the account is not blocked — only
+        the Premium perks switch off. Renewing is always a new order.
+      </p>
+      <p>
+        There is no need to wait for the term to run out. <b>In the username flow</b>, ordering on top of an active
+        Premium adds the new term to the current one. For the <b>monthly plan in the sign-in flow</b> an operator
+        performs the activation, so it is worth confirming the dates with support beforehand.
       </p>
 
       <p>
@@ -258,7 +268,11 @@ const uzFaq = [
   { question: "Xalqaro karta kerakmi?", answer: "Yo‘q, mahalliy to‘lov usullari yetarli." },
   { question: "Faollashtirish qancha vaqt oladi?", answer: "Odatda bir necha daqiqa." },
   { question: "Obuna avtomatik uzayadimi?", answer: "Yo‘q, muddat tugagach qayta buyurtma berasiz." },
-  { question: "Oldindan uzaytirsam bo‘ladimi?", answer: "Ha, muddat tugashidan oldin uzaytirish mumkin." },
+  {
+    question: "Oldindan uzaytirsam bo‘ladimi?",
+    answer:
+      "Ha. Username oqimida amaldagi Premium ustiga bergan buyurtmangiz muddatni joriysiga qo‘shadi. Login oqimidagi 1 oylik tarifda muddatni avval qo‘llab-quvvatlash bilan aniqlashtiring.",
+  },
   { question: "Boshqa hisobga olsam bo‘ladimi?", answer: "Ha, buyurtmada o‘sha hisob username’ini ko‘rsating." },
 ];
 
@@ -269,7 +283,11 @@ const ruFaq = [
   { question: "Нужна ли международная карта?", answer: "Нет, достаточно местных способов оплаты." },
   { question: "Сколько занимает активация?", answer: "Обычно несколько минут." },
   { question: "Продлевается ли автоматически?", answer: "Нет, после окончания срока оформляется новый заказ." },
-  { question: "Можно ли продлить заранее?", answer: "Да, продление возможно до окончания срока." },
+  {
+    question: "Можно ли продлить заранее?",
+    answer:
+      "Да. В сценарии по username заказ поверх действующего Premium добавляет срок к текущему. Для месячного тарифа через логин срок лучше заранее уточнить в поддержке.",
+  },
   { question: "Можно ли оформить на другой аккаунт?", answer: "Да, укажите в заказе его username." },
 ];
 
@@ -279,8 +297,17 @@ const enFaq = [
   { question: "Which term is best value?", answer: "A longer term lowers the effective monthly cost." },
   { question: "Do I need an international card?", answer: "No, local payment methods are enough." },
   { question: "How long does activation take?", answer: "Usually a few minutes." },
+  {
+    question: "Is the 1-month plan the same process as the others?",
+    answer:
+      "No. One month is delivered through the sign-in flow with an operator activation; 3, 6 and 12 months run through the username flow with no sign-in.",
+  },
   { question: "Does it auto-renew?", answer: "No — after the term ends you place a new order." },
-  { question: "Can I renew in advance?", answer: "Yes, you can extend before the term ends." },
+  {
+    question: "Can I renew in advance?",
+    answer:
+      "Yes. In the username flow an order placed on top of active Premium adds the term to the current one. For the monthly sign-in plan, confirm the dates with support first.",
+  },
   { question: "Can I buy it for another account?", answer: "Yes — give that account’s username when ordering." },
 ];
 
@@ -289,7 +316,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-08-02",
+  dateModified: "2026-09-08",
   keywords: [
     "telegram premium kerak",
     "premium kerakmi",

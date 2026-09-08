@@ -5,6 +5,7 @@ import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
 import { gampaySeriesSlugs } from "@/lib/blog-aeo/gampay-series";
 import { resolveAeoContent, type AeoUiLocale } from "@/lib/blog-aeo/types";
+import { isRedirectedBlogSlug } from "@/lib/blog/redirects";
 
 /**
  * Eski «flat» bloglar va yangi AEO maqolalarini birlashtiruvchi qatlam.
@@ -35,6 +36,9 @@ function uiLoc(locale: string): AeoUiLocale {
  * ham, sitemapga ham tushmaydi va `noindex` oladi.
  */
 export function hasTranslation(slug: string, locale: string): boolean {
+  // Birlashtirilgan maqola URL’i 308 bilan boshqa sahifaga ketadi — uni
+  // indekslanadigan deb hisoblash sitemapda o‘lik havola qoldirardi.
+  if (isRedirectedBlogSlug(slug)) return false;
   const aeo = getAeoPostBySlug(slug);
   if (aeo) return Boolean(aeo.locales[uiLoc(locale)]);
   return uiLoc(locale) === "uz";
@@ -48,27 +52,32 @@ function byDateDesc(a: { datePublished: string }, b: { datePublished: string }):
 export function getBlogSummaries(locale: string): BlogSummary[] {
   const ui = uiLoc(locale);
   // Tarjimasi yo‘q maqolalar shu til ro‘yxatida ko‘rinmaydi.
-  const flat: BlogSummary[] = (ui === "uz" ? blogPosts : []).map((p) => ({
-    slug: p.slug,
-    title: p.title,
-    excerpt: p.excerpt,
-    category: p.category,
-    datePublished: p.datePublished,
-    dateModified: p.datePublished,
-    source: "flat",
-  }));
-  const aeo: BlogSummary[] = aeoPosts.filter((p) => Boolean(p.locales[ui])).map((p) => {
-    const c = resolveAeoContent(p, ui);
-    return {
+  // Birlashtirilgan (yo‘naltirilgan) maqolalar esa hech bir tilda ko‘rinmaydi.
+  const flat: BlogSummary[] = (ui === "uz" ? blogPosts : [])
+    .filter((p) => !isRedirectedBlogSlug(p.slug))
+    .map((p) => ({
       slug: p.slug,
-      title: c.title,
-      excerpt: c.excerpt,
+      title: p.title,
+      excerpt: p.excerpt,
       category: p.category,
       datePublished: p.datePublished,
-      dateModified: p.dateModified,
-      source: "aeo",
-    };
-  });
+      dateModified: p.datePublished,
+      source: "flat" as const,
+    }));
+  const aeo: BlogSummary[] = aeoPosts
+    .filter((p) => Boolean(p.locales[ui]) && !isRedirectedBlogSlug(p.slug))
+    .map((p) => {
+      const c = resolveAeoContent(p, ui);
+      return {
+        slug: p.slug,
+        title: c.title,
+        excerpt: c.excerpt,
+        category: p.category,
+        datePublished: p.datePublished,
+        dateModified: p.dateModified,
+        source: "aeo" as const,
+      };
+    });
   // AEO maqolalar avval — ular yangiroq va boyroq; keyin sana bo‘yicha umumiy tartib.
   return [...aeo, ...flat].sort(byDateDesc);
 }
@@ -165,6 +174,7 @@ export function blogSlugInfosForLocale(locale: string): BlogSlugInfo[] {
 export function allBlogSlugInfos(): BlogSlugInfo[] {
   const map = new Map<string, BlogSlugInfo>();
   for (const p of aeoPosts) {
+    if (isRedirectedBlogSlug(p.slug)) continue;
     map.set(p.slug, {
       slug: p.slug,
       datePublished: p.datePublished,
@@ -172,6 +182,7 @@ export function allBlogSlugInfos(): BlogSlugInfo[] {
     });
   }
   for (const p of blogPosts) {
+    if (isRedirectedBlogSlug(p.slug)) continue;
     if (!map.has(p.slug)) {
       map.set(p.slug, {
         slug: p.slug,

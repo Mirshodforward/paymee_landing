@@ -157,6 +157,48 @@ function UzBody() {
         <Step title="6. Yulduzlarni qabul qiling">Odatda bu deyarli bir zumda sodir bo‘ladi.</Step>
       </Steps>
 
+      <h2 id="tolov-status">Click va Payme: qadamlar, status, chek va yetkazish</h2>
+      <p>
+        Click va Payme — to‘lov <b>agregatorlari</b>. Ular pulni kartadan yechadi va natijani xizmatga qaytaradi.
+        Shuning uchun jarayonda ikkita alohida bosqich bor va ularni chalkashtirmaslik muhim.
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="🟢" title="Click orqali">
+          Bot Click sahifasini ochadi. Kartani tanlaysiz yoki raqamini kiritasiz, bank SMS kodini tasdiqlaysiz —
+          keyin avtomatik botga qaytasiz.
+        </InfoCard>
+        <InfoCard emoji="🔵" title="Payme orqali">
+          Payme ilovasi yoki veb-sahifasi ochiladi. Ilova o‘rnatilgan bo‘lsa, karta allaqachon bog‘langan va
+          tasdiqlash bir bosishda bo‘ladi.
+        </InfoCard>
+      </InfoGrid>
+      <KeyFacts label="To‘lov statusini qanday o‘qish kerak">
+        <li>
+          <b>«To‘lov muvaffaqiyatli»</b> — bu agregator xabari: pul kartadan yechildi. Bu hali yulduzlar
+          yetkazildi degani <b>emas</b>.
+        </li>
+        <li>
+          <b>«Buyurtma bajarilmoqda»</b> — xizmat to‘lovni qabul qilib, yetkazishni boshladi. Odatda bu bosqich
+          bir necha soniya davom etadi.
+        </li>
+        <li>
+          <b>«Bajarildi»</b> — yulduzlar hisobga tushdi. Aynan shu status yakuniy tasdiq hisoblanadi.
+        </li>
+        <li>
+          <b>Pul yechildi, lekin status o‘zgarmadi</b> — botni yopib qayta oching. Keyin ham o‘zgarmasa, buyurtma
+          raqami bilan supportga yozing; to‘lov agregatorda qayd etilgani uchun uni tekshirish mumkin.
+        </li>
+      </KeyFacts>
+      <p>
+        <b>Chekni saqlang.</b> To‘lovdan keyin ikkita raqam paydo bo‘ladi: agregatorning tranzaksiya raqami
+        (Click yoki Payme SMS/ilovasida) va botning buyurtma ID’si. Murojaat qilganda ikkalasi ham foydali —
+        buyurtma ID xizmat tomonini, tranzaksiya raqami esa to‘lov tomonini aniqlaydi.
+      </p>
+      <p>
+        Yetkazishni tekshirish oson: Telegram sozlamalarida yulduzlar balansini oching yoki botdagi buyurtma
+        statusiga qarang. Sovg‘a sifatida boshqa odamga olgan bo‘lsangiz, balans o‘shaning hisobida o‘zgaradi.
+      </p>
+
       <h2 id="taqqoslash">Rasmiy yo‘l va bot — nimasi bilan farq qiladi</h2>
       <WayCompare locale="uz" />
 
@@ -292,6 +334,48 @@ function RuBody() {
         <Step title="6. Получите звёзды">Обычно это происходит практически моментально.</Step>
       </Steps>
 
+      <h2 id="tolov-status">Click и Payme: шаги, статус, чек и доставка</h2>
+      <p>
+        Click и Payme — это платёжные <b>агрегаторы</b>. Они списывают деньги с карты и возвращают результат
+        сервису. Поэтому в процессе есть два отдельных этапа, и их важно не путать.
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="🟢" title="Через Click">
+          Бот открывает страницу Click. Выбираете карту или вводите номер, подтверждаете SMS-кодом банка — затем
+          автоматически возвращаетесь в бота.
+        </InfoCard>
+        <InfoCard emoji="🔵" title="Через Payme">
+          Открывается приложение или веб-страница Payme. Если приложение установлено, карта уже привязана и
+          подтверждение проходит в одно нажатие.
+        </InfoCard>
+      </InfoGrid>
+      <KeyFacts label="Как читать статус платежа">
+        <li>
+          <b>«Платёж успешен»</b> — это сообщение агрегатора: деньги списаны с карты. Это ещё <b>не</b> значит,
+          что звёзды доставлены.
+        </li>
+        <li>
+          <b>«Заказ выполняется»</b> — сервис принял платёж и начал доставку. Обычно этот этап длится несколько
+          секунд.
+        </li>
+        <li>
+          <b>«Выполнен»</b> — звёзды зачислены. Именно этот статус и есть финальное подтверждение.
+        </li>
+        <li>
+          <b>Деньги списались, а статус не меняется</b> — закройте и снова откройте бота. Если и тогда ничего,
+          напишите в поддержку с номером заказа: платёж зафиксирован у агрегатора, и его можно проверить.
+        </li>
+      </KeyFacts>
+      <p>
+        <b>Сохраняйте чек.</b> После оплаты появляются два номера: номер транзакции агрегатора (в SMS или
+        приложении Click либо Payme) и ID заказа в боте. При обращении полезны оба — ID заказа находит сторону
+        сервиса, номер транзакции — сторону платежа.
+      </p>
+      <p>
+        Доставку проверить просто: откройте баланс звёзд в настройках Telegram или посмотрите статус заказа в
+        боте. Если покупали в подарок другому человеку, баланс изменится на его аккаунте.
+      </p>
+
       <h2 id="taqqoslash">Чем официальный путь отличается от покупки в боте</h2>
       <WayCompare locale="ru" />
 
@@ -424,6 +508,48 @@ function EnBody() {
         <Step title="6. Receive the Stars">This usually happens almost instantly.</Step>
       </Steps>
 
+      <h2 id="tolov-status">Click and Payme: steps, status, receipt and delivery</h2>
+      <p>
+        Click and Payme are payment <b>aggregators</b>. They take the money from the card and hand the result back
+        to the service. That means the process has two separate stages, and it pays not to confuse them.
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="🟢" title="Through Click">
+          The bot opens the Click page. You pick a card or type its number, confirm with the bank’s SMS code, and
+          are returned to the bot automatically.
+        </InfoCard>
+        <InfoCard emoji="🔵" title="Through Payme">
+          The Payme app or web page opens. With the app installed, the card is already linked and confirming takes
+          a single tap.
+        </InfoCard>
+      </InfoGrid>
+      <KeyFacts label="How to read the payment status">
+        <li>
+          <b>“Payment successful”</b> — that is the aggregator speaking: the money left the card. It does{" "}
+          <b>not</b> yet mean the Stars were delivered.
+        </li>
+        <li>
+          <b>“Order in progress”</b> — the service accepted the payment and started delivery. This stage normally
+          lasts a few seconds.
+        </li>
+        <li>
+          <b>“Completed”</b> — the Stars have landed. This status is the final confirmation.
+        </li>
+        <li>
+          <b>Money taken but the status is stuck</b> — close and reopen the bot. If nothing changes, message
+          support with the order number: the payment is recorded at the aggregator and can be traced.
+        </li>
+      </KeyFacts>
+      <p>
+        <b>Keep the receipt.</b> Two numbers appear after payment: the aggregator’s transaction number (in the
+        Click or Payme SMS or app) and the bot’s order ID. Both help when you get in touch — the order ID
+        identifies the service side, the transaction number the payment side.
+      </p>
+      <p>
+        Checking delivery is easy: open the Stars balance in Telegram’s settings or look at the order status in
+        the bot. If you bought it as a gift, the balance changes on the recipient’s account instead.
+      </p>
+
       <h2 id="taqqoslash">How the official route differs from the bot</h2>
       <WayCompare locale="en" />
 
@@ -554,7 +680,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-26",
-  dateModified: "2026-08-26",
+  dateModified: "2026-09-08",
   keywords: [
     "click orqali stars sotib olish",
     "payme orqali telegram stars",

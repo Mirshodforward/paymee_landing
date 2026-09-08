@@ -55,9 +55,9 @@ function UzBody() {
       </Steps>
 
       <p>
-        Qarang: <Link href="/blog/telegram-premium-sotib-olish">Premium sotib olish</Link>,{" "}
+        Qarang: <Link href="/blog/telegram-premium-eng-oson-usul">Premium sotib olish</Link>,{" "}
         <Link href="/blog/arzon-telegram-premium">arzon narxda olish</Link> va{" "}
-        <Link href="/blog/bir-oylik-premium-olish">bir oylik variant</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">bir oylik variant</Link>.
       </p>
 
       <Sources
@@ -120,9 +120,9 @@ function RuBody() {
       </Steps>
 
       <p>
-        Смотрите: <Link href="/blog/telegram-premium-sotib-olish">покупка Premium</Link>,{" "}
+        Смотрите: <Link href="/blog/telegram-premium-eng-oson-usul">покупка Premium</Link>,{" "}
         <Link href="/blog/arzon-telegram-premium">как купить дешевле</Link> и{" "}
-        <Link href="/blog/bir-oylik-premium-olish">вариант на месяц</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">вариант на месяц</Link>.
       </p>
 
       <Sources
@@ -185,9 +185,9 @@ function EnBody() {
       </Steps>
 
       <p>
-        See: <Link href="/blog/telegram-premium-sotib-olish">buying Premium</Link>,{" "}
+        See: <Link href="/blog/telegram-premium-eng-oson-usul">buying Premium</Link>,{" "}
         <Link href="/blog/arzon-telegram-premium">getting it cheaper</Link> and{" "}
-        <Link href="/blog/bir-oylik-premium-olish">the one-month option</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">the one-month option</Link>.
       </p>
 
       <Sources

@@ -68,7 +68,7 @@ function UzBody() {
       <p>
         Endi Visa yoki Mastercard yo‘qligi to‘siq emas. Stars uchun ham xuddi shunday variant bor:{" "}
         <Link href="/blog/visa-kartasiz-stars-olish">Visa kartasiz Stars olish</Link>. Yana:{" "}
-        <Link href="/blog/telegram-premium-sotib-olish">narxlar va to‘lov</Link>.
+        <Link href="/blog/telegram-premium-eng-oson-usul">narxlar va to‘lov</Link>.
       </p>
 
       <Sources
@@ -145,7 +145,7 @@ function RuBody() {
       <p>
         Теперь отсутствие Visa или Mastercard не помеха. Для Stars есть такой же вариант:{" "}
         <Link href="/blog/visa-kartasiz-stars-olish">Stars без карты Visa</Link>. Ещё:{" "}
-        <Link href="/blog/telegram-premium-sotib-olish">цены и оплата</Link>.
+        <Link href="/blog/telegram-premium-eng-oson-usul">цены и оплата</Link>.
       </p>
 
       <Sources
@@ -222,7 +222,7 @@ function EnBody() {
       <p>
         Not having a Visa or Mastercard is no longer a blocker. There is an equivalent for Stars:{" "}
         <Link href="/blog/visa-kartasiz-stars-olish">Stars without a Visa card</Link>. Also:{" "}
-        <Link href="/blog/telegram-premium-sotib-olish">prices and payment</Link>.
+        <Link href="/blog/telegram-premium-eng-oson-usul">prices and payment</Link>.
       </p>
 
       <Sources

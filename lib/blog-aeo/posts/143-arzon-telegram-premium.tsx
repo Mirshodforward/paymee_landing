@@ -59,8 +59,8 @@ function UzBody() {
 
       <p>
         Qarang: <Link href="/blog/telegram-premium-narxi">narxlar jadvali</Link>,{" "}
-        <Link href="/blog/bir-oylik-premium-olish">bir oylik variant</Link> va{" "}
-        <Link href="/blog/telegram-premium-sotib-olish">xarid tartibi</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">bir oylik variant</Link> va{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">xarid tartibi</Link>.
       </p>
 
       <Sources
@@ -128,8 +128,8 @@ function RuBody() {
 
       <p>
         Смотрите: <Link href="/blog/telegram-premium-narxi">таблицу цен</Link>,{" "}
-        <Link href="/blog/bir-oylik-premium-olish">вариант на месяц</Link> и{" "}
-        <Link href="/blog/telegram-premium-sotib-olish">порядок покупки</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">вариант на месяц</Link> и{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">порядок покупки</Link>.
       </p>
 
       <Sources
@@ -197,8 +197,8 @@ function EnBody() {
 
       <p>
         See: <Link href="/blog/telegram-premium-narxi">the price table</Link>,{" "}
-        <Link href="/blog/bir-oylik-premium-olish">the one-month option</Link> and{" "}
-        <Link href="/blog/telegram-premium-sotib-olish">the purchase flow</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">the one-month option</Link> and{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">the purchase flow</Link>.
       </p>
 
       <Sources

@@ -69,9 +69,9 @@ function UzBody() {
       </InfoGrid>
 
       <p>
-        Davomi: <Link href="/blog/telegram-premium-sotib-olish">narxlar va to‘lov usullari</Link>,{" "}
+        Davomi: <Link href="/blog/telegram-premium-eng-oson-usul">narxlar va to‘lov usullari</Link>,{" "}
         <Link href="/blog/visa-kartasiz-premium-olish">Visa kartasiz Premium</Link> va{" "}
-        <Link href="/blog/bir-oylik-premium-olish">bir oylik variant</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">bir oylik variant</Link>.
       </p>
 
       <Sources
@@ -149,9 +149,9 @@ function RuBody() {
       </InfoGrid>
 
       <p>
-        Далее: <Link href="/blog/telegram-premium-sotib-olish">цены и способы оплаты</Link>,{" "}
+        Далее: <Link href="/blog/telegram-premium-eng-oson-usul">цены и способы оплаты</Link>,{" "}
         <Link href="/blog/visa-kartasiz-premium-olish">Premium без карты Visa</Link> и{" "}
-        <Link href="/blog/bir-oylik-premium-olish">вариант на один месяц</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">вариант на один месяц</Link>.
       </p>
 
       <Sources
@@ -229,9 +229,9 @@ function EnBody() {
       </InfoGrid>
 
       <p>
-        Next: <Link href="/blog/telegram-premium-sotib-olish">prices and payment methods</Link>,{" "}
+        Next: <Link href="/blog/telegram-premium-eng-oson-usul">prices and payment methods</Link>,{" "}
         <Link href="/blog/visa-kartasiz-premium-olish">Premium without a Visa card</Link> and{" "}
-        <Link href="/blog/bir-oylik-premium-olish">the one-month option</Link>.
+        <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">the one-month option</Link>.
       </p>
 
       <Sources
