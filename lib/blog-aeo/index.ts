@@ -163,6 +163,15 @@ import { post as p162 } from "./posts/162-telegram-premium-3-6-12-oy-sotib-olish
 import { post as p163 } from "./posts/163-telegram-sovga-va-nft-sovga-sotib-olish";
 // Konsolidatsiya: eski flat maqola AEO ga o‘tkazildi, URL saqlandi
 import { post as p164 } from "./posts/164-ozbekistonda-oylik-premium-uza-humo";
+// Nuqtali savollar seriyasi — har biri bitta aniq muammoni yechadi
+import { post as p165 } from "./posts/165-telegram-xabar-yuborish-stars";
+import { post as p166 } from "./posts/166-telegram-gift-yuborilmayapti";
+import { post as p167 } from "./posts/167-premium-bor-odamga-premium-sovga";
+import { post as p168 } from "./posts/168-telegram-premium-bir-nechta-akkaunt";
+import { post as p169 } from "./posts/169-telegram-premium-tugasa-nima-boladi";
+import { post as p170 } from "./posts/170-telegramga-kirishda-premium-sms-tolov";
+import { post as p171 } from "./posts/171-telegram-gift-havolasini-tekshirish";
+import { post as p172 } from "./posts/172-telegram-gift-sotilmayapti";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -184,6 +193,8 @@ export const aeoPosts: AeoPost[] = [
   p150,
   p151, p152, p153, p154, p155, p156, p157, p158, p159, p160,
   p161, p162, p163, p164,
+  p165, p166, p167, p168, p169,
+  p170, p171, p172,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
