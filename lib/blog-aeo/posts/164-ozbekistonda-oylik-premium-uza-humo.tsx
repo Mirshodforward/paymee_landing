@@ -82,7 +82,7 @@ function UzAnswer() {
     <p>
       Ha — 1 oylik Telegram Premium’ni <b>UzCard yoki HUMO</b> kartasi bilan, so‘mda olish mumkin. Ammo bitta muhim
       shart bor: <b>1 oylik tarif faqat «akkauntga kirib berish» oqimida</b> mavjud va narxi <b>50 000 so‘m</b>.
-      Username orqali beriladigan tez oqimda eng qisqa muddat — 3 oy. To‘lov UzCard, HUMO, Click, Payme yoki Paynet
+      Username orqali beriladigan tez oqimda eng qisqa muddat — 3 oy. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet
       bilan amalga oshiriladi.
     </p>
   );
@@ -167,7 +167,7 @@ function UzBody() {
           Rasmiy faollashtirish uchun kerakli qadamlarni bot ketma-ket tushuntiradi.
         </Step>
         <Step title="4. So‘mda to‘lang">
-          UzCard, HUMO, Click, Payme yoki Paynet — summa 50 000 so‘m.
+          UzCard, HUMO, Click, Payme, Uzum yoki Paynet — summa 50 000 so‘m.
         </Step>
         <Step title="5. Faollashuvni tasdiqlang">
           Quyidagi bo‘limdagi uchta tekshiruvdan o‘ting.
@@ -438,7 +438,7 @@ function EnBody() {
         <Step title="3. Provide what the bot asks for">
           The bot walks through the steps needed for the official activation, one at a time.
         </Step>
-        <Step title="4. Pay in so‘m">UzCard, HUMO, Click, Payme or Paynet — the total is 50,000 UZS.</Step>
+        <Step title="4. Pay in so‘m">UzCard, HUMO, Click, Payme, Uzum or Paynet — the total is 50,000 UZS.</Step>
         <Step title="5. Confirm the activation">Run the three checks in the section below.</Step>
       </Steps>
 
@@ -488,7 +488,7 @@ const uzFaq = [
   {
     question: "1 oylik Telegram Premium’ni UzCard yoki HUMO bilan olsa bo‘ladimi?",
     answer:
-      "Ha. To‘lov so‘mda, mahalliy tizim ichida o‘tadi — UzCard, HUMO, Click, Payme yoki Paynet. Xalqaro karta kerak emas.",
+      "Ha. To‘lov so‘mda, mahalliy tizim ichida o‘tadi — UzCard, HUMO, Click, Payme, Uzum yoki Paynet. Xalqaro karta kerak emas.",
   },
   {
     question: "1 oylik tarif necha so‘m?",
@@ -563,7 +563,7 @@ const enFaq = [
   {
     question: "Can one month of Premium be paid for with a UzCard or HUMO card?",
     answer:
-      "Yes. The payment runs in so‘m inside the local system — UzCard, HUMO, Click, Payme or Paynet. No international card is needed.",
+      "Yes. The payment runs in so‘m inside the local system — UzCard, HUMO, Click, Payme, Uzum or Paynet. No international card is needed.",
   },
   { question: "How much is the monthly plan?", answer: "50,000 UZS." },
   {
@@ -614,7 +614,7 @@ export const post: AeoPost = {
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
     { name: "1 oylik tarifni tanlang", text: "Premium bo‘limidagi login oqimi varianti." },
     { name: "So‘ralgan ma’lumotni bering", text: "Rasmiy faollashtirish qadamlarini bot ketma-ket tushuntiradi." },
-    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme yoki Paynet — 50 000 so‘m." },
+    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet — 50 000 so‘m." },
     { name: "Faollashuvni tasdiqlang", text: "Profil rozetkasi, sozlamalardagi tugash sanasi va katta fayl sinovi." },
   ],
   locales: {
@@ -629,7 +629,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "1 oylik Premium’ni oling",
-      ctaBody: "@StarsPaymee_bot — 50 000 so‘m, UzCard, HUMO, Click, Payme va Paynet orqali so‘mda.",
+      ctaBody: "@StarsPaymee_bot — 50 000 so‘m, UzCard, HUMO, Click, Payme, Uzum va Paynet orqali so‘mda.",
       faq: uzFaq,
     },
     ru: {
@@ -657,7 +657,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Get one month of Premium",
-      ctaBody: "@StarsPaymee_bot — 50,000 UZS, paid in so‘m via UzCard, HUMO, Click, Payme and Paynet.",
+      ctaBody: "@StarsPaymee_bot — 50,000 UZS, paid in so‘m via UzCard, HUMO, Click, Payme, Uzum and Paynet.",
       faq: enFaq,
     },
   },

@@ -19,7 +19,7 @@ import type { AeoPost, FaqItem } from "@/lib/blog-aeo/types";
  */
 
 /** So'mda to'lov — barcha o'yinlarda bir xil. */
-const PAYMENT_METHODS = "UzCard, HUMO, Click, Payme";
+const PAYMENT_METHODS = "UzCard, HUMO, Click, Payme, Uzum";
 
 type Copy = {
   /** Qisqa javob — AnswerBox uchun (40–60 so'z). */

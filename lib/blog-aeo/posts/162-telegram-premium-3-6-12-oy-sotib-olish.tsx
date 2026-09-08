@@ -77,7 +77,7 @@ function UzAnswer() {
   return (
     <p>
       Telegram Premium’ni <b>3, 6 yoki 12 oy</b>ga o‘zbek so‘mida, Visa kartasiz sotib olish mumkin:{" "}
-      <b>@StarsPaymee_bot</b> da muddatni tanlaysiz, username kiritasiz va Click, HUMO, UzCard yoki Payme bilan
+      <b>@StarsPaymee_bot</b> da muddatni tanlaysiz, username kiritasiz va Click, HUMO, UzCard, Payme yoki Uzum bilan
       to‘laysiz. Obuna hisobda odatda bir necha soniyada faollashadi.
     </p>
   );
@@ -363,7 +363,7 @@ function EnAnswer() {
   return (
     <p>
       Telegram Premium for <b>3, 6 or 12 months</b> can be bought in Uzbek so‘m without a Visa card: in{" "}
-      <b>@StarsPaymee_bot</b> you choose the term, enter a username and pay with Click, HUMO, UzCard or Payme. The
+      <b>@StarsPaymee_bot</b> you choose the term, enter a username and pay with Click, HUMO, UzCard, Payme or Uzum. The
       subscription usually activates on the account within seconds.
     </p>
   );
@@ -502,7 +502,7 @@ const uzFaq = [
   {
     question: "Telegram Premium’ni Visa kartasiz sotib olsa bo‘ladimi?",
     answer:
-      "Ha. @StarsPaymee_bot orqali obuna to‘liq so‘mda — Click, HUMO, UzCard yoki Payme bilan rasmiylashtiriladi.",
+      "Ha. @StarsPaymee_bot orqali obuna to‘liq so‘mda — Click, HUMO, UzCard, Payme yoki Uzum bilan rasmiylashtiriladi.",
   },
   {
     question: "Narx haqiqatan rasmiy ilovadagidan pastmi?",
@@ -534,7 +534,7 @@ const ruFaq = [
   {
     question: "Можно ли купить Telegram Premium без визы?",
     answer:
-      "Да, через @StarsPaymee_bot подписка оформляется полностью в сумах, через Click, Humo, Uzcard или Payme — карта Visa или Mastercard не требуется.",
+      "Да, через @StarsPaymee_bot подписка оформляется полностью в сумах, через Click, Humo, Uzcard, Payme или Uzum — карта Visa или Mastercard не требуется.",
   },
   {
     question: "Действительно ли цена ниже, чем в официальном приложении Telegram?",
@@ -563,7 +563,7 @@ const enFaq = [
   {
     question: "Can I buy Telegram Premium without a Visa card?",
     answer:
-      "Yes. Through @StarsPaymee_bot the subscription is paid entirely in so‘m via Click, HUMO, UzCard or Payme.",
+      "Yes. Through @StarsPaymee_bot the subscription is paid entirely in so‘m via Click, HUMO, UzCard, Payme or Uzum.",
   },
   {
     question: "Is the price really lower than in the official Telegram app?",
@@ -607,7 +607,7 @@ export const post: AeoPost = {
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
     { name: "Premium bo‘limini tanlang", text: "Obuna kimga rasmiylashtirilishini username orqali ko‘rsating." },
     { name: "Muddatni belgilang", text: "3, 6 yoki 12 oy — ehtiyojingizga qarab." },
-    { name: "To‘lov usulini tanlang", text: "Click, HUMO, UzCard yoki Payme — hammasi so‘mda." },
+    { name: "To‘lov usulini tanlang", text: "Click, HUMO, UzCard, Payme yoki Uzum — hammasi so‘mda." },
     { name: "Buyurtmani to‘lang", text: "To‘lov bir necha daqiqadan ko‘p vaqt olmaydi." },
     { name: "Premium’ni qabul qiling", text: "Obuna hisobda avtomatik va deyarli darhol faollashadi." },
   ],
@@ -615,7 +615,7 @@ export const post: AeoPost = {
     uz: {
       title: "Telegram Premium 3, 6 va 12 oy: O‘zbekistonda so‘mda sotib olish",
       excerpt:
-        "Visa kartasiz Telegram Premium: 3, 6 va 12 oylik tariflar, Click, HUMO, UzCard va Payme orqali so‘mda to‘lov hamda qadam-baqadam qo‘llanma.",
+        "Visa kartasiz Telegram Premium: 3, 6 va 12 oylik tariflar, Click, HUMO, UzCard, Payme va Uzum orqali so‘mda to‘lov hamda qadam-baqadam qo‘llanma.",
       metaTitle: "Telegram Premium 3, 6, 12 oy — so‘mda sotib olish",
       metaDescription:
         "O‘zbekistonda Telegram Premium 3, 6 va 12 oyga so‘mda sotib olish: Click, HUMO, UzCard, Payme, Visa kerak emas, bir necha soniyada faollashadi.",

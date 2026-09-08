@@ -78,7 +78,7 @@ function UzAnswer() {
     <p>
       Telegram Premium’ni eng oson olish — <b>@StarsPaymee_bot</b> orqali <b>username oqimida</b>: akkauntga kirish,
       parol yoki SMS-kod kerak emas, faqat @username yetarli va Premium o‘rtacha 10 soniyada faollashadi. To‘lov
-      so‘mda — UzCard, HUMO, Click, Payme yoki Paynet. Muddatlar: 3, 6 va 12 oy; 1 oylik esa alohida login oqimida.
+      so‘mda — UzCard, HUMO, Click, Payme, Uzum yoki Paynet. Muddatlar: 3, 6 va 12 oy; 1 oylik esa alohida login oqimida.
     </p>
   );
 }
@@ -182,7 +182,7 @@ function UzBody() {
         <Step title="4. @username kiriting">
           Kimga ekanini username bilan kiriting — o‘zingiz yoki sovg‘a qilayotgan odam.
         </Step>
-        <Step title="5. To‘lang">UzCard, HUMO, Click, Payme yoki Paynet orqali so‘mda.</Step>
+        <Step title="5. To‘lang">UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali so‘mda.</Step>
         <Step title="6. Faollashuvni tekshiring">Quyidagi uchta tekshiruvdan o‘ting.</Step>
       </Steps>
 
@@ -253,7 +253,7 @@ function RuAnswer() {
     <p>
       Самый простой способ оформить Telegram Premium — через <b>@StarsPaymee_bot</b> в потоке <b>по username</b>:
       вход в аккаунт, пароль или SMS не нужны, достаточно @username, и Premium активируется в среднем за 10 секунд.
-      Оплата в сумах — UzCard, HUMO, Click, Payme или Paynet. Сроки: 3, 6 и 12 месяцев; месячный — в отдельном
+      Оплата в сумах — UzCard, HUMO, Click, Payme, Uzum или Paynet. Сроки: 3, 6 и 12 месяцев; месячный — в отдельном
       потоке со входом.
     </p>
   );
@@ -356,7 +356,7 @@ function RuBody() {
         <Step title="2. Выберите Premium">Среди товаров отметьте Telegram Premium.</Step>
         <Step title="3. Выберите срок">3, 6 или 12 месяцев — цена сразу в сумах.</Step>
         <Step title="4. Введите @username">Кому оформляете — себе или в подарок.</Step>
-        <Step title="5. Оплатите">UzCard, HUMO, Click, Payme или Paynet в сумах.</Step>
+        <Step title="5. Оплатите">UzCard, HUMO, Click, Payme, Uzum или Paynet в сумах.</Step>
         <Step title="6. Проверьте активацию">Пройдите три проверки ниже.</Step>
       </Steps>
 
@@ -425,7 +425,7 @@ function EnAnswer() {
     <p>
       The easiest way to get Telegram Premium is <b>@StarsPaymee_bot</b> in the <b>username flow</b>: no account
       sign-in, no password and no SMS code — an @username is enough, and Premium activates in about 10 seconds.
-      Payment is in so‘m via UzCard, HUMO, Click, Payme or Paynet. Terms are 3, 6 and 12 months; the 1-month plan
+      Payment is in so‘m via UzCard, HUMO, Click, Payme, Uzum or Paynet. Terms are 3, 6 and 12 months; the 1-month plan
       lives in a separate sign-in flow.
     </p>
   );
@@ -525,7 +525,7 @@ function EnBody() {
         <Step title="2. Pick Premium">Select Telegram Premium among the products.</Step>
         <Step title="3. Choose a term">3, 6 or 12 months — the price shows in so‘m immediately.</Step>
         <Step title="4. Enter an @username">Who it is for — yourself or the person you are gifting.</Step>
-        <Step title="5. Pay">UzCard, HUMO, Click, Payme or Paynet, in so‘m.</Step>
+        <Step title="5. Pay">UzCard, HUMO, Click, Payme, Uzum or Paynet, in so‘m.</Step>
         <Step title="6. Verify activation">Run the three checks below.</Step>
       </Steps>
 
@@ -610,7 +610,7 @@ const uzFaq = [
   },
   {
     question: "Qaysi to‘lov usullari qabul qilinadi?",
-    answer: "UzCard, HUMO, Click, Payme va Paynet — so‘mda. Rossiyadan to‘laydiganlar uchun SBP orqali rublda.",
+    answer: "UzCard, HUMO, Click, Payme, Uzum va Paynet — so‘mda. Rossiyadan to‘laydiganlar uchun SBP orqali rublda.",
   },
   {
     question: "Premium faollashganini qanday tekshiraman?",
@@ -650,7 +650,7 @@ const ruFaq = [
   },
   {
     question: "Какие способы оплаты принимаются?",
-    answer: "UzCard, HUMO, Click, Payme и Paynet — в сумах. Для тех, кто платит из России, — СБП в рублях.",
+    answer: "UzCard, HUMO, Click, Payme, Uzum и Paynet — в сумах. Для тех, кто платит из России, — СБП в рублях.",
   },
   {
     question: "Как проверить, что Premium активировался?",
@@ -690,7 +690,7 @@ const enFaq = [
   },
   {
     question: "Which payment methods are accepted?",
-    answer: "UzCard, HUMO, Click, Payme and Paynet in so‘m. For anyone paying from Russia, SBP in roubles.",
+    answer: "UzCard, HUMO, Click, Payme, Uzum and Paynet in so‘m. For anyone paying from Russia, SBP in roubles.",
   },
   {
     question: "How do I verify Premium activated?",
@@ -728,7 +728,7 @@ export const post: AeoPost = {
     { name: "Premium’ni tanlang", text: "Telegram Premium mahsulotini belgilang." },
     { name: "Muddatni tanlang", text: "3, 6 yoki 12 oy — narx so‘mda ko‘rinadi." },
     { name: "@username kiriting", text: "Kimga ekanini username bilan kiriting." },
-    { name: "To‘lang", text: "UzCard, HUMO, Click, Payme yoki Paynet orqali so‘mda to‘lang." },
+    { name: "To‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali so‘mda to‘lang." },
     {
       name: "Faollashuvni tekshiring",
       text: "Profil rozetkasi, sozlamalardagi tugash sanasi va 2 GB dan katta fayl sinovi.",

@@ -1,7 +1,7 @@
 {
   "seo": {
     "titleDefault": "Telegram Stars va Premium — arzon, 10 soniyada | StarsPaymee",
-    "description": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik yetkaziladi. Click, Payme, Paynet, UzCard, HUMO orqali to‘lov. Eng arzon narxlar.",
+    "description": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik yetkaziladi. Click, Payme, Paynet, Uzum, UzCard, HUMO orqali to‘lov. Eng arzon narxlar.",
     "ogLocale": "uz_UZ",
     "keywordsList": [
       "StarsPaymee",
@@ -35,7 +35,8 @@
       "HUMO",
       "Click",
       "Payme",
-      "Paynet"
+      "Paynet",
+      "Uzum"
     ]
   },
   "nav": {
@@ -60,7 +61,7 @@
     "switchAria": "Tilni tanlang"
   },
   "footer": {
-    "tagline": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik. Click, Payme, Paynet, UzCard, HUMO va istalgan bank kartasi bilan so‘mda to‘lov.",
+    "tagline": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik. Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan bank kartasi bilan so‘mda to‘lov.",
     "miniAppHeading": "Telegram bot",
     "blog": "Blog",
     "supportHeading": "Qo‘llab-quvvatlash",
@@ -102,7 +103,7 @@
     "heroBullets": [
       "10 soniyada avtomatik yetkazish",
       "Akkauntga kirish shart emas — username yetarli",
-      "Click, Payme, Paynet, UzCard, HUMO"
+      "Click, Payme, Paynet, Uzum, UzCard, HUMO"
     ],
     "statsDelivery": "Avtomatik yetkazish",
     "statsUsers": "Faol foydalanuvchi",
@@ -137,7 +138,7 @@
       "Sovg‘ani o‘zingizga yoki do‘stingizga yuboring",
       "Anonim tarzda yuborish imkoniyati",
       "Tabrik so‘zini (izoh) qo‘shib yuboring",
-      "To‘lov so‘mda — Click, Payme, UzCard, HUMO"
+      "To‘lov so‘mda — Click, Payme, Uzum, UzCard, HUMO"
     ],
     "giftsCta": "Sovg‘alar",
     "whyTitle": "Nega StarsPaymee?",
@@ -161,7 +162,7 @@
       },
       {
         "title": "Qulay to‘lov",
-        "body": "Click, Payme, Paynet, UzCard, HUMO va istalgan karta."
+        "body": "Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan karta."
       },
       {
         "title": "Referral bonus",
@@ -180,7 +181,7 @@
       },
       {
         "title": "To‘lang va qabul qiling",
-        "desc": "Click/Payme/UzCard/HUMO bilan to‘lang — 10 soniyada avtomatik yetadi."
+        "desc": "Click/Payme/Uzum/UzCard/HUMO bilan to‘lang — 10 soniyada avtomatik yetadi."
       }
     ],
     "ctaTitle": "Birinchi buyurtmangizni hoziroq bering",
@@ -194,7 +195,7 @@
       },
       {
         "question": "Qanday to‘lov qilsam bo‘ladi?",
-        "answer": "Click, Payme, Paynet, UzCard, HUMO va istalgan O‘zbekiston bank kartasi orqali so‘mda to‘lashingiz mumkin. Hech qanday chet el kartasi yoki kripto kerak emas."
+        "answer": "Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan O‘zbekiston bank kartasi orqali so‘mda to‘lashingiz mumkin. Hech qanday chet el kartasi yoki kripto kerak emas."
       },
       {
         "question": "Telegram Premium uchun akkauntimga kirishim kerakmi?",
@@ -238,7 +239,7 @@
       },
       {
         "question": "Nega App Store yoki rasmiy narxdan arzon?",
-        "answer": "App Store/Google Play narxiga do‘kon ustamasi qo‘shiladi va xorijiy karta talab qilinadi. StarsPaymee mahalliy to‘lov tizimlari — UzCard, HUMO, Click, Payme, Paynet orqali to‘g‘ridan-to‘g‘ri ishlaydi, shuning uchun O‘zbekiston foydalanuvchisi uchun arzonroq va qulayroq."
+        "answer": "App Store/Google Play narxiga do‘kon ustamasi qo‘shiladi va xorijiy karta talab qilinadi. StarsPaymee mahalliy to‘lov tizimlari — UzCard, HUMO, Click, Payme, Paynet, Uzum orqali to‘g‘ridan-to‘g‘ri ishlaydi, shuning uchun O‘zbekiston foydalanuvchisi uchun arzonroq va qulayroq."
       }
     ]
   },
@@ -255,12 +256,12 @@
     },
     "stars": {
       "metaTitle": "Telegram Stars sotib olish — arzon narx, 10 soniyada",
-      "metaDescription": "O‘zbekistonda Telegram Stars sotib oling: donasi 220 so‘mdan, 50 ta 11 000 so‘m. Click, Payme, UzCard, HUMO orqali to‘lov, 10 soniyada avtomatik yetkazish.",
+      "metaDescription": "O‘zbekistonda Telegram Stars sotib oling: donasi 220 so‘mdan, 50 ta 11 000 so‘m. Click, Payme, Uzum, UzCard, HUMO orqali to‘lov, 10 soniyada avtomatik yetkazish.",
       "h1": "Telegram Stars sotib olish",
       "intro": "StarsPaymee orqali Telegram Stars (yulduz) ni O‘zbekistonda eng arzon narxda sotib oling. Yulduz donasi atigi 220 so‘mdan, bazaviy 50 yulduz 11 000 so‘m. Buyurtma @StarsPaymee_bot orqali beriladi va o‘rtacha 10 soniyada avtomatik yetkaziladi.",
       "bullets": [
         "Donasi 220 so‘mdan — 50 yulduz 11 000 so‘m",
-        "Click, Payme, Paynet, UzCard, HUMO va istalgan karta",
+        "Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan karta",
         "10 soniyada avtomatik yetkazish, akkauntga kirish shart emas",
         "O‘zingizga yoki boshqa username’ga yuborish"
       ],
@@ -283,7 +284,7 @@
       "metaTitle": "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan",
       "metaDescription": "Telegram noyob sovg‘alarini sotib oling yoki do‘stlaringizga yuboring. Anonim yoki tabrik izohi bilan. So‘mda to‘lov, oson va ishonchli.",
       "h1": "Telegram sovg‘alari yuborish",
-      "intro": "Telegramning noyob (unique) sovg‘alarini StarsPaymee orqali o‘zingizga sotib oling yoki do‘stlaringizga yuboring. Sovg‘ani anonim tarzda yoki tabrik so‘zi bilan jo‘natishingiz mumkin. To‘lov so‘mda — Click, Payme, UzCard, HUMO orqali.",
+      "intro": "Telegramning noyob (unique) sovg‘alarini StarsPaymee orqali o‘zingizga sotib oling yoki do‘stlaringizga yuboring. Sovg‘ani anonim tarzda yoki tabrik so‘zi bilan jo‘natishingiz mumkin. To‘lov so‘mda — Click, Payme, Uzum, UzCard, HUMO orqali.",
       "bullets": [
         "Noyob Telegram sovg‘alarini sotib olish yoki yuborish",
         "Anonim yuborish imkoniyati",
@@ -303,7 +304,7 @@
         "Buyurtma o‘rtacha 10 soniyada avtomatik yetkaziladi",
         "Premium «username bilan»: parol, SMS-kod yoki login so‘ralmaydi — hisobingiz xavfsiz",
         "Yulduzlar to‘g‘ridan-to‘g‘ri Telegram orqali hisobingizga ulanadi",
-        "Click, Payme, Paynet, UzCard, HUMO bilan so‘mda to‘lov",
+        "Click, Payme, Paynet, Uzum, UzCard, HUMO bilan so‘mda to‘lov",
         "Texnik sabab bilan yetkazilmasa — to‘lov to‘liq qaytariladi"
       ],
       "footnote": "Savol yoki yordam kerak bo‘lsa @StarsPaymeeSupport orqali murojaat qiling — qo‘llab-quvvatlash xizmati tezda javob beradi. Buyurtma texnik sabab bilan yetkazilmasa, to‘lov to‘liq qaytariladi."
@@ -313,7 +314,7 @@
       "metaDescription": "PUBG Mobile UC, Mobile Legends va Free Fire olmos, CODM CP, Honor of Kings token — O‘zbekistonda so‘mda, UzCard va HUMO bilan. Faqat Player ID kerak.",
       "kicker": "GamPay",
       "h1": "O‘yin hisobini so‘mda to‘ldirish",
-      "intro": "GamPay — StarsPaymee’ning o‘yin bo‘limi. PUBG Mobile UC, Mobile Legends va Free Fire olmoslari, CODM CP, Honor of Kings tokenlari va Steam hamyoni — hammasi O‘zbek so‘mida, UzCard, HUMO, Click yoki Payme orqali. Xalqaro Visa/Mastercard, VPN yoki chet el hisobi kerak emas: faqat o‘yindagi Player ID ni kiritasiz.",
+      "intro": "GamPay — StarsPaymee’ning o‘yin bo‘limi. PUBG Mobile UC, Mobile Legends va Free Fire olmoslari, CODM CP, Honor of Kings tokenlari va Steam hamyoni — hammasi O‘zbek so‘mida, UzCard, HUMO, Click, Payme yoki Uzum orqali. Xalqaro Visa/Mastercard, VPN yoki chet el hisobi kerak emas: faqat o‘yindagi Player ID ni kiritasiz.",
       "howHeading": "Qanday ishlaydi — 4 qadam",
       "steps": [
         {
@@ -330,7 +331,7 @@
         },
         {
           "title": "To‘lang va kuting",
-          "body": "UzCard, HUMO, Click yoki Payme orqali to‘laysiz; mablag‘ o‘yin hisobingizga o‘zi tushadi."
+          "body": "UzCard, HUMO, Click, Payme yoki Uzum orqali to‘laysiz; mablag‘ o‘yin hisobingizga o‘zi tushadi."
         }
       ],
       "gamesHeading": "Qo‘llab-quvvatlanadigan o‘yinlar",
@@ -343,7 +344,7 @@
       "why": [
         {
           "title": "So‘mda to‘lov",
-          "body": "UzCard, HUMO, Click, Payme — mahalliy kartalar bilan. Valyuta ayirboshlash shart emas."
+          "body": "UzCard, HUMO, Click, Payme, Uzum — mahalliy kartalar bilan. Valyuta ayirboshlash shart emas."
         },
         {
           "title": "Kartasiz ham bo‘ladi",
@@ -378,32 +379,56 @@
         {
           "title": "Telegram Stars, Premium va Gifts API",
           "body": "REST/JSON API orqali Stars, Premium va Gifts’ni avtomatik soting. Buyurtma yaratiladi, mahsulot @username’ga o‘rtacha 10 soniyada yetkaziladi, status webhook orqali qaytadi.",
-          "items": ["REST/JSON API va webhook", "Sandbox — jonli pulsiz test", "10 soniyada avtomatik yetkazish"]
+          "items": [
+            "REST/JSON API va webhook",
+            "Sandbox — jonli pulsiz test",
+            "10 soniyada avtomatik yetkazish"
+          ]
         },
         {
           "title": "Click — rasmiy to‘lov integratsiyasi",
           "body": "Click merchant va callback (prepare/complete) orqali so‘mda avtomatik to‘lov qabul qiling. Imzo tekshiruvi va idempotency bilan xavfsiz; to‘lovdan so‘ng mahsulot avtomatik yetkaziladi.",
-          "items": ["Click rasmiy callback va imzo", "UzCard, HUMO, Payme — so‘mda", "Avtomatik tasdiqlash va yetkazish"]
+          "items": [
+            "Click rasmiy callback va imzo",
+            "UzCard, HUMO, Payme, Uzum — so‘mda",
+            "Avtomatik tasdiqlash va yetkazish"
+          ]
         },
         {
           "title": "SBP (СБП) — rubl to‘lovlari",
           "body": "Rossiyadan rublda QR-kod yoki telefon raqami orqali tezkor to‘lov qabul qiling. Webhook orqali avtomatik tasdiqlash — bozoringizni Rossiya mijozlariga kengaytiring.",
-          "items": ["QR va telefon raqami orqali to‘lov", "Rublda tezkor tasdiqlash", "Webhook va avtomatik yetkazish"]
+          "items": [
+            "QR va telefon raqami orqali to‘lov",
+            "Rublda tezkor tasdiqlash",
+            "Webhook va avtomatik yetkazish"
+          ]
         },
         {
           "title": "White Label platforma",
           "body": "O‘z brendingiz, nomingiz va dizayningiz ostida to‘liq platforma — orqa tomonda StarsPaymee API ishlaydi. Mijoz faqat sizni ko‘radi, texnik yukni biz ko‘taramiz.",
-          "items": ["O‘z brend va domeningiz", "To‘liq to‘lov integratsiyasi", "Tez ishga tushirish"]
+          "items": [
+            "O‘z brend va domeningiz",
+            "To‘liq to‘lov integratsiyasi",
+            "Tez ishga tushirish"
+          ]
         },
         {
           "title": "Reseller dasturi",
           "body": "Stars, Premium va Gifts’ni ulgurji narxda olib, o‘z ustamangiz bilan qayta soting. Hajm oshgani sari narx pasayadi; yetkazish va hisob-kitob avtomatik.",
-          "items": ["Ulgurji narx va o‘z ustamangiz", "Avtomatik yetkazish va status", "Yuqori hajmga maxsus tarif"]
+          "items": [
+            "Ulgurji narx va o‘z ustamangiz",
+            "Avtomatik yetkazish va status",
+            "Yuqori hajmga maxsus tarif"
+          ]
         },
         {
           "title": "Nega StarsPaymee Business?",
           "body": "1 yildan ortiq xizmat, 100 000+ buyurtma va yuqori muvaffaqiyat foizi. Bitta kalit ostida barcha mahsulot va to‘lovlar, aniq narx va 24/7 qo‘llab-quvvatlash.",
-          "items": ["Bozordagi eng arzon narxlardan", "Bitta API — barcha mahsulot va to‘lov", "24/7 texnik qo‘llab-quvvatlash"]
+          "items": [
+            "Bozordagi eng arzon narxlardan",
+            "Bitta API — barcha mahsulot va to‘lov",
+            "24/7 texnik qo‘llab-quvvatlash"
+          ]
         }
       ],
       "articlesHeading": "Batafsil qo‘llanmalar",
@@ -442,6 +467,7 @@
       "CLICK",
       "PAYME",
       "PAYNET",
+      "UZUM",
       "24/7 AVTOMATIK",
       "O‘ZBEK SO‘MIDA",
       "10 SONIYADA YETKAZISH",
@@ -554,7 +580,7 @@
     "step1Title": "Botni oching",
     "step1Body": "@StarsPaymee_bot da kerakli mahsulotni tanlang: Stars, Premium yoki Gift.",
     "step2Title": "To‘lovni qiling",
-    "step2Body": "Istalgan bank ilovasidan: Click, Payme, UzCard, HUMO orqali so‘mda.",
+    "step2Body": "Istalgan bank ilovasidan: Click, Payme, Uzum, UzCard, HUMO orqali so‘mda.",
     "step3Title": "10 soniyada qabul qiling",
     "step3Body": "Tizim to‘lovni avtomatik aniqlaydi va darhol yetkazadi. Kechiksa — avto-bonus!",
     "trust1Title": "Login va parol so‘ralmaydi",
@@ -573,7 +599,7 @@
     "bizTitle": "Botingiz yoki saytingiz uchun API",
     "bizBody": "Telegram Stars, Premium va Gifts’ni avtomatik soting. Click rasmiy integratsiyasi, SBP (rubl) to‘lovi, White Label va reseller dasturi — bitta kalitda.",
     "bizCta": "Business haqida batafsil",
-    "footerTagline": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik. Click, Payme, Paynet, UzCard, HUMO va istalgan bank kartasi bilan so‘mda to‘lov.",
+    "footerTagline": "O‘zbekistonda Telegram Stars, Premium va Gift — 10 soniyada avtomatik. Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan bank kartasi bilan so‘mda to‘lov.",
     "footerSections": "Bo‘limlar",
     "footerSupport": "Qo‘llab-quvvatlash",
     "footerRights": "Avtomatik, tez, ishonchli",

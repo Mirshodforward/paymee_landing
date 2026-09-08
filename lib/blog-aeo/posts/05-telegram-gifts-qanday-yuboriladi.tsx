@@ -22,7 +22,7 @@ function RouteCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Nima bilan to‘lanadi", "Hisobingizdagi Stars", "So‘m (yoki rubl)"],
         ["Avval Stars kerakmi", "Ha — balansda bo‘lishi shart", "Yo‘q — to‘g‘ridan-to‘g‘ri sovg‘a olinadi"],
-        ["Karta talabi", "Stars xaridi uchun xorijiy karta", "UzCard, HUMO, Click, Payme"],
+        ["Karta talabi", "Stars xaridi uchun xorijiy karta", "UzCard, HUMO, Click, Payme, Uzum"],
         ["Anonim yuborish", "Ha", "Ha"],
         ["Izoh qoldirish", "Ha", "Ha"],
         ["Qachon qulay", "Stars allaqachon bo‘lsa", "Stars yo‘q yoki so‘mda to‘lamoqchi bo‘lsangiz"],
@@ -33,7 +33,7 @@ function RouteCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Чем оплачивается", "Звёздами на вашем балансе", "Сумами (или рублями)"],
         ["Нужны ли Stars заранее", "Да — должны быть на балансе", "Нет — подарок берётся напрямую"],
-        ["Требование к карте", "Для покупки Stars нужна зарубежная", "UzCard, HUMO, Click, Payme"],
+        ["Требование к карте", "Для покупки Stars нужна зарубежная", "UzCard, HUMO, Click, Payme, Uzum"],
         ["Анонимная отправка", "Да", "Да"],
         ["Комментарий", "Да", "Да"],
         ["Когда удобнее", "Если Stars уже есть", "Если Stars нет или платите в сумах"],
@@ -44,7 +44,7 @@ function RouteCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["What pays for it", "Stars on your balance", "So‘m (or roubles)"],
         ["Stars needed first", "Yes — they must be on the balance", "No — the gift is bought directly"],
-        ["Card requirement", "A foreign card, to buy the Stars", "UzCard, HUMO, Click, Payme"],
+        ["Card requirement", "A foreign card, to buy the Stars", "UzCard, HUMO, Click, Payme, Uzum"],
         ["Anonymous sending", "Yes", "Yes"],
         ["Leaving a note", "Yes", "Yes"],
         ["When it suits", "When you already hold Stars", "When you have none or want to pay in so‘m"],
@@ -132,7 +132,7 @@ function UzBody() {
           Do‘stingizning @username’ini profildan nusxa olib qo‘ying — qo‘lda yozganda harf almashib ketadi.
         </Step>
         <Step title="4. Izoh yoki anonimlik">Tabrik izohi qoldiring yoki anonim yuborishni belgilang.</Step>
-        <Step title="5. So‘mda to‘lang">UzCard, HUMO, Click, Payme yoki Paynet.</Step>
+        <Step title="5. So‘mda to‘lang">UzCard, HUMO, Click, Payme, Uzum yoki Paynet.</Step>
         <Step title="6. Yetkazilganini tekshiring">
           Botda buyurtma «bajarildi» holatiga o‘tadi va qabul qiluvchi Telegram’dan bildirishnoma oladi.
         </Step>
@@ -267,7 +267,7 @@ function RuBody() {
           Скопируйте @username из профиля — при ручном наборе легко перепутать буквы.
         </Step>
         <Step title="4. Комментарий или анонимность">Оставьте поздравление или отправьте анонимно.</Step>
-        <Step title="5. Оплатите в сумах">UzCard, HUMO, Click, Payme или Paynet.</Step>
+        <Step title="5. Оплатите в сумах">UzCard, HUMO, Click, Payme, Uzum или Paynet.</Step>
         <Step title="6. Проверьте доставку">
           Заказ в боте переходит в «выполнен», а получателю приходит уведомление от Telegram.
         </Step>
@@ -402,7 +402,7 @@ function EnBody() {
           Copy the @username from their profile — typing it by hand is how letters get swapped.
         </Step>
         <Step title="4. Note or anonymity">Leave a greeting or send it anonymously.</Step>
-        <Step title="5. Pay in so‘m">UzCard, HUMO, Click, Payme or Paynet.</Step>
+        <Step title="5. Pay in so‘m">UzCard, HUMO, Click, Payme, Uzum or Paynet.</Step>
         <Step title="6. Check delivery">
           The order turns to “completed” in the bot and the recipient gets a notification from Telegram.
         </Step>
@@ -577,7 +577,7 @@ export const post: AeoPost = {
     { name: "Sovg‘ani tanlang", text: "Katalogdan sovg‘ani va uning yulduz qiymatini tanlang." },
     { name: "Qabul qiluvchini kiriting", text: "Do‘stingizning @username’ini profildan nusxa olib kiriting." },
     { name: "Izoh yoki anonimlik", text: "Tabrik izohi qoldiring yoki anonim yuborishni belgilang." },
-    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme yoki Paynet orqali." },
+    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali." },
     { name: "Yetkazilganini tekshiring", text: "Buyurtma «bajarildi» holatiga o‘tadi va bildirishnoma keladi." },
   ],
   locales: {

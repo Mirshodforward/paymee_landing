@@ -446,7 +446,7 @@ function RuBody() {
       </KeyFacts>
       <p>
         Порядок покупки одинаков для обоих видов: откройте раздел подарков в боте, выберите подарок, введите
-        @username получателя и способ оплаты — для сумов Click, Uzcard, Humo или Payme, для рублей СБП. Полные
+        @username получателя и способ оплаты — для сумов Click, Uzcard, Humo, Payme или Uzum, для рублей СБП. Полные
         шаги, анонимная отправка, комментарий и частые ошибки —{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
           в руководстве «Как отправить подарок в Telegram»
@@ -667,7 +667,7 @@ function EnBody() {
       </KeyFacts>
       <p>
         The buying flow is the same for both: open the gifts section in the bot, pick a gift, enter the
-        recipient’s @username and choose a payment method — Click, UzCard, HUMO or Payme for so‘m, SBP for
+        recipient’s @username and choose a payment method — Click, UzCard, HUMO, Payme or Uzum for so‘m, SBP for
         roubles. The full steps, anonymous sending, notes and the usual mistakes live in{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
           the “How to send a Telegram gift” guide
@@ -743,7 +743,7 @@ const uzFaq = [
   },
   {
     question: "NFT sovg‘ani o‘zbek so‘mida sotib olsa bo‘ladimi?",
-    answer: "Ha, @StarsPaymee_bot da NFT sovg‘alarni ham, oddiylarini ham Click, UzCard, HUMO yoki Payme bilan so‘mda to‘lash mumkin.",
+    answer: "Ha, @StarsPaymee_bot da NFT sovg‘alarni ham, oddiylarini ham Click, UzCard, HUMO, Payme yoki Uzum bilan so‘mda to‘lash mumkin.",
   },
   {
     question: "Rublda qanday to‘lanadi?",
@@ -777,7 +777,7 @@ const ruFaq = [
   },
   {
     question: "Можно ли купить NFT-подарок за узбекский сум?",
-    answer: "Да, в @StarsPaymee_bot NFT-подарки, как и обычные, можно оплатить в сумах через Click, Uzcard, Humo или Payme.",
+    answer: "Да, в @StarsPaymee_bot NFT-подарки, как и обычные, можно оплатить в сумах через Click, Uzcard, Humo, Payme или Uzum.",
   },
   {
     question: "Как оплатить покупку в рублях?",
@@ -808,7 +808,7 @@ const enFaq = [
   },
   {
     question: "Can an NFT gift be bought with Uzbek so‘m?",
-    answer: "Yes. In @StarsPaymee_bot both NFT and regular gifts can be paid for in so‘m via Click, UzCard, HUMO or Payme.",
+    answer: "Yes. In @StarsPaymee_bot both NFT and regular gifts can be paid for in so‘m via Click, UzCard, HUMO, Payme or Uzum.",
   },
   {
     question: "How do I pay in roubles?",

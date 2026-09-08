@@ -62,7 +62,7 @@ function UzAnswer() {
     <p>
       O‘zbekistonda Telegram Premium narxi (StarsPaymee’da, so‘mda): <b>3 oy — 172 000</b>, <b>6 oy — 232 000</b>,{" "}
       <b>12 oy — 422 000 so‘m</b> — username bilan, ~10 soniyada avtomatik. Login orqali rasmiy oqimda: 1 oy —
-      50 000, 1 yil — 300 000 so‘m. To‘lov UzCard, HUMO, Click, Payme yoki Paynet bilan; xorijiy karta shart emas.
+      50 000, 1 yil — 300 000 so‘m. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan; xorijiy karta shart emas.
     </p>
   );
 }
@@ -149,7 +149,7 @@ function RuAnswer() {
     <p>
       Цена Telegram Premium в Узбекистане (в StarsPaymee, в сумах): <b>3 мес — 172 000</b>, <b>6 мес — 232 000</b>,{" "}
       <b>12 мес — 422 000 сум</b> — по username, активация ~10 секунд. В сценарии со входом: 1 мес — 50 000, 1 год —
-      300 000 сум. Оплата UzCard, HUMO, Click, Payme или Paynet; иностранная карта не нужна.
+      300 000 сум. Оплата UzCard, HUMO, Click, Payme, Uzum или Paynet; иностранная карта не нужна.
     </p>
   );
 }
@@ -336,7 +336,7 @@ const uzFaq = [
     question: "Nega App Store’dan arzon?",
     answer: "Do‘kon ustamasi va valyuta konvertatsiyasi komissiyasi yo‘q — to‘lov mahalliy tizimda, so‘mda o‘tadi.",
   },
-  { question: "Xorijiy karta kerakmi?", answer: "Yo‘q. UzCard, HUMO, Click, Payme yoki Paynet yetarli." },
+  { question: "Xorijiy karta kerakmi?", answer: "Yo‘q. UzCard, HUMO, Click, Payme, Uzum yoki Paynet yetarli." },
   {
     question: "Narx keyinchalik o‘zgaradimi?",
     answer: "Joriy aniq summani har doim @StarsPaymee_bot da yoki Premium sahifasida ko‘rish mumkin.",
@@ -363,7 +363,7 @@ const ruFaq = [
     question: "Почему дешевле, чем в App Store?",
     answer: "Нет наценки магазина и комиссии за конвертацию — платёж проходит в местной системе, в сумах.",
   },
-  { question: "Нужна ли иностранная карта?", answer: "Нет. Достаточно UzCard, HUMO, Click, Payme или Paynet." },
+  { question: "Нужна ли иностранная карта?", answer: "Нет. Достаточно UzCard, HUMO, Click, Payme, Uzum или Paynet." },
   {
     question: "Могут ли цены измениться?",
     answer: "Актуальную сумму всегда видно в @StarsPaymee_bot или на странице Premium.",
@@ -390,7 +390,7 @@ const enFaq = [
     question: "Why is it cheaper than the App Store?",
     answer: "There is no store margin and no conversion fee — the payment runs in the local system, in so‘m.",
   },
-  { question: "Do I need a foreign card?", answer: "No. UzCard, HUMO, Click, Payme or Paynet is enough." },
+  { question: "Do I need a foreign card?", answer: "No. UzCard, HUMO, Click, Payme, Uzum or Paynet is enough." },
   {
     question: "Can the prices change?",
     answer: "The exact current amount is always visible in @StarsPaymee_bot or on the Premium page.",

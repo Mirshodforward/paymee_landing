@@ -78,7 +78,7 @@ function UzBody() {
         <Step title="4. Muddatni tanlang">
           3, 6 yoki 12 oy. Sovg‘a username oqimida beriladi, shuning uchun 1 oylik bu yerda mavjud emas.
         </Step>
-        <Step title="5. So‘mda to‘lang">UzCard, HUMO, Click, Payme yoki Paynet.</Step>
+        <Step title="5. So‘mda to‘lang">UzCard, HUMO, Click, Payme, Uzum yoki Paynet.</Step>
         <Step title="6. Yetkazilganini tasdiqlang">Quyidagi «Yetkazilganini qanday bilaman» bo‘limiga qarang.</Step>
       </Steps>
 
@@ -228,7 +228,7 @@ function RuBody() {
         <Step title="4. Выберите срок">
           3, 6 или 12 месяцев. Подарок оформляется в потоке по username, поэтому месячного тарифа здесь нет.
         </Step>
-        <Step title="5. Оплатите в сумах">UzCard, HUMO, Click, Payme или Paynet.</Step>
+        <Step title="5. Оплатите в сумах">UzCard, HUMO, Click, Payme, Uzum или Paynet.</Step>
         <Step title="6. Подтвердите доставку">Смотрите раздел «Как понять, что подарок дошёл» ниже.</Step>
       </Steps>
 
@@ -377,7 +377,7 @@ function EnBody() {
         <Step title="4. Choose a term">
           3, 6 or 12 months. Gifts go through the username flow, so the monthly plan is not offered here.
         </Step>
-        <Step title="5. Pay in so‘m">UzCard, HUMO, Click, Payme or Paynet.</Step>
+        <Step title="5. Pay in so‘m">UzCard, HUMO, Click, Payme, Uzum or Paynet.</Step>
         <Step title="6. Confirm delivery">See “Confirming delivery” below.</Step>
       </Steps>
 
@@ -597,7 +597,7 @@ export const post: AeoPost = {
       text: "Sovg‘a qiladigan odamning @username’ini kiriting — login yoki parol kerak emas.",
     },
     { name: "Muddatni tanlang", text: "3, 6 yoki 12 oylik paketni tanlang." },
-    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme yoki Paynet." },
+    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet." },
     {
       name: "Yetkazilganini tasdiqlang",
       text: "Botdagi status, qabul qiluvchi profilidagi rozetka va Telegram bildirishnomasi.",

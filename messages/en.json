@@ -1,7 +1,7 @@
 {
   "seo": {
     "titleDefault": "Buy Telegram Stars & Premium in Uzbekistan | StarsPaymee",
-    "description": "Telegram Stars, Premium and gifts in Uzbekistan — delivered automatically in 10 seconds. Pay via Click, Payme, Paynet, UzCard, HUMO. Lowest prices.",
+    "description": "Telegram Stars, Premium and gifts in Uzbekistan — delivered automatically in 10 seconds. Pay via Click, Payme, Paynet, Uzum, UzCard, HUMO. Lowest prices.",
     "ogLocale": "en_US",
     "keywordsList": [
       "StarsPaymee",
@@ -26,7 +26,8 @@
       "HUMO",
       "Click",
       "Payme",
-      "Paynet"
+      "Paynet",
+      "Uzum"
     ]
   },
   "nav": {
@@ -51,7 +52,7 @@
     "switchAria": "Tilni tanlang"
   },
   "footer": {
-    "tagline": "Telegram Stars, Premium and gifts in Uzbekistan — automatic in 10 seconds. Pay with Click, Payme, Paynet, UzCard, HUMO and any bank card in UZS.",
+    "tagline": "Telegram Stars, Premium and gifts in Uzbekistan — automatic in 10 seconds. Pay with Click, Payme, Paynet, Uzum, UzCard, HUMO and any bank card in UZS.",
     "miniAppHeading": "Telegram bot",
     "blog": "Blog",
     "supportHeading": "Support",
@@ -93,7 +94,7 @@
     "heroBullets": [
       "Automatic delivery in 10 seconds",
       "No account login — username is enough",
-      "Click, Payme, Paynet, UzCard, HUMO"
+      "Click, Payme, Paynet, Uzum, UzCard, HUMO"
     ],
     "statsDelivery": "Auto delivery",
     "statsUsers": "Active users",
@@ -128,7 +129,7 @@
       "Gift for yourself or a friend",
       "Send anonymously if you like",
       "Add a congratulatory comment",
-      "Pay in UZS — Click, Payme, UzCard, HUMO"
+      "Pay in UZS — Click, Payme, Uzum, UzCard, HUMO"
     ],
     "giftsCta": "Gifts",
     "whyTitle": "Why StarsPaymee?",
@@ -152,7 +153,7 @@
       },
       {
         "title": "Easy payment",
-        "body": "Click, Payme, Paynet, UzCard, HUMO and any card."
+        "body": "Click, Payme, Paynet, Uzum, UzCard, HUMO and any card."
       },
       {
         "title": "Referral bonus",
@@ -171,7 +172,7 @@
       },
       {
         "title": "Pay & receive",
-        "desc": "Pay with Click/Payme/UzCard/HUMO — arrives automatically in 10 seconds."
+        "desc": "Pay with Click/Payme/Uzum/UzCard/HUMO — arrives automatically in 10 seconds."
       }
     ],
     "ctaTitle": "Place your first order right now",
@@ -185,7 +186,7 @@
       },
       {
         "question": "How can I pay?",
-        "answer": "Click, Payme, Paynet, UzCard, HUMO and any Uzbek bank card — paid in UZS. No foreign card or crypto required."
+        "answer": "Click, Payme, Paynet, Uzum, UzCard, HUMO and any Uzbek bank card — paid in UZS. No foreign card or crypto required."
       },
       {
         "question": "Do I need to log into my account for Telegram Premium?",
@@ -229,7 +230,7 @@
       },
       {
         "question": "Why is it cheaper than the App Store or the official price?",
-        "answer": "App Store/Google Play prices include a store markup and require a foreign card. StarsPaymee works directly through local payment systems — UzCard, HUMO, Click, Payme, Paynet — so it’s cheaper and more convenient for users in Uzbekistan."
+        "answer": "App Store/Google Play prices include a store markup and require a foreign card. StarsPaymee works directly through local payment systems — UzCard, HUMO, Click, Payme, Paynet, Uzum — so it’s cheaper and more convenient for users in Uzbekistan."
       }
     ]
   },
@@ -246,12 +247,12 @@
     },
     "stars": {
       "metaTitle": "Buy Telegram Stars — cheap, in 10 seconds",
-      "metaDescription": "Buy Telegram Stars in Uzbekistan: from 220 so‘m each, 50 for 11,000 so‘m. Pay via Click, Payme, UzCard, HUMO. Auto delivery in 10 seconds.",
+      "metaDescription": "Buy Telegram Stars in Uzbekistan: from 220 so‘m each, 50 for 11,000 so‘m. Pay via Click, Payme, Uzum, UzCard, HUMO. Auto delivery in 10 seconds.",
       "h1": "Buy Telegram Stars",
       "intro": "Buy Telegram Stars in Uzbekistan at the lowest price through StarsPaymee. Stars from 220 so‘m each, base pack of 50 for 11,000 so‘m. Orders are placed in @StarsPaymee_bot and delivered automatically in about 10 seconds.",
       "bullets": [
         "From 220 so‘m each — 50 stars for 11,000 so‘m",
-        "Click, Payme, Paynet, UzCard, HUMO and any card",
+        "Click, Payme, Paynet, Uzum, UzCard, HUMO and any card",
         "Auto delivery in 10 seconds, no account login",
         "To yourself or another username"
       ],
@@ -274,7 +275,7 @@
       "metaTitle": "Send Telegram unique gifts — anonymously",
       "metaDescription": "Buy Telegram unique gifts or send them to friends. Anonymously or with a greeting. Pay in UZS, simple and reliable.",
       "h1": "Send Telegram gifts",
-      "intro": "Buy Telegram unique gifts for yourself or send them to friends through StarsPaymee. A gift can be sent anonymously or with a congratulatory comment. Pay in UZS — Click, Payme, UzCard, HUMO.",
+      "intro": "Buy Telegram unique gifts for yourself or send them to friends through StarsPaymee. A gift can be sent anonymously or with a congratulatory comment. Pay in UZS — Click, Payme, Uzum, UzCard, HUMO.",
       "bullets": [
         "Buy or send Telegram unique gifts",
         "Send anonymously if you like",
@@ -294,7 +295,7 @@
         "Orders delivered automatically in about 10 seconds",
         "Premium “by username”: no password, SMS code or login — your account stays safe",
         "Stars are credited to your account directly through Telegram",
-        "Pay in UZS: Click, Payme, Paynet, UzCard, HUMO",
+        "Pay in UZS: Click, Payme, Paynet, Uzum, UzCard, HUMO",
         "Full refund if an order is not delivered due to a technical issue"
       ],
       "footnote": "For questions, reach us via @StarsPaymeeSupport — support replies quickly. If an order is not delivered due to a technical issue, your payment is refunded in full."
@@ -304,7 +305,7 @@
       "metaDescription": "PUBG Mobile UC, Mobile Legends and Free Fire diamonds, CODM CP, Honor of Kings tokens — in Uzbekistan, in so‘m, with UzCard and HUMO. Only a Player ID is needed.",
       "kicker": "GamPay",
       "h1": "Top up your game account in so‘m",
-      "intro": "GamPay is the gaming section of StarsPaymee. PUBG Mobile UC, Mobile Legends and Free Fire diamonds, CODM CP, Honor of Kings tokens and Steam Wallet — all in Uzbek so‘m via UzCard, HUMO, Click or Payme. No international Visa/Mastercard, VPN or foreign account required: you just enter your in-game Player ID.",
+      "intro": "GamPay is the gaming section of StarsPaymee. PUBG Mobile UC, Mobile Legends and Free Fire diamonds, CODM CP, Honor of Kings tokens and Steam Wallet — all in Uzbek so‘m via UzCard, HUMO, Click, Payme or Uzum. No international Visa/Mastercard, VPN or foreign account required: you just enter your in-game Player ID.",
       "howHeading": "How it works — 4 steps",
       "steps": [
         {
@@ -321,7 +322,7 @@
         },
         {
           "title": "Pay and receive",
-          "body": "Pay via UzCard, HUMO, Click or Payme; the funds reach your game account automatically."
+          "body": "Pay via UzCard, HUMO, Click, Payme or Uzum; the funds reach your game account automatically."
         }
       ],
       "gamesHeading": "Supported games",
@@ -334,7 +335,7 @@
       "why": [
         {
           "title": "Pay in so‘m",
-          "body": "UzCard, HUMO, Click, Payme — with local cards. No currency exchange needed."
+          "body": "UzCard, HUMO, Click, Payme, Uzum — with local cards. No currency exchange needed."
         },
         {
           "title": "Works without a card",
@@ -369,32 +370,56 @@
         {
           "title": "Telegram Stars, Premium and Gifts API",
           "body": "Sell Stars, Premium and Gifts automatically via a REST/JSON API. An order is created, the product is delivered to the @username in about 10 seconds, and the status returns via webhook.",
-          "items": ["REST/JSON API and webhook", "Sandbox — test with no real money", "Auto‑delivery in 10 seconds"]
+          "items": [
+            "REST/JSON API and webhook",
+            "Sandbox — test with no real money",
+            "Auto‑delivery in 10 seconds"
+          ]
         },
         {
           "title": "Click — official payment integration",
           "body": "Accept payments in so‘m automatically via the Click merchant and callback (prepare/complete). Secure with signature verification and idempotency; after payment the product is delivered automatically.",
-          "items": ["Official Click callback and signature", "UzCard, HUMO, Payme — in so‘m", "Auto‑confirmation and delivery"]
+          "items": [
+            "Official Click callback and signature",
+            "UzCard, HUMO, Payme, Uzum — in so‘m",
+            "Auto‑confirmation and delivery"
+          ]
         },
         {
           "title": "SBP (СБП) — ruble payments",
           "body": "Accept instant payments from Russia in rubles via a QR code or phone number. Auto‑confirmation via webhook — expand your market to customers in Russia.",
-          "items": ["Payment via QR and phone number", "Instant confirmation in rubles", "Webhook and auto‑delivery"]
+          "items": [
+            "Payment via QR and phone number",
+            "Instant confirmation in rubles",
+            "Webhook and auto‑delivery"
+          ]
         },
         {
           "title": "White Label platform",
           "body": "A full platform under your own brand, name and design — with the StarsPaymee API on the backend. The customer sees only you, and we carry the technical load.",
-          "items": ["Your brand and domain", "Full payment integration", "Fast launch"]
+          "items": [
+            "Your brand and domain",
+            "Full payment integration",
+            "Fast launch"
+          ]
         },
         {
           "title": "Reseller program",
           "body": "Take Stars, Premium and Gifts at a wholesale price and resell with your own markup. The price drops as volume grows; delivery and settlement are automatic.",
-          "items": ["Wholesale price and your markup", "Auto‑delivery and status", "Special tariff for volume"]
+          "items": [
+            "Wholesale price and your markup",
+            "Auto‑delivery and status",
+            "Special tariff for volume"
+          ]
         },
         {
           "title": "Why StarsPaymee Business?",
           "body": "Over a year in service, 100,000+ orders and a high success rate. All products and payments under one key, transparent pricing and 24/7 support.",
-          "items": ["Among the lowest prices on the market", "One API — all products and payments", "24/7 technical support"]
+          "items": [
+            "Among the lowest prices on the market",
+            "One API — all products and payments",
+            "24/7 technical support"
+          ]
         }
       ],
       "articlesHeading": "Detailed guides",
@@ -433,6 +458,7 @@
       "CLICK",
       "PAYME",
       "PAYNET",
+      "UZUM",
       "24/7 AUTOMATIC",
       "IN UZBEK SO‘M",
       "DELIVERY IN 10 SECONDS",
@@ -545,7 +571,7 @@
     "step1Title": "Open the bot",
     "step1Body": "In @StarsPaymee_bot pick the product you need: Stars, Premium or a Gift.",
     "step2Title": "Make the payment",
-    "step2Body": "From any banking app: Click, Payme, UzCard, HUMO — in so‘m.",
+    "step2Body": "From any banking app: Click, Payme, Uzum, UzCard, HUMO — in so‘m.",
     "step3Title": "Receive in 10 seconds",
     "step3Body": "The system detects the payment automatically and delivers instantly. If delayed — auto-bonus!",
     "trust1Title": "No login or password asked",
@@ -564,7 +590,7 @@
     "bizTitle": "An API for your bot or website",
     "bizBody": "Sell Telegram Stars, Premium and Gifts automatically. Official Click integration, SBP (ruble) payments, White Label and a reseller program — under one key.",
     "bizCta": "Learn more about Business",
-    "footerTagline": "Telegram Stars, Premium and Gifts in Uzbekistan — automatic in 10 seconds. Pay in so‘m via Click, Payme, Paynet, UzCard, HUMO and any bank card.",
+    "footerTagline": "Telegram Stars, Premium and Gifts in Uzbekistan — automatic in 10 seconds. Pay in so‘m via Click, Payme, Paynet, Uzum, UzCard, HUMO and any bank card.",
     "footerSections": "Sections",
     "footerSupport": "Support",
     "footerRights": "Automatic, fast, reliable",

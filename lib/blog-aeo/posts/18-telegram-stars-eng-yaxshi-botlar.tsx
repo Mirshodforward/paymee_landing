@@ -33,7 +33,7 @@ function UzBody() {
       <KeyFacts label="Beshta mezon va ularni qanday tekshirish">
         <li>
           <b>So‘mda mahalliy to‘lov.</b> Qanday tekshirish: botni ochib to‘lov usullari ro‘yxatiga qarang —
-          UzCard, HUMO, Click, Payme yoki Paynet bo‘lishi kerak. Faqat kripto yoki xorijiy karta taklif qilinsa,
+          UzCard, HUMO, Click, Payme, Uzum yoki Paynet bo‘lishi kerak. Faqat kripto yoki xorijiy karta taklif qilinsa,
           bu O‘zbekiston foydalanuvchisiga mos emas.
         </li>
         <li>
@@ -122,7 +122,7 @@ function RuBody() {
       <KeyFacts label="Пять критериев и как их проверить">
         <li>
           <b>Местная оплата в сумах.</b> Как проверить: откройте бота и посмотрите список способов оплаты — там
-          должны быть UzCard, HUMO, Click, Payme или Paynet. Если предлагают только крипту или зарубежную карту,
+          должны быть UzCard, HUMO, Click, Payme, Uzum или Paynet. Если предлагают только крипту или зарубежную карту,
           пользователю из Узбекистана это не подходит.
         </li>
         <li>
@@ -225,7 +225,7 @@ export const post: AeoPost = {
         },
         {
           question: "Botda to‘lov qanday?",
-          answer: "UzCard, HUMO, Click, Payme, Paynet bilan so‘mda. To‘lovdan keyin Stars avtomatik yetkaziladi.",
+          answer: "UzCard, HUMO, Click, Payme, Paynet, Uzum bilan so‘mda. To‘lovdan keyin Stars avtomatik yetkaziladi.",
         },
         {
           question: "Buyurtma kechiksa-chi?",
@@ -262,7 +262,7 @@ export const post: AeoPost = {
         },
         {
           question: "Как оплата в боте?",
-          answer: "UzCard, HUMO, Click, Payme, Paynet в сумах. После оплаты Stars доставляются автоматически.",
+          answer: "UzCard, HUMO, Click, Payme, Paynet, Uzum в сумах. После оплаты Stars доставляются автоматически.",
         },
         {
           question: "А если заказ задержится?",

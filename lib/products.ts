@@ -53,7 +53,7 @@ export const STATS = {
 } as const;
 
 /** Qo‘llab-quvvatlanadigan to‘lov usullari. */
-export const PAYMENT_METHODS = ["Click", "Payme", "Paynet", "UzCard", "HUMO"] as const;
+export const PAYMENT_METHODS = ["Click", "Payme", "Paynet", "Uzum", "UzCard", "HUMO"] as const;
 
 /** so‘m summasini joriy tilga mos bo‘sh joy bilan ajratib formatlash. */
 export function formatUzs(value: number, locale: string): string {

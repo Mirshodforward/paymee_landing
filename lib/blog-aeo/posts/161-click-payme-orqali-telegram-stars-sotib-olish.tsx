@@ -127,6 +127,9 @@ function UzBody() {
         <InfoCard emoji="🔵" title="Payme">
           Tezkor onlayn to‘lovlar uchun mashhur xizmat.
         </InfoCard>
+        <InfoCard emoji="🟣" title="Uzum">
+          Uzum ilovasi orqali to‘lov — hisobga bog‘langan karta bilan bir bosishda.
+        </InfoCard>
       </InfoGrid>
       <p>
         Bu to‘plam deyarli barcha holatlarni yopadi: qaysi kartadan yoki xizmatdan foydalanishingizdan qat’i
@@ -137,7 +140,7 @@ function UzBody() {
       <StarsPriceBoard locale="uz" />
 
       <InlineCta
-        text="Yulduzlarni so‘mda oling — Click, HUMO, UzCard yoki Payme bilan."
+        text="Yulduzlarni so‘mda oling — Click, HUMO, UzCard, Payme yoki Uzum bilan."
         product={{ kind: "stars", amount: 100 }}
       />
 
@@ -152,7 +155,7 @@ function UzBody() {
         </Step>
         <Step title="2. Yulduzlar sonini tanlang">Kerakli miqdorni belgilang — narx darhol so‘mda ko‘rinadi.</Step>
         <Step title="3. Username kiriting">Yulduzlar tushadigan hisobni ko‘rsating — o‘zingiz yoki boshqa odam.</Step>
-        <Step title="4. To‘lov usulini tanlang">Click, HUMO, UzCard yoki Payme.</Step>
+        <Step title="4. To‘lov usulini tanlang">Click, HUMO, UzCard, Payme yoki Uzum.</Step>
         <Step title="5. So‘mda to‘lang">Joriy kurs bo‘yicha, konvertatsiyasiz va yashirin komissiyalarsiz.</Step>
         <Step title="6. Yulduzlarni qabul qiling">Odatda bu deyarli bir zumda sodir bo‘ladi.</Step>
       </Steps>
@@ -304,6 +307,9 @@ function RuBody() {
         <InfoCard emoji="🔵" title="Payme">
           Популярный сервис для быстрых онлайн-платежей.
         </InfoCard>
+        <InfoCard emoji="🟣" title="Uzum">
+          Оплата через приложение Uzum — в одно нажатие привязанной картой.
+        </InfoCard>
       </InfoGrid>
       <p>
         Такой набор способов оплаты закрывает практически все сценарии: не важно, какой картой или сервисом вы
@@ -314,7 +320,7 @@ function RuBody() {
       <StarsPriceBoard locale="ru" />
 
       <InlineCta
-        text="Оплатите в сумах — Click, Humo, Uzcard или Payme — и получите звёзды."
+        text="Оплатите в сумах — Click, Humo, Uzcard, Payme или Uzum — и получите звёзды."
         product={{ kind: "stars", amount: 100 }}
       />
 
@@ -329,7 +335,7 @@ function RuBody() {
         </Step>
         <Step title="2. Выберите количество звёзд">Укажите нужное число — цена сразу показывается в сумах.</Step>
         <Step title="3. Введите username">Аккаунт, на который поступят звёзды: свой или чужой.</Step>
-        <Step title="4. Укажите способ оплаты">Click, Humo, Uzcard или Payme.</Step>
+        <Step title="4. Укажите способ оплаты">Click, Humo, Uzcard, Payme или Uzum.</Step>
         <Step title="5. Оплатите в сумах">По актуальному курсу, без конвертации и скрытых комиссий.</Step>
         <Step title="6. Получите звёзды">Обычно это происходит практически моментально.</Step>
       </Steps>
@@ -478,6 +484,9 @@ function EnBody() {
         <InfoCard emoji="🔵" title="Payme">
           A popular service for fast online payments.
         </InfoCard>
+        <InfoCard emoji="🟣" title="Uzum">
+          Paying through the Uzum app — one tap with the card linked to the account.
+        </InfoCard>
       </InfoGrid>
       <p>
         This set covers almost every scenario: whichever card or service you normally use, there is a matching
@@ -488,7 +497,7 @@ function EnBody() {
       <StarsPriceBoard locale="en" />
 
       <InlineCta
-        text="Pay in so‘m with Click, HUMO, UzCard or Payme and get your Stars."
+        text="Pay in so‘m with Click, HUMO, UzCard, Payme or Uzum and get your Stars."
         product={{ kind: "stars", amount: 100 }}
       />
 
@@ -503,7 +512,7 @@ function EnBody() {
         </Step>
         <Step title="2. Choose the number of Stars">Set the amount — the price is shown in so‘m right away.</Step>
         <Step title="3. Enter a username">The account the Stars should land on: yours or someone else’s.</Step>
-        <Step title="4. Pick a payment method">Click, HUMO, UzCard or Payme.</Step>
+        <Step title="4. Pick a payment method">Click, HUMO, UzCard, Payme or Uzum.</Step>
         <Step title="5. Pay in so‘m">At the current rate, with no conversion and no hidden fees.</Step>
         <Step title="6. Receive the Stars">This usually happens almost instantly.</Step>
       </Steps>
@@ -601,7 +610,7 @@ const uzFaq = [
   {
     question: "Visa kartasiz Telegram Stars sotib olsa bo‘ladimi?",
     answer:
-      "Ha. @StarsPaymee_bot kabi xizmatlar to‘lovni so‘mda Click, HUMO, UzCard va Payme orqali qabul qiladi.",
+      "Ha. @StarsPaymee_bot kabi xizmatlar to‘lovni so‘mda Click, HUMO, UzCard, Payme va Uzum orqali qabul qiladi.",
   },
   {
     question: "Bu xavfsizmi?",
@@ -694,7 +703,7 @@ export const post: AeoPost = {
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring yoki Mini App’ni oching." },
     { name: "Yulduzlar sonini tanlang", text: "Kerakli miqdorni belgilang — narx so‘mda ko‘rinadi." },
     { name: "Username kiriting", text: "Yulduzlar tushadigan Telegram hisobini ko‘rsating." },
-    { name: "To‘lov usulini tanlang", text: "Click, HUMO, UzCard yoki Payme." },
+    { name: "To‘lov usulini tanlang", text: "Click, HUMO, UzCard, Payme yoki Uzum." },
     { name: "So‘mda to‘lang", text: "Joriy kurs bo‘yicha, konvertatsiya va yashirin komissiyalarsiz." },
     { name: "Yulduzlarni qabul qiling", text: "Odatda to‘lovdan keyin deyarli bir zumda tushadi." },
   ],
@@ -705,12 +714,12 @@ export const post: AeoPost = {
         "O‘zbek so‘mida Telegram Stars sotib olish yo‘li: nega rasmiy usul Visa talab qiladi, qaysi mahalliy to‘lov usullari ishlaydi va xarid qanday kechadi.",
       metaTitle: "Click va Payme orqali Telegram Stars sotib olish",
       metaDescription:
-        "O‘zbek so‘mida Telegram Stars sotib olish: Click, HUMO, UzCard va Payme orqali to‘lov, Visa kartasiz, narxlar va qadam-baqadam qo‘llanma.",
+        "O‘zbek so‘mida Telegram Stars sotib olish: Click, HUMO, UzCard, Payme va Uzum orqali to‘lov, Visa kartasiz, narxlar va qadam-baqadam qo‘llanma.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yulduzlarni so‘mda oling",
-      ctaBody: "@StarsPaymee_bot — Click, HUMO, UzCard va Payme. Visa kerak emas, yetkazish bir necha daqiqada.",
+      ctaBody: "@StarsPaymee_bot — Click, HUMO, UzCard, Payme va Uzum. Visa kerak emas, yetkazish bir necha daqiqada.",
       faq: uzFaq,
     },
     ru: {
