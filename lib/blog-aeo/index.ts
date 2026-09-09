@@ -172,6 +172,10 @@ import { post as p169 } from "./posts/169-telegram-premium-tugasa-nima-boladi";
 import { post as p170 } from "./posts/170-telegramga-kirishda-premium-sms-tolov";
 import { post as p171 } from "./posts/171-telegram-gift-havolasini-tekshirish";
 import { post as p172 } from "./posts/172-telegram-gift-sotilmayapti";
+// Yangi xizmatlar: NFT ijara, qat'iy kursda Steam, taymerli sovg'a
+import { post as p173 } from "./posts/173-telegram-nft-sovga-ijarasi";
+import { post as p174 } from "./posts/174-steam-1-dollardan-toldirish";
+import { post as p175 } from "./posts/175-taymer-bilan-sovga-yuborish";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -194,7 +198,7 @@ export const aeoPosts: AeoPost[] = [
   p151, p152, p153, p154, p155, p156, p157, p158, p159, p160,
   p161, p162, p163, p164,
   p165, p166, p167, p168, p169,
-  p170, p171, p172,
+  p170, p171, p172, p173, p174, p175,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

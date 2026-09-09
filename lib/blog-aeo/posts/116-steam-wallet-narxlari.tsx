@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { InlineCta, Sources, KeyFacts, Steps, Step, InfoGrid, InfoCard } from "@/components/blog/aeo-blocks";
+import { STEAM_MIN_USD, STEAM_RATE_UZS_PER_USD } from "@/lib/products";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "steam-wallet-narxlari";
@@ -8,9 +9,9 @@ const SLUG = "steam-wallet-narxlari";
 function UzAnswer() {
   return (
     <p>
-      Steam Wallet narxiga yagona javob yo‘q: u hisob valyutasi, to‘ldiriladigan summa, joriy valyuta kursi, to‘lov
-      usuli va xizmat komissiyasiga bog‘liq. Shuning uchun yakuniy summa har bir buyurtma uchun farq qilishi mumkin —
-      to‘lovdan oldin botda ko‘rsatilgan aniq narxni tekshiring.
+      To‘ldirish summasi <b>qat’iy kurs</b> bo‘yicha hisoblanadi: 1 dollar = {STEAM_RATE_UZS_PER_USD.toLocaleString("en-US").replace(/,/g, " ")} so‘m,
+      eng kami — {STEAM_MIN_USD} dollar. Ya’ni so‘mdagi summani oldindan o‘zingiz hisoblab olasiz. Steam’dagi
+      o‘yin narxlari esa alohida masala — ular chegirma, mintaqa va hisob valyutasiga bog‘liq.
     </p>
   );
 }
@@ -89,9 +90,9 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      На вопрос о цене Steam Wallet нет единого ответа: она зависит от валюты аккаунта, суммы пополнения, текущего
-      курса, способа оплаты и комиссии сервиса. Поэтому итоговая сумма может отличаться для каждого заказа — перед
-      оплатой проверяйте точную цену, показанную в боте.
+      Сумма пополнения считается по <b>фиксированному курсу</b>: 1 доллар = {STEAM_RATE_UZS_PER_USD.toLocaleString("ru-RU").replace(/ /g, " ")} сум,
+      минимум — {STEAM_MIN_USD} доллар. То есть сумму в сумах можно посчитать заранее. А цены на сами игры в
+      Steam — отдельный вопрос: они зависят от скидок, региона и валюты аккаунта.
     </p>
   );
 }
@@ -170,9 +171,9 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      There's no single answer to what Steam Wallet costs: it depends on the account currency, the top‑up amount, the
-      current exchange rate, the payment method and any service fee. So the final total can differ per order — check
-      the exact price shown in the bot before paying.
+      The top-up amount is worked out at a <b>fixed rate</b>: $1 = {STEAM_RATE_UZS_PER_USD.toLocaleString("en-US").replace(/,/g, " ")} UZS,
+      with a minimum of ${STEAM_MIN_USD}. So the so‘m figure can be calculated in advance. Game prices inside Steam
+      are a separate matter — they depend on discounts, region and the account currency.
     </p>
   );
 }
@@ -248,7 +249,7 @@ function EnBody() {
 }
 
 const uzFaq = [
-  { question: "Steam Wallet narxlari qanday hisoblanadi?", answer: "Hisob valyutasi, summa, valyuta kursi, to‘lov usuli va xizmat komissiyasiga qarab. Yagona qat’iy narx yo‘q." },
+  { question: "Steam Wallet narxlari qanday hisoblanadi?", answer: "To‘ldirish qat’iy kurs bo‘yicha: 1 dollar = 13 500 so‘m, eng kami 1 dollar. Steam’dagi o‘yin narxlari esa chegirma, mintaqa va hisob valyutasiga bog‘liq." },
   { question: "Steam Wallet narxlari har kuni o‘zgaradimi?", answer: "Narxlar xizmat shartlari va valyuta kursiga qarab yangilanishi mumkin." },
   { question: "Minimal to‘ldirish summasi qancha?", answer: "Bu xizmatning amaldagi shartlariga bog‘liq. Eng dolzarb ma’lumotni bot orqali tekshirishingiz mumkin." },
   { question: "To‘lovdan oldin yakuniy narxni ko‘rish mumkinmi?", answer: "Ha, odatda buyurtmani tasdiqlashdan oldin yakuniy summa ko‘rsatiladi." },
@@ -271,7 +272,7 @@ const uzFaq = [
 ];
 
 const ruFaq = [
-  { question: "Как рассчитываются цены Steam Wallet?", answer: "По валюте аккаунта, сумме, курсу, способу оплаты и комиссии сервиса. Единой фиксированной цены нет." },
+  { question: "Как рассчитываются цены Steam Wallet?", answer: "Пополнение считается по фиксированному курсу: 1 доллар = 13 500 сум, минимум 1 доллар. А цены на игры в Steam зависят от скидок, региона и валюты аккаунта." },
   { question: "Меняются ли цены Steam Wallet каждый день?", answer: "Цены могут обновляться в зависимости от условий сервиса и валютного курса." },
   { question: "Какая минимальная сумма пополнения?", answer: "Зависит от действующих условий сервиса. Актуальную информацию можно проверить в боте." },
   { question: "Можно ли увидеть итоговую цену до оплаты?", answer: "Да, обычно итоговая сумма показывается перед подтверждением заказа." },

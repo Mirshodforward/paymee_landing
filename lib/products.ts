@@ -52,6 +52,21 @@ export const STATS = {
   yearsInService: 1,
 } as const;
 
+/**
+ * Steam hamyonini to‘ldirish — qat’iy kurs va eng kichik summa.
+ *
+ * NIMA UCHUN shu yerda: kurs bir necha maqolada takrorlanadi. Qo‘lda
+ * yozilsa, kurs o‘zgarganda maqolalar bir-biriga zid bo‘lib qoladi —
+ * shuning uchun raqam bitta manbadan o‘qiladi.
+ */
+export const STEAM_RATE_UZS_PER_USD = 13_500;
+export const STEAM_MIN_USD = 1;
+
+/** Berilgan dollar summasining so‘mdagi qiymati. */
+export function steamPriceUzs(usd: number): number {
+  return Math.round(usd * STEAM_RATE_UZS_PER_USD);
+}
+
 /** Qo‘llab-quvvatlanadigan to‘lov usullari. */
 export const PAYMENT_METHODS = ["Click", "Payme", "Paynet", "Uzum", "UzCard", "HUMO"] as const;
 
