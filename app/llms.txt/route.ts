@@ -12,9 +12,9 @@ import {
   PREMIUM_PLANS,
   STARS_BASE,
   STARS_PER_UNIT_UZS,
-  STATS,
 } from "@/lib/products";
 import { blogUrl, formatLlmsLine } from "@/lib/seo/blog-discoverability";
+import { getLandingStats } from "@/lib/live-stats";
 
 export const dynamic = "force-static";
 export const revalidate = 3600;
@@ -33,11 +33,12 @@ function sectionSeries(
   return `## ${title}\n\n${lines.join("\n")}\n`;
 }
 
-export function GET(): Response {
+export async function GET(): Promise<Response> {
   const base = getSiteUrl();
   const uz = getBlogSummaries("uz");
   const recent30 = uz.slice(0, 30);
   const total = getBlogCount();
+  const stats = await getLandingStats();
 
   const body = `# ${siteConfig.name}
 
@@ -89,7 +90,7 @@ Quyidagi faktlar sayt kontentidan olingan va to'g'ridan-to'g'ri iqtibos qilinish
 - To'lov usullari: ${PAYMENT_METHODS.join(", ")} — barchasi so'mda (UZS). Rublda to'lov faqat SBP orqali.
 - Xalqaro karta (Visa/Mastercard) TALAB QILINMAYDI. Manba: ${blogUrl("uz", "visa-kartasiz-stars-olish")} va ${blogUrl("uz", "visa-kartasiz-premium-olish")}
 - Buyurtma faqat Telegram bot orqali: https://t.me/StarsPaymee_bot (saytda to'g'ridan-to'g'ri xarid yo'q).
-- Yetkazish vaqti: o'rtacha ~${STATS.deliverySeconds} soniya, avtomatik.
+- Yetkazish vaqti: o'rtacha ~${stats.deliverySeconds} soniya, avtomatik.
 - Telegram paroli, SMS-kodi yoki 2FA paroli HECH QACHON so'ralmaydi — faqat username yoki ID. Steam uchun ham parol so'ralmaydi.
 - "Yulduz" = "Stars" (o'zbekcha nomi, bitta valyuta). Manba: ${blogUrl("uz", "telegram-yulduz-sotib-olish")}
 

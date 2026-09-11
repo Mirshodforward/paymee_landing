@@ -21,21 +21,27 @@ import {
 } from "@/components/v2/icons";
 import { getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import { getFeaturedSummaries } from "@/lib/blog/all";
+import { formatStatNumber, getLandingStats } from "@/lib/live-stats";
 import { GAMES } from "@/lib/games";
 import { botDeepLink } from "@/lib/telegram-deeplink";
 import {
-  PAYMENT_METHODS,
   PREMIUM_LOGIN_PLANS,
   PREMIUM_PLANS,
   STARS_PER_UNIT_UZS,
   STARS_PACKS,
-  STATS,
   formatUzs,
 } from "@/lib/products";
 
 type FaqItem = { question: string; answer: string };
 
 type PageProps = { params: Promise<{ locale: string }> };
+
+/**
+ * Statistika raqamlari bot backend'idan kelganligi uchun sahifa ISR bilan
+ * qayta generatsiya qilinadi: 15 daqiqada bir marta yangi raqam olinadi,
+ * qolgan vaqtda statik HTML beriladi. Deploy qilish shart emas.
+ */
+export const revalidate = 900;
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
@@ -50,6 +56,8 @@ export default async function HomePage({ params }: PageProps) {
   const link = (placement: Parameters<typeof botDeepLink>[0]["placement"], product?: Parameters<typeof botDeepLink>[0]["product"]) =>
     botDeepLink({ page: "home", placement, product });
   const supportUrl = getTelegramSupportUrl();
+  // Haqiqiy raqamlar bot backend'idan; API yetib bormasa `STATS` zaxirasi.
+  const stats = await getLandingStats();
 
   const nf = new Intl.NumberFormat(locale === "ru" ? "ru-RU" : "en-US");
   const grp = (n: number) => nf.format(n).replace(/,/g, " ");
@@ -300,11 +308,17 @@ export default async function HomePage({ params }: PageProps) {
         {/* ===== Statistika ===== */}
         <section className="sec" style={{ paddingTop: 54, paddingBottom: 30 }}>
           <div className="wrap">
+            {/*
+              Raqamlar server tomonida yoziladi (ilgari «0» turardi va uni
+              faqat JS almashtirardi — qidiruv botlari nolni ko'rardi).
+              `data-target` saqlanadi, chunki v2-effects.tsx hisoblagichi
+              shundan foydalanadi va bir xil formatni chiqaradi.
+            */}
             <div className="stats-wrap rv">
               <div className="stat">
                 <div className="stat-num">
-                  <span className="cnt" data-target={STATS.yearsInService} data-suffix="">
-                    0
+                  <span className="cnt" data-target={stats.yearsInService} data-suffix="">
+                    {formatStatNumber(stats.yearsInService)}
                   </span>
                   <span className="u">{t("statYearsU")}</span>
                 </div>
@@ -312,8 +326,8 @@ export default async function HomePage({ params }: PageProps) {
               </div>
               <div className="stat">
                 <div className="stat-num">
-                  <span className="cnt" data-target={STATS.deliverySeconds}>
-                    0
+                  <span className="cnt" data-target={stats.deliverySeconds}>
+                    {formatStatNumber(stats.deliverySeconds)}
                   </span>
                   <span className="u">{t("statSecU")}</span>
                 </div>
@@ -321,8 +335,8 @@ export default async function HomePage({ params }: PageProps) {
               </div>
               <div className="stat">
                 <div className="stat-num">
-                  <span className="cnt" data-target={STATS.activeUsers}>
-                    0
+                  <span className="cnt" data-target={stats.activeUsers}>
+                    {formatStatNumber(stats.activeUsers)}
                   </span>
                   <span className="u">{t("statUsersU")}</span>
                 </div>
@@ -330,8 +344,8 @@ export default async function HomePage({ params }: PageProps) {
               </div>
               <div className="stat">
                 <div className="stat-num">
-                  <span className="cnt" data-target={STATS.orders}>
-                    0
+                  <span className="cnt" data-target={stats.orders}>
+                    {formatStatNumber(stats.orders)}
                   </span>
                   <span className="u">{t("statOrdersU")}</span>
                 </div>
