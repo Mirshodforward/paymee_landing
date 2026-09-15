@@ -176,6 +176,8 @@ import { post as p172 } from "./posts/172-telegram-gift-sotilmayapti";
 import { post as p173 } from "./posts/173-telegram-nft-sovga-ijarasi";
 import { post as p174 } from "./posts/174-steam-1-dollardan-toldirish";
 import { post as p175 } from "./posts/175-taymer-bilan-sovga-yuborish";
+// Mahsulot o'zgarishi: kolleksion giftlar bot orqali yetkazilmaydi
+import { post as p176 } from "./posts/176-kolleksion-gift-bot-orqali-olinmaydi";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -198,7 +200,7 @@ export const aeoPosts: AeoPost[] = [
   p151, p152, p153, p154, p155, p156, p157, p158, p159, p160,
   p161, p162, p163, p164,
   p165, p166, p167, p168, p169,
-  p170, p171, p172, p173, p174, p175,
+  p170, p171, p172, p173, p174, p175, p176,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

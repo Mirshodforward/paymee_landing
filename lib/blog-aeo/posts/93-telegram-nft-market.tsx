@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { NftGiftMarketBoard } from "@/components/blog/nft-gift-market-board";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
-import { Toc } from "@/components/blog/aeo-blocks";
+import { Notice, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-nft-market";
@@ -18,6 +18,15 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
+      <Notice label="Yangilandi — 2026-yil sentabr">
+        <p>
+          Sotuvdan tugagan <b>kolleksion (NFT) sovg‘alar</b> hozir bot orqali yetkazilmaydi — oddiy sovg‘alar,
+          Stars va Premium ishlashda davom etmoqda. Nima o‘zgargani va kolleksion sovg‘a olishning ishlaydigan
+          yo‘li —{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">alohida maqolada</Link>.
+        </p>
+      </Notice>
+
       <Toc label="Mundarija" items={[{ href: "#nima", label: "Market" }, { href: "#narx", label: "Narx" }]} />
       <h2 id="nima">NFT Market nima?</h2>
       <p>
@@ -41,6 +50,14 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
+      <Notice label="Обновлено — сентябрь 2026">
+        <p>
+          Распроданные <b>коллекционные (NFT) подарки</b> сейчас через бота не выдаются — обычные подарки,
+          Stars и Premium продолжают работать. Что изменилось и как всё же получить коллекционный подарок —{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">в отдельной статье</Link>.
+        </p>
+      </Notice>
+
       <NftGiftMarketBoard locale="ru" />
       <NftGiftSeriesNav locale="ru" />
     </>

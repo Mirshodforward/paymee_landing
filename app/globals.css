@@ -2472,6 +2472,35 @@ html:not(.v2-js) .v2 .rv {
   color: var(--text);
 }
 
+/* Muhim o'zgarish ogohlantirishi — maqola boshidagi banner */
+.v2 .notice {
+  margin: 1.6em 0;
+  border: 1px solid rgba(251, 146, 60, 0.35);
+  border-left: 3px solid #fb923c;
+  border-radius: 16px;
+  background: rgba(251, 146, 60, 0.07);
+  padding: 16px 20px;
+}
+.v2 .notice .nt-h {
+  font-family: var(--mono2);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fb923c;
+  margin-bottom: 8px;
+}
+.v2 .notice .nt-body {
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.v2 .notice .nt-body p {
+  margin: 0 0 8px;
+}
+.v2 .notice .nt-body p:last-child {
+  margin-bottom: 0;
+}
+
 /* AEO FAQ — native <details>, JS-siz, toliq indekslanadigan */
 .v2 .aeo-faq {
   display: flex;

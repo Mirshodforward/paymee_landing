@@ -120,6 +120,30 @@ export function KeyFacts({ label, children }: { label: string; children: ReactNo
   );
 }
 
+/**
+ * Muhim o'zgarish haqida ogohlantirish — maqola boshida turadi.
+ *
+ * NIMA UCHUN: mahsulot o'zgarganda eski maqolalar mijozga hali ham amal
+ * qiladigandek ko'rinadi. Butun maqolani qayta yozguncha, o'quvchi birinchi
+ * ekrandayoq haqiqiy holatni ko'rishi kerak.
+ */
+export function Notice({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="notice" role="note">
+      <div className="nt-h">
+        <span aria-hidden>⚠️</span> {label}
+      </div>
+      <div className="nt-body">{children}</div>
+    </div>
+  );
+}
+
 export type SourceItem = { href: string; label: string; note?: string };
 
 /** E-E-A-T uchun rasmiy manbalar ro‘yxati. */

@@ -5,6 +5,7 @@ import {
   InfoGrid,
   InlineCta,
   KeyFacts,
+  Notice,
   Sources,
   Toc,
 } from "@/components/blog/aeo-blocks";
@@ -73,6 +74,15 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
+      <Notice label="Yangilandi — 2026-yil sentabr">
+        <p>
+          Sotuvdan tugagan <b>kolleksion (NFT) sovg‘alar</b> hozir bot orqali yetkazilmaydi — oddiy sovg‘alar,
+          Stars va Premium ishlashda davom etmoqda. Nima o‘zgargani va kolleksion sovg‘a olishning ishlaydigan
+          yo‘li —{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">alohida maqolada</Link>.
+        </p>
+      </Notice>
+
       <Toc
         label="Mundarija"
         items={[
@@ -299,6 +309,14 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
+      <Notice label="Обновлено — сентябрь 2026">
+        <p>
+          Распроданные <b>коллекционные (NFT) подарки</b> сейчас через бота не выдаются — обычные подарки,
+          Stars и Premium продолжают работать. Что изменилось и как всё же получить коллекционный подарок —{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">в отдельной статье</Link>.
+        </p>
+      </Notice>
+
       <Toc
         label="Содержание"
         items={[
@@ -530,6 +548,14 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
+      <Notice label="Updated — September 2026">
+        <p>
+          Sold-out <b>collectible (NFT) gifts</b> are not delivered through the bot at the moment — regular
+          gifts, Stars and Premium keep working. What changed, and the route that does still work, is in{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">a separate article</Link>.
+        </p>
+      </Notice>
+
       <Toc
         label="Contents"
         items={[

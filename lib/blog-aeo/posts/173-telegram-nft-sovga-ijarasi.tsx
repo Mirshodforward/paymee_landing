@@ -5,6 +5,7 @@ import {
   InfoGrid,
   InlineCta,
   KeyFacts,
+  Notice,
   Sources,
   Step,
   Steps,
@@ -71,6 +72,14 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
+      <Notice label="Yangilandi — 2026-yil sentabr">
+        <p>
+          Kolleksion (NFT) sovg‘alar bo‘yicha xizmat o‘zgardi: ular hozir bot orqali yetkazilmaydi. Ijara
+          bo‘limining joriy holatini botda tekshiring. Batafsil —{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgargani haqida</Link>.
+        </p>
+      </Notice>
+
       <Toc
         label="Mundarija"
         items={[
@@ -212,6 +221,14 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
+      <Notice label="Обновлено — сентябрь 2026">
+        <p>
+          По коллекционным (NFT) подаркам сервис изменился: сейчас они через бота не выдаются. Актуальное
+          состояние раздела аренды уточняйте в боте. Подробнее —{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">о том, что изменилось</Link>.
+        </p>
+      </Notice>
+
       <Toc
         label="Содержание"
         items={[
@@ -352,6 +369,14 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
+      <Notice label="Updated — September 2026">
+        <p>
+          The service around collectible (NFT) gifts has changed: they are not delivered through the bot at the
+          moment. Check the rental section's current state in the bot. More detail in{" "}
+          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">what changed</Link>.
+        </p>
+      </Notice>
+
       <Toc
         label="Contents"
         items={[
