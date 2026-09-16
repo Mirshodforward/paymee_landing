@@ -9,7 +9,7 @@ const SLUG = "telegram-premium-narxi";
 function UzAnswer() {
   return (
     <p>
-      Username orqali: <b>3 oy — 172 000 so‘m</b>, <b>6 oy — 232 000 so‘m</b>, <b>12 oy — 422 000 so‘m</b>. Akkauntga
+      Username orqali: <b>3 oy — 160 000 so‘m</b>, <b>6 oy — 215 000 so‘m</b>, <b>12 oy — 388 000 so‘m</b>. Akkauntga
       kirib berish oqimida: <b>1 oy — 50 000 so‘m</b>, <b>12 oy — 300 000 so‘m</b>. Muddat uzaygani sari oyiga
       tushadigan xarajat kamayadi.
     </p>
@@ -75,7 +75,7 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      По username: <b>3 месяца — 172 000 сум</b>, <b>6 месяцев — 232 000 сум</b>, <b>12 месяцев — 422 000 сум</b>. В
+      По username: <b>3 месяца — 160 000 сум</b>, <b>6 месяцев — 215 000 сум</b>, <b>12 месяцев — 388 000 сум</b>. В
       сценарии со входом в аккаунт: <b>1 месяц — 50 000 сум</b>, <b>12 месяцев — 300 000 сум</b>. Чем длиннее срок,
       тем ниже стоимость в пересчёте на месяц.
     </p>
@@ -140,7 +140,7 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      By username: <b>3 months — 172,000 UZS</b>, <b>6 months — 232,000 UZS</b>, <b>12 months — 422,000 UZS</b>. In
+      By username: <b>3 months — 160,000 UZS</b>, <b>6 months — 215,000 UZS</b>, <b>12 months — 388,000 UZS</b>. In
       the account-login flow: <b>1 month — 50,000 UZS</b>, <b>12 months — 300,000 UZS</b>. The longer the term, the
       lower the effective monthly cost.
     </p>
@@ -202,7 +202,7 @@ function EnBody() {
 }
 
 const uzFaq = [
-  { question: "Telegram Premium narxi qancha?", answer: "Username orqali 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m; login oqimida 1 oy 50 000, 12 oy 300 000 so‘m." },
+  { question: "Telegram Premium narxi qancha?", answer: "1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m — hammasi username orqali." },
   { question: "Qaysi muddat tejamli?", answer: "12 oylik — oyiga tushadigan xarajat eng past." },
   { question: "1 oylik variant qayerda?", answer: "Akkauntga kirib berish (login) oqimida." },
   { question: "Narx nega platformaga qarab farq qiladi?", answer: "App Store va Google Play o‘z komissiyasini qo‘shadi." },
@@ -213,9 +213,9 @@ const uzFaq = [
 ];
 
 const ruFaq = [
-  { question: "Сколько стоит Telegram Premium?", answer: "По username: 3 мес. 172 000, 6 мес. 232 000, 12 мес. 422 000 сум; со входом: 1 мес. 50 000, 12 мес. 300 000 сум." },
+  { question: "Сколько стоит Telegram Premium?", answer: "По username: 3 мес. 160 000, 6 мес. 215 000, 12 мес. 388 000 сум; со входом: 1 мес. 50 000, 12 мес. 300 000 сум." },
   { question: "Какой срок выгоднее?", answer: "12 месяцев — самая низкая стоимость в пересчёте на месяц." },
-  { question: "Где вариант на 1 месяц?", answer: "В сценарии со входом в аккаунт (login)." },
+  { question: "Есть ли вариант на 1 месяц?", answer: "Да, 45 000 сум — с сентября 2026 года тоже по username." },
   { question: "Почему цена зависит от платформы?", answer: "App Store и Google Play добавляют свою комиссию." },
   { question: "Меняется ли цена?", answer: "Может обновляться по рыночным условиям — проверяйте в боте." },
   { question: "Меняется ли подтверждённая сумма?", answer: "Нет, после подтверждения заказа сумма фиксирована." },
@@ -224,7 +224,7 @@ const ruFaq = [
 ];
 
 const enFaq = [
-  { question: "How much does Telegram Premium cost?", answer: "By username: 3 mo 172,000, 6 mo 232,000, 12 mo 422,000 UZS; with login: 1 mo 50,000, 12 mo 300,000 UZS." },
+  { question: "How much does Telegram Premium cost?", answer: "By username: 3 mo 160,000, 6 mo 215,000, 12 mo 388,000 UZS; with login: 1 mo 50,000, 12 mo 300,000 UZS." },
   { question: "Which term is best value?", answer: "Twelve months — the lowest effective monthly cost." },
   { question: "Where is the one-month option?", answer: "In the account-login flow." },
   { question: "Why does the price depend on the platform?", answer: "App Store and Google Play add their own fee." },
@@ -255,7 +255,7 @@ export const post: AeoPost = {
         "Telegram Premium tariflari: 1, 3, 6 va 12 oylik narxlar, narxga ta’sir qiluvchi omillar va uzoq muddatli obuna nega tejamli.",
       metaTitle: "Telegram Premium narxi — oylik va yillik tariflar",
       metaDescription:
-        "Telegram Premium narxi: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m; 1 oy 50 000 so‘m. Narxga ta’sir qiluvchi omillar.",
+        "Telegram Premium narxi: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m; 1 oy 50 000 so‘m. Narxga ta’sir qiluvchi omillar.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -269,7 +269,7 @@ export const post: AeoPost = {
         "Тарифы Telegram Premium: цены на 1, 3, 6 и 12 месяцев, факторы, влияющие на цену, и почему длительная подписка выгоднее.",
       metaTitle: "Цена Telegram Premium — месячные и годовые тарифы",
       metaDescription:
-        "Цена Telegram Premium: 3 мес. 172 000, 6 мес. 232 000, 12 мес. 422 000 сум; 1 мес. 50 000 сум. Что влияет на цену.",
+        "Цена Telegram Premium: 3 мес. 160 000, 6 мес. 215 000, 12 мес. 388 000 сум; 1 мес. 50 000 сум. Что влияет на цену.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -283,7 +283,7 @@ export const post: AeoPost = {
         "Telegram Premium plans: prices for 1, 3, 6 and 12 months, the factors that affect them, and why a longer subscription is better value.",
       metaTitle: "Telegram Premium price — monthly and yearly plans",
       metaDescription:
-        "Telegram Premium price: 3 mo 172,000, 6 mo 232,000, 12 mo 422,000 UZS; 1 mo 50,000 UZS. What affects the price.",
+        "Telegram Premium price: 3 mo 160,000, 6 mo 215,000, 12 mo 388,000 UZS; 1 mo 50,000 UZS. What affects the price.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

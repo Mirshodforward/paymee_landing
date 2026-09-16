@@ -60,9 +60,9 @@ function PriceTable({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      O‘zbekistonda Telegram Premium narxi (StarsPaymee’da, so‘mda): <b>3 oy — 172 000</b>, <b>6 oy — 232 000</b>,{" "}
-      <b>12 oy — 422 000 so‘m</b> — username bilan, ~10 soniyada avtomatik. Login orqali rasmiy oqimda: 1 oy —
-      50 000, 1 yil — 300 000 so‘m. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan; xorijiy karta shart emas.
+      O‘zbekistonda Telegram Premium narxi (StarsPaymee’da, so‘mda): <b>1 oy — 45 000</b>, <b>3 oy — 160 000</b>,{" "}
+      <b>6 oy — 215 000</b>, <b>12 oy — 388 000 so‘m</b> — to‘rtalasi ham username bilan, ~10 soniyada
+      avtomatik. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan; xorijiy karta shart emas.
     </p>
   );
 }
@@ -87,13 +87,13 @@ function UzBody() {
       <h2 id="oyiga">Oyiga hisoblaganda qaysi biri arzon?</h2>
       <KeyFacts label="Oyiga tushadigan summa">
         <li>
-          <b>3 oy</b> — oyiga ~57 000 so‘m. Eng qisqa username tarifi, sinab ko‘rish uchun.
+          <b>1 oy</b> — oyiga 45 000 so‘m. Eng qulay kirish nuqtasi, sinab ko‘rish uchun.
         </li>
         <li>
-          <b>6 oy</b> — oyiga ~38 700 so‘m. Narx va muddat muvozanati.
+          <b>6 oy</b> — oyiga ~35 800 so‘m. Narx va muddat muvozanati.
         </li>
         <li>
-          <b>12 oy</b> — oyiga ~35 200 so‘m. Username oqimidagi eng tejamkor variant.
+          <b>12 oy</b> — oyiga ~32 300 so‘m. Username oqimidagi eng tejamkor variant.
         </li>
         <li>
           <b>1 yil (login)</b> — oyiga 25 000 so‘m, lekin rasmiy faollashtirish talab qilinadi.
@@ -116,7 +116,7 @@ function UzBody() {
       <h2 id="qaysi">Qaysi paketni tanlash kerak?</h2>
       <KeyFacts label="Tavsiya">
         <li>
-          <b>Sinab ko‘rmoqchi bo‘lsangiz</b> — 3 oylik (username) yoki 1 oylik (login).
+          <b>Sinab ko‘rmoqchi bo‘lsangiz</b> — 1 oylik yoki 3 oylik.
         </li>
         <li>
           <b>Doimiy foydalansangiz</b> — 12 oylik eng tejamkor.
@@ -147,9 +147,9 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      Цена Telegram Premium в Узбекистане (в StarsPaymee, в сумах): <b>3 мес — 172 000</b>, <b>6 мес — 232 000</b>,{" "}
-      <b>12 мес — 422 000 сум</b> — по username, активация ~10 секунд. В сценарии со входом: 1 мес — 50 000, 1 год —
-      300 000 сум. Оплата UzCard, HUMO, Click, Payme, Uzum или Paynet; иностранная карта не нужна.
+      Цена Telegram Premium в Узбекистане (в StarsPaymee, в сумах): <b>1 мес — 45 000</b>, <b>3 мес — 160 000</b>,{" "}
+      <b>6 мес — 215 000</b>, <b>12 мес — 388 000 сум</b> — все четыре по username, активация ~10 секунд.
+      Оплата UzCard, HUMO, Click, Payme, Uzum или Paynet; иностранная карта не нужна.
     </p>
   );
 }
@@ -174,13 +174,13 @@ function RuBody() {
       <h2 id="oyiga">Что выгоднее в пересчёте на месяц?</h2>
       <KeyFacts label="Стоимость месяца">
         <li>
-          <b>3 месяца</b> — около 57 000 сум в месяц. Самый короткий тариф по username, для пробы.
+          <b>1 месяц</b> — 45 000 сум в месяц. Самый доступный вход, для пробы.
         </li>
         <li>
-          <b>6 месяцев</b> — около 38 700 сум в месяц. Баланс цены и срока.
+          <b>6 месяцев</b> — около 35 800 сум в месяц. Баланс цены и срока.
         </li>
         <li>
-          <b>12 месяцев</b> — около 35 200 сум в месяц. Самый выгодный вариант по username.
+          <b>12 месяцев</b> — около 32 300 сум в месяц. Самый выгодный вариант по username.
         </li>
         <li>
           <b>1 год (через логин)</b> — 25 000 сум в месяц, но требуется официальная активация.
@@ -234,10 +234,10 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      Telegram Premium pricing in Uzbekistan (at StarsPaymee, in so‘m): <b>3 months — 172,000</b>,{" "}
-      <b>6 months — 232,000</b>, <b>12 months — 422,000 UZS</b> by username, activated automatically in about 10
-      seconds. In the sign-in flow: 1 month — 50,000 and 1 year — 300,000 UZS. Payment goes through UzCard, HUMO,
-      Click, Payme or Paynet; no foreign card is needed.
+      Telegram Premium pricing in Uzbekistan (at StarsPaymee, in so‘m): <b>1 month — 45,000</b>,{" "}
+      <b>3 months — 160,000</b>, <b>6 months — 215,000</b>, <b>12 months — 388,000 UZS</b> — all four by
+      username, activated automatically in about 10 seconds. Payment goes through UzCard, HUMO, Click, Payme,
+      Uzum or Paynet; no foreign card is needed.
     </p>
   );
 }
@@ -262,13 +262,13 @@ function EnBody() {
       <h2 id="oyiga">Which works out cheaper per month?</h2>
       <KeyFacts label="Cost per month">
         <li>
-          <b>3 months</b> — about 57,000 UZS a month. The shortest username plan, good for trying it out.
+          <b>1 month</b> — 45,000 UZS a month. The easiest entry point, good for trying it out.
         </li>
         <li>
-          <b>6 months</b> — about 38,700 UZS a month. The balance of price and term.
+          <b>6 months</b> — about 35,800 UZS a month. The balance of price and term.
         </li>
         <li>
-          <b>12 months</b> — about 35,200 UZS a month. The best value in the username flow.
+          <b>12 months</b> — about 32,300 UZS a month. The best value in the username flow.
         </li>
         <li>
           <b>1 year (sign-in)</b> — 25,000 UZS a month, but it requires the official activation.
@@ -321,12 +321,12 @@ const uzFaq = [
   {
     question: "Telegram Premium O‘zbekistonda qancha turadi?",
     answer:
-      "Username orqali: 3 oy — 172 000, 6 oy — 232 000, 12 oy — 422 000 so‘m. Login orqali: 1 oy — 50 000, 1 yil — 300 000 so‘m.",
+      "Username orqali: 3 oy — 160 000, 6 oy — 215 000, 12 oy — 388 000 so‘m. Barcha muddat username orqali, parolsiz.",
   },
-  { question: "Qaysi muddat oyiga eng arzon?", answer: "Username oqimida 12 oylik — oyiga ~35 200 so‘m." },
+  { question: "Qaysi muddat oyiga eng arzon?", answer: "Username oqimida 12 oylik — oyiga ~32 300 so‘m." },
   {
     question: "Nega 1 oylik username oqimida yo‘q?",
-    answer: "1 oylik tarif rasmiy faollashtirish talab qiladigan login oqimida beriladi; username oqimida eng qisqasi 3 oy.",
+    answer: "Endi bor. 2026-yil sentabridan 1 oylik ham username oqimida — 45 000 so‘m.",
   },
   {
     question: "Narxlar qachon oxirgi marta tekshirilgan?",
@@ -347,9 +347,9 @@ const ruFaq = [
   {
     question: "Сколько стоит Telegram Premium в Узбекистане?",
     answer:
-      "По username: 3 мес — 172 000, 6 мес — 232 000, 12 мес — 422 000 сум. Через логин: 1 мес — 50 000, 1 год — 300 000 сум.",
+      "По username: 3 мес — 160 000, 6 мес — 215 000, 12 мес — 388 000 сум. Все сроки — по username, без пароля.",
   },
-  { question: "Какой срок выгоднее в месяц?", answer: "В потоке по username — 12 месяцев, около 35 200 сум в месяц." },
+  { question: "Какой срок выгоднее в месяц?", answer: "В потоке по username — 12 месяцев, около 32 300 сум в месяц." },
   {
     question: "Почему месячного тарифа нет по username?",
     answer:
@@ -374,13 +374,13 @@ const enFaq = [
   {
     question: "How much does Telegram Premium cost in Uzbekistan?",
     answer:
-      "By username: 3 months — 172,000, 6 months — 232,000, 12 months — 422,000 UZS. Through sign-in: 1 month — 50,000, 1 year — 300,000 UZS.",
+      "By username: 3 months — 160,000, 6 months — 215,000, 12 months — 388,000 UZS. Every term goes by username, with no password.",
   },
-  { question: "Which term is cheapest per month?", answer: "In the username flow, 12 months — about 35,200 UZS a month." },
+  { question: "Which term is cheapest per month?", answer: "In the username flow, 12 months — about 32,300 UZS a month." },
   {
     question: "Why is there no monthly plan by username?",
     answer:
-      "The monthly plan runs through the sign-in flow, which needs an official activation; by username the minimum is 3 months.",
+      "It is available now. Since September 2026 the monthly plan runs by username too — 45,000 UZS.",
   },
   {
     question: "When were the prices last verified?",
@@ -415,10 +415,10 @@ export const post: AeoPost = {
     uz: {
       title: "Telegram Premium narxi O‘zbekistonda (2026)",
       excerpt:
-        "Barcha amaldagi tariflar bir joyda: 3, 6, 12 oy va login oqimidagi 1 oy hamda 1 yil, oyiga tushadigan hisob va oxirgi tekshirilgan sana.",
+        "Barcha amaldagi tariflar bir joyda: 1, 3, 6 va 12 oy — hammasi username orqali, oyiga tushadigan hisob va oxirgi tekshirilgan sana.",
       metaTitle: "Telegram Premium narxi O‘zbekistonda — 2026",
       metaDescription:
-        "Telegram Premium narxi O‘zbekistonda: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m; login oqimida 1 oy 50 000. Oyiga hisob va to‘lov usullari.",
+        "Telegram Premium narxi O‘zbekistonda: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. Oyiga hisob va to‘lov usullari.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -432,7 +432,7 @@ export const post: AeoPost = {
         "Все действующие тарифы в одном месте: 3, 6, 12 месяцев плюс 1 месяц и 1 год через логин, стоимость месяца и дата последней сверки.",
       metaTitle: "Цена Telegram Premium в Узбекистане — 2026",
       metaDescription:
-        "Цена Telegram Premium в Узбекистане: 3 мес 172 000, 6 мес 232 000, 12 мес 422 000 сум; через логин 1 мес 50 000. Стоимость месяца и способы оплаты.",
+        "Цена Telegram Premium в Узбекистане: 3 мес 160 000, 6 мес 215 000, 12 мес 388 000 сум; через логин 1 мес 50 000. Стоимость месяца и способы оплаты.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -446,7 +446,7 @@ export const post: AeoPost = {
         "Every current plan in one place: 3, 6 and 12 months plus the 1-month and 1-year sign-in options, the cost per month and the last verification date.",
       metaTitle: "Telegram Premium pricing in Uzbekistan — 2026",
       metaDescription:
-        "Telegram Premium prices in Uzbekistan: 3 months 172,000, 6 months 232,000, 12 months 422,000 UZS; 1 month 50,000 via sign-in. Monthly cost and payment methods.",
+        "Telegram Premium prices in Uzbekistan: 3 months 160,000, 6 months 215,000, 12 months 388,000 UZS; 1 month 50,000 via sign-in. Monthly cost and payment methods.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

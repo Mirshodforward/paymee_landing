@@ -43,15 +43,14 @@ function UzBody() {
 
       <KeyFacts label="Narx va tejamkorlik (StarsPaymee)">
         <li>
-          <b>3 oy</b> — 172 000 so‘m
+          <b>3 oy</b> — 160 000 so‘m
         </li>
         <li>
-          <b>6 oy</b> — 232 000 so‘m
+          <b>6 oy</b> — 215 000 so‘m
         </li>
         <li>
-          <b>12 oy</b> — 422 000 so‘m (oyiga eng arzon)
+          <b>12 oy</b> — 388 000 so‘m (oyiga eng arzon)
         </li>
-        <li>Login orqali: 1 oy — 50 000, 1 yil — 300 000 so‘m</li>
       </KeyFacts>
 
       <h2 id="qanday">Qanday sotib olish?</h2>
@@ -111,15 +110,14 @@ function RuBody() {
 
       <KeyFacts label="Цена и экономия (StarsPaymee)">
         <li>
-          <b>3 мес</b> — 172 000 сум
+          <b>3 мес</b> — 160 000 сум
         </li>
         <li>
-          <b>6 мес</b> — 232 000 сум
+          <b>6 мес</b> — 215 000 сум
         </li>
         <li>
-          <b>12 мес</b> — 422 000 сум (дешевле всего за месяц)
+          <b>12 мес</b> — 388 000 сум (дешевле всего за месяц)
         </li>
-        <li>Через логин: 1 мес — 50 000, 1 год — 300 000 сум</li>
       </KeyFacts>
 
       <h2 id="qanday">Как купить?</h2>
@@ -179,7 +177,7 @@ export const post: AeoPost = {
         },
         {
           question: "Qaysi muddat tejamkor?",
-          answer: "12 oylik paket oyiga hisoblaganda eng arzon. StarsPaymee’da 12 oy — 422 000 so‘m.",
+          answer: "12 oylik paket oyiga hisoblaganda eng arzon. StarsPaymee’da 12 oy — 388 000 so‘m.",
         },
         {
           question: "Premium’ni qanday olish oson?",
@@ -189,7 +187,7 @@ export const post: AeoPost = {
         {
           question: "Bepul sinov bormi?",
           answer:
-            "Telegram vaqti-vaqti bilan promo yoki sovg‘a beradi, lekin kafolatlangan doimiy bepul sinov yo‘q. Eng arzon kirish — 1 oylik login paket (50 000 so‘m).",
+            "Telegram vaqti-vaqti bilan promo yoki sovg‘a beradi, lekin kafolatlangan doimiy bepul sinov yo‘q. Eng arzon kirish — 1 oylik paket (45 000 so‘m).",
         },
       ],
     },
@@ -218,7 +216,7 @@ export const post: AeoPost = {
         },
         {
           question: "Какой срок выгоднее?",
-          answer: "Годовой пакет дешевле всего за месяц. В StarsPaymee 12 мес — 422 000 сум.",
+          answer: "Годовой пакет дешевле всего за месяц. В StarsPaymee 12 мес — 388 000 сум.",
         },
         {
           question: "Как проще всего купить Premium?",

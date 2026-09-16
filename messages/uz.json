@@ -150,7 +150,7 @@
       },
       {
         "title": "Eng arzon",
-        "body": "Yulduz 220 so‘mdan, Premium 3 oy 172 000 so‘mdan."
+        "body": "Yulduz 220 so‘mdan, Premium 3 oy 160 000 so‘mdan."
       },
       {
         "title": "Ishonchli",
@@ -203,7 +203,7 @@
       },
       {
         "question": "Narxlar qancha?",
-        "answer": "Telegram Stars donasi atigi 220 so‘mdan — 50 yulduz 11 000 so‘m. Telegram Premium: 3 oy 172 000 so‘m, 6 oy 232 000 so‘m, 12 oy 422 000 so‘m. Bu bozordagi eng arzon narxlardan biri."
+        "answer": "Telegram Stars donasi atigi 220 so‘mdan — 50 yulduz 11 000 so‘m. Telegram Premium: 3 oy 160 000 so‘m, 6 oy 215 000 so‘m, 12 oy 388 000 so‘m. Bu bozordagi eng arzon narxlardan biri."
       },
       {
         "question": "Telegram sovg‘alarini qanday yuboraman?",
@@ -269,14 +269,14 @@
     },
     "premium": {
       "metaTitle": "Telegram Premium sotib olish — 3/6/12 oy, arzon",
-      "metaDescription": "Telegram Premium: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
+      "metaDescription": "Telegram Premium: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
       "h1": "Telegram Premium sotib olish",
-      "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 172 000, 6 oy 232 000, 12 oy 422 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 10 soniyada avtomatik faollashadi. Alohida «akkauntga kirib berish» xizmati ham mavjud (1 oy 50 000, 1 yil 300 000 so‘m).",
+      "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 10 soniyada avtomatik faollashadi. 1 oylik tarif — 45 000 so‘m, u ham username orqali.",
       "bullets": [
-        "3 oy 172 000 · 6 oy 232 000 · 12 oy 422 000 so‘m",
+        "1 oy 45 000 · 3 oy 160 000 · 6 oy 215 000 · 12 oy 388 000 so‘m",
         "Username bilan 10 soniyada avtomatik faollashish",
         "Akkauntga kirish, parol yoki SMS-kod talab qilinmaydi",
-        "Alohida login bilan faollashtirish: 1 oy 50 000, 1 yil 300 000 so‘m"
+        "Naqd to‘lash ham mumkin — Paynet orqali, kartasiz"
       ],
       "footnote": "Username bilan oqimda faqat @username kifoya. Login bilan oqim alohida xizmat sifatida amalga oshiriladi."
     },

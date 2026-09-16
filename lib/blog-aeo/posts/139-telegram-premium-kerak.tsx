@@ -240,7 +240,7 @@ function EnBody() {
       </p>
       <p>
         There is no need to wait for the term to run out. <b>In the username flow</b>, ordering on top of an active
-        Premium adds the new term to the current one. For the <b>monthly plan in the sign-in flow</b> an operator
+        Premium adds the new term to the current one. For the <b>sign-in flow used in non-standard cases</b> an operator
         performs the activation, so it is worth confirming the dates with support beforehand.
       </p>
 

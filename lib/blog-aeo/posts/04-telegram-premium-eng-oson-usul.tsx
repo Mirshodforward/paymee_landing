@@ -78,7 +78,7 @@ function UzAnswer() {
     <p>
       Telegram Premium’ni eng oson olish — <b>@StarsPaymee_bot</b> orqali <b>username oqimida</b>: akkauntga kirish,
       parol yoki SMS-kod kerak emas, faqat @username yetarli va Premium o‘rtacha 10 soniyada faollashadi. To‘lov
-      so‘mda — UzCard, HUMO, Click, Payme, Uzum yoki Paynet. Muddatlar: 3, 6 va 12 oy; 1 oylik esa alohida login oqimida.
+      so‘mda — UzCard, HUMO, Click, Payme, Uzum yoki Paynet. Muddatlar: 1, 3, 6 va 12 oy — hammasi username orqali.
     </p>
   );
 }
@@ -115,7 +115,7 @@ function UzBody() {
       <FlowCompare locale="uz" />
       <p>
         Aksar foydalanuvchi uchun <b>username orqali</b> oqim eng qulay va xavfsiz: hech qanday maxfiy ma’lumot
-        bermaysiz. Muhim nuqta — <b>1 oylik tarif faqat login oqimida</b> mavjud; username oqimida eng qisqa muddat
+        bermaysiz. 2026-yil sentabridan boshlab <b>1 oylik tarif ham shu oqimda</b>; eng qisqa muddat
         3 oy. Batafsil:{" "}
         <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">1 oylik Premium haqida alohida maqola</Link>.
       </p>
@@ -291,7 +291,7 @@ function RuBody() {
       <FlowCompare locale="ru" />
       <p>
         Для большинства поток <b>по username</b> удобнее и безопаснее: вы не передаёте секретные данные. Важный
-        момент — <b>тариф на 1 месяц есть только в потоке со входом</b>; в потоке по username минимальный срок 3
+        момент — <b>с сентября 2026 года месячный тариф тоже здесь</b>; минимальный срок 1
         месяца. Подробнее:{" "}
         <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">отдельная статья о месячном Premium</Link>.
       </p>
@@ -463,7 +463,7 @@ function EnBody() {
       <FlowCompare locale="en" />
       <p>
         For most people the <b>username flow</b> is both easier and safer: no secret data changes hands. One
-        important detail — <b>the 1-month plan exists only in the sign-in flow</b>; in the username flow the
+        important detail — <b>since September 2026 the monthly plan is here too</b>; in the username flow the
         shortest term is 3 months. More on that:{" "}
         <Link href="/blog/ozbekistonda-oylik-premium-uza-humo">the dedicated article on monthly Premium</Link>.
       </p>
@@ -601,12 +601,12 @@ const uzFaq = [
   {
     question: "Narxlar qanday?",
     answer:
-      "Username orqali: 3 oy — 172 000, 6 oy — 232 000, 12 oy — 422 000 so‘m. Login orqali: 1 oy — 50 000, 1 yil — 300 000 so‘m.",
+      "Username orqali: 3 oy — 160 000, 6 oy — 215 000, 12 oy — 388 000 so‘m. Barcha muddat username orqali, parolsiz.",
   },
   {
     question: "Nega 1 oylik tarif username oqimida yo‘q?",
     answer:
-      "1 oylik faqat login oqimida beriladi — bu rasmiy faollashtirish talab qiladigan alohida xizmat. Username oqimida eng qisqa muddat 3 oy.",
+      "Endi bor. 2026-yil sentabridan 1 oylik ham username oqimida — 45 000 so‘m, parolsiz.",
   },
   {
     question: "Qaysi to‘lov usullari qabul qilinadi?",
@@ -641,7 +641,7 @@ const ruFaq = [
   {
     question: "Какие цены?",
     answer:
-      "По username: 3 мес — 172 000, 6 мес — 232 000, 12 мес — 422 000 сум. Через логин: 1 мес — 50 000, 1 год — 300 000 сум.",
+      "По username: 3 мес — 160 000, 6 мес — 215 000, 12 мес — 388 000 сум. Все сроки — по username, без пароля.",
   },
   {
     question: "Почему тарифа на 1 месяц нет в потоке по username?",
@@ -681,12 +681,12 @@ const enFaq = [
   {
     question: "What are the prices?",
     answer:
-      "By username: 3 months — 172,000, 6 months — 232,000, 12 months — 422,000 UZS. Through sign-in: 1 month — 50,000, 1 year — 300,000 UZS.",
+      "By username: 3 months — 160,000, 6 months — 215,000, 12 months — 388,000 UZS. Every term goes by username, with no password.",
   },
   {
     question: "Why is the 1-month plan missing from the username flow?",
     answer:
-      "The monthly plan comes only through the sign-in flow — a separate service requiring official activation. The shortest username term is 3 months.",
+      "It is there now. Since September 2026 the monthly plan runs by username too — 45,000 UZS, no password.",
   },
   {
     question: "Which payment methods are accepted?",

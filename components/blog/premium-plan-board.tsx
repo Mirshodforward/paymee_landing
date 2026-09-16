@@ -17,7 +17,7 @@ const COPY: Record<Loc, {
     cols: ["Muddat", "Narx"],
     month: (n) => `${n} oy`,
     noteUsername: "Faqat username yetarli, parol so‘ralmaydi. Joriy narx @StarsPaymee_bot da.",
-    noteLogin: "Rasmiy faollashtirish uchun alohida xizmat — 1 oylik variant shu oqimda mavjud.",
+    noteLogin: "Nostandart holatlar uchun alohida xizmat. Shartlar va narx @StarsPaymeeSupport orqali aniqlanadi.",
   },
   ru: {
     headUsername: "Premium — по username (без входа в аккаунт)",
@@ -25,7 +25,7 @@ const COPY: Record<Loc, {
     cols: ["Срок", "Цена"],
     month: (n) => `${n} мес.`,
     noteUsername: "Достаточно username, пароль не запрашивается. Актуальная цена — в @StarsPaymee_bot.",
-    noteLogin: "Отдельная услуга с официальной активацией — вариант на 1 месяц доступен здесь.",
+    noteLogin: "Отдельная услуга для нестандартных случаев. Условия и цену уточняйте в @StarsPaymeeSupport.",
   },
   en: {
     headUsername: "Premium — by username (no account login)",
@@ -33,7 +33,7 @@ const COPY: Record<Loc, {
     cols: ["Term", "Price"],
     month: (n) => `${n} mo`,
     noteUsername: "Only a username is needed; no password is requested. Current price in @StarsPaymee_bot.",
-    noteLogin: "A separate service with official activation — the 1-month option lives in this flow.",
+    noteLogin: "A separate service for non-standard cases. Terms and pricing via @StarsPaymeeSupport.",
   },
 };
 
@@ -57,10 +57,12 @@ export function PremiumPlanBoard({
   return (
     <div className="boost-blog-board cols-2" role="region" aria-label={head}>
       <div className="boost-blog-head">{head}</div>
-      <div className="boost-blog-row boost-blog-cols">
-        <span>{t.cols[0]}</span>
-        <span className="boost-blog-price">{t.cols[1]}</span>
-      </div>
+      {plans.length > 0 && (
+        <div className="boost-blog-row boost-blog-cols">
+          <span>{t.cols[0]}</span>
+          <span className="boost-blog-price">{t.cols[1]}</span>
+        </div>
+      )}
       {plans.map((p) => (
         <div key={p.months} className="boost-blog-row">
           <span>

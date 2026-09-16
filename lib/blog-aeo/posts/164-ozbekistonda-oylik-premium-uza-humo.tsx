@@ -5,11 +5,9 @@ import {
   InfoGrid,
   InlineCta,
   KeyFacts,
-  No,
   Sources,
   Step,
   Steps,
-  Yes,
 } from "@/components/blog/aeo-blocks";
 import { PremiumPlanBoard } from "@/components/blog/premium-plan-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
@@ -17,61 +15,48 @@ import type { AeoPost } from "@/lib/blog-aeo/types";
 const SLUG = "ozbekistonda-oylik-premium-uza-humo";
 
 /**
- * Ikki oqimning farqi — bu maqolaning asosiy ma’nosi.
+ * 1 oylik va uzoqroq muddatlar — oyiga tushadigan xarajat bo'yicha.
  *
- * MUHIM: 1 oylik tarif faqat «akkauntga kirib berish» oqimida bor
- * (`PREMIUM_LOGIN_PLANS`), username oqimida esa eng qisqasi 3 oy
- * (`PREMIUM_PLANS`). Shuning uchun 1 oylikni «username kiriting» qadami
- * bilan tasvirlash noto‘g‘ri bo‘lardi.
+ * MUHIM (2026-yil sentabr): ilgari 1 oylik faqat «akkauntga kirib berish»
+ * oqimida edi. Endi u ham username oqimida beriladi, ya'ni to'rtala muddat
+ * ham parolsiz. Shuning uchun bu yerda oqimlar emas, MUDDATLAR
+ * taqqoslanadi — o'quvchi uchun endi asosiy savol shu.
  */
-function FlowCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
+function TermCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
     uz: {
-      headers: ["Jihat", "1 oylik (login oqimi)", "3 / 6 / 12 oy (username oqimi)"],
+      headers: ["Muddat", "Narx", "Oyiga", "Kimga mos"],
       rows: [
-        ["Eng qisqa muddat", "1 oy", "3 oy"],
-        ["Nima so‘raladi", "Rasmiy kirish (login)", "Faqat @username"],
-        ["Parol / SMS-kod", "no", "yes"],
-        ["Faollashuv", "Operator qo‘lda bajaradi", "Avtomatik, ~10 soniya"],
-        ["Narx", "50 000 so‘m", "172 000 / 232 000 / 422 000 so‘m"],
+        ["1 oy", "45 000 so‘m", "45 000 so‘m", "Sinab ko‘rish, bir martalik ehtiyoj"],
+        ["3 oy", "160 000 so‘m", "~53 300 so‘m", "Qisqa muddat, majburiyatsiz"],
+        ["6 oy", "215 000 so‘m", "~35 800 so‘m", "Narx va muddat muvozanati"],
+        ["12 oy", "388 000 so‘m", "~32 300 so‘m", "Doimiy foydalanish"],
       ],
-      yes: "So‘ralmaydi",
-      no: "Kerak bo‘ladi",
     },
     ru: {
-      headers: ["Аспект", "1 месяц (со входом)", "3 / 6 / 12 месяцев (по username)"],
+      headers: ["Срок", "Цена", "В месяц", "Кому подходит"],
       rows: [
-        ["Минимальный срок", "1 месяц", "3 месяца"],
-        ["Что запрашивается", "Официальный вход (логин)", "Только @username"],
-        ["Пароль / SMS-код", "no", "yes"],
-        ["Активация", "Вручную оператором", "Автоматически, ~10 секунд"],
-        ["Цена", "50 000 сум", "172 000 / 232 000 / 422 000 сум"],
+        ["1 месяц", "45 000 сум", "45 000 сум", "Попробовать, разовая задача"],
+        ["3 месяца", "160 000 сум", "~53 300 сум", "Короткий срок без обязательств"],
+        ["6 месяцев", "215 000 сум", "~35 800 сум", "Баланс цены и срока"],
+        ["12 месяцев", "388 000 сум", "~32 300 сум", "Постоянное использование"],
       ],
-      yes: "Не запрашивается",
-      no: "Потребуется",
     },
     en: {
-      headers: ["Aspect", "1 month (login flow)", "3 / 6 / 12 months (username flow)"],
+      headers: ["Term", "Price", "Per month", "Who it suits"],
       rows: [
-        ["Shortest term", "1 month", "3 months"],
-        ["What is asked for", "An official sign-in", "Only an @username"],
-        ["Password / SMS code", "no", "yes"],
-        ["Activation", "Handled manually by an operator", "Automatic, ~10 seconds"],
-        ["Price", "50,000 UZS", "172,000 / 232,000 / 422,000 UZS"],
+        ["1 month", "45,000 UZS", "45,000 UZS", "Trying it, a one-off need"],
+        ["3 months", "160,000 UZS", "~53,300 UZS", "A short term, no commitment"],
+        ["6 months", "215,000 UZS", "~35,800 UZS", "The balance of price and term"],
+        ["12 months", "388,000 UZS", "~32,300 UZS", "Permanent use"],
       ],
-      yes: "Not requested",
-      no: "Required",
     },
   }[locale];
 
   return (
     <CompareTable
       headers={copy.headers}
-      rows={copy.rows.map(([label, login, username]) => [
-        <strong key="l">{label}</strong>,
-        login === "no" ? <No key="a">{copy.no}</No> : login,
-        username === "yes" ? <Yes key="b">{copy.yes}</Yes> : username,
-      ])}
+      rows={copy.rows.map(([a, b, c, d]) => [<strong key="a">{a}</strong>, b, c, d])}
     />
   );
 }
@@ -80,10 +65,9 @@ function FlowCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      Ha — 1 oylik Telegram Premium’ni <b>UzCard yoki HUMO</b> kartasi bilan, so‘mda olish mumkin. Ammo bitta muhim
-      shart bor: <b>1 oylik tarif faqat «akkauntga kirib berish» oqimida</b> mavjud va narxi <b>50 000 so‘m</b>.
-      Username orqali beriladigan tez oqimda eng qisqa muddat — 3 oy. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet
-      bilan amalga oshiriladi.
+      Ha — 1 oylik Telegram Premium’ni <b>UzCard yoki HUMO</b> kartasi bilan, so‘mda olish mumkin. Narxi —{" "}
+      <b>45 000 so‘m</b>, va u <b>username orqali</b> beriladi: parol ham, SMS-kod ham so‘ralmaydi. To‘lov
+      UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan amalga oshiriladi.
     </p>
   );
 }
@@ -91,15 +75,16 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
-      <h2 id="qisqa">Eng muhimi: 1 oylik boshqa muddatlar bilan bir xil oqimda emas</h2>
+      <h2 id="qisqa">1 oylik ham username orqali — parol so‘ralmaydi</h2>
       <p>
-        Ko‘p odam 1 oylik Premium’ni 3, 6 va 12 oylik tariflar bilan bir xil deb o‘ylaydi — «shunchaki miqdori
-        boshqacha» degan tasavvur bilan. Amalda esa bu <b>ikki xil xizmat</b>:
+        Ilgari 1 oylik tarif alohida, «akkauntga kirib berish» oqimida edi. <b>2026-yil sentabridan boshlab
+        to‘rtala muddat ham</b> — 1, 3, 6 va 12 oy — username orqali beriladi. Ya’ni bir oylikni olish uchun
+        ham parolingizni birovga berish kerak emas. Qolgan farq faqat narx va muddatda:
       </p>
-      <FlowCompare locale="uz" />
+      <TermCompare locale="uz" />
       <p>
-        Ya’ni 1 oylik variantni tanlaganingizda bot sizdan username so‘ramaydi — bu tarif rasmiy faollashtirish
-        orqali beriladi. Agar akkauntingizga kirishni istamasangiz, sizga mos eng qisqa muddat — <b>3 oy</b>.
+        Jadvaldan ko‘rinib turibdiki, 1 oylik eng qulay kirish nuqtasi, lekin oyiga hisoblaganda eng qimmati.
+        Premium doimiy kerak bo‘lsa, 6 yoki 12 oylik sezilarli tejaydi.
       </p>
 
       <h2 id="narx">Narxi va muddati</h2>
@@ -124,7 +109,7 @@ function UzBody() {
         </li>
       </KeyFacts>
 
-      <InlineCta text="1 oylik Premium — 50 000 so‘m, so‘mda to‘lov." product={{ kind: "premium", months: 1 }} />
+      <InlineCta text="1 oylik Premium — 45 000 so‘m, so‘mda to‘lov." product={{ kind: "premium", months: 1 }} />
 
       <h2 id="karta">UzCard va HUMO bilan to‘lash</h2>
       <p>
@@ -161,13 +146,13 @@ function UzBody() {
           ni ishga tushiring.
         </Step>
         <Step title="2. Premium bo‘limidan 1 oylik tarifni tanlang">
-          Bu — login oqimidagi variant; botda alohida ko‘rsatilgan.
+          Narx 45 000 so‘m — botda darhol ko‘rinadi.
         </Step>
         <Step title="3. Bot so‘ragan ma’lumotni bering">
           Rasmiy faollashtirish uchun kerakli qadamlarni bot ketma-ket tushuntiradi.
         </Step>
         <Step title="4. So‘mda to‘lang">
-          UzCard, HUMO, Click, Payme, Uzum yoki Paynet — summa 50 000 so‘m.
+          UzCard, HUMO, Click, Payme, Uzum yoki Paynet — summa 45 000 so‘m.
         </Step>
         <Step title="5. Faollashuvni tasdiqlang">
           Quyidagi bo‘limdagi uchta tekshiruvdan o‘ting.
@@ -220,10 +205,9 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      Да — Telegram Premium на 1 месяц можно оформить картой <b>UzCard или Humo</b>, в сумах. Но есть важное
-      условие: <b>тариф на 1 месяц доступен только в сценарии со входом в аккаунт</b>, и стоит он{" "}
-      <b>50 000 сум</b>. В быстром сценарии по username минимальный срок — 3 месяца. Оплата: UzCard, Humo, Click,
-      Payme или Paynet.
+      Да — Telegram Premium на 1 месяц можно оформить картой <b>UzCard или Humo</b>, в сумах. Цена —{" "}
+      <b>45 000 сум</b>, и оформляется он <b>по username</b>: ни пароль, ни SMS-код не запрашиваются. Оплата:
+      UzCard, Humo, Click, Payme, Uzum или Paynet.
     </p>
   );
 }
@@ -231,15 +215,16 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
-      <h2 id="qisqa">Главное: месячный тариф — не тот же сценарий, что остальные сроки</h2>
+      <h2 id="qisqa">Месячный тариф теперь тоже по username — без пароля</h2>
       <p>
-        Многие считают, что Premium на 1 месяц отличается от тарифов на 3, 6 и 12 месяцев только суммой. На деле это{" "}
-        <b>две разные услуги</b>:
+        Раньше месячный тариф оформлялся отдельно, через вход в аккаунт. <b>С сентября 2026 года все четыре
+        срока</b> — 1, 3, 6 и 12 месяцев — оформляются по username. То есть и для одного месяца передавать
+        пароль никому не нужно. Отличаются только цена и срок:
       </p>
-      <FlowCompare locale="ru" />
+      <TermCompare locale="ru" />
       <p>
-        То есть при выборе месячного варианта бот не спросит username — этот тариф оформляется через официальную
-        активацию. Если входить в аккаунт вы не хотите, минимальный подходящий срок — <b>3 месяца</b>.
+        Из таблицы видно: месячный — самый доступный вход, но самый дорогой в пересчёте на месяц. Если Premium
+        нужен постоянно, 6 или 12 месяцев заметно экономнее.
       </p>
 
       <h2 id="narx">Цена и срок</h2>
@@ -261,7 +246,7 @@ function RuBody() {
         </li>
       </KeyFacts>
 
-      <InlineCta text="Premium на месяц — 50 000 сум, оплата в сумах." product={{ kind: "premium", months: 1 }} />
+      <InlineCta text="Premium на месяц — 45 000 сум, оплата в сумах." product={{ kind: "premium", months: 1 }} />
 
       <h2 id="karta">Оплата картой UzCard и Humo</h2>
       <p>
@@ -298,12 +283,12 @@ function RuBody() {
           в Telegram.
         </Step>
         <Step title="2. В разделе Premium выберите месячный тариф">
-          Это вариант из сценария со входом; в боте он показан отдельно.
+          Цена 45 000 сум — она сразу видна в боте.
         </Step>
         <Step title="3. Передайте данные, которые запросит бот">
           Бот последовательно объяснит шаги, нужные для официальной активации.
         </Step>
-        <Step title="4. Оплатите в сумах">UzCard, Humo, Click, Payme или Paynet — сумма 50 000 сум.</Step>
+        <Step title="4. Оплатите в сумах">UzCard, Humo, Click, Payme или Paynet — сумма 45 000 сум.</Step>
         <Step title="5. Подтвердите активацию">Пройдите три проверки из раздела ниже.</Step>
       </Steps>
 
@@ -353,10 +338,9 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      Yes — one month of Telegram Premium can be paid for with a <b>UzCard or HUMO</b> card, in so‘m. One condition
-      matters though: <b>the 1-month plan exists only in the account sign-in flow</b>, and it costs{" "}
-      <b>50,000 UZS</b>. In the fast username flow the shortest term is 3 months. Payment goes through UzCard,
-      HUMO, Click, Payme or Paynet.
+      Yes — one month of Telegram Premium can be paid for with a <b>UzCard or HUMO</b> card, in so‘m. It costs{" "}
+      <b>45,000 UZS</b> and is arranged <b>by username</b>: neither a password nor an SMS code is requested.
+      Payment goes through UzCard, HUMO, Click, Payme, Uzum or Paynet.
     </p>
   );
 }
@@ -364,16 +348,16 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
-      <h2 id="qisqa">The key point: one month is not the same flow as the other terms</h2>
+      <h2 id="qisqa">The monthly plan now runs by username too — no password</h2>
       <p>
-        Many people assume the 1-month plan differs from the 3, 6 and 12-month ones only in price. In practice these
-        are <b>two different services</b>:
+        The monthly plan used to be arranged separately, through an account sign-in. <b>Since September 2026 all
+        four terms</b> — 1, 3, 6 and 12 months — go by username. So even for a single month there is no password
+        to hand over. Only the price and the term differ:
       </p>
-      <FlowCompare locale="en" />
+      <TermCompare locale="en" />
       <p>
-        So when you pick the monthly option the bot will not ask for a username — that plan is delivered through an
-        official activation. If you would rather not sign in at all, the shortest term that fits you is{" "}
-        <b>3 months</b>.
+        The table makes it clear: one month is the easiest entry point but the most expensive per month. If you
+        need Premium permanently, 6 or 12 months saves noticeably more.
       </p>
 
       <h2 id="narx">Price and term</h2>
@@ -396,7 +380,7 @@ function EnBody() {
         </li>
       </KeyFacts>
 
-      <InlineCta text="One month of Premium — 50,000 UZS, paid in so‘m." product={{ kind: "premium", months: 1 }} />
+      <InlineCta text="One month of Premium — 45,000 UZS, paid in so‘m." product={{ kind: "premium", months: 1 }} />
 
       <h2 id="karta">Paying with UzCard and HUMO</h2>
       <p>
@@ -433,12 +417,12 @@ function EnBody() {
           in Telegram.
         </Step>
         <Step title="2. Pick the monthly plan in the Premium section">
-          This is the sign-in flow option; the bot lists it separately.
+          It costs 45,000 UZS, shown in the bot right away.
         </Step>
         <Step title="3. Provide what the bot asks for">
           The bot walks through the steps needed for the official activation, one at a time.
         </Step>
-        <Step title="4. Pay in so‘m">UzCard, HUMO, Click, Payme, Uzum or Paynet — the total is 50,000 UZS.</Step>
+        <Step title="4. Pay in so‘m">UzCard, HUMO, Click, Payme, Uzum or Paynet — the total is 45,000 UZS.</Step>
         <Step title="5. Confirm the activation">Run the three checks in the section below.</Step>
       </Steps>
 
@@ -492,7 +476,7 @@ const uzFaq = [
   },
   {
     question: "1 oylik tarif necha so‘m?",
-    answer: "50 000 so‘m.",
+    answer: "45 000 so‘m.",
   },
   {
     question: "Nega 1 oylikda username so‘ralmaydi?",
@@ -529,11 +513,11 @@ const ruFaq = [
     answer:
       "Да. Платёж проходит в сумах внутри местной системы — UzCard, Humo, Click, Payme или Paynet. Международная карта не нужна.",
   },
-  { question: "Сколько стоит месячный тариф?", answer: "50 000 сум." },
+  { question: "Сколько стоит месячный тариф?", answer: "45 000 сум." },
   {
     question: "Почему при месячном тарифе не спрашивают username?",
     answer:
-      "Потому что месячный тариф оформляется в сценарии со входом в аккаунт. В быстром сценарии по username минимальный срок — 3 месяца.",
+      "Теперь оформляется. С сентября 2026 года все четыре срока, включая месячный, идут по username — пароль не нужен.",
   },
   {
     question: "С какого момента считается срок?",
@@ -565,11 +549,11 @@ const enFaq = [
     answer:
       "Yes. The payment runs in so‘m inside the local system — UzCard, HUMO, Click, Payme, Uzum or Paynet. No international card is needed.",
   },
-  { question: "How much is the monthly plan?", answer: "50,000 UZS." },
+  { question: "How much is the monthly plan?", answer: "45,000 UZS." },
   {
     question: "Why is no username requested for the monthly plan?",
     answer:
-      "Because the monthly plan is delivered through the account sign-in flow. In the fast username flow the shortest term is 3 months.",
+      "It does now. Since September 2026 all four terms, the monthly one included, run by username — no password needed.",
   },
   {
     question: "When does the term start?",
@@ -612,52 +596,52 @@ export const post: AeoPost = {
   ],
   howToSteps: [
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
-    { name: "1 oylik tarifni tanlang", text: "Premium bo‘limidagi login oqimi varianti." },
+    { name: "1 oylik tarifni tanlang", text: "Premium bo‘limida 1 oy — 45 000 so‘m." },
     { name: "So‘ralgan ma’lumotni bering", text: "Rasmiy faollashtirish qadamlarini bot ketma-ket tushuntiradi." },
-    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet — 50 000 so‘m." },
+    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet — 45 000 so‘m." },
     { name: "Faollashuvni tasdiqlang", text: "Profil rozetkasi, sozlamalardagi tugash sanasi va katta fayl sinovi." },
   ],
   locales: {
     uz: {
       title: "1 oylik Telegram Premium: UzCard va HUMO orqali olish",
       excerpt:
-        "1 oylik Premium 50 000 so‘m va faqat login oqimida beriladi — username orqali emas. Narx, muddat, UzCard/HUMO to‘lovi va faollashuvni tekshirish.",
+        "1 oylik Premium 45 000 so‘m va username orqali beriladi — parolsiz. Narx, muddat, UzCard/HUMO to‘lovi va faollashuvni tekshirish.",
       metaTitle: "1 oylik Telegram Premium — UzCard va HUMO",
       metaDescription:
-        "1 oylik Telegram Premium 50 000 so‘m: qaysi oqimda beriladi, UzCard va HUMO bilan to‘lash, muddat qachon boshlanadi va faollashuvni qanday tekshirish.",
+        "1 oylik Telegram Premium 45 000 so‘m: qaysi oqimda beriladi, UzCard va HUMO bilan to‘lash, muddat qachon boshlanadi va faollashuvni qanday tekshirish.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "1 oylik Premium’ni oling",
-      ctaBody: "@StarsPaymee_bot — 50 000 so‘m, UzCard, HUMO, Click, Payme, Uzum va Paynet orqali so‘mda.",
+      ctaBody: "@StarsPaymee_bot — 45 000 so‘m, UzCard, HUMO, Click, Payme, Uzum va Paynet orqali so‘mda.",
       faq: uzFaq,
     },
     ru: {
       title: "Telegram Premium на 1 месяц: оплата картой UzCard и Humo",
       excerpt:
-        "Месячный Premium стоит 50 000 сум и оформляется только в сценарии со входом, а не по username. Цена, срок, оплата UzCard/Humo и проверка активации.",
+        "Месячный Premium стоит 45 000 сум и оформляется только в сценарии со входом, а не по username. Цена, срок, оплата UzCard/Humo и проверка активации.",
       metaTitle: "Telegram Premium на месяц — UzCard и Humo",
       metaDescription:
-        "Telegram Premium на 1 месяц за 50 000 сум: в каком сценарии оформляется, оплата картой UzCard и Humo, с какого дня идёт срок и как проверить активацию.",
+        "Telegram Premium на 1 месяц за 45 000 сум: в каком сценарии оформляется, оплата картой UzCard и Humo, с какого дня идёт срок и как проверить активацию.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Оформите Premium на месяц",
-      ctaBody: "@StarsPaymee_bot — 50 000 сум, оплата в сумах через UzCard, Humo, Click, Payme и Paynet.",
+      ctaBody: "@StarsPaymee_bot — 45 000 сум, оплата в сумах через UzCard, Humo, Click, Payme и Paynet.",
       faq: ruFaq,
     },
     en: {
       title: "One month of Telegram Premium: paying by UzCard and HUMO",
       excerpt:
-        "The monthly plan costs 50,000 UZS and comes only through the sign-in flow, not by username. Price, term, UzCard/HUMO payment and how to verify activation.",
+        "The monthly plan costs 45,000 UZS and comes only through the sign-in flow, not by username. Price, term, UzCard/HUMO payment and how to verify activation.",
       metaTitle: "Telegram Premium for a month — UzCard and HUMO",
       metaDescription:
-        "One month of Telegram Premium for 50,000 UZS: which flow delivers it, paying by UzCard and HUMO, when the term starts and how to verify activation.",
+        "One month of Telegram Premium for 45,000 UZS: which flow delivers it, paying by UzCard and HUMO, when the term starts and how to verify activation.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Get one month of Premium",
-      ctaBody: "@StarsPaymee_bot — 50,000 UZS, paid in so‘m via UzCard, HUMO, Click, Payme, Uzum and Paynet.",
+      ctaBody: "@StarsPaymee_bot — 45,000 UZS, paid in so‘m via UzCard, HUMO, Click, Payme, Uzum and Paynet.",
       faq: enFaq,
     },
   },

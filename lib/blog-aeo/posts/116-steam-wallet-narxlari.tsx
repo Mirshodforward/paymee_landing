@@ -249,7 +249,7 @@ function EnBody() {
 }
 
 const uzFaq = [
-  { question: "Steam Wallet narxlari qanday hisoblanadi?", answer: "To‘ldirish qat’iy kurs bo‘yicha: 1 dollar = 13 500 so‘m, eng kami 1 dollar. Steam’dagi o‘yin narxlari esa chegirma, mintaqa va hisob valyutasiga bog‘liq." },
+  { question: "Steam Wallet narxlari qanday hisoblanadi?", answer: "To‘ldirish qat’iy kurs bo‘yicha: 1 dollar = 12 900 so‘m, eng kami 1 dollar. Steam’dagi o‘yin narxlari esa chegirma, mintaqa va hisob valyutasiga bog‘liq." },
   { question: "Steam Wallet narxlari har kuni o‘zgaradimi?", answer: "Narxlar xizmat shartlari va valyuta kursiga qarab yangilanishi mumkin." },
   { question: "Minimal to‘ldirish summasi qancha?", answer: "Bu xizmatning amaldagi shartlariga bog‘liq. Eng dolzarb ma’lumotni bot orqali tekshirishingiz mumkin." },
   { question: "To‘lovdan oldin yakuniy narxni ko‘rish mumkinmi?", answer: "Ha, odatda buyurtmani tasdiqlashdan oldin yakuniy summa ko‘rsatiladi." },
@@ -272,7 +272,7 @@ const uzFaq = [
 ];
 
 const ruFaq = [
-  { question: "Как рассчитываются цены Steam Wallet?", answer: "Пополнение считается по фиксированному курсу: 1 доллар = 13 500 сум, минимум 1 доллар. А цены на игры в Steam зависят от скидок, региона и валюты аккаунта." },
+  { question: "Как рассчитываются цены Steam Wallet?", answer: "Пополнение считается по фиксированному курсу: 1 доллар = 12 900 сум, минимум 1 доллар. А цены на игры в Steam зависят от скидок, региона и валюты аккаунта." },
   { question: "Меняются ли цены Steam Wallet каждый день?", answer: "Цены могут обновляться в зависимости от условий сервиса и валютного курса." },
   { question: "Какая минимальная сумма пополнения?", answer: "Зависит от действующих условий сервиса. Актуальную информацию можно проверить в боте." },
   { question: "Можно ли увидеть итоговую цену до оплаты?", answer: "Да, обычно итоговая сумма показывается перед подтверждением заказа." },

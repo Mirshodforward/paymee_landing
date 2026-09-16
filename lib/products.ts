@@ -25,24 +25,29 @@ export const STARS_PACKS: StarsPack[] = STARS_PACK_AMOUNTS.map((amount) => ({
  * Telegram Premium — «username bilan» oqimi: akkauntga kirish shart emas,
  * faqat username yetarli, 10 soniyada avtomatik faollashadi.
  */
-export type PremiumPlan = { months: 3 | 6 | 12; priceUzs: number; popular?: boolean };
+export type PremiumPlan = { months: 1 | 3 | 6 | 12; priceUzs: number; popular?: boolean };
 
 export const PREMIUM_PLANS: PremiumPlan[] = [
-  { months: 3, priceUzs: 172_000 },
-  { months: 6, priceUzs: 232_000, popular: true },
-  { months: 12, priceUzs: 422_000 },
+  { months: 1, priceUzs: 45_000 },
+  { months: 3, priceUzs: 160_000 },
+  { months: 6, priceUzs: 215_000, popular: true },
+  { months: 12, priceUzs: 388_000 },
 ];
 
 /**
  * Premium — «akkauntga kirib berish» oqimi (alohida xizmat).
- * Login orqali rasmiy faollashtirish.
+ *
+ * MUHIM: 2026-yil sentabridan boshlab 1, 3, 6 va 12 oylik tariflarning
+ * HAMMASI username oqimida beriladi (`PREMIUM_PLANS`). Login oqimi faqat
+ * nostandart holatlar uchun qoldi va uning narxi ommaviy e'lon qilinmaydi —
+ * shartlar qo'llab-quvvatlash orqali aniqlanadi.
+ *
+ * Ro'yxat ataylab bo'sh: eskirgan narxni ko'rsatgandan ko'ra, ko'rsatmagan
+ * ma'qul. `PremiumPlanBoard` bo'sh ro'yxatda jadval o'rniga izoh chiqaradi.
  */
-export type PremiumLoginPlan = { months: 1 | 12; priceUzs: number };
+export type PremiumLoginPlan = { months: number; priceUzs: number };
 
-export const PREMIUM_LOGIN_PLANS: PremiumLoginPlan[] = [
-  { months: 1, priceUzs: 50_000 },
-  { months: 12, priceUzs: 300_000 },
-];
+export const PREMIUM_LOGIN_PLANS: PremiumLoginPlan[] = [];
 
 /** Marketing statistikasi (hero / stats band). */
 export const STATS = {
@@ -59,8 +64,10 @@ export const STATS = {
  * yozilsa, kurs o‘zgarganda maqolalar bir-biriga zid bo‘lib qoladi —
  * shuning uchun raqam bitta manbadan o‘qiladi.
  */
-export const STEAM_RATE_UZS_PER_USD = 13_500;
+export const STEAM_RATE_UZS_PER_USD = 12_900;
 export const STEAM_MIN_USD = 1;
+/** Bitta buyurtmada eng ko'p to'ldiriladigan summa. */
+export const STEAM_MAX_USD = 400;
 
 /** Berilgan dollar summasining so‘mdagi qiymati. */
 export function steamPriceUzs(usd: number): number {

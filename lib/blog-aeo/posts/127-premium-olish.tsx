@@ -46,7 +46,7 @@ function UzBody() {
       <h2 id="qadamlar">Premium olish bosqichlari</h2>
       <Steps>
         <Step title="1. Botni oching">@StarsPaymee_bot.</Step>
-        <Step title="2. Muddatni tanlang">3, 6 yoki 12 oy (1 oy — login oqimida).</Step>
+        <Step title="2. Muddatni tanlang">1, 3, 6 yoki 12 oy — hammasi username orqali.</Step>
         <Step title="3. Username kiriting">Obuna faollashadigan hisob.</Step>
         <Step title="4. So‘mda to‘lang">UzCard, HUMO, Click, Payme yoki Paynet.</Step>
         <Step title="5. Tekshiring">Profilda Premium belgisi paydo bo‘ladi.</Step>

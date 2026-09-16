@@ -486,7 +486,7 @@ const uzFaq = [
   {
     question: "Sovg‘a uchun 1 oylik muddat bormi?",
     answer:
-      "Yo‘q. Sovg‘a username oqimida beriladi, u yerda eng qisqa muddat 3 oy. 1 oylik faqat login oqimida mavjud.",
+      "Ha. 2026-yil sentabridan 1 oylik ham username oqimida, ya'ni uni sovg‘a qilish ham mumkin — 45 000 so‘m.",
   },
   {
     question: "Anonim sovg‘a qilsa bo‘ladimi?",
@@ -563,7 +563,7 @@ const enFaq = [
   {
     question: "Is there a 1-month gift option?",
     answer:
-      "No. Gifts go through the username flow, where the shortest term is 3 months. The monthly plan exists only in the sign-in flow.",
+      "Yes. Since September 2026 the monthly plan runs by username too, so it can be gifted — 45,000 UZS.",
   },
   {
     question: "Can the gift be anonymous?",
