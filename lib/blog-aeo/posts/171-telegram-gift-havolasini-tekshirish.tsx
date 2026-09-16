@@ -167,6 +167,14 @@ function UzBody() {
         <li>Sovg‘ani «tasdiqlash» uchun kalit iborani (seed) kiritish.</li>
         <li>Ekraningizni ko‘rsatish yoki masofaviy boshqaruv ilovasini o‘rnatish.</li>
       </KeyFacts>
+      <p>
+        Xuddi shu talab sovg‘ani marketga yuborganingizdan keyin ham keladi — «support» niqobida.
+        Bu haqda alohida:{" "}
+        <Link href="/blog/portals-mrkt-getgems-soxta-akkauntlar">
+          Portals va gift marketlar nomidan yozadigan soxta akkauntlar
+        </Link>
+        .
+      </p>
 
       <h2 id="vositachi">Sotuvchi yuborgan noma’lum bot yoki «vositachi»</h2>
       <p>
@@ -328,6 +336,14 @@ function RuBody() {
         <li>Ввести seed-фразу для «подтверждения» подарка.</li>
         <li>Показать экран или установить приложение удалённого доступа.</li>
       </KeyFacts>
+      <p>
+        То же требование приходит и после отправки подарка на маркет — под видом «поддержки».
+        Об этом отдельно:{" "}
+        <Link href="/blog/portals-mrkt-getgems-soxta-akkauntlar">
+          поддельные аккаунты от имени Portals и гифт-маркетов
+        </Link>
+        .
+      </p>
 
       <h2 id="vositachi">Неизвестный бот или «посредник» от продавца</h2>
       <p>
@@ -552,6 +568,14 @@ function EnBody() {
         <li>Enter a seed phrase to &laquo;confirm&raquo; a gift.</li>
         <li>Share your screen or install a remote-access app.</li>
       </KeyFacts>
+      <p>
+        The same demand arrives after you send a gift to a marketplace, dressed up as “support”. There is a
+        separate piece on it:{" "}
+        <Link href="/blog/portals-mrkt-getgems-soxta-akkauntlar">
+          fake accounts posing as Portals and other gift markets
+        </Link>
+        .
+      </p>
 
       <h2 id="vositachi">An unknown bot or «middleman» from the seller</h2>
       <p>
