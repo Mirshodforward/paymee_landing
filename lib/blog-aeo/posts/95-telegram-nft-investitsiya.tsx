@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
-import { InlineCta, Toc } from "@/components/blog/aeo-blocks";
+import { InlineCta } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-nft-investitsiya";

@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
-import { Step, Steps, Toc } from "@/components/blog/aeo-blocks";
+import { Step, Steps } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-gift-sotish";
