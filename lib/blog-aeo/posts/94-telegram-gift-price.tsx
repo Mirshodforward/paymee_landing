@@ -1,15 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
-import {
-  CompareTable,
-  InfoCard,
-  InfoGrid,
-  KeyFacts,
-  Sources,
-  Step,
-  Steps,
-  Toc,
-} from "@/components/blog/aeo-blocks";
+import { CompareTable, InfoCard, InfoGrid, KeyFacts, Sources, Step, Steps, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-gift-price";
@@ -22,7 +13,7 @@ const SLUG = "telegram-gift-price";
  * bir necha haftada eskiradi. Buning o‘rniga — o‘quvchi o‘zi ko‘rib turgan
  * ikkita e’lonni to‘ldiradigan mezonlar ro‘yxati.
  */
-function CompareSheet({ locale }: { locale: "uz" | "ru" }) {
+function CompareSheet({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
     uz: {
       headers: ["Taqqoslanadigan jihat", "Qayerdan olinadi", "Nega muhim"],
@@ -46,6 +37,18 @@ function CompareSheet({ locale }: { locale: "uz" | "ru" }) {
         ["Номер экземпляра", "Число рядом с названием", "Маленькие и «красивые» номера ценятся отдельно"],
         ["Цена объявления и дата", "Список продающихся", "Цена без даты бессмысленна — рынок быстро меняется"],
         ["Состоявшаяся сделка", "Только при наличии подтверждения", "Показателен не запрос, а фактическая продажа"],
+      ],
+    },
+    en: {
+      headers: ["What to compare", "Where to find it", "Why it matters"],
+      rows: [
+        ["Collection name", "The gift page heading", "Comparing different collections is meaningless"],
+        ["Model", "The gift's attribute list", "Models are valued differently within one collection"],
+        ["Backdrop", "The attribute list", "A rare backdrop lifts the price noticeably"],
+        ["Symbol", "The attribute list", "A rare symbol is one of the main differentiators"],
+        ["Copy number", "The number beside the name", "Low and «pretty» numbers carry their own premium"],
+        ["Listing price and date", "The for-sale list", "A price without a date is meaningless — the market moves fast"],
+        ["Completed sale", "Only where there is proof", "The asking price is not the market; a sale is"],
       ],
     },
   }[locale];
@@ -416,6 +419,154 @@ const faqRu = [
   },
 ];
 
+function EnAnswer() {
+  return (
+    <p>
+      Two gifts that look alike carrying different prices is normal: the price follows the{" "}
+      <b>individual copy</b>, not the <b>collection</b>. Model, backdrop, symbol and copy number are the main
+      differentiators — so check those four in both listings before comparing anything else.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#kolleksiya", label: "One collection is not one price" },
+          { href: "#xususiyat", label: "Model, backdrop, symbol, number" },
+          { href: "#varaqa", label: "The comparison sheet" },
+          { href: "#sorlagan", label: "Asking price vs sold price" },
+          { href: "#floor", label: "What floor price means" },
+          { href: "#xarid", label: "What to compare when buying" },
+        ]}
+      />
+
+      <h2 id="kolleksiya">Does one collection mean one gift?</h2>
+      <p>
+        No. A collection is an umbrella name, and the copies inside it differ. Two gifts can look almost identical on
+        screen while carrying different attributes — and that is exactly where the price gap comes from.
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="🔢" title="A low number">A small serial number is valued in its own right.</InfoCard>
+        <InfoCard emoji="⏳" title="A small run">Limited-release collections.</InfoCard>
+        <InfoCard emoji="🎨" title="A rare attribute">An uncommon model, backdrop or symbol.</InfoCard>
+        <InfoCard emoji="💱" title="Current demand">Market mood and what buyers are chasing.</InfoCard>
+      </InfoGrid>
+      <p>
+        At the same time: <b>rarity is not an automatic profit guarantee</b>. When demand falls, a small-run copy
+        gets cheaper too.
+      </p>
+
+      <h2 id="xususiyat">Where to find model, backdrop, symbol and number</h2>
+      <p>A collectible&rsquo;s page lists its attributes. That list is what separates two copies:</p>
+      <KeyFacts label="The four attributes">
+        <li>
+          <b>Model</b> — the gift&rsquo;s main appearance; a collection can hold several.
+        </li>
+        <li>
+          <b>Backdrop</b> — the background variant; uncommon ones cost more.
+        </li>
+        <li>
+          <b>Symbol</b> — the pattern or mark on the gift.
+        </li>
+        <li>
+          <b>Number</b> — the copy&rsquo;s position in the series, for example #7/1000.
+        </li>
+      </KeyFacts>
+
+      <h2 id="varaqa">A comparison sheet: put two listings side by side</h2>
+      <p>
+        The table below is not a ready answer — it is <b>a sheet you fill in yourself</b>. Open the two listings you
+        are comparing and work down the rows. We deliberately publish no invented price examples: an unverified
+        figure goes stale within weeks and leads to a bad decision.
+      </p>
+      <CompareSheet locale="en" />
+      <Steps>
+        <Step title="1. Open both pages">Find the collection and the attribute list for each.</Step>
+        <Step title="2. Fill it in row by row">Mark the rows where they differ.</Step>
+        <Step title="3. Match the difference to the price">
+          Which attribute explains the gap? If nothing does, the higher price may be unjustified.
+        </Step>
+        <Step title="4. Write down the date">Always remember a price together with the day you saw it.</Step>
+      </Steps>
+
+      <h2 id="sorlagan">The asking price and a completed sale are not the same</h2>
+      <p>
+        A figure in a listing is only an <b>offer</b>. It does not mean the gift sells at that price. What is
+        meaningful is a sale someone actually paid for.
+      </p>
+      <KeyFacts label="Keep the difference in mind">
+        <li>A high asking price does not raise the market price.</li>
+        <li>Value your own gift against completed sales, not against listings.</li>
+        <li>Without evidence of a sale, do not treat its price as fact.</li>
+      </KeyFacts>
+
+      <h2 id="floor">What floor price means, and how to read it</h2>
+      <p>
+        The floor price is the <b>lowest listing</b> in a collection. It is neither an average nor a &laquo;fair&raquo;
+        price — just the cheapest offer at this moment.
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="⬇️" title="It is the lower bound">
+          The cheapest copy, usually with the plainest attributes.
+        </InfoCard>
+        <InfoCard emoji="⚖️" title="It is not the average">
+          Copies with rare attributes can sit far above it.
+        </InfoCard>
+        <InfoCard emoji="🔄" title="It moves fast">One new listing is enough to change it.</InfoCard>
+        <InfoCard emoji="🎯" title="When it helps">To judge how far above the bottom your copy sits.</InfoCard>
+      </InfoGrid>
+
+      <h2 id="xarid">What to compare when buying</h2>
+      <Steps>
+        <Step title="1. Confirm the collection">Is it the one you were actually looking for?</Step>
+        <Step title="2. Read the four attributes">Model, backdrop, symbol and number set the price.</Step>
+        <Step title="3. Compare against the floor">
+          How far above the lowest listing is it, and what justifies that?
+        </Step>
+        <Step title="4. Check the seller">
+          Verify the link and ownership using{" "}
+          <Link href="/blog/telegram-gift-havolasini-tekshirish">the verification guide</Link>.
+        </Step>
+      </Steps>
+      <p>
+        Trying to sell instead? Why a gift is not selling covers
+        commission and price limits. The investment view is in{" "}
+        <Link href="/blog/telegram-nft-investitsiya">NFT gifts as an investment</Link>.
+      </p>
+
+      <NftGiftSeriesNav locale="en" />
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "gift attributes and resale" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  {
+    question: "Why do two similar gifts cost differently?",
+    answer: "The price follows the individual copy, not the collection: model, backdrop, symbol and number all differ.",
+  },
+  { question: "Where do I see the attributes?", answer: "On the collectible's page — model, backdrop, symbol and number are listed there." },
+  {
+    question: "What is floor price?",
+    answer: "The lowest listing in a collection. Not an average and not a fair price — just the cheapest offer right now, and it moves fast.",
+  },
+  { question: "Is the listing price the market price?", answer: "No. A listing is only an offer; a completed sale is what counts." },
+  { question: "Will a small-run gift always appreciate?", answer: "No. Rarity guarantees nothing — when demand falls, small-run copies fall too." },
+  {
+    question: "How do I compare prices properly?",
+    answer: "Within one collection, against copies with the same model, backdrop, symbol and a similar number — and note the date.",
+  },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Gifts",
@@ -459,6 +610,18 @@ export const post: AeoPost = {
       ctaHeading: "Актуальные цены",
       ctaBody: "@StarsPaymee_bot → Gift Market — каталог и цена в сумах.",
       faq: faqRu,
+    },
+    en: {
+      title: "Why do identical Telegram Gifts cost different amounts?",
+      excerpt: "Price follows the copy, not the collection: model, backdrop, symbol and number. Plus a comparison sheet, floor price and asking vs sold.",
+      metaTitle: "Why identical Telegram Gifts differ in price",
+      metaDescription: "What a Telegram Gift's price depends on: model, backdrop, symbol and copy number, what floor price means and how asking differs from sold.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Current prices",
+      ctaBody: "@StarsPaymee_bot → Gift Market — the catalogue, priced in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { InlineCta, Steps, Step, Toc } from "@/components/blog/aeo-blocks";
+import { InlineCta, Step, Steps, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 import { GrowthSeriesAside } from "./_growth-shared";
 
@@ -57,6 +57,42 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      <strong>Telegram Gifts</strong> are digital presents sent for Stars and shown on the recipient&rsquo;s profile.
+      Top up Stars through @StarsPaymee_bot, then pick a gift inside Telegram — or buy the gift itself in so&lsquo;m
+      in the bot. The full walkthrough is in{" "}
+      <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">how to send a gift</Link>.
+    </p>
+  );
+}
+function EnBody() {
+  return (
+    <>
+      <Toc label="Contents" items={[{ href: "#qadamlar", label: "The steps" }, { href: "#narx", label: "Price" }]} />
+      <h2 id="qadamlar">Sending a gift</h2>
+      <Steps>
+        <Step title="Stars balance">Buy Stars in the bot, or use the balance you already hold.</Step>
+        <Step title="Pick the gift">In a Telegram chat via Gifts, or from the bot&rsquo;s catalogue.</Step>
+        <Step title="Name the recipient">Your friend&rsquo;s @username — copy it from their profile.</Step>
+      </Steps>
+      <p>
+        Buying the gift directly in so&lsquo;m skips the Stars step entirely, which is usually the simpler route for
+        anyone without an international card.
+      </p>
+      <h2 id="narx">Price and collections</h2>
+      <p>
+        See the <Link href="/gifts">Gifts page</Link>,{" "}
+        <Link href="/blog/telegram-gifts-narxlari-royxati">the price list</Link> and{" "}
+        rare gifts.
+      </p>
+      <InlineCta text="Stars and Gifts in one bot, paid in so\u2018m." />
+      <GrowthSeriesAside locale="en" />
+    </>
+  );
+}
+
 const faqUz = [
   { question: "Gifts uchun nima kerak?", answer: "Telegram Stars balansi." },
   { question: "Stars qayerdan?", answer: "StarsPaymee bot, username bilan." },
@@ -65,6 +101,14 @@ const faqUz = [
 
 const faqRu = [
   { question: "Что нужно для Gifts?", answer: "Баланс Stars." },
+];
+
+const faqEn = [
+  { question: "How are Telegram gifts sent?", answer: "For Stars inside Telegram, or bought directly in so\u2018m through the bot." },
+  { question: "Do I need Stars first?", answer: "Only for the in-app route. Buying the gift in the bot needs no Stars." },
+  { question: "What does the recipient need?", answer: "Just a Telegram account with a username." },
+  { question: "Can it be anonymous?", answer: "Yes — choose anonymity before paying; it cannot be changed after." },
+  { question: "Can the recipient convert it?", answer: "Ordinary gifts can be converted back into Stars." },
 ];
 
 export const post: AeoPost = {
@@ -98,6 +142,18 @@ export const post: AeoPost = {
       ctaHeading: "Пополнить Stars",
       ctaBody: "@StarsPaymee_bot",
       faq: faqRu,
+    },
+    en: {
+      title: "Sending Telegram Gifts — a short guide",
+      excerpt: "The two routes, what the recipient needs and where to check prices.",
+      metaTitle: "Send Telegram Gifts | Guide 2026",
+      metaDescription: "How to send Telegram gifts: for Stars inside the app or bought in so\u2018m through the bot. Steps, prices and collections.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Send a gift",
+      ctaBody: "@StarsPaymee_bot — Stars and Gifts, paid in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

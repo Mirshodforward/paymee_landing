@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { hasTranslation } from "@/lib/blog/all";
 import { telegramGrowthSeriesSlugs } from "@/lib/blog-aeo/growth-series";
 import type { AeoUiLocale } from "@/lib/blog-aeo/types";
 
@@ -155,15 +156,19 @@ export function GrowthSeriesNav({ locale }: { locale: AeoUiLocale }) {
         {sub}
       </p>
       <div className="blog-series-grid">
-        {telegramGrowthSeriesSlugs.map((slug) => (
+        {/* Shu tilda tarjimasi yo‘q maqola noindex bo‘ladi — indekslanadigan
+            sahifadan unga havola qo‘yish Google uchun zid signal. */}
+        {telegramGrowthSeriesSlugs
+          .filter((slug) => hasTranslation(slug, locale))
+          .map((slug) => (
           <Link key={slug} href={`/blog/${slug}`} className="blog-series-card">
             <h3>{L[slug].title}</h3>
             <p>{L[slug].blurb}</p>
             <span className="prod-link" style={{ color: "var(--fuch)" }}>
               {locale === "ru" ? "Читать →" : "O‘qish →"}
             </span>
-          </Link>
-        ))}
+            </Link>
+          ))}
       </div>
     </aside>
   );

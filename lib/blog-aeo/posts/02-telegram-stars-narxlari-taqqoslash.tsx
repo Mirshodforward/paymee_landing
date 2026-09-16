@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { CompareTable, InlineCta, KeyFacts, Sources, Yes, No } from "@/components/blog/aeo-blocks";
+import { CompareTable, InlineCta, KeyFacts, No, Sources, Yes } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-stars-narxlari-2026-platformalar-taqqoslash";
@@ -172,6 +172,89 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      Telegram Star prices differ by platform: buying inside the app (App Store or Google Play) is the most
+      expensive, Fragment is cheaper but needs TON crypto, and local bots let you pay in so&lsquo;m with an Uzbek
+      card. Among options that accept a local card, StarsPaymee is one of the cheapest — 50 ⭐ from 11,000 UZS.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <h2 id="qiymat">What does one Telegram Star cost?</h2>
+      <p>
+        Telegram sets the base value in US dollars — roughly <strong>$0.013–0.015</strong>, varying a little with
+        pack size. The final price then depends on the platform, its margin and the payment method. Side by side:
+      </p>
+      <CompareTable
+        headers={["Platform", "Payment", "Uzbek card", "Relative price"]}
+        rows={[
+          ["Telegram (App Store / Google Play)", "Foreign card", <No key="1" />, "Most expensive (store margin)"],
+          ["Fragment.com", "TON crypto", <No key="2" />, "Cheap, but crypto is required"],
+          ["@PremiumBot", "Visa / Mastercard", <No key="3" />, "Mid-range"],
+          [<>StarsPaymee (@StarsPaymee_bot)</>, "UzCard/HUMO/Click/Payme/Uzum", <Yes key="4" />, "Among the cheapest locally"],
+        ]}
+      />
+
+      <InlineCta text="Check the current so\u2018m price and order." product={{ kind: "stars", amount: 100 }} />
+
+      <h2 id="paketlar">Packs and prices in so&lsquo;m</h2>
+      <p>
+        A star starts at roughly 220 UZS. These are the popular packs — exact current prices live on the{" "}
+        <Link href="/stars">Stars page</Link>:
+      </p>
+      <CompareTable
+        headers={["Pack", "Approx. price (UZS)", "Who it suits"]}
+        rows={[
+          ["50 ⭐", "11,000", "A trial or a small gift"],
+          ["100 ⭐", "22,000", "Reactions and ordinary gifts"],
+          ["500 ⭐", "110,000", "An active user"],
+          ["1000 ⭐", "220,000", "A creator or channel owner"],
+          ["2500–10,000 ⭐", "550,000+", "Bulk, with a better per-unit price"],
+        ]}
+      />
+      <KeyFacts label="Saving money">
+        <li>
+          Larger packs often carry a lower <b>per-unit price</b> — buying more at once can pay off.
+        </li>
+        <li>Paying locally avoids both the store margin and the bank conversion fee.</li>
+        <li>A price far below the market is a scam signal, not a bargain.</li>
+        <li>Check the final amount in the bot before confirming — that figure is the one that counts.</li>
+      </KeyFacts>
+
+      <h2 id="nega">Why the app-store route costs more</h2>
+      <p>
+        Apple and Google add a store commission, and the price is quoted in dollars, so a bank conversion fee lands
+        on top. Local payment removes both. The detail is in{" "}
+        why the App Store price differs, and the exact
+        conversion table is in{" "}
+        <Link href="/blog/telegram-stars-necha-som-kalkulyator">how many so&lsquo;m a Star costs</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog", note: "the Stars announcement" },
+          { href: "https://fragment.com", label: "fragment.com", note: "the official Fragment platform" },
+          { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "Stars documentation" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  { question: "Where are Telegram Stars cheapest?", answer: "Among local-card options, buying in so\u2018m through a bot avoids both the store margin and conversion fees." },
+  { question: "Why is the App Store more expensive?", answer: "It adds a store commission and requires a foreign card, so a bank conversion fee applies too." },
+  { question: "Can I use Fragment?", answer: "Yes, but it settles in TON, so you need a crypto wallet — not practical for most users in Uzbekistan." },
+  { question: "How much is one Star?", answer: "About 220 UZS when bought with a local card; 50 ⭐ costs 11,000 UZS." },
+  { question: "Are bulk packs cheaper?", answer: "Often the per-unit price comes down on larger packs." },
+  { question: "A seller offers a much lower price — is that safe?", answer: "No. A price well below the market is the most common scam signal." },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Stars",
@@ -266,6 +349,18 @@ export const post: AeoPost = {
             "Цена сильно ниже рынка — тревожный признак. Выбирайте надёжный сервис с офертой, поддержкой и отслеживанием заказа.",
         },
       ],
+    },
+    en: {
+      title: "Telegram Stars prices compared across platforms (2026)",
+      excerpt: "What a Star costs on each platform, which accept an Uzbek card, pack prices in so\u2018m and where the extra cost comes from.",
+      metaTitle: "Telegram Stars prices compared | 2026",
+      metaDescription: "Telegram Stars price comparison: App Store, Fragment and local bots, which take an Uzbek card, pack prices in so\u2018m and why margins differ.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Buy Stars",
+      ctaBody: "@StarsPaymee_bot — from 220 UZS each, paid with a local card.",
+      faq: faqEn,
     },
   },
 };

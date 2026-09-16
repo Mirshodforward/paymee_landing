@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { NftGiftMarketBoard } from "@/components/blog/nft-gift-market-board";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
-import { CompareTable, InlineCta, KeyFacts, Sources, Toc, Yes, No } from "@/components/blog/aeo-blocks";
+import { CompareTable, InlineCta, KeyFacts, No, Sources, Toc, Yes } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-nft-gift-nima";
@@ -151,6 +151,115 @@ const FAQ_RU = [
   { question: "Это инвестиция?", answer: "Нет гарантии роста цены — только коллекционный интерес." },
 ];
 
+function EnAnswer() {
+  return (
+    <p>
+      A <strong>Telegram NFT Gift</strong> is a <strong>collectible</strong> digital gift inside Telegram: a capped
+      run, a numbered copy and unique attributes, anchored on the TON blockchain. An ordinary gift only shows on a
+      profile; a collectible can be transferred, listed and traded — which is why people call it an NFT gift.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#nima", label: "What it is" },
+          { href: "#farq", label: "Regular vs collectible" },
+          { href: "#market", label: "The market" },
+          { href: "#limited", label: "Limited Edition" },
+          { href: "#xavf", label: "Safety" },
+        ]}
+      />
+      <h2 id="nima">What a Telegram NFT Gift is</h2>
+      <p>
+        Telegram <strong>Gifts</strong> are digital presents sent for Stars. Some can later be raised to{" "}
+        <strong>collectible</strong> status: a numbered copy (say 47 of 1000) with its own model, backdrop and
+        symbol. Because the supply is capped and copies change hands on a secondary market, they are commonly
+        called <strong>NFT gifts</strong>.
+      </p>
+      <KeyFacts label="The terms">
+        <li>
+          <b>Telegram Gift</b> — a profile gift, bought with Stars
+        </li>
+        <li>
+          <b>Collectible / NFT Gift</b> — unique, transferable, with a market price
+        </li>
+        <li>
+          <b>Gift Market</b> — where copies are listed and traded
+        </li>
+        <li>
+          <b>Limited Edition</b> — released in a capped run
+        </li>
+      </KeyFacts>
+
+      <h2 id="farq">Regular gift versus collectible</h2>
+      <CompareTable
+        headers={["Property", "Regular gift", "Collectible / NFT gift"]}
+        rows={[
+          ["Uniqueness", "Standard appearance", "A number plus unique attributes"],
+          ["Resale", <No key="1" />, <Yes key="2" />],
+          ["Market price", "Not applicable", "Moves with demand"],
+          ["Limited Edition", "Rarely", "Often"],
+        ]}
+      />
+      <p>
+        How the upgrade works:{" "}
+        <Link href="/blog/telegram-sovgani-collectible-upgrade">the collectible upgrade guide</Link>. On collecting:{" "}
+        rare gifts.
+      </p>
+
+      <h2 id="market">What the market looks like</h2>
+      <NftGiftMarketBoard locale="en" />
+      <p>
+        Prices shift with demand, so treat any listing as a snapshot. What drives the differences is covered in{" "}
+        <Link href="/blog/telegram-gift-price">why two similar gifts cost differently</Link>.
+      </p>
+
+      <h2 id="limited">Limited Edition</h2>
+      <p>
+        A capped run is what creates scarcity — but scarcity alone guarantees nothing. See{" "}
+        <Link href="/blog/limited-edition-telegram-gifts">Limited Edition gifts</Link> and, before treating any of
+        this as an investment, <Link href="/blog/telegram-nft-investitsiya">the risks</Link>.
+      </p>
+
+      <InlineCta text="Buy Stars in so\u2018m and upgrade a gift yourself." product={{ kind: "stars", amount: 100 }} />
+
+      <h2 id="xavf">Safety</h2>
+      <KeyFacts label="Before any deal">
+        <li>Telegram never asks for a password or login code over a gift.</li>
+        <li>A screenshot proves nothing — find the gift in Telegram yourself.</li>
+        <li>&laquo;Send first, I pay after&raquo; is the most common scam in gift trading.</li>
+        <li>A guarantor chosen by the seller is not a guarantor.</li>
+      </KeyFacts>
+      <p>
+        The full checklist is in{" "}
+        <Link href="/blog/telegram-gift-havolasini-tekshirish">checking a gift link before buying</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "gifts documentation" },
+          { href: "https://telegram.org/blog/collectible-gifts-and-more", label: "telegram.org/blog", note: "the collectible gifts announcement" },
+        ]}
+      />
+      <NftGiftSeriesNav locale="en" />
+    </>
+  );
+}
+
+const faqEn = [
+  { question: "What is a Telegram NFT Gift?", answer: "A collectible gift with a capped run, a numbered copy and unique attributes, anchored on TON." },
+  { question: "How does it differ from a regular gift?", answer: "A collectible can be transferred, listed and traded; a regular gift cannot." },
+  { question: "How do I get one?", answer: "Upgrade a regular gift with Stars inside Telegram, or buy a copy listed for resale." },
+  { question: "Does rarity guarantee a price rise?", answer: "No. A capped supply helps only while demand holds; prices fall too." },
+  { question: "Is Premium required?", answer: "No, Premium is not needed to own a collectible gift." },
+  { question: "What is the biggest risk when buying?", answer: "Paying first outside the official flow. Always verify the gift inside Telegram yourself." },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Gifts",
@@ -195,6 +304,18 @@ export const post: AeoPost = {
       ctaHeading: "Gift Market",
       ctaBody: "@StarsPaymee_bot",
       faq: FAQ_RU,
+    },
+    en: {
+      title: "What is a Telegram NFT Gift?",
+      excerpt: "Collectibles explained: capped runs, numbered copies, how they differ from regular gifts and what to check before buying.",
+      metaTitle: "What is a Telegram NFT Gift | 2026",
+      metaDescription: "Telegram NFT gifts explained: collectible status, limited runs, how they differ from ordinary gifts, the market and safety checks.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Start with Stars",
+      ctaBody: "@StarsPaymee_bot — Stars and gifts, paid in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

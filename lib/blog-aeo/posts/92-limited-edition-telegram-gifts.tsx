@@ -42,6 +42,36 @@ function RuBody() {
   return <NftGiftSeriesNav locale="ru" />;
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      <strong>Limited Edition Telegram Gifts</strong> are gift series released in a capped quantity. When the run is
+      small, collector demand can push the price up — though that is a possibility, never a guarantee.
+    </p>
+  );
+}
+function EnBody() {
+  return (
+    <>
+      <Toc label="Contents" items={[{ href: "#tiraj", label: "Supply" }, { href: "#narx", label: "Price" }]} />
+      <h2 id="tiraj">How many copies are released?</h2>
+      <KeyFacts label="Limited Edition">
+        <li>Each model has its own announced run size</li>
+        <li>Copies are numbered — for example 47/1000</li>
+        <li>Once the run ends, getting a new copy becomes harder</li>
+      </KeyFacts>
+      <h2 id="narx">Why does the price rise?</h2>
+      <p>
+        A capped supply meeting steady demand is what moves the price. But the market is volatile: a limited copy
+        can lose value just as easily. See{" "}
+        <Link href="/blog/telegram-gift-price">what a gift&rsquo;s price depends on</Link> and{" "}
+        the rare gifts ranking.
+      </p>
+      <NftGiftSeriesNav locale="en" />
+    </>
+  );
+}
+
 const faqUz = [
   { question: "Limited Edition nima?", answer: "Cheklangan tirajli sovg‘a chiqarilishi." },
   { question: "Qancha dona chiqariladi?", answer: "Modelga qarab — Telegram/ekotizim e’lonlariga qarang." },
@@ -49,6 +79,14 @@ const faqUz = [
 ];
 
 const faqRu = [{ question: "Что такое Limited Edition?", answer: "Ограниченный тираж." }];
+
+const faqEn = [
+  { question: "What is a Limited Edition gift?", answer: "A gift released in a capped quantity, with numbered copies." },
+  { question: "How many are made?", answer: "It depends on the model — check Telegram's own announcements." },
+  { question: "Why does the price go up?", answer: "A small supply plus demand; the market is volatile and can fall too." },
+  { question: "Is a limited gift a good investment?", answer: "Rarity guarantees nothing. Treat it as a collectible, not an asset." },
+  { question: "Can I buy one through the bot?", answer: "Sold-out collectibles are not delivered through the bot at the moment." },
+];
 
 export const post: AeoPost = {
   slug: SLUG,
@@ -81,6 +119,18 @@ export const post: AeoPost = {
       ctaHeading: "Market",
       ctaBody: "Бот",
       faq: faqRu,
+    },
+    en: {
+      title: "What are Limited Edition Telegram Gifts?",
+      excerpt: "Run size, rarity and how the price actually moves.",
+      metaTitle: "Limited Edition Telegram Gifts | 2026",
+      metaDescription: "Limited Edition Telegram gifts: run size, numbering, why prices move and what rarity does not guarantee.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Gift Market",
+      ctaBody: "@StarsPaymee_bot — the catalogue, priced in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

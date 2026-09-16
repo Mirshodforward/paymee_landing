@@ -60,6 +60,51 @@ function RuBody() {
   return <BoostSeriesNav locale="ru" />;
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      Growing a <strong>Telegram channel</strong> is a combination of content, promotion, monetisation and{" "}
+      <strong>boost</strong>. Boost raises the channel level, which unlocks giveaways and Stories features — it does
+      not add subscribers on its own. Content is what keeps people; boost only opens the tools.
+    </p>
+  );
+}
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#asos", label: "The foundations" },
+          { href: "#boost", label: "Where boost fits" },
+          { href: "#byudjet", label: "Budget" },
+        ]}
+      />
+      <h2 id="asos">The foundations of growth</h2>
+      <ul>
+        <li>Consistent posting and a clear niche.</li>
+        <li>Cross-posting and partnerships with related channels.</li>
+        <li>Monetisation through Stars or ads, once you qualify.</li>
+        <li>Community: questions, polls, replies.</li>
+      </ul>
+      <h2 id="boost">Where boost fits</h2>
+      <p>
+        Boosting a channel makes sense at the start of a
+        campaign, to open a level. Remind engaged subscribers about{" "}
+        Premium boost. Automatic delivery is covered in{" "}
+        automatic boost.
+      </p>
+      <h2 id="byudjet">Budget and choosing a provider</h2>
+      <p>
+        Compare boost prices before committing. The basics are in{" "}
+        what boost is.
+      </p>
+      <InlineCta text="Open a channel level quickly with boost." />
+      <BoostSeriesNav locale="en" />
+    </>
+  );
+}
+
 const faqUz = [
   { question: "Kanalni tez rivojlantirish mumkinmi?", answer: "Kontent + reklama + maqsadli boost kombinatsiyasi yordam beradi." },
   { question: "Boost kerakmi?", answer: "Majburiy emas; level va giveaway uchun foydali vosita." },
@@ -72,6 +117,14 @@ const faqUz = [
 const faqRu = [
   { question: "Как растить канал?", answer: "Контент, реклама, boost при необходимости." },
   { question: "Где аренда boost?", answer: "Boost Market в боте." },
+];
+
+const faqEn = [
+  { question: "How do I grow a Telegram channel?", answer: "Consistent content in a clear niche, partnerships, community, and boost to open levels." },
+  { question: "Does boost bring subscribers?", answer: "No. It raises the channel level and unlocks features like giveaways and Stories." },
+  { question: "Why does the level matter?", answer: "Giveaways and several Stories features are gated behind channel levels." },
+  { question: "How much does boost cost?", answer: "It depends on the number and term — compare current packages before ordering." },
+  { question: "Should I buy subscribers instead?", answer: "No. Bought subscribers do not engage and can get the channel restricted." },
 ];
 
 export const post: AeoPost = {
@@ -110,6 +163,18 @@ export const post: AeoPost = {
       ctaHeading: "Boost",
       ctaBody: "Бот",
       faq: faqRu,
+    },
+    en: {
+      title: "Growing a Telegram channel: content, boost and budget",
+      excerpt: "What actually drives growth, where boost genuinely helps, and how to plan the budget.",
+      metaTitle: "Grow a Telegram channel | 2026",
+      metaDescription: "Growing a Telegram channel: the content foundations, what boost does and does not do, levels, and how to compare prices.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Boost Market",
+      ctaBody: "@StarsPaymee_bot — open a channel level, paid in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { hasTranslation } from "@/lib/blog/all";
 import { boostSeriesSlugs } from "@/lib/blog-aeo/boost-series";
 import type { AeoUiLocale } from "@/lib/blog-aeo/types";
 
@@ -50,12 +51,16 @@ export function BoostSeriesNav({ locale }: { locale: AeoUiLocale }) {
         Telegram Boost — 10 ta maqola
       </h2>
       <div className="blog-series-grid">
-        {boostSeriesSlugs.map((slug) => (
+        {/* Shu tilda tarjimasi yo‘q maqola noindex bo‘ladi — indekslanadigan
+            sahifadan unga havola qo‘yish Google uchun zid signal. */}
+        {boostSeriesSlugs
+          .filter((slug) => hasTranslation(slug, locale))
+          .map((slug) => (
           <Link key={slug} href={`/blog/${slug}`} className="blog-series-card">
             <h3>{L[slug].title}</h3>
             <p>{L[slug].blurb}</p>
-          </Link>
-        ))}
+            </Link>
+          ))}
       </div>
     </aside>
   );

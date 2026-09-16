@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { hasTranslation } from "@/lib/blog/all";
 import { nftGiftSeriesSlugs } from "@/lib/blog-aeo/nft-gift-series";
 import type { AeoUiLocale } from "@/lib/blog-aeo/types";
 
@@ -51,12 +52,16 @@ export function NftGiftSeriesNav({ locale }: { locale: AeoUiLocale }) {
         {heading}
       </h2>
       <div className="blog-series-grid">
-        {nftGiftSeriesSlugs.map((slug) => (
+        {/* Shu tilda tarjimasi yo‘q maqola noindex bo‘ladi — indekslanadigan
+            sahifadan unga havola qo‘yish Google uchun zid signal. */}
+        {nftGiftSeriesSlugs
+          .filter((slug) => hasTranslation(slug, locale))
+          .map((slug) => (
           <Link key={slug} href={`/blog/${slug}`} className="blog-series-card">
             <h3>{L[slug].title}</h3>
             <p>{L[slug].blurb}</p>
-          </Link>
-        ))}
+            </Link>
+          ))}
       </div>
     </aside>
   );

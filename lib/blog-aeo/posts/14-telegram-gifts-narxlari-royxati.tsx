@@ -125,6 +125,77 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      Telegram gift prices are set in <strong>Stars</strong> — usually from roughly 15 Stars for ordinary gifts up to
+      hundreds or thousands for rare and collectible ones. The price in so&lsquo;m follows the current Star rate. In
+      the bot you can buy a gift directly in so&lsquo;m with UzCard, HUMO, Click, Payme or Uzum.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <h2 id="narx-tuzilishi">How Telegram gift prices are set</h2>
+      <p>
+        Telegram sets each gift&rsquo;s base value in Stars. The final so&lsquo;m figure then depends on the current
+        Star rate. Rough tiers look like this:
+      </p>
+      <CompareTable
+        headers={["Tier", "Approx. Stars", "Typical use"]}
+        rows={[
+          ["Ordinary gifts", "~15–100 ⭐", "Everyday greetings and reactions"],
+          ["Mid-range gifts", "~100–500 ⭐", "Birthdays and holidays"],
+          ["Rare / collectible", "~500–5000+ ⭐", "Limited series, more elaborate art"],
+        ]}
+      />
+      <p>
+        Exact prices and the available catalogue change constantly — check the current list on the{" "}
+        <Link href="/gifts">Gifts page</Link> or in the bot. On Star pricing itself, see{" "}
+        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">the platform price comparison</Link>.
+      </p>
+
+      <InlineCta text="Buy a gift in so\u2018m and send it to a friend." />
+
+      <h2 id="sotib-olish">Buying and sending</h2>
+      <p>
+        A gift can be bought for yourself or sent to another @username, anonymously or with a note. The step-by-step
+        process is in{" "}
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">the gift-sending guide</Link>.
+      </p>
+
+      <h2 id="muhim">Notes on pricing</h2>
+      <ul>
+        <li>The same gift can differ slightly day to day, because the Star rate moves.</li>
+        <li>Limited gifts sell out — availability in the catalogue is what decides, not the price.</li>
+        <li>Payment is in so&lsquo;m: no foreign card and no crypto required.</li>
+      </ul>
+      <p>
+        Why two similar-looking gifts carry different prices is explained in{" "}
+        <Link href="/blog/telegram-gift-price">what a gift&rsquo;s price depends on</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "gifts documentation" },
+          { href: "https://t.me/StarsPaymee_bot", label: "@StarsPaymee_bot", note: "current catalogue and prices" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  { question: "How much does a Telegram gift cost?", answer: "From roughly 15 Stars for ordinary gifts up to thousands for collectibles." },
+  { question: "Why does the so\u2018m price change?", answer: "Because gift values are set in Stars, and the Star rate moves." },
+  { question: "Can I pay in so\u2018m?", answer: "Yes — UzCard, HUMO, Click, Payme, Uzum or Paynet. No foreign card needed." },
+  { question: "Where is the current price list?", answer: "In the bot's catalogue and on the Gifts page; it changes constantly." },
+  { question: "Why do two similar gifts cost differently?", answer: "Model, backdrop, symbol and copy number differ — those set the price." },
+  { question: "Do limited gifts run out?", answer: "Yes. Once a run ends, that gift can no longer be bought new." },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Gifts",
@@ -210,6 +281,18 @@ export const post: AeoPost = {
           answer: "Доступные подарки и точные цены показываются в @StarsPaymee_bot или на странице Gifts.",
         },
       ],
+    },
+    en: {
+      title: "Telegram gift prices: what they cost and why",
+      excerpt: "Price tiers in Stars, how the so\u2018m figure is formed, and what makes two similar gifts differ.",
+      metaTitle: "Telegram gift prices | List 2026",
+      metaDescription: "Telegram gift prices: tiers in Stars, how the so\u2018m price is worked out, payment methods and why similar gifts differ.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Browse the catalogue",
+      ctaBody: "@StarsPaymee_bot — gifts priced in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

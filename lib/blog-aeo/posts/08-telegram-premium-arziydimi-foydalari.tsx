@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { InfoGrid, InfoCard, InlineCta, KeyFacts, Sources } from "@/components/blog/aeo-blocks";
+import { InfoCard, InfoGrid, InlineCta, KeyFacts, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-premium-arziydimi-foydalari";
@@ -138,6 +138,90 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      Telegram Premium is worth it if you send large files, run several channels or chats, want an ad-free and
+      faster experience, or value the exclusive stickers, emoji, Stories and profile extras. For a heavy user the
+      12-month pack is the cheapest per month. For light use, a 1 or 3-month trial is enough to decide.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <h2 id="foydalar">What Premium actually gives you</h2>
+      <InfoGrid>
+        <InfoCard emoji="📁" title="4 GB files">Send and store files up to 4 GB instead of 2 GB.</InfoCard>
+        <InfoCard emoji="⚡" title="Faster downloads">Uncapped download speed where available.</InfoCard>
+        <InfoCard emoji="🚫" title="No ads">Sponsored messages disappear from public channels.</InfoCard>
+        <InfoCard emoji="📂" title="1000 channels, 20 folders">More subscriptions and better-organised chats.</InfoCard>
+        <InfoCard emoji="😀" title="Premium emoji and stickers">Exclusive animated sets.</InfoCard>
+        <InfoCard emoji="📸" title="Extended Stories">More stories, stealth viewing, custom durations.</InfoCard>
+        <InfoCard emoji="🎙️" title="Voice to text">Voice messages transcribed into text.</InfoCard>
+        <InfoCard emoji="🏷️" title="Profile badge">The Premium badge and extended profile options.</InfoCard>
+      </InfoGrid>
+
+      <InlineCta text="Activate Premium by username in about 10 seconds." product={{ kind: "premium", months: 12 }} />
+
+      <h2 id="kimga">Who it suits, and who can skip it</h2>
+      <p>
+        <strong>Worth it for:</strong> anyone working with large files (design, video, editing), running several
+        channels, creating content, or simply wanting an ad-free and tidier experience.
+      </p>
+      <p>
+        <strong>Not needed for:</strong> light users who mostly exchange ordinary messages. In that case a 1 or
+        3-month pack is the sensible way to find out before committing.
+      </p>
+
+      <KeyFacts label="Price and value">
+        <li>
+          <b>1 month</b> — 45,000 UZS
+        </li>
+        <li>
+          <b>3 months</b> — 160,000 UZS
+        </li>
+        <li>
+          <b>6 months</b> — 215,000 UZS
+        </li>
+        <li>
+          <b>12 months</b> — 388,000 UZS (the cheapest per month)
+        </li>
+      </KeyFacts>
+      <p>
+        The per-month gap is what decides it: a year works out roughly three times cheaper per month than paying
+        monthly. Full breakdown in{" "}
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">Premium pricing in Uzbekistan</Link>.
+      </p>
+
+      <h2 id="qanday">How to buy it</h2>
+      <p>
+        The simplest route is by username, with no account sign-in. Full steps are in{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">the easiest way to buy Premium</Link>; prices live on the{" "}
+        <Link href="/premium">Premium page</Link>. Wondering whether you need it at all?{" "}
+        <Link href="/blog/telegram-premium-kerak">Do I need Premium</Link> answers exactly that.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://telegram.org/faq_premium", label: "telegram.org/faq_premium", note: "official Premium FAQ" },
+          { href: "https://telegram.org/blog/premium", label: "telegram.org/blog/premium", note: "the Premium announcement" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  { question: "Is Telegram Premium worth it?", answer: "Yes if you send large files, run channels or want an ad-free experience. For light use, probably not." },
+  { question: "Which term is cheapest?", answer: "12 months — about 32,300 UZS a month, roughly three times cheaper than paying monthly." },
+  { question: "Can I try it briefly?", answer: "Yes, a 1-month pack costs 45,000 UZS and needs no long commitment." },
+  { question: "Is there a free trial?", answer: "Telegram runs occasional promotions, but there is no guaranteed permanent free trial." },
+  { question: "Does it remove all ads?", answer: "It removes sponsored messages in public channels — not content posted by the channels themselves." },
+  { question: "What happens when it expires?", answer: "The account is not blocked; only the Premium features stop. Details in the dedicated article." },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Premium",
@@ -229,6 +313,18 @@ export const post: AeoPost = {
             "Telegram иногда даёт промо или подарки, но гарантированной постоянной бесплатной пробы нет. Самый дешёвый вход — пакет логина на 1 месяц (50 000 сум).",
         },
       ],
+    },
+    en: {
+      title: "Is Telegram Premium worth it? The benefits, honestly",
+      excerpt: "What Premium actually gives you, who genuinely benefits, who can skip it, and which term is cheapest per month.",
+      metaTitle: "Is Telegram Premium worth it? | 2026",
+      metaDescription: "Telegram Premium benefits: 4 GB files, no ads, extended Stories and more. Who it suits, who can skip it and which term is cheapest.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Try Premium",
+      ctaBody: "@StarsPaymee_bot — from 45,000 UZS a month, paid in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

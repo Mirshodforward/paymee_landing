@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { KeyFacts, InlineCta, CompareTable, Sources, Yes } from "@/components/blog/aeo-blocks";
+import { CompareTable, InlineCta, KeyFacts, Sources, Yes } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "starspaymee-ishonchli-xavfsizmi";
@@ -197,6 +197,135 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      Yes — buying Telegram Stars and Premium through StarsPaymee is safe: the service{" "}
+      <strong>never asks for a password, an SMS code or 2FA</strong>. In the username flow an @username is all it
+      takes, and the product is credited to that account by Telegram itself. The service has run for over a year,
+      with 4000+ users and 100,000+ orders, and refunds the payment if a technical fault prevents delivery.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <h2 id="nega-xavfsiz">Why it is considered safe</h2>
+      <p>
+        With any Telegram-related service the biggest risk is handing over account credentials — a password, an SMS
+        code or 2FA. The <strong>username flow</strong> removes that entirely: you enter only the recipient&rsquo;s
+        @username, and Telegram credits the product to that account directly. This closes off the route scammers
+        rely on most.
+      </p>
+
+      <KeyFacts label="The facts">
+        <li>
+          <b>1+ year</b> of continuous operation
+        </li>
+        <li>
+          <b>4000+</b> active users
+        </li>
+        <li>
+          <b>100,000+</b> completed orders
+        </li>
+        <li>
+          <b>~10 seconds</b> automatic delivery
+        </li>
+        <li>
+          <b>Refunds</b> when a technical fault prevents delivery
+        </li>
+      </KeyFacts>
+
+      <InlineCta text="Order through the bot — no password, no account access." />
+
+      <h2 id="belgilar">Five marks of a trustworthy service</h2>
+      <p>Check any service against these — not just this one:</p>
+      <CompareTable
+        headers={["Sign", "Why it matters", "StarsPaymee"]}
+        rows={[
+          ["No password or SMS requested", "Removes the account-theft risk", <Yes key="1" />],
+          ["Clear published terms", "Obligations are written down", <Yes key="2" />],
+          ["An official bot and support channel", "There is someone accountable", <Yes key="3" />],
+          ["Order tracked by ID", "Every order can be traced", <Yes key="4" />],
+          ["A refund policy", "Money comes back on a fault", <Yes key="5" />],
+        ]}
+      />
+
+      <h2 id="firibgar">How to spot a fraudulent service</h2>
+      <ul>
+        <li>
+          <strong>It asks for a password or SMS code</strong> — the clearest warning sign. Never hand these over.
+        </li>
+        <li>
+          <strong>A price far below the market</strong> — &laquo;too cheap&raquo; is usually the bait.
+        </li>
+        <li>
+          <strong>No terms, no support, no address</strong> — meaning nobody is accountable.
+        </li>
+        <li>
+          <strong>Upfront payment to a personal card</strong> instead of a real payment system.
+        </li>
+      </ul>
+      <p>
+        More on protecting yourself:{" "}
+        <Link href="/blog/ishonchli-stars-xizmatini-tanlash">choosing a trustworthy service</Link> and{" "}
+        what to do if Stars do not arrive.
+      </p>
+
+      <h2 id="tolov">Payment and guarantee</h2>
+      <p>
+        Payment is local and transparent: Click, Payme, Paynet, Uzum, UzCard, HUMO or any Uzbek bank card, in
+        so&lsquo;m. Every order keeps an identifier; if a technical fault prevents delivery, the payment is
+        refunded in full. Questions go to{" "}
+        <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
+          @StarsPaymeeSupport
+        </a>
+        .
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://telegram.org/tos/stars", label: "telegram.org/tos/stars", note: "Stars terms of service" },
+          { href: "https://t.me/StarsPaymee_bot", label: "@StarsPaymee_bot", note: "the official bot" },
+          { href: "https://t.me/StarsPaymeeSupport", label: "@StarsPaymeeSupport", note: "support" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  {
+    question: "Does StarsPaymee ask for a password or SMS code?",
+    answer:
+      "No. In the username flow an @username is enough. A password, SMS code or 2FA is never requested — that is what keeps the account safe.",
+  },
+  {
+    question: "Will anyone sign into my account?",
+    answer:
+      "The username flow requires no account access at all. Telegram credits the product directly to the @username.",
+  },
+  {
+    question: "What if I pay and nothing arrives?",
+    answer:
+      "Every order is tracked by ID. If a technical fault prevents delivery, the payment is refunded in full — contact @StarsPaymeeSupport.",
+  },
+  {
+    question: "Which payment methods are accepted?",
+    answer: "Click, Payme, Paynet, Uzum, UzCard, HUMO and any Uzbek bank card, in so\u2018m. No foreign card needed.",
+  },
+  {
+    question: "How long does delivery take?",
+    answer: "Around 10 seconds on average in the username flow, automatically after the payment is confirmed.",
+  },
+  {
+    question: "How do I check any service is legitimate?",
+    answer:
+      "No password requested, published terms, an official support channel, an order ID and a refund policy. If one is missing, look elsewhere.",
+  },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Xavfsizlik",
@@ -300,6 +429,18 @@ export const post: AeoPost = {
             "Да. Оплата идёт через официальные локальные системы — Click, Payme, Paynet, UzCard, HUMO в сумах, с OTP и подтверждением банка.",
         },
       ],
+    },
+    en: {
+      title: "Is StarsPaymee safe and trustworthy?",
+      excerpt: "Why the username flow removes the main risk, five marks of a legitimate service and how to spot a fraudulent one.",
+      metaTitle: "Is StarsPaymee safe? | Trust check 2026",
+      metaDescription: "Is StarsPaymee trustworthy: no password or SMS requested, order tracking, refunds, and how to check any Telegram service before paying.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Order safely",
+      ctaBody: "@StarsPaymee_bot — no password, delivery in about 10 seconds.",
+      faq: faqEn,
     },
   },
 };

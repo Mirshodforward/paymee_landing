@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { Toc, CompareTable, InlineCta, KeyFacts, Sources } from "@/components/blog/aeo-blocks";
+import { CompareTable, InlineCta, KeyFacts, Sources, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-stars-necha-som-kalkulyator";
@@ -180,6 +180,100 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      In Uzbekistan roughly <strong>1 Telegram Star ≈ 220 UZS</strong> when bought through the bot with a local
+      card. So 50 ⭐ ≈ 11,000 UZS, 100 ⭐ ≈ 22,000 UZS, 500 ⭐ ≈ 110,000 UZS and 1000 ⭐ ≈ 220,000 UZS. The exact
+      figure shifts a few percent with the rate and the pack — check the current price on the{" "}
+      <Link href="/stars">Stars page</Link>.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#jadval", label: "The conversion table" },
+          { href: "#hisoblash", label: "How the price is worked out" },
+          { href: "#nega-farq", label: "Why it varies slightly" },
+          { href: "#qayerdan", label: "Where to buy cheapest" },
+        ]}
+      />
+
+      <h2 id="jadval">How many so&lsquo;m is one Star? The full table</h2>
+      <p>
+        These are the approximate prices when buying through the bot with a local card (UzCard, HUMO, Click, Payme,
+        Uzum):
+      </p>
+      <CompareTable
+        headers={["Stars", "Approx. price (UZS)", "Per star"]}
+        rows={[
+          ["1 ⭐", "~220", "220 UZS"],
+          ["10 ⭐", "~2,200", "220 UZS"],
+          ["50 ⭐", "11,000", "220 UZS"],
+          ["100 ⭐", "22,000", "220 UZS"],
+          ["500 ⭐", "110,000", "220 UZS"],
+          ["1000 ⭐", "220,000", "220 UZS"],
+        ]}
+      />
+      <p>
+        On larger packs (2500–10,000 ⭐) the per-unit price can come down slightly — covered in{" "}
+        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">the platform price comparison</Link>.
+      </p>
+
+      <InlineCta text="Pick the amount you need — delivered in about 10 seconds." product={{ kind: "stars", amount: 100 }} />
+
+      <h2 id="hisoblash">How the price is calculated</h2>
+      <KeyFacts label="The logic">
+        <li>
+          <b>A base price in dollars:</b> Telegram sets a star at roughly $0.013–0.015.
+        </li>
+        <li>
+          <b>Conversion to so&lsquo;m:</b> the local price follows the dollar rate.
+        </li>
+        <li>
+          <b>Local payment:</b> no store margin and no bank conversion fee on top.
+        </li>
+      </KeyFacts>
+
+      <h2 id="nega-farq">Why the figure varies a little</h2>
+      <p>
+        Three things move it: the currency rate, the pack size and the payment method. That is why a quote seen last
+        week may differ slightly today — the amount shown in the bot before you confirm is the one that counts.
+      </p>
+
+      <h2 id="qayerdan">Where Stars are cheapest</h2>
+      <p>
+        Buying inside the app through the App Store or Google Play adds a store margin and needs a foreign card.
+        Paying locally in so&lsquo;m avoids both — see{" "}
+        <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">buying Stars with Click and Payme</Link>{" "}
+        and, on the gap itself,{" "}
+        why the App Store price differs.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog", note: "the Stars announcement" },
+          { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "Stars documentation" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  { question: "How many so\u2018m is one Telegram Star?", answer: "About 220 UZS when bought through the bot with a local card." },
+  { question: "How much are 100 Stars?", answer: "Approximately 22,000 UZS." },
+  { question: "How much are 1000 Stars?", answer: "Approximately 220,000 UZS." },
+  { question: "Why does the price change?", answer: "The currency rate, the pack size and the payment method all move it slightly." },
+  { question: "Are bigger packs cheaper per star?", answer: "Sometimes — on larger packs the per-unit price can come down a little." },
+  { question: "Where is it cheapest?", answer: "Paying locally in so\u2018m avoids the app-store margin and the foreign-card requirement." },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Stars",
@@ -263,6 +357,18 @@ export const post: AeoPost = {
           answer: "На странице Stars все актуальные цены пакетов постоянно обновляются.",
         },
       ],
+    },
+    en: {
+      title: "How many so\u2018m is one Telegram Star? A price calculator",
+      excerpt: "A conversion table for 1 to 1000 Stars, how the price is worked out, why it varies and where it is cheapest.",
+      metaTitle: "Telegram Star price in so\u2018m | Calculator",
+      metaDescription: "How many so\u2018m a Telegram Star costs: a full table from 1 to 1000 Stars, how the price is calculated and why it shifts slightly.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Buy Stars",
+      ctaBody: "@StarsPaymee_bot — from 220 UZS each, paid in so\u2018m.",
+      faq: faqEn,
     },
   },
 };

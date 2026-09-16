@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { Toc, Steps, Step, InlineCta, KeyFacts, Sources } from "@/components/blog/aeo-blocks";
+import { InlineCta, KeyFacts, Sources, Step, Steps, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-sovgani-collectible-upgrade";
@@ -204,6 +204,124 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      Upgrading a Telegram gift to <strong>collectible</strong> turns an ordinary gift into a numbered copy with
+      unique attributes. The upgrade costs extra Stars, and the resulting model, backdrop and pattern combination is{" "}
+      <strong>random</strong> — you cannot know the outcome in advance. It usually makes sense on rarer, pricier
+      gifts and rarely pays off on ordinary ones.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#nima", label: "What upgrading means" },
+          { href: "#bosqichlar", label: "How it is done" },
+          { href: "#tasodifiy", label: "How attributes are chosen" },
+          { href: "#narx", label: "What it costs" },
+          { href: "#qachon", label: "When it is worth it" },
+        ]}
+      />
+
+      <h2 id="nima">What upgrading a gift to collectible means</h2>
+      <p>
+        An ordinary Telegram gift looks the same for everyone who receives it. Raised to <strong>collectible</strong>{" "}
+        status, it gains a unique number (say 47 of 1000) and its own visual combination — which sets it apart from
+        other copies and makes it transferable to another user.
+      </p>
+
+      <h2 id="bosqichlar">How the upgrade works</h2>
+      <Steps>
+        <Step title="Pick the gift">Open the one you want from the gifts list on your profile.</Step>
+        <Step title="Press «Upgrade»">The button appears only if that gift supports it.</Step>
+        <Step title="Check the price and pay">Review the Stars required and confirm.</Step>
+        <Step title="See the result">
+          The system picks a random model, backdrop and pattern — the outcome shows immediately.
+        </Step>
+      </Steps>
+
+      <InlineCta text="Need Stars for the upgrade? Buy them in so\u2018m in about 10 seconds." product={{ kind: "stars", amount: 100 }} />
+
+      <h2 id="tasodifiy">How model, backdrop and pattern are chosen</h2>
+      <KeyFacts label="The randomness">
+        <li>
+          <b>You cannot know beforehand:</b> the result is not shown until after payment.
+        </li>
+        <li>
+          <b>Rarity tiers exist:</b> some combinations appear less often and are valued more highly.
+        </li>
+        <li>
+          <b>There is no re-roll:</b> once upgraded, the combination is fixed.
+        </li>
+        <li>
+          <b>It cannot be undone:</b> a collectible does not go back to being an ordinary gift.
+        </li>
+      </KeyFacts>
+
+      <h2 id="narx">What the upgrade costs</h2>
+      <p>
+        The cost is set in Stars and differs per gift — it is shown on the gift card before you confirm. Since the
+        outcome is random, treat the Stars you spend as the full cost of the attempt, not as an investment with an
+        expected return.
+      </p>
+      <p>
+        Need Stars first? See{" "}
+        <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">buying Stars in so&lsquo;m</Link> and{" "}
+        <Link href="/blog/telegram-stars-necha-som-kalkulyator">how many so&lsquo;m a Star costs</Link>.
+      </p>
+
+      <h2 id="qachon">When upgrading is worth it</h2>
+      <KeyFacts label="Worth considering">
+        <li>
+          <b>On rarer gifts</b> — where the base item already carries value.
+        </li>
+        <li>
+          <b>If you want to transfer it</b> — only collectibles can be transferred or resold.
+        </li>
+        <li>
+          <b>For the collection itself</b> — if you enjoy the result regardless of price.
+        </li>
+      </KeyFacts>
+      <KeyFacts label="Probably not worth it">
+        <li>On ordinary, widely available gifts.</li>
+        <li>If the plan is to profit — the random outcome makes that a gamble, not a strategy.</li>
+        <li>If the upgrade costs more than comparable collectibles sell for.</li>
+      </KeyFacts>
+      <p>
+        On what actually sets a collectible&rsquo;s price, see{" "}
+        <Link href="/blog/telegram-gift-price">why similar gifts cost differently</Link>. On the risks of treating
+        them as assets: <Link href="/blog/telegram-nft-investitsiya">NFT gifts as an investment</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          {
+            href: "https://telegram.org/blog/collectible-gifts-and-more",
+            label: "telegram.org/blog",
+            note: "the collectible gifts announcement — upgrading costs Stars",
+          },
+          { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "gifts documentation" },
+        ]}
+      />
+    </>
+  );
+}
+
+const faqEn = [
+  { question: "What does upgrading a gift do?", answer: "It turns an ordinary gift into a numbered collectible with unique attributes, which can then be transferred." },
+  { question: "How much does it cost?", answer: "It is paid in Stars and varies by gift; the amount is shown on the gift card before you confirm." },
+  { question: "Can I choose the model or backdrop?", answer: "No. The combination is random and is only revealed after payment." },
+  { question: "Can I undo an upgrade?", answer: "No. Once upgraded, the gift stays a collectible with that fixed combination." },
+  { question: "Can every gift be upgraded?", answer: "No — the button appears only on gifts that support it." },
+  { question: "Is upgrading profitable?", answer: "It is a gamble, not a strategy. The outcome is random and rarity guarantees no return." },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Gifts",
@@ -293,6 +411,18 @@ export const post: AeoPost = {
           answer: "Часто нет — апгрейд обычно имеет больше смысла для редких или limited подарков.",
         },
       ],
+    },
+    en: {
+      title: "Upgrading a Telegram gift to collectible: how it works",
+      excerpt: "What the upgrade changes, the steps, why the result is random, what it costs and when it is genuinely worth doing.",
+      metaTitle: "Upgrade a Telegram gift to collectible | 2026",
+      metaDescription: "How to upgrade a Telegram gift to collectible: the steps, the random model and backdrop, the Stars cost and when it is worth it.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Get Stars for the upgrade",
+      ctaBody: "@StarsPaymee_bot — Stars in so\u2018m, delivered in about 10 seconds.",
+      faq: faqEn,
     },
   },
 };

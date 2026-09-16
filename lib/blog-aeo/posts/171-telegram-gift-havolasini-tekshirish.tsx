@@ -1,14 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import {
-  CompareTable,
-  InfoCard,
-  InfoGrid,
-  KeyFacts,
-  Sources,
-  Step,
-  Steps,
-  Toc,
-} from "@/components/blog/aeo-blocks";
+import { CompareTable, InfoCard, InfoGrid, KeyFacts, Sources, Step, Steps, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-gift-havolasini-tekshirish";
@@ -20,7 +11,7 @@ const SLUG = "telegram-gift-havolasini-tekshirish";
  * sifatida beriladi va `example` domenida — o‘quvchini haqiqiy zararli
  * sahifaga olib boradigan havola qo‘yilmaydi.
  */
-function LinkCheckTable({ locale }: { locale: "uz" | "ru" }) {
+function LinkCheckTable({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
     uz: {
       headers: ["Nima ko‘rinadi", "Nima tekshiriladi", "Xulosa"],
@@ -40,6 +31,16 @@ function LinkCheckTable({ locale }: { locale: "uz" | "ru" }) {
         ["Адрес: telegram-gift-bot.example", "Находится ли этот бот внутри Telegram", "Не находится в поиске — доверия нет"],
         ["Прислали скриншот", "Скриншот проверить невозможно", "Не принимайте как доказательство"],
         ["Требование «войдите»", "Telegram не просит логин ради подарка", "Это попытка угона аккаунта"],
+      ],
+    },
+    en: {
+      headers: ["What you see", "What to check", "Verdict"],
+      rows: [
+        ["Visible text: t.me/nft/...", "Long-press to reveal the real address before tapping", "Text and address disagree — stop"],
+        ["Address: t-me-gifts.example", "Does the domain belong to Telegram itself", "Extra words and hyphens mean a fake"],
+        ["Address: telegram-gift-bot.example", "Can this bot be found inside Telegram", "Not in search — not trustworthy"],
+        ["They sent a screenshot", "A screenshot cannot be verified", "Do not accept it as proof"],
+        ["A request to «log in»", "Telegram never asks for a login over a gift", "This is an account-theft attempt"],
       ],
     },
   }[locale];
@@ -440,6 +441,183 @@ const ruFaq = [
   },
 ];
 
+function EnAnswer() {
+  return (
+    <p>
+      A link on its own proves nothing. Being sent a link to a genuine gift page{" "}
+      <b>confirms neither the seller&rsquo;s honesty nor the safety of the deal</b> — anyone can send a link to
+      someone else&rsquo;s gift. So verify the <b>gift</b>, by finding it inside Telegram yourself, rather than the
+      link.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#manzil", label: "Visible text vs real address" },
+          { href: "#mustaqil", label: "Find the gift yourself" },
+          { href: "#xususiyat", label: "Collection, number, attributes" },
+          { href: "#skrinshot", label: "Why a screenshot proves nothing" },
+          { href: "#login", label: "The «log in» demand" },
+          { href: "#vositachi", label: "Unknown bots and middlemen" },
+          { href: "#keyin", label: "If you already entered data" },
+        ]}
+      />
+
+      <p>
+        This is not general account-security advice — it is about one specific moment:{" "}
+        <b>someone sent you a Gift link and you are about to buy</b>. Here is what to check right then.
+      </p>
+
+      <h2 id="manzil">Compare the visible text with the address that opens</h2>
+      <p>
+        In Telegram the <b>visible text</b> of a link and the <b>real address</b> it leads to can differ. That is the
+        most commonly used trick.
+      </p>
+      <Steps>
+        <Step title="1. See the address without tapping">
+          Long-press the link (or hover on a computer) — the real address appears.
+        </Step>
+        <Step title="2. Read the domain carefully">
+          Look for extra words, hyphens and substituted letters.
+        </Step>
+        <Step title="3. In doubt, do not tap at all">
+          You can find the gift inside Telegram on your own anyway.
+        </Step>
+      </Steps>
+      <LinkCheckTable locale="en" />
+      <p>
+        The addresses in the table are <b>examples only</b>, deliberately left as plain text with no link — we do not
+        send readers to genuinely malicious pages.
+      </p>
+
+      <h2 id="mustaqil">Find the gift inside Telegram yourself</h2>
+      <p>
+        This is the strongest check and it takes a minute. If the gift is real, you will find it{" "}
+        <b>without the seller&rsquo;s link</b>.
+      </p>
+      <KeyFacts label="What to do">
+        <li>Ask the seller for the gift name and collection — the name, not a link.</li>
+        <li>Search for that name yourself in Telegram or the gifts section.</li>
+        <li>Compare what the page shows with what the seller claims.</li>
+        <li>If you cannot find it, or it does not match, do not continue.</li>
+      </KeyFacts>
+
+      <h2 id="xususiyat">Comparing collection, number and attributes</h2>
+      <p>
+        Collectibles can look alike, but every copy carries its own marks. Those are what distinguish it:
+      </p>
+      <InfoGrid>
+        <InfoCard emoji="🏷️" title="Collection name">
+          Does the collection on the page match what the seller said?
+        </InfoCard>
+        <InfoCard emoji="🔢" title="Copy number">
+          Is the number stated precisely, and does it match their claim?
+        </InfoCard>
+        <InfoCard emoji="🎨" title="Model, backdrop, symbol">
+          These three separate one copy from another — compare them side by side.
+        </InfoCard>
+        <InfoCard emoji="👤" title="Current owner">
+          Who holds the gift right now — is it actually the seller?
+        </InfoCard>
+      </InfoGrid>
+      <p>
+        Why similar gifts carry different prices is explained in{" "}
+        <Link href="/blog/telegram-gift-price">what a gift&rsquo;s price depends on</Link>.
+      </p>
+
+      <h2 id="skrinshot">Why a screenshot is not proof</h2>
+      <p>
+        A screenshot is the easiest thing to edit. The ownership, number or price it shows cannot be verified. So the
+        rule is simple:
+      </p>
+      <KeyFacts label="The rule">
+        <li>A screenshot is for conversation, not for decisions.</li>
+        <li>Verify every claim yourself inside Telegram.</li>
+        <li>&laquo;Do not believe me? Here is a screenshot&raquo; does not replace a check.</li>
+      </KeyFacts>
+
+      <h2 id="login">«Log in to receive the gift» is a scam</h2>
+      <p>
+        Telegram <b>never</b> asks you to log in on a separate site, or to enter a password or login code, in order
+        to send or receive a gift.
+      </p>
+      <KeyFacts label="Stop immediately if asked to">
+        <li>Forward a login code or password.</li>
+        <li>&laquo;Sign in with your account&raquo; on a page outside Telegram.</li>
+        <li>Enter a seed phrase to &laquo;confirm&raquo; a gift.</li>
+        <li>Share your screen or install a remote-access app.</li>
+      </KeyFacts>
+
+      <h2 id="vositachi">An unknown bot or «middleman» from the seller</h2>
+      <p>
+        Another common scheme is offering an unfamiliar bot or &laquo;guarantor&raquo; for a &laquo;safe deal&raquo;.
+        Such a middleman is usually the seller themselves, or an accomplice.
+      </p>
+      <Steps>
+        <Step title="1. Who chose the middleman?">If the seller proposed them, they are not an independent guarantor.</Step>
+        <Step title="2. Does the bot appear in Telegram search?">Not there, or newly created — no reason to trust it.</Step>
+        <Step title="3. «Send first, I pay after»">
+          Whichever side says it, this is the most common scam of all.
+        </Step>
+        <Step title="4. Is there any rush?">Time pressure is always a warning sign.</Step>
+      </Steps>
+
+      <h2 id="keyin">If you already entered data on a suspicious page</h2>
+      <p>Time matters here — do the following straight away:</p>
+      <Steps>
+        <Step title="1. Check active sessions">
+          In Telegram settings, terminate any device you do not recognise.
+        </Step>
+        <Step title="2. Turn on two-step verification">If a password was already set, change it.</Step>
+        <Step title="3. If you entered card details">Call the bank and block the card.</Step>
+        <Step title="4. Warn people close to you">
+          A stolen account is used to message them in your name.
+        </Step>
+      </Steps>
+      <p>
+        The full account-protection guide is{" "}
+        2FA and protective measures. The safe
+        buying order is in{" "}
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">the gifts guide</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "gifts and ownership" },
+          { href: "https://telegram.org/faq", label: "telegram.org/faq", note: "official security FAQ" },
+        ]}
+      />
+    </>
+  );
+}
+
+const enFaq = [
+  {
+    question: "If the Gift link is genuine, is the seller trustworthy?",
+    answer: "No. Anyone can send a link to someone else's gift. A link does not prove the seller owns it.",
+  },
+  {
+    question: "How do I check a link?",
+    answer: "Long-press it to see the real address without tapping. Then find the gift by name inside Telegram yourself.",
+  },
+  { question: "The seller sent a screenshot — is that enough?", answer: "No. Screenshots are trivial to edit and impossible to verify." },
+  {
+    question: "They ask me to «log in to receive the gift».",
+    answer: "That is a scam. Telegram never asks for a login, password or code on a separate site over a gift.",
+  },
+  { question: "The seller suggests a middleman bot — can I trust it?", answer: "A guarantor chosen by the seller is not independent. There is no basis for trust." },
+  { question: "What exactly should I compare?", answer: "Collection, copy number, model, backdrop, symbol and current owner — against what the seller claims." },
+  {
+    question: "I already entered data on a suspicious page.",
+    answer: "Terminate active sessions, enable two-step verification or change the password, and call your bank if card details were entered.",
+  },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Xavfsizlik",
@@ -482,6 +660,18 @@ export const post: AeoPost = {
       ctaHeading: "Надёжная покупка",
       ctaBody: "@StarsPaymee_bot — открытый каталог, цена в сумах и номер заказа.",
       faq: ruFaq,
+    },
+    en: {
+      title: "Is that Telegram Gift link real? Checks before you buy",
+      excerpt: "Visible text versus the real address, finding the gift yourself, why a screenshot is not proof, and what to do about middlemen.",
+      metaTitle: "Check a Telegram Gift link before buying",
+      metaDescription: "Is a Telegram Gift link genuine: see the address without tapping, verify the gift yourself, compare collection and number, and spot scams.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Buy safely",
+      ctaBody: "@StarsPaymee_bot — an open catalogue, prices in so\u2018m and an order number.",
+      faq: enFaq,
     },
   },
 };

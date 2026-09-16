@@ -1,13 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import {
-  CompareTable,
-  InlineCta,
-  KeyFacts,
-  Sources,
-  Step,
-  Steps,
-  Toc,
-} from "@/components/blog/aeo-blocks";
+import { CompareTable, InlineCta, KeyFacts, Sources, Step, Steps, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "premium-bor-odamga-premium-sovga";
@@ -20,7 +12,7 @@ const SLUG = "premium-bor-odamga-premium-sovga";
  * tushganda nima bo‘lishi yozilmagan, shuning uchun har bir usulning sharti
  * alohida ko‘rsatiladi va tekshirish tavsiya etiladi.
  */
-function MethodTable({ locale }: { locale: "uz" | "ru" }) {
+function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
     uz: {
       headers: ["Xarid usuli", "Qabul qiluvchida Premium bor bo‘lsa", "Nima qilish kerak"],
@@ -69,6 +61,31 @@ function MethodTable({ locale }: { locale: "uz" | "ru" }) {
           "Розыгрыш или подарочный код",
           "Условия применения кода задаются отдельно",
           "Прочитайте условия кода — они отличаются от подарка",
+        ],
+      ],
+    },
+    en: {
+      headers: ["Purchase route", "If the recipient already has Premium", "What to do"],
+      rows: [
+        [
+          "A gift inside Telegram",
+          "The app checks for itself and shows the reason if it cannot proceed",
+          "Read the on-screen message — it names the exact cause",
+        ],
+        [
+          "StarsPaymee — username flow (1/3/6/12 mo)",
+          "The service adds the new term on top of the current one",
+          "Confirm the username and status in the bot before ordering",
+        ],
+        [
+          "StarsPaymee — sign-in flow",
+          "An operator handles activation and counts the term manually",
+          "Clarify the dates with support before placing the order",
+        ],
+        [
+          "A giveaway or gift code",
+          "The code carries its own conditions",
+          "Read the code's terms — they differ from a normal gift",
         ],
       ],
     },
@@ -469,6 +486,176 @@ const ruFaq = [
   },
 ];
 
+function EnAnswer() {
+  return (
+    <p>
+      In most cases yes — but the outcome <b>depends on how you buy it</b>, so there is no universal &laquo;the term
+      always stacks&raquo; answer. Before ordering, check two things: whether Premium is genuinely active on the
+      recipient&rsquo;s account, and how your chosen route behaves in that situation.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#tekshirish", label: "Checking for Premium" },
+          { href: "#usul", label: "Which route are you using" },
+          { href: "#jadval", label: "Situation and route" },
+          { href: "#xato", label: "If it says «cannot send»" },
+          { href: "#oldindan", label: "Checks before ordering" },
+          { href: "#support", label: "If you already paid" },
+        ]}
+      />
+
+      <p>
+        The point of this article is to <b>stop you before an order that will not do what you expect</b>. The general
+        gifting procedure is in{" "}
+        <Link href="/blog/telegram-premium-sovga-username-orqali">gifting Premium by username</Link>; here we cover
+        one case only — the recipient already has a subscription.
+      </p>
+
+      <h2 id="tekshirish">How to check whether they already have Premium</h2>
+      <p>
+        The simplest and most reliable way is to look at their profile. When Premium is active, a star badge sits
+        next to the name and everyone can see it.
+      </p>
+      <Steps>
+        <Step title="1. Open the profile">Through the chat or via search.</Step>
+        <Step title="2. Look for the badge next to the name">
+          A badge means the subscription is active. No badge means none.
+        </Step>
+        <Step title="3. Ask them about the end date">
+          The badge does not show <b>when</b> it ends — only the owner sees that in their settings.
+        </Step>
+      </Steps>
+      <KeyFacts label="Why the date matters">
+        <li>Gifting a year to someone who just bought a year themselves is probably not the best choice.</li>
+        <li>If only days remain, the gift lands exactly when it is useful.</li>
+        <li>For a surprise, mutual friends are the usual way to find out the date.</li>
+      </KeyFacts>
+
+      <h2 id="usul">Which route are you using</h2>
+      <p>This question decides the outcome, because the routes behave differently:</p>
+      <KeyFacts label="Three routes">
+        <li>
+          <b>A gift inside Telegram</b> — the app checks by itself and states the reason on screen if it cannot
+          proceed.
+        </li>
+        <li>
+          <b>A giveaway or gift code</b> — codes carry their own conditions, which differ from a normal gift.
+        </li>
+        <li>
+          <b>A service such as StarsPaymee</b> — here the flow matters: username and sign-in behave differently.
+        </li>
+      </KeyFacts>
+      <p>
+        Worth saying plainly: Telegram&rsquo;s public FAQ <b>does not separately document what happens when a gift
+        lands on an account with an active subscription</b>. That is why every row in the table below carries a
+        &laquo;check first&raquo; note — caution, not bureaucracy.
+      </p>
+
+      <h2 id="jadval">Situation, route and what to do</h2>
+      <MethodTable locale="en" />
+
+      <h2 id="xato">If you see «cannot send to this user»</h2>
+      <p>That message usually has nothing to do with an existing subscription. Check in order:</p>
+      <Steps>
+        <Step title="1. Is the username right?">
+          Copy it from the profile. Owners can change a username at any time.
+        </Step>
+        <Step title="2. Has the recipient restricted gifts?">
+          Telegram allows limiting incoming gifts — it is a privacy setting.
+        </Step>
+        <Step title="3. Try a different term">Sometimes the issue is the specific pack, not gifting itself.</Step>
+        <Step title="4. Try another person">
+          If it goes through, the cause is on their side; if not, it is on yours or in the pack.
+        </Step>
+      </Steps>
+      <p>
+        Other gift-sending errors are covered in{" "}
+        why a gift will not send.
+      </p>
+
+      <h2 id="oldindan">Checks before ordering</h2>
+      <KeyFacts label="Three steps">
+        <li>
+          <b>Copy the username from the profile</b> and read it once more before pasting it into the bot.
+        </li>
+        <li>
+          <b>Look at the profile badge</b> — that tells you whether a subscription exists.
+        </li>
+        <li>
+          <b>Pick the route</b> — gifts go through the username flow, with terms of 1, 3, 6 and 12 months.
+        </li>
+      </KeyFacts>
+
+      <InlineCta text="Check the username, choose a term and order." product={{ kind: "premium", months: 3 }} />
+
+      <h2 id="support">If the payment already went through</h2>
+      <p>
+        If it did and the result is not what you expected, do not place another order — write first. One message with
+        the following gets it resolved faster:
+      </p>
+      <KeyFacts label="What to send support">
+        <li>
+          <b>The order ID</b> and the time of payment.
+        </li>
+        <li>
+          <b>The recipient&rsquo;s username</b> — exactly as you entered it.
+        </li>
+        <li>
+          <b>The term you chose</b> and the flow used.
+        </li>
+        <li>
+          <b>A screenshot</b> of the on-screen message, if an error was shown.
+        </li>
+      </KeyFacts>
+      <p>
+        Write to{" "}
+        <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
+          @StarsPaymeeSupport
+        </a>
+        . Prices and terms are in{" "}
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">the Premium pricing article</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://telegram.org/faq_premium", label: "telegram.org/faq_premium", note: "official Premium FAQ" },
+          { href: "https://core.telegram.org/api/premium", label: "core.telegram.org/api/premium", note: "the Premium gifting flow" },
+        ]}
+      />
+    </>
+  );
+}
+
+const enFaq = [
+  {
+    question: "Can I gift Premium to someone who already has it?",
+    answer: "Usually yes, but the outcome depends on the purchase route. Check the recipient's status and your flow's terms first.",
+  },
+  {
+    question: "Will the term stack on the existing subscription?",
+    answer:
+      "In the StarsPaymee username flow the new term is added to the current one. Telegram's public FAQ does not document this case, so check first on other routes.",
+  },
+  { question: "How do I know if they have Premium?", answer: "Open their profile — an active subscription shows a star badge next to the name." },
+  { question: "Can I see when it expires?", answer: "No. The badge only shows that a subscription exists; the owner sees the date in their settings." },
+  {
+    question: "What if it says «cannot send to this user»?",
+    answer: "Copy and verify the username, ask them about their gift privacy settings, and try a different term and a different person.",
+  },
+  { question: "Which terms can be gifted?", answer: "1, 3, 6 and 12 months — all through the username flow, with no password." },
+  {
+    question: "I paid and the result is wrong — what now?",
+    answer: "Do not reorder. Message @StarsPaymeeSupport with the order ID, payment time, recipient username, term and a screenshot.",
+  },
+];
 export const post: AeoPost = {
   slug: SLUG,
   category: "Premium",
@@ -511,6 +698,18 @@ export const post: AeoPost = {
       ctaHeading: "Дарите Premium?",
       ctaBody: "@StarsPaymee_bot — проверьте username, выберите срок и оплатите в сумах.",
       faq: ruFaq,
+    },
+    en: {
+      title: "Can you gift Premium to someone who already has it?",
+      excerpt: "What happens when the recipient has an active subscription: checking status, how each route behaves, the «cannot send» error and what to do after paying.",
+      metaTitle: "Gift Premium to someone who already has it",
+      metaDescription: "Can you gift Telegram Premium when a subscription is already active: how to check status, how routes differ, common errors and next steps.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Gifting Premium?",
+      ctaBody: "@StarsPaymee_bot — check the username, pick a term and pay in so\u2018m.",
+      faq: enFaq,
     },
   },
 };
