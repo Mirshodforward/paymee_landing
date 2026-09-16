@@ -9,7 +9,8 @@ function UzAnswer() {
   return (
     <p>
       Ha. Xalqaro bank kartasi bo‘lmasa ham Stars sotib olish mumkin: <b>@StarsPaymee_bot</b> mahalliy to‘lov
-      usullarini qabul qiladi — UzCard, HUMO, Click, Payme va <b>Paynet</b> (naqd). Xalqaro karta yoki qo‘shimcha
+      usullarini qabul qiladi — UzCard, HUMO, Click, Payme va Uzum. <b>Naqd pul</b> ham ishlaydi: uni
+      terminalda kartaga yoki hamyonga solasiz. Xalqaro karta yoki qo‘shimcha
       hisob ochish shart emas.
     </p>
   );
@@ -34,7 +35,7 @@ function UzBody() {
           Click va Payme ilovalari orqali.
         </InfoCard>
         <InfoCard emoji="🏧" title="Naqd to‘lov">
-          Paynet orqali naqd pul bilan.
+          Naqd pul bilan — terminalda kartaga yoki Click/Payme hamyoniga solib.
         </InfoCard>
         <InfoCard emoji="🇷🇺" title="Rubl">
           Faqat SBP tizimi orqali.
@@ -90,7 +91,8 @@ function RuAnswer() {
   return (
     <p>
       Да. Stars можно купить и без международной банковской карты: <b>@StarsPaymee_bot</b> принимает местные способы
-      оплаты — UzCard, HUMO, Click, Payme и <b>Paynet</b> (наличные). Международная карта или дополнительный счёт не
+      оплаты — UzCard, HUMO, Click, Payme и Uzum. <b>Наличные</b> тоже подходят: их вносят в терминале
+      на карту или в кошелёк. Международная карта или дополнительный счёт не
       нужны.
     </p>
   );
@@ -114,7 +116,7 @@ function RuBody() {
           Через приложения Click и Payme.
         </InfoCard>
         <InfoCard emoji="🏧" title="Наличные">
-          Через Paynet наличными деньгами.
+          Наличными — внося их в терминале на карту или в кошелёк Click/Payme.
         </InfoCard>
         <InfoCard emoji="🇷🇺" title="Рубли">
           Только через систему СБП.
@@ -168,7 +170,8 @@ function EnAnswer() {
   return (
     <p>
       Yes. You can buy Stars without an international bank card: <b>@StarsPaymee_bot</b> accepts local payment
-      methods — UzCard, HUMO, Click, Payme and <b>Paynet</b> (cash). No international card and no extra account are
+      methods — UzCard, HUMO, Click, Payme and Uzum. <b>Cash</b> works too: you feed it into a terminal,
+      onto a card or a wallet. No international card and no extra account are
       needed.
     </p>
   );
@@ -192,7 +195,7 @@ function EnBody() {
           Through the Click and Payme apps.
         </InfoCard>
         <InfoCard emoji="🏧" title="Cash">
-          Through Paynet with physical money.
+          In cash — fed into a terminal, onto a card or a Click/Payme wallet.
         </InfoCard>
         <InfoCard emoji="🇷🇺" title="Roubles">
           Through the SBP system only.
@@ -242,9 +245,15 @@ function EnBody() {
 }
 
 const uzFaq = [
-  { question: "Kartasiz Stars sotib olsam bo‘ladimi?", answer: "Ha. Click, Payme yoki Paynet orqali naqd to‘lov varianti mavjud." },
+  {
+    question: "Kartasiz Stars sotib olsam bo‘ladimi?",
+    answer: "Ha. Click, Payme, Uzum yoki naqd pul varianti mavjud — naqdni terminalda kartaga yoxud hamyonga solasiz.",
+  },
   { question: "Xalqaro karta shartmi?", answer: "Yo‘q, umuman kerak emas." },
-  { question: "Naqd pul bilan qanday to‘layman?", answer: "Paynet terminali yoki ilovasi orqali." },
+  {
+    question: "Naqd pul bilan qanday to‘layman?",
+    answer: "Botda «naqd» tugmasi yo‘q. Naqd pulni terminalda, bank kassasida yoki cash-in bankomatda kartaga yoki Click/Payme hamyoniga solasiz, keyin botda shu usulni tanlaysiz.",
+  },
   { question: "Qo‘shimcha hisob ochish kerakmi?", answer: "Yo‘q, hech qanday qo‘shimcha ro‘yxatdan o‘tish talab qilinmaydi." },
   { question: "Konvertatsiya bo‘ladimi?", answer: "Yo‘q — to‘lov to‘g‘ridan-to‘g‘ri so‘mda." },
   { question: "Yordam o‘zbek tilidami?", answer: "Ha, qo‘llab-quvvatlash mahalliy tilda." },
@@ -253,9 +262,15 @@ const uzFaq = [
 ];
 
 const ruFaq = [
-  { question: "Можно ли купить Stars без карты?", answer: "Да. Доступны Click, Payme или наличная оплата через Paynet." },
+  {
+    question: "Можно ли купить Stars без карты?",
+    answer: "Да. Доступны Click, Payme, Uzum или наличные — их вносят в терминале на карту либо в кошелёк.",
+  },
   { question: "Обязательна ли международная карта?", answer: "Нет, она вообще не нужна." },
-  { question: "Как заплатить наличными?", answer: "Через терминал или приложение Paynet." },
+  {
+    question: "Как заплатить наличными?",
+    answer: "Кнопки «наличные» в боте нет. Деньги вносят в терминале, кассе банка или банкомате с cash-in на карту либо в кошелёк Click/Payme, а затем выбирают этот способ в боте.",
+  },
   { question: "Нужно ли открывать дополнительный счёт?", answer: "Нет, никакой дополнительной регистрации не требуется." },
   { question: "Будет ли конвертация?", answer: "Нет — оплата сразу в сумах." },
   { question: "Поддержка на местном языке?", answer: "Да, поддержка ведётся на местном языке." },
@@ -264,9 +279,15 @@ const ruFaq = [
 ];
 
 const enFaq = [
-  { question: "Can I buy Stars without a card?", answer: "Yes. Click, Payme or cash through Paynet are available." },
+  {
+    question: "Can I buy Stars without a card?",
+    answer: "Yes. Click, Payme, Uzum or cash are all available — cash is fed into a terminal, onto a card or a wallet.",
+  },
   { question: "Is an international card required?", answer: "No, it is not needed at all." },
-  { question: "How do I pay in cash?", answer: "Through a Paynet terminal or app." },
+  {
+    question: "How do I pay in cash?",
+    answer: "There is no “cash” button in the bot. You put the money onto a card or into a Click/Payme wallet at a terminal, a bank desk or a cash-in ATM, then pick that method in the bot.",
+  },
   { question: "Do I need to open an extra account?", answer: "No, no additional registration is required." },
   { question: "Will there be conversion?", answer: "No — payment is directly in so‘m." },
   { question: "Is support in the local language?", answer: "Yes, support is provided locally." },
@@ -284,14 +305,13 @@ export const post: AeoPost = {
     "telegram stars kartasiz sotib olish",
     "kartasiz stars olish",
     "stars naqd tolov",
-    "paynet orqali stars",
     "bank kartasisiz stars",
     "stars kartasiz 2026",
   ],
   howToSteps: [
     { name: "Botga kiring", text: "@StarsPaymee_bot botini oching." },
     { name: "Miqdorni tanlang", text: "Kerakli Stars sonini belgilang." },
-    { name: "To‘lov usulini tanlang", text: "Click, Payme, Paynet yoki milliy karta." },
+    { name: "To‘lov usulini tanlang", text: "Click, Payme, Uzum yoki milliy karta; naqd pul avval kartaga solinadi." },
     { name: "To‘lang", text: "Summa so‘mda ko‘rsatiladi." },
     { name: "Qabul qiling", text: "Stars bir necha daqiqada hisobga tushadi." },
   ],
@@ -299,43 +319,43 @@ export const post: AeoPost = {
     uz: {
       title: "Telegram Stars kartasiz sotib olish mumkinmi",
       excerpt:
-        "Xalqaro bank kartasisiz Stars sotib olish yo‘llari: Click, Payme, Paynet orqali naqd to‘lov, jarayon va xavfsizlik maslahatlari.",
+        "Xalqaro bank kartasisiz Stars sotib olish yo‘llari: Click, Payme, Uzum va naqd pul, jarayon hamda xavfsizlik maslahatlari.",
       metaTitle: "Telegram Stars kartasiz sotib olish mumkinmi",
       metaDescription:
-        "Telegram Stars kartasiz sotib olish: Click, Payme va Paynet orqali naqd to‘lov imkoniyati. Xalqaro karta va qo‘shimcha hisob kerak emas.",
+        "Telegram Stars kartasiz sotib olish: Click, Payme, Uzum va naqd pul imkoniyati. Xalqaro karta va qo‘shimcha hisob kerak emas.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Kartasiz Stars oling",
-      ctaBody: "@StarsPaymee_bot — Click, Payme yoki Paynet orqali naqd to‘lov.",
+      ctaBody: "@StarsPaymee_bot — Click, Payme, Uzum yoki naqd pul bilan to‘lov.",
       faq: uzFaq,
     },
     ru: {
       title: "Можно ли купить Telegram Stars без карты",
       excerpt:
-        "Способы покупки Stars без международной банковской карты: Click, Payme, наличные через Paynet, процесс и советы по безопасности.",
+        "Способы покупки Stars без международной банковской карты: Click, Payme, Uzum и наличные, процесс и советы по безопасности.",
       metaTitle: "Можно ли купить Telegram Stars без карты",
       metaDescription:
-        "Покупка Telegram Stars без карты: оплата через Click, Payme и наличными через Paynet. Международная карта и доп. счёт не нужны.",
+        "Покупка Telegram Stars без карты: оплата через Click, Payme, Uzum и наличными. Международная карта и доп. счёт не нужны.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Купите Stars без карты",
-      ctaBody: "@StarsPaymee_bot — Click, Payme или наличные через Paynet.",
+      ctaBody: "@StarsPaymee_bot — Click, Payme, Uzum или наличные.",
       faq: ruFaq,
     },
     en: {
       title: "Can you buy Telegram Stars without a card?",
       excerpt:
-        "Ways to buy Stars without an international bank card: Click, Payme, cash via Paynet, the process and safety advice.",
+        "Ways to buy Stars without an international bank card: Click, Payme, Uzum and cash, the process and safety advice.",
       metaTitle: "Can you buy Telegram Stars without a card?",
       metaDescription:
-        "Buying Telegram Stars without a card: pay via Click, Payme or cash through Paynet. No international card and no extra account.",
+        "Buying Telegram Stars without a card: pay via Click, Payme, Uzum or cash. No international card and no extra account.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Buy Stars without a card",
-      ctaBody: "@StarsPaymee_bot — Click, Payme or cash through Paynet.",
+      ctaBody: "@StarsPaymee_bot — Click, Payme, Uzum or cash.",
       faq: enFaq,
     },
   },

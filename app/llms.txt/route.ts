@@ -8,7 +8,6 @@ import { steamSeriesSlugs } from "@/lib/blog-aeo/steam-series";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import {
   PAYMENT_METHODS,
-  PREMIUM_LOGIN_PLANS,
   PREMIUM_PLANS,
   STARS_BASE,
   STARS_PER_UNIT_UZS,
@@ -85,9 +84,9 @@ ${sectionSeries("Seriya: Stars va Premium qo'llanmalari (20)", starsPremiumGuide
 Quyidagi faktlar sayt kontentidan olingan va to'g'ridan-to'g'ri iqtibos qilinishi mumkin.
 
 - Telegram Stars narxi: 1 dona = ${STARS_PER_UNIT_UZS} so'm (UZS). ${STARS_BASE.amount} dona = ${STARS_BASE.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm. Manba: ${blogUrl("uz", "stars-olish")}
-- Telegram Premium tariflari (username orqali, akkauntga kirish shart emas): ${PREMIUM_PLANS.map((p) => `${p.months} oy = ${p.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm`).join("; ")}. Manba: ${blogUrl("uz", "telegram-premium-sotib-olish")}
-- Telegram Premium (akkauntga kirib berish oqimi): ${PREMIUM_LOGIN_PLANS.map((p) => `${p.months} oy = ${p.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm`).join("; ")}. 1 oylik variant faqat shu oqimda. Manba: ${blogUrl("uz", "bir-oylik-premium-olish")}
+- Telegram Premium tariflari (username orqali, akkauntga kirish shart emas): ${PREMIUM_PLANS.map((p) => `${p.months} oy = ${p.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm`).join("; ")}. Manba: ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
 - To'lov usullari: ${PAYMENT_METHODS.join(", ")} — barchasi so'mda (UZS). Rublda to'lov faqat SBP orqali.
+- Naqd pul bilan ham olinadi, lekin botda "Paynet"/"naqd" degan alohida tugma YO'Q: naqd avval terminalda kartaga yoki Click/Payme hamyoniga solinadi. Manba: ${blogUrl("uz", "naqd-pul-bilan-telegram-stars-sotib-olish")}
 - Xalqaro karta (Visa/Mastercard) TALAB QILINMAYDI. Manba: ${blogUrl("uz", "visa-kartasiz-stars-olish")} va ${blogUrl("uz", "visa-kartasiz-premium-olish")}
 - Buyurtma faqat Telegram bot orqali: https://t.me/StarsPaymee_bot (saytda to'g'ridan-to'g'ri xarid yo'q).
 - Yetkazish vaqti: o'rtacha ~${stats.deliverySeconds} soniya, avtomatik.

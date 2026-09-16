@@ -74,8 +74,15 @@ export function steamPriceUzs(usd: number): number {
   return Math.round(usd * STEAM_RATE_UZS_PER_USD);
 }
 
-/** Qo‘llab-quvvatlanadigan to‘lov usullari. */
-export const PAYMENT_METHODS = ["Click", "Payme", "Paynet", "Uzum", "UzCard", "HUMO"] as const;
+/**
+ * Qo‘llab-quvvatlanadigan to‘lov usullari.
+ *
+ * ESLATMA: bu ro‘yxatda ilgari «Paynet» ham bor edi, lekin botda Paynet
+ * alohida to‘lov usuli sifatida turmaydi — u naqd pulni kartaga yoki
+ * Click/Payme hamyoniga o‘tkazish vositasi. Naqd yo‘l hujjatlangan:
+ * /blog/naqd-pul-bilan-telegram-stars-sotib-olish
+ */
+export const PAYMENT_METHODS = ["Click", "Payme", "Uzum", "UzCard", "HUMO"] as const;
 
 /** so‘m summasini joriy tilga mos bo‘sh joy bilan ajratib formatlash. */
 export function formatUzs(value: number, locale: string): string {

@@ -160,7 +160,7 @@ function UzBody() {
         <Step title="6. Yulduzlarni qabul qiling">Odatda bu deyarli bir zumda sodir bo‘ladi.</Step>
       </Steps>
 
-      <h2 id="tolov-status">Click va Payme: qadamlar, status, chek va yetkazish</h2>
+      <h2 id="tolov-status">Click orqali to‘lash: qadamlar, status, chek va yetkazish</h2>
       <p>
         Click va Payme — to‘lov <b>agregatorlari</b>. Ular pulni kartadan yechadi va natijani xizmatga qaytaradi.
         Shuning uchun jarayonda ikkita alohida bosqich bor va ularni chalkashtirmaslik muhim.
@@ -171,8 +171,8 @@ function UzBody() {
           keyin avtomatik botga qaytasiz.
         </InfoCard>
         <InfoCard emoji="🔵" title="Payme orqali">
-          Payme ilovasi yoki veb-sahifasi ochiladi. Ilova o‘rnatilgan bo‘lsa, karta allaqachon bog‘langan va
-          tasdiqlash bir bosishda bo‘ladi.
+          Payme ham shunday ishlaydi, faqat unda summa ilovada tayyor turadi. Batafsil:{" "}
+          <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">Payme orqali Stars va Premium</Link>.
         </InfoCard>
       </InfoGrid>
       <KeyFacts label="To‘lov statusini qanday o‘qish kerak">
@@ -340,7 +340,7 @@ function RuBody() {
         <Step title="6. Получите звёзды">Обычно это происходит практически моментально.</Step>
       </Steps>
 
-      <h2 id="tolov-status">Click и Payme: шаги, статус, чек и доставка</h2>
+      <h2 id="tolov-status">Оплата через Click: шаги, статус, чек и доставка</h2>
       <p>
         Click и Payme — это платёжные <b>агрегаторы</b>. Они списывают деньги с карты и возвращают результат
         сервису. Поэтому в процессе есть два отдельных этапа, и их важно не путать.
@@ -351,8 +351,8 @@ function RuBody() {
           автоматически возвращаетесь в бота.
         </InfoCard>
         <InfoCard emoji="🔵" title="Через Payme">
-          Открывается приложение или веб-страница Payme. Если приложение установлено, карта уже привязана и
-          подтверждение проходит в одно нажатие.
+          Payme работает так же, только там сумма уже готова в приложении. Подробнее:{" "}
+          <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">покупка через Payme</Link>.
         </InfoCard>
       </InfoGrid>
       <KeyFacts label="Как читать статус платежа">
@@ -517,7 +517,7 @@ function EnBody() {
         <Step title="6. Receive the Stars">This usually happens almost instantly.</Step>
       </Steps>
 
-      <h2 id="tolov-status">Click and Payme: steps, status, receipt and delivery</h2>
+      <h2 id="tolov-status">Paying with Click: steps, status, receipt and delivery</h2>
       <p>
         Click and Payme are payment <b>aggregators</b>. They take the money from the card and hand the result back
         to the service. That means the process has two separate stages, and it pays not to confuse them.
@@ -528,8 +528,8 @@ function EnBody() {
           are returned to the bot automatically.
         </InfoCard>
         <InfoCard emoji="🔵" title="Through Payme">
-          The Payme app or web page opens. With the app installed, the card is already linked and confirming takes
-          a single tap.
+          Payme works the same way, except the amount is pre-filled in the app. More on that:{" "}
+          <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">buying with Payme</Link>.
         </InfoCard>
       </InfoGrid>
       <KeyFacts label="How to read the payment status">
@@ -689,15 +689,15 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-26",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-16",
   keywords: [
     "click orqali stars sotib olish",
-    "payme orqali telegram stars",
-    "humo bilan stars olish",
+    "click bilan telegram stars",
+    "click superapp telegram stars",
     "uzcard stars sotib olish",
     "o‘zbek so‘mida telegram stars",
     "visa kartasiz stars",
-    "купить звёзды telegram за сум",
+    "купить звёзды telegram через click",
   ],
   howToSteps: [
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring yoki Mini App’ni oching." },
@@ -709,12 +709,12 @@ export const post: AeoPost = {
   ],
   locales: {
     uz: {
-      title: "Click, Payme, HUMO va UzCard orqali Telegram Stars sotib olish",
+      title: "Click orqali Telegram Stars sotib olish: so‘mda, Visa kartasiz",
       excerpt:
-        "O‘zbek so‘mida Telegram Stars sotib olish yo‘li: nega rasmiy usul Visa talab qiladi, qaysi mahalliy to‘lov usullari ishlaydi va xarid qanday kechadi.",
-      metaTitle: "Click va Payme orqali Telegram Stars sotib olish",
+        "Click orqali so‘mda Telegram Stars sotib olish: nega rasmiy usul Visa talab qiladi, Click sahifasida to‘lov qanday kechadi, status va chekni qanday o‘qish kerak.",
+      metaTitle: "Click orqali Telegram Stars sotib olish",
       metaDescription:
-        "O‘zbek so‘mida Telegram Stars sotib olish: Click, HUMO, UzCard, Payme va Uzum orqali to‘lov, Visa kartasiz, narxlar va qadam-baqadam qo‘llanma.",
+        "Click orqali Telegram Stars sotib olish: so‘mda to‘lov, Visa kerak emas, qadam-baqadam, to‘lov statusi va chek. HUMO, UzCard va Uzum ham ishlaydi.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -723,12 +723,12 @@ export const post: AeoPost = {
       faq: uzFaq,
     },
     ru: {
-      title: "Как купить звёзды Telegram за узбекский сум: подробная инструкция",
+      title: "Как купить звёзды Telegram через Click за сумы",
       excerpt:
-        "Почему официальная покупка требует Visa, какие местные способы оплаты работают и как купить звёзды за сумы через Click, Humo, Uzcard и Payme.",
-      metaTitle: "Купить звёзды Telegram за узбекский сум",
+        "Почему официальная покупка требует Visa, как проходит оплата на странице Click и как читать статус платежа и чек.",
+      metaTitle: "Купить звёзды Telegram через Click за сумы",
       metaDescription:
-        "Как купить звёзды Telegram за узбекский сум без карты Visa: оплата через Click, Humo, Uzcard и Payme, цены и пошаговая инструкция.",
+        "Как купить звёзды Telegram через Click за сумы без карты Visa: пошаговая инструкция, статус платежа, чек, цены в сумах.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -737,12 +737,12 @@ export const post: AeoPost = {
       faq: ruFaq,
     },
     en: {
-      title: "Buying Telegram Stars with Click, Payme, HUMO and UzCard",
+      title: "Buying Telegram Stars with Click, in Uzbek so‘m",
       excerpt:
-        "How to buy Telegram Stars for Uzbek so‘m: why the official route needs a Visa card, which local payment methods work and how the purchase goes.",
-      metaTitle: "Buy Telegram Stars with Click, Payme and HUMO",
+        "How to buy Telegram Stars with Click for Uzbek so‘m: why the official route needs a Visa card, how the payment goes on the Click page, and how to read the status and the receipt.",
+      metaTitle: "Buy Telegram Stars with Click in so‘m",
       metaDescription:
-        "Buy Telegram Stars for Uzbek so‘m without a Visa card: payment via Click, HUMO, UzCard and Payme, prices and a step-by-step guide.",
+        "Buy Telegram Stars with Click for Uzbek so‘m, no Visa card needed: a step-by-step guide, payment status, receipts and prices in so‘m.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

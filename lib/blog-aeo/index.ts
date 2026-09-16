@@ -181,6 +181,9 @@ import { post as p176 } from "./posts/176-kolleksion-gift-bot-orqali-olinmaydi";
 // Yangi narxlar va to'lov usullari (naqd Paynet, rubl SBP) + Steam hamyon valyutasi
 import { post as p177 } from "./posts/177-telegram-premium-narxi-va-tolov-usullari";
 import { post as p178 } from "./posts/178-steam-som-yoki-rubl-hamyon";
+// To'lov usullari bo'yicha alohida qo'llanmalar (Payme, naqd pul)
+import { post as p179 } from "./posts/179-payme-orqali-stars-va-premium-sotib-olish";
+import { post as p180 } from "./posts/180-naqd-pul-bilan-telegram-stars-sotib-olish";
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
 export const aeoPosts: AeoPost[] = [
@@ -204,7 +207,7 @@ export const aeoPosts: AeoPost[] = [
   p161, p162, p163, p164,
   p165, p166, p167, p168, p169,
   p170, p171, p172, p173, p174, p175, p176,
-  p177, p178,
+  p177, p178, p179, p180,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));

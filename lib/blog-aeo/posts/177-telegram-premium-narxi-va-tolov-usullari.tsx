@@ -44,7 +44,7 @@ function PayTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["UzCard, HUMO", "Oddiy o‘zbek kartasi", "Ko‘pchilikka"],
         ["Click, Payme", "Ilova yoki sayt", "Kartasi ilovaga bog‘langanlarga"],
         ["Uzum", "Uzum ilovasi", "Uzum bilan ishlaydiganlarga"],
-        ["Paynet — naqd", "Bankomat yoki terminal, karta shart emas", "Kartasi umuman yo‘qlarga"],
+        ["Naqd pul", "Terminalda kartaga yoki hamyonga solasiz", "Kartasi umuman yo‘qlarga"],
         ["SBP — rublda", "Rossiya bank ilovasi", "Rossiyadan to‘laydiganlarga"],
       ],
     },
@@ -54,7 +54,7 @@ function PayTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["UzCard, Humo", "Обычная узбекская карта", "Большинству"],
         ["Click, Payme", "Приложение или сайт", "У кого карта привязана к приложению"],
         ["Uzum", "Приложение Uzum", "Тем, кто пользуется Uzum"],
-        ["Paynet — наличными", "Банкомат или терминал, карта не нужна", "У кого карты нет вообще"],
+        ["Наличные", "Вносите в терминале на карту или в кошелёк", "У кого карты нет вообще"],
         ["СБП — в рублях", "Банковское приложение РФ", "Тем, кто платит из России"],
       ],
     },
@@ -64,7 +64,7 @@ function PayTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["UzCard, HUMO", "An ordinary Uzbek card", "Most people"],
         ["Click, Payme", "The app or website", "Anyone with a card linked to the app"],
         ["Uzum", "The Uzum app", "Uzum users"],
-        ["Paynet — cash", "An ATM or terminal, no card needed", "Anyone without a card at all"],
+        ["Cash", "Fed in at a terminal, onto a card or a wallet", "Anyone without a card at all"],
         ["SBP — in roubles", "A Russian banking app", "Anyone paying from Russia"],
       ],
     },
@@ -84,8 +84,8 @@ function UzAnswer() {
     <p>
       <b>@StarsPaymee_bot</b> da Telegram Premium: <b>1 oy — 45 000</b>, <b>3 oy — 160 000</b>,{" "}
       <b>6 oy — 215 000</b>, <b>12 oy — 388 000 so‘m</b>. To‘rtala muddat ham <b>username orqali</b> beriladi —
-      parol so‘ralmaydi. To‘lov: UzCard, HUMO, Click, Payme, Uzum, <b>Paynet orqali naqd</b> (karta umuman kerak
-      emas) yoki <b>SBP orqali rublda</b>. Visa/Mastercard talab qilinmaydi.
+      parol so‘ralmaydi. To‘lov: UzCard, HUMO, Click, Payme, Uzum, <b>naqd pul</b> (terminal orqali —
+      o‘z kartangiz kerak emas) yoki <b>SBP orqali rublda</b>. Visa/Mastercard talab qilinmaydi.
     </p>
   );
 }
@@ -136,17 +136,20 @@ function UzBody() {
       </p>
       <PayTable locale="uz" />
 
-      <h2 id="naqd">Kartasiz to‘lash — Paynet orqali naqd</h2>
+      <h2 id="naqd">Kartasiz to‘lash — naqd pul bilan</h2>
       <p>
-        Bu ko‘pchilik e’tibordan chetda qoldiradigan imkoniyat: <b>Paynet</b> orqali to‘lovni bankomat yoki
-        terminalda <b>naqd pul bilan</b> amalga oshirish mumkin — bank kartasi umuman kerak emas.
+        O‘z bank kartangiz bo‘lmasa ham Premium olish mumkin. Faqat bitta narsani aniq bilib qo‘ying:
+        botda «naqd» yoki «Paynet» degan alohida tugma <b>yo‘q</b>. Naqd pul avval terminalda, bank
+        kassasida yoki cash-in bankomatda <b>kartaga yoxud Click/Payme hamyoniga</b> tushadi — keyin
+        botda oddiy to‘lovni tanlaysiz. Batafsil:{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">naqd pul bilan sotib olish</Link>.
       </p>
       <InfoGrid>
-        <InfoCard emoji="🏧" title="Bankomat yoki terminal">
-          Paynet qo‘llab-quvvatlaydigan istalgan nuqtada.
+        <InfoCard emoji="🏧" title="Terminal yoki kassa">
+          «Kartani to‘ldirish» yoki «hamyonni to‘ldirish» xizmatidan foydalanasiz.
         </InfoCard>
-        <InfoCard emoji="🔢" title="Buyurtma raqami bo‘yicha">
-          Botdan olingan raqamni kiritasiz, xolos.
+        <InfoCard emoji="🔢" title="Avval narxni biling">
+          Botdagi aniq summani terminalga borishdan oldin ko‘rib oling.
         </InfoCard>
         <InfoCard emoji="💵" title="Naqd pul">
           Karta, ilova va bank hisobi talab qilinmaydi.
@@ -177,7 +180,7 @@ function UzBody() {
           Login va parol so‘ralmaydi. O‘zingizga yoki sovg‘a qilayotgan odamga.
         </Step>
         <Step title="4. To‘lov usulini tanlang">
-          UzCard, HUMO, Click, Payme, Uzum, Paynet (naqd) yoki SBP (rubl).
+          UzCard, HUMO, Click, Payme, Uzum yoki SBP (rubl). Naqd pul terminal orqali kartaga solinadi.
         </Step>
         <Step title="5. Faollashuvni kuting">
           Premium odatda ~10 soniyada avtomatik yoqiladi; profilda rozetka paydo bo‘ladi.
@@ -227,7 +230,7 @@ function RuAnswer() {
       В <b>@StarsPaymee_bot</b> Telegram Premium стоит: <b>1 месяц — 45 000</b>, <b>3 месяца — 160 000</b>,{" "}
       <b>6 месяцев — 215 000</b>, <b>12 месяцев — 388 000 сум</b>. Все четыре срока оформляются{" "}
       <b>по username</b> — пароль не запрашивается. Оплата: UzCard, Humo, Click, Payme, Uzum,{" "}
-      <b>наличными через Paynet</b> (карта вообще не нужна) или <b>рублями по СБП</b>. Visa/Mastercard не
+      <b>наличными</b> (через терминал — своя карта не нужна) или <b>рублями по СБП</b>. Visa/Mastercard не
       требуется.
     </p>
   );
@@ -278,17 +281,20 @@ function RuBody() {
       </p>
       <PayTable locale="ru" />
 
-      <h2 id="naqd">Оплата без карты — наличными через Paynet</h2>
+      <h2 id="naqd">Оплата без карты — наличными</h2>
       <p>
-        Эту возможность часто упускают из виду: через <b>Paynet</b> оплатить можно <b>наличными</b> в банкомате
-        или терминале — банковская карта не нужна вообще.
+        Premium можно купить, даже если своей банковской карты нет. Важно понимать одно: отдельной
+        кнопки «наличные» или «Paynet» в боте <b>нет</b>. Наличные сначала попадают на карту или в
+        кошелёк Click/Payme — через терминал, кассу банка или банкомат с cash-in, — и только потом вы
+        выбираете в боте обычный способ оплаты. Подробнее:{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">покупка за наличные</Link>.
       </p>
       <InfoGrid>
-        <InfoCard emoji="🏧" title="Банкомат или терминал">
-          В любой точке, где поддерживается Paynet.
+        <InfoCard emoji="🏧" title="Терминал или касса">
+          Пользуетесь услугой «пополнение карты» или «пополнение кошелька».
         </InfoCard>
-        <InfoCard emoji="🔢" title="По номеру заказа">
-          Вводите номер, полученный в боте — и всё.
+        <InfoCard emoji="🔢" title="Сначала узнайте цену">
+          Посмотрите точную сумму в боте до похода к терминалу.
         </InfoCard>
         <InfoCard emoji="💵" title="Наличные">
           Карта, приложение и банковский счёт не нужны.
@@ -318,7 +324,7 @@ function RuBody() {
           Логин и пароль не запрашиваются. Себе или тому, кому дарите.
         </Step>
         <Step title="4. Выберите способ оплаты">
-          UzCard, Humo, Click, Payme, Uzum, Paynet (наличными) или СБП (рубли).
+          UzCard, Humo, Click, Payme, Uzum или СБП (рубли). Наличные вносятся на карту через терминал.
         </Step>
         <Step title="5. Дождитесь активации">
           Premium включается автоматически примерно за 10 секунд; в профиле появляется значок.
@@ -368,7 +374,7 @@ function EnAnswer() {
       In <b>@StarsPaymee_bot</b> Telegram Premium costs: <b>1 month — 45,000</b>, <b>3 months — 160,000</b>,{" "}
       <b>6 months — 215,000</b>, <b>12 months — 388,000 UZS</b>. All four terms are arranged{" "}
       <b>by username</b> — no password is requested. Payment: UzCard, HUMO, Click, Payme, Uzum,{" "}
-      <b>cash via Paynet</b> (no card at all) or <b>roubles via SBP</b>. No Visa/Mastercard needed.
+      <b>cash</b> (through a terminal — no card of your own needed) or <b>roubles via SBP</b>. No Visa/Mastercard needed.
     </p>
   );
 }
@@ -419,17 +425,20 @@ function EnBody() {
       </p>
       <PayTable locale="en" />
 
-      <h2 id="naqd">Paying without a card — cash through Paynet</h2>
+      <h2 id="naqd">Paying without a card — in cash</h2>
       <p>
-        This option is often overlooked: through <b>Paynet</b> the payment can be made <b>in cash</b> at an ATM
-        or terminal — no bank card at all.
+        Premium is within reach even with no bank card of your own. One thing to be clear about: there is{" "}
+        <b>no</b> separate “cash” or “Paynet” button in the bot. Cash first lands on a card or in a
+        Click/Payme wallet — at a terminal, a bank desk or a cash-in ATM — and only then do you choose an
+        ordinary payment method in the bot. More on that:{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">buying with cash</Link>.
       </p>
       <InfoGrid>
-        <InfoCard emoji="🏧" title="An ATM or terminal">
-          Anywhere Paynet is supported.
+        <InfoCard emoji="🏧" title="A terminal or bank desk">
+          You use the “top up a card” or “top up a wallet” service.
         </InfoCard>
-        <InfoCard emoji="🔢" title="By order number">
-          You enter the number the bot gives you — that is it.
+        <InfoCard emoji="🔢" title="Check the price first">
+          Look up the exact figure in the bot before heading to a terminal.
         </InfoCard>
         <InfoCard emoji="💵" title="Cash">
           No card, no app and no bank account needed.
@@ -459,7 +468,7 @@ function EnBody() {
           No login or password is asked for. For yourself or whoever you are gifting.
         </Step>
         <Step title="4. Pick a payment method">
-          UzCard, HUMO, Click, Payme, Uzum, Paynet (cash) or SBP (roubles).
+          UzCard, HUMO, Click, Payme, Uzum or SBP (roubles). Cash goes onto a card at a terminal.
         </Step>
         <Step title="5. Wait for activation">
           Premium switches on automatically in about 10 seconds; the badge appears on the profile.
@@ -507,10 +516,11 @@ const uzFaq = [
   { question: "12 oylik qancha?", answer: "388 000 so‘m — oyiga taxminan 32 300 so‘m, eng tejamkor tarif." },
   {
     question: "Kartasiz to‘lash mumkinmi?",
-    answer: "Ha, Paynet orqali — bankomat yoki terminalda naqd pul bilan, karta umuman kerak emas.",
+    answer:
+      "Ha. Botda «Paynet» degan tugma yo‘q, lekin naqd pulni terminalda kartaga yoki Click/Payme hamyoniga solib, shundan to‘lash mumkin — o‘z kartangiz bo‘lmasa ham.",
   },
   { question: "Rublda to‘lasa bo‘ladimi?", answer: "Ha, SBP orqali — telefon raqami yoki QR-kod bilan." },
-  { question: "Visa yoki Mastercard kerakmi?", answer: "Yo‘q. UzCard, HUMO, Click, Payme, Uzum, Paynet va SBP yetarli." },
+  { question: "Visa yoki Mastercard kerakmi?", answer: "Yo‘q. UzCard, HUMO, Click, Payme, Uzum va SBP yetarli; naqd pul ham ishlaydi." },
   {
     question: "Parol so‘raladimi?",
     answer: "Yo‘q. Faollashtirish Telegramning rasmiy sovg‘a mexanizmi orqali, faqat @username bilan bo‘ladi.",
@@ -541,10 +551,11 @@ const ruFaq = [
   { question: "Сколько стоит на 12 месяцев?", answer: "388 000 сум — около 32 300 сум в месяц, самый выгодный тариф." },
   {
     question: "Можно ли оплатить без карты вообще?",
-    answer: "Да, через Paynet — наличными в банкомате или терминале, карта не нужна.",
+    answer:
+      "Да. Кнопки «Paynet» в боте нет, но наличные можно внести в терминале на карту или в кошелёк Click/Payme и заплатить оттуда — даже если своей карты нет.",
   },
   { question: "Можно ли оплатить рублями?", answer: "Да, через СБП — по номеру телефона или QR-коду." },
-  { question: "Нужна ли Visa или Mastercard?", answer: "Нет. Достаточно UzCard, Humo, Click, Payme, Uzum, Paynet или СБП." },
+  { question: "Нужна ли Visa или Mastercard?", answer: "Нет. Достаточно UzCard, Humo, Click, Payme, Uzum или СБП; наличные тоже подходят." },
   {
     question: "Запрашивают ли пароль?",
     answer: "Нет. Активация идёт через официальный механизм подарка Premium, только по @username.",
@@ -575,10 +586,11 @@ const enFaq = [
   { question: "How much for 12 months?", answer: "388,000 UZS — about 32,300 UZS a month, the best value." },
   {
     question: "Can I pay without a card at all?",
-    answer: "Yes, through Paynet — in cash at an ATM or terminal, with no card needed.",
+    answer:
+      "Yes. There is no “Paynet” button in the bot, but you can feed cash into a terminal onto a card or a Click/Payme wallet and pay from there — even with no card of your own.",
   },
   { question: "Can I pay in roubles?", answer: "Yes, via SBP — by phone number or QR code." },
-  { question: "Do I need a Visa or Mastercard?", answer: "No. UzCard, HUMO, Click, Payme, Uzum, Paynet or SBP is enough." },
+  { question: "Do I need a Visa or Mastercard?", answer: "No. UzCard, HUMO, Click, Payme, Uzum or SBP is enough, and cash works too." },
   {
     question: "Is a password requested?",
     answer: "No. Activation runs through Telegram's official gift mechanism, using only an @username.",
@@ -620,17 +632,17 @@ export const post: AeoPost = {
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
     { name: "Muddatni tanlang", text: "1, 3, 6 yoki 12 oy — narx so‘mda ko‘rinadi." },
     { name: "@username kiriting", text: "Login va parol so‘ralmaydi." },
-    { name: "To‘lov usulini tanlang", text: "UzCard, HUMO, Click, Payme, Uzum, Paynet (naqd) yoki SBP (rubl)." },
+    { name: "To‘lov usulini tanlang", text: "UzCard, HUMO, Click, Payme, Uzum yoki SBP; naqd pul terminal orqali kartaga solinadi." },
     { name: "Faollashuvni kuting", text: "Premium odatda ~10 soniyada avtomatik yoqiladi." },
   ],
   locales: {
     uz: {
       title: "Telegram Premium narxi va to‘lov usullari: naqd, karta yoki rubl",
       excerpt:
-        "1, 3, 6 va 12 oylik narxlar hamda oyiga hisob. Paynet orqali kartasiz naqd to‘lash, SBP orqali rublda to‘lash va nega parol so‘ralmaydi.",
+        "1, 3, 6 va 12 oylik narxlar hamda oyiga hisob. Kartasiz naqd to‘lash qanday ishlaydi, SBP orqali rublda to‘lov va nega parol so‘ralmaydi.",
       metaTitle: "Telegram Premium narxi — naqd, karta yoki rublda",
       metaDescription:
-        "Telegram Premium: 1 oy 45 000, 12 oy 388 000 so‘m. Paynet orqali kartasiz naqd, SBP orqali rublda to‘lov. Visa kerak emas, parol so‘ralmaydi.",
+        "Telegram Premium: 1 oy 45 000, 12 oy 388 000 so‘m. Kartasiz naqd to‘lov, SBP orqali rublda to‘lov. Visa kerak emas, parol so‘ralmaydi.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -641,7 +653,7 @@ export const post: AeoPost = {
     ru: {
       title: "Telegram Premium в Узбекистане: цены и оплата — наличными, картой или рублями",
       excerpt:
-        "Цены на 1, 3, 6 и 12 месяцев со стоимостью месяца. Оплата наличными через Paynet без карты, рублями по СБП и почему не нужен пароль.",
+        "Цены на 1, 3, 6 и 12 месяцев со стоимостью месяца. Как работает оплата наличными без карты, рубли по СБП и почему не нужен пароль.",
       metaTitle: "Telegram Premium — цены и оплата в Узбекистане",
       metaDescription:
         "Telegram Premium: 1 месяц 45 000, 12 месяцев 388 000 сум. Наличными через Paynet без карты, рублями по СБП. Виза не нужна, пароль не запрашивается.",
