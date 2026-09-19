@@ -84,14 +84,24 @@ function UzBody() {
       <p>
         <strong>Limited Edition Telegram Gifts</strong> — ma’lum miqdorda chiqarilgan sovg‘a seriyasi. Tiraj tugagach
         yangi nusxa olish qiyinlashadi, shuning uchun narx o‘sishi mumkin (kafolat emas). Batafsil:{" "}
-        <Link href="/blog/limited-edition-telegram-gifts">Limited Edition maqolasi</Link>.
+        <Link href="/blog/telegram-nft-gift-nima">Limited Edition maqolasi</Link>.
+      </p>
+
+      <h2 id="holat">Hozir kolleksion sovg‘a qanday olinadi?</h2>
+      <p>
+        Bu yerda aniq bo‘lish muhim: <b>@StarsPaymee_bot orqali sotuvdan tugagan kolleksion sovg‘alar
+        yetkazilmaydi</b>. Botda oddiy sovg‘alar, yulduzlar va Premium avvalgidek ishlaydi. Kolleksion sovg‘aga
+        ega bo‘lishning ishlaydigan yo‘li ikki qadamli: botdan yulduz olasiz, keyin Telegram ichida oddiy sovg‘ani
+        collectible darajasiga ko‘tarasiz. Batafsil —{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgardi</Link> va{" "}
+        <Link href="/blog/telegram-sovgani-collectible-upgrade">upgrade qo‘llanmasi</Link>.
       </p>
 
       <h2 id="xavf">Xavfsizlik va realistik kutish</h2>
       <p>
         Har qanday <strong>Telegram digital collectible</strong> bozori beqaror bo‘lishi mumkin. Faqat ishonchli bot
         va rasmiy Telegram qoidalariga amal qiling. Stars kerak bo‘lsa:{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">Stars qayerdan olish</Link>, sovg‘a yuborish:{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Stars qayerdan olish</Link>, sovg‘a yuborish:{" "}
         <Link href="/gifts">/gifts</Link>.
       </p>
 
@@ -222,7 +232,7 @@ function EnBody() {
       <h2 id="limited">Limited Edition</h2>
       <p>
         A capped run is what creates scarcity — but scarcity alone guarantees nothing. See{" "}
-        <Link href="/blog/limited-edition-telegram-gifts">Limited Edition gifts</Link> and, before treating any of
+        <Link href="/blog/telegram-nft-gift-nima">Limited Edition gifts</Link> and, before treating any of
         this as an investment, <Link href="/blog/telegram-nft-investitsiya">the risks</Link>.
       </p>
 
@@ -269,6 +279,9 @@ export const post: AeoPost = {
   keywords: [
     "telegram nft",
     "telegram nft gift",
+    "limited edition telegram gifts",
+    "telegram nft market",
+    "telegram nft gifts kelajagi",
     "telegram gift",
     "nft gift",
     "telegram collectible",

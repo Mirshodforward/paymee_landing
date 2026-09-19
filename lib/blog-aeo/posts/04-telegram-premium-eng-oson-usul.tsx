@@ -169,6 +169,25 @@ function UzBody() {
         Ikkala holatda ham buyurtmani qaytadan boshlash kifoya — pul yechilmagan bo‘ladi.
       </p>
 
+      <h3 id="tez-oqim">Eng tez oqim va Visa’siz to‘lov</h3>
+      <KeyFacts label="Vaqtni tejaydigan uch narsa">
+        <li>
+          <b>Eng kam qadam</b> — Click yoki Payme ilovasi telefoningizda bo‘lsa, rekvizit qayta kiritilmaydi:
+          to‘lov bir bosishda tasdiqlanadi.
+        </li>
+        <li>
+          <b>Promokodni to‘lovdan oldin qo‘llang</b> — summa tasdiqlangandan keyin uni qo‘shib bo‘lmaydi.
+        </li>
+        <li>
+          <b>Bank ilovasi ochiq tursin</b> — tasdiq kodi o‘sha ilovaga keladi va OTP kechikmaydi.
+        </li>
+      </KeyFacts>
+      <p>
+        Visa yoki Mastercard bu yerda umuman talab qilinmaydi: rasmiy oqimda xalqaro karta so‘raladigan joyda
+        UzCard, HUMO, Click, Payme, Uzum yoki Paynet ishlaydi. Kartangizda internet-to‘lov yoqilganini bank
+        ilovasidan bir marta tekshirib qo‘ysangiz kifoya — keyingi buyurtmalarda bu savol chiqmaydi.
+      </p>
+
       <h2 id="bosqichlar">Bosqichma-bosqich: Premium olish</h2>
       <Steps>
         <Step title="1. Botni oching">
@@ -185,6 +204,17 @@ function UzBody() {
         <Step title="5. To‘lang">UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali so‘mda.</Step>
         <Step title="6. Faollashuvni tekshiring">Quyidagi uchta tekshiruvdan o‘ting.</Step>
       </Steps>
+
+      <h2 id="avtomatik">Avtomatik aktivatsiya qanday ishlaydi va nega parol kerak emas</h2>
+      <p>
+        «Username bilan» oqim to‘liq avtomatlashtirilgan: to‘lov tasdiqlangach tizim buyurtmani o‘zi aniqlaydi va
+        Premium’ni Telegramning rasmiy mexanizmi orqali o‘sha akkauntga ulaydi — xuddi do‘stingiz sizga Premium
+        sovg‘a qilgandek. Operator ham, navbat ham yo‘q, o‘rtacha 10 soniya.
+      </p>
+      <p>
+        Aynan shu sabab login, parol yoki 2FA hech qachon so‘ralmaydi: obuna akkauntga «ichkaridan kirish» orqali
+        emas, tashqaridan, sovg‘a sifatida biriktiriladi. Akkauntingizga hech kim kirmaydi.
+      </p>
 
       <h2 id="tekshirish">Premium faollashganini qanday tekshirish kerak</h2>
       <p>
@@ -344,6 +374,25 @@ function RuBody() {
         подтверждения. В обоих случаях достаточно оформить заказ заново — деньги при этом не списываются.
       </p>
 
+      <h3 id="tez-oqim">Самый быстрый поток и оплата без Visa</h3>
+      <KeyFacts label="Три вещи, которые экономят время">
+        <li>
+          <b>Минимум шагов</b> — если приложение Click или Payme уже стоит на телефоне, реквизиты вводить не нужно:
+          платёж подтверждается в одно касание.
+        </li>
+        <li>
+          <b>Промокод применяйте до оплаты</b> — после подтверждения суммы добавить его уже нельзя.
+        </li>
+        <li>
+          <b>Держите приложение банка открытым</b> — код подтверждения приходит именно туда, и OTP не задержится.
+        </li>
+      </KeyFacts>
+      <p>
+        Visa или Mastercard здесь не нужны вовсе: там, где официальный путь требует международную карту, работают
+        UzCard, HUMO, Click, Payme, Uzum или Paynet. Достаточно один раз проверить в приложении банка, разрешены ли
+        интернет-платежи по карте — в следующих заказах этот вопрос уже не возникнет.
+      </p>
+
       <h2 id="bosqichlar">Пошагово: оформление Premium</h2>
       <Steps>
         <Step title="1. Откройте бота">
@@ -359,6 +408,17 @@ function RuBody() {
         <Step title="5. Оплатите">UzCard, HUMO, Click, Payme, Uzum или Paynet в сумах.</Step>
         <Step title="6. Проверьте активацию">Пройдите три проверки ниже.</Step>
       </Steps>
+
+      <h2 id="avtomatik">Как работает автоматическая активация и почему не нужен пароль</h2>
+      <p>
+        Поток «по username» полностью автоматизирован: после подтверждения оплаты система сама определяет заказ и
+        подключает Premium к указанному аккаунту через официальный механизм Telegram — так же, как если бы подписку
+        подарил друг. Ни оператора, ни очереди, в среднем 10 секунд.
+      </p>
+      <p>
+        Именно поэтому логин, пароль или 2FA не запрашиваются никогда: подписка привязывается не «входом внутрь»
+        аккаунта, а снаружи, как подарок. В ваш аккаунт никто не заходит.
+      </p>
 
       <h2 id="tekshirish">Как проверить, что Premium активировался</h2>
       <p>Прошедшая оплата ещё не означает, что подписка включена. Это подтверждают три признака:</p>
@@ -513,6 +573,25 @@ function EnBody() {
         code arrived late. In both cases simply start the order again — no money was taken.
       </p>
 
+      <h3 id="tez-oqim">The fastest flow, and paying without Visa</h3>
+      <KeyFacts label="Three things that save time">
+        <li>
+          <b>The fewest steps</b> — if the Click or Payme app is already on your phone, no card details are retyped:
+          the payment is confirmed in one tap.
+        </li>
+        <li>
+          <b>Apply a promo code before paying</b> — once the total is confirmed it can no longer be added.
+        </li>
+        <li>
+          <b>Keep the banking app open</b> — the confirmation code arrives there, so the OTP does not lag behind.
+        </li>
+      </KeyFacts>
+      <p>
+        Visa or Mastercard is not needed at all here: where the official route asks for an international card,
+        UzCard, HUMO, Click, Payme, Uzum or Paynet works instead. Checking once in your banking app that internet
+        payments are enabled for the card is enough — the question will not come up on later orders.
+      </p>
+
       <h2 id="bosqichlar">Step by step: getting Premium</h2>
       <Steps>
         <Step title="1. Open the bot">
@@ -528,6 +607,17 @@ function EnBody() {
         <Step title="5. Pay">UzCard, HUMO, Click, Payme, Uzum or Paynet, in so‘m.</Step>
         <Step title="6. Verify activation">Run the three checks below.</Step>
       </Steps>
+
+      <h2 id="avtomatik">How automatic activation works, and why no password is needed</h2>
+      <p>
+        The “by username” flow is fully automated: once payment is confirmed, the system matches the order itself and
+        attaches Premium to that account through Telegram&rsquo;s official mechanism — the same way a friend gifting
+        you a subscription works. No operator, no queue, about 10 seconds.
+      </p>
+      <p>
+        That is exactly why a login, password or 2FA is never requested: the subscription is attached from the
+        outside, as a gift, not by signing into the account. Nobody logs into your account.
+      </p>
 
       <h2 id="tekshirish">How to verify that Premium activated</h2>
       <p>A completed payment does not yet mean the subscription is on. Three signs confirm it:</p>
@@ -622,6 +712,16 @@ const uzFaq = [
     answer: "Ha. Qabul qiluvchi maydoniga do‘stingizning @username’ini kiriting — Premium o‘shaning akkauntida yoqiladi.",
   },
   {
+    question: "Visa kartam yo‘q — Premium olsam bo‘ladimi?",
+    answer:
+      "Ha. Xalqaro karta talab qilinmaydi: UzCard, HUMO, Click, Payme, Uzum yoki Paynet yetarli. Kartada internet-to‘lov yoqilgan bo‘lsa kifoya.",
+  },
+  {
+    question: "Eng tez to‘lov usuli qaysi?",
+    answer:
+      "Click yoki Payme ilovasi telefonda bo‘lsa — eng kam qadam: rekvizit kiritilmaydi, to‘lov bir bosishda tasdiqlanadi va bank kodi o‘sha ilovaga keladi.",
+  },
+  {
     question: "Muddat tugasa akkaunt bloklanadimi?",
     answer:
       "Yo‘q. Chatlar va kanallar qoladi, faqat Premium imtiyozlari to‘xtaydi. Avtoto‘lov ulanmaydi; istalgan vaqtda yangi buyurtma berasiz.",
@@ -660,6 +760,16 @@ const ruFaq = [
   {
     question: "Можно ли подарить Premium другу?",
     answer: "Да. Введите @username друга в поле получателя — Premium включится на его аккаунте.",
+  },
+  {
+    question: "У меня нет карты Visa — можно ли купить Premium?",
+    answer:
+      "Да. Международная карта не нужна: достаточно UzCard, HUMO, Click, Payme, Uzum или Paynet. Главное, чтобы по карте были разрешены интернет-платежи.",
+  },
+  {
+    question: "Какой способ оплаты самый быстрый?",
+    answer:
+      "Если приложение Click или Payme уже установлено — шагов меньше всего: реквизиты не вводятся, платёж подтверждается в одно касание, а код банка приходит туда же.",
   },
   {
     question: "Блокируется ли аккаунт по окончании срока?",
@@ -702,6 +812,16 @@ const enFaq = [
     answer: "Yes. Enter your friend’s @username in the recipient field — Premium switches on for their account.",
   },
   {
+    question: "I have no Visa card — can I still buy Premium?",
+    answer:
+      "Yes. No international card is required: UzCard, HUMO, Click, Payme, Uzum or Paynet is enough, as long as internet payments are enabled for the card.",
+  },
+  {
+    question: "Which payment method is the fastest?",
+    answer:
+      "If the Click or Payme app is already installed, that is the shortest route: no card details to retype, one tap to confirm, and the bank code arrives in the same app.",
+  },
+  {
     question: "Is the account blocked when the term ends?",
     answer:
       "No. Chats and channels remain; only the Premium perks stop. No auto-renewal is attached, and you can place a new order whenever you like.",
@@ -713,7 +833,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-06-22",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-18",
   keywords: [
     "telegram premium olish",
     "telegram premium uzbekistan",
@@ -722,6 +842,12 @@ export const post: AeoPost = {
     "telegram premium oson",
     "telegram premium uzcard humo",
     "telegram premium to‘lov qadamlari",
+    "telegram premium tez otkazilish",
+    "telegram premium vizasiz",
+    "telegram premium visa kartasiz",
+    "premium olish",
+    "telegram premium sotib olish 2026",
+    "telegram premium avtomatik aktivatsiya",
   ],
   howToSteps: [
     { name: "Botni oching", text: "@StarsPaymee_bot yoki Mini App’ni ishga tushiring." },

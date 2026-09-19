@@ -1,14 +1,13 @@
 /** SEO seriyasi: Telegram NFT Gift & Gift Market (O‘zbek kontenti). */
 export const nftGiftSeriesSlugs = [
   "telegram-nft-gift-nima",
-  "telegram-nft-gift-sotib-olish",
-  "limited-edition-telegram-gifts",
-  "telegram-nft-market",
+  "telegram-sovga-va-nft-sovga-sotib-olish",
+  "telegram-gifts-kolleksiya-rare-sovgalar",
   "telegram-gift-price",
   "telegram-nft-investitsiya",
-  "top-telegram-rare-gifts",
+  "telegram-sovgani-collectible-upgrade",
   "telegram-gift-sotish",
-  "telegram-gift-kolleksiya",
+  "kolleksion-gift-bot-orqali-olinmaydi",
   "starspaymee-nft-market",
 ] as const;
 

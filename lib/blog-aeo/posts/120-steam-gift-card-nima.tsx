@@ -57,9 +57,9 @@ function UzBody() {
 
       <p>
         Shu sabab O‘zbekistonda ko‘p foydalanuvchilar{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">so‘mda to‘g‘ridan-to‘g‘ri to‘ldirish</Link>ni
+        <Link href="/blog/steam-1-dollardan-toldirish">so‘mda to‘g‘ridan-to‘g‘ri to‘ldirish</Link>ni
         tanlaydi — kerakli summani o‘zingiz belgilaysiz. Boshqa usullar bilan solishtirish:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">to‘ldirish usullari</Link>.
+        <Link href="/blog/steam-wallet-nima">Steam Wallet nima</Link>.
       </p>
 
       <Sources
@@ -126,9 +126,9 @@ function RuBody() {
 
       <p>
         Поэтому в Узбекистане многие выбирают{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">прямое пополнение в сумах</Link> — сумму вы
+        <Link href="/blog/steam-1-dollardan-toldirish">прямое пополнение в сумах</Link> — сумму вы
         задаёте сами. Сравнение способов:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">способы пополнения</Link>.
+        <Link href="/blog/steam-wallet-nima">Steam Wallet nima</Link>.
       </p>
 
       <Sources
@@ -195,9 +195,9 @@ function EnBody() {
 
       <p>
         That's why many users in Uzbekistan choose{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">topping up directly in so‘m</Link> — you set the
+        <Link href="/blog/steam-1-dollardan-toldirish">topping up directly in so‘m</Link> — you set the
         amount yourself. Comparing methods:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">top‑up methods</Link>.
+        <Link href="/blog/steam-wallet-nima">what a Steam Wallet is</Link>.
       </p>
 
       <Sources

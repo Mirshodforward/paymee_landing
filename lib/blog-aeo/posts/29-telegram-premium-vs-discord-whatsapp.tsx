@@ -99,7 +99,7 @@ function UzBody() {
       </ul>
       <p>
         Stars orqali monetizatsiya Telegram’ni ajratib turadi — buni{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link> maqolasida ko‘rasiz.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Creator Economy»</Link> maqolasida ko‘rasiz.
       </p>
 
       <h2 id="ozbekiston">O‘zbekistonda Telegram Premium sotib olish</h2>
@@ -215,7 +215,7 @@ function RuBody() {
       </ul>
       <p>
         Монетизация через Stars выделяет Telegram — об этом в статье{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link>.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Creator Economy»</Link>.
       </p>
 
       <h2 id="ozbekiston">Покупка Telegram Premium в Узбекистане</h2>

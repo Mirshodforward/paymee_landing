@@ -49,9 +49,9 @@ function UzBody() {
       <p>
         Odatda quyidagi usullar mavjud: bank kartalari, Steam Gift Card, rasmiy to‘lov usullari va mahalliy
         xizmatlar. O‘zbekistonda ko‘p foydalanuvchilar qulaylik sababli{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">so‘mda to‘ldirish</Link>ni tanlaydi — UzCard va
+        <Link href="/blog/steam-1-dollardan-toldirish">so‘mda to‘ldirish</Link>ni tanlaydi — UzCard va
         HUMO orqali. Batafsil:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">Steam hisobini qanday to‘ldirish mumkin</Link>.
+        <Link href="/blog/steam-som-yoki-rubl-hamyon">Steam hisobini qanday to‘ldirish mumkin</Link>.
       </p>
 
       <h2 id="gift-card">Steam Wallet va Gift Card farqi</h2>
@@ -132,9 +132,9 @@ function RuBody() {
       <p>
         Обычно доступны: банковские карты, Steam Gift Card, официальные способы оплаты и локальные сервисы. В
         Узбекистане многие выбирают{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">пополнение в сумах</Link> — через UzCard и HUMO.
+        <Link href="/blog/steam-1-dollardan-toldirish">пополнение в сумах</Link> — через UzCard и HUMO.
         Подробнее:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">как пополнить аккаунт Steam</Link>.
+        <Link href="/blog/steam-som-yoki-rubl-hamyon">как пополнить аккаунт Steam</Link>.
       </p>
 
       <h2 id="gift-card">Разница Steam Wallet и Gift Card</h2>
@@ -215,9 +215,9 @@ function EnBody() {
       <p>
         The usual options are: bank cards, a Steam Gift Card, official payment methods and local services. In
         Uzbekistan many users choose{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">topping up in so‘m</Link> — via UzCard and HUMO.
+        <Link href="/blog/steam-1-dollardan-toldirish">topping up in so‘m</Link> — via UzCard and HUMO.
         More:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">how to top up a Steam account</Link>.
+        <Link href="/blog/steam-som-yoki-rubl-hamyon">how to top up a Steam account</Link>.
       </p>
 
       <h2 id="gift-card">Steam Wallet vs Gift Card</h2>

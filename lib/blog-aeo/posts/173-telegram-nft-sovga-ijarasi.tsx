@@ -116,7 +116,7 @@ function UzBody() {
       <p>
         Asosiy farq egalikda: ijarada sovg‘a <b>sizniki bo‘lmaydi</b>, shuning uchun uni sotish, boshqa odamga
         o‘tkazish yoki blokcheynga chiqarish mumkin emas. Agar sizga aynan egalik kerak bo‘lsa —{" "}
-        <Link href="/blog/telegram-nft-gift-sotib-olish">to‘liq xarid</Link> to‘g‘ri yo‘l.
+        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">to‘liq xarid</Link> to‘g‘ri yo‘l.
       </p>
 
       <h2 id="kimga">Kimga mos keladi</h2>
@@ -265,7 +265,7 @@ function RuBody() {
       <p>
         Главное отличие во владении: при аренде подарок <b>вам не принадлежит</b>, поэтому продать, передать
         или вывести его в блокчейн нельзя. Если нужно именно владение —{" "}
-        <Link href="/blog/telegram-nft-gift-sotib-olish">полная покупка</Link> будет правильным путём.
+        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">полная покупка</Link> будет правильным путём.
       </p>
 
       <h2 id="kimga">Кому подойдёт</h2>
@@ -413,7 +413,7 @@ function EnBody() {
       <p>
         The key difference is ownership: with a rental the gift <b>is not yours</b>, so it cannot be sold,
         transferred or withdrawn to the blockchain. If ownership is what you actually want,{" "}
-        <Link href="/blog/telegram-nft-gift-sotib-olish">buying outright</Link> is the right route.
+        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">buying outright</Link> is the right route.
       </p>
 
       <h2 id="kimga">Who it suits</h2>

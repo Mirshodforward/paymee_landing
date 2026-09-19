@@ -58,7 +58,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Xavfsiz xizmatni qanday aniqlash haqida{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
         batafsil.
       </p>
 
@@ -150,7 +150,7 @@ function RuBody() {
       </KeyFacts>
       <p>
         Как определить надёжный сервис — подробно в{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Руководстве по безопасной покупке»</Link>.
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Руководстве по безопасной покупке»</Link>.
       </p>
 
       <h2 id="nazorat">Как контролировать траты?</h2>

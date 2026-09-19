@@ -29,6 +29,25 @@ function UzBody() {
         <li>Ko‘proq kanal va papkaga obuna bo‘lish.</li>
       </KeyFacts>
 
+      <h2 id="royxat">Imkoniyatlarning to‘liq ro‘yxati</h2>
+      <p>Premium to‘rt yo‘nalishda qo‘shimcha beradi:</p>
+      <ul>
+        <li>
+          <b>Fayl va media:</b> 4 GB gacha fayl yuklash, tezroq yuklab olish, video xabarlarni HD sifatida yuborish.
+        </li>
+        <li>
+          <b>Muloqot:</b> ochiq kanallarda reklama ko‘rsatilmaydi, xabar tarjimasi, ovozli xabarni matnga
+          aylantirish, tahrir tarixini yashirish.
+        </li>
+        <li>
+          <b>Shaxsiylashtirish:</b> animatsion avatar, profil ramkasi, eksklyuziv emoji to‘plamlari va profildagi
+          Premium belgisi.
+        </li>
+        <li>
+          <b>Kanal va papkalar:</b> ko‘proq kanal/guruhga a’zo bo‘lish va ko‘proq chat papkasi yaratish.
+        </li>
+      </ul>
+
       <h2 id="kimlar">Kimlar uchun ayniqsa foydali?</h2>
       <InfoGrid>
         <InfoCard emoji="⚡" title="Faol foydalanuvchilar">
@@ -74,9 +93,9 @@ function UzBody() {
       </p>
 
       <p>
-        Qarang: <Link href="/blog/premium-olish">Premium olish</Link>,{" "}
-        <Link href="/blog/telegram-premium-imkoniyatlari">to‘liq imkoniyatlar ro‘yxati</Link> va{" "}
-        <Link href="/blog/premium-va-oddiy-hisob-farqi">oddiy hisob bilan farqi</Link>.
+        Qarang: <Link href="/blog/telegram-premium-eng-oson-usul">Premium olish</Link>,{" "}
+        <Link href="/blog/telegram-premium-kerak">to‘liq imkoniyatlar ro‘yxati</Link> va{" "}
+        <Link href="/blog/telegram-premium-va-oddiy-farqi">oddiy hisob bilan farqi</Link>.
       </p>
 
       <Sources
@@ -159,9 +178,9 @@ function RuBody() {
       </p>
 
       <p>
-        Смотрите: <Link href="/blog/premium-olish">покупка Premium</Link>,{" "}
-        <Link href="/blog/telegram-premium-imkoniyatlari">полный список возможностей</Link> и{" "}
-        <Link href="/blog/premium-va-oddiy-hisob-farqi">отличие от обычного аккаунта</Link>.
+        Смотрите: <Link href="/blog/telegram-premium-eng-oson-usul">покупка Premium</Link>,{" "}
+        <Link href="/blog/telegram-premium-kerak">полный список возможностей</Link> и{" "}
+        <Link href="/blog/telegram-premium-va-oddiy-farqi">отличие от обычного аккаунта</Link>.
       </p>
 
       <Sources
@@ -245,9 +264,9 @@ function EnBody() {
       </p>
 
       <p>
-        See: <Link href="/blog/premium-olish">getting Premium</Link>,{" "}
-        <Link href="/blog/telegram-premium-imkoniyatlari">the full feature list</Link> and{" "}
-        <Link href="/blog/premium-va-oddiy-hisob-farqi">the difference from a standard account</Link>.
+        See: <Link href="/blog/telegram-premium-eng-oson-usul">getting Premium</Link>,{" "}
+        <Link href="/blog/telegram-premium-kerak">the full feature list</Link> and{" "}
+        <Link href="/blog/telegram-premium-va-oddiy-farqi">the difference from a standard account</Link>.
       </p>
 
       <Sources
@@ -319,6 +338,8 @@ export const post: AeoPost = {
   dateModified: "2026-09-08",
   keywords: [
     "telegram premium kerak",
+    "telegram premium imkoniyatlari",
+    "premium nima beradi royxat",
     "premium kerakmi",
     "nega premium olish kerak",
     "telegram premium foydasi",

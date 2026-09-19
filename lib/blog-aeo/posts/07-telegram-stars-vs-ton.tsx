@@ -47,6 +47,11 @@ function UzBody() {
         o‘tkazish, birjada almashtirish, NFT va DeFi uchun ishlatiladi. Fragment’da Premium va username’larni TON bilan
         sotib olish mumkin. TON narxi bozorga qarab o‘zgaradi va qonun/soliq jihatidan boshqacha qaraladi.
       </p>
+      <p>
+        Amaliy farqi ham shunda: TON bilan ishlash uchun hamyon ochish, seed-frazani saqlash va tarmoq komissiyasini
+        hisobga olish kerak. Kundalik ehtiyoj — xizmat to‘lovi, sovg‘a yoki Premium — uchun bu ortiqcha qadam, shuning
+        uchun oddiy akkaunt uchun Stars intuitivroq bo‘ladi.
+      </p>
 
       <h2 id="bogliqlik">Ular o‘zaro bog‘liqmi?</h2>
       <p>
@@ -111,6 +116,11 @@ function RuBody() {
         перевода крипты, обмена на биржах, NFT и DeFi. На Fragment можно покупать Premium и username за TON. Цена TON
         колеблется по рынку и иначе трактуется с точки зрения закона/налогов.
       </p>
+      <p>
+        Практическая разница в том же: для работы с TON нужно завести кошелёк, сохранить seed-фразу и учитывать
+        комиссию сети. Для повседневной задачи — оплата услуги, подарок или Premium — это лишний шаг, поэтому
+        обычному аккаунту Stars понятнее.
+      </p>
 
       <h2 id="bogliqlik">Связаны ли они?</h2>
       <p>
@@ -137,13 +147,15 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "comparison",
   datePublished: "2026-06-16",
-  dateModified: "2026-06-16",
+  dateModified: "2026-09-18",
   keywords: [
     "telegram stars vs ton",
     "ton vs stars",
     "telegram stars ton farqi",
     "ton va telegram stars",
     "telegram ton nima",
+    "ton vs telegram stars farq",
+    "ton va stars qaysi biri",
   ],
   locales: {
     uz: {
@@ -177,6 +189,11 @@ export const post: AeoPost = {
         {
           question: "Oddiy sovg‘a uchun qaysi biri yaxshi?",
           answer: "Sovg‘a, Premium hadya va bot to‘lovlari uchun Stars qulayroq va soddaroq.",
+        },
+        {
+          question: "TON bilan ishlash uchun nima kerak?",
+          answer:
+            "Hamyon ochish, seed-frazani xavfsiz saqlash va tarmoq komissiyasini hisobga olish. Stars’da bu qadamlar yo‘q — balans to‘g‘ridan-to‘g‘ri akkauntga bog‘lanadi.",
         },
         {
           question: "TON bilan Premium olsa bo‘ladimi?",
@@ -216,6 +233,11 @@ export const post: AeoPost = {
         {
           question: "Что лучше для обычного подарка?",
           answer: "Для подарков, дарения Premium и оплаты в ботах удобнее и проще Stars.",
+        },
+        {
+          question: "Что нужно для работы с TON?",
+          answer:
+            "Завести кошелёк, надёжно сохранить seed-фразу и учитывать комиссию сети. У Stars этих шагов нет — баланс привязывается прямо к аккаунту.",
         },
         {
           question: "Можно ли купить Premium за TON?",

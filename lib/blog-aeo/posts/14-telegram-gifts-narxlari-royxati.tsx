@@ -48,6 +48,30 @@ function UzBody() {
         yozilgan.
       </p>
 
+      <h2 id="tarkib">So‘mdagi narx nimalardan tashkil topadi?</h2>
+      <p>
+        Bitta sovg‘aning yakuniy summasi uch qismdan yig‘iladi va ularning har biri alohida o‘zgarishi mumkin:
+      </p>
+      <ul>
+        <li>
+          <b>Bazaviy qiymat</b> — Telegram sovg‘aga belgilagan yulduz miqdori. Bu raqam sovg‘a katalogda turgan
+          vaqt davomida o‘zgarmaydi.
+        </li>
+        <li>
+          <b>Yulduzning joriy so‘m qiymati</b> — kurs va narx siyosatiga bog‘liq; xuddi shu sabab bir xil sovg‘a
+          turli kunlarda biroz boshqacha chiqadi.
+        </li>
+        <li>
+          <b>To‘lov tomoni</b> — tanlangan usul (karta, Click, Payme) bo‘yicha bank tomonidagi komissiya. Botda
+          ko‘rsatilgan yakuniy summa buni allaqachon hisobga olgan bo‘ladi.
+        </li>
+      </ul>
+      <p>
+        Sovg‘alarning o‘zi TGS animatsiya ko‘rinishida keladi — katalogni Mini App ichida ko‘rib, narxni yonma-yon
+        solishtirish qulay. Anonim yuborish yoki izoh qo‘shish narxga ta’sir qilmaydi, lekin sovg‘aning qanday
+        ko‘rinishini o‘zgartiradi: shuning uchun qabul qiluvchini va rejimni to‘lovdan oldin tasdiqlang.
+      </p>
+
       <h2 id="muhim">Narx bo‘yicha muhim eslatmalar</h2>
       <ul>
         <li>Bir xil sovg‘a turli kunlarda biroz farq qilishi mumkin — chunki yulduz kursi va komissiya ta’sir qiladi.</li>
@@ -105,6 +129,30 @@ function RuBody() {
         Подарок можно купить себе или отправить на другой @username — анонимно или с поздравлением. Пошаговый процесс
         описан в{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">руководстве «Как отправить Gifts»</Link>.
+      </p>
+
+      <h2 id="tarkib">Из чего складывается цена в сумах?</h2>
+      <p>
+        Итоговая сумма за подарок складывается из трёх частей, и каждая может меняться отдельно:
+      </p>
+      <ul>
+        <li>
+          <b>Базовая стоимость</b> — количество звёзд, назначенное подарку самим Telegram. Пока подарок в каталоге,
+          это число не меняется.
+        </li>
+        <li>
+          <b>Текущая стоимость звезды в сумах</b> — зависит от курса и ценовой политики; именно поэтому один и тот
+          же подарок в разные дни выходит немного иначе.
+        </li>
+        <li>
+          <b>Сторона оплаты</b> — комиссия банка по выбранному способу (карта, Click, Payme). Итоговая сумма в боте
+          её уже учитывает.
+        </li>
+      </ul>
+      <p>
+        Сами подарки приходят в виде TGS-анимации — каталог удобно смотреть в Mini App и сравнивать цены рядом.
+        Анонимная отправка и комментарий на цену не влияют, но меняют то, как подарок выглядит у получателя:
+        поэтому получателя и режим отправки подтверждайте до оплаты.
       </p>
 
       <h2 id="muhim">Важные заметки по цене</h2>
@@ -166,6 +214,28 @@ function EnBody() {
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">the gift-sending guide</Link>.
       </p>
 
+      <h2 id="tarkib">What the so&lsquo;m price is made of</h2>
+      <p>The final amount for a gift comes from three parts, and each can move on its own:</p>
+      <ul>
+        <li>
+          <b>The base value</b> — the number of Stars Telegram assigns to the gift. While the gift is in the
+          catalogue, that number does not change.
+        </li>
+        <li>
+          <b>The current so&lsquo;m value of a Star</b> — it follows the rate and pricing policy, which is exactly why
+          the same gift comes out slightly differently on different days.
+        </li>
+        <li>
+          <b>The payment side</b> — the bank fee for the chosen method (card, Click, Payme). The final total shown in
+          the bot already accounts for it.
+        </li>
+      </ul>
+      <p>
+        The gifts themselves arrive as TGS animations — the catalogue is easiest to browse in the Mini App, where
+        prices sit side by side. Sending anonymously or adding a note does not change the price, but it does change
+        how the gift appears to the recipient, so confirm both the recipient and the mode before paying.
+      </p>
+
       <h2 id="muhim">Notes on pricing</h2>
       <ul>
         <li>The same gift can differ slightly day to day, because the Star rate moves.</li>
@@ -189,6 +259,16 @@ function EnBody() {
 }
 
 const faqEn = [
+  {
+    question: "What is the so‘m price made of?",
+    answer:
+      "Three parts: the Star value Telegram assigns, the current so‘m value of a Star, and the bank fee for the chosen payment method. The final total in the bot already includes them.",
+  },
+  {
+    question: "In what format does a gift arrive?",
+    answer:
+      "Gifts arrive as TGS animations, and the catalogue is easiest to browse in the Mini App. Sending anonymously or adding a note does not change the price.",
+  },
   { question: "How much does a Telegram gift cost?", answer: "From roughly 15 Stars for ordinary gifts up to thousands for collectibles." },
   { question: "Why does the so\u2018m price change?", answer: "Because gift values are set in Stars, and the Star rate moves." },
   { question: "Can I pay in so\u2018m?", answer: "Yes — UzCard, HUMO, Click, Payme, Uzum or Paynet. No foreign card needed." },
@@ -201,7 +281,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-06-12",
-  dateModified: "2026-06-12",
+  dateModified: "2026-09-18",
   keywords: [
     "telegram gifts narxlari",
     "telegram sovga narxi",
@@ -223,6 +303,16 @@ export const post: AeoPost = {
       ctaHeading: "Sovg‘a yubormoqchimisiz?",
       ctaBody: "Botda katalogdan tanlang, so‘mda to‘lang — sovg‘a @username’ga yetkaziladi.",
       faq: [
+        {
+          question: "So‘mdagi narx nimalardan tashkil topadi?",
+          answer:
+            "Uch qismdan: Telegram belgilagan yulduz qiymati, yulduzning joriy so‘m kursi va to‘lov usuli bo‘yicha bank komissiyasi. Botda ko‘rsatilgan yakuniy summa buni hisobga olgan bo‘ladi.",
+        },
+        {
+          question: "Sovg‘a qanday formatda keladi?",
+          answer:
+            "Sovg‘alar TGS animatsiya ko‘rinishida keladi va katalogni Mini App ichida ko‘rish qulay. Anonim yuborish yoki izoh qo‘shish narxni o‘zgartirmaydi.",
+        },
         {
           question: "Telegram sovg‘alari qancha turadi?",
           answer:
@@ -259,6 +349,16 @@ export const post: AeoPost = {
       ctaHeading: "Хотите отправить подарок?",
       ctaBody: "Выберите в каталоге бота, оплатите в сумах — подарок доставится на @username.",
       faq: [
+        {
+          question: "Из чего складывается цена в сумах?",
+          answer:
+            "Из трёх частей: заданная Telegram стоимость в звёздах, текущий курс звезды в сумах и комиссия банка по выбранному способу оплаты. Итоговая сумма в боте это уже учитывает.",
+        },
+        {
+          question: "В каком формате приходит подарок?",
+          answer:
+            "Подарки приходят в виде TGS-анимации, а каталог удобно смотреть в Mini App. Анонимная отправка и комментарий на цену не влияют.",
+        },
         {
           question: "Сколько стоят подарки Telegram?",
           answer:

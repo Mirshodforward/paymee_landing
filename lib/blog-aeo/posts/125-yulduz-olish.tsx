@@ -48,9 +48,9 @@ function UzBody() {
       </p>
 
       <p>
-        Batafsil: <Link href="/blog/telegram-yulduz-sotib-olish">Telegram Yulduz sotib olish</Link>,{" "}
-        <Link href="/blog/stars-olish">Stars olish</Link> va{" "}
-        <Link href="/blog/stars-sotib-olish">xavfsiz xarid mezonlari</Link>.
+        Batafsil: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Telegram Yulduz sotib olish qo‘llanmasi</Link>,{" "}
+        <Link href="/blog/telegram-stars-narxi">narxlar</Link> va{" "}
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">xavfsiz xarid mezonlari</Link>.
       </p>
 
       <Sources
@@ -107,9 +107,9 @@ function RuBody() {
       </p>
 
       <p>
-        Подробнее: <Link href="/blog/telegram-yulduz-sotib-olish">покупка Telegram Yulduz</Link>,{" "}
-        <Link href="/blog/stars-olish">покупка Stars</Link> и{" "}
-        <Link href="/blog/stars-sotib-olish">критерии безопасной покупки</Link>.
+        Подробнее: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">руководство по покупке Telegram Yulduz</Link>,{" "}
+        <Link href="/blog/telegram-stars-narxi">цены</Link> и{" "}
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">критерии безопасной покупки</Link>.
       </p>
 
       <Sources
@@ -166,9 +166,9 @@ function EnBody() {
       </p>
 
       <p>
-        More: <Link href="/blog/telegram-yulduz-sotib-olish">buying Telegram Yulduz</Link>,{" "}
-        <Link href="/blog/stars-olish">getting Stars</Link> and{" "}
-        <Link href="/blog/stars-sotib-olish">what makes a purchase safe</Link>.
+        More: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">the guide to buying Telegram Yulduz</Link>,{" "}
+        <Link href="/blog/telegram-stars-narxi">prices</Link> and{" "}
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">what makes a purchase safe</Link>.
       </p>
 
       <Sources

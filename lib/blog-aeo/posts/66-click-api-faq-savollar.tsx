@@ -21,8 +21,7 @@ function UzBody() {
       <h2 id="kirish">Click API haqida qisqacha</h2>
       <p>
         Bu maqola Click API bo‘yicha eng ko‘p so‘raladigan savollarni jamlaydi. Amaliy oqim uchun{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">rasmiy integratsiya</Link> va{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">avtomatik to‘lov qabul qilish</Link> maqolalarini ko‘ring.
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">avtomatik to‘lov qabul qilish</Link> maqolasini ko‘ring.
         Stars/Premium/Gifts yetkazish bilan bog‘lash uchun{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>. Umumiy imkoniyatlar —{" "}
         <Link href="/business">Business</Link> sahifasida.
@@ -61,7 +60,6 @@ function RuBody() {
       <h2 id="kirish">Кратко о Click API</h2>
       <p>
         Эта статья собирает самые частые вопросы про Click API. За практическим потоком смотрите{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">официальную интеграцию</Link> и{" "}
         <Link href="/blog/click-api-avtomatik-tolov-qabul">автоприём оплаты</Link>. Для связи с доставкой
         Stars/Premium/Gifts —{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>. Общие возможности — на странице{" "}
@@ -101,7 +99,6 @@ function EnBody() {
       <h2 id="kirish">Click API in brief</h2>
       <p>
         This article gathers the most common questions about Click API. For the practical flow see the{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">official integration</Link> and{" "}
         <Link href="/blog/click-api-avtomatik-tolov-qabul">accepting payments automatically</Link>. To wire it to
         Stars/Premium/Gifts delivery, see{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>. General capabilities are on the{" "}

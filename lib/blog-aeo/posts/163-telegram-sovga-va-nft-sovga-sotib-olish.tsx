@@ -133,7 +133,7 @@ function UzBody() {
       <p>
         Soniga cheklov yo‘qligi sababli oddiy sovg‘alar — katta pul sarflamasdan e’tibor bildirishning arzon
         usuli. Yuborish tartibi:{" "}
-        <Link href="/blog/telegram-gifts-yuborish-qollanma">sovg‘a yuborish qo‘llanmasi</Link>.
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">sovg‘a yuborish qo‘llanmasi</Link>.
       </p>
 
       <h2 id="nft">NFT sovg‘alar nima</h2>
@@ -166,7 +166,7 @@ function UzBody() {
       <p>
         Batafsil: <Link href="/blog/telegram-nft-gift-nima">NFT Gift nima</Link>,{" "}
         <Link href="/blog/telegram-nft-investitsiya">NFT sovg‘a investitsiya sifatida</Link>,{" "}
-        <Link href="/blog/limited-edition-telegram-gifts">limited edition sovg‘alar</Link>.
+        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">kolleksiya va rare sovg‘alar</Link>.
       </p>
 
       <h2 id="farq">Oddiy va NFT sovg‘a — farqi nimada</h2>
@@ -368,7 +368,7 @@ function RuBody() {
       <p>
         Поскольку ограничений на количество нет, обычные подарки — это доступный и бюджетный способ выразить
         внимание. Как отправить:{" "}
-        <Link href="/blog/telegram-gifts-yuborish-qollanma">руководство по отправке подарков</Link>.
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">руководство по отправке подарков</Link>.
       </p>
 
       <h2 id="nft">Что такое NFT-подарки</h2>
@@ -403,7 +403,7 @@ function RuBody() {
       <p>
         Подробнее: <Link href="/blog/telegram-nft-gift-nima">что такое NFT Gift</Link>,{" "}
         <Link href="/blog/telegram-nft-investitsiya">NFT-подарок как инвестиция</Link>,{" "}
-        <Link href="/blog/limited-edition-telegram-gifts">лимитированные подарки</Link>.
+        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">коллекция и редкие подарки</Link>.
       </p>
 
       <h2 id="farq">В чём разница между обычным и NFT-подарком</h2>
@@ -601,7 +601,7 @@ function EnBody() {
       </KeyFacts>
       <p>
         With no supply limit, regular gifts are an affordable way to show attention. How to send one:{" "}
-        <Link href="/blog/telegram-gifts-yuborish-qollanma">the gift-sending guide</Link>.
+        <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">the gift-sending guide</Link>.
       </p>
 
       <h2 id="nft">What NFT gifts are</h2>
@@ -634,7 +634,7 @@ function EnBody() {
       <p>
         More on this: <Link href="/blog/telegram-nft-gift-nima">what an NFT Gift is</Link>,{" "}
         <Link href="/blog/telegram-nft-investitsiya">the NFT gift as an investment</Link>,{" "}
-        <Link href="/blog/limited-edition-telegram-gifts">limited-edition gifts</Link>.
+        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">collections and rare gifts</Link>.
       </p>
 
       <h2 id="farq">Regular versus NFT gifts</h2>

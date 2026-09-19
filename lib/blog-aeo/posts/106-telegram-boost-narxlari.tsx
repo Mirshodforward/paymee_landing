@@ -42,14 +42,22 @@ function UzBody() {
       <BoostMarketPriceBoard locale="uz" />
       <p>
         Jadval taxminiy; to‘lov oldidan botdagi summani tasdiqlang.{" "}
-        <Link href="/blog/telegram-boost-avtomatik">Avtomatik yetkazish</Link> narxdan alohida — standart xizmat
+        <Link href="/blog/telegram-kanalga-boost-sotib-olish">Avtomatik yetkazish</Link> narxdan alohida — standart xizmat
         ichida.
       </p>
+      <h2 id="arzon-mezon">Arzon boostni tanlashda nimaga qarash kerak</h2>
+      <p>
+        Eng past narx har doim eng foydali emas. Ikki taklifni solishtirganda uchta narsani tekshiring: boost
+        muddat oxirigacha saqlanadimi, yetkazish avtomatikmi yoki qo‘lda, va muammo chiqqanda murojaat qiladigan
+        support kanali bormi. Narx juda past bo‘lsa-yu, bu uchtasidan biri yo‘q bo‘lsa — tejash o‘rniga buyurtma
+        yo‘qoladi.
+      </p>
+
       <h2 id="arzon">Arzon boost qanday topiladi?</h2>
       <p>
         Qisqa muddat + kam boost — test uchun; uzoq muddat — kuniga arzonroq bo‘lishi mumkin. Batafsil:{" "}
-        <Link href="/blog/arzon-telegram-boost">arzon telegram boost</Link>,{" "}
-        <Link href="/blog/starspaymee-boost-market">StarsPaymee Boost Market</Link>.
+        <Link href="/blog/telegram-boost-narxlari">arzon telegram boost</Link>,{" "}
+        <Link href="/blog/telegram-kanalga-boost-sotib-olish">StarsPaymee Boost Market</Link>.
       </p>
       <InlineCta text="Joriy narxlar — Boost Market, so‘mda." />
       <BoostSeriesNav locale="uz" />
@@ -96,6 +104,7 @@ export const post: AeoPost = {
     "telegram boost narxi uzbekistan",
     "30 kunlik boost narxi",
     "kanal boost narxi",
+    "arzon telegram boost",
   ],
   locales: {
     uz: {

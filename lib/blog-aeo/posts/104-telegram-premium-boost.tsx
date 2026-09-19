@@ -35,7 +35,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Premium sotib olish: <Link href="/premium">Telegram Premium</Link> yoki{" "}
-        <Link href="/blog/telegram-premium-sotib-olish-2026">Premium qo‘llanma 2026</Link> (so‘mda, bot).
+        <Link href="/blog/telegram-premium-eng-oson-usul">Premium qo‘llanma 2026</Link> (so‘mda, bot).
       </p>
       <h2 id="qadamlar">Premium boost qanday beriladi?</h2>
       <ol>
@@ -43,6 +43,34 @@ function UzBody() {
         <li>«Boost qilish» ni tanlang.</li>
         <li>Tasdiqlang — boost kanal reytingiga qo‘shiladi.</li>
       </ol>
+      <h2 id="strategiya">Obunachilardan boost yig‘ish strategiyasi</h2>
+      <p>
+        Rasmiy boost pulga sotilmaydi — uni Premium obunachilaringiz beradi. Shuning uchun kanal egasining vazifasi
+        boshqacha: kerakli darajani aniqlash va obunachilarni taklif qilish.
+      </p>
+      <ul>
+        <li>
+          <b>Maqsadli levelni belgilang</b> — Stories yoki giveaway uchun qaysi daraja kerakligini bilib oling,
+          keyin nechta boost yetishmayotganini hisoblang.
+        </li>
+        <li>
+          <b>Post orqali so‘rang</b> — kanal profilidagi «Boost qilish» tugmasini ko‘rsatib, nima uchun kerakligini
+          tushuntiring.
+        </li>
+        <li>
+          <b>Giveaway bilan birga</b> — konkurs e’lonida boost so‘rash odatiy amaliyot (Telegram qoidalari
+          doirasida).
+        </li>
+        <li>
+          <b>Kontent bilan qo‘llab-quvvatlang</b> — boost auditoriya o‘sishini almashtirmaydi, faqat darajani
+          ko‘taradi.
+        </li>
+      </ul>
+      <p>
+        Obunachilar yetarli bo‘lmasa, muddatli{" "}
+        <Link href="/blog/telegram-kanalga-boost-sotib-olish">boost ijarasi</Link> alohida xizmat sifatida mavjud.
+      </p>
+
       <h2 id="ijara">Premium boost vs ijarа</h2>
       <p>
         Kanal egasi Premium bo‘lmasa ham <Link href="/blog/telegram-kanalga-boost-sotib-olish">boost ijarasi</Link>{" "}

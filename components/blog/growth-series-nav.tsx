@@ -12,11 +12,7 @@ const labels: Record<
       title: "Telegram raqam sotib olish",
       blurb: "Virtual va haqiqiy raqamlar, narxlar, SMS qabul qilish.",
     },
-    "virtual-telegram-raqam-nima": {
-      title: "Virtual Telegram raqam nima?",
-      blurb: "Bir martalik raqam, OTP va xavfsizlik.",
-    },
-    "telegram-premium-sotib-olish-2026": {
+    "telegram-premium-eng-oson-usul": {
       title: "Telegram Premium sotib olish",
       blurb: "So‘mda to‘lov, username bilan faollashish.",
     },
@@ -28,15 +24,15 @@ const labels: Record<
       title: "Telegram biznes akkaunti",
       blurb: "Business profil, API va mijozlar bilan ishlash.",
     },
-    "telegram-kanal-boost-olish-qollanma": {
+    "telegram-premium-boost": {
       title: "Kanal uchun boost olish",
       blurb: "Level, Stories va giveaway imkoniyatlari.",
     },
-    "telegram-stars-sotib-olish-to-liq-qollanma": {
+    "ozbekistonda-telegram-stars-sotib-olish": {
       title: "Telegram Stars sotib olish",
       blurb: "To‘liq qo‘llanma: narx, bot, xavfsizlik.",
     },
-    "telegram-gifts-yuborish-qollanma": {
+    "telegram-gifts-qanday-yuboriladi-qollanma": {
       title: "Telegram Gifts yuborish",
       blurb: "Sovg‘a tanlash, narx va yetkazish.",
     },
@@ -54,11 +50,7 @@ const labels: Record<
       title: "Купить номер для Telegram",
       blurb: "Виртуальные номера, цены, приём SMS.",
     },
-    "virtual-telegram-raqam-nima": {
-      title: "Что такое виртуальный номер?",
-      blurb: "Одноразовый номер, OTP и безопасность.",
-    },
-    "telegram-premium-sotib-olish-2026": {
+    "telegram-premium-eng-oson-usul": {
       title: "Купить Telegram Premium",
       blurb: "Оплата в сумах, активация по username.",
     },
@@ -70,15 +62,15 @@ const labels: Record<
       title: "Бизнес-аккаунт Telegram",
       blurb: "Business-профиль, API и клиенты.",
     },
-    "telegram-kanal-boost-olish-qollanma": {
+    "telegram-premium-boost": {
       title: "Boost для канала",
       blurb: "Уровни, Stories и giveaway.",
     },
-    "telegram-stars-sotib-olish-to-liq-qollanma": {
+    "ozbekistonda-telegram-stars-sotib-olish": {
       title: "Купить Telegram Stars",
       blurb: "Полный гайд: цена, бот, безопасность.",
     },
-    "telegram-gifts-yuborish-qollanma": {
+    "telegram-gifts-qanday-yuboriladi-qollanma": {
       title: "Отправка Telegram Gifts",
       blurb: "Выбор подарка, цена и доставка.",
     },
@@ -96,11 +88,7 @@ const labels: Record<
       title: "Buy a Telegram number",
       blurb: "Virtual numbers, prices, SMS reception.",
     },
-    "virtual-telegram-raqam-nima": {
-      title: "What is a virtual Telegram number?",
-      blurb: "Disposable numbers, OTP and safety.",
-    },
-    "telegram-premium-sotib-olish-2026": {
+    "telegram-premium-eng-oson-usul": {
       title: "Buy Telegram Premium",
       blurb: "Pay in UZS, activate by username.",
     },
@@ -112,15 +100,15 @@ const labels: Record<
       title: "Telegram business account",
       blurb: "Business profile, API and clients.",
     },
-    "telegram-kanal-boost-olish-qollanma": {
+    "telegram-premium-boost": {
       title: "Channel boost guide",
       blurb: "Levels, Stories and giveaways.",
     },
-    "telegram-stars-sotib-olish-to-liq-qollanma": {
+    "ozbekistonda-telegram-stars-sotib-olish": {
       title: "Buy Telegram Stars",
       blurb: "Full guide: price, bot, safety.",
     },
-    "telegram-gifts-yuborish-qollanma": {
+    "telegram-gifts-qanday-yuboriladi-qollanma": {
       title: "Send Telegram Gifts",
       blurb: "Pick a gift, price and delivery.",
     },

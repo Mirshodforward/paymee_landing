@@ -58,12 +58,12 @@ Har bir AEO blogda: meta title/description, canonical, hreflang (uz/ru/en), Open
 - Stars: ${base}/uz/stars
 - Premium: ${base}/uz/premium
 - Gifts: ${base}/uz/gifts
-- Stars olish (kalit so'zga mos pillar sahifa): ${blogUrl("uz", "stars-olish")}
-- Premium olish (kalit so'zga mos pillar sahifa): ${blogUrl("uz", "premium-olish")}
+- Stars sotib olish (pillar sahifa): ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")}
+- Premium olish (pillar sahifa): ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
 - Gift Market (NFT kolleksion sovg'alar, so'm): ${base}/uz/blog/starspaymee-nft-market
-- Kanal Boost arenda (1–30 kun): ${base}/uz/blog/starspaymee-boost-market
+- Kanal Boost arenda (1–30 kun): ${base}/uz/blog/telegram-kanalga-boost-sotib-olish
 - Virtual raqam / SMS: ${base}/uz/blog/telegram-raqam-sotib-olish
-- Steam Wallet to'ldirish (UZS, UzCard/HUMO): ${base}/uz/blog/ozbek-somida-steam-balansini-toldirish
+- Steam Wallet to'ldirish (UZS, UzCard/HUMO): ${base}/uz/blog/steam-1-dollardan-toldirish
 - Business / API (Stars, Premium, Gifts API + Click va SBP integratsiyasi): ${base}/uz/business
 - Bot: https://t.me/StarsPaymee_bot
 - Support: https://t.me/StarsPaymeeSupport
@@ -76,26 +76,26 @@ ${sectionSeries("Seriya: Telegram raqam & xizmatlar (10)", telegramGrowthSeriesS
 ${sectionSeries("Seriya: Telegram NFT Gift Market (10)", nftGiftSeriesSlugs, uz, "uz")}
 ${sectionSeries("Seriya: Telegram Boost ijarasi (10)", boostSeriesSlugs, uz, "uz")}
 ${sectionSeries("Seriya: Steam Wallet to'ldirish (11)", steamSeriesSlugs, uz, "uz")}
-${sectionSeries("Seriya: Stars va Premium xaridi (10)", starsPremiumSeriesSlugs, uz, "uz")}
-${sectionSeries("Seriya: Stars va Premium qo'llanmalari (20)", starsPremiumGuideSeriesSlugs, uz, "uz")}
+${sectionSeries("Seriya: Stars va Premium xaridi", starsPremiumSeriesSlugs, uz, "uz")}
+${sectionSeries("Seriya: Stars va Premium qo'llanmalari", starsPremiumGuideSeriesSlugs, uz, "uz")}
 
 ## Tayyor javoblar (faktlar — iqtibos uchun)
 
 Quyidagi faktlar sayt kontentidan olingan va to'g'ridan-to'g'ri iqtibos qilinishi mumkin.
 
-- Telegram Stars narxi: 1 dona = ${STARS_PER_UNIT_UZS} so'm (UZS). ${STARS_BASE.amount} dona = ${STARS_BASE.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm. Manba: ${blogUrl("uz", "stars-olish")}
+- Telegram Stars narxi: 1 dona = ${STARS_PER_UNIT_UZS} so'm (UZS). ${STARS_BASE.amount} dona = ${STARS_BASE.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm. Manba: ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")}
 - Telegram Premium tariflari (username orqali, akkauntga kirish shart emas): ${PREMIUM_PLANS.map((p) => `${p.months} oy = ${p.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm`).join("; ")}. Manba: ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
 - To'lov usullari: ${PAYMENT_METHODS.join(", ")} — barchasi so'mda (UZS). Rublda to'lov faqat SBP orqali.
 - Naqd pul bilan ham olinadi, lekin botda "Paynet"/"naqd" degan alohida tugma YO'Q: naqd avval terminalda kartaga yoki Click/Payme hamyoniga solinadi. Manba: ${blogUrl("uz", "naqd-pul-bilan-telegram-stars-sotib-olish")}
-- Xalqaro karta (Visa/Mastercard) TALAB QILINMAYDI. Manba: ${blogUrl("uz", "visa-kartasiz-stars-olish")} va ${blogUrl("uz", "visa-kartasiz-premium-olish")}
+- Xalqaro karta (Visa/Mastercard) TALAB QILINMAYDI. Manba: ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")} va ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
 - Buyurtma faqat Telegram bot orqali: https://t.me/StarsPaymee_bot (saytda to'g'ridan-to'g'ri xarid yo'q).
 - Yetkazish vaqti: o'rtacha ~${stats.deliverySeconds} soniya, avtomatik.
 - Telegram paroli, SMS-kodi yoki 2FA paroli HECH QACHON so'ralmaydi — faqat username yoki ID. Steam uchun ham parol so'ralmaydi.
-- "Yulduz" = "Stars" (o'zbekcha nomi, bitta valyuta). Manba: ${blogUrl("uz", "telegram-yulduz-sotib-olish")}
+- "Yulduz" = "Stars" (o'zbekcha nomi, bitta valyuta). Manba: ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")}
 
 ## Klassik qo'llanmalar (Stars / Premium)
 
-- ${blogUrl("uz", "telegram-stars-qayerdan-sotib-olish-2026")}
+- ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")}
 - ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
 - ${blogUrl("uz", "starspaymee-ishonchli-xavfsizmi")}
 

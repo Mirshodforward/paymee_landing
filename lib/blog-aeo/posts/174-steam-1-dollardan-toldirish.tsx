@@ -10,7 +10,13 @@ import {
   Steps,
   Toc,
 } from "@/components/blog/aeo-blocks";
-import { STEAM_MIN_USD, STEAM_RATE_UZS_PER_USD, formatUzs, steamPriceUzs } from "@/lib/products";
+import {
+  STEAM_MAX_USD,
+  STEAM_MIN_USD,
+  STEAM_RATE_UZS_PER_USD,
+  formatUzs,
+  steamPriceUzs,
+} from "@/lib/products";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "steam-1-dollardan-toldirish";
@@ -134,10 +140,40 @@ function UzBody() {
         <li>Valyutadagi bank kartasisiz Steam’ni to‘ldirish yo‘lini qidirayotganlarga.</li>
       </KeyFacts>
 
+      <h2 id="tolov">To‘lov usullari, limit va komissiya</h2>
+      <KeyFacts label="Nimani bilish kerak">
+        <li>
+          <b>To‘lov usullari:</b> UzCard, HUMO, Click, Payme va Uzum — hammasi so‘mda, xalqaro kartasiz.
+        </li>
+        <li>
+          <b>Eng kichik summa:</b> {STEAM_MIN_USD} dollar, ya’ni{" "}
+          {formatUzs(steamPriceUzs(STEAM_MIN_USD), "uz")}.
+        </li>
+        <li>
+          <b>Bitta buyurtmadagi eng katta summa:</b> {STEAM_MAX_USD} dollar; kattaroq summa bir necha buyurtmaga
+          bo‘linadi.
+        </li>
+        <li>
+          <b>Komissiya:</b> botda ko‘rsatilgan summa yakuniy — ustiga alohida xizmat haqi qo‘shilmaydi. Bank
+          tomonida karta shartlariga qarab o‘z komissiyasi bo‘lishi mumkin.
+        </li>
+        <li>
+          <b>Valyuta:</b> to‘lov so‘mda, hisob esa Steam hamyoningiz valyutasida to‘ldiriladi —{" "}
+          <Link href="/blog/steam-som-yoki-rubl-hamyon">qaysi valyuta ekanini shu yerda</Link> aniqlaysiz.
+        </li>
+      </KeyFacts>
+      <p>
+        Balans kelmay qolsa, avval Steam ilovasini qayta ishga tushiring, keyin buyurtma raqami bilan supportga
+        yozing — bu holat{" "}
+        <Link href="/blog/steam-balansi-tushmadi">«Steam balansi tushmadi»</Link> maqolasida batafsil.
+      </p>
+
       <h2 id="login">Nega login so‘raladi, parol esa yo‘q</h2>
       <p>
-        Mablag‘ aynan sizning hisobingizga tushishi uchun bot Steam <b>login nomini</b> so‘raydi — bu ochiq
-        ma’lumot va uni profilingizda har kim ko‘radi. <b>Parol, Steam Guard kodi yoki elektron pochtaga
+        Mablag‘ aynan sizning hisobingizga tushishi uchun bot Steam <b>login (account name)</b> ni so‘raydi — bu
+        akkaunt yaratganda tanlagan kirish nomingiz. Uni <b>profil nomi bilan aralashtirmang</b>: profil nomi
+        istalgan vaqtda o‘zgartiriladi va hammaga ko‘rinadi, login esa o‘zgarmaydi va hisobni aniq belgilaydi.
+        Login parol emas, lekin uni ham keraksiz joyda yozib yurmang. <b>Parol, Steam Guard kodi yoki pochtaga
         kelgan kod hech qachon so‘ralmaydi.</b>
       </p>
       <p>
@@ -168,8 +204,8 @@ function UzBody() {
       </KeyFacts>
 
       <p>
-        Qarang: <Link href="/blog/ozbek-somida-steam-balansini-toldirish">so‘mda Steam to‘ldirish</Link>,{" "}
-        <Link href="/blog/steam-wallet-narxlari">Steam Wallet narxlari</Link>,{" "}
+        Qarang: <Link href="/blog/steam-1-dollardan-toldirish">so‘mda Steam to‘ldirish</Link>,{" "}
+        <Link href="/blog/steam-wallet-nima">Steam Wallet narxlari</Link>,{" "}
         <Link href="/blog/steam-wallet-xavfsizmi">xavfsizlik masalasi</Link>. Boshqa o‘yinlar —{" "}
         <Link href="/gampay">GamPay sahifasida</Link>.
       </p>
@@ -279,10 +315,38 @@ function RuBody() {
         <li>Всем, кто ищет, как пополнить Steam без банковской карты в валюте.</li>
       </KeyFacts>
 
+      <h2 id="tolov">Способы оплаты, лимиты и комиссия</h2>
+      <KeyFacts label="Что нужно знать">
+        <li>
+          <b>Способы оплаты:</b> UzCard, HUMO, Click, Payme и Uzum — всё в сумах, без международной карты.
+        </li>
+        <li>
+          <b>Минимальная сумма:</b> {STEAM_MIN_USD} доллар, то есть{" "}
+          {formatUzs(steamPriceUzs(STEAM_MIN_USD), "ru")}.
+        </li>
+        <li>
+          <b>Максимум в одном заказе:</b> {STEAM_MAX_USD} долларов; больше — несколькими заказами.
+        </li>
+        <li>
+          <b>Комиссия:</b> сумма в боте итоговая, отдельной сервисной надбавки сверху нет. Банк может удержать свою
+          комиссию по условиям карты.
+        </li>
+        <li>
+          <b>Валюта:</b> платёж в сумах, а кошелёк пополняется в валюте вашего аккаунта Steam —{" "}
+          <Link href="/blog/steam-som-yoki-rubl-hamyon">как её определить</Link>.
+        </li>
+      </KeyFacts>
+      <p>
+        Если баланс не пришёл, сначала перезапустите Steam, затем напишите в поддержку с номером заказа — подробнее
+        в <Link href="/blog/steam-balansi-tushmadi">«Баланс Steam не пришёл»</Link>.
+      </p>
+
       <h2 id="login">Зачем нужен логин и почему не нужен пароль</h2>
       <p>
-        Чтобы средства попали именно на ваш аккаунт, бот запрашивает <b>логин Steam</b> — это открытые данные,
-        их видно в вашем профиле. <b>Пароль, код Steam Guard или код из почты не запрашиваются никогда.</b>
+        Чтобы средства попали именно на ваш аккаунт, бот запрашивает <b>логин Steam (account name)</b> — имя
+        входа, выбранное при регистрации. Не путайте его с <b>именем профиля</b>: имя профиля можно менять в любой
+        момент и оно видно всем, а логин не меняется и однозначно определяет аккаунт. Логин — не пароль, но и его
+        не стоит публиковать где попало. <b>Пароль, код Steam Guard или код из почты не запрашиваются никогда.</b>
       </p>
       <p>
         Если какой-то сервис просит пароль или код Steam Guard — это попытка угона аккаунта. Подробнее:{" "}
@@ -310,8 +374,8 @@ function RuBody() {
       </KeyFacts>
 
       <p>
-        Смотрите: <Link href="/blog/ozbek-somida-steam-balansini-toldirish">пополнение Steam в сумах</Link>,{" "}
-        <Link href="/blog/steam-wallet-narxlari">цены Steam Wallet</Link>,{" "}
+        Смотрите: <Link href="/blog/steam-1-dollardan-toldirish">пополнение Steam в сумах</Link>,{" "}
+        <Link href="/blog/steam-wallet-nima">цены Steam Wallet</Link>,{" "}
         <Link href="/blog/steam-wallet-xavfsizmi">вопрос безопасности</Link>. Другие игры — на{" "}
         <Link href="/gampay">странице GamPay</Link>.
       </p>
@@ -421,10 +485,38 @@ function EnBody() {
         <li>Anyone looking to top up Steam without a foreign-currency bank card.</li>
       </KeyFacts>
 
+      <h2 id="tolov">Payment methods, limits and commission</h2>
+      <KeyFacts label="What to know">
+        <li>
+          <b>Payment methods:</b> UzCard, HUMO, Click, Payme and Uzum — all in so&lsquo;m, with no international card.
+        </li>
+        <li>
+          <b>Minimum:</b> {STEAM_MIN_USD} dollar, i.e. {formatUzs(steamPriceUzs(STEAM_MIN_USD), "en")}.
+        </li>
+        <li>
+          <b>Maximum per order:</b> {STEAM_MAX_USD} dollars; larger amounts are split across several orders.
+        </li>
+        <li>
+          <b>Commission:</b> the amount shown in the bot is final — no separate service fee on top. Your bank may
+          still charge its own fee under the card&rsquo;s terms.
+        </li>
+        <li>
+          <b>Currency:</b> you pay in so&lsquo;m, while the wallet is topped up in your Steam account&rsquo;s
+          currency — <Link href="/blog/steam-som-yoki-rubl-hamyon">how to check which one</Link>.
+        </li>
+      </KeyFacts>
+      <p>
+        If the balance does not arrive, restart Steam first, then message support with the order number — covered in{" "}
+        <Link href="/blog/steam-balansi-tushmadi">“the Steam balance did not arrive”</Link>.
+      </p>
+
       <h2 id="login">Why a login is asked for and a password is not</h2>
       <p>
-        So the funds reach your account, the bot asks for your <b>Steam login</b> — public information visible on
-        your profile. <b>A password, a Steam Guard code or an emailed code is never requested.</b>
+        So the funds reach your account, the bot asks for your <b>Steam login (account name)</b> — the sign-in name
+        you chose at registration. Do not confuse it with the <b>profile name</b>: the profile name can be changed
+        at any time and is shown to everyone, while the login never changes and identifies the account exactly. The
+        login is not a password, but there is no reason to post it publicly either. <b>A password, a Steam Guard
+        code or an emailed code is never requested.</b>
       </p>
       <p>
         If any service asks for your password or Steam Guard code, that is an account-theft attempt. More on
@@ -453,8 +545,8 @@ function EnBody() {
       </KeyFacts>
 
       <p>
-        See also: <Link href="/blog/ozbek-somida-steam-balansini-toldirish">topping up Steam in so‘m</Link>,{" "}
-        <Link href="/blog/steam-wallet-narxlari">Steam Wallet pricing</Link>,{" "}
+        See also: <Link href="/blog/steam-1-dollardan-toldirish">topping up Steam in so‘m</Link>,{" "}
+        <Link href="/blog/steam-wallet-nima">Steam Wallet pricing</Link>,{" "}
         <Link href="/blog/steam-wallet-xavfsizmi">the safety question</Link>. Other games live on the{" "}
         <Link href="/gampay">GamPay page</Link>.
       </p>
@@ -570,6 +662,10 @@ export const post: AeoPost = {
     "steam eng kam summa",
     "пополнить steam от 1 доллара",
     "steam кошелёк курс сум",
+    "ozbek somida steam balansini toldirish",
+    "steam hisobini toldirish",
+    "steam wallet uzcard humo",
+    "steam wallet narxlari",
   ],
   howToSteps: [
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },

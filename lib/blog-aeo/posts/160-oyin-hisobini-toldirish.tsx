@@ -85,7 +85,7 @@ function UzBody() {
       <GamesTable locale="uz" />
       <p>
         Steam hamyoni ham shu bo‘limda —{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">
+        <Link href="/blog/steam-1-dollardan-toldirish">
           Steam balansini so‘mda to‘ldirish
         </Link>{" "}
         maqolasida alohida yozilgan. To‘liq ro‘yxat va joriy holat{" "}
@@ -201,7 +201,7 @@ function RuBody() {
       <GamesTable locale="ru" />
       <p>
         Кошелёк Steam тоже в этом разделе — про него отдельно в статье{" "}
-        <Link href="/blog/ozbek-somida-steam-balansini-toldirish">
+        <Link href="/blog/steam-1-dollardan-toldirish">
           пополнение баланса Steam в сумах
         </Link>
         . Полный список и текущее состояние — на <Link href="/gampay">странице GamPay</Link>.

@@ -93,13 +93,30 @@ function UzBody() {
         </li>
       </KeyFacts>
 
+      <h2 id="xarajat">Kanal egasi Stars’ni nimaga sarflaydi?</h2>
+      <p>
+        Monetizatsiya faqat daromad tomoni emas. Kanalni yuritishda egasining o‘zi ham Stars sarflaydi — ko‘pchilik
+        buni hisobga olmaydi va balans kerak paytda bo‘sh chiqadi:
+      </p>
+      <ul>
+        <li>Dizayn va grafika botlari — post kartinkasi, banner, oblojka.</li>
+        <li>Statistika va tahlil xizmatlari — auditoriya o‘sishi va reklama samarasi.</li>
+        <li>Reklama va targeting botlari — joylashtirish va o‘lchov.</li>
+        <li>AI botlar — matn, sarlavha va kontent rejasini tayyorlash.</li>
+      </ul>
+      <p>
+        Shuning uchun kanal byudjetini ikki tomonlama rejalashtirgan ma’qul: kelayotgan Stars va ketayotgan Stars.
+        Kichik, lekin sodiq auditoriyada ham bu hisob ishlaydi — Stars reklama shartnomasisiz to‘g‘ridan-to‘g‘ri
+        moliyaviy aloqa ochadi.
+      </p>
+
       <h2 id="pulga">Ishlab topilgan Stars’ni pulga qanday chiqariladi?</h2>
       <p>
         Kreator jamlagan Stars belgilangan chegaradan oshgach, ularni <strong>Fragment</strong> orqali TON
         kriptovalyutasiga aylantiradi, so‘ng TON’ni pulga chiqaradi. Bu jarayon oddiy foydalanuvchi sotib olgan Stars’ga
         taalluqli emas — faqat monetizatsiyadan ishlab topilgan yulduzlar chiqariladi. Batafsil —{" "}
         <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Stars orqali daromad qilish mumkinmi»</Link> va{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Telegram Creator Economy»</Link> maqolalarida.
+        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram Creator Economy»</Link> maqolalarida.
       </p>
 
       <h2 id="maslahat">Daromadni oshirishning 4 maslahati</h2>
@@ -231,7 +248,7 @@ function RuBody() {
         <strong>Fragment</strong>, а затем выводит TON в деньги. Это не относится к Stars, купленным обычным
         пользователем — выводятся только звёзды, заработанные на монетизации. Подробнее — в статьях{" "}
         <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Можно ли заработать на Stars»</Link> и{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Telegram Creator Economy»</Link>.
+        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram Creator Economy»</Link>.
       </p>
 
       <h2 id="maslahat">4 совета по росту дохода</h2>

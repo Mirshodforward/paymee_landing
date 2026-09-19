@@ -59,6 +59,14 @@ function UzBody() {
         </li>
       </KeyFacts>
 
+      <h2 id="tezlik">Limitdan tashqari: yuklab olish tezligi</h2>
+      <p>
+        Premium faqat hajm chegarasini ko‘tarmaydi — yuklab olish tezligidagi cheklov ham olib tashlanadi. Katta
+        arxiv yoki video bilan ishlaganda farq aynan shu yerda seziladi: bir xil fayl oddiy hisobda sekinroq, Premium
+        bilan esa kanal tezligi ruxsat bergancha yuklanadi. Video xabarlarni HD sifatida yuborish ham shu to‘plamga
+        kiradi.
+      </p>
+
       <h2 id="kimga">Bu limit kimga eng ko‘p kerak bo‘ladi?</h2>
       <ul>
         <li>
@@ -188,6 +196,8 @@ export const post: AeoPost = {
   keywords: [
     "telegramda katta fayl yuborish",
     "telegram 4gb fayl",
+    "telegram premium fayl yuklash",
+    "telegram fayl limiti premium",
     "telegram premium fayl limiti",
     "telegram file size limit",
     "telegram 2gb vs 4gb",

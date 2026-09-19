@@ -198,8 +198,8 @@ function UzBody() {
 
       <p>
         Shuningdek o‘qing:{" "}
-        <Link href="/blog/telegram-premium-imkoniyatlari">Premium imkoniyatlari</Link>,{" "}
-        <Link href="/blog/premium-va-oddiy-hisob-farqi">Premium va oddiy hisob farqi</Link>,{" "}
+        <Link href="/blog/telegram-premium-kerak">Premium imkoniyatlari</Link>,{" "}
+        <Link href="/blog/telegram-premium-va-oddiy-farqi">Premium va oddiy hisob farqi</Link>,{" "}
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">oddiy va NFT sovg‘alar</Link>.
       </p>
 
@@ -340,8 +340,8 @@ function RuBody() {
 
       <p>
         Читайте также:{" "}
-        <Link href="/blog/telegram-premium-imkoniyatlari">возможности Premium</Link>,{" "}
-        <Link href="/blog/premium-va-oddiy-hisob-farqi">чем Premium отличается от обычного аккаунта</Link>,{" "}
+        <Link href="/blog/telegram-premium-kerak">возможности Premium</Link>,{" "}
+        <Link href="/blog/telegram-premium-va-oddiy-farqi">чем Premium отличается от обычного аккаунта</Link>,{" "}
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">обычные и NFT-подарки</Link>.
       </p>
 
@@ -480,8 +480,8 @@ function EnBody() {
 
       <p>
         Read next:{" "}
-        <Link href="/blog/telegram-premium-imkoniyatlari">what Premium unlocks</Link>,{" "}
-        <Link href="/blog/premium-va-oddiy-hisob-farqi">Premium versus a regular account</Link>,{" "}
+        <Link href="/blog/telegram-premium-kerak">what Premium unlocks</Link>,{" "}
+        <Link href="/blog/telegram-premium-va-oddiy-farqi">Premium versus a regular account</Link>,{" "}
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">regular and NFT gifts</Link>.
       </p>
 

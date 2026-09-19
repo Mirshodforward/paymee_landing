@@ -61,9 +61,9 @@ function UzBody() {
 
       <p>
         To‘ldirish usullari bo‘yicha:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">Steam hisobini qanday to‘ldirish mumkin</Link>,{" "}
-        <Link href="/blog/steam-wallet-uzcard-orqali-toldirish">UzCard</Link> va{" "}
-        <Link href="/blog/steam-wallet-humo-orqali-toldirish">Humo</Link>.
+        <Link href="/blog/steam-1-dollardan-toldirish">Steam hisobini qanday to‘ldirish mumkin</Link>,{" "}
+        <Link href="/blog/steam-wallet-nima">Steam Wallet nima</Link> va{" "}
+        <Link href="/blog/steam-som-yoki-rubl-hamyon">hamyon valyutasi</Link>.
       </p>
 
       <Sources
@@ -134,9 +134,9 @@ function RuBody() {
 
       <p>
         О способах пополнения:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">как пополнить аккаунт Steam</Link>,{" "}
-        <Link href="/blog/steam-wallet-uzcard-orqali-toldirish">UzCard</Link> и{" "}
-        <Link href="/blog/steam-wallet-humo-orqali-toldirish">Humo</Link>.
+        <Link href="/blog/steam-1-dollardan-toldirish">как пополнить аккаунт Steam</Link>,{" "}
+        <Link href="/blog/steam-wallet-nima">UzCard</Link> и{" "}
+        <Link href="/blog/steam-som-yoki-rubl-hamyon">hamyon valyutasi</Link>.
       </p>
 
       <Sources
@@ -206,9 +206,9 @@ function EnBody() {
 
       <p>
         On top‑up methods:{" "}
-        <Link href="/blog/steam-hisobini-qanday-toldirish-mumkin">how to top up a Steam account</Link>,{" "}
-        <Link href="/blog/steam-wallet-uzcard-orqali-toldirish">UzCard</Link> and{" "}
-        <Link href="/blog/steam-wallet-humo-orqali-toldirish">Humo</Link>.
+        <Link href="/blog/steam-1-dollardan-toldirish">how to top up a Steam account</Link>,{" "}
+        <Link href="/blog/steam-wallet-nima">UzCard</Link> and{" "}
+        <Link href="/blog/steam-som-yoki-rubl-hamyon">hamyon valyutasi</Link>.
       </p>
 
       <Sources

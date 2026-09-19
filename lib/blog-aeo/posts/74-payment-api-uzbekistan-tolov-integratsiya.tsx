@@ -29,7 +29,7 @@ function UzBody() {
       <InfoGrid>
         <InfoCard emoji="🔵" title="Click">
           Keng tarqalgan; callback (prepare/complete) orqali avtomatik tasdiqlash.{" "}
-          <Link href="/blog/click-api-rasmiy-integratsiya">Batafsil</Link>.
+          <Link href="/blog/click-api-avtomatik-tolov-qabul">Batafsil</Link>.
         </InfoCard>
         <InfoCard emoji="🟢" title="Payme">
           Mashhur to‘lov tizimi; invoice va webhook orqali integratsiya.
@@ -96,7 +96,7 @@ function RuBody() {
       <InfoGrid>
         <InfoCard emoji="🔵" title="Click">
           Распространённый; автоподтверждение через callback (prepare/complete).{" "}
-          <Link href="/blog/click-api-rasmiy-integratsiya">Подробнее</Link>.
+          <Link href="/blog/click-api-avtomatik-tolov-qabul">Подробнее</Link>.
         </InfoCard>
         <InfoCard emoji="🟢" title="Payme">
           Популярная платёжная система; интеграция через инвойс и webhook.
@@ -163,7 +163,7 @@ function EnBody() {
       <InfoGrid>
         <InfoCard emoji="🔵" title="Click">
           Widespread; auto‑confirmation via callback (prepare/complete).{" "}
-          <Link href="/blog/click-api-rasmiy-integratsiya">More</Link>.
+          <Link href="/blog/click-api-avtomatik-tolov-qabul">More</Link>.
         </InfoCard>
         <InfoCard emoji="🟢" title="Payme">
           A popular payment system; integration via invoice and webhook.

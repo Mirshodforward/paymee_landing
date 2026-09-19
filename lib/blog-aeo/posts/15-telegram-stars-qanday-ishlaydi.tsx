@@ -47,13 +47,42 @@ function UzBody() {
         </li>
       </KeyFacts>
 
+      <h2 id="qayerda-ishlatiladi">Stars qayerda ishlatiladi?</h2>
+      <p>
+        Yulduzlar Telegramning bir nechta joyida bir xil birlik sifatida ishlaydi — ya’ni bitta balans quyidagi
+        hammasiga yetadi:
+      </p>
+      <ul>
+        <li>
+          <b>Star Reactions</b> — post ostiga pulli reaksiya qo‘yish; reaksiya qiymati kanal egasiga o‘tadi.
+        </li>
+        <li>
+          <b>Sovg‘alar (Gifts)</b> — do‘stingizga yoki o‘zingizga sovg‘a olish, shu jumladan kolleksion seriyalar.
+        </li>
+        <li>
+          <b>Premium hadya</b> — Premium obunasini boshqa akkauntga sovg‘a qilish; kanalga berilgan Premium
+          sovg‘alari boost ham keltiradi.
+        </li>
+        <li>
+          <b>Bot va Mini App to‘lovlari</b> — o‘yin ichidagi xaridlar, obunalar va raqamli xizmatlar.
+        </li>
+        <li>
+          <b>Pulli xabarlar</b> — ba’zi kanal va akkauntlarga yozish uchun belgilangan yulduz miqdori.
+        </li>
+      </ul>
+      <p>
+        Shuning uchun Stars ikki tomonlama ishlaydi: foydalanuvchi uchun bu — ichki xarid birligi, kanal va bot
+        egasi uchun esa daromad oqimi. O‘zbekistondagi foydalanuvchi uchun amaliy tomoni shundaki, balansni
+        xalqaro kartasiz, Mini App yoki bot orqali so‘mda to‘ldirish mumkin.
+      </p>
+
       <h2 id="qayerdan">Stars qayerdan olinadi va qancha turadi?</h2>
       <p>
         Telegram’ning rasmiy narxiga ko‘ra bir yulduz taxminan 0.013–0.014 dollar atrofida. O‘zbekistonda esa eng oson
         yo‘l — so‘mda, mahalliy karta bilan: bu haqda{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olinadi»</Link> maqolasida
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olinadi»</Link> maqolasida
         batafsil. Stars bilan nima qilish mumkinligini{" "}
-        <Link href="/blog/telegram-stars-bilan-nima-sotib-olish-mumkin">bu yerda</Link> ko‘ring. Joriy paketlar —{" "}
+        <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">bu yerda</Link> ko‘ring. Joriy paketlar —{" "}
         <Link href="/stars">Stars sahifasida</Link>.
       </p>
 
@@ -110,13 +139,42 @@ function RuBody() {
         </li>
       </KeyFacts>
 
+      <h2 id="qayerda-ishlatiladi">Где используются Stars?</h2>
+      <p>
+        Звёзды работают как одна и та же единица в нескольких местах Telegram — то есть одного баланса хватает на
+        всё перечисленное:
+      </p>
+      <ul>
+        <li>
+          <b>Star Reactions</b> — платная реакция под постом; её стоимость достаётся владельцу канала.
+        </li>
+        <li>
+          <b>Подарки (Gifts)</b> — подарок другу или себе, включая коллекционные серии.
+        </li>
+        <li>
+          <b>Подарок Premium</b> — подписка Premium для другого аккаунта; подаренный каналу Premium приносит ещё и
+          бусты.
+        </li>
+        <li>
+          <b>Оплата в ботах и Mini App</b> — внутриигровые покупки, подписки и цифровые услуги.
+        </li>
+        <li>
+          <b>Платные сообщения</b> — заданное количество звёзд за письмо некоторым каналам и аккаунтам.
+        </li>
+      </ul>
+      <p>
+        Поэтому Stars работают в две стороны: для пользователя это внутренняя единица покупки, для владельца канала
+        или бота — поток дохода. Практическая часть для Узбекистана: баланс пополняется в сумах через Mini App или
+        бота, без международной карты.
+      </p>
+
       <h2 id="qayerdan">Откуда берутся Stars и сколько стоят?</h2>
       <p>
         По официальной цене Telegram одна звезда стоит примерно 0.013–0.014 доллара. В Узбекистане проще всего — в
         сумах локальной картой: подробнее в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>. Что можно делать со
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>. Что можно делать со
         Stars — смотрите{" "}
-        <Link href="/blog/telegram-stars-bilan-nima-sotib-olish-mumkin">здесь</Link>. Актуальные пакеты — на{" "}
+        <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">здесь</Link>. Актуальные пакеты — на{" "}
         <Link href="/stars">странице Stars</Link>.
       </p>
 
@@ -136,13 +194,15 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-06-11",
-  dateModified: "2026-06-11",
+  dateModified: "2026-09-18",
   keywords: [
     "telegram stars qanday ishlaydi",
     "telegram stars qanday valyuta",
     "telegram stars ishlash prinsipi",
     "telegram stars akkauntga bogliq",
     "how telegram stars work",
+    "telegram stars nima",
+    "telegram stars qayerda ishlatiladi",
   ],
   locales: {
     uz: {
@@ -175,6 +235,11 @@ export const post: AeoPost = {
         {
           question: "Akkauntim o‘chsa Stars nima bo‘ladi?",
           answer: "Stars akkauntga bog‘langan — akkaunt o‘chirilsa yoki kirish yo‘qolsa, balans qaytarilmaydi.",
+        },
+        {
+          question: "Stars qayerda ishlatiladi?",
+          answer:
+            "Star Reactions, sovg‘alar, Premium hadya, bot va Mini App to‘lovlari hamda pulli xabarlar — hammasi bitta balansdan sarflanadi.",
         },
         {
           question: "Stars qancha turadi?",
@@ -213,6 +278,11 @@ export const post: AeoPost = {
         {
           question: "Что будет со Stars, если удалить аккаунт?",
           answer: "Stars привязаны к аккаунту — при удалении или потере доступа баланс не возвращается.",
+        },
+        {
+          question: "Где используются Stars?",
+          answer:
+            "Star Reactions, подарки, подарок Premium, оплата в ботах и Mini App, а также платные сообщения — всё тратится с одного баланса.",
         },
         {
           question: "Сколько стоят Stars?",

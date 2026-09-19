@@ -64,7 +64,7 @@ function UzBody() {
       </p>
 
       <p>
-        Qarang: <Link href="/blog/stars-sotib-olish">xavfsiz xarid mezonlari</Link>,{" "}
+        Qarang: <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">xavfsiz xarid mezonlari</Link>,{" "}
         <Link href="/blog/ishonchli-stars-xizmatini-tanlash">xizmatni qanday tanlash</Link> va{" "}
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">xizmat ishonchlimi</Link>.
       </p>
@@ -140,7 +140,7 @@ function RuBody() {
       </p>
 
       <p>
-        Смотрите: <Link href="/blog/stars-sotib-olish">критерии безопасной покупки</Link>,{" "}
+        Смотрите: <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">критерии безопасной покупки</Link>,{" "}
         <Link href="/blog/ishonchli-stars-xizmatini-tanlash">как выбрать сервис</Link> и{" "}
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">надёжен ли сервис</Link>.
       </p>
@@ -216,7 +216,7 @@ function EnBody() {
       </p>
 
       <p>
-        See: <Link href="/blog/stars-sotib-olish">safe-purchase criteria</Link>,{" "}
+        See: <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">safe-purchase criteria</Link>,{" "}
         <Link href="/blog/ishonchli-stars-xizmatini-tanlash">how to choose a service</Link> and{" "}
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">is the service trustworthy</Link>.
       </p>

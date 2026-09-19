@@ -74,12 +74,36 @@ function UzBody() {
         ]}
       />
 
-      <h2 id="ehtiyot">Bot tanlashda ehtiyotkorlik</h2>
+      <h2 id="ehtiyot">Firibgarlik belgilari — nimadan ehtiyot bo‘lish kerak</h2>
+      <CompareTable
+        headers={["Holat", "Ishonchli", "Shubhali"]}
+        rows={[
+          ["Akkaunt ma’lumoti", "Faqat @username", "Parol, SMS-kod yoki 2FA so‘raydi"],
+          ["Narx", "Bozorga mos, to‘lovdan oldin ko‘rinadi", "Haddan past «mo‘‘jiza» narx"],
+          ["To‘lov", "Bot yoki Mini App orqali", "Shaxsiy kartaga to‘g‘ridan-to‘g‘ri o‘tkazma"],
+          ["Oferta va qoidalar", "Yozma va ochiq", "Yo‘q yoki noaniq"],
+          ["Support", "Rasmiy kanal, buyurtma ID bilan", "Faqat shaxsiy yozishma"],
+        ]}
+      />
       <p>
-        Parol so‘raydigan, haddan arzon «mo‘‘jiza» narx taklif qiladigan yoki shaxsiy kartaga to‘g‘ridan-to‘g‘ri
-        o‘tkazma so‘raydigan botlardan saqlaning. Xavfsiz tanlash bo‘yicha{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">to‘liq qo‘llanma</Link> bor. Joriy narxlar —{" "}
-        <Link href="/stars">Stars sahifasida</Link>.
+        Alohida ehtiyot bo‘ladigan uch holat bor. Birinchisi — katta chegirma va’da qilib <b>oldindan to‘lov</b>{" "}
+        so‘rash. Ikkinchisi — havola: brauzerda ochishdan oldin domen Telegramning rasmiy manzillari bilan ustma-ust
+        tushishini tekshiring, soxta sahifalar odatda bitta harf bilan farq qiladi. Uchinchisi —{" "}
+        <b>keraksiz admin yoki moderator huquqlari</b>: Stars sotib olish uchun kanalingizga hech kimni qo‘shish
+        kerak emas.
+      </p>
+
+      <h2 id="qadamlar">Xavfsiz xarid uchun amaliy qadamlar</h2>
+      <ul>
+        <li>Rasmiy bot yoki Mini App manzilini tekshiring (masalan @StarsPaymee_bot).</li>
+        <li>To‘lovni mahalliy tizimlar orqali qiling — shaxsiy kartaga o‘tkazma qilmang.</li>
+        <li>Qabul qiluvchi @username’ini to‘lovdan oldin solishtiring.</li>
+        <li>Buyurtma ID’sini saqlang va muammo bo‘lsa supportga shu ID bilan yozing.</li>
+        <li>Hech kimga akkaunt yoki kanal huquqlarini bermang.</li>
+      </ul>
+      <p>
+        Joriy narxlar — <Link href="/stars">Stars sahifasida</Link>; xizmat qanday tekshirilgani esa{" "}
+        <Link href="/blog/starspaymee-ishonchli-xavfsizmi">«StarsPaymee ishonchlimi»</Link> maqolasida.
       </p>
 
       <Sources
@@ -163,11 +187,38 @@ function RuBody() {
         ]}
       />
 
-      <h2 id="ehtiyot">Осторожность при выборе бота</h2>
+      <h2 id="ehtiyot">Признаки мошенничества — чего опасаться</h2>
+      <CompareTable
+        headers={["Ситуация", "Надёжно", "Подозрительно"]}
+        rows={[
+          ["Данные аккаунта", "Только @username", "Просят пароль, SMS-код или 2FA"],
+          ["Цена", "Рыночная, видна до оплаты", "Неправдоподобно низкая"],
+          ["Оплата", "Через бота или Mini App", "Перевод напрямую на личную карту"],
+          ["Оферта и правила", "Написаны и открыты", "Нет или размыты"],
+          ["Поддержка", "Официальный канал, по ID заказа", "Только личная переписка"],
+        ]}
+      />
+      <p>
+        Отдельно опасайтесь трёх вещей. Первое — <b>предоплата</b> под обещание большой скидки. Второе — ссылка:
+        прежде чем открыть её в браузере, сверьте домен с официальными адресами Telegram, поддельные страницы обычно
+        отличаются одной буквой. Третье — <b>лишние права админа или модератора</b>: для покупки Stars никого
+        добавлять в ваш канал не нужно.
+      </p>
+
+      <h2 id="qadamlar">Практические шаги безопасной покупки</h2>
+      <ul>
+        <li>Проверьте адрес официального бота или Mini App (например @StarsPaymee_bot).</li>
+        <li>Платите через местные системы — не переводом на личную карту.</li>
+        <li>Сверьте @username получателя до оплаты.</li>
+        <li>Сохраните ID заказа и при проблеме пишите в поддержку именно с ним.</li>
+        <li>Никому не передавайте права на аккаунт или канал.</li>
+      </ul>
+
+      <h2 id="ehtiyot-bot">Осторожность при выборе бота</h2>
       <p>
         Избегайте ботов, которые просят пароль, предлагают слишком низкую «чудо-цену» или просят прямой перевод на
         личную карту. Есть{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">полное руководство по безопасности</Link>.
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">полное руководство по безопасности</Link>.
         Актуальные цены — на <Link href="/stars">странице Stars</Link>.
       </p>
 
@@ -194,6 +245,10 @@ export const post: AeoPost = {
     "telegram stars olish bot",
     "telegram stars sotib olish bot",
     "best telegram stars bot uzbekistan",
+    "telegram stars xavfsiz sotib olish",
+    "stars firibgarlik belgilari",
+    "ishonchli stars xizmatini tanlash",
+    "stars sotib olish qayerdan",
   ],
   locales: {
     uz: {

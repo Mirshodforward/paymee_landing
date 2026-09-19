@@ -52,6 +52,30 @@ function UzBody() {
 
       <InlineCta text="Avtomatik Click to‘lovini ulamoqchimisiz? Business bilan bog‘laning." />
 
+      <h2 id="rasmiy">Rasmiy integratsiya: merchant sozlamalaridan yetkazishgacha</h2>
+      <Steps>
+        <Step title="1. Merchant ma’lumotlari">
+          Click tomonidan berilgan <b>service_id</b>, <b>merchant_id</b> va maxfiy kalit tizim tomonida sozlanadi.
+        </Step>
+        <Step title="2. Invoice yaratish">
+          Buyurtma uchun summa va tavsif bilan to‘lov yaratiladi, mijozga to‘lov havolasi beriladi.
+        </Step>
+        <Step title="3. Mijoz to‘lovi">
+          Click ilovasi yoki karta orqali so‘mda to‘lanadi; 3-D Secure va OTP odatdagidek ishlaydi.
+        </Step>
+        <Step title="4. Callback va imzo">
+          Click to‘lov holatini callback orqali qaytaradi — <b>imzo (signature) tekshiriladi</b>, shundan keyingina
+          buyurtma bajarilgan hisoblanadi.
+        </Step>
+        <Step title="5. Avtomatik yetkazish">
+          Tasdiqlangan to‘lovdan so‘ng Stars, Premium yoki Gift API orqali avtomatik yetkaziladi.
+        </Step>
+      </Steps>
+      <p>
+        Imzoni tekshirish — bu yerdagi eng muhim qadam: u soxta callback yuborib mahsulot olib ketishning va «to‘lov
+        o‘tdi-yu mahsulot ketmadi» holatining oldini oladi.
+      </p>
+
       <h2 id="xatolar">Ko‘p uchraydigan xatolar</h2>
       <InfoGrid>
         <InfoCard emoji="🔁" title="Ikki marta yetkazish">
@@ -70,7 +94,7 @@ function UzBody() {
 
       <p>
         Batafsil:{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API rasmiy integratsiyasi</Link> va{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API rasmiy integratsiyasi</Link> va{" "}
         <Link href="/blog/click-api-faq-savollar">Click API FAQ</Link>. To‘lovni yetkazib berish bilan bog‘lash uchun{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>ni ko‘ring.
       </p>
@@ -151,7 +175,7 @@ function RuBody() {
 
       <p>
         Подробнее:{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">официальная интеграция Click API</Link> и{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">официальная интеграция Click API</Link> и{" "}
         <Link href="/blog/click-api-faq-savollar">FAQ Click API</Link>. Для связи оплаты с доставкой смотрите{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>.
       </p>
@@ -232,7 +256,7 @@ function EnBody() {
 
       <p>
         See also:{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">the official Click API integration</Link> and{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">the official Click API integration</Link> and{" "}
         <Link href="/blog/click-api-faq-savollar">Click API FAQ</Link>. To wire payment to delivery, see{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>.
       </p>
@@ -324,6 +348,8 @@ export const post: AeoPost = {
     "click api avtomatik to‘lov",
     "click callback prepare complete",
     "click to‘lov qabul qilish",
+    "click api rasmiy integratsiya",
+    "click merchant sozlash",
   ],
   howToSteps: [
     { name: "Prepare so‘rovi", text: "Click prepare so‘rovida buyurtma va summani tekshiring." },

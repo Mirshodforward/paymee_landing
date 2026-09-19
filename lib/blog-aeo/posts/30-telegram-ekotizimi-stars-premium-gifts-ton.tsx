@@ -92,9 +92,9 @@ function UzBody() {
         ichki qiymatni tashqi dunyoga (real pulga) ulaydigan ko‘prik. Shu sabab Stars’ni tushunish — butun ekotizimni
         tushunish demak. Stars bilan nima qilish mumkinligini{" "}
         <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Stars ishlatish usullari»</Link> va{" "}
-        <Link href="/blog/telegram-stars-bilan-nima-sotib-olish-mumkin">«Stars bilan nima olish mumkin»</Link>{" "}
+        <Link href="/blog/telegram-stars-qanday-ishlaydi">«Stars qanday ishlaydi»</Link>{" "}
         maqolalarida ko‘ring. Iqtisodiy tomoni esa{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link> maqolasida.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Creator Economy»</Link> maqolasida.
       </p>
 
       <h2 id="ozbekiston">O‘zbekiston uchun kirish nuqtasi</h2>
@@ -102,7 +102,7 @@ function UzBody() {
         Ekotizimning istalgan qismidan foydalanish uchun ko‘pincha Stars yoki Premium kerak bo‘ladi. O‘zbekistonda eng
         qulay kirish nuqtasi — so‘mda, mahalliy karta (UzCard/HUMO/Click/Payme) bilan botdan olish. Stars’ni qayerdan
         olishni{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link>, Premium’ni esa{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link>, Premium’ni esa{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">«Premium eng oson usul»</Link> maqolasida ko‘rasiz. Umumiy
         savollar —{" "}
         <Link href="/blog/telegram-stars-savol-javob-faq">«Stars FAQ»</Link> da.
@@ -208,16 +208,16 @@ function RuBody() {
         эту внутреннюю ценность с внешним миром (реальными деньгами). Поэтому понять Stars — значит понять всю
         экосистему. Что можно делать со Stars — в статьях{" "}
         <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Способы использования Stars»</Link> и{" "}
-        <Link href="/blog/telegram-stars-bilan-nima-sotib-olish-mumkin">«Что можно купить за Stars»</Link>. Экономическая
+        <Link href="/blog/telegram-stars-qanday-ishlaydi">«Как работают Stars»</Link>. Экономическая
         сторона — в статье{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link>.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Creator Economy»</Link>.
       </p>
 
       <h2 id="ozbekiston">Точка входа для Узбекистана</h2>
       <p>
         Чтобы пользоваться любой частью экосистемы, обычно нужны Stars или Premium. В Узбекистане самая удобная точка
         входа — покупка в сумах локальной картой (UzCard/HUMO/Click/Payme) через бота. Где взять Stars — в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>, а Premium — в{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>, а Premium — в{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">«Premium самым простым способом»</Link>. Общие вопросы — в{" "}
         <Link href="/blog/telegram-stars-savol-javob-faq">«Stars FAQ»</Link>.
       </p>

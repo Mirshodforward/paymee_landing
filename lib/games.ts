@@ -205,5 +205,5 @@ export const STEAM_IN_GAMPAY = {
   emoji: "🎮",
   unit: "Hamyon",
   accent: "#1b2838",
-  blogSlug: "ozbek-somida-steam-balansini-toldirish",
+  blogSlug: "steam-1-dollardan-toldirish",
 } as const;

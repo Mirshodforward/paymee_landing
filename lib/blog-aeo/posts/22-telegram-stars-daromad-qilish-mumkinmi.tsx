@@ -67,7 +67,7 @@ function UzBody() {
       <p>
         Kanalni to‘liq monetizatsiya qilish bo‘yicha alohida qo‘llanma bor —{" "}
         <Link href="/blog/telegram-kanal-stars-monetizatsiya">«Kanalni Stars bilan monetizatsiya»</Link>. Umumiy manzara{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link> maqolasida.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Creator Economy»</Link> maqolasida.
       </p>
 
       <h2 id="yollari">Stars daromadining asosiy manbalari</h2>
@@ -87,6 +87,20 @@ function UzBody() {
         <li>
           <strong>Bot/Mini App savdosi:</strong> kurs, obuna, raqamli tovar.
         </li>
+      </ul>
+
+      <h2 id="aylanish">Ekotizimda pul qanday aylanadi?</h2>
+      <p>
+        Zanjir oddiy: foydalanuvchi so‘m yoki dollar bilan Stars sotib oladi → Stars’ni kreator kontenti, sovg‘asi
+        yoki botiga sarflaydi → kreator Stars to‘playdi → Fragment orqali TON’ga chiqaradi → TON pulga aylantiriladi.
+        Har bir bosqichda qiymat Telegram ichida qoladi va faqat oxirida tashqariga chiqadi.
+      </p>
+      <p>Bu iqtisodiyotda daromad oladiganlar bir necha toifa:</p>
+      <ul>
+        <li>Kanal egalari — pulli post, Stars obuna va Star Reactions orqali.</li>
+        <li>Bot va Mini App ishlab chiquvchilari — raqamli mahsulot va xizmat savdosi.</li>
+        <li>Kontent-mualliflar — sovg‘a, tip va reaksiyalardan.</li>
+        <li>Vositachi xizmatlar — foydalanuvchiga Stars’ni qulay yetkazishdan.</li>
       </ul>
 
       <h2 id="pulga">Ishlab topilgan Stars’ni pulga chiqarish</h2>
@@ -111,7 +125,7 @@ function UzBody() {
       </ul>
       <p>
         Stars bilan nima <em>sotib olish</em> mumkinligini{" "}
-        <Link href="/blog/telegram-stars-bilan-nima-sotib-olish-mumkin">«Stars bilan nima olish mumkin»</Link>{" "}
+        <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Stars bilan nima olish mumkin»</Link>{" "}
         maqolasida topasiz.
       </p>
 
@@ -190,7 +204,7 @@ function RuBody() {
       <p>
         Полное руководство по монетизации канала — в статье{" "}
         <Link href="/blog/telegram-kanal-stars-monetizatsiya">«Монетизация канала через Stars»</Link>. Общая картина — в{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link>.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Creator Economy»</Link>.
       </p>
 
       <h2 id="yollari">Основные источники дохода на Stars</h2>
@@ -234,7 +248,7 @@ function RuBody() {
       </ul>
       <p>
         Что можно <em>купить</em> за Stars — в статье{" "}
-        <Link href="/blog/telegram-stars-bilan-nima-sotib-olish-mumkin">«Что можно купить за Stars»</Link>.
+        <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Что можно купить за Stars»</Link>.
       </p>
 
       <Sources
@@ -262,6 +276,8 @@ export const post: AeoPost = {
     "telegram stars income",
     "telegram stars creator",
     "telegram stars pulga chiqarish",
+    "telegram creator economy",
+    "stars ekotizimi daromad",
   ],
   locales: {
     uz: {

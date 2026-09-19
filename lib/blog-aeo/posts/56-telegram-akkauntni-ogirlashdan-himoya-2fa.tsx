@@ -75,7 +75,7 @@ function UzBody() {
       </ul>
       <p>
         Xavfsizlik belgilarini umumiy ko‘rinishda{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
         ham ko‘rish mumkin.
       </p>
 
@@ -169,7 +169,7 @@ function RuBody() {
       </ul>
       <p>
         Общие признаки безопасности также описаны в статье{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Руководство по безопасной покупке»</Link>.
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Руководство по безопасной покупке»</Link>.
       </p>
 
       <h2 id="qaytarish">Что делать, если аккаунт уже угнали?</h2>

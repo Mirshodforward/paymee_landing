@@ -43,7 +43,7 @@ function UzBody() {
           Jamoangizdan <Link href="/blog/telegram-premium-boost">Premium boost</Link> so‘rang.
         </li>
         <li>
-          <Link href="/blog/telegram-kanalni-boost-qilish">Kanalni boost qilish</Link> rejasini tuzing.
+          <Link href="/blog/telegram-premium-boost">Kanalni boost qilish</Link> rejasini tuzing.
         </li>
         <li>
           Muddatli <Link href="/blog/telegram-boost-ijarasi">boost ijarasi</Link> — maqsadli kampaniya uchun.

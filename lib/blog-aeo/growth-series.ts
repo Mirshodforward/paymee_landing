@@ -4,13 +4,12 @@
  */
 export const telegramGrowthSeriesSlugs = [
   "telegram-raqam-sotib-olish",
-  "virtual-telegram-raqam-nima",
-  "telegram-premium-sotib-olish-2026",
+  "telegram-premium-eng-oson-usul",
   "telegram-akkaunt-sotib-olish",
   "telegram-biznes-akkaunt-ochish",
-  "telegram-kanal-boost-olish-qollanma",
-  "telegram-stars-sotib-olish-to-liq-qollanma",
-  "telegram-gifts-yuborish-qollanma",
+  "telegram-premium-boost",
+  "ozbekistonda-telegram-stars-sotib-olish",
+  "telegram-gifts-qanday-yuboriladi-qollanma",
   "telegram-username-sotib-olish",
   "telegram-kanal-guruh-reklama-xizmatlari",
 ] as const;

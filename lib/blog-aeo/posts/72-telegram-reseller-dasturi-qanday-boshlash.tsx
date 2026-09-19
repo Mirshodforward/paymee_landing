@@ -51,6 +51,31 @@ function UzBody() {
 
       <InlineCta text="Reseller bo‘lmoqchimisiz? Business bilan bog‘laning." />
 
+      <h2 id="omillar">Daromadga nima ta’sir qiladi?</h2>
+      <KeyFacts label="Besh omil">
+        <li>
+          <b>Marja</b> — ulgurji narx ustiga qo‘ygan ustamangiz.
+        </li>
+        <li>
+          <b>Hajm</b> — sotuv ko‘paygani sari ulgurji narx pasayadi.
+        </li>
+        <li>
+          <b>Takroriy mijoz</b> — bir martalik xaridordan ko‘ra barqaror oqim qimmatliroq.
+        </li>
+        <li>
+          <b>Ko‘p mahsulot</b> — Stars, Premium va sovg‘alar bitta mijozdan o‘rtacha chekni oshiradi.
+        </li>
+        <li>
+          <b>Bozor</b> — so‘mdagi (O‘zbekiston) va rubldagi (SBP orqali) talab alohida hisoblanadi.
+        </li>
+      </KeyFacts>
+      <p>
+        Amalda to‘rtta narsa farq qiladi: nishani aniq tanlash (kanal egalari, geymerlar yoki oddiy
+        foydalanuvchilar), yetkazish tezligi — 10 soniyalik yetkazish takroriy xaridni oshiradi, shaffof narx va
+        oferta, hamda raqamlarni kuzatib narxni tuzatib borish. Xarajat tomonini ham hisobga oling: qaytarishlar,
+        support vaqti va reklama.
+      </p>
+
       <h2 id="daromad">Daromad qanday shakllanadi?</h2>
       <InfoGrid>
         <InfoCard emoji="🏷️" title="Ustama (marja)">
@@ -323,6 +348,8 @@ export const post: AeoPost = {
     "telegram reseller api",
     "stars premium reseller",
     "reseller bo‘lish",
+    "telegram stars biznesi daromad",
+    "reseller marja hisobi",
   ],
   howToSteps: [
     { name: "Ariza qoldiring", text: "StarsPaymee Business sahifasidan reseller uchun ariza qoldiring." },

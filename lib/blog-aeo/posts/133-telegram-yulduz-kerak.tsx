@@ -65,7 +65,7 @@ function UzBody() {
 
       <p>
         Qarang: <Link href="/blog/yulduz-olish">Yulduz olish qo‘llanmasi</Link>,{" "}
-        <Link href="/blog/telegram-yulduz-sotib-olish">Telegram Yulduz sotib olish</Link> va{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Telegram Yulduz sotib olish</Link> va{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">xavfsizlik</Link>.
       </p>
 
@@ -139,7 +139,7 @@ function RuBody() {
 
       <p>
         Смотрите: <Link href="/blog/yulduz-olish">руководство «Yulduz olish»</Link>,{" "}
-        <Link href="/blog/telegram-yulduz-sotib-olish">покупка Telegram Yulduz</Link> и{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">покупка Telegram Yulduz</Link> и{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">безопасность</Link>.
       </p>
 
@@ -213,7 +213,7 @@ function EnBody() {
 
       <p>
         See: <Link href="/blog/yulduz-olish">the «Yulduz olish» guide</Link>,{" "}
-        <Link href="/blog/telegram-yulduz-sotib-olish">buying Telegram Yulduz</Link> and{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">buying Telegram Yulduz</Link> and{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">safety</Link>.
       </p>
 

@@ -93,7 +93,7 @@ function UzBody() {
       </ul>
       <p>
         Umuman xavfsizlik belgilarini{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
         ko‘rish mumkin — u Stars uchun yozilgan bo‘lsa-da, mezonlar Premium uchun ham amal qiladi.
       </p>
 
@@ -204,7 +204,7 @@ function RuBody() {
       </ul>
       <p>
         Общие признаки безопасности — в{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Руководстве по безопасной покупке»</Link> —
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Руководстве по безопасной покупке»</Link> —
         хоть оно написано про Stars, критерии применимы и к Premium.
       </p>
 

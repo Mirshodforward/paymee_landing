@@ -48,7 +48,7 @@ function UzBody() {
 
       <p>
         Batafsil:{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>,{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>,{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link> va{" "}
         <Link href="/blog/payment-api-uzbekistan-tolov-integratsiya">payment API O‘zbekistonda</Link>.
       </p>
@@ -108,7 +108,7 @@ function RuBody() {
 
       <p>
         Подробнее:{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>,{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>,{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link> и{" "}
         <Link href="/blog/payment-api-uzbekistan-tolov-integratsiya">payment API в Узбекистане</Link>.
       </p>
@@ -168,7 +168,7 @@ function EnBody() {
 
       <p>
         See also:{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>,{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>,{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link> and{" "}
         <Link href="/blog/payment-api-uzbekistan-tolov-integratsiya">payment API in Uzbekistan</Link>.
       </p>

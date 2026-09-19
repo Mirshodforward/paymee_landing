@@ -78,7 +78,7 @@ function UzBody() {
       <p>
         O‘zbekiston foydalanuvchisi uchun eng qulay va odatda eng arzon yo‘l — xorijiy karta yoki kripto talab
         qilmaydigan mahalliy bot. To‘liq qo‘llanma{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> maqolasida,
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> maqolasida,
         joriy narxlar esa doimo <Link href="/stars">Stars sahifasida</Link> yangilanib turadi.
       </p>
 
@@ -165,7 +165,7 @@ function RuBody() {
       <p>
         Для пользователя из Узбекистана самый удобный и обычно самый дешёвый путь — локальный бот, не требующий
         зарубежной карты или крипты. Полное руководство — в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>, актуальные цены
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>, актуальные цены
         всегда обновляются на <Link href="/stars">странице Stars</Link>.
       </p>
 

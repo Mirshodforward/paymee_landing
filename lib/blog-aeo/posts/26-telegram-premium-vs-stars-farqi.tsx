@@ -84,7 +84,7 @@ function UzBody() {
         Har ikkisini ham so‘mda, mahalliy karta (UzCard/HUMO/Click/Payme) bilan botdan olish mumkin — xorijiy karta
         shart emas. Premium’ni eng oson yo‘l bilan olish —{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">«Premium eng oson usul»</Link>; Stars qayerdan olinishi —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> maqolasida.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> maqolasida.
       </p>
 
       <Sources
@@ -177,7 +177,7 @@ function RuBody() {
         И то, и другое можно купить в сумах локальной картой (UzCard/HUMO/Click/Payme) через бота — зарубежная карта не
         нужна. Самый простой способ купить Premium — в статье{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">«Premium самым простым способом»</Link>; где взять Stars —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
       </p>
 
       <Sources

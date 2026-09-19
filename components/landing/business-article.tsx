@@ -12,7 +12,7 @@ type Section = { title: string; body: string; items?: string[] };
 const FEATURED_SLUGS = [
   "telegram-stars-api-nima-ulanish",
   "telegram-premium-api-avtomatik-sotuv",
-  "click-api-rasmiy-integratsiya",
+  "click-api-avtomatik-tolov-qabul",
   "sbp-api-rossiya-rubl-tolov",
   "white-label-telegram-stars-platforma",
   "telegram-reseller-dasturi-qanday-boshlash",

@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { BoostMarketPriceBoard, BoostMarketFactsUz } from "@/components/blog/boost-market-price-board";
 import { BoostSeriesNav } from "@/components/blog/boost-series-nav";
-import { CompareTable, InlineCta, Steps, Step, Toc, Yes, No } from "@/components/blog/aeo-blocks";
+import { CompareTable, InlineCta, KeyFacts, Steps, Step, Toc, Yes, No } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "telegram-kanalga-boost-sotib-olish";
@@ -44,7 +44,7 @@ function UzBody() {
         <Step title="Kanal">t.me/link yoki @username kiriting.</Step>
         <Step title="Parametrlar">Boost soni (1–100) va muddat (1–30 kun).</Step>
         <Step title="To‘lov">UzCard, HUMO, Click, Payme.</Step>
-        <Step title="Avtomatik">Tasdiqdan keyin boost qo‘shiladi — <Link href="/blog/telegram-boost-avtomatik">batafsil</Link>.</Step>
+        <Step title="Avtomatik">Tasdiqdan keyin boost qo‘shiladi — <Link href="/blog/telegram-kanalga-boost-sotib-olish">batafsil</Link>.</Step>
       </Steps>
       <BoostMarketFactsUz />
       <h2 id="narx">Telegram boost narxlari (namuna)</h2>
@@ -52,10 +52,28 @@ function UzBody() {
         Aniq summa boost soni va kuniga bog‘liq; uzoq muddatda chegirma qo‘llanishi mumkin. Jadval — taxminiy; buyurtma
         oldidan botdagi kalkulyatorni ko‘ring. Batafsil:{" "}
         <Link href="/blog/telegram-boost-narxlari">boost narxlari</Link>,{" "}
-        <Link href="/blog/arzon-telegram-boost">arzon boost</Link>.
+        <Link href="/blog/telegram-boost-narxlari">arzon boost</Link>.
       </p>
       <BoostMarketPriceBoard locale="uz" />
       <InlineCta text="Boost Marketni oching — telegram boost uzbekistan, so‘mda." />
+      <h2 id="avtomatik">Yetkazish qanday kechadi va boost tushmasa nima qilish kerak</h2>
+      <p>
+        To‘lov tasdiqlangach boostlar kanalga avtomatik bog‘lanadi — qo‘lda kutish yoki operator bilan yozishish
+        shart emas. Odatda bu daqiqalar ichida bo‘ladi; to‘lov provayderi va navbatga qarab biroz cho‘zilishi
+        mumkin. Muddat tugaguncha boost kanal darajasida saqlanadi.
+      </p>
+      <KeyFacts label="Boost ko‘rinmasa — uch tekshiruv">
+        <li>
+          <b>Kanal havolasi</b> — buyurtmada to‘g‘ri <code>t.me/...</code> yoki @username ko‘rsatilganini tekshiring.
+        </li>
+        <li>
+          <b>To‘lov holati</b> — to‘lov muvaffaqiyatli yakunlanganiga ishonch hosil qiling.
+        </li>
+        <li>
+          <b>Buyurtma ID</b> — shu raqam bilan qo‘llab-quvvatlashga yozing, tekshirish tez bo‘ladi.
+        </li>
+      </KeyFacts>
+
       <h2 id="xavf">Boost xavfsizmi? Premium kerakmi?</h2>
       <p>
         Xizmatdan faqat ishonchli bot orqali foydalaning. <strong>Telegram Premium</strong> sizning shaxsiy akkauntingiz
@@ -112,6 +130,8 @@ export const post: AeoPost = {
     "kanalga boost",
     "telegram boost sotib olish",
     "telegram boost arzon",
+    "telegram boost avtomatik",
+    "starspaymee boost market",
     "boost ijarasi",
     "telegram boost uzbekistan",
     "telegram kanal rivojlantirish",

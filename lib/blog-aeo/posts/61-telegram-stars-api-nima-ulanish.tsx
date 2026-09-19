@@ -85,7 +85,7 @@ function UzBody() {
         bo‘yicha savol tug‘ilsa, <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
         @StarsPaymeeSupport</a> yordam beradi. Batafsil mavzular:{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link> va{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> va{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (rubl) API</Link>.
       </p>
 
@@ -178,7 +178,7 @@ function RuBody() {
         поможет <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
         @StarsPaymeeSupport</a>. Подробнее:{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link> и{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> и{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (рубли) API</Link>.
       </p>
 
@@ -271,7 +271,7 @@ function EnBody() {
         questions, <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
         @StarsPaymeeSupport</a> will help. See also:{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link> and{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> and{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (RUB) API</Link>.
       </p>
 

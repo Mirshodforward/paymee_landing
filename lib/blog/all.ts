@@ -142,16 +142,15 @@ export function getRelatedSummaries(locale: string, slug: string, category: Blog
  * maqolalar avtomatik tushib qoladi, shuning uchun har uchala tilda ishlaydi.
  */
 const FEATURED_SLUGS = [
-  "telegram-stars-qayerdan-sotib-olish-2026",
+  "ozbekistonda-telegram-stars-sotib-olish",
   "telegram-premium-narxi-ozbekistonda-2026",
   "telegram-stars-necha-som-kalkulyator",
   "telegram-stars-kartasiz-sotib-olish",
-  "ozbekistonda-telegram-stars-sotib-olish",
   "telegram-stars-narxlari-2026-platformalar-taqqoslash",
-  "telegram-premium-sotib-olish-2026",
+  "telegram-premium-eng-oson-usul",
   "telegram-stars-xavfsizmi",
   "telegram-gifts-narxlari-royxati",
-  "visa-kartasiz-stars-olish",
+  "naqd-pul-bilan-telegram-stars-sotib-olish",
   "oyin-hisobini-toldirish",
   "pubg-mobile-uc-sotib-olish",
 ] as const;

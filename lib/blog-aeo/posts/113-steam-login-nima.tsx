@@ -52,7 +52,7 @@ function UzBody() {
 
       <h2 id="qachon">Steam Login qachon kerak bo‘ladi?</h2>
       <KeyFacts label="Talab qilinishi mumkin bo‘lgan holatlar">
-        <li><Link href="/blog/ozbek-somida-steam-balansini-toldirish">Steam balansini to‘ldirish</Link>.</li>
+        <li><Link href="/blog/steam-1-dollardan-toldirish">Steam balansini to‘ldirish</Link>.</li>
         <li>Ba’zi uchinchi tomon xizmatlari orqali xarid qilish.</li>
         <li>Hisobni tasdiqlash.</li>
         <li>Texnik yordam bilan bog‘lanish.</li>
@@ -130,7 +130,7 @@ function RuBody() {
 
       <h2 id="qachon">Когда нужен Steam Login?</h2>
       <KeyFacts label="Возможные случаи">
-        <li><Link href="/blog/ozbek-somida-steam-balansini-toldirish">Пополнение баланса Steam</Link>.</li>
+        <li><Link href="/blog/steam-1-dollardan-toldirish">Пополнение баланса Steam</Link>.</li>
         <li>Покупка через некоторые сторонние сервисы.</li>
         <li>Подтверждение аккаунта.</li>
         <li>Обращение в техподдержку.</li>
@@ -206,7 +206,7 @@ function EnBody() {
 
       <h2 id="qachon">When is Steam Login needed?</h2>
       <KeyFacts label="Cases where it may be required">
-        <li><Link href="/blog/ozbek-somida-steam-balansini-toldirish">Topping up a Steam balance</Link>.</li>
+        <li><Link href="/blog/steam-1-dollardan-toldirish">Topping up a Steam balance</Link>.</li>
         <li>Buying through some third‑party services.</li>
         <li>Confirming the account.</li>
         <li>Contacting technical support.</li>

@@ -80,7 +80,7 @@ function UzBody() {
         Sof narx bo‘yicha Fragment (TON) odatda arzonroq, lekin u kripto hamyon va TON talab qiladi — O‘zbekiston kartasi
         ishlamaydi. Shu sabab mahalliy foydalanuvchi uchun amaliy jihatdan eng qulayi — so‘mda, UzCard/HUMO/Click/Payme
         bilan ishlaydigan mahalliy bot. Qayerdan sotib olishning to‘liq qo‘llanmasi —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link>.
       </p>
 
       <h2 id="ozbekiston">O‘zbekiston uchun xulosa</h2>
@@ -175,7 +175,7 @@ function RuBody() {
         По чистой цене обычно дешевле Fragment (TON), но он требует крипто-кошелёк и TON — карта Узбекистана не работает.
         Поэтому на практике для местного пользователя удобнее всего локальный бот с оплатой UzCard/HUMO/Click/Payme в
         сумах. Полное руководство по покупке — в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
       </p>
 
       <h2 id="ozbekiston">Вывод для Узбекистана</h2>

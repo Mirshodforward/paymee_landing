@@ -41,6 +41,45 @@ function UzBody() {
 
       <InlineCta text="Miqdorni kiriting — yakuniy summani darhol ko‘rasiz." />
 
+      <h2 id="ozgarish">Narx qachon o‘zgaradi?</h2>
+      <p>
+        Jadvaldagi raqamlar doimiy emas. Narx uch holatda qayta ko‘rib chiqiladi: paket tuzilishi yangilanganda,
+        aksiya davri boshlanib-tugaganda va valyuta kursi sezilarli siljiganda. Shuning uchun bir oy oldin ko‘rgan
+        summangiz bugungi summadan biroz farq qilishi mumkin — bu xatolik emas.
+      </p>
+      <KeyFacts label="Narxni solishtirishda">
+        <li>
+          <b>Bir yulduzga tushadigan narxni hisoblang</b> — StarsPaymee’da birlik narxi barcha paketlarda bir xil
+          (220 so‘m), boshqa platformalarda esa paket hajmiga qarab farq qilishi mumkin. Solishtirishni paket
+          summasi bo‘yicha emas, shu raqam bo‘yicha qiling.
+        </li>
+        <li>
+          <b>Yakuniy summa buyurtma paytida</b> — botda miqdorni kiritganingizda ko‘rinadigan raqam hisoblanadi,
+          eski skrinshot yoki boshqa saytdagi raqam emas.
+        </li>
+        <li>
+          <b>Xariddan oldin joriy narxni oching</b> — bu ayniqsa aksiya va kurs o‘zgargan kunlarda muhim.
+        </li>
+      </KeyFacts>
+
+      <h2 id="paket">Qaysi paketni tanlash kerak?</h2>
+      <KeyFacts label="Maqsad bo‘yicha">
+        <li>
+          <b>50–100 ⭐</b> — bir martalik sovg‘a, reaksiya yoki botdagi kichik xizmat uchun.
+        </li>
+        <li>
+          <b>250–500 ⭐</b> — muntazam foydalanish: bir nechta sovg‘a yoki bot obunasi.
+        </li>
+        <li>
+          <b>1000 ⭐ va undan yuqori</b> — kanal monetizatsiyasi, sovg‘alar seriyasi yoki jamoaviy xaridlar.
+        </li>
+      </KeyFacts>
+      <p>
+        Bir nechta kichik buyurtma o‘rniga bitta yirik paket olish qulayroq: tranzaksiya soni kamayadi, demak bank
+        tasdig‘i va xatolik ehtimoli ham kamayadi. Birlik narxi esa barcha paketda bir xil bo‘lgani uchun bunda
+        hech narsa yutqazmaysiz.
+      </p>
+
       <h2 id="arzon">Qanday qilib eng qulay narxni topish mumkin?</h2>
       <Steps>
         <Step title="1. Solishtiring">Bir nechta xizmat narxini taqqoslang.</Step>
@@ -50,8 +89,8 @@ function UzBody() {
       </Steps>
 
       <p>
-        Qarang: <Link href="/blog/stars-olish">Stars olish</Link>,{" "}
-        <Link href="/blog/som-evaziga-stars-olish">so‘m evaziga olish</Link> va{" "}
+        Qarang: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Stars sotib olish qo‘llanmasi</Link>,{" "}
+        <Link href="/blog/telegram-stars-necha-som-kalkulyator">1 yulduz necha so‘m</Link> va{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">xavfsizlik mezonlari</Link>.
       </p>
 
@@ -100,6 +139,26 @@ function RuBody() {
 
       <InlineCta text="Введите количество — итоговую сумму увидите сразу." />
 
+      <h2 id="ozgarish">Когда меняется цена?</h2>
+      <p>
+        Цифры в таблице не зафиксированы навсегда. Цену пересматривают в трёх случаях: когда обновляется состав
+        пакетов, когда начинается или заканчивается акция и когда заметно сдвигается курс валюты. Поэтому сумма,
+        которую вы видели месяц назад, может немного отличаться от сегодняшней — это не ошибка.
+      </p>
+      <KeyFacts label="При сравнении цен">
+        <li>
+          <b>Считайте цену одной звезды</b> — в StarsPaymee цена единицы одинакова во всех пакетах (220 сум), а на
+          других площадках может зависеть от объёма. Сравнивайте именно по этому числу, а не по сумме пакета.
+        </li>
+        <li>
+          <b>Итоговая сумма — в момент заказа</b> — считается число, которое бот показывает после ввода
+          количества, а не старый скриншот или цифра с другого сайта.
+        </li>
+        <li>
+          <b>Откройте актуальную цену перед покупкой</b> — особенно в дни акций и движения курса.
+        </li>
+      </KeyFacts>
+
       <h2 id="arzon">Как найти самую выгодную цену?</h2>
       <Steps>
         <Step title="1. Сравните">Сопоставьте цены нескольких сервисов.</Step>
@@ -109,8 +168,8 @@ function RuBody() {
       </Steps>
 
       <p>
-        Смотрите: <Link href="/blog/stars-olish">покупка Stars</Link>,{" "}
-        <Link href="/blog/som-evaziga-stars-olish">покупка за сумы</Link> и{" "}
+        Смотрите: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">руководство по покупке Stars</Link>,{" "}
+        <Link href="/blog/telegram-stars-necha-som-kalkulyator">сколько сумов стоит звезда</Link> и{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">критерии безопасности</Link>.
       </p>
 
@@ -159,6 +218,26 @@ function EnBody() {
 
       <InlineCta text="Enter an amount — you see the final total at once." />
 
+      <h2 id="ozgarish">When does the price change?</h2>
+      <p>
+        The numbers in the table are not fixed forever. The price is revisited in three cases: when the package
+        line-up is updated, when a promotion starts or ends, and when the exchange rate moves noticeably. So the
+        amount you saw a month ago may differ slightly from today’s — that is not an error.
+      </p>
+      <KeyFacts label="When comparing prices">
+        <li>
+          <b>Work out the price of a single Star</b> — at StarsPaymee the unit price is the same in every pack (220
+          UZS), while on other platforms it can depend on volume. Compare by that figure, not by the package total.
+        </li>
+        <li>
+          <b>The final total is the one at order time</b> — what counts is the number the bot shows after you enter
+          the amount, not an old screenshot or a figure from another site.
+        </li>
+        <li>
+          <b>Open the current price before buying</b> — this matters most on promotion days and when the rate moves.
+        </li>
+      </KeyFacts>
+
       <h2 id="arzon">How to find the best price</h2>
       <Steps>
         <Step title="1. Compare">Check the prices of several services.</Step>
@@ -168,8 +247,8 @@ function EnBody() {
       </Steps>
 
       <p>
-        See: <Link href="/blog/stars-olish">getting Stars</Link>,{" "}
-        <Link href="/blog/som-evaziga-stars-olish">buying with so‘m</Link> and{" "}
+        See: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">the guide to buying Stars</Link>,{" "}
+        <Link href="/blog/telegram-stars-necha-som-kalkulyator">how many so‘m one Star costs</Link> and{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">safety criteria</Link>.
       </p>
 
@@ -193,6 +272,11 @@ const uzFaq = [
   { question: "Katta paket arzonroqmi?", answer: "Birlik narxi bir xil, lekin bitta buyurtmada ko‘p olish qulayroq." },
   { question: "Qaysi valyutada to‘layman?", answer: "So‘mda (UZS)." },
   { question: "Buyurtma summasi keyin o‘zgaradimi?", answer: "Yo‘q, tasdiqlangan summa o‘zgarmaydi." },
+  {
+    question: "Narx qaysi hollarda qayta ko‘rib chiqiladi?",
+    answer:
+      "Paket tuzilishi yangilanganda, aksiya boshlanib yoki tugaganda va valyuta kursi sezilarli siljiganda. Shuning uchun xariddan oldin botdagi joriy summaga qarang.",
+  },
 ];
 
 const ruFaq = [
@@ -204,6 +288,11 @@ const ruFaq = [
   { question: "Дешевле ли крупный пакет?", answer: "Цена за единицу одинакова, но одним заказом брать больше удобнее." },
   { question: "В какой валюте оплата?", answer: "В сумах (UZS)." },
   { question: "Изменится ли сумма заказа потом?", answer: "Нет, подтверждённая сумма не меняется." },
+  {
+    question: "В каких случаях цену пересматривают?",
+    answer:
+      "При обновлении состава пакетов, в начале и конце акций и при заметном движении курса валюты. Поэтому перед покупкой смотрите актуальную сумму в боте.",
+  },
 ];
 
 const enFaq = [
@@ -215,6 +304,11 @@ const enFaq = [
   { question: "Is a bigger pack cheaper?", answer: "The per-unit price is the same, but buying more in one order is more convenient." },
   { question: "Which currency do I pay in?", answer: "In so‘m (UZS)." },
   { question: "Can the order total change later?", answer: "No, a confirmed total does not change." },
+  {
+    question: "When is the price revisited?",
+    answer:
+      "When the package line-up is updated, when a promotion starts or ends, and when the exchange rate moves noticeably. So check the current total in the bot before buying.",
+  },
 ];
 
 export const post: AeoPost = {
@@ -222,14 +316,17 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-08-02",
+  dateModified: "2026-09-18",
   keywords: [
     "telegram stars narxi",
     "stars narxi qancha",
+    "telegram stars narxi ozbekiston",
+    "stars narxi 2026 taqqoslash",
     "telegram stars narx 2026",
     "stars narx jadvali",
     "1 stars qancha",
     "stars narxi uzbekistan",
+    "telegram stars paketlari 50 100 500 1000",
   ],
   locales: {
     uz: {

@@ -196,7 +196,7 @@ function UzBody() {
         <Link href="/blog/telegram-gift-sotilmayapti">«Gift sotilmayapti»</Link> maqolasida komissiya va narx
         chegaralari ham bor. Investitsiya nuqtai nazari —{" "}
         <Link href="/blog/telegram-nft-investitsiya">alohida maqolada</Link>;{" "}
-        <Link href="/blog/top-telegram-rare-gifts">noyob sovg‘alar ro‘yxati</Link> ham foydali.
+        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">noyob sovg‘alar ro‘yxati</Link> ham foydali.
       </p>
 
       <NftGiftSeriesNav locale="uz" />
@@ -343,7 +343,7 @@ function RuBody() {
         <Link href="/blog/telegram-gift-sotilmayapti">«Подарок не продаётся»</Link> разобраны комиссия и границы
         цены. Инвестиционный взгляд —{" "}
         <Link href="/blog/telegram-nft-investitsiya">в отдельной статье</Link>; пригодится и{" "}
-        <Link href="/blog/top-telegram-rare-gifts">список редких подарков</Link>.
+        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">список редких подарков</Link>.
       </p>
 
       <NftGiftSeriesNav locale="ru" />

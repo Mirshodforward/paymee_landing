@@ -77,6 +77,14 @@ function UzBody() {
         <Link href="/blog/telegram-gifts-narxlari-royxati">«Gifts narxlari ro‘yxati»</Link> maqolasida ko‘rasiz.
       </p>
 
+      <h2 id="holat">Kolleksiyani qanday to‘ldirish mumkin (2026-yil sentabr holati)</h2>
+      <p>
+        Sotuvdan tugagan kolleksion nusxalar <b>bot orqali yetkazilmaydi</b> — ularni Telegram ichidagi bozordan
+        yoki boshqa foydalanuvchidan olasiz. Yangi collectible esa o‘zingizda hosil bo‘ladi: yulduz olib, oddiy
+        sovg‘ani <Link href="/blog/telegram-sovgani-collectible-upgrade">upgrade qilasiz</Link>. Xizmat holati
+        bo‘yicha batafsil — <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">shu maqolada</Link>.
+      </p>
+
       <h2 id="qiymat">Nega noyob sovg‘alar qadrli?</h2>
       <p>
         Qiymat <strong>cheklanganlikdan</strong> keladi: sovg‘a qancha kam chiqarilsa, u shuncha maxsus. Collectible
@@ -103,7 +111,7 @@ function UzBody() {
       </ul>
       <p>
         Stars’ni qayerdan olish haqida —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link>.
       </p>
 
       <Sources
@@ -216,7 +224,7 @@ function RuBody() {
       </ul>
       <p>
         Где купить Stars — в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
       </p>
 
       <Sources
@@ -239,6 +247,8 @@ export const post: AeoPost = {
   dateModified: "2026-06-30",
   keywords: [
     "telegram gifts kolleksiya",
+    "top telegram rare gifts",
+    "telegram gift kolleksiya qilish",
     "rare telegram gifts",
     "telegram collectible gifts",
     "telegram noyob sovga",

@@ -51,6 +51,28 @@ function UzBody() {
 
       <InlineCta text="Balansingizda Stars yetarlimi? So‘mda, botda 10 soniyada to‘ldiring." />
 
+      <h2 id="botlar">Botlar Stars evaziga nimani sotadi?</h2>
+      <KeyFacts label="Eng ko‘p uchraydigan holatlar">
+        <li>
+          <b>Premium limitlar</b> — AI botlarda ko‘proq so‘rov, tezroq navbat yoki reklamasiz rejim.
+        </li>
+        <li>
+          <b>O‘yin resurslari</b> — qo‘shimcha daraja, jon, sandiq va ichki valyuta.
+        </li>
+        <li>
+          <b>Yopiq kontent</b> — kanal yoki botdagi pullik post, video va fayllar.
+        </li>
+        <li>
+          <b>Xizmatlar</b> — dizayn, tarjima, video montaj kabi ishlarni bot orqali buyurtma qilish.
+        </li>
+      </KeyFacts>
+      <p>
+        Dasturchilar uchun bunda ikki qulaylik bor: to‘lov tizimini alohida integratsiya qilish shart emas va butun
+        to‘lov infratuzilmasini Telegramning o‘zi boshqaradi. Foydalanuvchi uchun esa bu tanish oqim — karta
+        ma’lumoti begona saytga kiritilmaydi. Botni tanlashda uchta narsaga qarang: bot rasmiy yoki tasdiqlangan
+        kanaldan kelganmi, narx taklif qilinayotgan qiymatga mosmi va boshqa foydalanuvchilar sharhi qanday.
+      </p>
+
       <h2 id="balans">Balansda Stars yetarli bo‘lmasa nima bo‘ladi?</h2>
       <KeyFacts label="Bunday holatda">
         <li>
@@ -65,7 +87,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Agar oldindan Stars sotib olib qo‘yishni afzal ko‘rsangiz, buni{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> maqolasida
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> maqolasida
         ko‘rgan holda amalga oshirishingiz mumkin.
       </p>
 
@@ -148,7 +170,7 @@ function RuBody() {
       </KeyFacts>
       <p>
         Если предпочитаете купить Stars заранее, это можно сделать через статью{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
       </p>
 
       <h2 id="xavfsizlik">Безопасна ли оплата и подтверждается ли она?</h2>
@@ -183,6 +205,8 @@ export const post: AeoPost = {
     "telegram stars payment",
     "mini app stars bilan tolash",
     "telegram game stars purchase",
+    "telegram botlar uchun stars",
+    "botda stars bilan tolov",
   ],
   howToSteps: [
     { name: "Mini App’ni oching", text: "Telegram ichida kerakli o‘yin yoki xizmatni ishga tushiring." },

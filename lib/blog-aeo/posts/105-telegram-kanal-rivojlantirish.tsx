@@ -11,7 +11,7 @@ function UzAnswer() {
       <strong>Telegram kanal rivojlantirish</strong> — kontent, reklama, monetizatsiya va <strong>boost</strong>{" "}
       kombinatsiyasi. Level va <Link href="/blog/telegram-kanal-reytingi">reyting</Link> giveaway hamda Stories uchun
       muhim; tez natija uchun <Link href="/blog/telegram-kanalga-boost-sotib-olish">boost ijarasi</Link> va{" "}
-      <Link href="/blog/arzon-telegram-boost">arzon boost</Link> paketlarini reja bilan qo‘llang.
+      <Link href="/blog/telegram-boost-narxlari">arzon boost</Link> paketlarini reja bilan qo‘llang.
     </p>
   );
 }
@@ -36,14 +36,14 @@ function UzBody() {
       </ul>
       <h2 id="boost">Boost strategiyasi</h2>
       <p>
-        <Link href="/blog/telegram-kanalni-boost-qilish">Kanalni boost qilish</Link> — kampaniya boshida level
+        <Link href="/blog/telegram-premium-boost">Kanalni boost qilish</Link> — kampaniya boshida level
         ochilishi uchun. <Link href="/blog/telegram-premium-boost">Premium boost</Link>ni faol obunachilarga eslatib
-        turing. Avtomatik yetkazish: <Link href="/blog/telegram-boost-avtomatik">boost avtomatik</Link>.
+        turing. Avtomatik yetkazish: <Link href="/blog/telegram-kanalga-boost-sotib-olish">boost avtomatik</Link>.
       </p>
       <h2 id="byudjet">Byudjet va xizmat tanlash</h2>
       <p>
         <Link href="/blog/telegram-boost-narxlari">Narxlarni</Link> solishtiring; ishonchli provayder —{" "}
-        <Link href="/blog/starspaymee-boost-market">StarsPaymee Boost Market</Link>. Asos:{" "}
+        <Link href="/blog/telegram-kanalga-boost-sotib-olish">StarsPaymee Boost Market</Link>. Asos:{" "}
         <Link href="/blog/telegram-kanal-boost-nima">boost nima</Link>.
       </p>
       <InlineCta text="Kanal rivojlantirish — boost bilan tez level." />

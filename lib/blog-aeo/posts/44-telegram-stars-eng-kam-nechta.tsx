@@ -77,7 +77,7 @@ function UzBody() {
       </ul>
       <p>
         Xavfsiz xizmatni qanday aniqlash haqida{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
         o‘qing.
       </p>
 
@@ -85,7 +85,7 @@ function UzBody() {
       <p>
         Jarayon katta xariddan farq qilmaydi: botni oching, eng kichik paketni tanlang, qabul qiluvchi
         @username’ini kiriting va mahalliy karta bilan to‘lang. To‘liq bosqichlarni{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> maqolasida
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> maqolasida
         ko‘ring.
       </p>
 
@@ -170,14 +170,14 @@ function RuBody() {
       </ul>
       <p>
         Как определить надёжный сервис — в статье{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Руководство по безопасной покупке»</Link>.
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Руководство по безопасной покупке»</Link>.
       </p>
 
       <h2 id="qanday">Как купить небольшое количество?</h2>
       <p>
         Процесс не отличается от крупной покупки: откройте бота, выберите самый маленький пакет, введите @username
         получателя и оплатите локальной картой. Полные шаги — в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
       </p>
 
       <Sources

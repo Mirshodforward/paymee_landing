@@ -78,8 +78,9 @@ function UzBody() {
       <PriceTable locale="uz" />
       <p>
         «Username bilan» oqimda akkauntga kirish kerak emas — Premium o‘rtacha 10 soniyada avtomatik faollashadi.
-        «Login orqali» esa rasmiy faollashtirish talab qiladigan alohida xizmat va{" "}
-        <b>1 oylik tarif faqat shu oqimda</b> mavjud.
+        «Login orqali» esa rasmiy faollashtirish talab qiladigan alohida xizmat: u faqat nostandart holatlar uchun
+        qolgan va shartlari qo‘llab-quvvatlash orqali aniqlanadi. <b>1 oylik tarif ham username oqimida</b> —
+        2026-yil sentabridan beri.
       </p>
 
       <InlineCta text="Muddatni tanlang va so‘mda to‘lang." product={{ kind: "premium", months: 12 }} />
@@ -87,21 +88,52 @@ function UzBody() {
       <h2 id="oyiga">Oyiga hisoblaganda qaysi biri arzon?</h2>
       <KeyFacts label="Oyiga tushadigan summa">
         <li>
-          <b>1 oy</b> — oyiga 45 000 so‘m. Eng qulay kirish nuqtasi, sinab ko‘rish uchun.
+          <b>1 oy</b> — 45 000 so‘m, ya’ni oyiga 45 000.
         </li>
         <li>
-          <b>6 oy</b> — oyiga ~35 800 so‘m. Narx va muddat muvozanati.
+          <b>3 oy</b> — 160 000 so‘m, ya’ni oyiga ~53 300. Bu 1 oylikdan qimmatroq: qisqa muddatga majburiyatsiz
+          variant sifatida tanlanadi.
         </li>
         <li>
-          <b>12 oy</b> — oyiga ~32 300 so‘m. Username oqimidagi eng tejamkor variant.
+          <b>6 oy</b> — 215 000 so‘m, oyiga ~35 800. Narx va muddat muvozanati.
         </li>
         <li>
-          <b>1 yil (login)</b> — oyiga 25 000 so‘m, lekin rasmiy faollashtirish talab qilinadi.
+          <b>12 oy</b> — 388 000 so‘m, oyiga ~32 300. Eng tejamkor variant.
         </li>
       </KeyFacts>
       <p>
-        Ya’ni muddat uzaygani sari oyiga tushadigan xarajat pasayadi. 3 oydan 12 oyga o‘tsangiz, oylik narx
-        taxminan <b>uchdan bir</b> baravar arzonlashadi.
+        Demak «muddat uzaysa doim arzon» degani noto‘g‘ri bo‘lardi: eng tejamkori — 12 oylik, u 1 oylikka nisbatan
+        oyiga taxminan <b>28% arzon</b> (32 300 vs 45 000). 6 oylik ~20% arzon. 3 oylik esa oyiga hisoblaganda
+        1 oylikdan qimmat — uni faqat aniq uch oy kerak bo‘lganda olish mantiqiy.
+      </p>
+
+      <h2 id="tolov">To‘lov usullari: Visa ham, karta ham shart emas</h2>
+      <p>
+        Rasmiy yo‘ldan asosiy farq shu: xalqaro Visa/Mastercard kerak emas va akkauntingizga kirish so‘ralmaydi.
+        So‘mda to‘lanadi, konvertatsiya yo‘q.
+      </p>
+      <ul>
+        <li>
+          <b>UzCard va HUMO</b> — karta raqami bilan to‘g‘ridan-to‘g‘ri.
+        </li>
+        <li>
+          <b>Click</b> va <b>Payme</b> — ilova orqali bir bosishda:{" "}
+          <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">Click qo‘llanmasi</Link>,{" "}
+          <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">Payme qo‘llanmasi</Link>.
+        </li>
+        <li>
+          <b>Naqd pul</b> — botda «naqd» yoki «Paynet» degan alohida tugma <b>yo‘q</b>: naqd pul avval terminal,
+          bank kassasi yoki cash-in bankomat orqali kartaga yoki Click/Payme hamyoniga tushadi, keyin botda oddiy
+          to‘lov tanlanadi.{" "}
+          <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Batafsil qo‘llanma</Link>.
+        </li>
+        <li>
+          <b>Rubl (SBP)</b> — Rossiyadan to‘laganda telefon raqami yoki QR orqali, karta rekvizitisiz.
+        </li>
+      </ul>
+      <p>
+        Narx aksiya davrlarida o‘zgarishi mumkin, shuning uchun yakuniy summani buyurtma paytida botda ko‘rib oling —
+        ko‘rsatilgan raqam yakuniy bo‘ladi.
       </p>
 
       <h2 id="nega-arzon">Nega bu narx App Store’dan arzon?</h2>
@@ -116,7 +148,7 @@ function UzBody() {
       <h2 id="qaysi">Qaysi paketni tanlash kerak?</h2>
       <KeyFacts label="Tavsiya">
         <li>
-          <b>Sinab ko‘rmoqchi bo‘lsangiz</b> — 1 oylik yoki 3 oylik.
+          <b>Sinab ko‘rmoqchi bo‘lsangiz</b> — 1 oylik: eng kam summa va oyiga eng past majburiyat.
         </li>
         <li>
           <b>Doimiy foydalansangiz</b> — 12 oylik eng tejamkor.
@@ -174,21 +206,53 @@ function RuBody() {
       <h2 id="oyiga">Что выгоднее в пересчёте на месяц?</h2>
       <KeyFacts label="Стоимость месяца">
         <li>
-          <b>1 месяц</b> — 45 000 сум в месяц. Самый доступный вход, для пробы.
+          <b>1 месяц</b> — 45 000 сум, то есть 45 000 в месяц.
         </li>
         <li>
-          <b>6 месяцев</b> — около 35 800 сум в месяц. Баланс цены и срока.
+          <b>3 месяца</b> — 160 000 сум, то есть около 53 300 в месяц. Это дороже месячного тарифа: вариант для
+          короткого срока без обязательств.
         </li>
         <li>
-          <b>12 месяцев</b> — около 32 300 сум в месяц. Самый выгодный вариант по username.
+          <b>6 месяцев</b> — 215 000 сум, около 35 800 в месяц. Баланс цены и срока.
         </li>
         <li>
-          <b>1 год (через логин)</b> — 25 000 сум в месяц, но требуется официальная активация.
+          <b>12 месяцев</b> — 388 000 сум, около 32 300 в месяц. Самый выгодный вариант.
         </li>
       </KeyFacts>
       <p>
-        То есть чем длиннее срок, тем ниже месячная стоимость. Переход с 3 месяцев на 12 снижает цену месяца
-        примерно на <b>треть</b>.
+        Значит, утверждение «чем дольше, тем всегда дешевле» было бы неверным: самый выгодный — годовой тариф, он
+        примерно на <b>28% дешевле</b> месячного в пересчёте на месяц (32 300 против 45 000). Полугодовой дешевле
+        примерно на 20%. А трёхмесячный в пересчёте на месяц дороже месячного — его берут, когда нужны именно три
+        месяца.
+      </p>
+
+      <h2 id="tolov">Способы оплаты: ни Visa, ни даже карты</h2>
+      <p>
+        Главное отличие от официального пути: международная Visa/Mastercard не нужна, вход в аккаунт не
+        запрашивается. Оплата в сумах, без конвертации.
+      </p>
+      <ul>
+        <li>
+          <b>UzCard и HUMO</b> — напрямую по номеру карты.
+        </li>
+        <li>
+          <b>Click</b> и <b>Payme</b> — в одно касание через приложение:{" "}
+          <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">руководство по Click</Link>,{" "}
+          <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">руководство по Payme</Link>.
+        </li>
+        <li>
+          <b>Наличные</b> — отдельной кнопки «наличные» или «Paynet» в боте <b>нет</b>: наличные сначала вносятся
+          через терминал, кассу банка или cash-in банкомат на карту либо в кошелёк Click/Payme, а в боте затем
+          выбирается обычная оплата.{" "}
+          <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Подробное руководство</Link>.
+        </li>
+        <li>
+          <b>Рубли (СБП)</b> — при оплате из России по номеру телефона или QR, без реквизитов карты.
+        </li>
+      </ul>
+      <p>
+        В периоды акций цена может меняться, поэтому итоговую сумму смотрите в боте при заказе — показанное число и
+        есть окончательное.
       </p>
 
       <h2 id="nega-arzon">Почему это дешевле, чем в App Store?</h2>
@@ -203,7 +267,7 @@ function RuBody() {
       <h2 id="qaysi">Какой пакет выбрать?</h2>
       <KeyFacts label="Рекомендация">
         <li>
-          <b>Хотите попробовать</b> — 3 месяца (по username) или 1 месяц (через логин).
+          <b>Хотите попробовать</b> — 1 месяц по username.
         </li>
         <li>
           <b>Пользуетесь постоянно</b> — 12 месяцев выгоднее всего.
@@ -262,21 +326,51 @@ function EnBody() {
       <h2 id="oyiga">Which works out cheaper per month?</h2>
       <KeyFacts label="Cost per month">
         <li>
-          <b>1 month</b> — 45,000 UZS a month. The easiest entry point, good for trying it out.
+          <b>1 month</b> — 45,000 UZS, i.e. 45,000 per month.
         </li>
         <li>
-          <b>6 months</b> — about 35,800 UZS a month. The balance of price and term.
+          <b>3 months</b> — 160,000 UZS, i.e. about 53,300 per month. That is more than the monthly plan: it suits a
+          short term with no commitment.
         </li>
         <li>
-          <b>12 months</b> — about 32,300 UZS a month. The best value in the username flow.
+          <b>6 months</b> — 215,000 UZS, about 35,800 per month. The balance of price and term.
         </li>
         <li>
-          <b>1 year (sign-in)</b> — 25,000 UZS a month, but it requires the official activation.
+          <b>12 months</b> — 388,000 UZS, about 32,300 per month. The best value.
         </li>
       </KeyFacts>
       <p>
-        The longer the term, the lower the monthly cost. Moving from 3 months to 12 cuts the price per month by
-        roughly <b>a third</b>.
+        So “longer is always cheaper” would be wrong: the best value is the yearly plan, about <b>28% cheaper</b> per
+        month than the monthly one (32,300 vs 45,000). Six months is about 20% cheaper. Three months actually costs
+        more per month than the monthly plan — take it when you specifically need three months.
+      </p>
+
+      <h2 id="tolov">Payment methods: no Visa, and not even a card</h2>
+      <p>
+        The key difference from the official route: no international Visa/Mastercard, and no account sign-in.
+        Payment is in so&lsquo;m, with no conversion.
+      </p>
+      <ul>
+        <li>
+          <b>UzCard and HUMO</b> — straight from the card number.
+        </li>
+        <li>
+          <b>Click</b> and <b>Payme</b> — one tap in the app:{" "}
+          <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">the Click guide</Link>,{" "}
+          <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">the Payme guide</Link>.
+        </li>
+        <li>
+          <b>Cash</b> — there is <b>no</b> separate “cash” or “Paynet” button in the bot: cash first goes onto a card
+          or into a Click/Payme wallet at a terminal, a bank desk or a cash-in ATM, and then you pick the ordinary
+          payment in the bot. <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Full guide</Link>.
+        </li>
+        <li>
+          <b>Roubles (SBP)</b> — paying from Russia by phone number or QR, with no card details.
+        </li>
+      </ul>
+      <p>
+        Prices can move during promotions, so check the final total in the bot when you order — the number shown is
+        the one you pay.
       </p>
 
       <h2 id="nega-arzon">Why is this cheaper than the App Store?</h2>
@@ -290,7 +384,7 @@ function EnBody() {
       <h2 id="qaysi">Which pack should you pick?</h2>
       <KeyFacts label="Recommendation">
         <li>
-          <b>Just trying it</b> — 3 months by username, or 1 month through sign-in.
+          <b>Just trying it</b> — 1 month by username.
         </li>
         <li>
           <b>Using it permanently</b> — 12 months is the best value.
@@ -406,6 +500,10 @@ export const post: AeoPost = {
   keywords: [
     "telegram premium narxi",
     "telegram premium narxi ozbekistonda",
+    "arzon telegram premium",
+    "telegram premium 12 oy narxi",
+    "telegram premium 3 6 oy paket",
+    "telegram premium tolov usullari",
     "telegram premium qancha turadi",
     "telegram premium tariflari",
     "premium 12 oy narxi",
@@ -429,10 +527,10 @@ export const post: AeoPost = {
     ru: {
       title: "Цена Telegram Premium в Узбекистане (2026)",
       excerpt:
-        "Все действующие тарифы в одном месте: 3, 6, 12 месяцев плюс 1 месяц и 1 год через логин, стоимость месяца и дата последней сверки.",
+        "Все действующие тарифы в одном месте: 1, 3, 6 и 12 месяцев по username, стоимость месяца и дата последней сверки.",
       metaTitle: "Цена Telegram Premium в Узбекистане — 2026",
       metaDescription:
-        "Цена Telegram Premium в Узбекистане: 3 мес 160 000, 6 мес 215 000, 12 мес 388 000 сум; через логин 1 мес 50 000. Стоимость месяца и способы оплаты.",
+        "Цена Telegram Premium в Узбекистане: 1 мес 45 000, 3 мес 160 000, 6 мес 215 000, 12 мес 388 000 сум — все по username. Стоимость месяца и способы оплаты.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -443,10 +541,10 @@ export const post: AeoPost = {
     en: {
       title: "Telegram Premium pricing in Uzbekistan (2026)",
       excerpt:
-        "Every current plan in one place: 3, 6 and 12 months plus the 1-month and 1-year sign-in options, the cost per month and the last verification date.",
+        "Every current plan in one place: 1, 3, 6 and 12 months by username, the cost per month and the last verification date.",
       metaTitle: "Telegram Premium pricing in Uzbekistan — 2026",
       metaDescription:
-        "Telegram Premium prices in Uzbekistan: 3 months 160,000, 6 months 215,000, 12 months 388,000 UZS; 1 month 50,000 via sign-in. Monthly cost and payment methods.",
+        "Telegram Premium prices in Uzbekistan: 1 month 45,000, 3 months 160,000, 6 months 215,000, 12 months 388,000 UZS — all by username. Monthly cost and payment methods.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

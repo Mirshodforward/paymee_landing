@@ -47,6 +47,21 @@ function UzBody() {
 
       <InlineCta text="Yulduz kerakmi? Botda so‘mda 10 soniyada oling." />
 
+      <h2 id="qancha">Qancha Stars kerak bo‘ladi?</h2>
+      <p>
+        Har bir mahsulotning Stars qiymati Telegram interfeysida xariddan oldin ko‘rsatiladi. Kichik sovg‘a yoki
+        reaksiya uchun 15–50 yulduz yetarli; Premium hadya yoki kolleksion sovg‘alar uchun bir necha yuzdan
+        boshlanadi. Kerakli miqdorni <Link href="/stars">Stars sahifasida</Link> tanlab, so‘mda to‘lashingiz mumkin.
+      </p>
+
+      <h2 id="qilib-bolmaydi">Stars bilan nimalarni qilib bo‘lmaydi?</h2>
+      <p>
+        Stars faqat Telegram ichida ishlaydi. Oddiy foydalanuvchi ularni bank kartasiga yoki kriptoga chiqara
+        olmaydi — bu imkoniyat faqat kreatorlarda, Fragment orqali. Shuningdek, Stars boshqa platformalarga
+        o‘tkazilmaydi va bir akkauntdan ikkinchisiga to‘g‘ridan-to‘g‘ri uzatilmaydi: boshqa odamga bermoqchi
+        bo‘lsangiz, sovg‘a yoki Premium hadya shaklida yuboriladi.
+      </p>
+
       <h2 id="qoidalar">Bilish kerak bo‘lgan qoidalar</h2>
       <ul>
         <li>
@@ -62,7 +77,7 @@ function UzBody() {
       </ul>
       <p>
         Stars nima ekani va qanday sotib olinishi haqida —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> hamda{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> hamda{" "}
         <Link href="/blog/telegram-stars-savol-javob-faq">«Stars bo‘yicha 50 savol»</Link> maqolalarini ko‘ring.
       </p>
 
@@ -135,7 +150,7 @@ function RuBody() {
       </ul>
       <p>
         Что такое Stars и как их купить — в статьях{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link> и{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link> и{" "}
         <Link href="/blog/telegram-stars-savol-javob-faq">«50 вопросов про Stars»</Link>.
       </p>
 
@@ -162,6 +177,8 @@ export const post: AeoPost = {
     "telegram stars ishlatish",
     "telegram stars use cases",
     "telegram stars funksiyalari",
+    "telegram stars bilan nima sotib olish mumkin",
+    "stars nimalarga ishlatiladi royxat",
   ],
   locales: {
     uz: {

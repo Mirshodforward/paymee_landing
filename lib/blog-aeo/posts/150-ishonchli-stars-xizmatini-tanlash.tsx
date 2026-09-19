@@ -66,7 +66,7 @@ function UzBody() {
 
       <p>
         Qarang: <Link href="/blog/telegram-stars-xavfsizmi">Stars xavfsizmi</Link>,{" "}
-        <Link href="/blog/stars-sotib-olish">xavfsiz xarid mezonlari</Link> va{" "}
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">xavfsiz xarid mezonlari</Link> va{" "}
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">xizmat ishonchlimi</Link>.
       </p>
 
@@ -142,7 +142,7 @@ function RuBody() {
 
       <p>
         Смотрите: <Link href="/blog/telegram-stars-xavfsizmi">безопасны ли Stars</Link>,{" "}
-        <Link href="/blog/stars-sotib-olish">критерии безопасной покупки</Link> и{" "}
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">критерии безопасной покупки</Link> и{" "}
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">надёжен ли сервис</Link>.
       </p>
 
@@ -218,7 +218,7 @@ function EnBody() {
 
       <p>
         See: <Link href="/blog/telegram-stars-xavfsizmi">are Stars safe</Link>,{" "}
-        <Link href="/blog/stars-sotib-olish">safe-purchase criteria</Link> and{" "}
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">safe-purchase criteria</Link> and{" "}
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">is the service trustworthy</Link>.
       </p>
 

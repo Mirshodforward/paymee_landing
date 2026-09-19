@@ -213,7 +213,7 @@ function UzBody() {
         Premium Telegramning <b>rasmiy sovg‘a mexanizmi</b> orqali beriladi — shuning uchun login,
         parol yoki SMS-kod so‘ralmaydi, faqat ochiq @username yetarli. Narxlar va boshqa to‘lov
         yo‘llari haqida:{" "}
-        <Link href="/blog/telegram-premium-narxi-va-tolov-usullari">
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">
           Telegram Premium narxi va to‘lov usullari
         </Link>
         .
@@ -420,7 +420,7 @@ function RuBody() {
       <p>
         Premium выдаётся через <b>официальный механизм подарков</b> Telegram — поэтому логин, пароль и
         SMS-код не запрашиваются, достаточно открытого @username. О ценах и других способах оплаты:{" "}
-        <Link href="/blog/telegram-premium-narxi-va-tolov-usullari">
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">
           цены на Telegram Premium и способы оплаты
         </Link>
         .
@@ -626,7 +626,7 @@ function EnBody() {
         Premium is delivered through Telegram’s <b>official gift mechanism</b>, which is why no login,
         password or SMS code is asked for — a public @username is enough. On prices and the other payment
         routes:{" "}
-        <Link href="/blog/telegram-premium-narxi-va-tolov-usullari">
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">
           Telegram Premium prices and payment methods
         </Link>
         .

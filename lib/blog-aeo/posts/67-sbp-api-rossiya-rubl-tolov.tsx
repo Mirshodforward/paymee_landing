@@ -73,7 +73,7 @@ function UzBody() {
         Batafsil:{" "}
         <Link href="/blog/sbp-tolov-tizimi-qanday-ishlaydi">SBP to‘lov tizimi qanday ishlaydi</Link> va{" "}
         <Link href="/blog/sbp-api-faq-savollar">SBP API FAQ</Link>. O‘zbekiston uchun{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>ni ko‘ring.
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>ni ko‘ring.
       </p>
 
       <Sources
@@ -156,7 +156,7 @@ function RuBody() {
         Подробнее:{" "}
         <Link href="/blog/sbp-tolov-tizimi-qanday-ishlaydi">как работает система СБП</Link> и{" "}
         <Link href="/blog/sbp-api-faq-savollar">FAQ SBP API</Link>. Для Узбекистана смотрите{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>.
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>.
       </p>
 
       <Sources
@@ -240,7 +240,7 @@ function EnBody() {
         See also:{" "}
         <Link href="/blog/sbp-tolov-tizimi-qanday-ishlaydi">how the SBP system works</Link> and{" "}
         <Link href="/blog/sbp-api-faq-savollar">SBP API FAQ</Link>. For Uzbekistan, see{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>.
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>.
       </p>
 
       <Sources

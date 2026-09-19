@@ -96,7 +96,7 @@ function UzBody() {
       </ul>
       <p>
         Umumiy Creator Economy strategiyasi haqida{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Telegram Creator Economy»</Link> maqolasida o‘qing.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Telegram Creator Economy»</Link> maqolasida o‘qing.
       </p>
 
       <Sources
@@ -201,7 +201,7 @@ function RuBody() {
       </ul>
       <p>
         Об общей стратегии Creator Economy — в статье{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Telegram Creator Economy»</Link>.
+        <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Telegram Creator Economy»</Link>.
       </p>
 
       <Sources

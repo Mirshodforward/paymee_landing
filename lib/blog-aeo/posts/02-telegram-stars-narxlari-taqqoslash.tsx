@@ -68,7 +68,7 @@ function UzBody() {
         operatori komissiyasi va platforma xizmat haqi. Mahalliy karta qabul qiladigan botlarda xorijiy do‘kon
         ustamasi yo‘qoladi, shuning uchun O‘zbekiston foydalanuvchisi uchun ular ko‘pincha hamyonbop bo‘ladi. Qayerdan
         sotib olishning to‘liq yo‘riqnomasi —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish» qo‘llanmamizda</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish» qo‘llanmamizda</Link>.
       </p>
 
       <h2 id="firibgarlik">«Juda arzon» — ogohlantiruvchi belgi</h2>
@@ -151,7 +151,7 @@ function RuBody() {
         Основные причины: наценка магазинов Apple/Google (для in-app покупок), курс конвертации валюты, комиссия
         платёжного оператора и сервисный сбор платформы. В ботах с локальной картой наценка зарубежного магазина
         исчезает, поэтому для пользователя из Узбекистана они зачастую выгоднее. Полная инструкция, где покупать — в{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">руководстве «Где купить Stars»</Link>.
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">руководстве «Где купить Stars»</Link>.
       </p>
 
       <h2 id="firibgarlik">«Слишком дёшево» — тревожный признак</h2>

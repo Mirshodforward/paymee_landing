@@ -24,8 +24,8 @@ function UzBody() {
         <li>Qonun va soliq noaniqligi</li>
       </ul>
       <p>
-        Qanday gift tanlash: <Link href="/blog/limited-edition-telegram-gifts">Limited Edition</Link>,{" "}
-        <Link href="/blog/telegram-gift-kolleksiya">kolleksiya strategiyasi</Link>.
+        Qanday gift tanlash: <Link href="/blog/telegram-nft-gift-nima">Limited Edition</Link>,{" "}
+        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">kolleksiya strategiyasi</Link>.
       </p>
       <InlineCta text="Faqat kolleksiya uchun xarid qiling — Gift Market so‘mda." />
       <NftGiftSeriesNav locale="uz" />

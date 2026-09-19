@@ -81,7 +81,7 @@ function UzBody() {
       />
       <p>
         Virtual raqam haqida chuqurroq:{" "}
-        <Link href="/blog/virtual-telegram-raqam-nima">«Virtual Telegram raqam nima?»</Link> maqolasi.
+        <Link href="/blog/telegram-raqam-sotib-olish">«Virtual Telegram raqam nima?»</Link> maqolasi.
       </p>
 
       <h2 id="narx">Narxlar: arzon va qimmat davlatlar</h2>
@@ -198,7 +198,7 @@ function RuBody() {
       <p>
         Это временный онлайн-номер без физической SIM. Вы оплачиваете, читаете OTP в интерфейсе сервиса и
         регистрируетесь. StarsPaymee даёт оплату в сумах и большой каталог стран. Подробнее:{" "}
-        <Link href="/blog/virtual-telegram-raqam-nima">«Что такое виртуальный номер?»</Link>.
+        <Link href="/blog/telegram-raqam-sotib-olish">«Что такое виртуальный номер?»</Link>.
       </p>
 
       <h2 id="narx">Цены: дешёвые и дорогие страны</h2>
@@ -334,6 +334,8 @@ export const post: AeoPost = {
     "virtual telegram raqam",
     "telegram uchun raqam",
     "telegram sim karta",
+    "virtual telegram raqam nima",
+    "virtual raqam sim farqi",
     "arzon telegram raqam",
     "sms qabul qilish",
     "telegram sms",

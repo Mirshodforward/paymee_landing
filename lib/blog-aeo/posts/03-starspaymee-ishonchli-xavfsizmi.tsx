@@ -76,7 +76,7 @@ function UzBody() {
       </ul>
       <p>
         Batafsil himoya choralari —{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> va{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> va{" "}
         <Link href="/blog/telegram-stars-kelmadi-nima-qilish">«Stars kelmadi — nima qilish»</Link> maqolalarida.
       </p>
 
@@ -173,7 +173,7 @@ function RuBody() {
       </ul>
       <p>
         Подробные меры защиты — в статьях{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link> и{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link> и{" "}
         <Link href="/blog/telegram-stars-kelmadi-nima-qilish">«Звёзды не пришли — что делать»</Link>.
       </p>
 

@@ -49,6 +49,32 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
+      <h2 id="paket">Paket va xarajatlar: nimaga pul to‘lanadi</h2>
+      <p>
+        Tayyor savdo botining narxi bozorda keng tarqalgan — farq odatda uchta narsada bo‘ladi: qaysi mahsulotlar
+        ulanadi (faqat Stars yoki Stars + Premium + sovg‘alar), qaysi to‘lov tizimlari qo‘shilgan va texnik xizmat
+        kimning zimmasida. Shuning uchun ikki taklifni yonma-yon qo‘yganda quyidagilarni solishtiring:
+      </p>
+      <ul>
+        <li>
+          <b>Bir martalik to‘lov</b> — o‘rnatish, brending va sozlash.
+        </li>
+        <li>
+          <b>Doimiy xarajat</b> — abonent to‘lovi, hosting va yangilanishlar.
+        </li>
+        <li>
+          <b>Tranzaksiya ustamasi</b> — har bir buyurtmadan ushlanadigan foiz yoki qat’iy summa.
+        </li>
+        <li>
+          <b>Qamrov</b> — Basic darajada odatda asosiy mahsulot va bitta to‘lov tizimi, kengaytirilgan darajada esa
+          ko‘p mahsulot, API kirish va ustuvor support bo‘ladi.
+        </li>
+      </ul>
+      <p>
+        Boshlanishda kichik qamrov bilan sinab ko‘rish, hajm barqarorlashgach kengaytirish arzonroq chiqadi — chunki
+        doimiy xarajat sotuvdan oldin ham to‘lanadi.
+      </p>
+
       <h2 id="qadamlar">Qanday boshlanadi?</h2>
       <Steps>
         <Step title="1. Ariza va kelishuv">
@@ -323,6 +349,8 @@ export const post: AeoPost = {
     "telegram stars white label",
     "white label reseller",
     "o‘z brend telegram stars",
+    "stars paketlari basic pro",
+    "reseller bot narxi",
   ],
   locales: {
     uz: {

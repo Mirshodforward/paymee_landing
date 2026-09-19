@@ -70,8 +70,8 @@ function UzBody() {
       </p>
 
       <p>
-        Qarang: <Link href="/blog/visa-kartasiz-stars-olish">Visa kartasiz Stars olish</Link>,{" "}
-        <Link href="/blog/som-evaziga-stars-olish">so‘m evaziga olish</Link> va{" "}
+        Qarang: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Visa kartasiz Stars olish qo‘llanmasi</Link>,{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">naqd pul bilan olish</Link> va{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">xavfsizlik</Link>.
       </p>
 
@@ -149,8 +149,8 @@ function RuBody() {
       </p>
 
       <p>
-        Смотрите: <Link href="/blog/visa-kartasiz-stars-olish">Stars без карты Visa</Link>,{" "}
-        <Link href="/blog/som-evaziga-stars-olish">покупка за сумы</Link> и{" "}
+        Смотрите: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Stars без карты Visa</Link>,{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">покупка за наличные</Link> и{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">безопасность</Link>.
       </p>
 
@@ -228,8 +228,8 @@ function EnBody() {
       </p>
 
       <p>
-        See: <Link href="/blog/visa-kartasiz-stars-olish">Stars without a Visa card</Link>,{" "}
-        <Link href="/blog/som-evaziga-stars-olish">buying with so‘m</Link> and{" "}
+        See: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Stars without a Visa card</Link>,{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">paying with cash</Link> and{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">safety</Link>.
       </p>
 

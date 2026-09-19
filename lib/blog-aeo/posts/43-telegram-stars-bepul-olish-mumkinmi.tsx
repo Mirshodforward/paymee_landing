@@ -70,7 +70,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Xavfsizlik belgilarini umumiy ko‘rinishda{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Xavfsiz sotib olish qo‘llanmasi»</Link>da
         ko‘rish mumkin.
       </p>
 
@@ -92,7 +92,7 @@ function UzBody() {
       <p>
         Agar maqsad kam xarajat bilan Stars olish bo‘lsa, eng amaliy yechim — narxlarni solishtirib, ishonchli
         mahalliy botdan sotib olish. To‘liq qo‘llanma{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link> maqolasida,
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> maqolasida,
         narxlar esa{" "}
         <Link href="/blog/telegram-stars-necha-som-kalkulyator">«1 Stars necha so‘m»</Link> jadvalida.
       </p>
@@ -173,7 +173,7 @@ function RuBody() {
       </KeyFacts>
       <p>
         Общие признаки безопасности — в{" "}
-        <Link href="/blog/telegram-stars-xavfsiz-sotib-olish-qollanma">«Руководстве по безопасной покупке»</Link>.
+        <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Руководстве по безопасной покупке»</Link>.
       </p>
 
       <h2 id="real">Реальные способы получить Stars «бесплатно»</h2>
@@ -194,7 +194,7 @@ function RuBody() {
       <p>
         Если цель — минимум затрат на Stars, самое практичное решение — сравнить цены и купить у надёжного местного
         бота. Полное руководство — в статье{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>, цены — в таблице{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>, цены — в таблице{" "}
         <Link href="/blog/telegram-stars-necha-som-kalkulyator">«Сколько стоит 1 Stars»</Link>.
       </p>
 

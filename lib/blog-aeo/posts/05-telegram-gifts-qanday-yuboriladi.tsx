@@ -160,6 +160,22 @@ function UzBody() {
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">oddiy va NFT sovg‘alar maqolasida</Link>.
       </p>
 
+      <h2 id="tanlash">Qanday sovg‘a tanlash kerak?</h2>
+      <KeyFacts label="Uch mezon">
+        <li>
+          <b>Qabul qiluvchining qiziqishi</b> — sovg‘a profilda ko‘rinadi, shuning uchun uslubi muhim.
+        </li>
+        <li>
+          <b>Noyoblik</b> — ba’zi sovg‘alar cheklangan tirajda chiqadi va tez tugaydi.
+        </li>
+        <li>
+          <b>Byudjet</b> — 15 yulduzdan boshlanadigan variantlar ham bor, qimmat kolleksion nusxalar ham.
+        </li>
+      </KeyFacts>
+      <p>
+        Yuborilgan sovg‘a odatda qaytarilmaydi — shuning uchun qabul qiluvchini to‘lovdan oldin tekshiring.
+      </p>
+
       <h2 id="xatolar">Ko‘p uchraydigan xatolar</h2>
       <KeyFacts label="Yuborishdan oldin tekshiring">
         <li>

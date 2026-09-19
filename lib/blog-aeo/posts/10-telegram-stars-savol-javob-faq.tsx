@@ -21,7 +21,7 @@ function UzBody() {
       <p>
         Bu maqola eng ko‘p beriladigan savollarni bir joyda jamlaydi. Har bir javob qisqa va aniq. Aniq amaliy
         qadamlar uchun{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Stars qayerdan sotib olish»</Link>,{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link>,{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">«Premium eng oson usul»</Link> va{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">«Gifts qanday yuboriladi»</Link> maqolalarini
         ko‘ring. Joriy narxlar — <Link href="/stars">Stars</Link>, <Link href="/premium">Premium</Link> va{" "}
@@ -92,7 +92,7 @@ function RuBody() {
       <p>
         Эта статья собирает самые частые вопросы в одном месте. Каждый ответ краткий и точный. За конкретными шагами
         смотрите{" "}
-        <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">«Где купить Stars»</Link>,{" "}
+        <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>,{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">«Самый простой способ Premium»</Link> и{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">«Как отправить Gifts»</Link>. Актуальные цены — на
         страницах <Link href="/stars">Stars</Link>, <Link href="/premium">Premium</Link> и{" "}

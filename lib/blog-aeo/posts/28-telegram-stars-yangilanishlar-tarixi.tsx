@@ -67,7 +67,7 @@ function UzBody() {
         chiqarish imkoni berilishi bo‘ldi. Shu bilan Stars shunchaki «xarid tokeni»dan haqiqiy daromad vositasiga
         aylandi. Bu jarayon{" "}
         <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Stars orqali daromad»</Link> va{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link> maqolalarida batafsil.
+        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Creator Economy»</Link> maqolalarida batafsil.
       </p>
 
       <KeyFacts label="Muhim nuqtalar">
@@ -182,7 +182,7 @@ function RuBody() {
         затем в деньги. Так Stars превратились из простого «токена покупок» в реальный инструмент дохода. Этот процесс
         подробно — в статьях{" "}
         <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Можно ли заработать на Stars»</Link> и{" "}
-        <Link href="/blog/telegram-creator-economy-stars">«Creator Economy»</Link>.
+        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Creator Economy»</Link>.
       </p>
 
       <KeyFacts label="Важные точки">

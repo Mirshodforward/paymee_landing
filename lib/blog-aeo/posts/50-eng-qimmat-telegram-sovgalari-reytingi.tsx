@@ -84,7 +84,7 @@ function UzBody() {
         Ha — raqamli kolleksiya narxlari juda beqaror bo‘lishi mumkin, bugungi «qimmat» sovg‘a ertaga talab
         pasayishi bilan arzonlashishi mumkin. Sovg‘a sotib olish yoki sotishni moliyaviy qaror sifatida emas, balki
         qiziqish va kolleksiya to‘plash sifatida ko‘rish tavsiya etiladi. Sovg‘ani sotish jarayoni haqida{" "}
-        <Link href="/blog/telegram-sovgani-sotish-mumkinmi">«Sovg‘ani sotish mumkinmi»</Link> maqolasida.
+        <Link href="/blog/telegram-gift-sotish">«Sovg‘ani sotish mumkinmi»</Link> maqolasida.
       </p>
 
       <Sources
@@ -176,7 +176,7 @@ function RuBody() {
         Да — цены на цифровые коллекции могут быть очень нестабильными, «дорогой» сегодня подарок завтра может
         подешеветь при снижении спроса. Покупку или продажу подарка рекомендуется рассматривать как хобби и
         коллекционирование, а не как финансовое решение. О процессе продажи подарка — в статье{" "}
-        <Link href="/blog/telegram-sovgani-sotish-mumkinmi">«Можно ли продать подарок»</Link>.
+        <Link href="/blog/telegram-gift-sotish">«Можно ли продать подарок»</Link>.
       </p>
 
       <Sources

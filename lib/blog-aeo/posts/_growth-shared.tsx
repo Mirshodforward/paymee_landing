@@ -56,7 +56,7 @@ export function StarsPremiumLinksUz() {
       Raqamdan keyin ko‘pincha <Link href="/premium">Premium</Link>,{" "}
       <Link href="/stars">Stars</Link> yoki <Link href="/gifts">Gifts</Link> kerak bo‘ladi — ularni ham botda
       username bilan olish mumkin. Batafsil:{" "}
-      <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">Stars qayerdan olish</Link> va{" "}
+      <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Stars qayerdan olish</Link> va{" "}
       <Link href="/blog/telegram-premium-eng-oson-usul">Premium eng oson usul</Link>.
     </p>
   );
@@ -67,7 +67,7 @@ export function StarsPremiumLinksRu() {
     <p>
       После номера часто нужны <Link href="/premium">Premium</Link>,{" "}
       <Link href="/stars">Stars</Link> или <Link href="/gifts">Gifts</Link> — в боте по username. Подробнее:{" "}
-      <Link href="/blog/telegram-stars-qayerdan-sotib-olish-2026">где купить Stars</Link> и{" "}
+      <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">где купить Stars</Link> и{" "}
       <Link href="/blog/telegram-premium-eng-oson-usul">самый простой Premium</Link>.
     </p>
   );

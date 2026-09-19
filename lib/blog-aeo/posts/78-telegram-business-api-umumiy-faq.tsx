@@ -23,7 +23,7 @@ function UzBody() {
         Bu maqola barcha API va biznes savollarini bir joyda jamlaydi. Chuqurroq mavzular:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>,{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>,{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link>,{" "}
         <Link href="/blog/white-label-telegram-stars-platforma">White Label</Link> va{" "}
         <Link href="/blog/telegram-reseller-dasturi-qanday-boshlash">Reseller</Link>. Umumiy —{" "}
@@ -66,7 +66,7 @@ function RuBody() {
         Эта статья собирает все вопросы про API и бизнес в одном месте. Более глубокие темы:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>,{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>,{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link>,{" "}
         <Link href="/blog/white-label-telegram-stars-platforma">White Label</Link> и{" "}
         <Link href="/blog/telegram-reseller-dasturi-qanday-boshlash">реселлинг</Link>. Общее — на странице{" "}
@@ -109,7 +109,7 @@ function EnBody() {
         This article gathers all API and business questions in one place. Deeper topics:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link>,{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link>,{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link>,{" "}
         <Link href="/blog/white-label-telegram-stars-platforma">White Label</Link> and{" "}
         <Link href="/blog/telegram-reseller-dasturi-qanday-boshlash">reselling</Link>. General — on the{" "}

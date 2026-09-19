@@ -56,7 +56,7 @@ function UzBody() {
         Bir nechta provayder o‘rniga bitta arzon API bilan ishlash operatsion xarajatni kamaytiradi.
         StarsPaymee Business orqali <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link> va{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> va{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (rubl) API</Link> — hammasi bitta kalit ostida.
         Joriy narxlarni <Link href="/stars">Stars</Link> va <Link href="/premium">Premium</Link> sahifalarida ko‘ring.
       </p>
@@ -124,7 +124,7 @@ function RuBody() {
         Работать с одним дешёвым API вместо нескольких провайдеров снижает операционные расходы. Через
         StarsPaymee Business доступны <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link> и{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> и{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (рубли) API</Link> — всё под одним ключом.
         Актуальные цены — на страницах <Link href="/stars">Stars</Link> и <Link href="/premium">Premium</Link>.
       </p>
@@ -192,7 +192,7 @@ function EnBody() {
         Working with one cheap API instead of several providers lowers operational costs. Through
         StarsPaymee Business you get <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
         <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-rasmiy-integratsiya">Click API</Link> and{" "}
+        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> and{" "}
         <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (RUB) API</Link> — all under one key.
         See current prices on the <Link href="/stars">Stars</Link> and <Link href="/premium">Premium</Link> pages.
       </p>

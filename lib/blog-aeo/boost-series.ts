@@ -2,14 +2,11 @@
 export const boostSeriesSlugs = [
   "telegram-kanalga-boost-sotib-olish",
   "telegram-boost-ijarasi",
-  "telegram-kanalni-boost-qilish",
   "telegram-kanal-reytingi",
   "telegram-premium-boost",
   "telegram-kanal-rivojlantirish",
   "telegram-boost-narxlari",
-  "telegram-boost-avtomatik",
-  "arzon-telegram-boost",
-  "starspaymee-boost-market",
+  "telegram-kanal-boost-nima",
 ] as const;
 
 export type BoostSeriesSlug = (typeof boostSeriesSlugs)[number];

@@ -47,7 +47,7 @@ function UzBody() {
       <p>
         Giveaway ochish, Stories yoki tez level ko‘tarish kerak bo‘lganda — lekin faqat ishonchli provayder va aniq kanal
         manzili bilan. Narxlari: <Link href="/blog/telegram-boost-narxlari">boost narxlari</Link>,{" "}
-        <Link href="/blog/arzon-telegram-boost">arzon boost</Link>.
+        <Link href="/blog/telegram-boost-narxlari">arzon boost</Link>.
       </p>
       <InlineCta text="Boost ijarasi — @StarsPaymee_bot Boost Market, so‘mda." />
       <BoostSeriesNav locale="uz" />

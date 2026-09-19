@@ -7,25 +7,18 @@
  * sahifalari). Bu ro‘yxat ularni to‘ldiradi, almashtirmaydi.
  */
 export const starsPremiumGuideSeriesSlugs = [
-  "telegram-stars-qanday-olinadi",
-  "telegram-stars-kerak",
   "telegram-yulduz-kerak",
-  "stars-olish-tez-usul",
   "telegram-stars-narxi",
-  "stars-orqali-sovga-yuborish",
-  "telegram-botlar-uchun-stars",
+  "telegram-gifts-qanday-yuboriladi-qollanma",
   "telegram-stars-kartasiz-sotib-olish",
   "telegram-premium-kerak",
   "telegram-premium-narxi",
-  "telegram-premium-imkoniyatlari",
-  "premium-va-oddiy-hisob-farqi",
-  "arzon-telegram-premium",
+  "telegram-premium-va-oddiy-farqi",
+  "telegram-premium-narxi-ozbekistonda-2026",
   "telegram-premium-sovga-username-orqali",
-  "stars-va-premium-farqi",
   "telegram-stars-xavfsizmi",
   "ozbekistonda-telegram-stars-sotib-olish",
-  "telegram-premium-fayl-yuklash",
-  "kanal-egalari-uchun-stars",
+  "telegramda-4gb-fayl-yuborish",
   "ishonchli-stars-xizmatini-tanlash",
 ] as const;
 
