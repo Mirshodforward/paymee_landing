@@ -490,9 +490,9 @@ const uzFaq = [
     answer: "45 000 so‘m.",
   },
   {
-    question: "Nega 1 oylikda username so‘ralmaydi?",
+    question: "1 oylik Premium uchun username kerakmi?",
     answer:
-      "Chunki 1 oylik tarif «akkauntga kirib berish» oqimida beriladi. Username orqali beriladigan tez oqimda eng qisqa muddat — 3 oy.",
+      "Ha, faqat @username kerak. 2026-yil sentabridan barcha muddat — 1, 3, 6 va 12 oy — username oqimida beriladi: parol, SMS-kod yoki 2FA so‘ralmaydi va obuna o‘rtacha 10 soniyada faollashadi.",
   },
   {
     question: "Muddat qachondan boshlanadi?",
@@ -526,9 +526,9 @@ const ruFaq = [
   },
   { question: "Сколько стоит месячный тариф?", answer: "45 000 сум." },
   {
-    question: "Почему при месячном тарифе не спрашивают username?",
+    question: "Нужен ли username для месячного Premium?",
     answer:
-      "Теперь оформляется. С сентября 2026 года все четыре срока, включая месячный, идут по username — пароль не нужен.",
+      "Да, нужен только @username. С сентября 2026 года все сроки — 1, 3, 6 и 12 месяцев — оформляются по username: пароль, SMS-код или 2FA не запрашиваются, подписка включается в среднем за 10 секунд.",
   },
   {
     question: "С какого момента считается срок?",
@@ -562,9 +562,9 @@ const enFaq = [
   },
   { question: "How much is the monthly plan?", answer: "45,000 UZS." },
   {
-    question: "Why is no username requested for the monthly plan?",
+    question: "Do I need a username for the monthly Premium plan?",
     answer:
-      "It does now. Since September 2026 all four terms, the monthly one included, run by username — no password needed.",
+      "Yes, and only the @username. Since September 2026 every term — 1, 3, 6 and 12 months — is arranged by username: no password, SMS code or 2FA is requested, and the subscription activates in about 10 seconds.",
   },
   {
     question: "When does the term start?",
