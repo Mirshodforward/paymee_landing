@@ -1,13 +1,22 @@
 import type { ReactNode } from "react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { V2Shell } from "@/components/v2/v2-shell";
 import { V2Nav } from "@/components/v2/v2-nav";
 import { V2Footer } from "@/components/v2/v2-footer";
 import { getTelegramSupportUrl } from "@/lib/site";
 import { botDeepLink } from "@/lib/telegram-deeplink";
 
-export default async function BlogLayout({ children }: { children: ReactNode }) {
-  const t = await getTranslations("v2");
+type Props = { children: ReactNode; params: Promise<{ locale: string }> };
+
+/**
+ * `setRequestLocale` — statik render uchun tilni o‘rnatadi; usiz next-intl
+ * `defaultLocale` (uz) ga qaytadi va blog kartochkalaridagi `<Link>` lar
+ * ruscha/inglizcha ro‘yxatda ham `/uz/blog/...` ga ketardi.
+ */
+export default async function BlogLayout({ children, params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "v2" });
   const navBotUrl = botDeepLink({ page: "blog", placement: "nav" });
   const footerBotUrl = botDeepLink({ page: "blog", placement: "footer" });
   const supportUrl = getTelegramSupportUrl();
