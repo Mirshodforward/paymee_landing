@@ -228,18 +228,135 @@ function RuBody() {
   );
 }
 
+function EnAnswer() {
+  return (
+    <p>
+      There is no <strong>official, permanent, genuinely free</strong> Telegram Premium — it is a paid
+      subscription. What does exist are a few routes that promise it for nothing: official Boost giveaways (real,
+      but random), “complete tasks and get Premium” bots (usually a scam or a data harvest) and “free generator”
+      sites (fraud, without exception). The realistic cheap route is to compare prices and buy from a local bot in
+      so‘m.
+    </p>
+  );
+}
+
+function EnBody() {
+  return (
+    <>
+      <Toc
+        label="Contents"
+        items={[
+          { href: "#haqiqat", label: "Is free Premium actually a thing?" },
+          { href: "#usullar", label: "What the “free” routes really are" },
+          { href: "#giveaway", label: "How an official giveaway works" },
+          { href: "#xavfli", label: "What to stay away from" },
+          { href: "#arzon", label: "The realistic cheapest route" },
+        ]}
+      />
+
+      <h2 id="haqiqat">Can you get Telegram Premium for free?</h2>
+      <p>
+        The short answer is <strong>no</strong>. Telegram does not hand Premium out for free on any ongoing basis —
+        the subscription is one of its revenue sources. In practice there are still a few ways it can reach you at
+        no cost: somebody gifts it to you, you win a channel giveaway, or a rare official promotion covers it.
+        Almost everything else advertised as “free Premium” is a scam.
+      </p>
+
+      <h2 id="usullar">“Free Premium” routes — what is real and what is a myth</h2>
+      <CompareTable
+        headers={["Route", "Real?", "Risk"]}
+        rows={[
+          ["A friend gifts it to you", <Yes key="1" />, "None — it is an ordinary gift"],
+          ["Official Boost giveaway in a channel", <Yes key="2">random</Yes>, "Low — but winning is not guaranteed"],
+          ["“Do tasks, get Premium” bot", <No key="3" />, "High — data or money can be lost"],
+          ["“Premium generator” website", <No key="4" />, "Very high — fraud without exception"],
+          ["“Unlimited Premium” via referrals", <No key="5" />, "High — the account can be restricted"],
+        ]}
+      />
+      <p>
+        Only the first two are real. The rest range from a waste of time to outright fraud. What the subscription
+        actually gives you is covered in{" "}
+        <Link href="/blog/telegram-premium-arziydimi-foydalari">“Is Telegram Premium worth it”</Link>.
+      </p>
+
+      <InlineCta text="Save the time — get Premium in so‘m through the bot in about 10 seconds." />
+
+      <h2 id="giveaway">How does an official Boost giveaway work?</h2>
+      <p>
+        Telegram has a built-in feature for this: a channel owner collects <strong>Boosts</strong> and runs a
+        Premium (or Stars) giveaway among subscribers. It is an official, documented mechanism. Entering usually
+        means subscribing to the channel, and winners are picked at random — so it is a lottery ticket, not a plan.
+      </p>
+      <p>
+        The other honest route is simply being given the subscription: anyone can gift Premium to a @username, and
+        that flow is described in{" "}
+        <Link href="/blog/telegram-premium-sovga-username-orqali">“Gifting Premium by username”</Link>.
+      </p>
+
+      <KeyFacts label="How to tell them apart">
+        <li>
+          <b>An official giveaway:</b> runs inside Telegram itself, with a “Giveaway” entry visible on the channel.
+        </li>
+        <li>
+          <b>A scam bot:</b> asks for a password, a login code or payment details — none of which Premium ever
+          requires.
+        </li>
+        <li>
+          <b>A fake site:</b> claims that “entering your username is enough” and then delivers nothing.
+        </li>
+      </KeyFacts>
+
+      <h2 id="xavfli">What to stay away from</h2>
+      <ul>
+        <li>
+          <strong>Bots asking for a password or 2FA:</strong> Premium activation never needs either.
+        </li>
+        <li>
+          <strong>“Tasks first, Premium later” schemes:</strong> they exist to show you ads or farm referrals, and
+          the promised subscription does not arrive.
+        </li>
+        <li>
+          <strong>Requests to sign in on an outside website:</strong> never enter your Telegram login on a
+          third-party page.
+        </li>
+      </ul>
+
+      <h2 id="arzon">So what is the realistic cheapest route?</h2>
+      <p>
+        If the goal is “Premium for as little as possible”, the practical answer is to compare prices and buy from
+        a service you can check. In Uzbekistan that usually means a bot that takes local cards in so‘m, with no
+        foreign card involved. The step-by-step flow is in{" "}
+        <Link href="/blog/telegram-premium-eng-oson-usul">“The easiest way to buy Premium”</Link>, and current
+        prices per term are in{" "}
+        <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">“Telegram Premium prices in Uzbekistan”</Link>.
+      </p>
+
+      <Sources
+        label="Sources"
+        items={[
+          { href: "https://telegram.org/faq_premium", label: "telegram.org/faq_premium", note: "Telegram Premium FAQ" },
+          { href: "https://telegram.org/blog/giveaways", label: "telegram.org/blog/giveaways", note: "official giveaway announcement" },
+        ]}
+      />
+    </>
+  );
+}
+
 export const post: AeoPost = {
   slug: SLUG,
   category: "Premium",
   type: "problem",
   datePublished: "2026-07-05",
-  dateModified: "2026-07-05",
+  dateModified: "2026-09-20",
   keywords: [
     "telegram premium bepul",
     "telegram premium tekinga",
     "telegram premium bepul olish",
     "free telegram premium",
     "telegram premium yutib olish",
+    "free telegram premium 2026",
+    "telegram premium giveaway",
+    "telegram premium scam",
   ],
   locales: {
     uz: {
@@ -315,6 +432,51 @@ export const post: AeoPost = {
         {
           question: "Какой способ самый дешёвый и безопасный?",
           answer: "Сравнить цены и купить в сумах через надёжного местного бота — без потери времени и безопасно.",
+        },
+      ],
+    },
+    en: {
+      title: "Can you get Telegram Premium for free? The truth and the myths (2026)",
+      excerpt:
+        "Is free Telegram Premium real? A look at official Boost giveaways, scam bots and fake generators — and the route that is genuinely cheapest.",
+      metaTitle: "Free Telegram Premium — truth and myths 2026",
+      metaDescription:
+        "Can you get Telegram Premium for free: how an official Boost giveaway works, which routes are scams, and the realistic cheapest way to subscribe.",
+      answerTitle: "Short answer",
+      Answer: EnAnswer,
+      Body: EnBody,
+      ctaHeading: "Want Premium right now?",
+      ctaBody: "In so\u2018m, with a local card, through @StarsPaymee_bot in about 10 seconds.",
+      faq: [
+        {
+          question: "Does Telegram give Premium away for free officially?",
+          answer:
+            "No. Telegram does not distribute Premium for free on an ongoing basis — it is a paid subscription.",
+        },
+        {
+          question: "Can you win Premium in a Boost giveaway?",
+          answer:
+            "Yes, that is an official and real mechanism, but the winner is chosen at random, so there is no guarantee.",
+        },
+        {
+          question: "Are “do a task, get Premium” bots trustworthy?",
+          answer:
+            "No. Most of them are scams or data collection, and the promised subscription usually never arrives.",
+        },
+        {
+          question: "What if a service asks for a password or a code to give me Premium?",
+          answer:
+            "Stop there. Getting Premium never requires a password, an SMS code or 2FA — being asked is a certain sign of fraud.",
+        },
+        {
+          question: "Which route is cheapest and safest?",
+          answer:
+            "Comparing prices and buying in so\u2018m through a local service you can verify — no time lost and nothing risky.",
+        },
+        {
+          question: "Can someone gift Premium to me?",
+          answer:
+            "Yes. Premium can be gifted to a @username, and for the recipient it is identical to a subscription bought directly.",
         },
       ],
     },
