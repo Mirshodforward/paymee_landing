@@ -295,17 +295,17 @@
       "footnote": "Barcha muddat uchun faqat @username kifoya. «Login orqali» oqim nostandart holatlar uchun alohida xizmat — shartlari qo‘llab-quvvatlash orqali aniqlanadi."
     },
     "gifts": {
-      "metaTitle": "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan",
-      "metaDescription": "Telegram noyob sovg‘alarini sotib oling yoki do‘stlaringizga yuboring. Anonim yoki tabrik izohi bilan. So‘mda to‘lov, oson va ishonchli.",
+      "metaTitle": "Telegram sovg‘a yuborish — so‘mda, anonim yoki izoh bilan",
+      "metaDescription": "Telegram sovg‘alarini so‘mda sotib oling va do‘stingizga yuboring: anonim yoki tabrik izohi bilan. Kolleksion nusxa Telegram ichida upgrade orqali olinadi.",
       "h1": "Telegram sovg‘alari yuborish",
-      "intro": "Telegramning noyob (unique) sovg‘alarini StarsPaymee orqali o‘zingizga sotib oling yoki do‘stlaringizga yuboring. Sovg‘ani anonim tarzda yoki tabrik so‘zi bilan jo‘natishingiz mumkin. To‘lov so‘mda — Click, Payme, Uzum, UzCard, HUMO orqali.",
+      "intro": "Telegram sovg‘alarini StarsPaymee orqali o‘zingizga oling yoki do‘stlaringizga yuboring — anonim tarzda yoki tabrik so‘zi bilan. To‘lov so‘mda: Click, Payme, Uzum, UzCard, HUMO. Kolleksion (NFT) nusxa kerak bo‘lsa, avval yulduz olasiz va sovg‘ani Telegram ichida collectible darajasiga ko‘tarasiz.",
       "bullets": [
-        "Noyob Telegram sovg‘alarini sotib olish yoki yuborish",
+        "Doimiy katalogdagi sovg‘alarni sotib olish yoki yuborish",
         "Anonim yuborish imkoniyati",
         "Tabrik so‘zini (izoh) qo‘shish",
         "So‘mda qulay to‘lov, ishonchli yetkazish"
       ],
-      "footnote": "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi."
+      "footnote": "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi. Sotuvdan tugagan kolleksion (NFT) sovg‘alar bot orqali yetkazilmaydi."
     },
     "about": {
       "metaTitle": "Biz haqimizda — Telegram Stars va Premium xizmati",
@@ -544,19 +544,19 @@
       "Bayramlar uchun ideal"
     ],
     "prodLink": "Botda ko‘rish",
-    "nftKicker": "Gift Market",
-    "nftTitle": "Telegram NFT Gift Market — so‘mda kolleksiya",
-    "nftSub": "Limited Edition va kolleksion NFT sovg‘alar: sotib oling, sotang, balansni bot ichida boshqaring. O‘zbekistonda birinchi o‘zbekcha Gift Market qo‘llanmalari blogda.",
+    "nftKicker": "Sovg‘alar",
+    "nftTitle": "Telegram sovg‘alari — so‘mda, bot orqali",
+    "nftSub": "Oddiy sovg‘alar, Stars va Premium avvalgidek ishlaydi. Sotuvdan tugagan kolleksion (NFT) sovg‘alar esa hozir bot orqali yetkazilmaydi — kolleksion nusxa Telegram ichida upgrade orqali olinadi.",
     "nftBalance": "Balansingiz",
     "nftMyGifts": "Mening giftlarim",
-    "nftCtaBot": "Gift Marketni ochish",
-    "nftCtaBlog": "NFT blog seriyasi",
-    "nftNewBadge": "Yangi",
+    "nftCtaBot": "Botda sovg‘a yuborish",
+    "nftCtaBlog": "Xizmat holati va qo‘llanmalar",
+    "nftNewBadge": "Yangilandi",
     "nftBullets": [
-      "Telegram NFT Gift va Limited Edition — narxlari so‘mda",
-      "LibertyFigure, MoodPack kabi kolleksiyalar va filtrlash",
-      "Yangi / Arzon / Qimmat / Sotuvda tartiblash",
-      "10 ta SEO maqola — O‘zbekistonda kam uchraydigan mavzu"
+      "Oddiy sovg‘alar — so‘mda, mahalliy karta bilan, bir necha daqiqada",
+      "Kolleksion sovg‘a: botdan yulduz olasiz, keyin Telegram ichida upgrade qilasiz",
+      "Sotuvdan tugagan kolleksion nusxalar bot orqali yetkazilmaydi",
+      "Gift Market va kolleksiya bo‘yicha o‘zbekcha qo‘llanmalar — blogda"
     ],
     "boostKicker": "Boost Market",
     "boostTitle": "Telegram kanaliga Boost ijarasi — 1 dan 30 kungacha",
@@ -637,6 +637,7 @@
     "blogBoostSeriesSubtitle": "Kanalga boost sotib olish, boost ijarasi, reyting/level, Premium boost, narxlar, avtomatik yetkazish va StarsPaymee Boost Market.",
     "blogTryTitle": "Hoziroq sinab ko‘ring",
     "blogTryBody": "@StarsPaymee_bot orqali Stars, Premium yoki sovg‘a buyurtmasini bering — 10 soniyada avtomatik yetkaziladi.",
-    "blogBack": "Barcha maqolalar"
+    "blogBack": "Barcha maqolalar",
+    "nftSample": "Namuna: bot interfeysi. Kolleksion nusxalar va narxlar — sotuvdagi taklif emas."
   }
 }

@@ -78,7 +78,7 @@ function UzBody() {
         atrofida bo‘lishi mumkin — joriy ro‘yxat botda yangilanadi.
       </p>
       <NftGiftMarketBoard locale="uz" />
-      <InlineCta text="Gift Marketni oching — @StarsPaymee_bot, to‘lov so‘mda." />
+      <InlineCta text="Yulduz oling va sovg‘ani o‘zingiz collectible darajasiga ko‘taring." product={{ kind: "stars", amount: 100 }} />
 
       <h2 id="limited">Limited Edition nima?</h2>
       <p>
@@ -302,8 +302,8 @@ export const post: AeoPost = {
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
-      ctaHeading: "Gift Market",
-      ctaBody: "@StarsPaymee_bot — kolleksion NFT giftlar, narxlar so‘mda.",
+      ctaHeading: "Yulduzdan boshlang",
+      ctaBody: "@StarsPaymee_bot — Stars va oddiy sovg‘alar so‘mda; kolleksion nusxani Telegram ichida upgrade bilan olasiz.",
       faq: FAQ_UZ,
     },
     ru: {
@@ -314,8 +314,8 @@ export const post: AeoPost = {
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
-      ctaHeading: "Gift Market",
-      ctaBody: "@StarsPaymee_bot",
+      ctaHeading: "Начните со звёзд",
+      ctaBody: "@StarsPaymee_bot — Stars и обычные подарки в сумах; коллекционный экземпляр делается через upgrade в Telegram.",
       faq: FAQ_RU,
     },
     en: {

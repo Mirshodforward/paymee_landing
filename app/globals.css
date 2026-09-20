@@ -2949,6 +2949,18 @@ html:not(.v2-js) .v2 .rv {
   font-size: 11px;
   font-family: var(--disp);
 }
+/* Mockup ostidagi izoh: telefon ichidagi kolleksion nusxalar sotuvdagi
+   taklif emas, interfeys namunasi. */
+.v2 .nft-sample-note {
+  margin: 0 0 14px;
+  padding: 10px 13px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 12px;
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
 .v2 .nft-bullets {
   margin: 0 0 22px;
   padding-left: 1.1em;

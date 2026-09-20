@@ -488,10 +488,11 @@ export default async function HomePage({ params }: PageProps) {
           myGifts={t("nftMyGifts")}
           ctaBot={t("nftCtaBot")}
           ctaBlog={t("nftCtaBlog")}
-          blogHref="/blog/telegram-nft-gift-nima"
+          blogHref="/blog/kolleksion-gift-bot-orqali-olinmaydi"
           botUrl={link("card")}
           newBadge={t("nftNewBadge")}
           bullets={nftBullets}
+          sampleNote={t("nftSample")}
         />
 
         <V2BoostMarketSection

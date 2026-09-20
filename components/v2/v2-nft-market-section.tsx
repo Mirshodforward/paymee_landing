@@ -19,9 +19,19 @@ type Props = {
   botUrl: string;
   newBadge: string;
   bullets: string[];
+  /** Mockup ostidagi izoh: bu jonli katalog emas, interfeys namunasi. */
+  sampleNote: string;
 };
 
-/** Bosh sahifada Gift Market (NFT kolleksion sovg‘alar, so‘mda) tanituvi. */
+/**
+ * Bosh sahifadagi sovg‘alar bloki.
+ *
+ * MUHIM: telefon mockup'idagi kolleksion nusxalar va narxlar — bot
+ * interfeysining NAMUNASI, sotuvdagi taklif emas. Sotuvdan tugagan
+ * kolleksion (NFT) sovg‘alar hozir bot orqali yetkazilmaydi, shuning uchun
+ * mockup ostida buni aytadigan izoh chiqadi va matn faqat ishlayotgan
+ * xizmatni va’da qiladi.
+ */
 export function V2NftMarketSection({
   kicker,
   title,
@@ -34,6 +44,7 @@ export function V2NftMarketSection({
   botUrl,
   newBadge,
   bullets,
+  sampleNote,
 }: Props) {
   const featured = nftGiftListings.find((g) => g.featured) ?? nftGiftListings[0];
   const grid = nftGiftListings.filter((g) => !g.featured).slice(0, 2);
@@ -112,6 +123,7 @@ export function V2NftMarketSection({
           </div>
 
           <div className="nft-copy">
+            <p className="nft-sample-note">{sampleNote}</p>
             <ul className="nft-bullets">
               {bullets.map((b) => (
                 <li key={b}>{b}</li>

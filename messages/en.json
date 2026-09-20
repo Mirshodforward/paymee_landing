@@ -286,17 +286,17 @@
       "footnote": "Every term needs only a @username. The login flow is a separate service for non-standard cases; its terms are agreed through support."
     },
     "gifts": {
-      "metaTitle": "Send Telegram unique gifts — anonymously",
-      "metaDescription": "Buy Telegram unique gifts or send them to friends. Anonymously or with a greeting. Pay in UZS, simple and reliable.",
+      "metaTitle": "Send a Telegram gift — in so‘m, anonymously or with a note",
+      "metaDescription": "Buy Telegram gifts in so‘m and send them to friends, anonymously or with a note. A collectible copy is made by upgrading inside Telegram.",
       "h1": "Send Telegram gifts",
-      "intro": "Buy Telegram unique gifts for yourself or send them to friends through StarsPaymee. A gift can be sent anonymously or with a congratulatory comment. Pay in UZS — Click, Payme, Uzum, UzCard, HUMO.",
+      "intro": "Buy Telegram gifts for yourself or send them to friends through StarsPaymee — anonymously or with a congratulatory note. Pay in so‘m: Click, Payme, Uzum, UzCard, HUMO. If you need a collectible (NFT) copy, buy Stars first and upgrade the gift to collectible inside Telegram.",
       "bullets": [
-        "Buy or send Telegram unique gifts",
-        "Send anonymously if you like",
-        "Add a congratulatory comment",
-        "Convenient UZS payment, reliable delivery"
+        "Buy or send gifts from the permanent catalogue",
+        "Send anonymously if you prefer",
+        "Add a congratulatory note",
+        "Convenient payment in so‘m, reliable delivery"
       ],
-      "footnote": "Available gifts and prices are shown in @StarsPaymee_bot or the Mini App."
+      "footnote": "The available gifts and their prices are shown in @StarsPaymee_bot or the Mini App. Sold-out collectible (NFT) gifts are not delivered through the bot."
     },
     "about": {
       "metaTitle": "About — Telegram Stars & Premium service",
@@ -535,19 +535,19 @@
       "Perfect for holidays"
     ],
     "prodLink": "View in the bot",
-    "nftKicker": "Gift Market",
-    "nftTitle": "Telegram NFT Gift Market — collect in UZS",
-    "nftSub": "Limited Edition collectible NFT gifts: buy, sell, manage balance in the bot. Uzbek SEO guide series on the blog.",
+    "nftKicker": "Gifts",
+    "nftTitle": "Telegram gifts — in so‘m, through the bot",
+    "nftSub": "Ordinary gifts, Stars and Premium work as before. Sold-out collectible (NFT) gifts are not delivered through the bot right now — a collectible copy is obtained by upgrading inside Telegram.",
     "nftBalance": "Your balance",
     "nftMyGifts": "My gifts",
-    "nftCtaBot": "Open Gift Market",
-    "nftCtaBlog": "NFT blog series",
-    "nftNewBadge": "New",
+    "nftCtaBot": "Send a gift in the bot",
+    "nftCtaBlog": "Service status and guides",
+    "nftNewBadge": "Updated",
     "nftBullets": [
-      "Telegram NFT Gift & Limited Edition — prices in UZS",
-      "LibertyFigure, MoodPack collections and filters",
-      "Sort: new / cheap / expensive / on sale",
-      "10 SEO articles — rare Uzbek-language topic"
+      "Ordinary gifts — in so‘m, with a local card, in a few minutes",
+      "A collectible: buy Stars in the bot, then upgrade the gift inside Telegram",
+      "Sold-out collectible copies are not delivered through the bot",
+      "Guides on the Gift Market and collecting — on the blog"
     ],
     "boostKicker": "Boost Market",
     "boostTitle": "Telegram channel Boost rental — 1 to 30 days",
@@ -628,6 +628,7 @@
     "blogBoostSeriesSubtitle": "Buy boost, rental, rating, Premium boost, prices, auto delivery and StarsPaymee Boost Market.",
     "blogTryTitle": "Try it right now",
     "blogTryBody": "Order Stars, Premium or a gift via @StarsPaymee_bot — delivered automatically in 10 seconds.",
-    "blogBack": "All articles"
+    "blogBack": "All articles",
+    "nftSample": "A sample of the bot interface. Collectible items and prices are not a live offer."
   }
 }
