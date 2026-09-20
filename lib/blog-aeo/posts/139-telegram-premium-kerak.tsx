@@ -66,9 +66,9 @@ function UzBody() {
 
       <h2 id="narx">Narxi va qanday olinishi</h2>
       <p>
-        Muddat uzaygani sari oyiga tushadigan xarajat kamayadi. StarsPaymee’da ikki xil oqim bor va ular bir xil
-        emas: <b>username orqali</b> — 3, 6 va 12 oy, akkauntga kirish shart emas; <b>login orqali</b> — 1 oy
-        (50 000 so‘m) va 1 yil, rasmiy faollashtirish bilan. Ya’ni <b>1 oylik variant username oqimida yo‘q</b>.
+        2026-yil sentabridan boshlab <b>barcha muddat — 1, 3, 6 va 12 oy — username oqimida</b> beriladi: akkauntga
+        kirish, parol yoki SMS-kod so‘ralmaydi. 1 oylik tarif 45 000 so‘m. «Login orqali» oqim faqat nostandart
+        holatlar uchun alohida xizmat sifatida qoldi va uning narxi qo‘llab-quvvatlash orqali aniqlanadi.
       </p>
       <PremiumPlanBoard locale="uz" flow="username" />
 
@@ -151,9 +151,9 @@ function RuBody() {
 
       <h2 id="narx">Цена и как оформляется</h2>
       <p>
-        Чем больше срок, тем меньше стоимость в пересчёте на месяц. В StarsPaymee есть два разных сценария:{" "}
-        <b>по username</b> — 3, 6 и 12 месяцев, без входа в аккаунт; <b>через логин</b> — 1 месяц (50 000 сум) и
-        1 год, с официальной активацией. То есть <b>месячного варианта в сценарии по username нет</b>.
+        С сентября 2026 года <b>все сроки — 1, 3, 6 и 12 месяцев — оформляются по username</b>: вход в аккаунт,
+        пароль или SMS-код не запрашиваются. Месячный тариф — 45 000 сум. Сценарий «через логин» остался отдельной
+        услугой для нестандартных случаев, его условия уточняются в поддержке.
       </p>
       <PremiumPlanBoard locale="ru" flow="username" />
 
@@ -236,10 +236,9 @@ function EnBody() {
 
       <h2 id="narx">Price and how it is arranged</h2>
       <p>
-        The longer the term, the lower the effective monthly cost. StarsPaymee runs two different flows, and they
-        are not interchangeable: <b>by username</b> — 3, 6 and 12 months, with no account sign-in; and{" "}
-        <b>through sign-in</b> — 1 month (50,000 UZS) and 1 year, with an official activation. In other words,{" "}
-        <b>the monthly option does not exist in the username flow</b>.
+        Since September 2026 <b>every term — 1, 3, 6 and 12 months — is issued through the username flow</b>: no
+        account sign-in, password or SMS code. The monthly plan is 45,000 UZS. The “sign-in” flow remains a separate
+        service for non-standard cases, and its terms are agreed through support.
       </p>
       <PremiumPlanBoard locale="en" flow="username" />
 

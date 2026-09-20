@@ -258,18 +258,32 @@
       ],
       "footnote": "Price depends on the amount of Stars you choose. You’ll see the exact total in @StarsPaymee_bot or the Mini App."
     },
+    "starsTable": {
+      "heading": "Telegram Stars prices",
+      "lead": "Pick a package — the price comes from the same source as the bot’s own calculation. The button opens the Stars section in the Mini App with that package.",
+      "colPack": "Package",
+      "colPrice": "Price",
+      "colAction": "Buy",
+      "buy": "Buy",
+      "buyAria": "Buy {amount} Stars",
+      "unit": "stars",
+      "popular": "Popular",
+      "noteFee": "The amount in the table is final — no service fee is added on top.",
+      "notePay": "Payment in so‘m: {methods}.",
+      "noteConfirm": "Before payment the bot shows the total and the recipient’s @username once more."
+    },
     "premium": {
-      "metaTitle": "Buy Telegram Premium — 3/6/12 months, cheap",
-      "metaDescription": "Telegram Premium: 3 mo 160,000, 6 mo 215,000, 12 mo 388,000 so‘m. By username it activates automatically in 10 seconds, no account login.",
+      "metaTitle": "Buy Telegram Premium — 1/3/6/12 months, cheap",
+      "metaDescription": "Telegram Premium: 1 mo 45,000, 3 mo 160,000, 6 mo 215,000, 12 mo 388,000 so‘m. By username it activates automatically in 10 seconds, no account login.",
       "h1": "Buy Telegram Premium",
-      "intro": "Get a Telegram Premium subscription in Uzbekistan at a low price: 3 months 160,000, 6 months 215,000, 12 months 388,000 so‘m. In the “by username” flow no account login is needed — Premium activates automatically in 10 seconds. A separate “account login” service is also available (1 month 50,000, 1 year 300,000 so‘m).",
+      "intro": "Get a Telegram Premium subscription in Uzbekistan at a low price: 1 month 45,000, 3 months 160,000, 6 months 215,000, 12 months 388,000 so‘m. Since September 2026 every term runs through the “by username” flow — no account login, and Premium activates automatically in about 10 seconds.",
       "bullets": [
         "1 mo 45,000 · 3 mo 160,000 · 6 mo 215,000 · 12 mo 388,000 so‘m",
-        "By username — auto activation in 10 seconds",
+        "Every term by username — auto activation in 10 seconds",
         "No account login, password or SMS code",
-        "Separate login flow: 1 month 50,000, 1 year 300,000 so‘m"
+        "Payment in so‘m: Click, Payme, Uzum, UzCard, HUMO"
       ],
-      "footnote": "The by-username flow needs only a @username. The login flow is a separate service."
+      "footnote": "Every term needs only a @username. The login flow is a separate service for non-standard cases; its terms are agreed through support."
     },
     "gifts": {
       "metaTitle": "Send Telegram unique gifts — anonymously",

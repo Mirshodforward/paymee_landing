@@ -267,18 +267,32 @@
       ],
       "footnote": "Narx tanlangan yulduz miqdoriga qarab hisoblanadi. Aniq summani @StarsPaymee_bot yoki Mini App da ko‘rasiz."
     },
+    "starsTable": {
+      "heading": "Telegram Stars narxlari",
+      "lead": "Paketni tanlang — narx botdagi hisob bilan bir xil manbadan olinadi. Tugma Mini App’dagi Stars bo‘limini o‘sha paket bilan ochadi.",
+      "colPack": "Paket",
+      "colPrice": "Narx",
+      "colAction": "Xarid",
+      "buy": "Sotib olish",
+      "buyAria": "{amount} Stars sotib olish",
+      "unit": "yulduz",
+      "popular": "Ommabop",
+      "noteFee": "Jadvaldagi summa yakuniy — ustiga xizmat haqi qo‘shilmaydi.",
+      "notePay": "To‘lov so‘mda: {methods}.",
+      "noteConfirm": "To‘lovdan oldin bot summani va qabul qiluvchi @username’ni yana bir marta ko‘rsatadi."
+    },
     "premium": {
-      "metaTitle": "Telegram Premium sotib olish — 3/6/12 oy, arzon",
-      "metaDescription": "Telegram Premium: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
+      "metaTitle": "Telegram Premium sotib olish — 1/3/6/12 oy, arzon",
+      "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. Username bilan 10 soniyada avtomatik faollashadi, akkauntga kirish shart emas.",
       "h1": "Telegram Premium sotib olish",
       "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 10 soniyada avtomatik faollashadi. 1 oylik tarif — 45 000 so‘m, u ham username orqali.",
       "bullets": [
         "1 oy 45 000 · 3 oy 160 000 · 6 oy 215 000 · 12 oy 388 000 so‘m",
-        "Username bilan 10 soniyada avtomatik faollashish",
+        "Barcha muddat username orqali — 10 soniyada avtomatik faollashish",
         "Akkauntga kirish, parol yoki SMS-kod talab qilinmaydi",
-        "Naqd to‘lash ham mumkin — Paynet orqali, kartasiz"
+        "To‘lov so‘mda: Click, Payme, Uzum, UzCard, HUMO"
       ],
-      "footnote": "Username bilan oqimda faqat @username kifoya. Login bilan oqim alohida xizmat sifatida amalga oshiriladi."
+      "footnote": "Barcha muddat uchun faqat @username kifoya. «Login orqali» oqim nostandart holatlar uchun alohida xizmat — shartlari qo‘llab-quvvatlash orqali aniqlanadi."
     },
     "gifts": {
       "metaTitle": "Telegram noyob sovg‘alar yuborish — anonim, tabrik bilan",

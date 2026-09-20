@@ -2,6 +2,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
+import { StarsPriceTable } from "@/components/landing/stars-price-table";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 import { PREMIUM_LOGIN_PLANS, PREMIUM_PLANS, STARS_PACKS } from "@/lib/products";
@@ -145,6 +146,8 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
             ))}
           </ul>
         ) : null}
+
+        {topic === "stars" ? <StarsPriceTable locale={locale} /> : null}
 
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <a
