@@ -87,14 +87,17 @@ function UzBody() {
         Premium imtiyozlari to‘xtaydi. Uzaytirish har safar yangi buyurtma orqali amalga oshiriladi.
       </p>
       <p>
-        Muddat tugashini kutish shart emas. <b>Username oqimida</b> amaldagi Premium ustiga buyurtma bersangiz,
-        yangi muddat joriysiga qo‘shiladi. <b>Login oqimidagi 1 oylik</b> tarifda esa faollashtirish operator
-        orqali bajarilgani uchun muddatni oldindan qo‘llab-quvvatlash bilan aniqlashtirib olgan ma’qul.
+        Muddat tugashini kutish shart emas: barcha muddat — 1, 3, 6 va 12 oy — username orqali beriladi, ya’ni
+        buyurtma tartibi bir xil. Lekin amaldagi Premium <b>ustiga</b> buyurtma berilganda muddat qo‘shiladimi —
+        bu tanlangan usulga bog‘liq va hamma holatda bir xil emas. Shuning uchun buyurtmadan oldin holatni
+        tekshiring:{" "}
+        <Link href="/blog/premium-bor-odamga-premium-sovga">«Premium bor odamga yana Premium»</Link> maqolasida
+        har bir usul uchun nima bo‘lishi yozilgan; aniq sana muhim bo‘lsa, qo‘llab-quvvatlash bilan tasdiqlang.
       </p>
 
       <p>
         Qarang: <Link href="/blog/telegram-premium-eng-oson-usul">Premium olish</Link>,{" "}
-        <Link href="/blog/telegram-premium-kerak">to‘liq imkoniyatlar ro‘yxati</Link> va{" "}
+        <Link href="/blog/telegram-premium-arziydimi-foydalari">Premium arziydimi</Link> va{" "}
         <Link href="/blog/telegram-premium-va-oddiy-farqi">oddiy hisob bilan farqi</Link>.
       </p>
 
@@ -172,14 +175,16 @@ function RuBody() {
         отключатся только привилегии Premium. Продление каждый раз оформляется новым заказом.
       </p>
       <p>
-        Дожидаться конца срока не обязательно. <b>В сценарии по username</b> заказ поверх действующего Premium
-        добавляет новый срок к текущему. А для <b>месячного тарифа через логин</b> активацию выполняет оператор,
-        поэтому срок лучше заранее уточнить в поддержке.
+        Дожидаться конца срока не обязательно: все сроки — 1, 3, 6 и 12 месяцев — оформляются по username, порядок
+        заказа одинаковый. Но добавится ли срок к уже <b>действующей</b> подписке, зависит от выбранного способа и
+        одинаково не работает везде. Поэтому перед заказом проверьте ситуацию:{" "}
+        <Link href="/blog/premium-bor-odamga-premium-sovga">«Premium тому, у кого он уже есть»</Link> разбирает
+        каждый способ; если важна точная дата — подтвердите её в поддержке.
       </p>
 
       <p>
         Смотрите: <Link href="/blog/telegram-premium-eng-oson-usul">покупка Premium</Link>,{" "}
-        <Link href="/blog/telegram-premium-kerak">полный список возможностей</Link> и{" "}
+        <Link href="/blog/telegram-premium-arziydimi-foydalari">стоит ли Premium</Link> и{" "}
         <Link href="/blog/telegram-premium-va-oddiy-farqi">отличие от обычного аккаунта</Link>.
       </p>
 
@@ -257,14 +262,17 @@ function EnBody() {
         the Premium perks switch off. Renewing is always a new order.
       </p>
       <p>
-        There is no need to wait for the term to run out. <b>In the username flow</b>, ordering on top of an active
-        Premium adds the new term to the current one. For the <b>sign-in flow used in non-standard cases</b> an operator
-        performs the activation, so it is worth confirming the dates with support beforehand.
+        There is no need to wait for the term to run out: every term — 1, 3, 6 and 12 months — runs through the
+        username flow, so ordering works the same way. Whether a new term is <b>added on top</b> of an active
+        subscription, however, depends on the method and does not work identically everywhere. Check the situation
+        before ordering:{" "}
+        <Link href="/blog/premium-bor-odamga-premium-sovga">“Premium for someone who already has it”</Link> goes
+        through each route; if an exact date matters, confirm it with support.
       </p>
 
       <p>
         See: <Link href="/blog/telegram-premium-eng-oson-usul">getting Premium</Link>,{" "}
-        <Link href="/blog/telegram-premium-kerak">the full feature list</Link> and{" "}
+        <Link href="/blog/telegram-premium-arziydimi-foydalari">whether Premium is worth it</Link> and{" "}
         <Link href="/blog/telegram-premium-va-oddiy-farqi">the difference from a standard account</Link>.
       </p>
 
@@ -289,7 +297,7 @@ const uzFaq = [
   {
     question: "Oldindan uzaytirsam bo‘ladimi?",
     answer:
-      "Ha. Username oqimida amaldagi Premium ustiga bergan buyurtmangiz muddatni joriysiga qo‘shadi. Login oqimidagi 1 oylik tarifda muddatni avval qo‘llab-quvvatlash bilan aniqlashtiring.",
+      "Muddat tugashini kutish shart emas — buyurtma istalgan vaqtda beriladi. Amaldagi Premium ustiga muddat qo‘shiladimi, bu tanlangan usulga bog‘liq; «Premium bor odamga yana Premium» maqolasida har bir holat yozilgan, aniq sana kerak bo‘lsa supportda tasdiqlang.",
   },
   { question: "Boshqa hisobga olsam bo‘ladimi?", answer: "Ha, buyurtmada o‘sha hisob username’ini ko‘rsating." },
 ];
@@ -304,7 +312,7 @@ const ruFaq = [
   {
     question: "Можно ли продлить заранее?",
     answer:
-      "Да. В сценарии по username заказ поверх действующего Premium добавляет срок к текущему. Для месячного тарифа через логин срок лучше заранее уточнить в поддержке.",
+      "Ждать окончания срока не нужно — заказ оформляется в любой момент. Добавится ли срок к действующей подписке, зависит от способа; разбор всех случаев — в статье «Premium тому, у кого он уже есть», а точную дату подтвердят в поддержке.",
   },
   { question: "Можно ли оформить на другой аккаунт?", answer: "Да, укажите в заказе его username." },
 ];
@@ -318,13 +326,13 @@ const enFaq = [
   {
     question: "Is the 1-month plan the same process as the others?",
     answer:
-      "No. One month is delivered through the sign-in flow with an operator activation; 3, 6 and 12 months run through the username flow with no sign-in.",
+      "Yes. Since September 2026 all four terms — 1, 3, 6 and 12 months — run through the username flow with no sign-in, password or SMS code. The sign-in service remains only for non-standard cases.",
   },
   { question: "Does it auto-renew?", answer: "No — after the term ends you place a new order." },
   {
     question: "Can I renew in advance?",
     answer:
-      "Yes. In the username flow an order placed on top of active Premium adds the term to the current one. For the monthly sign-in plan, confirm the dates with support first.",
+      "You do not have to wait for the term to end — an order can be placed at any time. Whether the term is added on top of an active subscription depends on the method; “Premium for someone who already has it” covers each case, and support can confirm the exact date.",
   },
   { question: "Can I buy it for another account?", answer: "Yes — give that account’s username when ordering." },
 ];

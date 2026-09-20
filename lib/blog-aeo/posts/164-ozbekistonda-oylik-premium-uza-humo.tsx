@@ -83,16 +83,21 @@ function UzBody() {
       </p>
       <TermCompare locale="uz" />
       <p>
-        Jadvaldan ko‘rinib turibdiki, 1 oylik eng qulay kirish nuqtasi, lekin oyiga hisoblaganda eng qimmati.
-        Premium doimiy kerak bo‘lsa, 6 yoki 12 oylik sezilarli tejaydi.
+        Jadvaldan ikkita xulosa chiqadi. Birinchisi: 1 oylik tarifning asosiy afzalligi — <b>eng kam boshlang‘ich
+        to‘lov</b>, ya’ni bir martada atigi 45 000 so‘m berasiz. Ikkinchisi: oyiga hisoblaganda eng tejamkori —
+        12 oylik (~32 300 so‘m), undan keyin 6 oylik (~35 800 so‘m). 3 oylik esa oyiga ~53 300 so‘mga tushadi,
+        ya’ni 1 oylikdan ham qimmat — u aynan uch oy kerak bo‘lgandagina mantiqiy.
       </p>
 
       <h2 id="narx">Narxi va muddati</h2>
-      <PremiumPlanBoard locale="uz" flow="login" />
       <p>
-        Taqqoslash uchun — username orqali beriladigan, akkauntga kirishni talab qilmaydigan tariflar:
+        2026-yil sentabridan barcha muddat — 1, 3, 6 va 12 oy — username oqimida beriladi:
       </p>
       <PremiumPlanBoard locale="uz" flow="username" />
+      <p>
+        «Akkauntga kirib berish» oqimi faqat nostandart holatlar uchun alohida xizmat sifatida qoldi:
+      </p>
+      <PremiumPlanBoard locale="uz" flow="login" />
       <KeyFacts label="Muddat haqida aniq faktlar">
         <li>
           <b>Muddat 1 oy</b> — faollashgan kundan boshlab hisoblanadi, kalendar oy oxirigacha emas.
@@ -223,14 +228,17 @@ function RuBody() {
       </p>
       <TermCompare locale="ru" />
       <p>
-        Из таблицы видно: месячный — самый доступный вход, но самый дорогой в пересчёте на месяц. Если Premium
-        нужен постоянно, 6 или 12 месяцев заметно экономнее.
+        Из таблицы следуют два вывода. Первый: главное преимущество месячного тарифа — <b>самый маленький
+        стартовый платёж</b>, всего 45 000 сум за раз. Второй: в пересчёте на месяц выгоднее всего годовой
+        (~32 300 сум), затем полугодовой (~35 800 сум). А трёхмесячный выходит ~53 300 сум в месяц — дороже
+        месячного, поэтому он оправдан, только если нужны ровно три месяца.
       </p>
 
       <h2 id="narx">Цена и срок</h2>
-      <PremiumPlanBoard locale="ru" flow="login" />
-      <p>Для сравнения — тарифы по username, которые не требуют входа в аккаунт:</p>
+      <p>С сентября 2026 года все сроки — 1, 3, 6 и 12 месяцев — оформляются по username:</p>
       <PremiumPlanBoard locale="ru" flow="username" />
+      <p>Сценарий «со входом в аккаунт» остался отдельной услугой для нестандартных случаев:</p>
+      <PremiumPlanBoard locale="ru" flow="login" />
       <KeyFacts label="Точные факты о сроке">
         <li>
           <b>Срок — 1 месяц</b> и считается со дня активации, а не до конца календарного месяца.
@@ -356,14 +364,17 @@ function EnBody() {
       </p>
       <TermCompare locale="en" />
       <p>
-        The table makes it clear: one month is the easiest entry point but the most expensive per month. If you
-        need Premium permanently, 6 or 12 months saves noticeably more.
+        Two things follow from the table. First, the monthly plan&rsquo;s real advantage is the <b>smallest upfront
+        payment</b> — 45,000 UZS in one go. Second, per month the best value is the yearly plan (~32,300 UZS),
+        then six months (~35,800 UZS). Three months works out at ~53,300 UZS per month — more than the monthly
+        plan — so it only makes sense when you need exactly three months.
       </p>
 
       <h2 id="narx">Price and term</h2>
-      <PremiumPlanBoard locale="en" flow="login" />
-      <p>For comparison, the username plans, which require no account sign-in:</p>
+      <p>Since September 2026 every term — 1, 3, 6 and 12 months — runs through the username flow:</p>
       <PremiumPlanBoard locale="en" flow="username" />
+      <p>The “account sign-in” flow remains a separate service for non-standard cases:</p>
+      <PremiumPlanBoard locale="en" flow="login" />
       <KeyFacts label="Precise facts about the term">
         <li>
           <b>The term is one month</b>, counted from the day of activation — not to the end of the calendar month.
@@ -584,7 +595,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-04-07",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-20",
   keywords: [
     "1 oylik telegram premium",
     "bir oylik premium olish",
@@ -619,7 +630,7 @@ export const post: AeoPost = {
     ru: {
       title: "Telegram Premium на 1 месяц: оплата картой UzCard и Humo",
       excerpt:
-        "Месячный Premium стоит 45 000 сум и оформляется только в сценарии со входом, а не по username. Цена, срок, оплата UzCard/Humo и проверка активации.",
+        "Месячный Premium стоит 45 000 сум и оформляется по username — без пароля. Цена, срок, оплата UzCard/Humo и проверка активации.",
       metaTitle: "Telegram Premium на месяц — UzCard и Humo",
       metaDescription:
         "Telegram Premium на 1 месяц за 45 000 сум: в каком сценарии оформляется, оплата картой UzCard и Humo, с какого дня идёт срок и как проверить активацию.",
@@ -633,7 +644,7 @@ export const post: AeoPost = {
     en: {
       title: "One month of Telegram Premium: paying by UzCard and HUMO",
       excerpt:
-        "The monthly plan costs 45,000 UZS and comes only through the sign-in flow, not by username. Price, term, UzCard/HUMO payment and how to verify activation.",
+        "The monthly plan costs 45,000 UZS and is arranged by username — no password. Price, term, UzCard/HUMO payment and how to verify activation.",
       metaTitle: "Telegram Premium for a month — UzCard and HUMO",
       metaDescription:
         "One month of Telegram Premium for 45,000 UZS: which flow delivers it, paying by UzCard and HUMO, when the term starts and how to verify activation.",

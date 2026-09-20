@@ -23,12 +23,12 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
           "Ekrandagi xabarni o‘qing — u aniq sababni aytadi",
         ],
         [
-          "StarsPaymee — username oqimi (3/6/12 oy)",
+          "StarsPaymee — username oqimi (1/3/6/12 oy)",
           "Xizmat yangi muddatni joriysining ustiga qo‘shadi",
           "Buyurtmadan oldin botda username va holatni tasdiqlang",
         ],
         [
-          "StarsPaymee — login oqimi (1 oy)",
+          "StarsPaymee — login oqimi (nostandart holatlar)",
           "Faollashtirishni operator bajaradi, muddat qo‘lda hisoblanadi",
           "Buyurtmadan oldin muddatni support bilan aniqlashtiring",
         ],
@@ -48,12 +48,12 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
           "Прочитайте сообщение на экране — там указана точная причина",
         ],
         [
-          "StarsPaymee — поток по username (3/6/12 мес)",
+          "StarsPaymee — поток по username (1/3/6/12 мес)",
           "Сервис добавляет новый срок к действующему",
           "Перед заказом подтвердите username и статус в боте",
         ],
         [
-          "StarsPaymee — поток через логин (1 мес)",
+          "StarsPaymee — поток через логин (нестандартные случаи)",
           "Активацию выполняет оператор, срок считается вручную",
           "Уточните срок в поддержке до оформления заказа",
         ],
