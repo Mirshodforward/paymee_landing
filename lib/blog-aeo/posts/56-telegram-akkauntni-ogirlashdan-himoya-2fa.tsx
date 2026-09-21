@@ -44,7 +44,7 @@ function UzBody() {
         SIM-almashtirish (SIM swap) orqali hujumlarning oldini oladi.
       </p>
 
-      <InlineCta text="Xavfsiz xarid — Stars’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Xavfsiz xarid — Stars’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="seans">Faol seanslarni qanday tekshirish mumkin?</h2>
       <KeyFacts label="Seanslarni nazorat qilish">
@@ -138,7 +138,7 @@ function RuBody() {
         пароль. Это предотвращает атаки через подмену SIM-карты (SIM swap).
       </p>
 
-      <InlineCta text="Безопасная покупка — купите Stars в сумах, в боте за 10 секунд." />
+      <InlineCta text="Безопасная покупка — купите Stars в сумах, в боте за 5 секунд." />
 
       <h2 id="seans">Как проверить активные сеансы?</h2>
       <KeyFacts label="Контроль сеансов">
@@ -221,7 +221,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Xavfsiz xarid qilmoqchimisiz?",
-      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram akkauntini o‘g‘irlashdan qanday himoya qilish mumkin?",
@@ -256,7 +256,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите безопасно купить?",
-      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Как защитить аккаунт Telegram от угона?",

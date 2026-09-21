@@ -1,57 +1,85 @@
 /**
- * Mijozlar sharhlari va reytingi — YAGONA MANBA.
+ * Mijoz sharhlari — bot backend'idan jonli o'qiladi.
  *
- * ⚠️ MUHIM: Bu yerga FAQAT real, tasdiqlangan ma'lumot qo'shiladi.
- * Yolg'on sharh yoki o'ylab topilgan reyting QAT'IY TAQIQLANADI
- * (E-E-A-T va Google'ning sharh-spam siyosati buzilishi — jarima xavfi).
+ * ⚠️ MUHIM: bu yerda hech qanday qo'lda yozilgan sharh yoki reyting YO'Q va
+ * bo'lmaydi. Manba — botdagi `reviews` jadvali: yulduzlar tasdiqlangan
+ * xaridordan, matnlar moderatsiyadan o'tgan. Backend ishlamasa bo'lim
+ * yashirinadi, hech qanday «zaxira» sharh ko'rsatilmaydi.
  *
- * REVIEWS bo'sh bo'lsa — bosh sahifada sharhlar bo'limi ham, Review/AggregateRating
- * schema ham KO'RINMAYDI. Real ma'lumot qo'shilishi bilan ikkalasi avtomatik yoqiladi.
+ * Yangilanish: ISR 15 daqiqa + bot tasdiqlaganda `/api/revalidate` webhook
+ * (`reviews` tegi) — shunda keyingi tashrifda darhol yangi ro'yxat chiqadi.
  */
+
+import { PUBLIC_API_BASE } from "@/lib/site";
 
 export type Review = {
-  /** Sharh muallifi (real ism yoki @username). */
-  author: string;
-  /** Reyting 1..5. */
+  id: number;
+  name: string;
   rating: number;
-  /** Sharh matni (real). */
   text: string;
-  /** ISO yyyy-mm-dd (ixtiyoriy). */
-  date?: string;
-  /** Manba: masalan "Telegram", yoki havola (ixtiyoriy). */
-  source?: string;
-  /** Sharh tili (ixtiyoriy). */
-  locale?: "uz" | "ru" | "en";
+  locale: string;
+  source: "bot" | "web";
+  /** Bot orqali, yetkazilgan buyurtmaga bog'langan — tasdiqlangan xaridor. */
+  verified: boolean;
+  /** ISO yyyy-mm-dd */
+  date: string;
 };
 
-export type AggregateRating = {
-  /** O'rtacha reyting, masalan 4.9. */
-  ratingValue: number;
-  /** Jami sharhlar/baholar soni. */
-  reviewCount: number;
-  /** Maksimal qiymat (odatda 5). */
-  bestRating?: number;
-  /** Reyting manbasi (qayerdan olingani — shaffoflik uchun). */
-  source?: string;
+export type RatingSummary = {
+  /** O'rtacha, masalan 4.8. */
+  value: number;
+  /** Barcha tasdiqlangan baholar (matnsizlar ham). */
+  count: number;
 };
 
-/**
- * Real mijoz sharhlari. Misol format (real ma'lumot bilan to'ldiring):
- *
- *   { author: "Ali", rating: 5, text: "...", date: "2026-06-20", source: "Telegram", locale: "uz" },
- */
-export const REVIEWS: Review[] = [];
+export type ReviewsData = { rating: RatingSummary; reviews: Review[] };
 
-/**
- * Real, tasdiqlangan umumiy reyting. Manba ko'rsatilishi shart.
- * Misol: { ratingValue: 4.9, reviewCount: 1280, bestRating: 5, source: "Telegram bot baholari" }
- */
-export const RATING: AggregateRating | null = null;
+export const REVIEWS_TAG = "reviews";
+export const REVALIDATE_SECONDS = 900;
+/** Shundan kam baho bilan AggregateRating schema chiqarilmaydi — 1 ta 5.0 hech narsani anglatmaydi. */
+export const MIN_RATING_COUNT = 10;
 
-export function hasReviews(): boolean {
-  return REVIEWS.length > 0;
+const EMPTY: ReviewsData = { rating: { value: 0, count: 0 }, reviews: [] };
+const TIMEOUT_MS = 4000;
+
+function apiBase(): string {
+  return (process.env.STATS_API_URL || PUBLIC_API_BASE).replace(/\/+$/, "");
 }
 
-export function hasRating(): boolean {
-  return RATING != null && RATING.reviewCount > 0 && RATING.ratingValue > 0;
+export async function getReviews(limit = 24): Promise<ReviewsData> {
+  try {
+    const res = await fetch(`${apiBase()}/api/public/reviews?limit=${limit}`, {
+      next: { revalidate: REVALIDATE_SECONDS, tags: [REVIEWS_TAG] },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+      headers: { accept: "application/json" },
+    });
+    if (!res.ok) return EMPTY;
+    const raw = (await res.json()) as Partial<ReviewsData> & { ok?: boolean };
+    if (raw.ok === false || !Array.isArray(raw.reviews)) return EMPTY;
+    const reviews = raw.reviews
+      .filter((r) => r && typeof r.text === "string" && r.rating >= 1 && r.rating <= 5)
+      .map((r) => ({ ...r, rating: Math.round(r.rating) }));
+    const value = Number(raw.rating?.value) || 0;
+    const count = Number(raw.rating?.count) || 0;
+    return { rating: { value, count }, reviews };
+  } catch {
+    // Tarmoq/timeout — bo'lim jimgina yashirinadi; build buzilmaydi.
+    return EMPTY;
+  }
+}
+
+export function hasRating(r: RatingSummary): boolean {
+  return r.count >= MIN_RATING_COUNT && r.value > 0;
+}
+
+/** Product/Organization ichiga qo'yish uchun — faqat yetarli baho bo'lsa. */
+export function aggregateRatingLd(r: RatingSummary): Record<string, unknown> | null {
+  if (!hasRating(r)) return null;
+  return {
+    "@type": "AggregateRating",
+    ratingValue: r.value.toFixed(1),
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: r.count,
+  };
 }

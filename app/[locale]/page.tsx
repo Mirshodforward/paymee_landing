@@ -6,6 +6,9 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { V2Shell } from "@/components/v2/v2-shell";
 import { V2Nav } from "@/components/v2/v2-nav";
 import { V2Footer } from "@/components/v2/v2-footer";
+import { V2NftRentSection } from "@/components/v2/v2-nft-rent-section";
+import { V2ReviewsSection } from "@/components/v2/v2-reviews-section";
+import { reviewSectionProps } from "@/components/v2/review-section-props";
 import { V2BoostMarketSection } from "@/components/v2/v2-boost-market-section";
 import {
   AppleIcon,
@@ -20,7 +23,7 @@ import {
   StarIcon,
   TelegramIcon,
 } from "@/components/v2/icons";
-import { GEMPAY_URL, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { GEMPAY_URL, TELEGRAM_API_BOT_URL, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import { getFeaturedSummaries } from "@/lib/blog/all";
 import { formatStatNumber, getLandingStats } from "@/lib/live-stats";
 import { GAMES } from "@/lib/games";
@@ -102,6 +105,9 @@ export default async function HomePage({ params }: PageProps) {
   const prodStarsB = t.raw("prodStarsB") as string[];
   const prodPremiumB = t.raw("prodPremiumB") as string[];
   const prodGiftsB = t.raw("prodGiftsB") as string[];
+  const rentBullets = t.raw("rentBullets") as string[];
+  // Sharhlar — bot backend'idan jonli; bo'sh bo'lsa bo'lim faqat formani ko'rsatadi.
+  const reviews = await reviewSectionProps(locale);
   const boostBullets = t.raw("boostBullets") as string[];
 
   const navLabels = {
@@ -302,7 +308,7 @@ export default async function HomePage({ params }: PageProps) {
               <div className="stat">
                 <div className="stat-num">
                   <span className="cnt" data-target={stats.yearsInService} data-suffix="">
-                    {formatStatNumber(stats.yearsInService)}
+                    {formatStatNumber(stats.yearsInService, locale)}
                   </span>
                   <span className="u">{t("statYearsU")}</span>
                 </div>
@@ -311,7 +317,7 @@ export default async function HomePage({ params }: PageProps) {
               <div className="stat">
                 <div className="stat-num">
                   <span className="cnt" data-target={stats.deliverySeconds}>
-                    {formatStatNumber(stats.deliverySeconds)}
+                    {formatStatNumber(stats.deliverySeconds, locale)}
                   </span>
                   <span className="u">{t("statSecU")}</span>
                 </div>
@@ -320,7 +326,7 @@ export default async function HomePage({ params }: PageProps) {
               <div className="stat">
                 <div className="stat-num">
                   <span className="cnt" data-target={stats.activeUsers}>
-                    {formatStatNumber(stats.activeUsers)}
+                    {formatStatNumber(stats.activeUsers, locale)}
                   </span>
                   <span className="u">{t("statUsersU")}</span>
                 </div>
@@ -329,7 +335,7 @@ export default async function HomePage({ params }: PageProps) {
               <div className="stat">
                 <div className="stat-num">
                   <span className="cnt" data-target={stats.orders}>
-                    {formatStatNumber(stats.orders)}
+                    {formatStatNumber(stats.orders, locale)}
                   </span>
                   <span className="u">{t("statOrdersU")}</span>
                 </div>
@@ -468,6 +474,24 @@ export default async function HomePage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        <V2NftRentSection
+          kicker={t("rentKicker")}
+          title={t("rentTitle")}
+          subtitle={t("rentSub")}
+          newBadge={t("rentNewBadge")}
+          catalogNote={t("rentCatalogNote")}
+          durationLabel={t("rentDuration")}
+          approxNote={t("rentApprox")}
+          activeTitle={t("rentActive")}
+          extendLabel={t("rentExtend")}
+          daysLeft={t("rentDaysLeft")}
+          ctaBot={t("rentCtaBot")}
+          ctaBlog={t("rentCtaBlog")}
+          blogHref="/blog/telegram-nft-sovga-ijarasi"
+          botUrl={link("card")}
+          bullets={rentBullets}
+        />
 
         <V2BoostMarketSection
           kicker={t("boostKicker")}
@@ -788,13 +812,20 @@ export default async function HomePage({ params }: PageProps) {
                   {t("bizBody")}
                 </p>
               </div>
-              <Link className="btn btn-grad mag" href="/business">
+              <a
+                className="btn btn-grad mag"
+                href={TELEGRAM_API_BOT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {t("bizCta")}
                 <ArrowIcon style={{ stroke: "#fff" }} />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
+
+        <V2ReviewsSection {...reviews} />
 
         {/* ===== Yakuniy CTA ===== */}
         <section className="cta-final" id="boshlash">

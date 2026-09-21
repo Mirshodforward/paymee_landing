@@ -10,7 +10,7 @@ function UzAnswer() {
       O‘zbekistonda Telegram Stars olishning eng qulay yo‘li — <strong>mahalliy kartani qabul qiladigan bot/Mini
       App</strong>. Yaxshi botni tanlashda mezonlar: so‘mda to‘lov (UzCard/HUMO/Click/Payme), faqat @username (parolsiz),
       tez avtomatik yetkazish, aniq oferta va support, kuzatiladigan buyurtma ID. StarsPaymee shu mezonlarga mos —
-      buyurtma ~10 soniyada avtomatik.
+      buyurtma ~5 soniyada avtomatik.
     </p>
   );
 }
@@ -70,7 +70,7 @@ function UzBody() {
         rows={[
           ["Telegram ichida (Apple/Google)", <No key="1" />, <Yes key="2" />, "Tez, lekin xorijiy karta"],
           ["Fragment (TON)", <No key="3" />, <Yes key="4" />, "Kripto hamyon kerak"],
-          ["Mahalliy bot/Mini App", <Yes key="5" />, <Yes key="6" />, "~10 s, avtomatik"],
+          ["Mahalliy bot/Mini App", <Yes key="5" />, <Yes key="6" />, "~5 s, avtomatik"],
         ]}
       />
 
@@ -123,7 +123,7 @@ function RuAnswer() {
       В Узбекистане удобнее всего покупать Telegram Stars через <strong>бот/Mini App, принимающий локальную карту</strong>.
       Критерии хорошего бота: оплата в сумах (UzCard/HUMO/Click/Payme), только @username (без пароля), быстрая
       автодоставка, понятная оферта и поддержка, отслеживаемый ID заказа. StarsPaymee соответствует этому — заказ
-      доставляется автоматически за ~10 секунд.
+      доставляется автоматически за ~5 секунд.
     </p>
   );
 }
@@ -183,7 +183,7 @@ function RuBody() {
         rows={[
           ["В Telegram (Apple/Google)", <No key="1" />, <Yes key="2" />, "Быстро, но иностранная карта"],
           ["Fragment (TON)", <No key="3" />, <Yes key="4" />, "Нужен крипто-кошелёк"],
-          ["Локальный бот/Mini App", <Yes key="5" />, <Yes key="6" />, "~10 с, автоматически"],
+          ["Локальный бот/Mini App", <Yes key="5" />, <Yes key="6" />, "~5 с, автоматически"],
         ]}
       />
 
@@ -262,7 +262,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Ishonchli botda Stars olasizmi?",
-      ctaBody: "So‘mda, parolsiz, 10 soniyada — @StarsPaymee_bot orqali sinab ko‘ring.",
+      ctaBody: "So‘mda, parolsiz, 5 soniyada — @StarsPaymee_bot orqali sinab ko‘ring.",
       faq: [
         {
           question: "Stars olish uchun qaysi bot yaxshi?",
@@ -299,7 +299,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Купить Stars в надёжном боте?",
-      ctaBody: "В сумах, без пароля, за 10 секунд — попробуйте через @StarsPaymee_bot.",
+      ctaBody: "В сумах, без пароля, за 5 секунд — попробуйте через @StarsPaymee_bot.",
       faq: [
         {
           question: "Какой бот лучше для покупки Stars?",

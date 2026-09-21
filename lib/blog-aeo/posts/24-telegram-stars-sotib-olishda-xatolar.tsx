@@ -259,7 +259,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Xatosiz va xavfsiz olasizmi?",
-      ctaBody: "Oferta, support va buyurtma ID’si bor @StarsPaymee_bot orqali so‘mda 10 soniyada.",
+      ctaBody: "Oferta, support va buyurtma ID’si bor @StarsPaymee_bot orqali so‘mda 5 soniyada.",
       faq: [
         {
           question: "Stars sotib olishda eng katta xato qaysi?",
@@ -299,7 +299,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Купить без ошибок и безопасно?",
-      ctaBody: "Через @StarsPaymee_bot с офертой, поддержкой и ID заказа — в сумах за 10 секунд.",
+      ctaBody: "Через @StarsPaymee_bot с офертой, поддержкой и ID заказа — в сумах за 5 секунд.",
       faq: [
         {
           question: "Какая самая серьёзная ошибка при покупке Stars?",

@@ -53,7 +53,7 @@ function UzBody() {
       <h2 id="premium">Premium faollashmasa-chi?</h2>
       <p>
         Premium uchun ham xuddi shu mantiq: statusni yangilang, @username to‘g‘riligini tekshiring va bir oz kuting.
-        Premium odatda 10 soniyada yoqiladi; kechiksa, support buyurtma ID bilan tekshiradi. SMS-kod muammosi bo‘lsa,{" "}
+        Premium odatda 5 soniyada yoqiladi; kechiksa, support buyurtma ID bilan tekshiradi. SMS-kod muammosi bo‘lsa,{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">username orqali oqim</Link> kerak emasligini eslang — u
         SMS/parol talab qilmaydi.
       </p>
@@ -126,7 +126,7 @@ function RuBody() {
       <h2 id="premium">А если Premium не активировался?</h2>
       <p>
         Для Premium та же логика: обновите статус, проверьте верность @username и немного подождите. Premium обычно
-        включается за 10 секунд; при задержке поддержка проверит по ID заказа. Если проблема с SMS-кодом, помните, что{" "}
+        включается за 5 секунд; при задержке поддержка проверит по ID заказа. Если проблема с SMS-кодом, помните, что{" "}
         <Link href="/blog/telegram-premium-eng-oson-usul">поток по username</Link> его не требует — ни SMS, ни пароля.
       </p>
 
@@ -175,7 +175,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yordam kerakmi?",
-      ctaBody: "Buyurtma ID bilan @StarsPaymeeSupport’ga yozing yoki botda yangi buyurtma bering — yetkazib berish 10 soniyada.",
+      ctaBody: "Buyurtma ID bilan @StarsPaymeeSupport’ga yozing yoki botda yangi buyurtma bering — yetkazib berish 5 soniyada.",
       faq: [
         {
           question: "To‘lov o‘tdi, lekin Stars kelmadi. Nega?",
@@ -215,7 +215,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Нужна помощь?",
-      ctaBody: "Напишите @StarsPaymeeSupport с ID заказа или оформите новый заказ в боте — доставка за 10 секунд.",
+      ctaBody: "Напишите @StarsPaymeeSupport с ID заказа или оформите новый заказ в боте — доставка за 5 секунд.",
       faq: [
         {
           question: "Оплата прошла, но Stars не пришли. Почему?",

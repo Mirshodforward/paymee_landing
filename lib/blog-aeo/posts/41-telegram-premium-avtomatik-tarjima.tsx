@@ -44,7 +44,7 @@ function UzBody() {
         <Step title="Tilni tanlang">Tarjima qilinadigan tilni belgilang — matn shu tilda ko‘rina boshlaydi.</Step>
       </Steps>
 
-      <InlineCta text="Bu funksiya va boshqa Premium imkoniyatlari — so‘mda, botda 10 soniyada." />
+      <InlineCta text="Bu funksiya va boshqa Premium imkoniyatlari — so‘mda, botda 5 soniyada." />
 
       <h2 id="tillar">Qaysi tillar qo‘llab-quvvatlanadi?</h2>
       <KeyFacts label="Til imkoniyatlari">
@@ -132,7 +132,7 @@ function RuBody() {
         <Step title="Выберите язык">Укажите язык перевода — текст начнёт отображаться на этом языке.</Step>
       </Steps>
 
-      <InlineCta text="Эта и другие функции Premium — в сумах, в боте за 10 секунд." />
+      <InlineCta text="Эта и другие функции Premium — в сумах, в боте за 5 секунд." />
 
       <h2 id="tillar">Какие языки поддерживаются?</h2>
       <KeyFacts label="Языковые возможности">
@@ -212,7 +212,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Bu funksiyani sinaysizmi?",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Real-time tarjima qaysi obuna uchun mavjud?",
@@ -247,7 +247,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать эту функцию?",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Для какой подписки доступен перевод в реальном времени?",

@@ -36,7 +36,7 @@ function UzBody() {
         <Step title="«Profilda ko‘rsatish»ni yoqing">Tegishli sozlamani faollashtiring — sovg‘a profilingizda chiqadi.</Step>
       </Steps>
 
-      <InlineCta text="Sovg‘a yuborish uchun Stars kerakmi? Botda so‘mda 10 soniyada." />
+      <InlineCta text="Sovg‘a yuborish uchun Stars kerakmi? Botda so‘mda 5 soniyada." />
 
       <h2 id="yashirish">Sovg‘ani qanday yashirish mumkin?</h2>
       <p>
@@ -115,7 +115,7 @@ function RuBody() {
         <Step title="Включите «Показать в профиле»">Активируйте настройку — подарок появится в профиле.</Step>
       </Steps>
 
-      <InlineCta text="Нужны Stars для подарка? В боте — в сумах за 10 секунд." />
+      <InlineCta text="Нужны Stars для подарка? В боте — в сумах за 5 секунд." />
 
       <h2 id="yashirish">Как скрыть подарок?</h2>
       <p>
@@ -191,7 +191,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Sovg‘a yubormoqchimisiz?",
-      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Sovg‘ani profilda qayerdan ko‘rsatish mumkin?",
@@ -226,7 +226,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите отправить подарок?",
-      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Где показать подарок в профиле?",

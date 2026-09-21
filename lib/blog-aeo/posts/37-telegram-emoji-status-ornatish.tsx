@@ -45,7 +45,7 @@ function UzBody() {
         <Step title="Tasdiqlang">Tanlangan emoji darhol profilingizda ko‘rina boshlaydi.</Step>
       </Steps>
 
-      <InlineCta text="Emoji status va boshqa Premium imkoniyatlari — so‘mda, botda 10 soniyada." />
+      <InlineCta text="Emoji status va boshqa Premium imkoniyatlari — so‘mda, botda 5 soniyada." />
 
       <h2 id="taymer">Statusga taymer qo‘yish mumkinmi?</h2>
       <KeyFacts label="Taymer imkoniyati">
@@ -131,7 +131,7 @@ function RuBody() {
         <Step title="Подтвердите">Выбранный эмодзи сразу появится в вашем профиле.</Step>
       </Steps>
 
-      <InlineCta text="Emoji-статус и другие возможности Premium — в сумах, в боте за 10 секунд." />
+      <InlineCta text="Emoji-статус и другие возможности Premium — в сумах, в боте за 5 секунд." />
 
       <h2 id="taymer">Можно ли установить таймер на статус?</h2>
       <KeyFacts label="Возможность таймера">
@@ -206,7 +206,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Profilingizni yangilamoqchimisiz?",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Emoji statusni qayerdan o‘rnatish mumkin?",
@@ -241,7 +241,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите обновить профиль?",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Где установить emoji-статус?",

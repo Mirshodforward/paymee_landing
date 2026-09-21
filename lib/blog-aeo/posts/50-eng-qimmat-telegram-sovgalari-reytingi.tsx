@@ -51,7 +51,7 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Kolleksiyangizni boshlash uchun Stars kerakmi? So‘mda, botda 10 soniyada." />
+      <InlineCta text="Kolleksiyangizni boshlash uchun Stars kerakmi? So‘mda, botda 5 soniyada." />
 
       <h2 id="omillar">Narxga ta’sir qiluvchi asosiy omillar</h2>
       <KeyFacts label="Narx omillari">
@@ -145,7 +145,7 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Нужны Stars, чтобы начать коллекцию? В сумах, в боте за 10 секунд." />
+      <InlineCta text="Нужны Stars, чтобы начать коллекцию? В сумах, в боте за 5 секунд." />
 
       <h2 id="omillar">Основные факторы, влияющие на цену</h2>
       <KeyFacts label="Ценовые факторы">
@@ -215,7 +215,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Kolleksiyani boshlaysizmi?",
-      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Nega ba’zi Telegram sovg‘alari juda qimmat?",
@@ -250,7 +250,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Начинаете коллекцию?",
-      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Почему некоторые подарки Telegram очень дорогие?",

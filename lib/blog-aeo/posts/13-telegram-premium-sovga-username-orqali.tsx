@@ -20,7 +20,7 @@ function UzAnswer() {
     <p>
       Telegram Premium’ni boshqa odamga sovg‘a qilish uchun uning <b>@username</b>’ini bilsangiz kifoya.
       @StarsPaymee_bot da: Premium’ni tanlang → qabul qiluvchining @username’ini kiriting → muddatni tanlang →
-      so‘mda to‘lang. Premium o‘rtacha <b>10 soniyada</b> avtomatik faollashadi — qabul qiluvchining paroli, kodi
+      so‘mda to‘lang. Premium o‘rtacha <b>5 soniyada</b> avtomatik faollashadi — qabul qiluvchining paroli, kodi
       yoki akkauntiga kirish kerak emas.
     </p>
   );
@@ -171,7 +171,7 @@ function RuAnswer() {
     <p>
       Чтобы подарить Telegram Premium другому человеку, достаточно знать его <b>@username</b>. В @StarsPaymee_bot:
       выберите Premium → введите @username получателя → выберите срок → оплатите в сумах. Premium активируется
-      автоматически в среднем за <b>10 секунд</b> — пароль, код или вход в аккаунт получателя не нужны.
+      автоматически в среднем за <b>5 секунд</b> — пароль, код или вход в аккаунт получателя не нужны.
     </p>
   );
 }
@@ -320,7 +320,7 @@ function EnAnswer() {
     <p>
       To gift Telegram Premium to someone, their <b>@username</b> is all you need. In @StarsPaymee_bot: pick
       Premium → enter the recipient’s @username → choose a term → pay in so‘m. Premium activates automatically in
-      about <b>10 seconds</b> — the recipient’s password, code or account access is never required.
+      about <b>5 seconds</b> — the recipient’s password, code or account access is never required.
     </p>
   );
 }
@@ -467,7 +467,7 @@ const uzFaq = [
   },
   {
     question: "Sovg‘a necha soniyada yetadi?",
-    answer: "Username oqimida Premium o‘rtacha 10 soniyada qabul qiluvchining akkauntida faollashadi.",
+    answer: "Username oqimida Premium o‘rtacha 5 soniyada qabul qiluvchining akkauntida faollashadi.",
   },
   {
     question: "Username’ni xato yozsam-chi?",
@@ -506,7 +506,7 @@ const ruFaq = [
   },
   {
     question: "За сколько доходит подарок?",
-    answer: "В потоке по username Premium активируется на аккаунте получателя в среднем за 10 секунд.",
+    answer: "В потоке по username Premium активируется на аккаунте получателя в среднем за 5 секунд.",
   },
   {
     question: "А если я ошибусь в username?",
@@ -544,7 +544,7 @@ const enFaq = [
   },
   {
     question: "How fast does the gift arrive?",
-    answer: "In the username flow Premium activates on the recipient’s account in about 10 seconds.",
+    answer: "In the username flow Premium activates on the recipient’s account in about 5 seconds.",
   },
   {
     question: "What if I get the username wrong?",
@@ -615,7 +615,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Premium sovg‘a qilasizmi?",
-      ctaBody: "Botda @username’ni kiriting, so‘mda to‘lang — Premium 10 soniyada qabul qiluvchida faollashadi.",
+      ctaBody: "Botda @username’ni kiriting, so‘mda to‘lang — Premium 5 soniyada qabul qiluvchida faollashadi.",
       faq: uzFaq,
     },
     ru: {
@@ -629,7 +629,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Подарить Premium?",
-      ctaBody: "Введите @username в боте, оплатите в сумах — Premium активируется у получателя за 10 секунд.",
+      ctaBody: "Введите @username в боте, оплатите в сумах — Premium активируется у получателя за 5 секунд.",
       faq: ruFaq,
     },
     en: {
@@ -643,7 +643,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Gifting Premium?",
-      ctaBody: "Enter the @username in the bot and pay in so‘m — Premium activates for them in 10 seconds.",
+      ctaBody: "Enter the @username in the bot and pay in so‘m — Premium activates for them in 5 seconds.",
       faq: enFaq,
     },
   },

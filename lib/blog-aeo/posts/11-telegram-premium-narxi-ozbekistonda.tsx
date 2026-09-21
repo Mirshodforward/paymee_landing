@@ -21,19 +21,19 @@ function PriceTable({ locale }: { locale: "uz" | "ru" | "en" }) {
     uz: {
       headers: ["Muddat", "Narx", "Oyiga", "Oqim"],
       month: (n: number) => `${n} oy`,
-      username: "Username bilan, ~10 s",
+      username: "Username bilan, ~5 s",
       login: "Login orqali (rasmiy)",
     },
     ru: {
       headers: ["Срок", "Цена", "В месяц", "Сценарий"],
       month: (n: number) => `${n} мес.`,
-      username: "По username, ~10 с",
+      username: "По username, ~5 с",
       login: "Через логин (офиц.)",
     },
     en: {
       headers: ["Term", "Price", "Per month", "Flow"],
       month: (n: number) => `${n} mo`,
-      username: "By username, ~10 s",
+      username: "By username, ~5 s",
       login: "Through sign-in",
     },
   }[locale];
@@ -61,7 +61,7 @@ function UzAnswer() {
   return (
     <p>
       O‘zbekistonda Telegram Premium narxi (StarsPaymee’da, so‘mda): <b>1 oy — 45 000</b>, <b>3 oy — 160 000</b>,{" "}
-      <b>6 oy — 215 000</b>, <b>12 oy — 388 000 so‘m</b> — to‘rtalasi ham username bilan, ~10 soniyada
+      <b>6 oy — 215 000</b>, <b>12 oy — 388 000 so‘m</b> — to‘rtalasi ham username bilan, ~5 soniyada
       avtomatik. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan; xorijiy karta shart emas.
     </p>
   );
@@ -77,7 +77,7 @@ function UzBody() {
       </p>
       <PriceTable locale="uz" />
       <p>
-        «Username bilan» oqimda akkauntga kirish kerak emas — Premium o‘rtacha 10 soniyada avtomatik faollashadi.
+        «Username bilan» oqimda akkauntga kirish kerak emas — Premium o‘rtacha 5 soniyada avtomatik faollashadi.
         «Login orqali» esa rasmiy faollashtirish talab qiladigan alohida xizmat: u faqat nostandart holatlar uchun
         qolgan va shartlari qo‘llab-quvvatlash orqali aniqlanadi. <b>1 oylik tarif ham username oqimida</b> —
         2026-yil sentabridan beri.
@@ -180,7 +180,7 @@ function RuAnswer() {
   return (
     <p>
       Цена Telegram Premium в Узбекистане (в StarsPaymee, в сумах): <b>1 мес — 45 000</b>, <b>3 мес — 160 000</b>,{" "}
-      <b>6 мес — 215 000</b>, <b>12 мес — 388 000 сум</b> — все четыре по username, активация ~10 секунд.
+      <b>6 мес — 215 000</b>, <b>12 мес — 388 000 сум</b> — все четыре по username, активация ~5 секунд.
       Оплата UzCard, HUMO, Click, Payme, Uzum или Paynet; иностранная карта не нужна.
     </p>
   );
@@ -300,7 +300,7 @@ function EnAnswer() {
     <p>
       Telegram Premium pricing in Uzbekistan (at StarsPaymee, in so‘m): <b>1 month — 45,000</b>,{" "}
       <b>3 months — 160,000</b>, <b>6 months — 215,000</b>, <b>12 months — 388,000 UZS</b> — all four by
-      username, activated automatically in about 10 seconds. Payment goes through UzCard, HUMO, Click, Payme,
+      username, activated automatically in about 5 seconds. Payment goes through UzCard, HUMO, Click, Payme,
       Uzum or Paynet; no foreign card is needed.
     </p>
   );
@@ -316,7 +316,7 @@ function EnBody() {
       </p>
       <PriceTable locale="en" />
       <p>
-        The “by username” flow needs no account sign-in — Premium activates automatically in around 10 seconds. The
+        The “by username” flow needs no account sign-in — Premium activates automatically in around 5 seconds. The
         “through sign-in” flow is a separate service with an official activation, and{" "}
         <b>the monthly plan exists only there</b>.
       </p>

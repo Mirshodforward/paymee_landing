@@ -29,7 +29,7 @@ function UzBody() {
         <InfoCard emoji="🏷️" title="Profil rozetkasi va tezlik">Premium rozetkasi, kengaytirilgan profil sozlamalari.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Premium’ni username bilan 10 soniyada faollashtiring." />
+      <InlineCta text="Premium’ni username bilan 5 soniyada faollashtiring." />
 
       <h2 id="kimga">Kimga arziydi, kimga shart emas?</h2>
       <p>
@@ -96,7 +96,7 @@ function RuBody() {
         <InfoCard emoji="🏷️" title="Бейдж и скорость">Бейдж Premium, расширенные настройки профиля.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Активируйте Premium по username за 10 секунд." />
+      <InlineCta text="Активируйте Premium по username за 5 секунд." />
 
       <h2 id="kimga">Кому стоит, а кому не обязательно?</h2>
       <p>
@@ -163,7 +163,7 @@ function EnBody() {
         <InfoCard emoji="🏷️" title="Profile badge">The Premium badge and extended profile options.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Activate Premium by username in about 10 seconds." product={{ kind: "premium", months: 12 }} />
+      <InlineCta text="Activate Premium by username in about 5 seconds." product={{ kind: "premium", months: 12 }} />
 
       <h2 id="kimga">Who it suits, and who can skip it</h2>
       <p>
@@ -247,7 +247,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Premium’ni sinab ko‘rasizmi?",
-      ctaBody: "Username bilan, parolsiz, 10 soniyada. Botda muddatni tanlang va so‘mda to‘lang.",
+      ctaBody: "Username bilan, parolsiz, 5 soniyada. Botda muddatni tanlang va so‘mda to‘lang.",
       faq: [
         {
           question: "Telegram Premium nima beradi?",
@@ -266,7 +266,7 @@ export const post: AeoPost = {
         {
           question: "Premium’ni qanday olish oson?",
           answer:
-            "Username orqali — akkauntga kirmasdan, 10 soniyada. To‘liq qo‘llanma «Premium eng oson usul» maqolasida.",
+            "Username orqali — akkauntga kirmasdan, 5 soniyada. To‘liq qo‘llanma «Premium eng oson usul» maqolasida.",
         },
         {
           question: "Bepul sinov bormi?",
@@ -286,7 +286,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Попробуете Premium?",
-      ctaBody: "По username, без пароля, за 10 секунд. Выберите срок в боте и оплатите в сумах.",
+      ctaBody: "По username, без пароля, за 5 секунд. Выберите срок в боте и оплатите в сумах.",
       faq: [
         {
           question: "Что даёт Telegram Premium?",
@@ -305,7 +305,7 @@ export const post: AeoPost = {
         {
           question: "Как проще всего купить Premium?",
           answer:
-            "По username — без входа в аккаунт, за 10 секунд. Полное руководство в статье «Самый простой способ Premium».",
+            "По username — без входа в аккаунт, за 5 секунд. Полное руководство в статье «Самый простой способ Premium».",
         },
         {
           question: "Есть ли бесплатная проба?",

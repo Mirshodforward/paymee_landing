@@ -1,4 +1,5 @@
 import { STATS } from "@/lib/products";
+import { PUBLIC_API_BASE } from "@/lib/site";
 
 /**
  * Landingdagi statistika raqamlarini bot backend'idan olish.
@@ -33,7 +34,7 @@ export type LandingStats = {
 };
 
 /** Bot backend'ining bazasi. Deploy paytida o'zgarishi mumkin. */
-const API_BASE = (process.env.STATS_API_URL || "https://starspaymee.starstg.uz").replace(/\/+$/, "");
+const API_BASE = (process.env.STATS_API_URL || PUBLIC_API_BASE).replace(/\/+$/, "");
 
 /** Next keshi: 15 daqiqa. Backend o'zi ham 10 daqiqa keshlaydi. */
 const REVALIDATE_SECONDS = 900;
@@ -99,15 +100,20 @@ export async function getLandingStats(): Promise<LandingStats> {
   const users = acceptNumber(raw.users, 100_000_000);
   const orders = acceptNumber(raw.ordersCompleted, 1_000_000_000);
   const seconds = acceptNumber(raw.avgDeliverySeconds, 3600);
-  const years = acceptNumber(raw.yearsInService, 50);
+  /**
+   * `yearsInService` backendda `users` jadvalidagi eng eski `created_at` dan
+   * hisoblanadi. Baza 2026-03-12 da yangilangan, shuning uchun API xizmat
+   * yoshini haqiqiydan kichik qaytaradi (`Math.max(1, ...)` → doim 1).
+   * Xizmat qachon boshlangani kodda qo'lda yuritiladi — `STATS.yearsInService`.
+   */
 
   return {
-    yearsInService: years ?? fallback.yearsInService,
+    yearsInService: fallback.yearsInService,
     deliverySeconds: seconds ?? fallback.deliverySeconds,
     activeUsers: users ?? fallback.activeUsers,
     orders: orders ?? fallback.orders,
     live: {
-      yearsInService: years !== null,
+      yearsInService: false,
       deliverySeconds: seconds !== null,
       activeUsers: users !== null,
       orders: orders !== null,
@@ -123,6 +129,9 @@ export async function getLandingStats(): Promise<LandingStats> {
  * shuning uchun JS yuklanmaganda ham, yuklangandan keyin ham bir xil
  * ko'rinadi va raqam «sakramaydi».
  */
-export function formatStatNumber(value: number): string {
-  return value.toLocaleString("en-US").replace(/,/g, " ");
+export function formatStatNumber(value: number, locale?: string): string {
+  const text = value.toLocaleString("en-US").replace(/,/g, " ");
+  // `yearsInService` kasr bo'lishi mumkin (1.5). Ingliz tilidan boshqasida
+  // kasr ajratgich — vergul: «1,5», «1.5» emas.
+  return locale && locale !== "en" ? text.replace(".", ",") : text;
 }

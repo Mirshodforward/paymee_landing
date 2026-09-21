@@ -46,7 +46,7 @@ function UzBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Boost qilish uchun Premium kerakmi? So‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Boost qilish uchun Premium kerakmi? So‘mda, botda 5 soniyada oling." />
 
       <h2 id="level">Boost level’lari nimalar beradi?</h2>
       <KeyFacts label="Level bilan ochiladigan imkoniyatlar">
@@ -142,7 +142,7 @@ function RuBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Нужен Premium для буста? Купите в сумах, в боте за 10 секунд." />
+      <InlineCta text="Нужен Premium для буста? Купите в сумах, в боте за 5 секунд." />
 
       <h2 id="level">Что дают уровни (level) буста?</h2>
       <KeyFacts label="Возможности по уровням">
@@ -228,7 +228,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Boost qilish uchun Premium kerakmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram kanal boost qilish pulmi?",
@@ -263,7 +263,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Нужен Premium для буста?",
-      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Boost канала Telegram платный?",

@@ -53,7 +53,7 @@ function UzBody() {
         juda o‘xshash — chunki firibgarlarning usullari deyarli bir xil.
       </p>
 
-      <InlineCta text="Vaqtingizni tejang — Stars’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Vaqtingizni tejang — Stars’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="xavf">Bunday botlar/saytlarning real xavfi nima?</h2>
       <KeyFacts label="Asosiy xavflar">
@@ -157,7 +157,7 @@ function RuBody() {
         мошенников почти одинаковы.
       </p>
 
-      <InlineCta text="Не тратьте время — купите Stars в сумах, в боте за 10 секунд." />
+      <InlineCta text="Не тратьте время — купите Stars в сумах, в боте за 5 секунд." />
 
       <h2 id="xavf">Какой реальный риск у таких ботов/сайтов?</h2>
       <KeyFacts label="Основные риски">
@@ -234,7 +234,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Vaqt yo‘qotmasdan Stars olasizmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada.",
       faq: [
         {
           question: "Telegram Stars’ni rasman bepul beradimi?",
@@ -269,7 +269,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите получить Stars без потери времени?",
-      ctaBody: "В сумах, локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "В сумах, локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Раздаёт ли Telegram Stars официально бесплатно?",

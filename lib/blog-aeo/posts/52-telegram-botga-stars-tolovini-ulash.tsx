@@ -51,7 +51,7 @@ function UzBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Loyihangiz uchun Stars sinovi kerakmi? Botda so‘mda 10 soniyada." />
+      <InlineCta text="Loyihangiz uchun Stars sinovi kerakmi? Botda so‘mda 5 soniyada." />
 
       <h2 id="refund">Refund (pulni qaytarish) logikasi qanday ishlaydi?</h2>
       <KeyFacts label="Refund asoslari">
@@ -78,7 +78,7 @@ function UzBody() {
           bilishi kerak.
         </li>
         <li>
-          <strong>Tez javob bering:</strong> <code>pre_checkout_query</code>ga 10 soniya ichida javob berish talab
+          <strong>Tez javob bering:</strong> <code>pre_checkout_query</code>ga 5 soniya ichida javob berish talab
           qilinadi, aks holda to‘lov bekor bo‘ladi.
         </li>
         <li>
@@ -150,7 +150,7 @@ function RuBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Нужен тест Stars для вашего проекта? В боте — в сумах за 10 секунд." />
+      <InlineCta text="Нужен тест Stars для вашего проекта? В боте — в сумах за 5 секунд." />
 
       <h2 id="refund">Как работает логика возврата (refund)?</h2>
       <KeyFacts label="Основы refund">
@@ -177,7 +177,7 @@ function RuBody() {
           перед оплатой.
         </li>
         <li>
-          <strong>Отвечайте быстро:</strong> на <code>pre_checkout_query</code> нужно ответить в течение 10 секунд,
+          <strong>Отвечайте быстро:</strong> на <code>pre_checkout_query</code> нужно ответить в течение 5 секунд,
           иначе оплата отменяется.
         </li>
         <li>
@@ -233,7 +233,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Loyihangizni sinab ko‘rasizmi?",
-      ctaBody: "Test uchun Stars’ni so‘mda, botda 10 soniyada oling.",
+      ctaBody: "Test uchun Stars’ni so‘mda, botda 5 soniyada oling.",
       faq: [
         {
           question: "Bot Stars to‘lovi uchun qanday valyuta kodi ishlatiladi?",
@@ -245,7 +245,7 @@ export const post: AeoPost = {
         },
         {
           question: "pre_checkout_query’ga qancha vaqt ichida javob berish kerak?",
-          answer: "10 soniya ichida, aks holda to‘lov avtomatik bekor bo‘ladi.",
+          answer: "5 soniya ichida, aks holda to‘lov avtomatik bekor bo‘ladi.",
         },
         {
           question: "Xizmat ko‘rsatilmasa, to‘lovni qaytarish mumkinmi?",
@@ -268,7 +268,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите протестировать свой проект?",
-      ctaBody: "Купите Stars для теста в сумах, в боте за 10 секунд.",
+      ctaBody: "Купите Stars для теста в сумах, в боте за 5 секунд.",
       faq: [
         {
           question: "Какой код валюты используется для оплаты Stars в боте?",
@@ -280,7 +280,7 @@ export const post: AeoPost = {
         },
         {
           question: "За какое время нужно ответить на pre_checkout_query?",
-          answer: "В течение 10 секунд, иначе оплата автоматически отменяется.",
+          answer: "В течение 5 секунд, иначе оплата автоматически отменяется.",
         },
         {
           question: "Можно ли вернуть оплату, если услуга не оказана?",

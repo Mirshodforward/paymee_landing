@@ -51,7 +51,7 @@ function UzBody() {
         <Link href="/stars">Stars sahifasida</Link> ko‘rish mumkin.
       </p>
 
-      <InlineCta text="Kichik miqdordan boshlab sinab ko‘ring — so‘mda, botda 10 soniyada." />
+      <InlineCta text="Kichik miqdordan boshlab sinab ko‘ring — so‘mda, botda 5 soniyada." />
 
       <h2 id="nima-uchun">Nima uchun minimal chegara mavjud?</h2>
       <p>
@@ -146,7 +146,7 @@ function RuBody() {
         Все пакеты и актуальные цены смотрите на <Link href="/stars">странице Stars</Link>.
       </p>
 
-      <InlineCta text="Начните с небольшого количества — в сумах, в боте за 10 секунд." />
+      <InlineCta text="Начните с небольшого количества — в сумах, в боте за 5 секунд." />
 
       <h2 id="nima-uchun">Почему существует минимальный порог?</h2>
       <p>
@@ -216,7 +216,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Kichik miqdordan sinab ko‘rasizmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada.",
       faq: [
         {
           question: "Telegram Stars’ni eng kamida nechta sotib olsa bo‘ladi?",
@@ -251,7 +251,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать с малого?",
-      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Какое минимальное количество Telegram Stars можно купить?",

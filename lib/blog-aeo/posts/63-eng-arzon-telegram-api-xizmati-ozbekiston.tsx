@@ -42,7 +42,7 @@ function UzBody() {
           Hajm oshgani sari birlik narxi pasayadi; yuqori hajmli mijozga maxsus shart.
         </InfoCard>
         <InfoCard emoji="⚡" title="Tez va aniq yetkazish">
-          O‘rtacha 10 soniya va yuqori muvaffaqiyat foizi — qaytarish va nizolar kam.
+          O‘rtacha 5 soniya va yuqori muvaffaqiyat foizi — qaytarish va nizolar kam.
         </InfoCard>
         <InfoCard emoji="🧾" title="Yashirin to‘lovsiz">
           Narx va shartlar oldindan aniq; kutilmagan komissiyalar yo‘q.
@@ -110,7 +110,7 @@ function RuBody() {
           Чем больше объём, тем ниже цена за единицу; для крупных клиентов особые условия.
         </InfoCard>
         <InfoCard emoji="⚡" title="Быстрая и точная доставка">
-          В среднем 10 секунд и высокий процент успеха — меньше возвратов и споров.
+          В среднем 5 секунд и высокий процент успеха — меньше возвратов и споров.
         </InfoCard>
         <InfoCard emoji="🧾" title="Без скрытых платежей">
           Цена и условия известны заранее; неожиданных комиссий нет.
@@ -178,7 +178,7 @@ function EnBody() {
           The higher the volume, the lower the per‑unit price; special terms for large clients.
         </InfoCard>
         <InfoCard emoji="⚡" title="Fast, accurate delivery">
-          ~10 seconds on average and a high success rate — fewer refunds and disputes.
+          ~5 seconds on average and a high success rate — fewer refunds and disputes.
         </InfoCard>
         <InfoCard emoji="🧾" title="No hidden fees">
           Price and terms are known upfront; no surprise commissions.

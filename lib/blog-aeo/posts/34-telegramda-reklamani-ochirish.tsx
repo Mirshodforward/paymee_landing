@@ -48,7 +48,7 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Reklamasiz Telegram — Premium’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Reklamasiz Telegram — Premium’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="premium">Premium bilan reklama qanday yo‘qoladi?</h2>
       <p>
@@ -143,7 +143,7 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Telegram без рекламы — купите Premium в сумах, в боте за 10 секунд." />
+      <InlineCta text="Telegram без рекламы — купите Premium в сумах, в боте за 5 секунд." />
 
       <h2 id="premium">Как реклама убирается через Premium?</h2>
       <p>
@@ -219,7 +219,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Reklamasiz Telegram istaysizmi?",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegramda reklama qayerda ko‘rinadi?",
@@ -254,7 +254,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите Telegram без рекламы?",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Где появляется реклама в Telegram?",

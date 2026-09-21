@@ -92,6 +92,9 @@ export async function generateMetadata({
     uz: `${siteUrl}/uz`,
     ru: `${siteUrl}/ru`,
     en: `${siteUrl}/en`,
+    // Tili mos kelmagan qidiruvchi uchun zaxira — boshqa sahifalarda bor edi,
+    // bosh sahifada yetishmasdi (`hreflangAlternates` bilan bir xil qoida).
+    "x-default": `${siteUrl}/uz`,
   };
 
   return {

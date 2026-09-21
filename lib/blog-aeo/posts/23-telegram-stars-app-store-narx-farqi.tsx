@@ -53,7 +53,7 @@ function UzBody() {
         maqolasida ko‘ring.
       </p>
 
-      <InlineCta text="App Store komissiyasiz — so‘mda, botda 10 soniyada." />
+      <InlineCta text="App Store komissiyasiz — so‘mda, botda 5 soniyada." />
 
       <h2 id="apple-soligi">«Apple solig‘i» qanday ishlaydi?</h2>
       <p>
@@ -149,7 +149,7 @@ function RuBody() {
         «Сравнение цен Stars».
       </p>
 
-      <InlineCta text="Без комиссии App Store — в сумах, в боте за 10 секунд." />
+      <InlineCta text="Без комиссии App Store — в сумах, в боте за 5 секунд." />
 
       <h2 id="apple-soligi">Как работает «налог Apple»?</h2>
       <p>
@@ -223,7 +223,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Komissiyasiz Stars olasizmi?",
-      ctaBody: "So‘mda, App Store komissiyasisiz — @StarsPaymee_bot orqali 10 soniyada.",
+      ctaBody: "So‘mda, App Store komissiyasisiz — @StarsPaymee_bot orqali 5 soniyada.",
       faq: [
         {
           question: "Nega iPhone’da Telegram Stars qimmatroq?",
@@ -263,7 +263,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите Stars без комиссии?",
-      ctaBody: "В сумах, без комиссии App Store — через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "В сумах, без комиссии App Store — через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Почему на iPhone Telegram Stars дороже?",

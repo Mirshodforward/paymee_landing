@@ -44,7 +44,7 @@ function UzBody() {
         <InfoCard emoji="🤝" title="Affiliate dasturi">Komissiyalar Stars ko‘rinishida to‘lanadi.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Ekotizimning markazidagi valyuta — Stars’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Ekotizimning markazidagi valyuta — Stars’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="apple-google">Apple/Google komissiyasidan qochish — asosiy sabab</h2>
       <p>
@@ -145,7 +145,7 @@ function RuBody() {
         <InfoCard emoji="🤝" title="Партнёрская программа">Комиссии выплачиваются в виде Stars.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Валюта в центре экосистемы — купите Stars в сумах, в боте за 10 секунд." />
+      <InlineCta text="Валюта в центре экосистемы — купите Stars в сумах, в боте за 5 секунд." />
 
       <h2 id="apple-google">Уход от комиссии Apple/Google — основная причина</h2>
       <p>
@@ -228,7 +228,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Ekotizim markazidagi valyutani sinaysizmi?",
-      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Nega Telegram deyarli barcha yangi funksiyani Stars orqali quryapti?",
@@ -263,7 +263,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать валюту в центре экосистемы?",
-      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Почему Telegram строит почти все новые функции через Stars?",

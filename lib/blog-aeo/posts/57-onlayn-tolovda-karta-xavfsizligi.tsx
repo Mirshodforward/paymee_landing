@@ -40,7 +40,7 @@ function UzBody() {
         ]}
       />
 
-      <InlineCta text="Xavfsiz to‘lov — Stars’ni ishonchli botda so‘mda 10 soniyada oling." />
+      <InlineCta text="Xavfsiz to‘lov — Stars’ni ishonchli botda so‘mda 5 soniyada oling." />
 
       <h2 id="otp">OTP va SMS-kod xavfsizligi qanday ishlaydi?</h2>
       <KeyFacts label="OTP qoidalari">
@@ -127,7 +127,7 @@ function RuBody() {
         ]}
       />
 
-      <InlineCta text="Безопасная оплата — купите Stars в надёжном боте, в сумах за 10 секунд." />
+      <InlineCta text="Безопасная оплата — купите Stars в надёжном боте, в сумах за 5 секунд." />
 
       <h2 id="otp">Как работает безопасность OTP и SMS-кода?</h2>
       <KeyFacts label="Правила OTP">
@@ -200,7 +200,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Xavfsiz to‘lov qilmoqchimisiz?",
-      ctaBody: "Stars’ni ishonchli botda so‘mda 10 soniyada oling.",
+      ctaBody: "Stars’ni ishonchli botda so‘mda 5 soniyada oling.",
       faq: [
         {
           question: "Onlayn to‘lovda kimdir OTP kodni so‘rasa nima qilish kerak?",
@@ -235,7 +235,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите безопасно оплатить?",
-      ctaBody: "Купите Stars в надёжном боте в сумах за 10 секунд.",
+      ctaBody: "Купите Stars в надёжном боте в сумах за 5 секунд.",
       faq: [
         {
           question: "Что делать, если кто-то просит OTP-код при онлайн-оплате?",

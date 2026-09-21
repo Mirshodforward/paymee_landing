@@ -55,7 +55,7 @@ function UzBody() {
         Telegram’ning NFT-ga o‘xshash raqamli kolleksiya yo‘nalishi.
       </p>
 
-      <InlineCta text="Sovg‘a yuborish uchun Stars kerakmi? Botda so‘mda 10 soniyada." />
+      <InlineCta text="Sovg‘a yuborish uchun Stars kerakmi? Botda so‘mda 5 soniyada." />
 
       <h2 id="qanday-topish">Rare (noyob) sovg‘alarni qanday topish mumkin?</h2>
       <KeyFacts label="Topish yo‘llari">
@@ -177,7 +177,7 @@ function RuBody() {
         Telegram, похожее на цифровые NFT-коллекции.
       </p>
 
-      <InlineCta text="Нужны Stars для подарка? В боте — в сумах за 10 секунд." />
+      <InlineCta text="Нужны Stars для подарка? В боте — в сумах за 5 секунд." />
 
       <h2 id="qanday-topish">Как найти редкие (rare) подарки?</h2>
       <KeyFacts label="Способы найти">
@@ -267,7 +267,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Sovg‘a uchun Stars kerakmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram Gifts kolleksiyasi nima?",
@@ -307,7 +307,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Нужны Stars для подарка?",
-      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Что такое коллекция Telegram Gifts?",

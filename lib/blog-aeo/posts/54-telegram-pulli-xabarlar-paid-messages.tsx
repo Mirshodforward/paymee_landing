@@ -47,7 +47,7 @@ function UzBody() {
         <Step title="Narxni tasdiqlang">Belgilangan Stars miqdori saqlanadi va darhol amal qila boshlaydi.</Step>
       </Steps>
 
-      <InlineCta text="Auditoriyangizga Stars kerak bo‘lsa — botda so‘mda 10 soniyada." />
+      <InlineCta text="Auditoriyangizga Stars kerak bo‘lsa — botda so‘mda 5 soniyada." />
 
       <h2 id="narx">Narxni qanday to‘g‘ri belgilash mumkin?</h2>
       <KeyFacts label="Narx strategiyasi">
@@ -143,7 +143,7 @@ function RuBody() {
         <Step title="Подтвердите цену">Установленная сумма Stars сохраняется и сразу начинает действовать.</Step>
       </Steps>
 
-      <InlineCta text="Вашей аудитории нужны Stars? В боте — в сумах за 10 секунд." />
+      <InlineCta text="Вашей аудитории нужны Stars? В боте — в сумах за 5 секунд." />
 
       <h2 id="narx">Как правильно установить цену?</h2>
       <KeyFacts label="Стратегия цены">
@@ -229,7 +229,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Auditoriyangizga Stars kerakmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada.",
       faq: [
         {
           question: "Paid Messages qayerdan yoqiladi?",
@@ -264,7 +264,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Вашей аудитории нужны Stars?",
-      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Где включить Paid Messages?",

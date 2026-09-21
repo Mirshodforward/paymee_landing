@@ -10,7 +10,7 @@ function UzAnswer() {
     <p>
       Telegram Stars API — Telegram Stars, Premium va Gifts mahsulotlarini avtomatik sotishga imkon beruvchi dasturiy
       interfeys. StarsPaymee Business orqali siz REST/JSON API kalitini olib, o‘z botingiz yoki veb-saytingizga
-      ulaysiz: buyurtma yaratiladi, to‘lov qabul qilinadi va Stars @username’ga o‘rtacha 10 soniyada avtomatik
+      ulaysiz: buyurtma yaratiladi, to‘lov qabul qilinadi va Stars @username’ga o‘rtacha 5 soniyada avtomatik
       yetkaziladi.
     </p>
   );
@@ -31,7 +31,7 @@ function UzBody() {
       <KeyFacts label="Asosiy faktlar">
         <li>Format — REST API, so‘rov va javob JSON ko‘rinishida.</li>
         <li>Mahsulotlar — Stars, Premium, Gifts, hamda Click va SBP (rubl) to‘lovlari.</li>
-        <li>Yetkazib berish — @username orqali, o‘rtacha 10 soniyada, parolsiz.</li>
+        <li>Yetkazib berish — @username orqali, o‘rtacha 5 soniyada, parolsiz.</li>
         <li>Webhook — buyurtma statusi o‘zgarganda sizning serveringizga xabar keladi.</li>
         <li>Sandbox — jonli pulsiz test qilish uchun sinov muhiti.</li>
       </KeyFacts>
@@ -107,7 +107,7 @@ function RuAnswer() {
     <p>
       Telegram Stars API — программный интерфейс для автоматической продажи Telegram Stars, Premium и Gifts. Через
       StarsPaymee Business вы получаете REST/JSON‑ключ и подключаете его к своему боту или сайту: заказ создаётся,
-      оплата принимается, а Stars доставляются на @username в среднем за 10 секунд автоматически.
+      оплата принимается, а Stars доставляются на @username в среднем за 5 секунд автоматически.
     </p>
   );
 }
@@ -126,7 +126,7 @@ function RuBody() {
       <KeyFacts label="Ключевые факты">
         <li>Формат — REST API, запрос и ответ в JSON.</li>
         <li>Товары — Stars, Premium, Gifts, а также оплата Click и SBP (рубли).</li>
-        <li>Доставка — по @username, в среднем за 10 секунд, без пароля.</li>
+        <li>Доставка — по @username, в среднем за 5 секунд, без пароля.</li>
         <li>Webhook — уведомление на ваш сервер при смене статуса заказа.</li>
         <li>Sandbox — тестовая среда без реальных денег.</li>
       </KeyFacts>
@@ -200,7 +200,7 @@ function EnAnswer() {
     <p>
       The Telegram Stars API is a programmatic interface for selling Telegram Stars, Premium and Gifts automatically.
       With StarsPaymee Business you get a REST/JSON key and connect it to your bot or website: an order is created,
-      payment is collected, and Stars are delivered to the @username automatically in about 10 seconds.
+      payment is collected, and Stars are delivered to the @username automatically in about 5 seconds.
     </p>
   );
 }
@@ -219,7 +219,7 @@ function EnBody() {
       <KeyFacts label="Key facts">
         <li>Format — REST API, requests and responses in JSON.</li>
         <li>Products — Stars, Premium, Gifts, plus Click and SBP (RUB) payments.</li>
-        <li>Delivery — by @username, in ~10 seconds, without a password.</li>
+        <li>Delivery — by @username, in ~5 seconds, without a password.</li>
         <li>Webhook — your server is notified when an order status changes.</li>
         <li>Sandbox — a test environment with no real money.</li>
       </KeyFacts>
@@ -300,7 +300,7 @@ const uzFaq = [
   { question: "Reseller bo‘lish mumkinmi?", answer: "Ha. O‘z narxingizni belgilab qayta sotasiz; hisob-kitob va yetkazib berish API tomonida avtomatlashtiriladi." },
   { question: "Support 24/7 ishlaydimi?", answer: "Ha. Integratsiya va operatsion savollar bo‘yicha qo‘llab-quvvatlash mavjud — @StarsPaymeeSupport." },
   { question: "API kaliti qanday himoyalanadi?", answer: "Kalit faqat server tomonida saqlanishi kerak; har bir so‘rov token bilan autentifikatsiya qilinadi. Kalitni mijoz brauzeriga qo‘ymang." },
-  { question: "Stars qanday yetkaziladi?", answer: "Buyurtmada ko‘rsatilgan @username’ga to‘g‘ridan-to‘g‘ri, o‘rtacha 10 soniyada, parol yoki SMS so‘ralmasdan." },
+  { question: "Stars qanday yetkaziladi?", answer: "Buyurtmada ko‘rsatilgan @username’ga to‘g‘ridan-to‘g‘ri, o‘rtacha 5 soniyada, parol yoki SMS so‘ralmasdan." },
   { question: "Premium ham API orqali beriladimi?", answer: "Ha. Premium’ni username orqali (3/6/12 oy) yoki login orqali API orqali sotishingiz mumkin." },
   { question: "Gifts (sovg‘a) API orqali yuboriladimi?", answer: "Ha. Katalogdan gift tanlab, qabul qiluvchi username bilan buyurtma yaratasiz." },
   { question: "Buyurtma bekor bo‘lsa nima bo‘ladi?", answer: "Texnik sabab bilan yetkazilmasa, buyurtma failed holatiga o‘tadi va hisob-kitob siyosatiga ko‘ra qaytariladi." },
@@ -330,7 +330,7 @@ const ruFaq = [
   { question: "Можно ли стать реселлером?", answer: "Да. Вы задаёте свою цену и перепродаёте; расчёты и доставка автоматизированы на стороне API." },
   { question: "Поддержка работает 24/7?", answer: "Да. По вопросам интеграции и эксплуатации есть поддержка — @StarsPaymeeSupport." },
   { question: "Как защищается API‑ключ?", answer: "Ключ должен храниться только на сервере; каждый запрос аутентифицируется токеном. Не размещайте ключ в браузере клиента." },
-  { question: "Как доставляются Stars?", answer: "Напрямую на @username из заказа, в среднем за 10 секунд, без пароля и SMS." },
+  { question: "Как доставляются Stars?", answer: "Напрямую на @username из заказа, в среднем за 5 секунд, без пароля и SMS." },
   { question: "Premium тоже через API?", answer: "Да. Premium можно продавать по username (3/6/12 мес) или через логин по API." },
   { question: "Gifts отправляются через API?", answer: "Да. Выбираете подарок из каталога и создаёте заказ с username получателя." },
   { question: "Что если заказ не выполнен?", answer: "При невозможности доставки по техпричине заказ переходит в failed и возвращается согласно политике расчётов." },
@@ -360,7 +360,7 @@ const enFaq = [
   { question: "Can I become a reseller?", answer: "Yes. You set your own price and resell; settlement and delivery are automated on the API side." },
   { question: "Is support 24/7?", answer: "Yes. There is support for integration and operational questions — @StarsPaymeeSupport." },
   { question: "How is the API key protected?", answer: "The key must be kept server‑side only; each request is authenticated with a token. Never put the key in the client browser." },
-  { question: "How are Stars delivered?", answer: "Directly to the @username from the order, in ~10 seconds, without a password or SMS." },
+  { question: "How are Stars delivered?", answer: "Directly to the @username from the order, in ~5 seconds, without a password or SMS." },
   { question: "Is Premium also via API?", answer: "Yes. Premium can be sold by username (3/6/12 months) or via login through the API." },
   { question: "Are Gifts sent via API?", answer: "Yes. You pick a gift from the catalog and create an order with the recipient's username." },
   { question: "What if an order fails?", answer: "If delivery is impossible for a technical reason, the order becomes failed and is refunded per the settlement policy." },

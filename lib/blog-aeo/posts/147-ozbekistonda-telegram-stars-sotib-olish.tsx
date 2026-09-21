@@ -45,7 +45,7 @@ function UzBody() {
             <>@StarsPaymee_bot / Mini App</>,
             "UzCard, HUMO, Click, Payme, Uzum",
             <Yes key="4" />,
-            "~10 soniya, avtomatik",
+            "~5 soniya, avtomatik",
           ],
         ]}
       />
@@ -127,7 +127,7 @@ function UzBody() {
         yozilsa, yulduzlar o‘shanga tushadi.
       </p>
       <p>
-        To‘lov tasdiqlangach buyurtma avtomatik bajariladi va yulduzlar o‘rtacha <b>10 soniyada</b> hisobda ko‘rinadi.
+        To‘lov tasdiqlangach buyurtma avtomatik bajariladi va yulduzlar o‘rtacha <b>5 soniyada</b> hisobda ko‘rinadi.
         Butun jarayon — botni ochishdan yulduz tushgunicha — odatda besh daqiqadan oshmaydi. Kechikish bo‘lsa, sabab
         deyarli har doim to‘lov tomonida bo‘ladi: karta limiti, 3-D Secure tasdig‘ining kechikishi yoki bankning
         vaqtinchalik bloki. Bunday holatda statusni yangilab, buyurtmani qaytadan boshlash kifoya.
@@ -214,7 +214,7 @@ function RuBody() {
             <>@StarsPaymee_bot / Mini App</>,
             "UzCard, HUMO, Click, Payme, Uzum",
             <Yes key="4" />,
-            "~10 секунд, автоматически",
+            "~5 секунд, автоматически",
           ],
         ]}
       />
@@ -297,7 +297,7 @@ function RuBody() {
       </p>
       <p>
         После подтверждения оплаты заказ выполняется автоматически, и звёзды видны на балансе в среднем за{" "}
-        <b>10 секунд</b>. Весь путь — от открытия бота до зачисления — обычно занимает не больше пяти минут. Если
+        <b>5 секунд</b>. Весь путь — от открытия бота до зачисления — обычно занимает не больше пяти минут. Если
         есть задержка, причина почти всегда на стороне оплаты: лимит карты, задержка подтверждения 3-D Secure или
         временная блокировка банка. В этом случае достаточно обновить статус и оформить заказ заново.
       </p>
@@ -383,7 +383,7 @@ function EnBody() {
             <>@StarsPaymee_bot / Mini App</>,
             "UzCard, HUMO, Click, Payme, Uzum",
             <Yes key="4" />,
-            "~10 seconds, automatic",
+            "~5 seconds, automatic",
           ],
         ]}
       />
@@ -465,7 +465,7 @@ function EnBody() {
       </p>
       <p>
         Once payment is confirmed the order runs automatically and the Stars show up on the balance in about{" "}
-        <b>10 seconds</b>. The whole path — from opening the bot to the Stars landing — normally takes under five
+        <b>5 seconds</b>. The whole path — from opening the bot to the Stars landing — normally takes under five
         minutes. When there is a delay, the cause is almost always on the payment side: a card limit, a slow 3-D
         Secure confirmation, or a temporary block from the bank. Refreshing the status and starting the order again
         is enough.
@@ -699,7 +699,7 @@ export const post: AeoPost = {
         "Telegram Stars (yulduz) sotib olishning barcha yo‘llari: nega rasmiy oqim ishlamaydi, qaysi to‘lov usullari qabul qilinadi, narxlar, username orqali yetkazish va xariddan oldingi tekshiruv.",
       metaTitle: "Telegram Stars sotib olish — O‘zbekiston qo‘llanmasi",
       metaDescription:
-        "O‘zbekistonda Telegram Stars sotib olish: barcha yo‘llar taqqoslandi, UzCard/HUMO/Click/Payme bilan so‘mda to‘lov, narxlar va username orqali 10 soniyada yetkazish.",
+        "O‘zbekistonda Telegram Stars sotib olish: barcha yo‘llar taqqoslandi, UzCard/HUMO/Click/Payme bilan so‘mda to‘lov, narxlar va username orqali 5 soniyada yetkazish.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -713,7 +713,7 @@ export const post: AeoPost = {
         "Все способы купить Telegram Stars: почему не работает официальный путь, какие способы оплаты принимаются, цены, доставка по username и проверка перед покупкой.",
       metaTitle: "Как купить Telegram Stars в Узбекистане",
       metaDescription:
-        "Покупка Telegram Stars в Узбекистане: сравнение всех способов, оплата в сумах через UzCard/HUMO/Click/Payme, цены и доставка по username за 10 секунд.",
+        "Покупка Telegram Stars в Узбекистане: сравнение всех способов, оплата в сумах через UzCard/HUMO/Click/Payme, цены и доставка по username за 5 секунд.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -727,7 +727,7 @@ export const post: AeoPost = {
         "Every way to buy Telegram Stars: why the official route fails, which payment methods are accepted, prices, delivery by username and a pre-purchase checklist.",
       metaTitle: "How to buy Telegram Stars in Uzbekistan",
       metaDescription:
-        "Buying Telegram Stars in Uzbekistan: all routes compared, payment in so‘m via UzCard/HUMO/Click/Payme, prices and delivery by username in 10 seconds.",
+        "Buying Telegram Stars in Uzbekistan: all routes compared, payment in so‘m via UzCard/HUMO/Click/Payme, prices and delivery by username in 5 seconds.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

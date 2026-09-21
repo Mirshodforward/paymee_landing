@@ -57,7 +57,7 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Telegram Business funksiyalari — Premium orqali. So‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Telegram Business funksiyalari — Premium orqali. So‘mda, botda 5 soniyada oling." />
 
       <h2 id="premium">Telegram Business va Premium qanday bog‘lanadi?</h2>
       <CompareTable
@@ -157,7 +157,7 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Функции Telegram Business — через Premium. Купите в сумах, в боте за 10 секунд." />
+      <InlineCta text="Функции Telegram Business — через Premium. Купите в сумах, в боте за 5 секунд." />
 
       <h2 id="premium">Как связаны Telegram Business и Premium?</h2>
       <CompareTable
@@ -230,7 +230,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Biznesingiz uchun sinaysizmi?",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram Business alohida obunami?",
@@ -265,7 +265,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать для своего бизнеса?",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Telegram Business — это отдельная подписка?",

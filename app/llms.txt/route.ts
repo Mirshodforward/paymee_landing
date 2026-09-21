@@ -41,7 +41,7 @@ export async function GET(): Promise<Response> {
 
   const body = `# ${siteConfig.name}
 
-> ${siteConfig.name} — O'zbekistonda Telegram Stars, Premium, Gifts, virtual raqam, NFT Gift Market, kanal Boost ijarasi va Steam Wallet balansini to'ldirish (so'mda to'lov). Buyurtma: @StarsPaymee_bot va Mini App, ~10 soniyada avtomatik yetkazish. Steam balansi UzCard/HUMO/Click/Payme orqali UZS da to'ldiriladi — Steam paroli so'ralmaydi.
+> ${siteConfig.name} — O'zbekistonda Telegram Stars, Premium, Gifts, virtual raqam, NFT Gift Market, kanal Boost ijarasi va Steam Wallet balansini to'ldirish (so'mda to'lov). Buyurtma: @StarsPaymee_bot va Mini App, ~5 soniyada avtomatik yetkazish. Steam balansi UzCard/HUMO/Click/Payme orqali UZS da to'ldiriladi — Steam paroli so'ralmaydi.
 
 ## Machine discovery (AI & qidiruv)
 

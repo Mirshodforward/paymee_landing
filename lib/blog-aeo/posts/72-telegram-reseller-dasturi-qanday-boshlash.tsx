@@ -71,7 +71,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Amalda to‘rtta narsa farq qiladi: nishani aniq tanlash (kanal egalari, geymerlar yoki oddiy
-        foydalanuvchilar), yetkazish tezligi — 10 soniyalik yetkazish takroriy xaridni oshiradi, shaffof narx va
+        foydalanuvchilar), yetkazish tezligi — 5 soniyalik yetkazish takroriy xaridni oshiradi, shaffof narx va
         oferta, hamda raqamlarni kuzatib narxni tuzatib borish. Xarajat tomonini ham hisobga oling: qaytarishlar,
         support vaqti va reklama.
       </p>

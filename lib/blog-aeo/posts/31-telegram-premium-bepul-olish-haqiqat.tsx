@@ -55,7 +55,7 @@ function UzBody() {
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Premium arziydimi»</Link> maqolasida ko‘ring.
       </p>
 
-      <InlineCta text="Vaqtingizni tejang — Premium’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Vaqtingizni tejang — Premium’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="giveaway">Rasmiy Boost giveaway qanday ishlaydi?</h2>
       <p>
@@ -167,7 +167,7 @@ function RuBody() {
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Стоит ли Premium»</Link>.
       </p>
 
-      <InlineCta text="Не тратьте время — купите Premium в сумах, в боте за 10 секунд." />
+      <InlineCta text="Не тратьте время — купите Premium в сумах, в боте за 5 секунд." />
 
       <h2 id="giveaway">Как работает официальный Boost-giveaway?</h2>
       <p>
@@ -279,7 +279,7 @@ function EnBody() {
         <Link href="/blog/telegram-premium-arziydimi-foydalari">“Is Telegram Premium worth it”</Link>.
       </p>
 
-      <InlineCta text="Save the time — get Premium in so‘m through the bot in about 10 seconds." />
+      <InlineCta text="Save the time — get Premium in so‘m through the bot in about 5 seconds." />
 
       <h2 id="giveaway">How does an official Boost giveaway work?</h2>
       <p>
@@ -370,7 +370,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Premium’ni hoziroq olasizmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada.",
       faq: [
         {
           question: "Telegram Premium’ni rasman bepul beradimi?",
@@ -409,7 +409,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите Premium прямо сейчас?",
-      ctaBody: "В сумах, локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "В сумах, локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Раздаёт ли Telegram Premium официально бесплатно?",
@@ -446,7 +446,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Want Premium right now?",
-      ctaBody: "In so\u2018m, with a local card, through @StarsPaymee_bot in about 10 seconds.",
+      ctaBody: "In so\u2018m, with a local card, through @StarsPaymee_bot in about 5 seconds.",
       faq: [
         {
           question: "Does Telegram give Premium away for free officially?",

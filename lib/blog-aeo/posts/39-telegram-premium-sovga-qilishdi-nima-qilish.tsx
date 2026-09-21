@@ -48,7 +48,7 @@ function UzBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="O‘zingiz ham do‘stingizga Premium sovg‘a qilmoqchimisiz? So‘mda, botda 10 soniyada." />
+      <InlineCta text="O‘zingiz ham do‘stingizga Premium sovg‘a qilmoqchimisiz? So‘mda, botda 5 soniyada." />
 
       <h2 id="tekshirish">Muddatni qanday tekshirish mumkin?</h2>
       <KeyFacts label="Tekshirish yo‘li">
@@ -137,7 +137,7 @@ function RuBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Тоже хотите подарить Premium другу? В сумах, в боте за 10 секунд." />
+      <InlineCta text="Тоже хотите подарить Premium другу? В сумах, в боте за 5 секунд." />
 
       <h2 id="tekshirish">Как проверить срок действия?</h2>
       <KeyFacts label="Способ проверки">
@@ -204,7 +204,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "O‘zingiz ham sovg‘a qilmoqchimisiz?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada.",
       faq: [
         {
           question: "Premium sovg‘a qilinganda qanday xabar keladi?",
@@ -239,7 +239,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Сами хотите подарить Premium?",
-      ctaBody: "В сумах, локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "В сумах, локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Какое сообщение приходит при подарке Premium?",

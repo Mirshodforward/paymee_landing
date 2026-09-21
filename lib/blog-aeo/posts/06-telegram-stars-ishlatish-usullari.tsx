@@ -45,7 +45,7 @@ function UzBody() {
         <InfoCard emoji="🎂" title="20. Bayram tabriklari">Tug‘ilgan kun va bayramlarda sovg‘a + izoh.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Yulduz kerakmi? Botda so‘mda 10 soniyada oling." />
+      <InlineCta text="Yulduz kerakmi? Botda so‘mda 5 soniyada oling." />
 
       <h2 id="qancha">Qancha Stars kerak bo‘ladi?</h2>
       <p>
@@ -133,7 +133,7 @@ function RuBody() {
         <InfoCard emoji="🎂" title="20. Праздничные поздравления">Подарок с комментарием на дни рождения и праздники.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Нужны звёзды? В боте — в сумах за 10 секунд." />
+      <InlineCta text="Нужны звёзды? В боте — в сумах за 5 секунд." />
 
       <h2 id="qoidalar">Правила, которые надо знать</h2>
       <ul>
@@ -192,7 +192,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yulduzlarni ishga soling",
-      ctaBody: "Kerakli miqdorni botda so‘mda oling — sovg‘a, Premium yoki to‘lovlar uchun 10 soniyada tayyor.",
+      ctaBody: "Kerakli miqdorni botda so‘mda oling — sovg‘a, Premium yoki to‘lovlar uchun 5 soniyada tayyor.",
       faq: [
         {
           question: "Telegram Stars bilan eng ko‘p nima qilinadi?",
@@ -231,7 +231,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Запустите звёзды в дело",
-      ctaBody: "Возьмите нужное количество в боте в сумах — для подарков, Premium или оплат готово за 10 секунд.",
+      ctaBody: "Возьмите нужное количество в боте в сумах — для подарков, Premium или оплат готово за 5 секунд.",
       faq: [
         {
           question: "Для чего чаще всего используют Telegram Stars?",

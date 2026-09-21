@@ -42,7 +42,7 @@ function UzBody() {
         <InfoCard emoji="⭐" title="Premium sovg'a">Do‘stiga Premium obuna hadya qilish uchun.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Nazorat ostida, kichik miqdorda sinab ko‘ring — botda so‘mda 10 soniyada." />
+      <InlineCta text="Nazorat ostida, kichik miqdorda sinab ko‘ring — botda so‘mda 5 soniyada." />
 
       <h2 id="xavfsiz">Xavfsiz xarid qilish uchun nima qilish kerak?</h2>
       <KeyFacts label="Ota-ona uchun tavsiyalar">
@@ -134,7 +134,7 @@ function RuBody() {
         <InfoCard emoji="⭐" title="Подарок Premium">Для дарения подписки Premium другу.</InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Попробуйте под контролем, с небольшой суммы — в боте, в сумах за 10 секунд." />
+      <InlineCta text="Попробуйте под контролем, с небольшой суммы — в боте, в сумах за 5 секунд." />
 
       <h2 id="xavfsiz">Что нужно для безопасной покупки?</h2>
       <KeyFacts label="Рекомендации для родителей">
@@ -212,7 +212,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Nazorat ostida sinab ko‘rasizmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram Stars bolalar uchun xavfsizmi?",
@@ -247,7 +247,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать под контролем?",
-      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Безопасны ли Telegram Stars для детей?",

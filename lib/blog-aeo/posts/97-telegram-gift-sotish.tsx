@@ -313,7 +313,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yangi sovg‘a uchun yulduz kerakmi?",
-      ctaBody: "@StarsPaymee_bot — Stars so‘mda, 10 soniyada; sovg‘ani o‘zingiz collectible’ga ko‘tarasiz.",
+      ctaBody: "@StarsPaymee_bot — Stars so‘mda, 5 soniyada; sovg‘ani o‘zingiz collectible’ga ko‘tarasiz.",
       faq: faqUz,
     },
     ru: {
@@ -327,7 +327,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Нужны звёзды для нового подарка?",
-      ctaBody: "@StarsPaymee_bot — Stars в сумах за 10 секунд; поднять подарок до collectible вы сможете сами.",
+      ctaBody: "@StarsPaymee_bot — Stars в сумах за 5 секунд; поднять подарок до collectible вы сможете сами.",
       faq: faqRu,
     },
     en: {
@@ -340,7 +340,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Need Stars for a new gift?",
-      ctaBody: "@StarsPaymee_bot — Stars in so‘m in 10 seconds; you upgrade the gift to collectible yourself.",
+      ctaBody: "@StarsPaymee_bot — Stars in so‘m in 5 seconds; you upgrade the gift to collectible yourself.",
       faq: faqEn,
     },
   },

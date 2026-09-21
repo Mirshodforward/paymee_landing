@@ -45,7 +45,7 @@ function UzBody() {
         ]}
       />
 
-      <InlineCta text="Qurilmangizdan qat’i nazar — Premium’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Qurilmangizdan qat’i nazar — Premium’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="web">Telegram Web orqali qanday sotib olinadi?</h2>
       <KeyFacts label="Amaliy qadamlar">
@@ -133,7 +133,7 @@ function RuBody() {
         ]}
       />
 
-      <InlineCta text="Независимо от устройства — купите Premium в сумах, в боте за 10 секунд." />
+      <InlineCta text="Независимо от устройства — купите Premium в сумах, в боте за 5 секунд." />
 
       <h2 id="web">Как купить через Telegram Web?</h2>
       <KeyFacts label="Практические шаги">
@@ -204,7 +204,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Qaysi qurilmadan olsangiz ham qulay",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram Desktop’dan to‘g‘ridan-to‘g‘ri Premium sotib olsa bo‘ladimi?",
@@ -239,7 +239,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Удобно с любого устройства",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Можно ли купить Premium напрямую из Telegram Desktop?",

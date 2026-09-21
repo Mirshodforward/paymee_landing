@@ -56,7 +56,7 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Bu funksiyalarning barchasi bitta obunada — so‘mda, botda 10 soniyada." />
+      <InlineCta text="Bu funksiyalarning barchasi bitta obunada — so‘mda, botda 5 soniyada." />
 
       <h2 id="chuqur">Ba’zilari haqida chuqurroq</h2>
       <p>
@@ -140,7 +140,7 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Все эти функции в одной подписке — в сумах, в боте за 10 секунд." />
+      <InlineCta text="Все эти функции в одной подписке — в сумах, в боте за 5 секунд." />
 
       <h2 id="chuqur">Подробнее о некоторых из них</h2>
       <p>
@@ -196,7 +196,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Barcha funksiyalarni sinaysizmi?",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram Premium’ning eng foydali yashirin funksiyasi qaysi?",
@@ -231,7 +231,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать все функции?",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Какая скрытая функция Telegram Premium самая полезная?",

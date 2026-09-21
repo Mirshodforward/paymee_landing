@@ -50,7 +50,7 @@ function UzBody() {
         <strong>ishlab topilgan</strong> Stars pulga chiqariladi.
       </p>
 
-      <InlineCta text="Kontentingiz uchun Stars kerakmi? Botda so‘mda 10 soniyada." />
+      <InlineCta text="Kontentingiz uchun Stars kerakmi? Botda so‘mda 5 soniyada." />
 
       <h2 id="kimlar">Kim Stars orqali daromad qila oladi?</h2>
       <KeyFacts label="Daromad qila oladiganlar">
@@ -187,7 +187,7 @@ function RuBody() {
         <strong>заработанные</strong> на монетизации.
       </p>
 
-      <InlineCta text="Для вашего контента нужны Stars? В боте — в сумах за 10 секунд." />
+      <InlineCta text="Для вашего контента нужны Stars? В боте — в сумах за 5 секунд." />
 
       <h2 id="kimlar">Кто может зарабатывать на Stars?</h2>
       <KeyFacts label="Кто может зарабатывать">
@@ -291,7 +291,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Kontentingiz uchun Stars kerakmi?",
-      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "So‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram Stars orqali qanchalik daromad qilsa bo‘ladi?",
@@ -331,7 +331,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Для вашего контента нужны Stars?",
-      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Сколько можно заработать на Telegram Stars?",

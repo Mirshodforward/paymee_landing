@@ -43,7 +43,7 @@ function UzBody() {
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Premium arziydimi»</Link> maqolasida ko‘ring.
       </p>
 
-      <InlineCta text="4 GB limitidan foydalanmoqchimisiz? Premium’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="4 GB limitidan foydalanmoqchimisiz? Premium’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="qanday">Katta faylni qanday yuborish mumkin?</h2>
       <KeyFacts label="Amaliy qadamlar">
@@ -138,7 +138,7 @@ function RuBody() {
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Стоит ли Premium»</Link>.
       </p>
 
-      <InlineCta text="Хотите использовать лимит 4 ГБ? Купите Premium в сумах, в боте за 10 секунд." />
+      <InlineCta text="Хотите использовать лимит 4 ГБ? Купите Premium в сумах, в боте за 5 секунд." />
 
       <h2 id="qanday">Как отправить большой файл?</h2>
       <KeyFacts label="Практические шаги">
@@ -214,7 +214,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Katta fayl yubormoqchimisiz?",
-      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Premium’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Telegram’da oddiy foydalanuvchi qancha hajmdagi fayl yubora oladi?",
@@ -249,7 +249,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите отправить большой файл?",
-      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Premium в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Какой размер файла может отправить обычный пользователь в Telegram?",

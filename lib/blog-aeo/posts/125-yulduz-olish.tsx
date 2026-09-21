@@ -10,7 +10,7 @@ function UzAnswer() {
   return (
     <p>
       Yulduz olish — to‘rt qadam: <b>@StarsPaymee_bot</b> ga o‘tish, miqdorni tanlash, username kiritish va so‘mda
-      to‘lash. Narx — <b>220 so‘m</b> dan bir dona, 50 ta — <b>11 000 so‘m</b>. Yulduzlar ~10 soniyada hisobingizga
+      to‘lash. Narx — <b>220 so‘m</b> dan bir dona, 50 ta — <b>11 000 so‘m</b>. Yulduzlar ~5 soniyada hisobingizga
       tushadi, parol so‘ralmaydi.
     </p>
   );
@@ -69,7 +69,7 @@ function RuAnswer() {
   return (
     <p>
       Покупка звёзд — четыре шага: открыть <b>@StarsPaymee_bot</b>, выбрать количество, указать username и оплатить в
-      сумах. Цена — от <b>220 сум</b> за штуку, 50 штук — <b>11 000 сум</b>. Звёзды поступают за ~10 секунд, пароль не
+      сумах. Цена — от <b>220 сум</b> за штуку, 50 штук — <b>11 000 сум</b>. Звёзды поступают за ~5 секунд, пароль не
       запрашивается.
     </p>
   );
@@ -128,7 +128,7 @@ function EnAnswer() {
   return (
     <p>
       Getting Stars takes four steps: open <b>@StarsPaymee_bot</b>, choose an amount, enter a username and pay in
-      so‘m. The price starts at <b>220 UZS</b> each; fifty cost <b>11,000 UZS</b>. Stars arrive in about 10 seconds
+      so‘m. The price starts at <b>220 UZS</b> each; fifty cost <b>11,000 UZS</b>. Stars arrive in about 5 seconds
       and no password is requested.
     </p>
   );
@@ -185,7 +185,7 @@ function EnBody() {
 const uzFaq = [
   { question: "Yulduz olish uchun nima kerak?", answer: "Telegram hisobi, username va mahalliy to‘lov usuli (UzCard, HUMO, Click, Payme yoki Paynet)." },
   { question: "Narxi qancha?", answer: "1 dona — 220 so‘m, 50 ta — 11 000 so‘m." },
-  { question: "Qancha vaqt oladi?", answer: "Odatda ~10 soniya — jarayon avtomatik." },
+  { question: "Qancha vaqt oladi?", answer: "Odatda ~5 soniya — jarayon avtomatik." },
   { question: "Parol so‘raladimi?", answer: "Yo‘q, hech qachon. Faqat username yoki ID." },
   { question: "Username’ni xato yozsam nima bo‘ladi?", answer: "Yulduzlar o‘sha hisobga tushadi, shuning uchun to‘lovdan oldin tekshiring." },
   { question: "Sovg‘a qilish mumkinmi?", answer: "Ha, buyurtmada oluvchining username’ini ko‘rsating." },
@@ -198,7 +198,7 @@ const uzFaq = [
 const ruFaq = [
   { question: "Что нужно для покупки звёзд?", answer: "Аккаунт Telegram, username и местный способ оплаты (UzCard, HUMO, Click, Payme или Paynet)." },
   { question: "Сколько это стоит?", answer: "1 штука — 220 сум, 50 штук — 11 000 сум." },
-  { question: "Сколько времени занимает?", answer: "Обычно ~10 секунд — процесс автоматический." },
+  { question: "Сколько времени занимает?", answer: "Обычно ~5 секунд — процесс автоматический." },
   { question: "Спрашивают ли пароль?", answer: "Нет, никогда. Только username или ID." },
   { question: "Что если ошибиться в username?", answer: "Звёзды поступят на указанный аккаунт, поэтому проверяйте до оплаты." },
   { question: "Можно ли подарить?", answer: "Да, укажите в заказе username получателя." },
@@ -211,7 +211,7 @@ const ruFaq = [
 const enFaq = [
   { question: "What do I need to get Stars?", answer: "A Telegram account, a username and a local payment method (UzCard, HUMO, Click, Payme or Paynet)." },
   { question: "How much does it cost?", answer: "220 UZS each; 11,000 UZS for fifty." },
-  { question: "How long does it take?", answer: "Usually about 10 seconds — the process is automatic." },
+  { question: "How long does it take?", answer: "Usually about 5 seconds — the process is automatic." },
   { question: "Will I be asked for a password?", answer: "No, never. Only a username or ID." },
   { question: "What if I mistype the username?", answer: "Stars go to the account you entered, so check it before paying." },
   { question: "Can I send them as a gift?", answer: "Yes — give the recipient’s username when ordering." },
@@ -253,7 +253,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yulduz olishni boshlang",
-      ctaBody: "@StarsPaymee_bot — 4 qadam, so‘mda to‘lov, ~10 soniyada yetkazish.",
+      ctaBody: "@StarsPaymee_bot — 4 qadam, so‘mda to‘lov, ~5 soniyada yetkazish.",
       faq: uzFaq,
     },
     ru: {
@@ -267,7 +267,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Начните покупку звёзд",
-      ctaBody: "@StarsPaymee_bot — 4 шага, оплата в сумах, доставка за ~10 секунд.",
+      ctaBody: "@StarsPaymee_bot — 4 шага, оплата в сумах, доставка за ~5 секунд.",
       faq: ruFaq,
     },
     en: {
@@ -281,7 +281,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Start getting Stars",
-      ctaBody: "@StarsPaymee_bot — four steps, payment in so‘m, delivery in about 10 seconds.",
+      ctaBody: "@StarsPaymee_bot — four steps, payment in so‘m, delivery in about 5 seconds.",
       faq: enFaq,
     },
   },

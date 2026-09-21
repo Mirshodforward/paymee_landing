@@ -216,7 +216,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Stars’ni sinab ko‘rasizmi?",
-      ctaBody: "Botda so‘mda oling — yulduzlar 10 soniyada akkauntingizga tushadi.",
+      ctaBody: "Botda so‘mda oling — yulduzlar 5 soniyada akkauntingizga tushadi.",
       faq: [
         {
           question: "Telegram Stars — bu pulmi?",
@@ -259,7 +259,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите попробовать Stars?",
-      ctaBody: "Купите в боте в сумах — звёзды поступят на аккаунт за 10 секунд.",
+      ctaBody: "Купите в боте в сумах — звёзды поступят на аккаунт за 5 секунд.",
       faq: [
         {
           question: "Telegram Stars — это деньги?",

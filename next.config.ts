@@ -28,6 +28,18 @@ const nextConfig: NextConfig = {
    */
   async redirects() {
     return [
+      /**
+       * Apex → www, 308 (doimiy). Vercel domen sozlamasi bu redirectni
+       * chekkada o'zi qiladi va odatda 307 beradi — dashboard'da 308 ga
+       * o'tkazilsa yoki apex ham loyihaga to'g'ridan-to'g'ri ulansa, shu
+       * qoida ishlaydi va kod Vercel sozlamasiga bog'liq bo'lmay qoladi.
+       */
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "starstg.uz" }],
+        destination: "https://www.starstg.uz/:path*",
+        permanent: true,
+      },
       ...routing.locales.flatMap((locale) =>
         blogRedirects.map(({ from, to }) => ({
           source: `/${locale}/blog/${from}`,

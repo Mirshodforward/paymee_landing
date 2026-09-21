@@ -50,7 +50,7 @@ function UzBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Yangi obuna kerakmi? So‘mda, botda 10 soniyada — avtoto‘lovsiz variant ham bor." />
+      <InlineCta text="Yangi obuna kerakmi? So‘mda, botda 5 soniyada — avtoto‘lovsiz variant ham bor." />
 
       <h2 id="appstore">App Store yoki Google Play orqali olingan bo‘lsa</h2>
       <KeyFacts label="Qayerdan bekor qilinadi">
@@ -147,7 +147,7 @@ function RuBody() {
         </Step>
       </Steps>
 
-      <InlineCta text="Нужна новая подписка? В сумах, в боте за 10 секунд — есть вариант без автосписания." />
+      <InlineCta text="Нужна новая подписка? В сумах, в боте за 5 секунд — есть вариант без автосписания." />
 
       <h2 id="appstore">Если куплено через App Store или Google Play</h2>
       <KeyFacts label="Где отменять">

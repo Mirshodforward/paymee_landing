@@ -23,7 +23,7 @@ export const STARS_PACKS: StarsPack[] = STARS_PACK_AMOUNTS.map((amount) => ({
 
 /**
  * Telegram Premium — «username bilan» oqimi: akkauntga kirish shart emas,
- * faqat username yetarli, 10 soniyada avtomatik faollashadi.
+ * faqat username yetarli, 5 soniyada avtomatik faollashadi.
  */
 export type PremiumPlan = { months: 1 | 3 | 6 | 12; priceUzs: number; popular?: boolean };
 
@@ -51,10 +51,10 @@ export const PREMIUM_LOGIN_PLANS: PremiumLoginPlan[] = [];
 
 /** Marketing statistikasi (hero / stats band). */
 export const STATS = {
-  deliverySeconds: 10,
+  deliverySeconds: 5,
   activeUsers: 4000,
   orders: 100_000,
-  yearsInService: 1,
+  yearsInService: 1.5,
 } as const;
 
 /**

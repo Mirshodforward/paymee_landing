@@ -31,8 +31,11 @@ export function V2Effects() {
     qa(".cnt").forEach((el) => {
       const node = el as HTMLElement;
       const t = +(node.dataset.target ?? "0");
-      node.textContent =
-        t.toLocaleString("en-US").replace(/,/g, " ") + (node.dataset.suffix ?? "");
+      // `lib/live-stats.ts` dagi `formatStatNumber` bilan bir xil qoida,
+      // aks holda JS yuklangach raqam «sakrab» ketardi.
+      let txt = t.toLocaleString("en-US").replace(/,/g, " ");
+      if ((document.documentElement.lang || "uz") !== "en") txt = txt.replace(".", ",");
+      node.textContent = txt + (node.dataset.suffix ?? "");
     });
 
     const ringBar = q<SVGCircleElement>("[data-v2-ring-bar]");

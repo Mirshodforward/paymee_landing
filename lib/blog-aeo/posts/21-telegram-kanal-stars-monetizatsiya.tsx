@@ -60,7 +60,7 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Obunachilaringizga Stars kerak bo‘lsa — botda so‘mda 10 soniyada oladi." />
+      <InlineCta text="Obunachilaringizga Stars kerak bo‘lsa — botda so‘mda 5 soniyada oladi." />
 
       <h2 id="bosqichlar">Kanal monetizatsiyasini bosqichma-bosqich yoqish</h2>
       <Steps>
@@ -209,7 +209,7 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <InlineCta text="Если подписчикам нужны Stars — в боте купят в сумах за 10 секунд." />
+      <InlineCta text="Если подписчикам нужны Stars — в боте купят в сумах за 5 секунд." />
 
       <h2 id="bosqichlar">Пошаговое включение монетизации канала</h2>
       <Steps>
@@ -319,7 +319,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Auditoriyangizga Stars kerakmi?",
-      ctaBody: "Obunachilaringiz @StarsPaymee_bot orqali so‘mda, mahalliy karta bilan 10 soniyada Stars oladi.",
+      ctaBody: "Obunachilaringiz @StarsPaymee_bot orqali so‘mda, mahalliy karta bilan 5 soniyada Stars oladi.",
       faq: [
         {
           question: "Telegram kanalni monetizatsiya qilish uchun nechta obunachi kerak?",
@@ -359,7 +359,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Вашей аудитории нужны Stars?",
-      ctaBody: "Подписчики покупают Stars через @StarsPaymee_bot в сумах локальной картой за 10 секунд.",
+      ctaBody: "Подписчики покупают Stars через @StarsPaymee_bot в сумах локальной картой за 5 секунд.",
       faq: [
         {
           question: "Сколько подписчиков нужно для монетизации Telegram-канала?",

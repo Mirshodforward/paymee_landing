@@ -46,7 +46,7 @@ function UzBody() {
         <Step title="Tasdiqlang">Konvertatsiyani tasdiqlagach, Stars balansingizga qo‘shiladi.</Step>
       </Steps>
 
-      <InlineCta text="Yangi sovg‘a yubormoqchimisiz? Stars’ni so‘mda, botda 10 soniyada oling." />
+      <InlineCta text="Yangi sovg‘a yubormoqchimisiz? Stars’ni so‘mda, botda 5 soniyada oling." />
 
       <h2 id="qancha">Konvertatsiyada qancha Stars qaytadi?</h2>
       <KeyFacts label="Muhim jihatlar">
@@ -131,7 +131,7 @@ function RuBody() {
         <Step title="Подтвердите">После подтверждения Stars будут зачислены на ваш баланс.</Step>
       </Steps>
 
-      <InlineCta text="Хотите отправить новый подарок? Купите Stars в сумах, в боте за 10 секунд." />
+      <InlineCta text="Хотите отправить новый подарок? Купите Stars в сумах, в боте за 5 секунд." />
 
       <h2 id="qancha">Сколько Stars возвращается при конвертации?</h2>
       <KeyFacts label="Важные моменты">
@@ -205,7 +205,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yangi sovg‘a yubormoqchimisiz?",
-      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 10 soniyada oling.",
+      ctaBody: "Stars’ni so‘mda, mahalliy karta bilan @StarsPaymee_bot orqali 5 soniyada oling.",
       faq: [
         {
           question: "Har qanday sovg‘ani Stars’ga qaytarib bo‘ladimi?",
@@ -240,7 +240,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите отправить новый подарок?",
-      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 10 секунд.",
+      ctaBody: "Купите Stars в сумах локальной картой через @StarsPaymee_bot за 5 секунд.",
       faq: [
         {
           question: "Можно ли конвертировать любой подарок в Stars?",

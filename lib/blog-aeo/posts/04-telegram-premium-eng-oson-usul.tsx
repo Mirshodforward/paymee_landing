@@ -25,7 +25,7 @@ function FlowCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Akkauntga kirish", "no", "Rasmiy login"],
         ["Parol / SMS-kod", "yes", "Kirish zarur"],
         ["Kerakli ma’lumot", "Faqat @username", "Rasmiy kirish"],
-        ["Faollashish", "~10 soniya, avtomatik", "Operator orqali"],
+        ["Faollashish", "~5 soniya, avtomatik", "Operator orqali"],
         ["Muddatlar", "3, 6, 12 oy", "1 oy, 1 yil"],
         ["Kimga mos", "Ko‘pchilikka", "1 oylik yoki maxsus holatlarga"],
       ],
@@ -38,7 +38,7 @@ function FlowCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Вход в аккаунт", "no", "Официальный логин"],
         ["Пароль / SMS-код", "yes", "Нужен вход"],
         ["Что нужно", "Только @username", "Официальный вход"],
-        ["Активация", "~10 секунд, авто", "Через оператора"],
+        ["Активация", "~5 секунд, авто", "Через оператора"],
         ["Сроки", "3, 6, 12 месяцев", "1 месяц, 1 год"],
         ["Кому подходит", "Большинству", "Для 1 месяца или особых случаев"],
       ],
@@ -51,7 +51,7 @@ function FlowCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Account sign-in", "no", "An official login"],
         ["Password / SMS code", "yes", "Sign-in required"],
         ["What is needed", "Only an @username", "An official sign-in"],
-        ["Activation", "~10 seconds, automatic", "Handled by an operator"],
+        ["Activation", "~5 seconds, automatic", "Handled by an operator"],
         ["Terms", "3, 6, 12 months", "1 month, 1 year"],
         ["Who it suits", "Most people", "The 1-month plan or special cases"],
       ],
@@ -77,7 +77,7 @@ function UzAnswer() {
   return (
     <p>
       Telegram Premium’ni eng oson olish — <b>@StarsPaymee_bot</b> orqali <b>username oqimida</b>: akkauntga kirish,
-      parol yoki SMS-kod kerak emas, faqat @username yetarli va Premium o‘rtacha 10 soniyada faollashadi. To‘lov
+      parol yoki SMS-kod kerak emas, faqat @username yetarli va Premium o‘rtacha 5 soniyada faollashadi. To‘lov
       so‘mda — UzCard, HUMO, Click, Payme, Uzum yoki Paynet. Muddatlar: 1, 3, 6 va 12 oy — hammasi username orqali.
     </p>
   );
@@ -129,7 +129,7 @@ function UzBody() {
       </p>
 
       <InlineCta
-        text="Premium’ni username bilan 10 soniyada faollashtiring."
+        text="Premium’ni username bilan 5 soniyada faollashtiring."
         product={{ kind: "premium", months: 6 }}
       />
 
@@ -209,7 +209,7 @@ function UzBody() {
       <p>
         «Username bilan» oqim to‘liq avtomatlashtirilgan: to‘lov tasdiqlangach tizim buyurtmani o‘zi aniqlaydi va
         Premium’ni Telegramning rasmiy mexanizmi orqali o‘sha akkauntga ulaydi — xuddi do‘stingiz sizga Premium
-        sovg‘a qilgandek. Operator ham, navbat ham yo‘q, o‘rtacha 10 soniya.
+        sovg‘a qilgandek. Operator ham, navbat ham yo‘q, o‘rtacha 5 soniya.
       </p>
       <p>
         Aynan shu sabab login, parol yoki 2FA hech qachon so‘ralmaydi: obuna akkauntga «ichkaridan kirish» orqali
@@ -282,7 +282,7 @@ function RuAnswer() {
   return (
     <p>
       Самый простой способ оформить Telegram Premium — через <b>@StarsPaymee_bot</b> в потоке <b>по username</b>:
-      вход в аккаунт, пароль или SMS не нужны, достаточно @username, и Premium активируется в среднем за 10 секунд.
+      вход в аккаунт, пароль или SMS не нужны, достаточно @username, и Premium активируется в среднем за 5 секунд.
       Оплата в сумах — UzCard, HUMO, Click, Payme, Uzum или Paynet. Сроки: 3, 6 и 12 месяцев; месячный — в отдельном
       потоке со входом.
     </p>
@@ -335,7 +335,7 @@ function RuBody() {
       </p>
 
       <InlineCta
-        text="Активируйте Premium по username за 10 секунд."
+        text="Активируйте Premium по username за 5 секунд."
         product={{ kind: "premium", months: 6 }}
       />
 
@@ -413,7 +413,7 @@ function RuBody() {
       <p>
         Поток «по username» полностью автоматизирован: после подтверждения оплаты система сама определяет заказ и
         подключает Premium к указанному аккаунту через официальный механизм Telegram — так же, как если бы подписку
-        подарил друг. Ни оператора, ни очереди, в среднем 10 секунд.
+        подарил друг. Ни оператора, ни очереди, в среднем 5 секунд.
       </p>
       <p>
         Именно поэтому логин, пароль или 2FA не запрашиваются никогда: подписка привязывается не «входом внутрь»
@@ -484,7 +484,7 @@ function EnAnswer() {
   return (
     <p>
       The easiest way to get Telegram Premium is <b>@StarsPaymee_bot</b> in the <b>username flow</b>: no account
-      sign-in, no password and no SMS code — an @username is enough, and Premium activates in about 10 seconds.
+      sign-in, no password and no SMS code — an @username is enough, and Premium activates in about 5 seconds.
       Payment is in so‘m via UzCard, HUMO, Click, Payme, Uzum or Paynet. Terms are 3, 6 and 12 months; the 1-month plan
       lives in a separate sign-in flow.
     </p>
@@ -536,7 +536,7 @@ function EnBody() {
         <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">Premium pricing in Uzbekistan</Link>.
       </p>
 
-      <InlineCta text="Activate Premium by username in 10 seconds." product={{ kind: "premium", months: 6 }} />
+      <InlineCta text="Activate Premium by username in 5 seconds." product={{ kind: "premium", months: 6 }} />
 
       <h2 id="tolov">Payment methods and payment steps</h2>
       <KeyFacts label="Accepted methods">
@@ -612,7 +612,7 @@ function EnBody() {
       <p>
         The “by username” flow is fully automated: once payment is confirmed, the system matches the order itself and
         attaches Premium to that account through Telegram&rsquo;s official mechanism — the same way a friend gifting
-        you a subscription works. No operator, no queue, about 10 seconds.
+        you a subscription works. No operator, no queue, about 5 seconds.
       </p>
       <p>
         That is exactly why a login, password or 2FA is never requested: the subscription is attached from the
@@ -686,7 +686,7 @@ const uzFaq = [
   },
   {
     question: "Premium qancha vaqtda faollashadi?",
-    answer: "Username orqali to‘lovdan so‘ng Premium o‘rtacha 10 soniyada avtomatik yoqiladi.",
+    answer: "Username orqali to‘lovdan so‘ng Premium o‘rtacha 5 soniyada avtomatik yoqiladi.",
   },
   {
     question: "Narxlar qanday?",
@@ -736,7 +736,7 @@ const ruFaq = [
   },
   {
     question: "За сколько активируется Premium?",
-    answer: "По username после оплаты Premium включается автоматически в среднем за 10 секунд.",
+    answer: "По username после оплаты Premium включается автоматически в среднем за 5 секунд.",
   },
   {
     question: "Какие цены?",
@@ -786,7 +786,7 @@ const enFaq = [
   },
   {
     question: "How fast does Premium activate?",
-    answer: "In the username flow Premium switches on automatically in about 10 seconds after payment.",
+    answer: "In the username flow Premium switches on automatically in about 5 seconds after payment.",
   },
   {
     question: "What are the prices?",
@@ -872,7 +872,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Telegram Premium olmoqchimisiz?",
-      ctaBody: "Username bilan, parolsiz, 10 soniyada. Botda muddatni tanlang va so‘mda to‘lang.",
+      ctaBody: "Username bilan, parolsiz, 5 soniyada. Botda muddatni tanlang va so‘mda to‘lang.",
       faq: uzFaq,
     },
     ru: {
@@ -886,7 +886,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите Telegram Premium?",
-      ctaBody: "По username, без пароля, за 10 секунд. Выберите срок в боте и оплатите в сумах.",
+      ctaBody: "По username, без пароля, за 5 секунд. Выберите срок в боте и оплатите в сумах.",
       faq: ruFaq,
     },
     en: {
@@ -900,7 +900,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Want Telegram Premium?",
-      ctaBody: "By username, no password, in 10 seconds. Pick a term in the bot and pay in so‘m.",
+      ctaBody: "By username, no password, in 5 seconds. Pick a term in the bot and pay in so‘m.",
       faq: enFaq,
     },
   },
