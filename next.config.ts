@@ -2,6 +2,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 import type { NextConfig } from "next";
 import { blogRedirects } from "./lib/blog/redirects";
 import { routing } from "./i18n/routing";
+import { GEMPAY_URL } from "./lib/site";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
@@ -26,13 +27,23 @@ const nextConfig: NextConfig = {
    * bo‘lmaydi.
    */
   async redirects() {
-    return routing.locales.flatMap((locale) =>
-      blogRedirects.map(({ from, to }) => ({
-        source: `/${locale}/blog/${from}`,
-        destination: `/${locale}/blog/${to}`,
+    return [
+      ...routing.locales.flatMap((locale) =>
+        blogRedirects.map(({ from, to }) => ({
+          source: `/${locale}/blog/${from}`,
+          destination: `/${locale}/blog/${to}`,
+          permanent: true,
+        })),
+      ),
+      /* O'yin bo'limi alohida saytga ko'chdi — indekslangan eski manzillar
+         yo'qolmasligi uchun doimiy yo'naltirish. */
+      ...routing.locales.map((locale) => ({
+        source: `/${locale}/gampay`,
+        destination: GEMPAY_URL,
         permanent: true,
       })),
-    );
+      { source: "/gampay", destination: GEMPAY_URL, permanent: true },
+    ];
   },
 };
 

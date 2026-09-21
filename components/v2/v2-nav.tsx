@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import { TelegramIcon } from "@/components/v2/icons";
 import { V2LocaleSwitcher } from "@/components/v2/v2-locale-switcher";
 
@@ -15,6 +17,7 @@ export type V2NavLabels = {
   faq: string;
   blog: string;
   home: string;
+  app: string;
   openBot: string;
 };
 
@@ -30,15 +33,20 @@ export function V2Nav({
   botUrl,
   variant = "home",
   activeBlog = false,
+  activeApk = false,
 }: {
   labels: V2NavLabels;
   botUrl: string;
   variant?: "home" | "inner";
   activeBlog?: boolean;
+  activeApk?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+  const loc = useTranslations("locales");
   const panelId = useId().replace(/:/g, "");
 
   useEffect(() => setMounted(true), []);
@@ -100,7 +108,7 @@ export function V2Nav({
             <span className="logo2-mark" aria-hidden="true">
               <Image
                 className="logo2-img"
-                src="/logo-mark.png"
+                src="/logo-mark-clear.png"
                 alt="StarsPaymee logotipi"
                 width={120}
                 height={120}
@@ -129,20 +137,26 @@ export function V2Nav({
             <Link href="/blog" aria-current={activeBlog ? "page" : undefined}>
               {labels.blog}
             </Link>
+            <Link href="/apk" aria-current={activeApk ? "page" : undefined}>
+              {labels.app}
+            </Link>
           </nav>
 
           <div className="nav2-actions">
-            <V2LocaleSwitcher />
-            <a
-              className="btn btn-grad btn-sm mag nav2-cta"
-              data-cta="nav" href={botUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={labels.openBot}
-            >
-              <TelegramIcon />
-              <span className="nav2-cta-txt">{labels.openBot}</span>
-            </a>
+            {/* Mobilda bu ikkovi drawer ichiga ko'chadi — panel toza qoladi. */}
+            <span className="nav2-desk">
+              <V2LocaleSwitcher />
+              <a
+                className="btn btn-grad btn-sm mag nav2-cta"
+                data-cta="nav" href={botUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={labels.openBot}
+              >
+                <TelegramIcon />
+                <span className="nav2-cta-txt">{labels.openBot}</span>
+              </a>
+            </span>
             <button
               type="button"
               className="nav2-burger"
@@ -209,7 +223,34 @@ export function V2Nav({
                   >
                     {labels.blog}
                   </Link>
+                  <Link
+                    href="/apk"
+                    onClick={() => setOpen(false)}
+                    aria-current={activeApk ? "page" : undefined}
+                  >
+                    {labels.app}
+                  </Link>
                 </nav>
+                <div
+                  className="nav2-drawer-langs"
+                  role="group"
+                  aria-label={loc("switchAria")}
+                >
+                  {routing.locales.map((code) => (
+                    <button
+                      key={code}
+                      type="button"
+                      className={`nav2-lang${code === locale ? " on" : ""}`}
+                      aria-current={code === locale ? "true" : undefined}
+                      onClick={() => {
+                        setOpen(false);
+                        router.replace(pathname, { locale: code });
+                      }}
+                    >
+                      {code.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
                 <a
                   className="btn btn-grad mag nav2-drawer-cta"
                   data-cta="nav" href={botUrl}

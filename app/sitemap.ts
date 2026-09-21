@@ -53,10 +53,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     });
     out.push({
-      url: `${base}/${locale}/gampay`,
+      url: `${base}/${locale}/apk`,
       lastModified: LANDING_LAST_MODIFIED,
       changeFrequency: "weekly",
-      priority: 0.92,
+      priority: 0.85,
     });
     out.push({
       url: `${base}/${locale}/blog`,

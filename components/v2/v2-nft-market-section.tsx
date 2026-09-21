@@ -18,9 +18,7 @@ type Props = {
   blogHref: string;
   botUrl: string;
   newBadge: string;
-  bullets: string[];
   /** Mockup ostidagi izoh: bu jonli katalog emas, interfeys namunasi. */
-  sampleNote: string;
 };
 
 /**
@@ -43,11 +41,9 @@ export function V2NftMarketSection({
   blogHref,
   botUrl,
   newBadge,
-  bullets,
-  sampleNote,
 }: Props) {
   const featured = nftGiftListings.find((g) => g.featured) ?? nftGiftListings[0];
-  const grid = nftGiftListings.filter((g) => !g.featured).slice(0, 2);
+  const grid = nftGiftListings.filter((g) => !g.featured).slice(0, 4);
 
   return (
     <section className="sec nft-market-sec" id="nft-market">
@@ -63,6 +59,7 @@ export function V2NftMarketSection({
 
         <div className="nft-market-layout rv">
           <div className="nft-phone" aria-hidden>
+            <span className="isl" />
             <div className="nft-phone-in">
               <div className="nft-top">
                 <span className="nft-shop-ic">🏪</span>
@@ -123,12 +120,6 @@ export function V2NftMarketSection({
           </div>
 
           <div className="nft-copy">
-            <p className="nft-sample-note">{sampleNote}</p>
-            <ul className="nft-bullets">
-              {bullets.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
             <div className="nft-actions">
               <a className="btn btn-grad mag" href={botUrl} target="_blank" rel="noopener noreferrer">
                 {ctaBot}

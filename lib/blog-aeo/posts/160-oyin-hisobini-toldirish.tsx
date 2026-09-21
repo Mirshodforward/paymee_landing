@@ -3,6 +3,7 @@ import { InlineCta, KeyFacts, Steps, Step, InfoGrid, InfoCard } from "@/componen
 import { GamPaySeriesNav } from "@/components/blog/gampay-series-nav";
 import { GAMES } from "@/lib/games";
 import type { AeoPost } from "@/lib/blog-aeo/types";
+import { GEMPAY_URL } from "@/lib/site";
 
 const SLUG = "oyin-hisobini-toldirish";
 
@@ -89,7 +90,7 @@ function UzBody() {
           Steam balansini so‘mda to‘ldirish
         {" "}
         maqolasida alohida yozilgan. To‘liq ro‘yxat va joriy holat{" "}
-        <Link href="/gampay">GamPay sahifasida</Link>.
+        <a href={GEMPAY_URL} target="_blank" rel="noopener noreferrer">GamPay saytida</a>.
       </p>
 
       <h2 id="qadamlar">Qanday to‘ldiriladi — 4 qadam</h2>
@@ -204,7 +205,7 @@ function RuBody() {
         
           пополнение баланса Steam в сумах
         
-        . Полный список и текущее состояние — на <Link href="/gampay">странице GamPay</Link>.
+        . Полный список и текущее состояние — на <a href={GEMPAY_URL} target="_blank" rel="noopener noreferrer">сайте GamPay</a>.
       </p>
 
       <h2 id="qadamlar">Как пополнить — 4 шага</h2>

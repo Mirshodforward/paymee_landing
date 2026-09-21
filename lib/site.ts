@@ -14,6 +14,12 @@ export const TELEGRAM_BOT_URL_PUBLIC = "https://t.me/StarsPaymee_bot";
 /** Qo‘llab-quvvatlash (support) Telegram havolasi. */
 export const TELEGRAM_SUPPORT_URL_PUBLIC = "https://t.me/StarsPaymeeSupport";
 
+/**
+ * O'yin to'ldirish bo'limi alohida saytga ko'chirildi. Landing'dagi
+ * `/gampay` sahifasi o'chirildi, eski manzillar shu yerga yo'naltiriladi.
+ */
+export const GEMPAY_URL = "https://www.gempay.uz/";
+
 export function getSiteUrl(): string {
   return SITE_URL_PUBLIC.replace(/\/$/, "");
 }

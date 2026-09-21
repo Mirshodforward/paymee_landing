@@ -1,25 +1,26 @@
-import { Fragment, type CSSProperties } from "react";
+import { type CSSProperties } from "react";
+import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { V2Shell } from "@/components/v2/v2-shell";
 import { V2Nav } from "@/components/v2/v2-nav";
 import { V2Footer } from "@/components/v2/v2-footer";
-import { V2NftMarketSection } from "@/components/v2/v2-nft-market-section";
 import { V2BoostMarketSection } from "@/components/v2/v2-boost-market-section";
 import {
+  AppleIcon,
   ArrowIcon,
   BoltIcon,
   CheckIcon,
   ClockIcon,
   GiftIcon,
+  GooglePlayIcon,
   PremiumStarIcon,
   ShieldIcon,
   StarIcon,
   TelegramIcon,
-  VerifiedIcon,
 } from "@/components/v2/icons";
-import { getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { GEMPAY_URL, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import { getFeaturedSummaries } from "@/lib/blog/all";
 import { formatStatNumber, getLandingStats } from "@/lib/live-stats";
 import { GAMES } from "@/lib/games";
@@ -49,8 +50,9 @@ export default async function HomePage({ params }: PageProps) {
 
   const t = await getTranslations("v2");
   const th = await getTranslations("home");
-  const featured = getFeaturedSummaries(locale, 8);
+  const featured = getFeaturedSummaries(locale, 6);
   const tg = await getTranslations("landing");
+  const tc = await getTranslations("categories");
   // Har bir CTA o‘z manbasini olib boradi — bot foydalanuvchi qaysi bo‘limdan
   // kelganini biladi va mahsulotni oldindan tanlab qo‘yadi.
   const link = (placement: Parameters<typeof botDeepLink>[0]["placement"], product?: Parameters<typeof botDeepLink>[0]["product"]) =>
@@ -68,11 +70,38 @@ export default async function HomePage({ params }: PageProps) {
     months === 12 ? `1 ${unitYear}` : `${months} ${unitMonth}`;
 
   const faqItems = th.raw("faqItems") as FaqItem[];
-  const marquee = t.raw("marquee") as string[];
+  /* Hero ostidagi to'lov lentasi — bitta manbadan, ikki marta takrorlanadi. */
+  /* Ilova do'konlari. Manzil berilmaguncha nishon havola emas — saytda
+     hech qachon «hech qayerga olib bormaydigan» link turmasligi uchun. */
+  const APP_STORE_URL = "";
+  const PLAY_STORE_URL = "";
+  const stores = [
+    { url: APP_STORE_URL, small: t("appStoreSmall"), name: "App Store", icon: <AppleIcon /> },
+    { url: PLAY_STORE_URL, small: t("playStoreSmall"), name: "Google Play", icon: <GooglePlayIcon /> },
+  ];
+
+  /* Qabul qilinadigan to'lov usullari — «To'lov» blokidagi yagona ro'yxat.
+     `color` ham nuqta rangi, ham hover porlashi uchun ishlatiladi. */
+  const payMethods: {
+    label: string;
+    color: string;
+    logo?: string;
+    lw?: number;
+    withText?: boolean;
+  }[] = [
+    { label: "UzCard", color: "#3D8BFD" },
+    { label: "HUMO", color: "#1BC9B7" },
+    { label: "Click", color: "#00A6FF", logo: "/pay/click.png", lw: 230 },
+    { label: "Payme", color: "#33CCBE", logo: "/pay/payme.png", lw: 78, withText: true },
+    { label: "Paynet", color: "#F43F5E", logo: "/pay/paynet.png", lw: 248 },
+    { label: "Uzum Bank", color: "#7C4DFF" },
+    { label: "Beepul", color: "#2F6BFF" },
+    { label: "Alif", color: "#12B886" },
+    { label: t("chipCash"), color: "#F2C94C" },
+  ];
   const prodStarsB = t.raw("prodStarsB") as string[];
   const prodPremiumB = t.raw("prodPremiumB") as string[];
   const prodGiftsB = t.raw("prodGiftsB") as string[];
-  const nftBullets = t.raw("nftBullets") as string[];
   const boostBullets = t.raw("boostBullets") as string[];
 
   const navLabels = {
@@ -82,6 +111,7 @@ export default async function HomePage({ params }: PageProps) {
     faq: t("navFaq"),
     home: t("navHome"),
     blog: t("blogTitle"),
+    app: t("navApp"),
     openBot: t("openBot"),
   };
   const footerLabels = {
@@ -177,132 +207,86 @@ export default async function HomePage({ params }: PageProps) {
         {/* ===== Hero ===== */}
         <section className="hero">
           <div className="wrap">
-            <div className="hero-badge rv">
-              <span className="pulse" />
-              {t("heroBadge")}
-            </div>
-            <h1 className="hero-h rv" style={{ "--d": ".05s" } as CSSProperties}>
-              {t("heroTitleLead")} <span className="gt">{t("heroTitleAccent")}</span>{" "}
-              {t("heroTitleTail")}
-            </h1>
-            <p className="hero-sub rv" style={{ "--d": ".15s" } as CSSProperties}>
-              {t("heroSub")}
-            </p>
-            <div className="hero-cta rv" style={{ "--d": ".25s" } as CSSProperties}>
-              <a
-                className="btn btn-grad mag"
-                href={link("hero")}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <TelegramIcon />
-                {t("heroCtaBot")}
-              </a>
-              <a className="btn btn-ghost mag" href="#qanday">
-                {t("heroCtaHow")}
-              </a>
+            <div className="hero-copy">
+              <div className="hero-badge rv">
+                <span className="pulse" />
+                {t("heroBadge")}
+              </div>
+              <h1 className="hero-h rv" style={{ "--d": ".05s" } as CSSProperties}>
+                {t("heroTitleLead")} <span className="gt">{t("heroTitleAccent")}</span>{" "}
+                {t("heroTitleTail")}
+              </h1>
+              <p className="hero-sub rv" style={{ "--d": ".15s" } as CSSProperties}>
+                {t("heroSub")}
+              </p>
+              <div className="hero-cta rv" style={{ "--d": ".25s" } as CSSProperties}>
+                <a
+                  className="btn btn-grad mag"
+                  href={link("hero")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TelegramIcon />
+                  {t("heroCtaBot")}
+                </a>
+                <a className="btn btn-ghost mag" href="#qanday">
+                  {t("heroCtaHow")}
+                </a>
+              </div>
             </div>
 
             {/* 3D telefon sahnasi */}
             <div className="stage rv-scale rv" style={{ "--d": ".25s" } as CSSProperties} data-v2-stage>
-              <div
-                className="phone"
-                data-v2-phone
-                data-v2-sim
-                data-pay-done={t("phonePayDone")}
-                data-pay-wait={t("phonePayWait")}
-              >
-                <div className="screen">
-                  <div className="isl" />
-                  <div className="ch-head">
-                    <span className="ch-ava">
-                      <StarIcon />
-                    </span>
-                    <div>
-                      <div className="ch-name">
-                        StarsPaymee_bot
-                        <VerifiedIcon />
-                      </div>
-                      <div className="ch-status">{t("phoneMode")}</div>
-                    </div>
-                  </div>
-                  <div className="ch-body">
-                    <div className="bbl bbl-in" data-sim-m1>
-                      {t("phoneGreet")}
-                    </div>
-                    <div className="bbl bbl-out" data-sim-m2>
-                      {t("phoneOrder")}
-                    </div>
-                    <div className="bbl bbl-in pay-row" data-sim-m3>
-                      <span className="pr-ic" data-sim-payic>
-                        💳
+              <div className="panel-cta">
+                <p className="panel-cta-lead">{t("appLead")}</p>
+                <div className="store-badges">
+                  {stores.map((st) => {
+                    const inner = (
+                      <>
+                        <span className="store-ic">{st.icon}</span>
+                        <span className="store-txt">
+                          <small>{st.small}</small>
+                          <b>{st.name}</b>
+                        </span>
+                      </>
+                    );
+                    return st.url ? (
+                      <a
+                        key={st.name}
+                        className="store-badge"
+                        href={st.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {inner}
+                      </a>
+                    ) : (
+                      <span key={st.name} className="store-badge" aria-disabled="true">
+                        {inner}
                       </span>
-                      <span>
-                        {t("phonePayInfo")}
-                        <small data-sim-paytxt>{t("phonePayWait")}</small>
-                      </span>
-                    </div>
-                    <div className="ph-timer" data-sim-timer>
-                      <div className="pht-num" data-sim-num>
-                        00.00<span> s</span>
-                      </div>
-                      <div className="pht-bar">
-                        <div className="pht-fill" data-sim-fill />
-                      </div>
-                      <div className="pht-lbl">{t("phoneDeliverLabel")}</div>
-                    </div>
-                    <div className="bbl bbl-in" data-sim-m4>
-                      ✅ <b>{t("phoneDeliveredTitle")}</b>
-                      <br />
-                      <span className="mut">{t("phoneDeliveredSub")}</span>
-                    </div>
-                    <div className="ph-burst" data-sim-burst />
-                  </div>
-                  <div className="ch-foot">
-                    <span>{t("phoneAvg")}</span>
-                    <span>{t("phoneMode")}</span>
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
-              <div className="chips" aria-hidden>
-                <span className="chip c1" data-depth="22">
-                  <span className="cd" style={{ background: "#3D8BFD" }} />
-                  UzCard <small>8600</small>
-                </span>
-                <span className="chip c2" data-depth="30">
-                  <span className="cd" style={{ background: "#1BC9B7" }} />
-                  HUMO <small>9860</small>
-                </span>
-                <span className="chip c3" data-depth="26">
-                  <span className="cd" style={{ background: "#00A6FF" }} />
-                  Click
-                </span>
-                <span className="chip c4" data-depth="34">
-                  <span className="cd" style={{ background: "#33CCBE" }} />
-                  Payme
-                </span>
-                <span className="chip c5" data-depth="18">
-                  ⚡ {t("phoneAvg").replace(/^.*?:\s*/, "")}
-                </span>
+              <div className="phone-duo">
+                <div className="phone" data-v2-phone>
+                  <div className="screen">
+                    <span className="isl" aria-hidden />
+                    <Image
+                      className="screen-shot"
+                      src="/app-screen.png"
+                      alt={t("appShotAlt")}
+                      width={640}
+                      height={1387}
+                      sizes="320px"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Marquee */}
-          <div className="marquee" aria-hidden>
-            <div className="mq-track">
-              {[0, 1].map((dup) => (
-                <div className="mq-in" key={dup}>
-                  {marquee.map((m, i) => (
-                    <Fragment key={`${dup}-${i}`}>
-                      <span className="mq-it">{m}</span>
-                      <span className="mq-sep" />
-                    </Fragment>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
         </section>
 
         {/* ===== Statistika ===== */}
@@ -416,26 +400,31 @@ export default async function HomePage({ params }: PageProps) {
                   <p>{t("advPayBody")}</p>
                 </div>
                 <div className="bank-pills">
-                  <span className="bp bp-uz">
-                    <span className="cd" style={{ background: "#3D8BFD" }} />
-                    UZCARD
-                  </span>
-                  <span className="bp bp-hu">
-                    <span className="cd" style={{ background: "#1BC9B7" }} />
-                    HUMO
-                  </span>
-                  <span className="bp bp-cl">
-                    <span className="cd" style={{ background: "#00A6FF" }} />
-                    CLICK
-                  </span>
-                  <span className="bp bp-pa">
-                    <span className="cd" style={{ background: "#33CCBE" }} />
-                    PAYME
-                  </span>
-                  <span className="bp bp-pn">
-                    <span className="cd" style={{ background: "#F59E0B" }} />
-                    PAYNET
-                  </span>
+                  {payMethods.map((m) => (
+                    <span
+                      key={m.label}
+                      className="bp"
+                      style={{ "--bc": m.color, "--bcg": `${m.color}73` } as CSSProperties}
+                    >
+                      {m.logo ? (
+                        <>
+                          <Image
+                            className="bp-logo"
+                            src={m.logo}
+                            alt=""
+                            width={m.lw ?? 72}
+                            height={72}
+                          />
+                          {m.withText ? m.label : null}
+                        </>
+                      ) : (
+                        <>
+                          <span className="cd" style={{ background: m.color }} />
+                          {m.label}
+                        </>
+                      )}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -479,21 +468,6 @@ export default async function HomePage({ params }: PageProps) {
             </div>
           </div>
         </section>
-
-        <V2NftMarketSection
-          kicker={t("nftKicker")}
-          title={t("nftTitle")}
-          subtitle={t("nftSub")}
-          balanceLabel={t("nftBalance")}
-          myGifts={t("nftMyGifts")}
-          ctaBot={t("nftCtaBot")}
-          ctaBlog={t("nftCtaBlog")}
-          blogHref="/blog/kolleksion-gift-bot-orqali-olinmaydi"
-          botUrl={link("card")}
-          newBadge={t("nftNewBadge")}
-          bullets={nftBullets}
-          sampleNote={t("nftSample")}
-        />
 
         <V2BoostMarketSection
           kicker={t("boostKicker")}
@@ -729,7 +703,12 @@ export default async function HomePage({ params }: PageProps) {
              bo‘lmasa, /gampay sahifasi ichki link olmay qolardi. */}
         <section className="sec" id="gampay" style={{ paddingTop: 0 }}>
           <div className="wrap">
-            <Link href="/gampay" className="home-gampay rv">
+            <a
+              href={GEMPAY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="home-gampay rv"
+            >
               <span className="home-gampay__icon" aria-hidden>🎮</span>
               <span className="home-gampay__text">
                 <span className="home-gampay__title">{tg("gampay.h1")}</span>
@@ -738,7 +717,7 @@ export default async function HomePage({ params }: PageProps) {
                 </span>
               </span>
               <ArrowIcon />
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -751,12 +730,25 @@ export default async function HomePage({ params }: PageProps) {
                 <h2 className="h2">{t("blogH1")}</h2>
                 <p className="sec-sub">{t("blogSubtitle")}</p>
               </div>
-              <ul className="home-guides">
-                {featured.map((post) => (
-                  <li key={post.slug}>
-                    <Link href={`/blog/${post.slug}`} className="home-guide rv">
-                      <span className="home-guide-title">{post.title}</span>
-                      <ArrowIcon />
+              <ul className="v2-blog-grid home-blog-grid">
+                {featured.map((post, i) => (
+                  <li key={post.slug} style={{ height: "100%" }}>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="bcard rv spot"
+                      style={{ "--d": `${Math.min(i, 5) * 0.05}s` } as CSSProperties}
+                    >
+                      <div className="bcard-meta">
+                        <span className="btag">{tc(post.category)}</span>
+                        <time dateTime={post.datePublished} className="bcard-date">
+                          {post.datePublished}
+                        </time>
+                      </div>
+                      <h3 className="h3 bcard-title">{post.title}</h3>
+                      <p className="bcard-excerpt">{post.excerpt}</p>
+                      <span className="prod-link bcard-more">
+                        {t("blogRead")} <ArrowIcon />
+                      </span>
                     </Link>
                   </li>
                 ))}

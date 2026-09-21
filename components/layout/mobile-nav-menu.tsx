@@ -174,7 +174,7 @@ export function MobileNavMenu({
               />
               <div className="relative flex items-center gap-4">
                 <Image
-                  src="/logo-mark.png"
+                  src="/logo-mark-clear.png"
                   alt={`${siteConfig.name} logotipi`}
                   width={96}
                   height={96}

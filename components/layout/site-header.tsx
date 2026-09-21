@@ -8,6 +8,7 @@ import { getTranslations } from "next-intl/server";
 import { Send } from "lucide-react";
 import { getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
+import { GEMPAY_URL } from "@/lib/site";
 
 const navLink =
   "relative py-1 text-slate-600 transition-colors hover:text-[#229ED9] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-[#229ED9] after:to-sky-400 after:transition-transform after:duration-300 hover:after:scale-x-100 dark:text-slate-400 dark:hover:text-[#229ED9]";
@@ -47,7 +48,7 @@ export async function SiteHeader({
           className="flex min-w-0 max-w-[58%] shrink items-center gap-2.5 text-[15px] font-semibold tracking-tight text-slate-900 sm:max-w-none sm:gap-3 sm:text-base lg:gap-3.5 lg:text-lg dark:text-white"
         >
           <Image
-            src="/logo-mark.png"
+            src="/logo-mark-clear.png"
             alt={`${siteConfig.name} logotipi`}
             width={120}
             height={120}
@@ -72,9 +73,14 @@ export async function SiteHeader({
             <Link href="/gifts" className={prod("gifts")}>
               {lg("nav.gifts")}
             </Link>
-            <Link href="/gampay" className={highlight === "gampay" ? navActive : navLink}>
+            <a
+              href={GEMPAY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={navLink}
+            >
               GamPay
-            </Link>
+            </a>
             <Link href="/blog" className={highlight === "blog" ? navActive : navLink}>
               {n("blog")}
             </Link>

@@ -208,7 +208,7 @@ body {
 }
 
 html:has(.v2) {
-  scroll-padding-top: 110px;
+  scroll-padding-top: 100px;
   background: var(--void);
 }
 html:has(.v2)::-webkit-scrollbar {
@@ -237,6 +237,15 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 24px;
+}
+/* Bosh sahifada konteyner navigatsiya paneli bilan bir xil kenglikda —
+   ekranning 90% i. Blog ro'yxati va maqolalar o'z o'lchamida qoladi,
+   chunki uzun matn qatori o'qishni qiyinlashtiradi. */
+.v2:has(.hero) .wrap,
+.v2 .apk-page .wrap {
+  width: 85%;
+  max-width: none;
+  padding: 0;
 }
 .v2 a {
   color: inherit;
@@ -315,23 +324,29 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  width: min(1080px, calc(100% - 28px));
+  /* Panel ekran kengligining 85% ini egallaydi. */
+  width: 85%;
   border: 1px solid var(--line);
   border-radius: 100px;
-  background: rgba(9, 5, 17, 0.9);
-  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+  /* Shisha panel: orqa fon ko'rinib turadi, ustki qirra yorug' chiziq bilan
+     ajraladi — shu tufayli panel sahifadan «suzib turgandek» ko'rinadi. */
+  background: linear-gradient(180deg, rgba(30, 18, 54, 0.62), rgba(9, 5, 17, 0.72));
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 10px 34px -14px rgba(0, 0, 0, 0.7);
+  transition: background 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 .v2 .nav2.scrolled {
-  background: rgba(9, 5, 17, 0.82);
+  background: linear-gradient(180deg, rgba(26, 15, 47, 0.88), rgba(9, 5, 17, 0.9));
   border-color: var(--line2);
-  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 20px 54px -14px rgba(0, 0, 0, 0.8);
 }
 .v2 .nav2-in {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 10px 10px 10px 18px;
+  padding: 8px 8px 8px 16px;
 }
 .v2 .logo2 {
   display: flex;
@@ -361,46 +376,52 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
 }
 .v2 .logo2 .logo2-img {
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
   object-fit: contain;
-  filter: drop-shadow(0 4px 14px rgba(168, 85, 247, 0.45));
+  filter: drop-shadow(0 3px 12px rgba(168, 85, 247, 0.4));
+  transition: transform 0.3s, filter 0.3s;
+}
+.v2 .logo2:hover .logo2-img {
+  transform: scale(1.06) rotate(-4deg);
+  filter: drop-shadow(0 4px 18px rgba(217, 70, 239, 0.6));
 }
 .v2 .nav2-links {
   display: flex;
-  gap: 26px;
+  gap: 2px;
   font-size: 14px;
   font-weight: 600;
   color: var(--muted);
 }
 .v2 .nav2-links a {
   position: relative;
-  transition: color 0.25s;
-  padding: 4px 0;
+  padding: 8px 14px;
+  border-radius: 100px;
+  transition: color 0.22s, background 0.22s;
 }
-.v2 .nav2-links a::after {
+/* Joriy sahifa — kichik gradient nuqta bilan belgilanadi. */
+.v2 .nav2-links a[aria-current="page"]::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1.5px;
+  left: 50%;
+  bottom: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
   background: var(--grad);
-  transition: width 0.3s;
+  transform: translateX(-50%);
 }
 .v2 .nav2-links a:hover,
+.v2 .nav2-links a:focus-visible,
 .v2 .nav2-links a[aria-current="page"] {
   color: var(--text);
-}
-.v2 .nav2-links a:hover::after,
-.v2 .nav2-links a[aria-current="page"]::after {
-  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Nav yon amallar: locale + CTA + burger */
@@ -464,7 +485,7 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
 }
 .v2 .nav2-drawer {
   position: fixed;
-  top: 84px;
+  top: 74px;
   left: 14px;
   right: 14px;
   z-index: 115;
@@ -501,6 +522,43 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
 .v2 .nav2-drawer-links a[aria-current="page"] {
   background: rgba(217, 70, 239, 0.14);
   color: #fff;
+}
+.v2 .nav2-desk {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Drawer ichidagi til tanlash — ochiladigan ro'yxat emas, bitta teginish. */
+.v2 .nav2-drawer-langs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.v2 .nav2-lang {
+  padding: 11px 0;
+  border: 1px solid var(--line2);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.v2 .nav2-lang:hover,
+.v2 .nav2-lang:focus-visible {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+.v2 .nav2-lang.on {
+  color: #fff;
+  border-color: rgba(217, 70, 239, 0.55);
+  background: rgba(217, 70, 239, 0.12);
 }
 .v2 .nav2-drawer-cta {
   margin-top: 10px;
@@ -650,30 +708,182 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   filter: blur(70px);
   pointer-events: none;
 }
+/* ===== Ikki telefon: oldi va orqasi (reklama kadri) ===== */
+.v2 .phone-duo {
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+.v2 .phone-duo .phone {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+/* ===== Panel ichidagi ilova do'konlari bloki ===== */
+.v2 .panel-cta {
+  margin-top: 26px;
+  text-align: center;
+}
+.v2 .panel-cta-lead {
+  font-family: var(--disp);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #fff;
+  margin-bottom: 11px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
+}
+.v2 .store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.v2 .store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px 8px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 5, 15, 0.72);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.v2 a.store-badge:hover,
+.v2 a.store-badge:focus-visible {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(20, 13, 34, 0.85);
+  transform: translateY(-2px);
+}
+.v2 .store-ic {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.v2 .store-ic svg {
+  width: 100%;
+  height: 100%;
+}
+.v2 .store-txt {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.v2 .store-txt small {
+  font-size: 9.5px;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+.v2 .store-txt b {
+  font-family: var(--disp);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Korpus: titan ramka — qirralarda yorug' aks, o'rtada matlashgan metall.
+   Ramka 9px, shuning uchun ekran chetlari ingichka va bir tekis. */
 .v2 .phone {
   position: relative;
-  width: 328px;
+  width: 300px;
   margin: 0 auto;
-  border-radius: 48px;
-  border: 1px solid var(--line2);
-  background: linear-gradient(180deg, #171022, #0b0714);
-  padding: 11px;
-  box-shadow: 0 50px 130px -20px rgba(139, 92, 246, 0.4), 0 34px 90px rgba(0, 0, 0, 0.65),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 54px;
+  border: none;
+  padding: 9px;
+  background: linear-gradient(
+    145deg,
+    #60606b 0%,
+    #26262e 13%,
+    #3d3d47 37%,
+    #1e1e25 61%,
+    #454550 85%,
+    #70707c 100%
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.17),
+    0 50px 130px -20px rgba(139, 92, 246, 0.4), 0 34px 90px rgba(0, 0, 0, 0.65);
+}
+/* Chap yon: amal tugmasi va ovoz tugmalari (nusxasi box-shadow orqali). */
+.v2 .phone::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 92px;
+  width: 2.5px;
+  height: 26px;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(90deg, #7a7a87, #2c2c34);
+  box-shadow: 0 48px 0 #4a4a55, 0 92px 0 #4a4a55;
+}
+/* O'ng yon: quvvat tugmasi. */
+.v2 .phone::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 132px;
+  width: 2.5px;
+  height: 62px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(270deg, #7a7a87, #2c2c34);
 }
 .v2 .screen {
-  border-radius: 38px;
-  background: #08050f;
+  position: relative;
+  border-radius: 46px;
+  background: #000;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.055);
+}
+/* Shisha ustidagi yumshoq aks — ekran «yopiq oyna» bo'lib ko'rinadi. */
+.v2 .screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    124deg,
+    rgba(255, 255, 255, 0.075) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0.035) 100%
+  );
+}
+/* Dynamic Island — o'ng chetida kamera linzasi bilan. */
+/* Ilova ekrani — telefon oynasini to'ldiradi, ortiqchasi kesiladi. */
+.v2 .screen-shot {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .v2 .isl {
-  width: 88px;
-  height: 25px;
+  position: absolute;
+  z-index: 5;
+  top: 9px;
+  left: 50%;
+  width: 97px;
+  height: 27px;
   background: #000;
   border-radius: 100px;
-  margin: 11px auto 2px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: none;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+.v2 .isl::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: radial-gradient(circle at 34% 30%, #33415c, #05070c 62%);
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.16);
 }
 .v2 .ch-head {
   display: flex;
@@ -718,7 +928,7 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
 }
 .v2 .ch-body {
   padding: 16px 14px 18px;
-  min-height: 330px;
+  min-height: clamp(360px, 44svh, 412px);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -834,11 +1044,25 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   opacity: 1;
   transition: transform 1.15s cubic-bezier(0.16, 0.8, 0.3, 1), opacity 1.15s;
 }
+/* Pastdagi ishora chizig'i (home indicator). */
+.v2 .screen::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 7px;
+  width: 104px;
+  height: 4px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.32);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
 .v2 .ch-foot {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  padding: 12px 16px;
+  padding: 12px 16px 20px;
   border-top: 1px solid var(--line);
   font-family: var(--mono2);
   font-size: 10.5px;
@@ -851,62 +1075,115 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   color: transparent;
 }
 /* suzuvchi chiplar */
-.v2 .chips {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+/* To'lov nishonidagi brend logotipi — o'z foni bilan kichik plita. */
+.v2 .bp-logo {
+  display: block;
+  height: 19px;
+  width: auto;
+  border-radius: 5px;
 }
-.v2 .chip {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 17px;
-  border-radius: 100px;
-  background: rgba(16, 10, 26, 0.85);
-  border: 1px solid var(--line2);
-  font-weight: 700;
-  font-size: 13px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
-  pointer-events: auto;
-}
-.v2 .chip .cd {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.v2 .chip small {
-  font-family: var(--mono2);
-  font-size: 10.5px;
-  color: var(--muted);
-  font-weight: 400;
-}
-.v2 .c1 {
-  left: 4%;
-  top: 13%;
-}
-.v2 .c2 {
-  right: 5%;
-  top: 9%;
-}
-.v2 .c3 {
-  left: 1%;
-  bottom: 30%;
-}
-.v2 .c4 {
-  right: 2%;
-  bottom: 24%;
-}
-.v2 .c5 {
-  right: 14%;
-  top: 46%;
+.v2 .bp:has(.bp-logo) {
+  padding: 7px 12px;
 }
 
-/* Marquee olib tashlangan (cheksiz animatsiya) */
-.v2 .marquee {
-  display: none;
+/* ===== Hero: keng ekranda ikki ustun (matn chapda, telefon o'ngda) =====
+   Bitta ekranga sig'ishi uchun `min-height: 100svh` va kichraytirilgan
+   o'lchamlar ishlatiladi. 1120px dan tor ekranda eski (ustma-ust) tartib
+   qoladi — u yerda telefon yonida chiplar uchun joy yetmaydi. */
+@media (min-width: 1120px) {
+  .v2 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 100px 0 40px;
+    text-align: left;
+  }
+  .v2 .hero .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+    align-items: center;
+    gap: clamp(30px, 3.4vw, 54px);
+  }
+  .v2 .hero-h {
+    font-size: clamp(2.05rem, 2.65vw, 2.85rem);
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+  .v2 .hero-sub {
+    font-size: 16.5px;
+    max-width: 480px;
+    margin: 0 0 32px;
+  }
+  .v2 .hero-badge {
+    margin-bottom: 24px;
+  }
+  .v2 .hero-cta {
+    justify-content: flex-start;
+  }
+  /* O'ng yarim — yaxlit qorong'u panel, telefon uning ichida turadi. */
+  .v2 .stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 34px;
+    padding-top: 52px;
+    /* Qat'iy balandlik: telefon undan uzun, shuning uchun pastdan kesiladi
+       va butun hero bitta ekranga sig'adi. */
+    height: min(720px, calc(100svh - 170px));
+    align-items: flex-start;
+    background: radial-gradient(118% 88% at 52% -6%, #2a1d49 0%, #160f29 46%, #0a0713 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+  }
+  .v2 .hero .phone-duo {
+    margin: 0 auto;
+  }
+  /* Panel tubi xiralashadi — telefon kesimi yumshaydi va o'rnatish bloki
+     ustida o'qiladigan fon paydo bo'ladi. */
+  .v2 .stage::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    pointer-events: none;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 52%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 0%, #000 52%, transparent 100%);
+    background: linear-gradient(to top, rgba(9, 6, 17, 0.92) 0%, rgba(9, 6, 17, 0.7) 45%, rgba(9, 6, 17, 0) 100%);
+  }
+  .v2 .hero .panel-cta {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    bottom: 26px;
+    margin: 0;
+    padding: 0 20px;
+  }
+  /* Panelda telefon kengroq — rasm nisbatiga ko'ra balandligi ham oshadi va
+     pastdan kesiladi. */
+  .v2 .hero .phone {
+    width: 310px;
+  }
+  /* Nurlanish stage kengligidan oshib ketmasligi kerak — aks holda
+     sahifada gorizontal siljish paydo bo'ladi. */
+  .v2 .stage::before {
+    width: 520px;
+    height: 520px;
+    top: 42%;
+    filter: blur(90px);
+    opacity: 0.75;
+  }
 }
+
 
 /* ===== Umumiy seksiyalar ===== */
 .v2 .sec {
@@ -1183,26 +1460,6 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   transform: translateY(-3px);
   border-color: var(--bc);
   box-shadow: 0 12px 30px -10px var(--bcg);
-}
-.v2 .bp-uz {
-  --bc: #3d8bfd;
-  --bcg: rgba(61, 139, 253, 0.45);
-}
-.v2 .bp-hu {
-  --bc: #1bc9b7;
-  --bcg: rgba(27, 201, 183, 0.45);
-}
-.v2 .bp-cl {
-  --bc: #00a6ff;
-  --bcg: rgba(0, 166, 255, 0.45);
-}
-.v2 .bp-pa {
-  --bc: #33ccbe;
-  --bcg: rgba(51, 204, 190, 0.45);
-}
-.v2 .bp-pn {
-  --bc: #f59e0b;
-  --bcg: rgba(245, 158, 11, 0.45);
 }
 
 /* ===== Mahsulot kartalari (conic border) ===== */
@@ -1759,19 +2016,6 @@ html:not(.v2-js) .v2 .rv {
   .v2 .hero {
     padding-top: 130px;
   }
-  .v2 .chips {
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 30px;
-    pointer-events: auto;
-  }
-  .v2 .chip {
-    position: static;
-    animation: none;
-  }
   .v2 .stats-wrap {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1847,14 +2091,14 @@ html:not(.v2-js) .v2 .rv {
 /* Planshet va telefon uchun: nav-links yashirin, hamburger ko‘rinadi */
 @media (max-width: 900px) {
   html:has(.v2) {
-    scroll-padding-top: calc(88px + env(safe-area-inset-top));
+    scroll-padding-top: calc(80px + env(safe-area-inset-top));
   }
   .v2 .nav2 {
-    width: min(1080px, calc(100% - 20px));
+    width: 85%;
     top: 12px;
   }
   .v2 .nav2-in {
-    padding: 7px 7px 7px 14px;
+    padding: 6px 6px 6px 14px;
     gap: 8px;
   }
   .v2 .logo2 {
@@ -1862,12 +2106,12 @@ html:not(.v2-js) .v2 .rv {
     gap: 10px;
   }
   .v2 .logo2-mark {
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
   }
   .v2 .logo2 .logo2-img {
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
   }
   /* Mobilda faqat Blog havolasi ko‘rinadi (boshqalar drawerda) */
   .v2 .nav2-links {
@@ -1884,6 +2128,9 @@ html:not(.v2-js) .v2 .rv {
   .v2 .nav2-burger {
     display: inline-flex;
   }
+  .v2 .nav2-desk {
+    display: none;
+  }
   .v2 .nav2-actions {
     gap: 8px;
   }
@@ -1899,15 +2146,6 @@ html:not(.v2-js) .v2 .rv {
   }
   .v2 .sec-head {
     margin-bottom: 36px;
-  }
-  .v2 .marquee {
-    padding: 18px 0;
-    margin-top: 28px;
-  }
-  .v2 .mq-it {
-    font-size: 11px;
-    letter-spacing: 2px;
-    padding: 0 18px;
   }
   .v2 .stage {
     margin-top: 40px;
@@ -1961,14 +2199,6 @@ html:not(.v2-js) .v2 .rv {
   }
   .v2 .ch-body {
     min-height: 300px;
-  }
-  .v2 .marquee {
-    padding: 14px 0;
-    margin-top: 22px;
-  }
-  .v2 .mq-sep {
-    width: 5px;
-    height: 5px;
   }
 
   /* Statistika: 2×2 bo‘lib qoladi, ammo padding kichrayadi */
@@ -2778,22 +3008,140 @@ html:not(.v2-js) .v2 .rv {
   align-items: center;
 }
 @media (min-width: 900px) {
+  /* Matn chapda, telefon o'ngda — ikki ustun teng. Korpus kengroq bo'lgani
+     uchun ichidagi matn ham kattalashadi, aks holda mayda bo'lib qolardi. */
   .v2 .nft-market-layout {
-    grid-template-columns: minmax(280px, 380px) 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 4vw, 60px);
+  }
+  .v2 .nft-copy {
+    order: 1;
+  }
+  .v2 .nft-phone {
+    order: 2;
+    width: min(100%, 378px);
+    margin-inline: auto;
+  }
+  .v2 .nft-phone-in {
+    /* 17 Pro Max nisbati: ekran kengligi 360px → balandlik ~720px */
+    min-height: 720px;
+    padding: 50px 17px 34px;
+  }
+  .v2 .nft-shop-ic {
+    font-size: 26px;
+  }
+  .v2 .nft-title-row {
+    font-size: 17px;
+  }
+  .v2 .nft-my {
+    font-size: 11px;
+  }
+  .v2 .nft-sub {
+    font-size: 12.5px;
+  }
+  .v2 .nft-balance {
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+  .v2 .nft-chip {
+    font-size: 11.5px;
+    padding: 6px 12px;
+  }
+  .v2 .nft-sort {
+    font-size: 11.5px;
+    margin-bottom: 15px;
+  }
+  .v2 .nft-art {
+    font-size: 54px;
+    padding: 6px 0;
+  }
+  .v2 .nft-art.sm {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+  .v2 .nft-card-body b {
+    font-size: 16px;
+  }
+  .v2 .nft-tags span {
+    font-size: 10.5px;
+    padding: 3px 8px;
+  }
+  .v2 .nft-price {
+    font-size: 17px;
+  }
+  .v2 .nft-price.sm {
+    font-size: 13.5px;
+  }
+  .v2 .nft-card.sm b {
+    font-size: 12.5px;
   }
 }
-.v2 .nft-phone {
-  border-radius: 28px;
-  border: 1px solid var(--line2);
-  background: linear-gradient(165deg, rgba(88, 28, 135, 0.35), rgba(9, 5, 17, 0.95));
-  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.65);
-  padding: 14px;
+/* Bo'lim maketlari ham hero'dagi kabi iPhone korpusida ko'rsatiladi:
+   titan ramka, ingichka chetlar, Dynamic Island va yon tugmalar. */
+.v2 .nft-phone,
+.v2 .boost-phone {
+  position: relative;
+  border: none;
+  border-radius: 52px;
+  padding: 9px;
+  background: linear-gradient(
+    145deg,
+    #60606b 0%,
+    #26262e 13%,
+    #3d3d47 37%,
+    #1e1e25 61%,
+    #454550 85%,
+    #70707c 100%
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.17),
+    0 44px 110px -28px rgba(139, 92, 246, 0.36), 0 30px 80px rgba(0, 0, 0, 0.62);
+}
+.v2 .nft-phone::before,
+.v2 .boost-phone::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 88px;
+  width: 2.5px;
+  height: 26px;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(90deg, #7a7a87, #2c2c34);
+  box-shadow: 0 48px 0 #4a4a55, 0 92px 0 #4a4a55;
+}
+.v2 .nft-phone::after,
+.v2 .boost-phone::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 128px;
+  width: 2.5px;
+  height: 62px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(270deg, #7a7a87, #2c2c34);
+}
+.v2 .nft-phone-in,
+.v2 .boost-phone-in {
+  position: relative;
+  border: none;
+  border-radius: 44px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.055);
+  /* Tepada Dynamic Island, pastda ishora chizig'i uchun joy */
+  padding: 46px 14px 30px;
+}
+.v2 .nft-phone-in::after,
+.v2 .boost-phone-in::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 104px;
+  height: 4px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
 }
 .v2 .nft-phone-in {
-  border-radius: 22px;
-  background: rgba(12, 8, 22, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 14px 12px 16px;
+  background: linear-gradient(168deg, rgba(88, 28, 135, 0.3), #07040f 58%);
 }
 .v2 .nft-top {
   display: flex;
@@ -2944,22 +3292,14 @@ html:not(.v2-js) .v2 .rv {
   margin-bottom: 0;
   text-align: center;
 }
+/* Toq sondagi oxirgi karta yolg'iz qolmasin — butun qatorni egallaydi. */
+.v2 .nft-grid2 .nft-card.sm:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
 .v2 .nft-card.sm b {
   display: block;
   font-size: 11px;
   font-family: var(--disp);
-}
-/* Mockup ostidagi izoh: telefon ichidagi kolleksion nusxalar sotuvdagi
-   taklif emas, interfeys namunasi. */
-.v2 .nft-sample-note {
-  margin: 0 0 14px;
-  padding: 10px 13px;
-  border: 1px solid rgba(148, 163, 184, 0.28);
-  border-radius: 12px;
-  background: rgba(148, 163, 184, 0.08);
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.55;
 }
 .v2 .nft-bullets {
   margin: 0 0 22px;
@@ -3021,7 +3361,7 @@ html:not(.v2-js) .v2 .rv {
 }
 
 /* Boost Market */
-.v2 .boost-market-sec { padding-top: 12px; }
+.v2 .boost-market-sec { padding-top: 20px; }
 .v2 .boost-new-pill {
   margin-left: 10px;
   display: inline-flex;
@@ -3036,21 +3376,124 @@ html:not(.v2-js) .v2 .rv {
   vertical-align: middle;
 }
 .v2 .boost-market-layout { display: grid; gap: 28px; align-items: center; }
-@media (min-width: 900px) {
-  .v2 .boost-market-layout { grid-template-columns: minmax(280px, 400px) 1fr; }
+.v2 .boost-copy .h2 {
+  margin: 0;
 }
-.v2 .boost-phone {
-  border-radius: 28px;
-  border: 1px solid var(--line2);
-  background: linear-gradient(165deg, rgba(99, 102, 241, 0.28), rgba(9, 5, 17, 0.95));
-  padding: 14px;
-  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.65);
+.v2 .boost-copy .sec-sub {
+  margin-bottom: 26px;
+}
+.v2 .boost-bullets {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15px;
+  display: grid;
+  gap: 8px;
+}
+.v2 .boost-bullets li {
+  position: relative;
+  padding-left: 22px;
+}
+.v2 .boost-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--grad);
+}
+.v2 .boost-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 899px) {
+  /* Mobilda avval sarlavha va matn, keyin telefon — aks holda ekran
+     hech qanday izohsiz mockup bilan ochilardi. */
+  .v2 .boost-copy {
+    order: 1;
+  }
+  .v2 .boost-phone {
+    order: 2;
+  }
+}
+@media (min-width: 900px) {
+  /* Telefon chapda, matn o'ngda — ustunlar teng. Korpus kengaygani uchun
+     ichidagi matn ham kattalashadi. */
+  .v2 .boost-market-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 4vw, 60px);
+  }
+  .v2 .boost-phone {
+    width: min(100%, 378px);
+    margin-inline: auto;
+  }
+  .v2 .boost-phone-in {
+    min-height: 720px;
+    padding: 50px 17px 34px;
+  }
+  .v2 .boost-rocket {
+    font-size: 42px;
+  }
+  .v2 .boost-hero strong {
+    font-size: 18px;
+  }
+  .v2 .boost-hero p {
+    font-size: 12.5px;
+  }
+  .v2 .boost-stock {
+    font-size: 13.5px;
+    padding: 10px 13px;
+  }
+  .v2 .boost-lbl {
+    font-size: 12.5px;
+  }
+  .v2 .boost-input {
+    font-size: 12.5px;
+    padding: 12px 14px;
+  }
+  .v2 .boost-search {
+    width: 46px;
+    font-size: 18px;
+  }
+  .v2 .boost-card {
+    padding: 15px;
+    border-radius: 18px;
+  }
+  .v2 .boost-ch-ic {
+    width: 46px;
+    height: 46px;
+    font-size: 25px;
+  }
+  .v2 .boost-ch b {
+    font-size: 16px;
+  }
+  .v2 .boost-ch small {
+    font-size: 12.5px;
+  }
+  .v2 .boost-step span {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .v2 .boost-days span {
+    font-size: 11.5px;
+    padding: 8px 4px;
+  }
+  .v2 .boost-total {
+    font-size: 17.5px;
+    padding-top: 11px;
+  }
+  .v2 .boost-total small {
+    font-size: 11.5px;
+  }
 }
 .v2 .boost-phone-in {
-  border-radius: 22px;
-  background: rgba(12, 10, 28, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 14px 12px 16px;
+  background: linear-gradient(168deg, rgba(99, 102, 241, 0.26), #07050f 58%);
 }
 .v2 .boost-hero { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
 .v2 .boost-rocket { font-size: 36px; filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.6)); }
@@ -3080,7 +3523,7 @@ html:not(.v2-js) .v2 .rv {
   width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px;
   background: rgba(56, 189, 248, 0.15); font-size: 22px;
 }
-.v2 .boost-ch b { font-family: var(--disp); font-size: 14px; }
+.v2 .boost-ch b { font-family: var(--disp); font-size: 14px; display: block; }
 .v2 .boost-ch small { color: var(--muted); font-size: 11px; }
 .v2 .boost-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
 .v2 .boost-step { display: flex; align-items: center; gap: 10px; font-family: var(--disp); }
@@ -3199,8 +3642,8 @@ body {
   top: max(12px, env(safe-area-inset-top));
 }
 .v2 .nav2-drawer {
-  top: calc(76px + env(safe-area-inset-top));
-  max-height: calc(100dvh - 88px - env(safe-area-inset-bottom));
+  top: calc(68px + env(safe-area-inset-top));
+  max-height: calc(100dvh - 80px - env(safe-area-inset-bottom));
   padding-bottom: max(14px, env(safe-area-inset-bottom));
 }
 .v2 .footer2 {
@@ -3267,11 +3710,13 @@ body {
   .v2 .nft-sort span {
     flex-shrink: 0;
   }
-  .v2 .nft-actions {
+  .v2 .nft-actions,
+  .v2 .boost-actions {
     flex-direction: column;
     align-items: stretch;
   }
-  .v2 .nft-actions .btn {
+  .v2 .nft-actions .btn,
+  .v2 .boost-actions .btn {
     width: 100%;
     justify-content: center;
   }
@@ -3618,42 +4063,11 @@ html {
   }
 }
 
-/* ===== Bosh sahifadagi «mashhur qo‘llanmalar» bloki =====
-   183 ta maqolaga bosh sahifadan ichki link berish uchun. */
-.home-guides {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 12px;
-}
-.home-guide {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  height: 100%;
-  padding: 16px 18px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--text);
-  font-size: 14.5px;
-  line-height: 1.45;
-  transition: border-color 0.25s, background 0.25s, transform 0.25s;
-}
-.home-guide:hover,
-.home-guide:focus-visible {
-  border-color: var(--fuch);
-  background: rgba(217, 70, 239, 0.06);
-  transform: translateY(-2px);
-}
-.home-guide-title { font-weight: 600; }
-.home-guide svg { flex: none; opacity: 0.55; }
-@media (prefers-reduced-motion: reduce) {
-  .home-guide { transition: none; }
-  .home-guide:hover, .home-guide:focus-visible { transform: none; }
+/* Bosh sahifadagi blog kartalari — blog ro'yxatidagidan kengroq ustun:
+   6 ta karta keng ekranda 3+3 bo'lib tekis joylashadi (280px'da 4+2 bo'lib
+   bo'sh joy qolardi). */
+.v2 .home-blog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
 }
 
 /* ===== Bosh sahifadagi GamPay chizig‘i ===== */
@@ -3680,8 +4094,149 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.home-gampay svg { flex: none; opacity: 0.55; }
+/* ArrowIcon'da o'z o'lchami yo'q — bu yerda aniq berilmasa, SVG butun
+   qatorni egallab ketadi. */
+.home-gampay svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  opacity: 0.55;
+}
 @media (prefers-reduced-motion: reduce) {
   .home-gampay { transition: none; }
   .home-gampay:hover, .home-gampay:focus-visible { transform: none; }
+}
+
+/* ===================================================================
+   /apk — Android ilovasini yuklab olish sahifasi
+   =================================================================== */
+.v2 .apk-page {
+  padding-top: clamp(96px, 13vw, 132px);
+}
+.v2 .apk-hero {
+  padding-top: 0;
+  padding-bottom: clamp(40px, 6vw, 70px);
+}
+.v2 .apk-hero-grid {
+  display: grid;
+  gap: clamp(34px, 5vw, 64px);
+  align-items: center;
+}
+.v2 .apk-h1 {
+  margin-top: 6px;
+  font-size: clamp(1.95rem, 3vw, 2.85rem);
+  line-height: 1.1;
+}
+.v2 .apk-lead {
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+.v2 .apk-dl {
+  padding: 16px 30px;
+  font-size: 16px;
+}
+.v2 .apk-dl svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+}
+.v2 .apk-file {
+  margin-top: 16px;
+  font-family: var(--mono2);
+  font-size: 13px;
+  color: var(--text);
+}
+.v2 .apk-file-note {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+/* Sahifadagi telefon — hero'dagidan kichikroq, to'liq ko'rinadi. */
+.v2 .apk-shot {
+  display: flex;
+  justify-content: center;
+}
+.v2 .apk-shot .phone {
+  width: min(292px, 82vw);
+}
+.v2 .apk-sec {
+  padding-top: 0;
+  padding-bottom: clamp(50px, 7vw, 86px);
+}
+.v2 .apk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+}
+.v2 .apk-ic {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.v2 .apk-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.v2 .apk-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+.v2 .apk-step-n {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--grad);
+  font-family: var(--disp);
+  font-weight: 800;
+  font-size: 16px;
+  color: #fff;
+}
+.v2 .apk-step p,
+.v2 .apk-note p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+.v2 .apk-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.v2 .apk-note {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+.v2 .apk-bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 26px 28px;
+  border: 1px solid var(--line2);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(34, 211, 238, 0.06));
+}
+.v2 .apk-bot p {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+@media (min-width: 900px) {
+  .v2 .apk-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  }
 }

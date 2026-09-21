@@ -9,16 +9,14 @@ import { botDeepLink } from "@/lib/telegram-deeplink";
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
 
 /**
- * `setRequestLocale` — statik render uchun tilni o‘rnatadi; usiz next-intl
- * `defaultLocale` (uz) ga qaytadi va blog kartochkalaridagi `<Link>` lar
- * ruscha/inglizcha ro‘yxatda ham `/uz/blog/...` ga ketardi.
+ * `setRequestLocale` birinchi chaqiriladi: usiz `force-static` sahifada
+ * next-intl `defaultLocale` (uz) ga qaytadi va havolalar noto'g'ri tilga
+ * ketadi.
  */
-export default async function BlogLayout({ children, params }: Props) {
+export default async function ApkLayout({ children, params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "v2" });
-  const navBotUrl = botDeepLink({ page: "blog", placement: "nav" });
-  const footerBotUrl = botDeepLink({ page: "blog", placement: "footer" });
   const supportUrl = getTelegramSupportUrl();
 
   const navLabels = {
@@ -44,8 +42,21 @@ export default async function BlogLayout({ children, params }: Props) {
 
   return (
     <V2Shell
-      nav={<V2Nav labels={navLabels} botUrl={navBotUrl} variant="inner" activeBlog />}
-      footer={<V2Footer labels={footerLabels} botUrl={footerBotUrl} supportUrl={supportUrl} />}
+      nav={
+        <V2Nav
+          labels={navLabels}
+          botUrl={botDeepLink({ page: "home", placement: "nav" })}
+          variant="inner"
+          activeApk
+        />
+      }
+      footer={
+        <V2Footer
+          labels={footerLabels}
+          botUrl={botDeepLink({ page: "home", placement: "footer" })}
+          supportUrl={supportUrl}
+        />
+      }
     >
       {children}
     </V2Shell>

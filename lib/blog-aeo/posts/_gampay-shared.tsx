@@ -1,8 +1,8 @@
-import { Link } from "@/i18n/navigation";
 import { InlineCta, KeyFacts, Steps, Step, InfoGrid, InfoCard } from "@/components/blog/aeo-blocks";
 import { GamPaySeriesNav } from "@/components/blog/gampay-series-nav";
 import type { GameInfo } from "@/lib/games";
 import type { AeoPost, FaqItem } from "@/lib/blog-aeo/types";
+import { GEMPAY_URL } from "@/lib/site";
 
 /**
  * O'yin to'ldirish maqolalari uchun umumiy qatlam.
@@ -117,7 +117,7 @@ export function gameBodyUz(game: GameInfo, copy: Copy) {
 
         <p>
           Boshqa o‘yinlar va Steam hamyoni ham shu bo‘limda —{" "}
-          <Link href="/gampay">GamPay sahifasi</Link> da to‘liq ro‘yxat bor.
+          <a href={GEMPAY_URL} target="_blank" rel="noopener noreferrer">GamPay sayti</a> da to‘liq ro‘yxat bor.
         </p>
 
         <GamPaySeriesNav locale="uz" />
@@ -211,7 +211,7 @@ export function gameBodyRu(game: GameInfo, copy: Copy) {
 
         <p>
           Другие игры и кошелёк Steam — в том же разделе, полный список на{" "}
-          <Link href="/gampay">странице GamPay</Link>.
+          <a href={GEMPAY_URL} target="_blank" rel="noopener noreferrer">сайте GamPay</a>.
         </p>
 
         <GamPaySeriesNav locale="ru" />

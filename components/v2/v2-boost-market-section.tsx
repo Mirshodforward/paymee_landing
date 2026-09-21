@@ -24,7 +24,13 @@ type Props = {
   bullets: string[];
 };
 
-/** Bosh sahifa: Kanal Boost arenda (1–30 kun, avtomatik). */
+/**
+ * Bosh sahifa: Kanal Boost arenda (1–30 kun, avtomatik).
+ *
+ * Sarlavha bloki alohida `sec-head` emas, o‘ng ustun ichida: telefon baland
+ * bo‘lgani uchun matn to‘liq kenglikda turganda tugmalar yolg‘iz osilib
+ * qolardi. Endi ikki ustun bir xil balandlikda o‘qiladi.
+ */
 export function V2BoostMarketSection({
   kicker,
   title,
@@ -47,17 +53,9 @@ export function V2BoostMarketSection({
   return (
     <section className="sec boost-market-sec" id="boost-market">
       <div className="wrap">
-        <div className="sec-head rv">
-          <div className="kicker">
-            {kicker}
-            <span className="boost-new-pill">{newBadge}</span>
-          </div>
-          <h2 className="h2">{title}</h2>
-          <p className="sec-sub">{subtitle}</p>
-        </div>
-
         <div className="boost-market-layout rv">
           <div className="boost-phone" aria-hidden>
+            <span className="isl" />
             <div className="boost-phone-in">
               <div className="boost-hero">
                 <span className="boost-rocket">🚀</span>
@@ -112,13 +110,19 @@ export function V2BoostMarketSection({
             </div>
           </div>
 
-          <div className="nft-copy">
-            <ul className="nft-bullets">
+          <div className="boost-copy">
+            <div className="kicker">
+              {kicker}
+              <span className="boost-new-pill">{newBadge}</span>
+            </div>
+            <h2 className="h2">{title}</h2>
+            <p className="sec-sub">{subtitle}</p>
+            <ul className="boost-bullets">
               {bullets.map((b) => (
                 <li key={b}>{b}</li>
               ))}
             </ul>
-            <div className="nft-actions">
+            <div className="boost-actions">
               <a className="btn btn-grad mag" href={botUrl} target="_blank" rel="noopener noreferrer">
                 {ctaBot}
                 <ArrowIcon style={{ stroke: "#fff" }} />
