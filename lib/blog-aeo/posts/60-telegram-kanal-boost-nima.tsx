@@ -66,7 +66,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Giveaway’ning o‘zi qanday ishlashi haqida{" "}
-        <Link href="/blog/telegram-premium-giveaway-konkurs">«Premium giveaway»</Link> maqolasida batafsil.
+        «Premium giveaway» maqolasida batafsil.
       </p>
 
       <h2 id="kimga">Kanal boost kimga foydali?</h2>
@@ -163,7 +163,7 @@ function RuBody() {
       </KeyFacts>
       <p>
         Как работает сам giveaway — подробно в статье{" "}
-        <Link href="/blog/telegram-premium-giveaway-konkurs">«Premium giveaway»</Link>.
+        «Premium giveaway».
       </p>
 
       <h2 id="kimga">Кому полезен буст канала?</h2>

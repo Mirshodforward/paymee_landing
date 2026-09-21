@@ -27,13 +27,13 @@ function UzBody() {
       </ol>
       <p>
         Batafsil: <Link href="/blog/telegram-business-nima">Telegram Business nima?</Link> va{" "}
-        <Link href="/blog/telegram-business-api-umumiy-faq">Business API FAQ</Link>.
+        Business API FAQ.
       </p>
       <h2 id="api">Stars, to‘lov va API</h2>
       <p>
         Biznes uchun Stars to‘lovlari va avtomatik Premium/Gifts —{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/payment-api-uzbekistan-tolov-integratsiya">O‘zbekiston to‘lov API</Link>.
+        O‘zbekiston to‘lov API.
       </p>
       <InlineCta text="Mijozlarga Premium yoki Stars sotish — StarsPaymee Business integratsiyasi." />
       <GrowthSeriesAside locale="uz" />

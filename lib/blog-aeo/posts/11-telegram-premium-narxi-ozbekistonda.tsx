@@ -142,7 +142,7 @@ function UzBody() {
         (Visa/Mastercard) karta talab qilinadi. Bundan tashqari narx dollarda ko‘rsatilgani uchun bank konvertatsiya
         komissiyasi ham qo‘shiladi. StarsPaymee mahalliy to‘lov tizimlari bilan to‘g‘ridan-to‘g‘ri ishlaydi —
         konvertatsiya ham, do‘kon ustamasi ham yo‘q. Batafsil:{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">platformalar taqqoslovi</Link>.
+        platformalar taqqoslovi.
       </p>
 
       <h2 id="qaysi">Qaysi paketni tanlash kerak?</h2>
@@ -261,7 +261,7 @@ function RuBody() {
         зарубежная карта (Visa/Mastercard). Кроме того, цена указана в долларах, поэтому сверху ложится ещё и
         банковская комиссия за конвертацию. StarsPaymee работает напрямую с местными платёжными системами — нет ни
         конвертации, ни магазинной наценки. Подробнее:{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">сравнение платформ</Link>.
+        сравнение платформ.
       </p>
 
       <h2 id="qaysi">Какой пакет выбрать?</h2>
@@ -378,7 +378,7 @@ function EnBody() {
         Buying Premium through the Apple App Store or Google Play adds a store margin and requires a foreign
         Visa/Mastercard. On top of that the price is quoted in dollars, so a bank conversion fee lands as well.
         StarsPaymee works directly with local payment systems — no conversion and no store margin. More detail:{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">the platform comparison</Link>.
+        the platform comparison.
       </p>
 
       <h2 id="qaysi">Which pack should you pick?</h2>

@@ -116,7 +116,7 @@ function UzBody() {
         kriptovalyutasiga aylantiradi, so‘ng TON’ni pulga chiqaradi. Bu jarayon oddiy foydalanuvchi sotib olgan Stars’ga
         taalluqli emas — faqat monetizatsiyadan ishlab topilgan yulduzlar chiqariladi. Batafsil —{" "}
         <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Stars orqali daromad qilish mumkinmi»</Link> va{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram Creator Economy»</Link> maqolalarida.
+        «Telegram Creator Economy» maqolalarida.
       </p>
 
       <h2 id="maslahat">Daromadni oshirishning 4 maslahati</h2>
@@ -139,7 +139,7 @@ function UzBody() {
         Stars bilan yana nima qilish mumkinligini{" "}
         <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Stars ishlatish usullari»</Link> maqolasida
         ko‘rasiz; umumiy ekotizim esa{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram ekotizimi»</Link> maqolasida yoritilgan.
+        «Telegram ekotizimi» maqolasida yoritilgan.
       </p>
 
       <Sources
@@ -248,7 +248,7 @@ function RuBody() {
         <strong>Fragment</strong>, а затем выводит TON в деньги. Это не относится к Stars, купленным обычным
         пользователем — выводятся только звёзды, заработанные на монетизации. Подробнее — в статьях{" "}
         <Link href="/blog/telegram-stars-daromad-qilish-mumkinmi">«Можно ли заработать на Stars»</Link> и{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram Creator Economy»</Link>.
+        «Telegram Creator Economy».
       </p>
 
       <h2 id="maslahat">4 совета по росту дохода</h2>
@@ -271,7 +271,7 @@ function RuBody() {
         Что ещё можно делать со Stars — в статье{" "}
         <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Способы использования Stars»</Link>; общая
         экосистема раскрыта в{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Экосистема Telegram»</Link>.
+        «Экосистема Telegram».
       </p>
 
       <Sources

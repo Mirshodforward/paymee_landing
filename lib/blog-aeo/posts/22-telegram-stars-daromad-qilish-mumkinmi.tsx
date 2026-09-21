@@ -108,7 +108,7 @@ function UzBody() {
         Jamlangan Stars belgilangan minimal chegaradan oshgach, ular <strong>Fragment</strong> platformasi orqali TON
         kriptovalyutasiga aylantiriladi, TON esa hamyon orqali pulga chiqariladi. Jarayon vaqt va TON hamyonini talab
         qiladi. Stars va TON farqini{" "}
-        <Link href="/blog/telegram-stars-vs-ton-qaysi-biri">«Stars vs TON»</Link> maqolasida ko‘ring.
+        «Stars vs TON» maqolasida ko‘ring.
       </p>
 
       <h2 id="xato">Keng tarqalgan tushunmovchiliklar</h2>
@@ -231,7 +231,7 @@ function RuBody() {
         Когда накопленные Stars превысят установленный минимум, они конвертируются в криптовалюту TON через{" "}
         <strong>Fragment</strong>, а TON выводится в деньги через кошелёк. Процесс требует времени и TON-кошелька.
         Разницу Stars и TON смотрите в статье{" "}
-        <Link href="/blog/telegram-stars-vs-ton-qaysi-biri">«Stars vs TON»</Link>.
+        «Stars vs TON».
       </p>
 
       <h2 id="xato">Частые заблуждения</h2>

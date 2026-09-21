@@ -48,7 +48,7 @@ function UzBody() {
         </li>
         <li>
           <b>Ishlaydigan yo‘l</b> — yulduz olib, sovg‘ani Telegram ichida{" "}
-          <Link href="/blog/telegram-sovgani-collectible-upgrade">collectible darajasiga ko‘tarish</Link>.
+          collectible darajasiga ko‘tarish.
         </li>
       </KeyFacts>
       <p>
@@ -112,7 +112,7 @@ function RuBody() {
         <li>Обычный подарок — выбираете в разделе подарков, платите в сумах и указываете @username получателя.</li>
         <li>
           Коллекционный экземпляр — сначала берёте Stars, затем делаете upgrade подарка внутри Telegram:{" "}
-          <Link href="/blog/telegram-sovgani-collectible-upgrade">руководство по upgrade</Link>.
+          руководство по upgrade.
         </li>
       </ol>
       <NftGiftSeriesNav locale="ru" />

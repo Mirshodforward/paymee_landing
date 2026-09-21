@@ -61,7 +61,7 @@ function UzBody() {
       <p>
         Bog‘liq:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click callback</Link> va{" "}
+        Click callback va{" "}
         <Link href="/blog/botga-tolov-api-ulash-qollanma">botga to‘lov API ulash</Link>.
       </p>
 
@@ -133,7 +133,7 @@ function RuBody() {
       <p>
         Связанное:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">callback Click</Link> и{" "}
+        callback Click и{" "}
         <Link href="/blog/botga-tolov-api-ulash-qollanma">подключение платёжного API к боту</Link>.
       </p>
 
@@ -205,7 +205,7 @@ function EnBody() {
       <p>
         Related:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click callback</Link> and{" "}
+        Click callback and{" "}
         <Link href="/blog/botga-tolov-api-ulash-qollanma">connecting a payment API to a bot</Link>.
       </p>
 

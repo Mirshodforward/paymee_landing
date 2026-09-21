@@ -40,13 +40,13 @@ function UzBody() {
       <h2 id="oshirish">Reytingni tez oshirish</h2>
       <ul>
         <li>
-          Jamoangizdan <Link href="/blog/telegram-premium-boost">Premium boost</Link> so‘rang.
+          Jamoangizdan Premium boost so‘rang.
         </li>
         <li>
-          <Link href="/blog/telegram-premium-boost">Kanalni boost qilish</Link> rejasini tuzing.
+          Kanalni boost qilish rejasini tuzing.
         </li>
         <li>
-          Muddatli <Link href="/blog/telegram-boost-ijarasi">boost ijarasi</Link> — maqsadli kampaniya uchun.
+          Muddatli boost ijarasi — maqsadli kampaniya uchun.
         </li>
       </ul>
       <h2 id="kuzatish">Reytingni kuzatish</h2>

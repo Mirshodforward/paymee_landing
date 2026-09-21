@@ -36,8 +36,8 @@ function UzBody() {
       </ul>
       <h2 id="boost">Boost strategiyasi</h2>
       <p>
-        <Link href="/blog/telegram-premium-boost">Kanalni boost qilish</Link> — kampaniya boshida level
-        ochilishi uchun. <Link href="/blog/telegram-premium-boost">Premium boost</Link>ni faol obunachilarga eslatib
+        Kanalni boost qilish — kampaniya boshida level
+        ochilishi uchun. Premium boostni faol obunachilarga eslatib
         turing. Avtomatik yetkazish: <Link href="/blog/telegram-kanalga-boost-sotib-olish">boost avtomatik</Link>.
       </p>
       <h2 id="byudjet">Byudjet va xizmat tanlash</h2>

@@ -24,10 +24,6 @@ const labels: Record<
       title: "Telegram biznes akkaunti",
       blurb: "Business profil, API va mijozlar bilan ishlash.",
     },
-    "telegram-premium-boost": {
-      title: "Kanal uchun boost olish",
-      blurb: "Level, Stories va giveaway imkoniyatlari.",
-    },
     "ozbekistonda-telegram-stars-sotib-olish": {
       title: "Telegram Stars sotib olish",
       blurb: "To‘liq qo‘llanma: narx, bot, xavfsizlik.",
@@ -39,10 +35,6 @@ const labels: Record<
     "telegram-username-sotib-olish": {
       title: "Telegram username sotib olish",
       blurb: "Fragment, qisqa @nom va ehtiyot choralari.",
-    },
-    "telegram-kanal-guruh-reklama-xizmatlari": {
-      title: "Kanal va guruh reklamasi",
-      blurb: "Telegram Ads, post va targeting.",
     },
   },
   ru: {
@@ -62,10 +54,6 @@ const labels: Record<
       title: "Бизнес-аккаунт Telegram",
       blurb: "Business-профиль, API и клиенты.",
     },
-    "telegram-premium-boost": {
-      title: "Boost для канала",
-      blurb: "Уровни, Stories и giveaway.",
-    },
     "ozbekistonda-telegram-stars-sotib-olish": {
       title: "Купить Telegram Stars",
       blurb: "Полный гайд: цена, бот, безопасность.",
@@ -77,10 +65,6 @@ const labels: Record<
     "telegram-username-sotib-olish": {
       title: "Купить username Telegram",
       blurb: "Fragment, короткие @имена и риски.",
-    },
-    "telegram-kanal-guruh-reklama-xizmatlari": {
-      title: "Реклама в каналах и группах",
-      blurb: "Telegram Ads, посты и таргетинг.",
     },
   },
   en: {
@@ -100,10 +84,6 @@ const labels: Record<
       title: "Telegram business account",
       blurb: "Business profile, API and clients.",
     },
-    "telegram-premium-boost": {
-      title: "Channel boost guide",
-      blurb: "Levels, Stories and giveaways.",
-    },
     "ozbekistonda-telegram-stars-sotib-olish": {
       title: "Buy Telegram Stars",
       blurb: "Full guide: price, bot, safety.",
@@ -115,10 +95,6 @@ const labels: Record<
     "telegram-username-sotib-olish": {
       title: "Buy a Telegram username",
       blurb: "Fragment, short @names and risks.",
-    },
-    "telegram-kanal-guruh-reklama-xizmatlari": {
-      title: "Channel & group ads",
-      blurb: "Telegram Ads, posts and targeting.",
     },
   },
 };

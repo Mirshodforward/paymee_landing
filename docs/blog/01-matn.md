@@ -1,125 +1,12 @@
-# StarsPaymee blog — to‘liq o‘zbekcha matn (1/4-qism)
+# StarsPaymee blog — to‘liq o‘zbekcha matn (1/3-qism)
 
-Maqola 1–45 (jami 142). Sana bo‘yicha yangidan eskiga.
+Maqola 1–45 (jami 101). Sana bo‘yicha yangidan eskiga.
 
-
-
----
-
-# 1. Steam hamyoni so‘mdami yoki rublda? Valyutani aniqlab, to‘g‘ri to‘ldirish
-
-- **URL:** /uz/blog/steam-som-yoki-rubl-hamyon
-- **Kategoriya:** Steam · **Tur:** info · **Sana:** 2026-09-16
-- **Manba fayl:** 178-steam-som-yoki-rubl-hamyon.tsx
-- **Tillar:** uz + ru + en
-- **Hajm:** ~458 so‘z
-
-**Meta title:** Steam hamyoni so‘mda yoki rublda — qanday to‘ldirish
-
-**Meta description:** Steam hamyoni so‘mda yoki rublda bo‘lishi mumkin. Valyutani qanday bilish, ikkalasini ham o‘zbek kartasi bilan to‘ldirish va mintaqa xavfi.
-
-**Excerpt:** Nega Steam hamyonida valyuta har xil bo‘ladi, so‘m va rubl orasidagi farq, qat’iy kurs va chegaralar hamda mintaqani o‘zgartirmaslik kerakligi.
-
-**Kalit so‘zlar:** steam hamyon valyutasi · steam rublda toldirish · steam somda toldirish · steam wallet uzs rub · пополнение steam сумы или рубли · steam кошелёк валюта узбекистан
-
-### Qisqa javob
-
-Avval bitta narsani aniqlang: Steam hamyoningiz qaysi valyutada — so‘mda (UZS) yoki hali ham rublda (RUB). To‘lovni esa ikkala holatda ham o‘zbek kartasi bilan so‘mda qilasiz; rus kartasi kerak emas. Kurs: 1 dollar = so‘m, bitta buyurtmada $ dan $ gacha.
-
-### Maqola matni
-
-## Nega Steam hamyonida valyuta har xil bo‘ladi
-
-Steam hamyon valyutasini yashash mamlakatingizga emas, hisob ochilgan yoki birinchi marta to‘ldirilgan paytdagi holatga qarab biriktiradi. Shundan uchta keng tarqalgan vaziyat kelib chiqadi:
-
-**Uchta holat:**
-
-- Hisob ancha oldin ochilgan — O‘zbekiston alohida mintaqa bo‘lmagan paytda, valyuta rublda qolgan.
-
-- Birinchi to‘ldirish rus yo‘li bilan o‘tgan — valyuta o‘shanda rublga mahkamlangan.
-
-- Hisob O‘zbekiston uchun ochilgan — valyuta so‘m yoki dollar.
-
-Muhimi: Steam hamyon valyutasini qo‘lda erkin o‘zgartirishga ruxsat bermaydi. Shuning uchun amaliy savol «qaysi valyutani xohlayman» emas, balki «menda qaysi valyuta bor va uni qanday to‘ldiraman».
-
-## So‘m yoki rubl — xaridor uchun farqi
-
-const copy = [locale]; (
-
-);
-
-Ko‘rib turganingizdek, to‘lov tomoni ikkala holatda ham bir xil: siz o‘zbek kartangizdan so‘mda to‘laysiz. Farq faqat hisobga qaysi valyutada tushishida va konvertatsiya nechta bosqichdan o‘tishida.
-
-## Kurs va to‘ldirish chegaralari
-
-Kurs qat’iy: 1 dollar = so‘m. Bitta buyurtmada $ dan $ gacha to‘ldirish mumkin, ya’ni eng kichik summa — .
-
-const t = [locale]; return (
-
-);
-
-Jadval sayt sozlamalaridagi kursdan avtomatik hisoblanadi. Yakuniy summa to‘lovni tasdiqlashdan oldin botda ko‘rsatiladi — yashirin komissiya yo‘q.
-
-> CTA: Steam hamyonini so‘mda to‘ldiring.
-
-## Qanday to‘ldiriladi
-
-- **1. Botni oching:** Telegramda
-
-@StarsPaymee_bot
-
-→ GamPay ro‘yxatidan «Steam Balance».
-
-- **2. Steam login’ini kiriting:** Bu ochiq login nomi. Parol hech qachon so‘ralmaydi — so‘rasa, bu firibgarlik.
-
-- **3. Summani ko‘rsating:** $ dan $ gacha; so‘mdagi qiymati darhol ko‘rinadi.
-
-- **4. Hamyon valyutasini ayting:** Rublda bo‘lsa, buni botda yoki qo‘llab-quvvatlashda aniqlashtiring — hisob avtomatik moslashadi.
-
-- **5. So‘mda to‘lang:** UzCard, HUMO, Click, Payme yoki Uzum.
-
-- **6. Balansni tekshiring:** Odatda bir necha daqiqada hisobga tushadi.
-
-> **Eslatma:**
-
-Hamyon valyutasi yoki mintaqani VPN va sozlamalar orqali o‘zgartirishga urinmang. Bu Steam qoidalariga zid va hisobni cheklash yoki bloklashga olib kelishi mumkin. To‘g‘ri yo‘l — mavjud valyutani shu holicha to‘ldirish.
-
-## Nega valyutani o‘zingiz o‘zgartirmaganingiz ma’qul
-
-**Sabablar:**
-
-- Steam valyutani almashtirish uchun balansni to‘liq nolga tushirishni talab qiladi.
-
-- Oxirgi tranzaksiyadan keyin bir necha oy kutish talab qilinishi mumkin.
-
-- VPN orqali mintaqa almashtirish qoidalar buzilishi hisoblanadi.
-
-- Mavjud valyutani to‘ldirish esa hech qanday qoidani buzmaydi.
-
-## Hamyon valyutangizni qanday bilish mumkin
-
-- **Steam mijozida:** Akkaunt → Akkauntni boshqarish → Steam hamyoni.
-
-- **Saytda:** store.steampowered.com dagi akkaunt bo‘limida ham o‘sha joyda ko‘rinadi.
-
-- **Xarid tarixida:** Oldingi to‘lovlar qaysi valyutada o‘tgani ko‘rsatilgan.
-
-- **Bilmasangiz:** Buyurtmadan oldin qo‘llab-quvvatlashdan so‘rang — bu bir daqiqalik ish.
-
-Qarang: 1 dollardan to‘ldirish, balans tushmasa nima qilish, Steam login nima. Boshqa o‘yinlar — GamPay sahifasida.
-
-**Manbalar:**
-- store.steampowered.com — https://store.steampowered.com/
-- help.steampowered.com — https://help.steampowered.com/
-
-### CTA
-
-**Steam balansini to‘ldiring** — @StarsPaymee_bot — so‘mda to‘lov, hamyon valyutasidan qat’i nazar.
 
 
 ---
 
-# 2. Payme orqali Telegram Stars va Premium sotib olish
+# 1. Payme orqali Telegram Stars va Premium sotib olish
 
 - **URL:** /uz/blog/payme-orqali-stars-va-premium-sotib-olish
 - **Kategoriya:** Stars · **Tur:** howto · **Sana:** 2026-09-16
@@ -268,7 +155,7 @@ Qisqasi: tezlik va xotirjamlik kerak bo‘lsa — Payme yoki Click; eng arzon na
 
 ---
 
-# 3. Naqd pul bilan Telegram Stars va Premium sotib olish
+# 2. Naqd pul bilan Telegram Stars va Premium sotib olish
 
 - **URL:** /uz/blog/naqd-pul-bilan-telegram-stars-sotib-olish
 - **Kategoriya:** Stars · **Tur:** howto · **Sana:** 2026-09-16
@@ -393,141 +280,7 @@ Xalqaro Visa yoki Mastercard bu yo‘lda ham, boshqa yo‘llarda ham kerak emas.
 
 ---
 
-# 4. Portals, MRKT, Getgems va Tonnel nomidan yozadigan soxta akkauntlar
-
-- **URL:** /uz/blog/portals-mrkt-getgems-soxta-akkauntlar
-- **Kategoriya:** Xavfsizlik · **Tur:** problem · **Sana:** 2026-09-16
-- **Manba fayl:** 181-portals-mrkt-getgems-soxta-akkauntlar.tsx
-- **Tillar:** uz + ru + en
-- **Hajm:** ~764 so‘z
-
-**Meta title:** Portals va gift marketlar: soxta akkauntlar
-
-**Meta description:** Telegram sovg‘a marketiga gift yuborilganda ogohlantirish yuboradi. Soxta «support» sxemasi, akkauntni tekshirish usuli va aldangan bo‘lsangiz nima qilish kerak.
-
-**Excerpt:** Telegram sovg‘a marketiga gift yuborilganda xizmat akkaunti orqali ogohlantirish yubora boshladi. Firibgarlik sxemasi qanday ishlaydi va akkauntni qanday tekshirish kerak.
-
-**Kalit so‘zlar:** portals soxta akkaunt · telegram gift market firibgarlik · getgems tonnel mrkt xavfsizmi · telegram sovga marketiga yuborish xavfi · portals фейковый аккаунт · мошенники telegram подарки маркет · telegram gift marketplace scam
-
-### Qisqa javob
-
-Telegram Portals, MRKT, Getgems va Tonnel kabi sovg‘a maydonchalariga sovg‘a yuborilganda o‘zining xizmat akkaunti orqali qo‘shimcha ogohlantirish yubora boshladi: market nomidan yozayotgan akkauntni tekshiring. Asosiy qoida o‘zgarmaydi — Telegram ham, market ham hech qachon parol yoki kirish kodini so‘ramaydi. Rasmiy akkauntlar ro‘yxatini faqat marketning o‘z ilovasidan tasdiqlang.
-
-### Maqola matni
-
-## Nima o‘zgardi
-
-Sovg‘ani marketga (Portals, MRKT, Getgems, Tonnel va shunga o‘xshash maydonchalarga) yuborganingizdan so‘ng, Telegramning ko‘k belgili xizmat akkaunti qo‘shimcha xabar yuboradi. Xabarning mazmuni taxminan shunday:
-
-> **Eslatma:** Market nomidan yozayotgan soxta akkauntlardan ehtiyot bo‘ling. Marketning rasmiy akkauntlari — asosiy ilova, qo‘llab-quvvatlash boti va sovg‘a saqlanadigan akkaunt. Boshqa har qanday akkaunt, o‘zini market vakili deb tanishtirsa ham, firibgar. Telegram siz bilan faqat shu akkaunt orqali bog‘lanadi va hech qachon parol yoki kirish kodini so‘ramaydi.
-
-Bu xabar sizga yangi ma’lumot bergani uchun emas, balki aynan o‘sha daqiqada kelgani uchun qimmatli. Sovg‘a yuborilgan payt — firibgar uchun eng qulay lahza, chunki siz market javobini kutayotgan bo‘lasiz.
-
-## Nega aynan shu paytda
-
-Sovg‘ani marketga yuborish ochiq harakat: uni kuzatish mumkin. Firibgar buni ko‘radi va sizga bir necha soniya ichida yozadi — go‘yo market qo‘llab-quvvatlash xizmati.
-
-**Nima uchun bu ishlaydi:**
-
-- Vaqt mos tushadi — siz endigina sovg‘a yuborgansiz, xabar tabiiy ko‘rinadi.
-
-- Ism va avatar bir xil — logotip va nomni ko‘chirish bir daqiqalik ish.
-
-- Shoshiltirish bor — «tranzaksiya to‘xtab qoldi, tezda tasdiqlang» degan ohang.
-
-- Siz kutayotgan bo‘lasiz — kutayotgan odam tekshirishga kamroq vaqt sarflaydi.
-
-## Firibgarlik sxemasi qanday ishlaydi
-
-- **1. Siz sovg‘ani marketga yuborasiz:** Bu normal harakat — sotuvga qo‘yish yoki saqlash uchun.
-
-- **2. Darhol «support» yozadi:** Ismi va avatari marketniki. Ko‘pincha «tranzaksiya tasdiqlanmadi» deb boshlanadi.
-
-- **3. Havola yuboradi:** Tashqi ko‘rinishi market sahifasiga o‘xshash, lekin manzili boshqa sayt.
-
-- **4. Kirishni so‘raydi:** «Akkauntni tasdiqlang» degan bahona bilan telefon raqami, SMS-kod yoki 2FA paroli so‘raladi. Aynan shu yerda to‘xtash kerak.
-
-- **5. Akkaunt qo‘ldan ketadi:** Kod berilsa, akkauntga kirib olinadi va undagi sovg‘alar boshqa joyga o‘tkaziladi.
-
-> **Eslatma:** Kirish kodi va 2FA paroli hech kimga, hech qachon, hech qanday sabab bilan berilmaydi. Na Telegram, na market, na «administrator» uni so‘ramaydi. Bu so‘ralgan payt — suhbatning oxiri.
-
-## Akkauntni qanday tekshirish kerak
-
-Bitta ishonchli usul bor va u juda oddiy: siz o‘zingiz boshlang. Kimdir sizga yozgan chatda javob bermang — marketning ilovasini oching va qo‘llab-quvvatlashga o‘sha yerdan kiring.
-
-- **Ilovadan kiring:** Marketning mini-ilovasi ichida qo‘llab-quvvatlash havolasi bor. Faqat shu havolaga ishoning.
-
-- **Manzilni o‘qing:** Username’ni belgi-belgilab solishtiring: l va I, 0 va O almashtiriladi.
-
-- **Shoshmang:** Haqiqiy support sizni shoshiltirmaydi. Shoshirish — o‘zi bitta belgi.
-
-- **Havolaga bosmang:** Noma’lum akkaunt yuborgan havolani ochmang, hatto qiziq bo‘lsa ham.
-
-Sovg‘a havolasini tekshirishning batafsil usullari alohida maqolada:
-
-Telegram sovg‘a havolasini qanday tekshirish
-
-.
-
-## Nimaga ishonmaslik kerak
-
-const copy = [locale]; (
-
-);
-
-- **Yaxshi odat:** ✅ Har doim ilovadan boshlash ✅ 2FA parolini yoqib qo‘yish ✅ Faol sessiyalarni vaqti-vaqti bilan ko‘rib chiqish
-
-- **Xavfli odat:** ❌ O‘zi yozgan «support» ga javob berish ❌ Skrinshotni dalil deb qabul qilish ❌ «Tez bo‘ling» degan xabarga ergashish
-
-## Nega biz bu yerda akkaunt ro‘yxatini bermaymiz
-
-Odatda bunday maqolalarda «mana rasmiy akkauntlar» degan ro‘yxat beriladi. Biz ataylab bermaymiz va sababini ochiq aytamiz.
-
-**Sabablari:**
-
-- Ro‘yxat eskiradi. Marketlar akkauntini o‘zgartirsa, maqoladagi eski username firibgarga bo‘shab qoladi.
-
-- Uchinchi tomon ro‘yxati isbot emas. Bizning saytimizda yozilgani — akkauntni haqiqiy qilmaydi.
-
-- To‘g‘ri manba bitta. Rasmiy akkauntni marketning o‘z ilovasidan va Telegram xizmat akkauntining xabaridan tasdiqlash kerak.
-
-Ya’ni to‘g‘ri savol «qaysi username rasmiy?» emas, balki «men bu manzilni qayerdan oldim?». Agar javob «o‘zi yozgan edi» bo‘lsa — u rasmiy emas.
-
-## Agar aldangan bo‘lsangiz
-
-- **1. Sessiyalarni tekshiring:** Telegram → Sozlamalar → Qurilmalar. Notanish sessiyalarni darhol yopib tashlang.
-
-- **2. 2FA parolini almashtiring:** Sozlamalar → Maxfiylik va xavfsizlik → Ikki bosqichli tasdiqlash.
-
-- **3. Marketga o‘z ilovasidan yozing:** Firibgar yozgan chatdan emas — ilovadagi rasmiy qo‘llab-quvvatlash havolasidan.
-
-- **4. Firibgar akkauntini shikoyat qiling:** Chatda «Report» → «Scam or fraud». Bu keyingi odamni himoya qiladi.
-
-- **5. Yaqinlaringizni ogohlantiring:** Sizning akkauntingizdan ular ham xabar olishi mumkin.
-
-> **Eslatma:** Sovg‘a boshqa akkauntga o‘tkazib yuborilgan bo‘lsa, uni qaytarish ko‘pincha imkonsiz. Shuning uchun bu maqoladagi barcha maslahat oldini olishga qaratilgan.
-
-## Bu StarsPaymee’ga qanday aloqador
-
-To‘g‘ridan-to‘g‘ri aloqasi yo‘q, lekin bilib qo‘yganingiz foydali: @StarsPaymee_bot kolleksion sovg‘alarni yetkazmaydi — Telegram bu imkoniyatni botlar uchun yopgan. Buni batafsil alohida maqolada yozganmiz.
-
-Demak, kimdir «StarsPaymee nomidan» sizga kolleksion gift taklif qilsa yoki akkauntingizga kirishni so‘rasa — bu biz emas. Bizning xaridimizda faqat ochiq @username kerak bo‘ladi: parol ham, SMS-kod ham, 2FA ham hech qachon so‘ralmaydi.
-
-> CTA: Stars va Premium — parolsiz, faqat username orqali.
-
-**Foydali havolalar:**
-- Telegram FAQ — https://telegram.org/faq
-- Telegram Privacy Policy — https://telegram.org/privacy
-- @StarsPaymeeSupport — https://t.me/StarsPaymeeSupport
-
-### CTA
-
-**Parolsiz, xavfsiz xarid** — @StarsPaymee_bot — Stars va Premium uchun faqat @username kerak, parol hech qachon so‘ralmaydi.
-
-
----
-
-# 5. Kolleksion Telegram sovg‘alari endi bot orqali olinmaydi — nima qilish kerak?
+# 3. Kolleksion Telegram sovg‘alari endi bot orqali olinmaydi — nima qilish kerak?
 
 - **URL:** /uz/blog/kolleksion-gift-bot-orqali-olinmaydi
 - **Kategoriya:** Gifts · **Tur:** info · **Sana:** 2026-09-14
@@ -633,7 +386,7 @@ Qarang: sovg‘a yuborish qo‘llanmasi, NFT Gift nima, sovg‘a narxi nimaga bo
 
 ---
 
-# 6. Telegramda xabar yuborish uchun nega Stars so‘rayapti?
+# 4. Telegramda xabar yuborish uchun nega Stars so‘rayapti?
 
 - **URL:** /uz/blog/telegram-xabar-yuborish-stars
 - **Kategoriya:** Stars · **Tur:** problem · **Sana:** 2026-09-08
@@ -742,7 +495,7 @@ Agar siz aksincha — o‘zingiz kiruvchi xabarlarga narx qo‘ymoqchi bo‘lsan
 
 ---
 
-# 7. Telegram Gift yuborilmayapti: sababini qanday aniqlash mumkin?
+# 5. Telegram Gift yuborilmayapti: sababini qanday aniqlash mumkin?
 
 - **URL:** /uz/blog/telegram-gift-yuborilmayapti
 - **Kategoriya:** Gifts · **Tur:** problem · **Sana:** 2026-09-08
@@ -887,7 +640,7 @@ Yozish manzili —
 
 ---
 
-# 8. Telegram Premium bor odamga yana Premium sovg‘a qilsa bo‘ladimi?
+# 6. Telegram Premium bor odamga yana Premium sovg‘a qilsa bo‘ladimi?
 
 - **URL:** /uz/blog/premium-bor-odamga-premium-sovga
 - **Kategoriya:** Premium · **Tur:** problem · **Sana:** 2026-09-08
@@ -1008,7 +761,7 @@ Manzil —
 
 ---
 
-# 9. Premium olsam, telefonimdagi barcha Telegram akkauntlariga ishlaydimi?
+# 7. Premium olsam, telefonimdagi barcha Telegram akkauntlariga ishlaydimi?
 
 - **URL:** /uz/blog/telegram-premium-bir-nechta-akkaunt
 - **Kategoriya:** Premium · **Tur:** info · **Sana:** 2026-09-08
@@ -1114,7 +867,7 @@ Xarid tartibi — Premium olishning eng oson usuli; narxlar — Premium narxi; b
 
 ---
 
-# 10. Telegram Premium tugasa fayllar, emoji va sozlamalar nima bo‘ladi?
+# 8. Telegram Premium tugasa fayllar, emoji va sozlamalar nima bo‘ladi?
 
 - **URL:** /uz/blog/telegram-premium-tugasa-nima-boladi
 - **Kategoriya:** Premium · **Tur:** info · **Sana:** 2026-09-08
@@ -1206,7 +959,7 @@ Qayta faollashtirish uchun avvalgi tarifni tanlash shart emas: muddatlar va narx
 
 ---
 
-# 11. Telegramga kirishda nega Premium yoki SMS uchun pul so‘rayapti?
+# 9. Telegramga kirishda nega Premium yoki SMS uchun pul so‘rayapti?
 
 - **URL:** /uz/blog/telegramga-kirishda-premium-sms-tolov
 - **Kategoriya:** Telegram · **Tur:** problem · **Sana:** 2026-09-08
@@ -1319,7 +1072,7 @@ Agar sizga Premium o‘z imkoniyatlari uchun kerak bo‘lsa — xarid tartibi va
 
 ---
 
-# 12. Telegram Gift havolasi haqiqiymi? Xariddan oldin tekshirish
+# 10. Telegram Gift havolasi haqiqiymi? Xariddan oldin tekshirish
 
 - **URL:** /uz/blog/telegram-gift-havolasini-tekshirish
 - **Kategoriya:** Xavfsizlik · **Tur:** problem · **Sana:** 2026-09-08
@@ -1456,7 +1209,7 @@ Akkauntni himoyalash bo‘yicha to‘liq qo‘llanma — 2FA va himoya choralari
 
 ---
 
-# 13. Telegram Gift sotilmayapti: narx, cheklov va xaridor topish
+# 11. Telegram Gift sotilmayapti: narx, cheklov va xaridor topish
 
 - **URL:** /uz/blog/telegram-gift-sotilmayapti
 - **Kategoriya:** Gifts · **Tur:** problem · **Sana:** 2026-09-08
@@ -1592,7 +1345,7 @@ Havola va sotuvchini tekshirish bo‘yicha — Gift havolasini tekshirish.
 
 ---
 
-# 14. Telegramda NFT sovg‘a ijarasi: noyob gift’ni arzon va muddatga olish
+# 12. Telegramda NFT sovg‘a ijarasi: noyob gift’ni arzon va muddatga olish
 
 - **URL:** /uz/blog/telegram-nft-sovga-ijarasi
 - **Kategoriya:** Gifts · **Tur:** info · **Sana:** 2026-09-08
@@ -1711,132 +1464,7 @@ Batafsil: NFT Gift nima, oddiy va NFT sovg‘alar xaridi, sovg‘a narxi nimaga 
 
 ---
 
-# 15. Steam hamyonini 1 dollardan to‘ldirish: qat’iy kurs, so‘mda to‘lov
-
-- **URL:** /uz/blog/steam-1-dollardan-toldirish
-- **Kategoriya:** Steam · **Tur:** howto · **Sana:** 2026-09-08
-- **Manba fayl:** 174-steam-1-dollardan-toldirish.tsx
-- **Tillar:** uz + ru + en
-- **Hajm:** ~609 so‘z
-
-**Meta title:** Steam’ni 1 dollardan to‘ldirish — qat’iy kurs
-
-**Meta description:** Steam hamyonini 1 dollardan so‘mda to‘ldirish: qat’iy kurs bo‘yicha tayyor hisob jadvali, qadamlar, to‘lov usullari va login bilan bog‘liq xavfsizlik.
-
-**Excerpt:** Qat’iy kurs bo‘yicha hisob jadvali, nega eng kam summa 1 dollar, qadam-baqadam to‘ldirish va nega parol emas, faqat login so‘raladi.
-
-**Kalit so‘zlar:** steam 1 dollardan toldirish · steam kursi qancha · steam hamyonini somda toldirish · steam eng kam summa · пополнить steam от 1 доллара · steam кошелёк курс сум · ozbek somida steam balansini toldirish · steam hisobini toldirish · steam wallet uzcard humo · steam wallet narxlari
-
-### Qisqa javob
-
-Steam hamyonini dollardan boshlab to‘ldirish mumkin. Kurs qat’iy — 1 dollar = so‘m, ya’ni yakuniy summa oldindan ma’lum va oxirgi daqiqada o‘zgarmaydi. Buyurtma @StarsPaymee_bot orqali, to‘lov esa odatiy so‘mda: UzCard, HUMO, Click, Payme, Uzum yoki Paynet.
-
-### Maqola matni
-
-O‘zbekistondagi ko‘p o‘yinchiga tanish holat: Steam’da o‘yin yoki donat olmoqchisiz, lekin kartani to‘g‘ridan-to‘g‘ri bog‘lash yoki dollarda to‘lash yo‘lini topish alohida muammoga aylanadi. Qat’iy kursdagi to‘ldirish shu zanjirni butunlay chetlab o‘tadi.
-
-## Qat’iy kurs va tayyor hisob
-
-Kurs so‘m = 1 dollar. Bu shuni anglatadiki, summani oldindan o‘zingiz hisoblab olishingiz mumkin va to‘lov paytida raqam o‘zgarmaydi:
-
-const t = [locale]; (
-
-);
-
-Jadval sayt sozlamalaridagi kursdan avtomatik hisoblanadi. Uchinchi ustun — faqat mo‘ljal uchun: Steam’dagi narxlar chegirma va mintaqaga qarab o‘zgaradi.
-
-> CTA: Steam hamyonini so‘mda to‘ldiring — 1 dollardan boshlab.
-
-## Nega eng kichik summa dollar
-
-Kirish chegarasi ataylab past qilingan. Har doim ham katta summa kerak emas — ko‘pincha yetmayotgani atigi bir-ikki dollar bo‘ladi:
-
-- **Chegirmadagi o‘yin:** Balansda 2 dollar yetmayapti — shuni qo‘shasiz, xolos.
-
-- **Kichik donat:** Sevimli o‘yindagi kichik xarid uchun katta summa shart emas.
-
-- **Do‘stga sovg‘a:** Steam’da arzon o‘yinni sovg‘a qilish uchun aynan kerakli miqdor.
-
-- **Birinchi marta sinash:** Xizmatni katta pul bilan emas, 1 dollar bilan sinab ko‘rish mumkin.
-
-## Qadam-baqadam: hamyonni qanday to‘ldirish
-
-- **1. Botni oching:** Telegramda
-
-@StarsPaymee_bot
-
-ni ishga tushiring.
-
-- **2. Steam hamyoni bo‘limini tanlang:** GamPay javonida Steam alohida turadi.
-
-- **3. Summani dollarda ko‘rsating:** dollardan boshlab istalgan miqdor — so‘mdagi qiymati darhol ko‘rinadi.
-
-- **4. Steam login’ingizni kiriting:** Bu — hisobingizning ochiq login nomi; parol so‘ralmaydi.
-
-- **5. So‘mda to‘lang:** UzCard, HUMO, Click, Payme, Uzum yoki Paynet.
-
-- **6. Balansni tekshiring:** Mablag‘ hisobga tushgach, uni o‘yin, donat yoki sovg‘aga sarflashingiz mumkin.
-
-## Kimga qulay
-
-**Odatdagi holatlar:**
-
-- Chegirmadagi o‘yinni olmoqchi, lekin dollarda to‘lash yo‘li yo‘q o‘yinchilarga.
-
-- O‘yin ichida kichik summalar bilan donat qiladiganlarga.
-
-- Farzandiga tug‘ilgan kunga Steam balansini sovg‘a qilmoqchi bo‘lgan ota-onalarga.
-
-- Valyutadagi bank kartasisiz Steam’ni to‘ldirish yo‘lini qidirayotganlarga.
-
-## To‘lov usullari, limit va komissiya
-
-**Nimani bilish kerak:**
-
-- To‘lov usullari: UzCard, HUMO, Click, Payme va Uzum — hammasi so‘mda, xalqaro kartasiz.
-
-- Eng kichik summa: dollar, ya’ni .
-
-- Bitta buyurtmadagi eng katta summa: dollar; kattaroq summa bir necha buyurtmaga bo‘linadi.
-
-- Komissiya: botda ko‘rsatilgan summa yakuniy — ustiga alohida xizmat haqi qo‘shilmaydi. Bank tomonida karta shartlariga qarab o‘z komissiyasi bo‘lishi mumkin.
-
-- Valyuta: to‘lov so‘mda, hisob esa Steam hamyoningiz valyutasida to‘ldiriladi — qaysi valyuta ekanini shu yerda aniqlaysiz.
-
-Balans kelmay qolsa, avval Steam ilovasini qayta ishga tushiring, keyin buyurtma raqami bilan supportga yozing — bu holat «Steam balansi tushmadi» maqolasida batafsil.
-
-## Nega login so‘raladi, parol esa yo‘q
-
-Mablag‘ aynan sizning hisobingizga tushishi uchun bot Steam login (account name) ni so‘raydi — bu akkaunt yaratganda tanlagan kirish nomingiz. Uni profil nomi bilan aralashtirmang: profil nomi istalgan vaqtda o‘zgartiriladi va hammaga ko‘rinadi, login esa o‘zgarmaydi va hisobni aniq belgilaydi. Login parol emas, lekin uni ham keraksiz joyda yozib yurmang. Parol, Steam Guard kodi yoki pochtaga kelgan kod hech qachon so‘ralmaydi.
-
-Agar biror xizmat sizdan parol yoki Steam Guard kodini so‘rasa — bu hisobni o‘g‘irlash urinishi. Batafsil: Steam hisobini himoya qilish va Steam login nima.
-
-## Ko‘p uchraydigan savollar
-
-**Diqqat qiling:**
-
-- Login’ni to‘g‘ri yozing. Mablag‘ siz ko‘rsatgan hisobga tushadi — harf xatosi boshqa odamga olib boradi.
-
-- Hisob valyutasi. Steam hisobingiz valyutasi dollar bo‘lmasa, konvertatsiya Steam tomonida bo‘ladi va yakuniy raqam farq qilishi mumkin.
-
-- Balans tushmasa. Avval Steam’da sahifani yangilang, keyin buyurtma raqami bilan yozing — alohida qo‘llanma bor.
-
-- Kurs o‘zgarishi mumkin. Bu sahifadagi raqam joriy sozlamadan olinadi; buyurtma paytidagi summani botda ko‘rasiz.
-
-Qarang: so‘mda Steam to‘ldirish, Steam Wallet narxlari, xavfsizlik masalasi. Boshqa o‘yinlar — GamPay sahifasida.
-
-**Manbalar:**
-- store.steampowered.com — https://store.steampowered.com/
-- help.steampowered.com — https://help.steampowered.com/
-
-### CTA
-
-**Steam balansini to‘ldiring** — @StarsPaymee_bot — 1 dollardan, qat’iy kurs, so‘mda to‘lov.
-
-
----
-
-# 16. Taymer bilan sovg‘a: hozir to‘lang, aynan vaqtida yetkazamiz
+# 13. Taymer bilan sovg‘a: hozir to‘lang, aynan vaqtida yetkazamiz
 
 - **URL:** /uz/blog/taymer-bilan-sovga-yuborish
 - **Kategoriya:** Gifts · **Tur:** howto · **Sana:** 2026-09-08
@@ -1951,7 +1579,7 @@ Qarang: Premium’ni username orqali sovg‘a qilish, sovg‘a yuborish qo‘lla
 
 ---
 
-# 17. Telegram sovg‘alari va NFT sovg‘alar: so‘m va rublda sotib olish
+# 14. Telegram sovg‘alari va NFT sovg‘alar: so‘m va rublda sotib olish
 
 - **URL:** /uz/blog/telegram-sovga-va-nft-sovga-sotib-olish
 - **Kategoriya:** Gifts · **Tur:** info · **Sana:** 2026-08-28 (yangilangan: 2026-09-08)
@@ -2104,120 +1732,7 @@ Shuningdek o‘qing: so‘mda Stars sotib olish, Premium 3, 6 va 12 oy, sovg‘a
 
 ---
 
-# 18. Telegram Premium 3, 6 va 12 oy: O‘zbekistonda so‘mda sotib olish
-
-- **URL:** /uz/blog/telegram-premium-3-6-12-oy-sotib-olish
-- **Kategoriya:** Premium · **Tur:** howto · **Sana:** 2026-08-27
-- **Manba fayl:** 162-telegram-premium-3-6-12-oy-sotib-olish.tsx
-- **Tillar:** uz + ru + en
-- **Hajm:** ~549 so‘z
-
-**Meta title:** Telegram Premium 3, 6, 12 oy — so‘mda sotib olish
-
-**Meta description:** O‘zbekistonda Telegram Premium 3, 6 va 12 oyga so‘mda sotib olish: Click, HUMO, UzCard, Payme, Visa kerak emas, bir necha soniyada faollashadi.
-
-**Excerpt:** Visa kartasiz Telegram Premium: 3, 6 va 12 oylik tariflar, Click, HUMO, UzCard, Payme va Uzum orqali so‘mda to‘lov hamda qadam-baqadam qo‘llanma.
-
-**Kalit so‘zlar:** telegram premium 3 oy sotib olish · telegram premium 6 oy · telegram premium 12 oy narxi · telegram premium so‘mda · visa kartasiz telegram premium · купить telegram premium в узбекистане · telegram premium click payme
-
-### Qisqa javob
-
-Telegram Premium’ni 3, 6 yoki 12 oyga o‘zbek so‘mida, Visa kartasiz sotib olish mumkin: @StarsPaymee_bot da muddatni tanlaysiz, username kiritasiz va Click, HUMO, UzCard, Payme yoki Uzum bilan to‘laysiz. Obuna hisobda odatda bir necha soniyada faollashadi.
-
-### Maqola matni
-
-Telegram Premium messenjerning kengaytirilgan imkoniyatlarini ochadi: kattaroq fayl yuklash limitlari, eksklyuziv stikerlar va reaksiyalar, tezlashtirilgan yuklash, kanallarda reklamaning yo‘qligi va boshqa ko‘plab funksiyalar. Lekin obunani rasmiy tarzda rasmiylashtirmoqchi bo‘lgan O‘zbekiston foydalanuvchilari yulduz xarididagi bilan bir xil muammoga duch keladi — Telegram to‘lovni faqat Visa yoki Mastercard kartalari orqali qabul qiladi.
-
-## Nega rasmiy obuna O‘zbekistonda noqulay
-
-**Asosiy to‘siqlar:**
-
-- Rasmiy to‘lov xalqaro Visa/Mastercard kartalariga bog‘langan.
-
-- Ko‘pchilik foydalanadigan mahalliy HUMO va UzCard kartalari to‘g‘ridan-to‘g‘ri qo‘llab-quvvatlanmaydi.
-
-- Narx dollar yoki evroda ko‘rsatiladi; konvertatsiya va bank komissiyalaridan keyin so‘mdagi yakuniy summa kutilganidan yuqori chiqadi.
-
-- Bitta obuna uchun chet el kartasini rasmiylashtirish uzoq va har doim ham imkonli emas.
-
-## Tariflar: 3, 6 va 12 oy
-
-[Premium tariflar jadvali — komponent]
-
-Muddatni ehtiyojga qarab tanlang — bir oydan uzoqroq foydalanmoqchi bo‘lsangiz, oyiga hisoblaganda uzunroq paket har doim tejamkorroq.
-
-- **3 oy:** Uzoq muddatli majburiyatsiz Premium’ning barcha funksiyalarini sinab ko‘rish uchun qulay.
-
-- **6 oy:** Narx va muddat o‘rtasidagi muvozanat — Premium’dan foydalanib ko‘rgan va uzaytirmoqchi bo‘lganlar uchun.
-
-- **12 oy:** Oyiga hisoblaganda eng foydali variant — Premium doimiy kerak bo‘lsa.
-
-> CTA: Muddatni tanlang va so‘mda to‘lang — Premium bir necha soniyada faollashadi.
-
-## Qadam-baqadam qo‘llanma
-
-- **1. Botni oching:** Telegramda
-
-@StarsPaymee_bot
-
-ni ishga tushiring.
-
-- **2. Telegram Premium bo‘limini tanlang:** Obuna kimga rasmiylashtirilishini username orqali ko‘rsating.
-
-- **3. Muddatni belgilang:** 3, 6 yoki 12 oy — ehtiyojingizga qarab.
-
-- **4. To‘lov usulini tanlang:** Click, HUMO kartasi, UzCard kartasi yoki Payme — hammasi so‘mda, joriy kurs bo‘yicha.
-
-- **5. Buyurtmani to‘lang:** Bu bir necha daqiqadan ko‘p vaqt olmaydi.
-
-- **6. Premium’ni qabul qiling:** Obuna hisobda avtomatik yoqiladi — odatda to‘lovdan keyin deyarli darhol.
-
-Chet el kartasi ham, valyuta konvertatsiyasi ham, yashirin bank komissiyalari ham yo‘q — faqat odatiy mahalliy to‘lov usullari. Parol yoki SMS-kod hech qachon so‘ralmaydi: username yetarli.
-
-## Rasmiy obuna va botdagi xarid
-
-const copy = [locale];
-
-const marks = [locale]; (
-
-);
-
-Botdagi narx uchala tarif uchun ham rasmiy ilova ichidagi narxdan pastroq bo‘lib chiqadi — chunki mahalliy to‘lov tizimlari bilan to‘g‘ridan-to‘g‘ri ishlanadi va O‘zbekiston foydalanuvchilari uchun odatda rasmiy narxga qo‘shib hisoblanadigan valyuta konvertatsiyasi komissiyalari yo‘q.
-
-## Nega aynan shu bot orqali olish qulay
-
-**Asosiy sabablar:**
-
-- Visa/Mastercard kerak emas — to‘lov to‘liq mahalliy, so‘mda.
-
-- To‘lovning bir nechta usuli — Click, HUMO, UzCard, Payme, shuning uchun har qanday foydalanuvchiga mos keladi.
-
-- Narx rasmiysidan past — xuddi shu Telegram Premium, lekin kamroq to‘laysiz.
-
-- Tez faollashuv — obuna to‘lovdan keyin deyarli darhol paydo bo‘ladi, qo‘lda so‘rov kutilmaydi.
-
-- Bir xil qulay interfeys — botda ilgari Stars sotib olgan bo‘lsangiz, Premium xaridi ham xuddi shunday intuitiv kechadi.
-
-## Nega foydalanuvchilar ishonadi
-
-Raqamli tovarlarni sotib olish uchun xizmat tanlashdagi asosiy savol — xavfsizlik va ishonchlilik. @StarsPaymee_bot O‘zbekiston hududida rasmiy tarzda market sifatida ro‘yxatdan o‘tgan: faoliyat mamlakat huquqiy maydonida, ochiq olib boriladi, anonim va tekshirilmagan kanallar orqali emas. Aynan shuning uchun minglab foydalanuvchilar Stars va Premium xaridi uchun shu xizmatni tanlaydi. Batafsil: StarsPaymee ishonchlimi.
-
-Shuningdek o‘qing: Premium imkoniyatlari, Premium va oddiy hisob farqi, oddiy va NFT sovg‘alar.
-
-**Manbalar:**
-- telegram.org — https://telegram.org/faq_premium
-- telegram.org/blog — https://telegram.org/blog/premium
-- click.uz — https://click.uz/
-- uzcard.uz — https://uzcard.uz/
-
-### CTA
-
-**Premium’ni so‘mda rasmiylashtiring** — @StarsPaymee_bot — 3, 6 yoki 12 oy, mahalliy to‘lov va tezkor faollashuv.
-
-
----
-
-# 19. Click orqali Telegram Stars sotib olish: so‘mda, Visa kartasiz
+# 15. Click orqali Telegram Stars sotib olish: so‘mda, Visa kartasiz
 
 - **URL:** /uz/blog/click-payme-orqali-telegram-stars-sotib-olish
 - **Kategoriya:** Stars · **Tur:** howto · **Sana:** 2026-08-26 (yangilangan: 2026-09-16)
@@ -2352,7 +1867,7 @@ Shuningdek o‘qing: Telegram Premium 3, 6 va 12 oy, oddiy va NFT sovg‘alar, S
 
 ---
 
-# 20. PUBG Mobile UC sotib olish — O‘zbekistonda so‘mda
+# 16. PUBG Mobile UC sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/pubg-mobile-uc-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -2496,7 +2011,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 21. Mobile Legends olmos sotib olish — O‘zbekistonda so‘mda
+# 17. Mobile Legends olmos sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/mobile-legends-olmos-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -2640,7 +2155,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 22. Free Fire olmos sotib olish — O‘zbekistonda so‘mda
+# 18. Free Fire olmos sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/free-fire-olmos-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -2784,7 +2299,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 23. Call of Duty Mobile CP sotib olish — so‘mda
+# 19. Call of Duty Mobile CP sotib olish — so‘mda
 
 - **URL:** /uz/blog/call-of-duty-mobile-cp-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -2928,7 +2443,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 24. Honor of Kings token sotib olish — O‘zbekistonda so‘mda
+# 20. Honor of Kings token sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/honor-of-kings-token-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -3072,7 +2587,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 25. Magic Chess: Go Go olmos sotib olish — so‘mda
+# 21. Magic Chess: Go Go olmos sotib olish — so‘mda
 
 - **URL:** /uz/blog/magic-chess-gogo-olmos-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -3216,7 +2731,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 26. Delta Force coins sotib olish — O‘zbekistonda so‘mda
+# 22. Delta Force coins sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/delta-force-coins-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -3360,7 +2875,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 27. Asphalt 9 token sotib olish — O‘zbekistonda so‘mda
+# 23. Asphalt 9 token sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/asphalt-9-token-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -3504,7 +3019,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 28. Bigo Live olmos sotib olish — O‘zbekistonda so‘mda
+# 24. Bigo Live olmos sotib olish — O‘zbekistonda so‘mda
 
 - **URL:** /uz/blog/bigo-live-olmos-sotib-olish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -3648,7 +3163,7 @@ J: Ha — PUBG Mobile, Mobile Legends, Free Fire, CODM, Honor of Kings, Magic Ch
 
 ---
 
-# 29. O‘yin hisobini so‘mda to‘ldirish — 9 ta o‘yin uchun qo‘llanma
+# 25. O‘yin hisobini so‘mda to‘ldirish — 9 ta o‘yin uchun qo‘llanma
 
 - **URL:** /uz/blog/oyin-hisobini-toldirish
 - **Kategoriya:** O‘yinlar · **Tur:** howto · **Sana:** 2026-08-23
@@ -3761,7 +3276,7 @@ maqolasida.
 
 ---
 
-# 30. Telegram yulduz kerak — qayerdan sotib olish mumkin
+# 26. Telegram yulduz kerak — qayerdan sotib olish mumkin
 
 - **URL:** /uz/blog/telegram-yulduz-kerak
 - **Kategoriya:** Stars · **Tur:** info · **Sana:** 2026-08-02
@@ -3840,7 +3355,7 @@ Qarang: Yulduz olish qo‘llanmasi, Telegram Yulduz sotib olish va xavfsizlik.
 
 ---
 
-# 31. Telegram Stars narxi qancha turadi (2026)
+# 27. Telegram Stars narxi qancha turadi (2026)
 
 - **URL:** /uz/blog/telegram-stars-narxi
 - **Kategoriya:** Stars · **Tur:** info · **Sana:** 2026-08-02 (yangilangan: 2026-09-18)
@@ -3933,7 +3448,7 @@ Qarang: Stars sotib olish qo‘llanmasi, 1 yulduz necha so‘m va xavfsizlik mez
 
 ---
 
-# 32. Telegram Stars kartasiz sotib olish mumkinmi
+# 28. Telegram Stars kartasiz sotib olish mumkinmi
 
 - **URL:** /uz/blog/telegram-stars-kartasiz-sotib-olish
 - **Kategoriya:** Stars · **Tur:** problem · **Sana:** 2026-08-02
@@ -4012,13 +3527,13 @@ Qarang: Visa kartasiz Stars olish qo‘llanmasi, naqd pul bilan olish va xavfsiz
 
 ---
 
-# 33. Telegram Premium kerak — nega olish kerak
+# 29. Telegram Premium kerak — nega olish kerak
 
 - **URL:** /uz/blog/telegram-premium-kerak
 - **Kategoriya:** Premium · **Tur:** info · **Sana:** 2026-08-02 (yangilangan: 2026-09-08)
 - **Manba fayl:** 139-telegram-premium-kerak.tsx
 - **Tillar:** uz + ru + en
-- **Hajm:** ~367 so‘z
+- **Hajm:** ~395 so‘z
 
 **Meta title:** Telegram Premium kerak — nega olish kerak
 
@@ -4074,7 +3589,7 @@ Premium to‘rt yo‘nalishda qo‘shimcha beradi:
 
 ## Narxi va qanday olinishi
 
-Muddat uzaygani sari oyiga tushadigan xarajat kamayadi. StarsPaymee’da ikki xil oqim bor va ular bir xil emas: username orqali — 3, 6 va 12 oy, akkauntga kirish shart emas; login orqali — 1 oy (50 000 so‘m) va 1 yil, rasmiy faollashtirish bilan. Ya’ni 1 oylik variant username oqimida yo‘q.
+2026-yil sentabridan boshlab barcha muddat — 1, 3, 6 va 12 oy — username oqimida beriladi: akkauntga kirish, parol yoki SMS-kod so‘ralmaydi. 1 oylik tarif 45 000 so‘m. «Login orqali» oqim faqat nostandart holatlar uchun alohida xizmat sifatida qoldi va uning narxi qo‘llab-quvvatlash orqali aniqlanadi.
 
 [Premium tariflar jadvali — komponent]
 
@@ -4086,9 +3601,9 @@ Xarid tartibi, to‘lov qadamlari va faollashuvni tekshirish — Premium olishni
 
 Avtoto‘lov ulanmaydi: muddat tugagach hisobingizdan hech narsa yechilmaydi va akkaunt bloklanmaydi — faqat Premium imtiyozlari to‘xtaydi. Uzaytirish har safar yangi buyurtma orqali amalga oshiriladi.
 
-Muddat tugashini kutish shart emas. Username oqimida amaldagi Premium ustiga buyurtma bersangiz, yangi muddat joriysiga qo‘shiladi. Login oqimidagi 1 oylik tarifda esa faollashtirish operator orqali bajarilgani uchun muddatni oldindan qo‘llab-quvvatlash bilan aniqlashtirib olgan ma’qul.
+Muddat tugashini kutish shart emas: barcha muddat — 1, 3, 6 va 12 oy — username orqali beriladi, ya’ni buyurtma tartibi bir xil. Lekin amaldagi Premium ustiga buyurtma berilganda muddat qo‘shiladimi — bu tanlangan usulga bog‘liq va hamma holatda bir xil emas. Shuning uchun buyurtmadan oldin holatni tekshiring: «Premium bor odamga yana Premium» maqolasida har bir usul uchun nima bo‘lishi yozilgan; aniq sana muhim bo‘lsa, qo‘llab-quvvatlash bilan tasdiqlang.
 
-Qarang: Premium olish, to‘liq imkoniyatlar ro‘yxati va oddiy hisob bilan farqi.
+Qarang: Premium olish, Premium arziydimi va oddiy hisob bilan farqi.
 
 **Manbalar:**
 - telegram.org/faq_premium — https://telegram.org/faq_premium
@@ -4101,7 +3616,7 @@ Qarang: Premium olish, to‘liq imkoniyatlar ro‘yxati va oddiy hisob bilan far
 
 ---
 
-# 34. Telegram Premium narxi qancha (oylik/yillik)
+# 30. Telegram Premium narxi qancha (oylik/yillik)
 
 - **URL:** /uz/blog/telegram-premium-narxi
 - **Kategoriya:** Premium · **Tur:** info · **Sana:** 2026-08-02
@@ -4174,7 +3689,7 @@ Qarang: Premium sotib olish, arzon narxda olish va bir oylik variant.
 
 ---
 
-# 35. Telegram Stars xavfsizmi? Bilishingiz kerak bo‘lgan narsalar
+# 31. Telegram Stars xavfsizmi? Bilishingiz kerak bo‘lgan narsalar
 
 - **URL:** /uz/blog/telegram-stars-xavfsizmi
 - **Kategoriya:** Xavfsizlik · **Tur:** trust · **Sana:** 2026-08-02
@@ -4254,7 +3769,7 @@ Qarang: xavfsiz xarid mezonlari, xizmatni qanday tanlash va xizmat ishonchlimi.
 
 ---
 
-# 36. O‘zbekistonda Telegram Stars sotib olish — to‘liq qo‘llanma
+# 32. O‘zbekistonda Telegram Stars sotib olish — to‘liq qo‘llanma
 
 - **URL:** /uz/blog/ozbekistonda-telegram-stars-sotib-olish
 - **Kategoriya:** Stars · **Tur:** howto · **Sana:** 2026-08-02 (yangilangan: 2026-09-18)
@@ -4390,7 +3905,7 @@ Qarang: narxlar va paketlar, yulduz kelmasa nima qilish va xavfsizlik mezonlari.
 
 ---
 
-# 37. Ishonchli Telegram Stars xizmatini qanday tanlash kerak (2026)
+# 33. Ishonchli Telegram Stars xizmatini qanday tanlash kerak (2026)
 
 - **URL:** /uz/blog/ishonchli-stars-xizmatini-tanlash
 - **Kategoriya:** Xavfsizlik · **Tur:** trust · **Sana:** 2026-08-02
@@ -4470,7 +3985,7 @@ Qarang: Stars xavfsizmi, xavfsiz xarid mezonlari va xizmat ishonchlimi.
 
 ---
 
-# 38. Yulduz olish — Telegramda Stars xaridi bo‘yicha qisqa qo‘llanma
+# 34. Yulduz olish — Telegramda Stars xaridi bo‘yicha qisqa qo‘llanma
 
 - **URL:** /uz/blog/yulduz-olish
 - **Kategoriya:** Stars · **Tur:** howto · **Sana:** 2026-08-01
@@ -4537,7 +4052,7 @@ Batafsil: Telegram Yulduz sotib olish qo‘llanmasi, narxlar va xavfsiz xarid me
 
 ---
 
-# 39. Telegram kanaliga Boost sotib olish — to‘liq qo‘llanma 2026
+# 35. Telegram kanaliga Boost sotib olish — to‘liq qo‘llanma 2026
 
 - **URL:** /uz/blog/telegram-kanalga-boost-sotib-olish
 - **Kategoriya:** Telegram · **Tur:** howto · **Sana:** 2026-07-30
@@ -4611,7 +4126,7 @@ Xizmatdan faqat ishonchli bot orqali foydalaning. Telegram Premium sizning shaxs
 
 ---
 
-# 40. Steam Wallet nima? To‘liq qo‘llanma (2026)
+# 36. Steam Wallet nima? To‘liq qo‘llanma (2026)
 
 - **URL:** /uz/blog/steam-wallet-nima
 - **Kategoriya:** Steam · **Tur:** info · **Sana:** 2026-07-30
@@ -4697,13 +4212,13 @@ Ha, agar rasmiy Steam hisobidan foydalansangiz, parolingizni hech kimga bermasan
 
 ---
 
-# 41. Telegram NFT Gift nima? Limited Edition sovg‘alar — to‘liq qo‘llanma
+# 37. Telegram NFT Gift nima? Limited Edition sovg‘alar — to‘liq qo‘llanma
 
 - **URL:** /uz/blog/telegram-nft-gift-nima
 - **Kategoriya:** Gifts · **Tur:** info · **Sana:** 2026-07-29
 - **Manba fayl:** 90-telegram-nft-gift-nima.tsx
 - **Tillar:** uz + ru + en
-- **Hajm:** ~410 so‘z
+- **Hajm:** ~411 so‘z
 
 **Meta title:** Telegram NFT Gift nima? | Limited Edition 2026
 
@@ -4750,7 +4265,7 @@ StarsPaymee Mini App ichidagi Gift Marketda kolleksiyalar (masalan, LibertyFigur
 
 [NFT gift market jadvali — komponent]
 
-> CTA: Gift Marketni oching — @StarsPaymee_bot, to‘lov so‘mda.
+> CTA: Yulduz oling va sovg‘ani o‘zingiz collectible darajasiga ko‘taring.
 
 ## Limited Edition nima?
 
@@ -4774,30 +4289,30 @@ Har qanday Telegram digital collectible bozori beqaror bo‘lishi mumkin. Faqat 
 
 ### CTA
 
-**Gift Market** — @StarsPaymee_bot — kolleksion NFT giftlar, narxlar so‘mda.
+**Yulduzdan boshlang** — @StarsPaymee_bot — Stars va oddiy sovg‘alar so‘mda; kolleksion nusxani Telegram ichida upgrade bilan olasiz.
 
 
 ---
 
-# 42. StarsPaymee NFT Market — Gift Market O‘zbekistonda
+# 38. StarsPaymee Gift Market — hozirgi holat va ishlaydigan yo‘l
 
 - **URL:** /uz/blog/starspaymee-nft-market
-- **Kategoriya:** Gifts · **Tur:** cta · **Sana:** 2026-07-29
+- **Kategoriya:** Gifts · **Tur:** cta · **Sana:** 2026-07-29 (yangilangan: 2026-09-20)
 - **Manba fayl:** 99-starspaymee-nft-market.tsx
 - **Tillar:** uz + ru
-- **Hajm:** ~145 so‘z
+- **Hajm:** ~244 so‘z
 
-**Meta title:** StarsPaymee NFT Market | Gift Market UZ
+**Meta title:** StarsPaymee Gift Market — xizmat holati 2026
 
-**Meta description:** StarsPaymee Gift Market: qanday giftlar, to‘lov so‘mda, xarid qilish. Telegram NFT Uzbekistan.
+**Meta description:** StarsPaymee Gift Market hozir qanday ishlaydi: oddiy sovg‘alar, Stars va Premium so‘mda; kolleksion (NFT) sovg‘alar bot orqali yetkazilmaydi va ishlaydigan yo‘l qaysi.
 
-**Excerpt:** So‘mda kolleksion giftlar, to‘lov, xarid qadamlari va FAQ.
+**Excerpt:** Botda nima ishlaydi: oddiy sovg‘alar, Stars va Premium so‘mda. Sotuvdan tugagan kolleksion sovg‘alar yetkazilmaydi — kolleksion nusxa upgrade orqali olinadi.
 
 **Kalit so‘zlar:** StarsPaymee NFT · gift market uzbekistan · telegram nft uzbekistan · telegram collectibles uzbekistan · telegram gifts shop
 
 ### Qisqa javob
 
-StarsPaymee NFT Market (Gift Market) — O‘zbekistonda Telegram kolleksion giftlarni so‘mda sotib olish va sotish interfeysi: LibertyFigure, MoodPack, filtrlash va balans. Bot: @StarsPaymee_bot.
+Hozirgi holat: @StarsPaymee_bot orqali oddiy sovg‘alar, Stars va Premium so‘mda sotib olinadi. Sotuvdan tugagan kolleksion (NFT) sovg‘alar bot orqali yetkazilmaydi. Kolleksion nusxa olishning ishlaydigan yo‘li bitta: botdan yulduz olasiz va oddiy sovg‘ani Telegram ichida collectible darajasiga ko‘tarasiz.
 
 ### Maqola matni
 
@@ -4807,91 +4322,44 @@ Sotuvdan tugagan kolleksion (NFT) sovg‘alar hozir bot orqali yetkazilmaydi —
 
 ## StarsPaymee nima?
 
-Stars, Premium, Gifts va endi Gift Market — bitta ekotizim. Mahalliy to‘lov, tez yetkazish, o‘zbek tilidagi qo‘llab-quvvatlash.
+Stars, Premium, oddiy sovg‘alar, o‘yin to‘ldirish va Steam hamyoni — bitta bot ichida, mahalliy to‘lov va o‘zbek tilidagi qo‘llab-quvvatlash bilan. Gift Market bo‘limi kolleksion sovg‘alar uchun edi va aynan shu qism hozir ishlamaydi.
 
-**Gift Market:**
+**Hozir nima ishlaydi:**
 
-- Narxlar so‘mda (masalan 194 000 – 220 000+)
+- Oddiy sovg‘alar — doimiy katalogdan, so‘mda, bir necha daqiqada.
 
-- Kolleksiya chipalari va saralash
+- Stars va Premium — avvalgidek, username orqali.
 
-- «Mening giftlarim» va balans
+- Kolleksion (NFT) sovg‘alar — sotuvdan tugagan nusxalar bot orqali yetkazilmaydi.
 
-- NFT Gift qo‘llanmasi
+- Ishlaydigan yo‘l — yulduz olib, sovg‘ani Telegram ichida collectible darajasiga ko‘tarish.
+
+Quyidagi ro‘yxat — bot interfeysining namunasi: kolleksiya chiplari, saralash va narx qanday ko‘rinishini ko‘rsatadi. Bu sotuvdagi taklif emas.
 
 [NFT gift market jadvali — komponent]
 
-## Qanday xarid qilaman?
+## Hozir qanday xarid qilinadi?
 
-- @StarsPaymee_bot ni oching
+- @StarsPaymee_bot ni oching.
 
-- Gift Market bo‘limiga o‘ting
+- Oddiy sovg‘a kerak bo‘lsa — sovg‘alar bo‘limidan tanlab, so‘mda to‘laysiz va qabul qiluvchi @username’ini ko‘rsatasiz.
 
-- Sovg‘ani tanlang va so‘mda to‘lang
+- Kolleksion nusxa kerak bo‘lsa — avval kerakli miqdorda Stars olasiz, so‘ng Telegram ichida sovg‘ani upgrade qilasiz.
 
-> CTA: Gift Market — hozir oching.
+> CTA: Botda sovg‘a yuborish — so‘mda, bir necha daqiqada.
 
-Nima uchun tanlash: telegram marketplace uzbekistan uchun so‘m, mahalliy karta, blog seriyasi.
-
-[Seriya navigatsiyasi]
-
-### CTA
-
-**Gift Market** — @StarsPaymee_bot — NFT giftlar so‘mda.
-
-
----
-
-# 43. Telegram boost ijarasi nima? — Premiumdan farqi 2026
-
-- **URL:** /uz/blog/telegram-boost-ijarasi
-- **Kategoriya:** Telegram · **Tur:** info · **Sana:** 2026-07-29
-- **Manba fayl:** 101-telegram-boost-ijarasi.tsx
-- **Tillar:** uz + ru
-- **Hajm:** ~162 so‘z
-
-**Meta title:** Telegram boost ijarasi nima? | 2026
-
-**Meta description:** Telegram kanal boost ijarasi: nima, Premium boostdan farqi, muddat, StarsPaymee Boost Market. FAQ.
-
-**Excerpt:** Boost ijarasi mexanikasi, rasmiy Premium boost bilan solishtirish, qachon kerak va xavfsizlik.
-
-**Kalit so‘zlar:** boost ijarasi · telegram boost ijarasi · kanal boost ijarasi · telegram boost uzbekistan · boost arenda
-
-### Qisqa javob
-
-Telegram boost ijarasi — kanal reytingi (level) uchun boost birliklarini ma’lum muddatga ijaraga olish xizmati. Rasmiy Premium boost (obunachining bepul ovozi) bilan aralashmasligi kerak. O‘zbekiston uchun kanalga boost sotib olish qo‘llanmasida StarsPaymee Boost Market: 1–100 boost, 1–30 kun, so‘mda to‘lov.
-
-### Maqola matni
-
-## Boost ijarasi nima?
-
-Kanal egasi yoki admin tashqi xizmat orqali boost «zaxirasini» vaqtinchalik kanalga bog‘laydi — level va reyting ko‘rsatkichlari oshishi mumkin. Bu organik obunachilar o‘rnini bosmaydi; Telegram kanal boost nima? maqolasida rasmiy mexanizm tushuntirilgan.
-
-## Ijara vs Premium boost
-
-| | Premium boost | Boost ijarasi |
-| --- | --- | --- |
-| Kim beradi | Premium obunachi | Boost Market xizmati |
-| To‘lov | Obuna ichida | So‘m, muddatli |
-| StarsPaymee | ❌ | ✅ |
-
-## Qachon ijaradan foydalaniladi?
-
-Giveaway ochish, Stories yoki tez level ko‘tarish kerak bo‘lganda — lekin faqat ishonchli provayder va aniq kanal manzili bilan. Narxlari: boost narxlari, arzon boost.
-
-> CTA: Boost ijarasi — @StarsPaymee_bot Boost Market, so‘mda.
+Xizmat holati va nima uchun o‘zgargani — alohida maqolada; sovg‘a turlari va narx tuzilishi esa «Gifts narxlari» da.
 
 [Seriya navigatsiyasi]
 
 ### CTA
 
-**Ijara buyurtma** — Boost Market — botda.
+**Botda sovg‘a yuborish** — @StarsPaymee_bot — oddiy sovg‘alar, Stars va Premium so‘mda, bir necha daqiqada.
 
 
 ---
 
-# 44. Telegram raqam sotib olish 2026 — qayerdan va qanday olish?
+# 39. Telegram raqam sotib olish 2026 — qayerdan va qanday olish?
 
 - **URL:** /uz/blog/telegram-raqam-sotib-olish
 - **Kategoriya:** Telegram · **Tur:** howto · **Sana:** 2026-07-28
@@ -5017,7 +4485,7 @@ Premium, tayyor akkaunt, biznes profil, kanal boost, Stars, Gifts, username va r
 
 ---
 
-# 45. Telegram kanal reytingi va level — qanday oshiriladi 2026
+# 40. Telegram kanal reytingi va level — qanday oshiriladi 2026
 
 - **URL:** /uz/blog/telegram-kanal-reytingi
 - **Kategoriya:** Telegram · **Tur:** info · **Sana:** 2026-07-28
@@ -5070,3 +4538,352 @@ Boost tugagach level tushishi mumkin — uzoq muddatli o‘sish uchun kontent va
 ### CTA
 
 **Level oshirish** — Boost Market.
+
+
+---
+
+# 41. Steam Login nima? Uni qayerdan topish mumkin?
+
+- **URL:** /uz/blog/steam-login-nima
+- **Kategoriya:** Steam · **Tur:** info · **Sana:** 2026-07-28
+- **Manba fayl:** 113-steam-login-nima.tsx
+- **Tillar:** uz + ru + en
+- **Hajm:** ~328 so‘z
+
+**Meta title:** Steam Login nima? Uni qayerdan topish mumkin?
+
+**Meta description:** Steam Login nima, Steam ID va profil nomidan farqi nimada? Steam loginni topish bo‘yicha batafsil qo‘llanma.
+
+**Excerpt:** Steam Login nima, Steam ID va profil nomidan farqi nimada? Loginni qayerdan topish, qachon kerak bo‘lishi va xavfsizlik qoidalari bo‘yicha batafsil qo‘llanma.
+
+**Kalit so‘zlar:** steam login nima · steam login · steam id · steam profil nomi · steam login qayerdan topiladi · steam account details
+
+### Qisqa javob
+
+Steam Login — akkaunt yaratganingizda tanlagan kirish nomingiz. U Profil nomi (istalgan vaqtda o‘zgartiriladi) va Steam ID (noyob raqamli identifikator) dan farq qiladi. Xizmat sizdan «Login» so‘rasa, aynan shu kirish nomini kiriting — Profil nomini emas. Login maxfiy parol emas, lekin parolni hech kimga bermang.
+
+### Maqola matni
+
+## Steam Login nima?
+
+Steam Login — bu Steam akkauntingizni yaratganingizda tanlagan kirish nomi. U hisobingizni aniqlash uchun ishlatiladi va odatda o‘zgarmaydi. Balans to‘ldirishda ko‘p xizmat aynan shu ma’lumotni so‘raydi.
+
+## Login, Profil nomi va Steam ID farqi
+
+| Xususiyat | Login | Profil nomi | Steam ID |
+| --- | --- | --- | --- |
+| Nima | kirish nomi | ko‘rinadigan nom | raqamli ID |
+| O‘zgaradimi | ❌ odatda yo‘q | ✅ istalgan vaqtda | ❌ yo‘q |
+| Kim ko‘radi | faqat siz | do‘stlaringiz | tizimlar |
+| Qachon kerak | kirish, to‘ldirish | ijtimoiy | ba’zi servislar |
+
+Shuning uchun xizmat sizdan Login so‘rasa, Profil nomini emas, aynan Login ma’lumotini kiritishingiz kerak bo‘lishi mumkin. Ba’zi servislar Steam ID yoki profil URL manzilidan foydalanadi — qaysi ma’lumot talab qilinayotganini diqqat bilan tekshiring.
+
+## Steam Login qayerdan topiladi?
+
+- **1. Steam ilovasini oching:** Desktop yoki mobil Steam ilovasini ishga tushiring.
+
+- **2. Account Details bo‘limiga o‘ting:** Hisob sozlamalari ichidagi hisob ma’lumotlari bo‘limi.
+
+- **3. Hisob ma’lumotlarini tekshiring:** Kirish nomingiz shu yerda ko‘rsatiladi.
+
+- **4. Topa olmasangiz:** Steam’ning rasmiy hisobni tiklash vositalaridan foydalaning.
+
+> CTA: Login tayyormi? Steam balansini so‘mda to‘ldiring.
+
+## Steam Login qachon kerak bo‘ladi?
+
+**Talab qilinishi mumkin bo‘lgan holatlar:**
+
+- Steam balansini to‘ldirish.
+
+- Ba’zi uchinchi tomon xizmatlari orqali xarid qilish.
+
+- Hisobni tasdiqlash.
+
+- Texnik yordam bilan bog‘lanish.
+
+## Loginni boshqalarga berish xavfsizmi?
+
+Loginning o‘zi maxfiy parol emas, lekin ehtiyot bo‘ling:
+
+- ❌ Steam parolingizni hech kimga bermang.
+
+- ❌ Steam Guard kodini hech kim bilan ulashmang.
+
+- ❌ Noma’lum saytlarga hisob ma’lumotlarini kiritmang.
+
+Batafsil himoya choralari: Steam hisobini himoya qilish bo‘yicha 10 maslahat.
+
+**Manbalar:**
+- help.steampowered.com — https://help.steampowered.com/
+- store.steampowered.com/account — https://store.steampowered.com/account/
+
+### CTA
+
+**Steam balansini to‘ldiring** — Login tayyor bo‘lsa, @StarsPaymee_bot orqali so‘mda to‘lang — bir necha daqiqada tushadi.
+
+
+---
+
+# 42. Nega bir xil Telegram Gift ikki xil narxda turadi?
+
+- **URL:** /uz/blog/telegram-gift-price
+- **Kategoriya:** Gifts · **Tur:** info · **Sana:** 2026-07-27 (yangilangan: 2026-09-08)
+- **Manba fayl:** 94-telegram-gift-price.tsx
+- **Tillar:** uz + ru + en
+- **Hajm:** ~524 so‘z
+
+**Meta title:** Nega bir xil Telegram Gift har xil narxda?
+
+**Meta description:** Telegram Gift narxi nimaga bog‘liq: model, fon, belgi va nusxa raqami, floor price nima, e’lon narxi bilan sotilgan narx farqi va solishtirish varaqasi.
+
+**Excerpt:** Narx kolleksiyaga emas, nusxaga bog‘liq: model, fon, belgi va raqam. Solishtirish varaqasi, floor price ma’nosi va so‘ralgan hamda sotilgan narx farqi.
+
+**Kalit so‘zlar:** telegram gift narxi nimaga bog‘liq · bir xil gift narxi har xil · telegram gift model fon farqi · gift rarity nima · telegram gift floor price nima · telegram gift raqami narxga ta’siri · telegram nft narxi
+
+### Qisqa javob
+
+Bir xil ko‘rinadigan ikki sovg‘a har xil narxda turishi normal holat: narx kolleksiyaga emas, aynan shu nusxaga bog‘liq. Model, fon, belgi va nusxa raqami — asosiy farqlovchi omillar. Shuning uchun solishtirishdan oldin ikkala e’londa ham shu to‘rt xususiyatni tekshirish kerak.
+
+### Maqola matni
+
+## Bir kolleksiya degani bir xil sovg‘a deganimi?
+
+Yo‘q. Kolleksiya — bu umumiy nom, ichidagi nusxalar esa bir-biridan farq qiladi. Ikki sovg‘a ekranda deyarli bir xil ko‘rinishi, lekin xususiyatlari boshqa bo‘lishi mumkin — narx farqi aynan shundan kelib chiqadi.
+
+- **Past raqam:** Kichik seriya raqami alohida qadrlanadi.
+
+- **Kam tiraj:** Cheklangan chiqarilgan kolleksiyalar.
+
+- **Noyob xususiyat:** Kam uchraydigan model, fon yoki belgi.
+
+- **Joriy talab:** Bozor kayfiyati va Gift Market talabi.
+
+Shu bilan birga: noyoblik avtomatik foyda kafolati emas. Talab pasaysa, kam tirajli nusxaning narxi ham tushadi.
+
+## Model, fon, belgi va raqamni qayerdan ko‘ramiz
+
+Kolleksion sovg‘aning sahifasida uning xususiyatlari ro‘yxati bo‘ladi. Aynan shu ro‘yxat ikkita nusxani farqlaydi:
+
+**To‘rt xususiyat:**
+
+- Model — sovg‘aning asosiy ko‘rinishi; bir kolleksiya ichida bir necha model bo‘lishi mumkin.
+
+- Fon (backdrop) — orqa fon varianti; kam uchraydiganlari qimmatroq.
+
+- Belgi (symbol) — sovg‘a ustidagi naqsh yoki belgi.
+
+- Raqam — nusxaning seriyadagi tartibi, masalan #7/1000.
+
+## Solishtirish varaqasi: ikkita e’lonni yonma-yon qo‘ying
+
+Quyidagi jadval — tayyor javob emas, o‘zingiz to‘ldiradigan varaqa. Ko‘rib turgan ikkita e’lonni oching va har bir qator bo‘yicha ularni solishtiring. Biz bu yerda o‘ylab topilgan narx misollarini keltirmaymiz: tasdiqlanmagan raqam bir necha haftada eskiradi va noto‘g‘ri qarorga olib keladi.
+
+const copy = [locale]; (
+
+);
+
+- **1. Ikkala sahifani oching:** Har biri uchun kolleksiya va xususiyatlar ro‘yxatini toping.
+
+- **2. Qatorma-qator to‘ldiring:** Farq qilgan qatorlarni belgilab qo‘ying.
+
+- **3. Farqni narx bilan solishtiring:** Narx farqi qaysi xususiyat bilan izohlanadi? Izoh topilmasa, yuqori narx asossiz bo‘lishi mumkin.
+
+- **4. Sanani yozib qo‘ying:** Narxni har doim ko‘rgan sanangiz bilan birga eslab qoling.
+
+## Sotuvchi so‘ragan narx va amalga oshgan savdo — bir xil emas
+
+E’londagi raqam — bu faqat taklif. U sovg‘a shu narxga sotilishini bildirmaydi. Haqiqiy ko‘rsatkich — kimdir shu narxni to‘lab olgan savdo.
+
+**Farqni yodda tuting:**
+
+- Yuqori so‘ralgan narx bozor narxini oshirmaydi.
+
+- O‘z sovg‘angizni baholashda so‘ralgan narxlarga emas, sotilganlarga tayaning.
+
+- Sotilgan narx haqida dalil bo‘lmasa, uni fakt sifatida qabul qilmang.
+
+## Floor price nima va uni qanday tushunish kerak
+
+Floor price — kolleksiyadagi eng past e’lon narxi. Bu o‘rtacha narx ham, «adolatli» narx ham emas — shunchaki hozirgi eng arzon taklif.
+
+- **Bu pastki chegara:** Kolleksiyaning eng arzon nusxasi, odatda eng oddiy xususiyatlar bilan.
+
+- **Bu o‘rtacha emas:** Noyob xususiyatli nusxalar floordan ancha yuqori turishi mumkin.
+
+- **Tez o‘zgaradi:** Bitta e’lon qo‘shilishi bilan floor ham o‘zgaradi.
+
+- **Qachon foydali:** O‘z nusxangiz floordan qanchalik yuqori turishini baholash uchun.
+
+## Xarid paytida nimalarni taqqoslash kerak
+
+- **1. Kolleksiyani tasdiqlang:** Aynan siz izlagan kolleksiyami?
+
+- **2. To‘rt xususiyatni o‘qing:** Model, fon, belgi va raqam — ular narxni belgilaydi.
+
+- **3. Floor bilan solishtiring:** Narx eng past e’londan qanchalik yuqori va buni nima oqlaydi?
+
+- **4. Sotuvchini tekshiring:** Havola va egalikni tekshirish qo‘llanmasi bo‘yicha ko‘ring.
+
+Sotishga urinayotgan bo‘lsangiz — «Gift sotilmayapti» maqolasida komissiya va narx chegaralari ham bor. Investitsiya nuqtai nazari — alohida maqolada; noyob sovg‘alar ro‘yxati ham foydali.
+
+[Seriya navigatsiyasi]
+
+**Manbalar:**
+- core.telegram.org/api/gifts — https://core.telegram.org/api/gifts
+
+### CTA
+
+**Joriy narxlar** — @StarsPaymee_bot → Gift Market — katalog va so‘mdagi narx.
+
+
+---
+
+# 43. Telegram NFT investitsiya qilish mumkinmi?
+
+- **URL:** /uz/blog/telegram-nft-investitsiya
+- **Kategoriya:** Gifts · **Tur:** info · **Sana:** 2026-07-27
+- **Manba fayl:** 95-telegram-nft-investitsiya.tsx
+- **Tillar:** uz + ru + en
+- **Hajm:** ~59 so‘z
+
+**Meta title:** Telegram NFT investitsiya | Risklar 2026
+
+**Meta description:** Telegram NFT investitsiya mumkinmi, risklari va qanday gift tanlash. FAQ.
+
+**Excerpt:** Risklar, realistik kutish, kolleksiya vs spekulyatsiya.
+
+**Kalit so‘zlar:** telegram nft invest · telegram gift invest · telegram digital assets · telegram nft trading
+
+### Qisqa javob
+
+Telegram NFT investitsiya — xavfli: narx tushishi, likvidlik pastligi va qoidalar o‘zgarishi mumkin. Kolleksiya sifatida qiziqish mumkin, lekin «tez boyish» va’dasi bilan kirish tavsiya etilmaydi.
+
+### Maqola matni
+
+## Risklar
+
+- Bozor beqarorligi
+
+- Firibgar «guaranteed profit»
+
+- Qonun va soliq noaniqligi
+
+Qanday gift tanlash: Limited Edition, kolleksiya strategiyasi.
+
+> CTA: Faqat kolleksiya uchun xarid qiling — Gift Market so‘mda.
+
+[Seriya navigatsiyasi]
+
+### CTA
+
+**Ehtiyotkorlik** — Faqat ishonchli market.
+
+
+---
+
+# 44. Telegram kanal rivojlantirish — boost va strategiya 2026
+
+- **URL:** /uz/blog/telegram-kanal-rivojlantirish
+- **Kategoriya:** Biznes · **Tur:** info · **Sana:** 2026-07-27
+- **Manba fayl:** 105-telegram-kanal-rivojlantirish.tsx
+- **Tillar:** uz + ru + en
+- **Hajm:** ~106 so‘z
+
+**Meta title:** Telegram kanal rivojlantirish | Boost strategiya
+
+**Meta description:** Kanal rivojlantirish: kontent, reklama, boost ijarasi, reyting. FAQ O‘zbekiston.
+
+**Excerpt:** O‘sish ustunlari, boost roli, byudjet va StarsPaymee xizmati.
+
+**Kalit so‘zlar:** telegram kanal rivojlantirish · kanal o'sish strategiyasi · telegram boost marketing · telegram kanal rivojlantirish 2026
+
+### Qisqa javob
+
+Telegram kanal rivojlantirish — kontent, reklama, monetizatsiya va boost kombinatsiyasi. Level va reyting giveaway hamda Stories uchun muhim; tez natija uchun boost ijarasi va arzon boost paketlarini reja bilan qo‘llang.
+
+### Maqola matni
+
+## Kanal o‘sishi: asosiy ustunlar
+
+- Doimiy kontent va aniq mavzu (nicha).
+
+- Kross-posting va hamkorliklar.
+
+- Stars / reklama monetizatsiyasi (mavjud bo‘lsa).
+
+- Jamiyat: savol-javob, so‘rovnomalar.
+
+## Boost strategiyasi
+
+Kanalni boost qilish — kampaniya boshida level ochilishi uchun. Premium boostni faol obunachilarga eslatib turing. Avtomatik yetkazish: boost avtomatik.
+
+## Byudjet va xizmat tanlash
+
+Narxlarni solishtiring; ishonchli provayder — StarsPaymee Boost Market. Asos: boost nima.
+
+> CTA: Kanal rivojlantirish — boost bilan tez level.
+
+[Seriya navigatsiyasi]
+
+### CTA
+
+**Rivojlantirish** — Boost Market — botda.
+
+
+---
+
+# 45. Telegram boost narxlari — 1 va 30 kun paketlar 2026
+
+- **URL:** /uz/blog/telegram-boost-narxlari
+- **Kategoriya:** Telegram · **Tur:** info · **Sana:** 2026-07-27
+- **Manba fayl:** 106-telegram-boost-narxlari.tsx
+- **Tillar:** uz + ru
+- **Hajm:** ~177 so‘z
+
+**Meta title:** Telegram boost narxlari | So‘mda jadval
+
+**Meta description:** Telegram kanal boost narxlari: 1–30 kun, 1–100 boost, namuna jadval va bot kalkulyatori. FAQ.
+
+**Excerpt:** Narx omillari, namunaviy jadval so‘mda, arzon paket tanlash.
+
+**Kalit so‘zlar:** telegram boost narxlari · boost narxi · telegram boost narxi uzbekistan · 30 kunlik boost narxi · kanal boost narxi · arzon telegram boost
+
+### Qisqa javob
+
+Telegram boost narxlari boost soni va kun (1–30) ga bog‘liq: ko‘proq boost va uzoq muddat — yuqori summa, ba’zi paketlarda kuniga chegirma. Aniq narx @StarsPaymee_bot kalkulyatorida; quyida namunaviy jadval. Buyurtma: kanalga boost sotib olish.
+
+### Maqola matni
+
+## Narx nimaga bog‘liq?
+
+- Boost soni (1–100).
+
+- Muddat: 1–30 kun.
+
+- Zaxira va kampaniya (botdagi joriy taklif).
+
+Boost ijarasi — xizmat turi; rasmiy Premium boost bepul (obuna ichida).
+
+## Namunaviy boost narxlari (so‘m)
+
+[Boost narxlari jadvali — komponent]
+
+Jadval taxminiy; to‘lov oldidan botdagi summani tasdiqlang. Avtomatik yetkazish narxdan alohida — standart xizmat ichida.
+
+## Arzon boostni tanlashda nimaga qarash kerak
+
+Eng past narx har doim eng foydali emas. Ikki taklifni solishtirganda uchta narsani tekshiring: boost muddat oxirigacha saqlanadimi, yetkazish avtomatikmi yoki qo‘lda, va muammo chiqqanda murojaat qiladigan support kanali bormi. Narx juda past bo‘lsa-yu, bu uchtasidan biri yo‘q bo‘lsa — tejash o‘rniga buyurtma yo‘qoladi.
+
+## Arzon boost qanday topiladi?
+
+Qisqa muddat + kam boost — test uchun; uzoq muddat — kuniga arzonroq bo‘lishi mumkin. Batafsil: arzon telegram boost, StarsPaymee Boost Market.
+
+> CTA: Joriy narxlar — Boost Market, so‘mda.
+
+[Seriya navigatsiyasi]
+
+### CTA
+
+**Narxni ko‘rish** — @StarsPaymee_bot

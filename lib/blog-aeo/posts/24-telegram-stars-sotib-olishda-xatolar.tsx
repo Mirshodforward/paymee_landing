@@ -99,7 +99,7 @@ function UzBody() {
       <h2 id="oldini">Xatolarni qanday oldini olish?</h2>
       <p>
         Aksariyat muammolar diqqat bilan hal bo‘ladi: @username’ni ikki marta tekshiring, narx haqiqiyligini{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">narx maqolasidan</Link> bilib oling va
+        narx maqolasidan bilib oling va
         xavfsizlik belgilariga e’tibor bering —{" "}
         <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Xavfsiz sotib olish qo‘llanmasi»</Link>. Agar
         to‘lov o‘tib, yulduz kelmasa —{" "}
@@ -214,7 +214,7 @@ function RuBody() {
       <h2 id="oldini">Как избежать ошибок?</h2>
       <p>
         Большинство проблем решается внимательностью: дважды проверьте @username, узнайте реальную цену из{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">статьи о ценах</Link> и следите за
+        статьи о ценах и следите за
         признаками безопасности —{" "}
         <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Руководство по безопасной покупке»</Link>. Если
         оплата прошла, а звёзды не пришли — выполните шаги из{" "}

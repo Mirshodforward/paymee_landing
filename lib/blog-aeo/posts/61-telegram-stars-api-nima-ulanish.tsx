@@ -84,9 +84,9 @@ function UzBody() {
         Ro‘yxatdan o‘tgach API kaliti tez taqdim etiladi va siz darhol Sandbox’da sinovni boshlaysiz. Integratsiya
         bo‘yicha savol tug‘ilsa, <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
         @StarsPaymeeSupport</a> yordam beradi. Batafsil mavzular:{" "}
-        <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> va{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (rubl) API</Link>.
+        Premium API,{" "}
+        Click API va{" "}
+        SBP (rubl) API.
       </p>
 
       <Sources
@@ -177,9 +177,9 @@ function RuBody() {
         После регистрации API‑ключ выдаётся быстро, и вы сразу начинаете тест в Sandbox. По вопросам интеграции
         поможет <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
         @StarsPaymeeSupport</a>. Подробнее:{" "}
-        <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> и{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (рубли) API</Link>.
+        Premium API,{" "}
+        Click API и{" "}
+        SBP (рубли) API.
       </p>
 
       <Sources
@@ -270,9 +270,9 @@ function EnBody() {
         sign‑up the API key is issued quickly and you can start testing in the Sandbox right away. For integration
         questions, <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">
         @StarsPaymeeSupport</a> will help. See also:{" "}
-        <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>,{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> and{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP (RUB) API</Link>.
+        Premium API,{" "}
+        Click API and{" "}
+        SBP (RUB) API.
       </p>
 
       <Sources

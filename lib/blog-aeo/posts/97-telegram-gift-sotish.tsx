@@ -32,7 +32,7 @@ function UzBody() {
         odatiy emas: uni Stars’ga qaytarish (convert) mumkin — farqi{" "}
         <Link href="/blog/telegram-gift-stars-ga-aylantirish">«Gift’ni Stars’ga aylantirish»</Link> maqolasida.
         Sovg‘ani collectible darajasiga qanday ko‘tarish esa{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">upgrade qo‘llanmasida</Link>.
+        upgrade qo‘llanmasida.
       </p>
 
       <h2 id="qayerda">Qayerda sotiladi?</h2>
@@ -118,7 +118,7 @@ function RuBody() {
         разница описана в{" "}
         <Link href="/blog/telegram-gift-stars-ga-aylantirish">«Конвертация подарка в Stars»</Link>. Как поднять
         подарок до collectible — в{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">руководстве по upgrade</Link>.
+        руководстве по upgrade.
       </p>
 
       <h2 id="qayerda">Где продают?</h2>
@@ -201,7 +201,7 @@ function EnBody() {
         Only <b>upgraded (collectible)</b> gifts can be sold — they carry a number and attributes, so they can move
         to another account. Ordinary gifts are not resold; they can be converted back into Stars, as described in{" "}
         <Link href="/blog/telegram-gift-stars-ga-aylantirish">converting a gift to Stars</Link>. Upgrading is covered
-        in <Link href="/blog/telegram-sovgani-collectible-upgrade">the upgrade guide</Link>.
+        in the upgrade guide.
       </p>
 
       <h2 id="bosqichlar">How to sell</h2>

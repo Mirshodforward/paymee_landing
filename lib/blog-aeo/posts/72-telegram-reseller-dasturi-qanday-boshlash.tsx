@@ -94,8 +94,8 @@ function UzBody() {
 
       <p>
         Batafsil:{" "}
-        <Link href="/blog/reseller-vs-white-label-farqi">Reseller vs White Label</Link>,{" "}
-        <Link href="/blog/white-label-telegram-stars-platforma">White Label platforma</Link> va{" "}
+        Reseller vs White Label,{" "}
+        White Label platforma va{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>.
       </p>
 
@@ -175,8 +175,8 @@ function RuBody() {
 
       <p>
         Подробнее:{" "}
-        <Link href="/blog/reseller-vs-white-label-farqi">Reseller vs White Label</Link>,{" "}
-        <Link href="/blog/white-label-telegram-stars-platforma">White Label платформа</Link> и{" "}
+        Reseller vs White Label,{" "}
+        White Label платформа и{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>.
       </p>
 
@@ -256,8 +256,8 @@ function EnBody() {
 
       <p>
         See also:{" "}
-        <Link href="/blog/reseller-vs-white-label-farqi">Reseller vs White Label</Link>,{" "}
-        <Link href="/blog/white-label-telegram-stars-platforma">White Label platform</Link> and{" "}
+        Reseller vs White Label,{" "}
+        White Label platform and{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>.
       </p>
 

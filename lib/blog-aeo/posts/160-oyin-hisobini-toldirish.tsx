@@ -85,9 +85,9 @@ function UzBody() {
       <GamesTable locale="uz" />
       <p>
         Steam hamyoni ham shu bo‘limda —{" "}
-        <Link href="/blog/steam-1-dollardan-toldirish">
+        
           Steam balansini so‘mda to‘ldirish
-        </Link>{" "}
+        {" "}
         maqolasida alohida yozilgan. To‘liq ro‘yxat va joriy holat{" "}
         <Link href="/gampay">GamPay sahifasida</Link>.
       </p>
@@ -150,9 +150,9 @@ function UzBody() {
         Telegram Stars — Telegram ekotizimi ichidagi valyuta: botlar, mini-ilovalar va sovg‘alar
         uchun ishlatiladi. O‘yin valyutasi (UC, olmos, CP) esa faqat o‘sha o‘yin ichida amal
         qiladi va ular bir-biriga aylanmaydi. Taqqoslash{" "}
-        <Link href="/blog/telegram-stars-vs-robux-vbucks-uc">
+        
           Stars va boshqa o‘yin valyutalari
-        </Link>{" "}
+        {" "}
         maqolasida.
       </p>
 
@@ -201,9 +201,9 @@ function RuBody() {
       <GamesTable locale="ru" />
       <p>
         Кошелёк Steam тоже в этом разделе — про него отдельно в статье{" "}
-        <Link href="/blog/steam-1-dollardan-toldirish">
+        
           пополнение баланса Steam в сумах
-        </Link>
+        
         . Полный список и текущее состояние — на <Link href="/gampay">странице GamPay</Link>.
       </p>
 
@@ -265,9 +265,9 @@ function RuBody() {
         Telegram Stars — валюта внутри экосистемы Telegram: для ботов, мини-приложений и подарков.
         Игровая валюта (UC, алмазы, CP) действует только внутри своей игры, и одна в другую не
         конвертируется. Сравнение — в статье{" "}
-        <Link href="/blog/telegram-stars-vs-robux-vbucks-uc">
+        
           Stars и другие игровые валюты
-        </Link>
+        
         .
       </p>
 

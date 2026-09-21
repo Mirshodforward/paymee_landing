@@ -55,9 +55,9 @@ function UzBody() {
       <p>
         Sovg‘a bilan birga Stars va Premium ham soting:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>. To‘lov uchun{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> va{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link>. Umumiy —{" "}
+        Premium API. To‘lov uchun{" "}
+        Click API va{" "}
+        SBP API. Umumiy —{" "}
         <Link href="/business">Business</Link>.
       </p>
 
@@ -123,9 +123,9 @@ function RuBody() {
       <p>
         Продавайте вместе с подарками Stars и Premium:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>. Для оплаты —{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> и{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link>. Общее —{" "}
+        Premium API. Для оплаты —{" "}
+        Click API и{" "}
+        SBP API. Общее —{" "}
         <Link href="/business">Business</Link>.
       </p>
 
@@ -192,9 +192,9 @@ function EnBody() {
       <p>
         Sell Stars and Premium alongside gifts:{" "}
         <Link href="/blog/telegram-stars-api-nima-ulanish">Stars API</Link>,{" "}
-        <Link href="/blog/telegram-premium-api-avtomatik-sotuv">Premium API</Link>. For payment —{" "}
-        <Link href="/blog/click-api-avtomatik-tolov-qabul">Click API</Link> and{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link>. General —{" "}
+        Premium API. For payment —{" "}
+        Click API and{" "}
+        SBP API. General —{" "}
         <Link href="/business">Business</Link>.
       </p>
 

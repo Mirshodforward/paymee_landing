@@ -167,7 +167,7 @@ function UzBody() {
       </Steps>
       <p>
         To‘liq tartib —{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">collectible’ga upgrade qilish qo‘llanmasida</Link>.
+        collectible’ga upgrade qilish qo‘llanmasida.
         Yulduz kerak bo‘lsa —{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">so‘mda Stars sotib olish</Link>.
       </p>
@@ -327,7 +327,7 @@ function RuBody() {
       </Steps>
       <p>
         Полный порядок —{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">в руководстве по апгрейду до collectible</Link>.
+        в руководстве по апгрейду до collectible.
         Нужны звёзды —{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">покупка Stars в сумах</Link>.
       </p>
@@ -483,7 +483,7 @@ function EnBody() {
       </Steps>
       <p>
         The full procedure is in{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">the collectible upgrade guide</Link>. If you need
+        the collectible upgrade guide. If you need
         Stars, see <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">buying Stars in so‘m</Link>.
       </p>
 

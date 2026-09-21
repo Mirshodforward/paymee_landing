@@ -31,19 +31,10 @@ export const protectedBlogSlugs = [
   "telegram-yulduz-kerak",
   "telegram-stars-kartasiz-sotib-olish",
   "yulduz-olish",
-  // Premium xaridi
-  "telegram-premium-3-6-12-oy-sotib-olish",
-  "telegram-premium-uzcard-2026",
   // Premium narxi
   "telegram-premium-narxi",
-  "telegram-premium-narxlari-arzon-qulay-2026",
-  "telegram-premium-1-3-6-oy-taqqoslash",
   // Premium foydalari
   "telegram-premium-arziydimi-foydalari",
-  // Gifts
-  "telegram-gifts-uzcard-bot",
-  // Boost
-  "telegram-boost-ijarasi",
   // Ishonch
   "ishonchli-stars-xizmatini-tanlash",
 ] as const;
@@ -63,7 +54,7 @@ export const separateIntentTasks: Record<string, readonly string[]> = {
   "tolov/naqd": ["naqd-pul-bilan-telegram-stars-sotib-olish"],
 
   // Premium: xarid, narx, bir oylik va sovg‘a — to‘rt xil vazifa
-  "premium/xarid": ["telegram-premium-eng-oson-usul", "telegram-premium-3-6-12-oy-sotib-olish"],
+  "premium/xarid": ["telegram-premium-eng-oson-usul"],
   "premium/narx": ["telegram-premium-narxi", "telegram-premium-narxi-ozbekistonda-2026"],
   "premium/bir-oylik": ["ozbekistonda-oylik-premium-uza-humo"],
   "premium/sovga": ["telegram-premium-sovga-username-orqali"],
@@ -80,7 +71,6 @@ export const separateIntentTasks: Record<string, readonly string[]> = {
   "gift/xarid": ["telegram-sovga-va-nft-sovga-sotib-olish", "telegram-gifts-narxlari-royxati"],
   "gift/yuborish": ["telegram-gifts-qanday-yuboriladi-qollanma"],
   "gift/sotish": ["telegram-gift-sotish"],
-  "gift/upgrade": ["telegram-sovgani-collectible-upgrade"],
   "gift/konvertatsiya": ["telegram-gift-stars-ga-aylantirish"],
 
   // Har bir o‘yin alohida maqola bo‘lib qoladi — Player ID, valyuta va narx har xil

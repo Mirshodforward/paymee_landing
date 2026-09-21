@@ -7,11 +7,9 @@ export const telegramGrowthSeriesSlugs = [
   "telegram-premium-eng-oson-usul",
   "telegram-akkaunt-sotib-olish",
   "telegram-biznes-akkaunt-ochish",
-  "telegram-premium-boost",
   "ozbekistonda-telegram-stars-sotib-olish",
   "telegram-gifts-qanday-yuboriladi-qollanma",
   "telegram-username-sotib-olish",
-  "telegram-kanal-guruh-reklama-xizmatlari",
 ] as const;
 
 export type TelegramGrowthSeriesSlug = (typeof telegramGrowthSeriesSlugs)[number];

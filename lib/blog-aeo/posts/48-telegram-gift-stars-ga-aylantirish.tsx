@@ -73,7 +73,7 @@ function UzBody() {
         Yo‘q, bular butunlay boshqa amallar. <strong>Convert</strong> — sovg‘ani Stars’ga aylantirib, uni butunlay
         sarflab yuborish. <strong>Upgrade</strong> esa — sovg‘ani yo‘qotmasdan, uni noyob collectible darajasiga
         ko‘tarish. Upgrade haqida to‘liq{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">«Sovg‘ani collectible’ga upgrade qilish»</Link>{" "}
+        «Sovg‘ani collectible’ga upgrade qilish»{" "}
         maqolasida o‘qing. Sovg‘alar narxlari haqida{" "}
         <Link href="/blog/telegram-gifts-narxlari-royxati">«Gifts narxlari ro‘yxati»</Link>da.
       </p>
@@ -158,7 +158,7 @@ function RuBody() {
         Нет, это совершенно разные действия. <strong>Convert</strong> — превратить подарок в Stars, полностью его
         потратив. <strong>Upgrade</strong> же — повысить подарок до уровня редкого collectible, не теряя его.
         Подробнее об upgrade — в статье{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">«Апгрейд подарка до collectible»</Link>. Цены на
+        «Апгрейд подарка до collectible». Цены на
         подарки — в{" "}
         <Link href="/blog/telegram-gifts-narxlari-royxati">«Списке цен на Gifts»</Link>.
       </p>

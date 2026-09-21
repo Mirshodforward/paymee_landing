@@ -35,7 +35,7 @@ function UzBody() {
         <li>Zaxira va kampaniya (botdagi joriy taklif).</li>
       </ul>
       <p>
-        <Link href="/blog/telegram-boost-ijarasi">Boost ijarasi</Link> — xizmat turi;{" "}
+        Boost ijarasi — xizmat turi;{" "}
         <Link href="/blog/telegram-kanal-boost-nima">rasmiy Premium boost</Link> bepul (obuna ichida).
       </p>
       <h2 id="jadval">Namunaviy boost narxlari (so‘m)</h2>

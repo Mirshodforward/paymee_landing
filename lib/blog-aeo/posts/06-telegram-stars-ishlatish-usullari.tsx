@@ -78,7 +78,7 @@ function UzBody() {
       <p>
         Stars nima ekani va qanday sotib olinishi haqida —{" "}
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> hamda{" "}
-        <Link href="/blog/telegram-stars-savol-javob-faq">«Stars bo‘yicha 50 savol»</Link> maqolalarini ko‘ring.
+        «Stars bo‘yicha 50 savol» maqolalarini ko‘ring.
       </p>
 
       <Sources
@@ -151,7 +151,7 @@ function RuBody() {
       <p>
         Что такое Stars и как их купить — в статьях{" "}
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link> и{" "}
-        <Link href="/blog/telegram-stars-savol-javob-faq">«50 вопросов про Stars»</Link>.
+        «50 вопросов про Stars».
       </p>
 
       <Sources

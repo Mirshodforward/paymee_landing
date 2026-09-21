@@ -98,7 +98,7 @@ function UzBody() {
       <p>
         Qarang: <Link href="/blog/telegram-premium-eng-oson-usul">Premium olish</Link>,{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">Premium arziydimi</Link> va{" "}
-        <Link href="/blog/telegram-premium-va-oddiy-farqi">oddiy hisob bilan farqi</Link>.
+        oddiy hisob bilan farqi.
       </p>
 
       <Sources
@@ -185,7 +185,7 @@ function RuBody() {
       <p>
         Смотрите: <Link href="/blog/telegram-premium-eng-oson-usul">покупка Premium</Link>,{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">стоит ли Premium</Link> и{" "}
-        <Link href="/blog/telegram-premium-va-oddiy-farqi">отличие от обычного аккаунта</Link>.
+        отличие от обычного аккаунта.
       </p>
 
       <Sources
@@ -273,7 +273,7 @@ function EnBody() {
       <p>
         See: <Link href="/blog/telegram-premium-eng-oson-usul">getting Premium</Link>,{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">whether Premium is worth it</Link> and{" "}
-        <Link href="/blog/telegram-premium-va-oddiy-farqi">the difference from a standard account</Link>.
+        the difference from a standard account.
       </p>
 
       <Sources

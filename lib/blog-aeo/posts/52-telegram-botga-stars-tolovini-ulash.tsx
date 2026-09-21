@@ -88,9 +88,9 @@ function UzBody() {
       </ul>
       <p>
         Mini App’larda Stars to‘lovi qanday ko‘rinishini{" "}
-        <Link href="/blog/telegram-oyin-mini-app-stars-tolov">«O‘yin va Mini App’larda Stars to‘lovi»</Link>{" "}
+        «O‘yin va Mini App’larda Stars to‘lovi»{" "}
         maqolasida, affiliate dasturi orqali daromadni esa{" "}
-        <Link href="/blog/telegram-affiliate-dasturi">«Telegram affiliate dasturi»</Link>da ko‘ring.
+        «Telegram affiliate dasturi»da ko‘ring.
       </p>
 
       <Sources
@@ -186,9 +186,9 @@ function RuBody() {
       </ul>
       <p>
         Как выглядит оплата Stars в Mini App — в статье{" "}
-        <Link href="/blog/telegram-oyin-mini-app-stars-tolov">«Оплата Stars в играх и Mini App»</Link>, а доход
+        «Оплата Stars в играх и Mini App», а доход
         через партнёрскую программу — в{" "}
-        <Link href="/blog/telegram-affiliate-dasturi">«Партнёрская программа Telegram»</Link>.
+        «Партнёрская программа Telegram».
       </p>
 
       <Sources

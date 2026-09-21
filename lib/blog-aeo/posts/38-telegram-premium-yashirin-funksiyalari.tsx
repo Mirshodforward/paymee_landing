@@ -61,7 +61,7 @@ function UzBody() {
       <h2 id="chuqur">Ba’zilari haqida chuqurroq</h2>
       <p>
         Voice-to-text funksiyasi haqida to‘liq{" "}
-        <Link href="/blog/ovozli-xabarni-matnga-aylantirish">«Ovozli xabarni matnga aylantirish»</Link> maqolasida;
+        «Ovozli xabarni matnga aylantirish» maqolasida;
         4 GB fayl yuborish haqida{" "}
         <Link href="/blog/telegramda-4gb-fayl-yuborish">«Telegramda 4 GB fayl yuborish»</Link> maqolasida; emoji
         status haqida{" "}
@@ -74,7 +74,7 @@ function UzBody() {
         Bu 10 funksiya — Premium bergan imkoniyatlarning faqat bir qismi. To‘liq ro‘yxat va har biriga tafsilotlar{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Premium arziydimi»</Link> maqolasida; oddiy
         akkaunt bilan farqi esa{" "}
-        <Link href="/blog/telegram-premium-va-oddiy-farqi">«Premium va oddiy farqi»</Link>da ko‘rsatilgan.
+        «Premium va oddiy farqi»da ko‘rsatilgan.
       </p>
 
       <Sources
@@ -145,7 +145,7 @@ function RuBody() {
       <h2 id="chuqur">Подробнее о некоторых из них</h2>
       <p>
         О функции voice-to-text — в статье{" "}
-        <Link href="/blog/ovozli-xabarni-matnga-aylantirish">«Преобразование голоса в текст»</Link>; об отправке
+        «Преобразование голоса в текст»; об отправке
         файлов до 4 ГБ — в{" "}
         <Link href="/blog/telegramda-4gb-fayl-yuborish">«Отправка файлов до 4 ГБ в Telegram»</Link>; об emoji-статусе
         — в{" "}
@@ -157,7 +157,7 @@ function RuBody() {
         Эти 10 функций — лишь часть возможностей Premium. Полный список и детали по каждой — в статье{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Стоит ли Premium»</Link>; отличие от обычного
         аккаунта — в{" "}
-        <Link href="/blog/telegram-premium-va-oddiy-farqi">«Premium и обычный аккаунт»</Link>.
+        «Premium и обычный аккаунт».
       </p>
 
       <Sources

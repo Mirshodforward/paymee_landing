@@ -62,7 +62,7 @@ function UzBody() {
         Telegram’ning rasmiy funksiyasi orqali kanal egasi <strong>Boost</strong> to‘plab, obunachilar orasida
         Premium (yoki Stars) giveaway o‘tkazishi mumkin. Bu — Telegram tomonidan tasdiqlangan, haqiqiy mexanizm.
         Qatnashish uchun odatda kanalga a’zo bo‘lish kifoya, natija esa tasodifiy tanlanadi. Batafsil mexanizmi{" "}
-        <Link href="/blog/telegram-premium-giveaway-konkurs">«Premium giveaway»</Link> maqolasida.
+        «Premium giveaway» maqolasida.
       </p>
 
       <KeyFacts label="Qanday farqlash mumkin">
@@ -174,7 +174,7 @@ function RuBody() {
         Через официальную функцию Telegram владелец канала, набрав <strong>Boost</strong>, может провести giveaway
         Premium (или Stars) среди подписчиков. Это подтверждённый Telegram, реальный механизм. Для участия обычно
         достаточно быть подписчиком канала, а победитель выбирается случайно. Подробный механизм — в статье{" "}
-        <Link href="/blog/telegram-premium-giveaway-konkurs">«Premium giveaway»</Link>.
+        «Premium giveaway».
       </p>
 
       <KeyFacts label="Как отличить">

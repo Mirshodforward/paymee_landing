@@ -5,7 +5,6 @@ export const nftGiftSeriesSlugs = [
   "telegram-gifts-kolleksiya-rare-sovgalar",
   "telegram-gift-price",
   "telegram-nft-investitsiya",
-  "telegram-sovgani-collectible-upgrade",
   "telegram-gift-sotish",
   "kolleksion-gift-bot-orqali-olinmaydi",
   "starspaymee-nft-market",

@@ -90,7 +90,7 @@ function UzBody() {
 
       <p>
         Qarang: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">Stars sotib olish qo‘llanmasi</Link>,{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">1 yulduz necha so‘m</Link> va{" "}
+        1 yulduz necha so‘m va{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">xavfsizlik mezonlari</Link>.
       </p>
 
@@ -169,7 +169,7 @@ function RuBody() {
 
       <p>
         Смотрите: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">руководство по покупке Stars</Link>,{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">сколько сумов стоит звезда</Link> и{" "}
+        сколько сумов стоит звезда и{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">критерии безопасности</Link>.
       </p>
 
@@ -248,7 +248,7 @@ function EnBody() {
 
       <p>
         See: <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">the guide to buying Stars</Link>,{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">how many so‘m one Star costs</Link> and{" "}
+        how many so‘m one Star costs and{" "}
         <Link href="/blog/telegram-stars-xavfsizmi">safety criteria</Link>.
       </p>
 

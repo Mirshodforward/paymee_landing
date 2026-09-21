@@ -94,7 +94,7 @@ function UzBody() {
         mahalliy botdan sotib olish. To‘liq qo‘llanma{" "}
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link> maqolasida,
         narxlar esa{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">«1 Stars necha so‘m»</Link> jadvalida.
+        «1 Stars necha so‘m» jadvalida.
       </p>
 
       <Sources
@@ -195,7 +195,7 @@ function RuBody() {
         Если цель — минимум затрат на Stars, самое практичное решение — сравнить цены и купить у надёжного местного
         бота. Полное руководство — в статье{" "}
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>, цены — в таблице{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">«Сколько стоит 1 Stars»</Link>.
+        «Сколько стоит 1 Stars».
       </p>
 
       <Sources

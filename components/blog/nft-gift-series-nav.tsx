@@ -7,7 +7,6 @@ const labels: Record<AeoUiLocale, Record<(typeof nftGiftSeriesSlugs)[number], { 
   uz: {
     "telegram-nft-gift-nima": { title: "Telegram NFT Gift nima?", blurb: "Limited Edition va collectible tushunchasi." },
     "telegram-sovga-va-nft-sovga-sotib-olish": { title: "Sovg‘a va NFT sovg‘a xaridi", blurb: "Qayerdan, qanday to‘lov, Stars." },
-    "telegram-sovgani-collectible-upgrade": { title: "Collectible’ga upgrade", blurb: "Tiraj, noyoblik, narx o‘sishi." },
     "kolleksion-gift-bot-orqali-olinmaydi": { title: "Xizmat holati: nima o‘zgardi", blurb: "Gift Market, savdo, auksion." },
     "telegram-gift-price": { title: "Gift narxi nima uchun oshadi", blurb: "Omillar va trendlar." },
     "telegram-nft-investitsiya": { title: "NFT investitsiya", blurb: "Risk va realistik kutish." },
@@ -18,7 +17,6 @@ const labels: Record<AeoUiLocale, Record<(typeof nftGiftSeriesSlugs)[number], { 
   ru: {
     "telegram-nft-gift-nima": { title: "Что такое NFT Gift?", blurb: "Limited Edition и collectible." },
     "telegram-sovga-va-nft-sovga-sotib-olish": { title: "Покупка подарков и NFT", blurb: "Где, оплата, Stars." },
-    "telegram-sovgani-collectible-upgrade": { title: "Upgrade до collectible", blurb: "Тираж и цена." },
     "kolleksion-gift-bot-orqali-olinmaydi": { title: "Статус услуги: что изменилось", blurb: "Gift Market и торговля." },
     "telegram-gift-price": { title: "Почему растёт цена", blurb: "Факторы." },
     "telegram-nft-investitsiya": { title: "Инвестиции в NFT", blurb: "Риски." },
@@ -29,7 +27,6 @@ const labels: Record<AeoUiLocale, Record<(typeof nftGiftSeriesSlugs)[number], { 
   en: {
     "telegram-nft-gift-nima": { title: "What is NFT Gift?", blurb: "Limited Edition collectibles." },
     "telegram-sovga-va-nft-sovga-sotib-olish": { title: "Buying gifts and NFT gifts", blurb: "Payment and Stars." },
-    "telegram-sovgani-collectible-upgrade": { title: "Upgrade до collectible", blurb: "Supply and price." },
     "kolleksion-gift-bot-orqali-olinmaydi": { title: "Service status: what changed", blurb: "Gift Market trading." },
     "telegram-gift-price": { title: "Why gift prices rise", blurb: "Factors." },
     "telegram-nft-investitsiya": { title: "NFT investing", blurb: "Risks." },

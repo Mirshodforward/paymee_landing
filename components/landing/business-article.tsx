@@ -11,11 +11,11 @@ type Section = { title: string; body: string; items?: string[] };
 /** /business sahifasida ko‘rsatiladigan asosiy maqolalar. */
 const FEATURED_SLUGS = [
   "telegram-stars-api-nima-ulanish",
-  "telegram-premium-api-avtomatik-sotuv",
-  "click-api-avtomatik-tolov-qabul",
-  "sbp-api-rossiya-rubl-tolov",
-  "white-label-telegram-stars-platforma",
   "telegram-reseller-dasturi-qanday-boshlash",
+  "telegram-stars-api-webhook-integratsiya",
+  "botga-tolov-api-ulash-qollanma",
+  "telegram-gifts-api-avtomatik-sovga",
+  "sbp-tolov-tizimi-qanday-ishlaydi",
 ];
 
 export async function BusinessArticle({ locale }: { locale: string }) {

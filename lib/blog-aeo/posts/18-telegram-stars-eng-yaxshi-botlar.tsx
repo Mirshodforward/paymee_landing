@@ -63,7 +63,7 @@ function UzBody() {
       <h2 id="yollar">Stars olish yo‘llari — taqqoslash</h2>
       <p>
         Quyida asosiy yo‘llar va ularning O‘zbekiston foydalanuvchisiga mosligi (batafsil narx taqqoslovi{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">alohida maqolada</Link>):
+        alohida maqolada):
       </p>
       <CompareTable
         headers={["Yo‘l", "O‘zbek kartasi", "Parolsiz", "Tezlik"]}
@@ -176,7 +176,7 @@ function RuBody() {
       <h2 id="yollar">Способы покупки Stars — сравнение</h2>
       <p>
         Ниже основные способы и их пригодность для пользователя из Узбекистана (подробное сравнение цен — в{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">отдельной статье</Link>):
+        отдельной статье):
       </p>
       <CompareTable
         headers={["Способ", "Карта Узбекистана", "Без пароля", "Скорость"]}

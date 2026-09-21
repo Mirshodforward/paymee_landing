@@ -49,9 +49,9 @@ function UzBody() {
       <p>
         Odatda quyidagi usullar mavjud: bank kartalari, Steam Gift Card, rasmiy to‘lov usullari va mahalliy
         xizmatlar. O‘zbekistonda ko‘p foydalanuvchilar qulaylik sababli{" "}
-        <Link href="/blog/steam-1-dollardan-toldirish">so‘mda to‘ldirish</Link>ni tanlaydi — UzCard va
+        so‘mda to‘ldirishni tanlaydi — UzCard va
         HUMO orqali. Batafsil:{" "}
-        <Link href="/blog/steam-som-yoki-rubl-hamyon">Steam hisobini qanday to‘ldirish mumkin</Link>.
+        Steam hisobini qanday to‘ldirish mumkin.
       </p>
 
       <h2 id="gift-card">Steam Wallet va Gift Card farqi</h2>
@@ -66,7 +66,7 @@ function UzBody() {
       />
       <p>
         Ya’ni Gift Card — bu Steam Wallet balansini to‘ldiradigan vosita.{" "}
-        <Link href="/blog/steam-gift-card-nima">Steam Gift Card nima?</Link>
+        Steam Gift Card nima?
       </p>
 
       <h2 id="xavfsiz">Steam Wallet xavfsizmi?</h2>
@@ -132,9 +132,9 @@ function RuBody() {
       <p>
         Обычно доступны: банковские карты, Steam Gift Card, официальные способы оплаты и локальные сервисы. В
         Узбекистане многие выбирают{" "}
-        <Link href="/blog/steam-1-dollardan-toldirish">пополнение в сумах</Link> — через UzCard и HUMO.
+        пополнение в сумах — через UzCard и HUMO.
         Подробнее:{" "}
-        <Link href="/blog/steam-som-yoki-rubl-hamyon">как пополнить аккаунт Steam</Link>.
+        как пополнить аккаунт Steam.
       </p>
 
       <h2 id="gift-card">Разница Steam Wallet и Gift Card</h2>
@@ -149,7 +149,7 @@ function RuBody() {
       />
       <p>
         То есть Gift Card — это средство пополнения баланса Steam Wallet.{" "}
-        <Link href="/blog/steam-gift-card-nima">Что такое Steam Gift Card?</Link>
+        Что такое Steam Gift Card?
       </p>
 
       <h2 id="xavfsiz">Безопасен ли Steam Wallet?</h2>
@@ -215,9 +215,9 @@ function EnBody() {
       <p>
         The usual options are: bank cards, a Steam Gift Card, official payment methods and local services. In
         Uzbekistan many users choose{" "}
-        <Link href="/blog/steam-1-dollardan-toldirish">topping up in so‘m</Link> — via UzCard and HUMO.
+        topping up in so‘m — via UzCard and HUMO.
         More:{" "}
-        <Link href="/blog/steam-som-yoki-rubl-hamyon">how to top up a Steam account</Link>.
+        how to top up a Steam account.
       </p>
 
       <h2 id="gift-card">Steam Wallet vs Gift Card</h2>
@@ -232,7 +232,7 @@ function EnBody() {
       />
       <p>
         So a Gift Card is a means of topping up the Steam Wallet balance.{" "}
-        <Link href="/blog/steam-gift-card-nima">What is a Steam Gift Card?</Link>
+        What is a Steam Gift Card?
       </p>
 
       <h2 id="xavfsiz">Is Steam Wallet safe?</h2>

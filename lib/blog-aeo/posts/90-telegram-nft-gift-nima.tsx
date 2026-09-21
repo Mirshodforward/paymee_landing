@@ -66,7 +66,7 @@ function UzBody() {
       />
       <p>
         Upgrade jarayoni:{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">collectible upgrade</Link>. Kolleksiya mavzusi:{" "}
+        collectible upgrade. Kolleksiya mavzusi:{" "}
         <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">rare sovg‘alar</Link>.
       </p>
 
@@ -94,7 +94,7 @@ function UzBody() {
         ega bo‘lishning ishlaydigan yo‘li ikki qadamli: botdan yulduz olasiz, keyin Telegram ichida oddiy sovg‘ani
         collectible darajasiga ko‘tarasiz. Batafsil —{" "}
         <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgardi</Link> va{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">upgrade qo‘llanmasi</Link>.
+        upgrade qo‘llanmasi.
       </p>
 
       <h2 id="xavf">Xavfsizlik va realistik kutish</h2>
@@ -134,7 +134,7 @@ function RuBody() {
       <h2>Что это такое?</h2>
       <p>
         Отличие обычного подарка и collectible — в{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">upgrade</Link>. Примеры цен в сумах — на доске ниже.
+        upgrade. Примеры цен в сумах — на доске ниже.
       </p>
       <NftGiftMarketBoard locale="ru" />
       <NftGiftSeriesNav locale="ru" />
@@ -218,7 +218,7 @@ function EnBody() {
       />
       <p>
         How the upgrade works:{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">the collectible upgrade guide</Link>. On collecting:{" "}
+        the collectible upgrade guide. On collecting:{" "}
         rare gifts.
       </p>
 

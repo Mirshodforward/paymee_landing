@@ -81,7 +81,7 @@ function UzBody() {
       <p>
         Sotuvdan tugagan kolleksion nusxalar <b>bot orqali yetkazilmaydi</b> — ularni Telegram ichidagi bozordan
         yoki boshqa foydalanuvchidan olasiz. Yangi collectible esa o‘zingizda hosil bo‘ladi: yulduz olib, oddiy
-        sovg‘ani <Link href="/blog/telegram-sovgani-collectible-upgrade">upgrade qilasiz</Link>. Xizmat holati
+        sovg‘ani upgrade qilasiz. Xizmat holati
         bo‘yicha batafsil — <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">shu maqolada</Link>.
       </p>
 
@@ -91,7 +91,7 @@ function UzBody() {
         sovg‘alar raqamlangan (masalan, 100 tadan 7-si) va boshqa foydalanuvchiga uzatilishi mumkin. Bu ularni oddiy
         sovg‘adan farqli — to‘plash va almashish ob’ektiga aylantiradi. Telegram’ning bu yo‘nalishi TON va raqamli
         aktivlar bilan bog‘liq; umumiy manzara{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram ekotizimi»</Link> maqolasida.
+        «Telegram ekotizimi» maqolasida.
       </p>
 
       <h2 id="maslahat">Kolleksioner uchun 4 maslahat</h2>
@@ -204,7 +204,7 @@ function RuBody() {
         Ценность идёт от <strong>ограниченности</strong>: чем меньше тираж, тем подарок особеннее. Collectible-подарки
         пронумерованы (например, 7-й из 100) и передаются другому пользователю. Это отличает их от обычных — превращает
         в объект коллекционирования и обмена. Направление связано с TON и цифровыми активами; общая картина — в статье{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Экосистема Telegram»</Link>.
+        «Экосистема Telegram».
       </p>
 
       <h2 id="maslahat">4 совета коллекционеру</h2>

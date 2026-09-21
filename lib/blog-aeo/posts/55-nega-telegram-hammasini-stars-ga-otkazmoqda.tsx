@@ -72,7 +72,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Stars va TON o‘rtasidagi to‘liq bog‘liqlikni{" "}
-        <Link href="/blog/telegram-stars-vs-ton-qaysi-biri">«Stars vs TON»</Link> maqolasida ko‘ring.
+        «Stars vs TON» maqolasida ko‘ring.
       </p>
 
       <h2 id="falsafa">Durov strategiyasi va falsafasi</h2>
@@ -89,7 +89,7 @@ function UzBody() {
         kengaygan affiliate, yangi kontent formatlar) integratsiya qilishni davom ettirmoqda. Bu — Telegram’ni
         shunchaki messenjerdan <strong>to‘liq raqamli iqtisodiy platforma</strong>ga aylantirish yo‘lidagi izchil
         qadam. Butun ekotizim xaritasini{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram ekotizimi»</Link> maqolasida
+        «Telegram ekotizimi» maqolasida
         ko‘rishingiz mumkin.
       </p>
 
@@ -171,7 +171,7 @@ function RuBody() {
       </KeyFacts>
       <p>
         Полную связь между Stars и TON смотрите в статье{" "}
-        <Link href="/blog/telegram-stars-vs-ton-qaysi-biri">«Stars vs TON»</Link>.
+        «Stars vs TON».
       </p>
 
       <h2 id="falsafa">Стратегия и философия Дурова</h2>
@@ -188,7 +188,7 @@ function RuBody() {
         (e-commerce в Mini App, расширенная партнёрская программа, новые форматы контента). Это последовательный шаг
         на пути превращения Telegram из простого мессенджера в{" "}
         <strong>полноценную цифровую экономическую платформу</strong>. Карту всей экосистемы можно увидеть в статье{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Экосистема Telegram»</Link>.
+        «Экосистема Telegram».
       </p>
 
       <Sources

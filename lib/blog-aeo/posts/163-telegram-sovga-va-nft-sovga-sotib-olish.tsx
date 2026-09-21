@@ -197,7 +197,7 @@ function UzBody() {
       <p>
         Ya’ni qayerda bo‘lishingizdan qat’i nazar — O‘zbekistondami yoki Rossiyadami — sovg‘alarni odatiy valyuta
         va odatiy to‘lov usuli bilan sotib olish mumkin. To‘lov usullarini taqqoslash:{" "}
-        <Link href="/blog/sbp-vs-click-vs-uzcard-tolov-solishtirish">SBP, Click va UzCard</Link>.
+        SBP, Click va UzCard.
       </p>
 
       <InlineCta text="Sovg‘ani so‘mda yoki rublda tanlang — Gift Market botda ochiq." />
@@ -278,7 +278,7 @@ function UzBody() {
       <p>
         Shuningdek o‘qing:{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">so‘mda Stars sotib olish</Link>,{" "}
-        <Link href="/blog/telegram-premium-3-6-12-oy-sotib-olish">Premium 3, 6 va 12 oy</Link>,{" "}
+        Premium 3, 6 va 12 oy,{" "}
         <Link href="/blog/telegram-gifts-narxlari-royxati">sovg‘alar narxlari ro‘yxati</Link>.
       </p>
 
@@ -435,7 +435,7 @@ function RuBody() {
       <p>
         Таким образом, независимо от того, где вы находитесь — в Узбекистане или в России — купить подарки можно
         быстро, в привычной валюте и привычным способом оплаты. Сравнение методов:{" "}
-        <Link href="/blog/sbp-vs-click-vs-uzcard-tolov-solishtirish">СБП, Click и Uzcard</Link>.
+        СБП, Click и Uzcard.
       </p>
 
       <InlineCta text="Выберите подарок и оплатите в сумах или рублях — Gift Market открыт в боте." />
@@ -517,7 +517,7 @@ function RuBody() {
       <p>
         Читайте также:{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">покупка Stars за сумы</Link>,{" "}
-        <Link href="/blog/telegram-premium-3-6-12-oy-sotib-olish">Premium на 3, 6 и 12 месяцев</Link>,{" "}
+        Premium на 3, 6 и 12 месяцев,{" "}
         <Link href="/blog/telegram-gifts-narxlari-royxati">список цен на подарки</Link>.
       </p>
 
@@ -665,7 +665,7 @@ function EnBody() {
       <p>
         So wherever you are — in Uzbekistan or in Russia — gifts can be bought quickly, in a familiar currency and
         with a familiar payment method. Comparing the methods:{" "}
-        <Link href="/blog/sbp-vs-click-vs-uzcard-tolov-solishtirish">SBP, Click and UzCard</Link>.
+        SBP, Click and UzCard.
       </p>
 
       <InlineCta text="Pick a gift and pay in so‘m or roubles — the Gift Market is open in the bot." />
@@ -744,7 +744,7 @@ function EnBody() {
       <p>
         Read next:{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">buying Stars in so‘m</Link>,{" "}
-        <Link href="/blog/telegram-premium-3-6-12-oy-sotib-olish">Premium for 3, 6 and 12 months</Link>,{" "}
+        Premium for 3, 6 and 12 months,{" "}
         <Link href="/blog/telegram-gifts-narxlari-royxati">the gift price list</Link>.
       </p>
 

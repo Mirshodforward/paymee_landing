@@ -34,7 +34,7 @@ function UzBody() {
       <p>
         Aniq narxlar va mavjud sovg‘alar ro‘yxati doimo o‘zgaradi — joriy katalogni{" "}
         <Link href="/gifts">Gifts sahifasida</Link> yoki @StarsPaymee_bot’da ko‘ring. Stars narxi haqida{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">narx taqqoslovida</Link> o‘qishingiz
+        narx taqqoslovida o‘qishingiz
         mumkin.
       </p>
 
@@ -119,7 +119,7 @@ function RuBody() {
       <p>
         Точные цены и список доступных подарков постоянно меняются — смотрите актуальный каталог на{" "}
         <Link href="/gifts">странице Gifts</Link> или в @StarsPaymee_bot. О цене Stars читайте в{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">сравнении цен</Link>.
+        сравнении цен.
       </p>
 
       <InlineCta text="Купите подарок в сумах и отправьте другу." />
@@ -202,7 +202,7 @@ function EnBody() {
       <p>
         Exact prices and the available catalogue change constantly — check the current list on the{" "}
         <Link href="/gifts">Gifts page</Link> or in the bot. On Star pricing itself, see{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">the platform price comparison</Link>.
+        the platform price comparison.
       </p>
 
       <InlineCta text="Buy a gift in so\u2018m and send it to a friend." />

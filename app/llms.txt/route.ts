@@ -63,7 +63,7 @@ Har bir AEO blogda: meta title/description, canonical, hreflang (uz/ru/en), Open
 - Gift Market (NFT kolleksion sovg'alar, so'm): ${base}/uz/blog/starspaymee-nft-market
 - Kanal Boost arenda (1–30 kun): ${base}/uz/blog/telegram-kanalga-boost-sotib-olish
 - Virtual raqam / SMS: ${base}/uz/blog/telegram-raqam-sotib-olish
-- Steam Wallet to'ldirish (UZS, UzCard/HUMO): ${base}/uz/blog/steam-1-dollardan-toldirish
+- Steam Wallet to'ldirish (UZS, UzCard/HUMO): ${base}/uz/blog/steam-wallet-nima
 - Business / API (Stars, Premium, Gifts API + Click va SBP integratsiyasi): ${base}/uz/business
 - Bot: https://t.me/StarsPaymee_bot
 - Support: https://t.me/StarsPaymeeSupport

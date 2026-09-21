@@ -148,9 +148,9 @@ function UzBody() {
       <p>
         Ekranda ko‘rsatilgan miqdor — bitta xabar narxi. Bir necha xabar yozmoqchi bo‘lsangiz, uni shunga
         ko‘paytiring va balansingiz bilan solishtiring.{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">
+        
           Kerakli Stars miqdorining so‘mdagi narxini hisoblash
-        </Link>{" "}
+        {" "}
         sahifasi shu hisobni tez bajaradi.
       </p>
 
@@ -306,7 +306,7 @@ function RuBody() {
       <p>
         Указанное на экране количество — цена одного сообщения. Если планируете несколько, умножьте и сравните с
         балансом. Страница{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">расчёта стоимости нужного количества Stars в сумах</Link>{" "}
+        расчёта стоимости нужного количества Stars в сумах{" "}
         делает этот подсчёт быстро.
       </p>
 

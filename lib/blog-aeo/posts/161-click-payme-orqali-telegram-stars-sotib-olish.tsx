@@ -233,9 +233,9 @@ function UzBody() {
 
       <p>
         Shuningdek o‘qing:{" "}
-        <Link href="/blog/telegram-premium-3-6-12-oy-sotib-olish">Telegram Premium 3, 6 va 12 oy</Link>,{" "}
+        Telegram Premium 3, 6 va 12 oy,{" "}
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">oddiy va NFT sovg‘alar</Link>,{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">Stars necha so‘m — kalkulyator</Link>.
+        Stars necha so‘m — kalkulyator.
       </p>
 
       <Sources
@@ -412,9 +412,9 @@ function RuBody() {
 
       <p>
         Читайте также:{" "}
-        <Link href="/blog/telegram-premium-3-6-12-oy-sotib-olish">Telegram Premium на 3, 6 и 12 месяцев</Link>,{" "}
+        Telegram Premium на 3, 6 и 12 месяцев,{" "}
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">обычные и NFT-подарки</Link>,{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">сколько сумов стоит звезда</Link>.
+        сколько сумов стоит звезда.
       </p>
 
       <Sources
@@ -588,9 +588,9 @@ function EnBody() {
 
       <p>
         Read next:{" "}
-        <Link href="/blog/telegram-premium-3-6-12-oy-sotib-olish">Telegram Premium for 3, 6 and 12 months</Link>,{" "}
+        Telegram Premium for 3, 6 and 12 months,{" "}
         <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">regular and NFT gifts</Link>,{" "}
-        <Link href="/blog/telegram-stars-necha-som-kalkulyator">how many so‘m a Star costs</Link>.
+        how many so‘m a Star costs.
       </p>
 
       <Sources

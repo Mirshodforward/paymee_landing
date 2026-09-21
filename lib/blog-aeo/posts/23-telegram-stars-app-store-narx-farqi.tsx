@@ -49,7 +49,7 @@ function UzBody() {
       <p>
         Ko‘rib turganingizdek, narx farqi Stars’ning «qiymati»da emas — u har uch platformada bir xil yulduz — balki
         <strong> to‘lov kanalidagi komissiya</strong>da. Platformalararo to‘liq narx tahlilini{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">«Stars narxlari taqqoslash»</Link>{" "}
+        «Stars narxlari taqqoslash»{" "}
         maqolasida ko‘ring.
       </p>
 
@@ -146,7 +146,7 @@ function RuBody() {
       <p>
         Как видно, разница не в «ценности» Stars — звезда одинакова на всех платформах — а в{" "}
         <strong>комиссии платёжного канала</strong>. Полный разбор цен — в статье{" "}
-        <Link href="/blog/telegram-stars-narxlari-2026-platformalar-taqqoslash">«Сравнение цен Stars»</Link>.
+        «Сравнение цен Stars».
       </p>
 
       <InlineCta text="Без комиссии App Store — в сумах, в боте за 10 секунд." />

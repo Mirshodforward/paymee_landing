@@ -75,8 +75,8 @@ function UzBody() {
         SBP bank darajasidagi xavfsizlik bilan ishlaydi; to‘lov mijozning bank ilovasi ichida tasdiqlanadi.
         Komissiyalar odatda karta ekvayringidan past bo‘lishi mumkin, aniq foiz esa integratsiya va hajmga bog‘liq.
         API bilan ulash uchun{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link> va{" "}
-        <Link href="/blog/sbp-api-faq-savollar">SBP FAQ</Link>ni ko‘ring;{" "}
+        SBP API va{" "}
+        SBP FAQni ko‘ring;{" "}
         <Link href="/business">Business</Link> sahifasida umumiy imkoniyatlar.
       </p>
 
@@ -162,8 +162,8 @@ function RuBody() {
         СБП работает с безопасностью банковского уровня; оплата подтверждается внутри банковского приложения клиента.
         Комиссии обычно могут быть ниже, чем при карточном эквайринге, а точный процент зависит от интеграции и
         объёма. Для подключения по API смотрите{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link> и{" "}
-        <Link href="/blog/sbp-api-faq-savollar">FAQ SBP</Link>; общие возможности — на странице{" "}
+        SBP API и{" "}
+        FAQ SBP; общие возможности — на странице{" "}
         <Link href="/business">Business</Link>.
       </p>
 
@@ -249,8 +249,8 @@ function EnBody() {
         SBP works with bank‑level security; payment is confirmed inside the customer's bank app. Fees can usually be
         lower than card acquiring, and the exact percentage depends on the integration and volume. To connect via API
         see{" "}
-        <Link href="/blog/sbp-api-rossiya-rubl-tolov">SBP API</Link> and{" "}
-        <Link href="/blog/sbp-api-faq-savollar">SBP FAQ</Link>; general capabilities are on the{" "}
+        SBP API and{" "}
+        SBP FAQ; general capabilities are on the{" "}
         <Link href="/business">Business</Link> page.
       </p>
 

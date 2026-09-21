@@ -170,9 +170,9 @@ function UzBody() {
       <p>
         Xuddi shu talab sovg‘ani marketga yuborganingizdan keyin ham keladi — «support» niqobida.
         Bu haqda alohida:{" "}
-        <Link href="/blog/portals-mrkt-getgems-soxta-akkauntlar">
+        
           Portals va gift marketlar nomidan yozadigan soxta akkauntlar
-        </Link>
+        
         .
       </p>
 
@@ -339,9 +339,9 @@ function RuBody() {
       <p>
         То же требование приходит и после отправки подарка на маркет — под видом «поддержки».
         Об этом отдельно:{" "}
-        <Link href="/blog/portals-mrkt-getgems-soxta-akkauntlar">
+        
           поддельные аккаунты от имени Portals и гифт-маркетов
-        </Link>
+        
         .
       </p>
 
@@ -571,9 +571,9 @@ function EnBody() {
       <p>
         The same demand arrives after you send a gift to a marketplace, dressed up as “support”. There is a
         separate piece on it:{" "}
-        <Link href="/blog/portals-mrkt-getgems-soxta-akkauntlar">
+        
           fake accounts posing as Portals and other gift markets
-        </Link>
+        
         .
       </p>
 

@@ -67,7 +67,7 @@ function UzBody() {
       </KeyFacts>
       <p>
         Upgrade orqali collectible olish jarayoni haqida{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">«Sovg‘ani collectible’ga upgrade qilish»</Link>{" "}
+        «Sovg‘ani collectible’ga upgrade qilish»{" "}
         maqolasida batafsil yozilgan.
       </p>
 
@@ -76,7 +76,7 @@ function UzBody() {
         Collectible sovg‘alar odatda <strong>Fragment</strong> platformasi yoki shunga o‘xshash ikkilamchi
         bozorlarda TON evaziga qayta sotiladi. Bu Telegram’ning umumiy raqamli aktivlar strategiyasining bir qismi
         — batafsil{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Telegram ekotizimi»</Link> maqolasida.
+        «Telegram ekotizimi» maqolasida.
       </p>
 
       <h2 id="ehtiyot">Sovg‘alarga «investitsiya» sifatida qarash xavflimi?</h2>
@@ -161,14 +161,14 @@ function RuBody() {
       </KeyFacts>
       <p>
         Процесс получения collectible через апгрейд подробно описан в статье{" "}
-        <Link href="/blog/telegram-sovgani-collectible-upgrade">«Апгрейд подарка до collectible»</Link>.
+        «Апгрейд подарка до collectible».
       </p>
 
       <h2 id="qayerda">Где перепродаются дорогие подарки?</h2>
       <p>
         Collectible-подарки обычно перепродаются на платформе <strong>Fragment</strong> или похожих вторичных
         рынках за TON. Это часть общей стратегии Telegram по цифровым активам — подробнее в статье{" "}
-        <Link href="/blog/telegram-ekotizimi-stars-premium-gifts-ton">«Экосистема Telegram»</Link>.
+        «Экосистема Telegram».
       </p>
 
       <h2 id="ehtiyot">Опасно ли рассматривать подарки как «инвестицию»?</h2>

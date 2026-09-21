@@ -144,15 +144,15 @@ export function getRelatedSummaries(locale: string, slug: string, category: Blog
 const FEATURED_SLUGS = [
   "ozbekistonda-telegram-stars-sotib-olish",
   "telegram-premium-narxi-ozbekistonda-2026",
-  "telegram-stars-necha-som-kalkulyator",
   "telegram-stars-kartasiz-sotib-olish",
-  "telegram-stars-narxlari-2026-platformalar-taqqoslash",
   "telegram-premium-eng-oson-usul",
   "telegram-stars-xavfsizmi",
   "telegram-gifts-narxlari-royxati",
   "naqd-pul-bilan-telegram-stars-sotib-olish",
   "oyin-hisobini-toldirish",
   "pubg-mobile-uc-sotib-olish",
+  "telegram-premium-kerak",
+  "telegram-gifts-qanday-yuboriladi-qollanma",
 ] as const;
 
 export function getFeaturedSummaries(locale: string, limit = 8): BlogSummary[] {

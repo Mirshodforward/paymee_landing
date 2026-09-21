@@ -112,7 +112,7 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "ton-vs-telegram-stars-farq",
-    to: "telegram-stars-vs-ton-qaysi-biri",
+    to: "telegram-stars-qanday-ishlaydi",
     merged: "2026-09-18",
     reason:
       "Bir xil taqqoslash ikki URL’da turardi. Qoladigan maqola to‘liqroq; eski matndan TON bilan ishlash uchun hamyon/seed-fraza/tarmoq komissiyasi kerakligi qo‘shildi.",
@@ -203,14 +203,14 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "telegram-botlar-uchun-stars",
-    to: "telegram-oyin-mini-app-stars-tolov",
+    to: "telegram-stars-nima-uchun-ishlatiladi-usullar",
     merged: "2026-09-18",
     reason:
       "Botlarda Stars bilan to‘lov — Mini App to‘lov oqimining bir qismi. Botlar nimani sotishi va botni tanlash mezonlari qoladigan maqolaga bo‘lim bo‘lib qo‘shildi.",
   },
   {
     from: "stars-va-premium-farqi",
-    to: "telegram-premium-vs-stars-farqi",
+    to: "telegram-premium-kerak",
     merged: "2026-09-18",
     reason:
       "Bir xil taqqoslash ikki URL’da turardi. Qoladigan maqola batafsilroq: jadval, «qaysi biri kerak» tanlovi va O‘zbekistonda xarid bo‘limi bor.",
@@ -336,7 +336,7 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "premium-va-oddiy-hisob-farqi",
-    to: "telegram-premium-va-oddiy-farqi",
+    to: "telegram-premium-kerak",
     merged: "2026-09-18",
     reason:
       "Bir xil taqqoslash ikki URL’da turardi; qoladigan maqolada jadval va «kimga kerak» bo‘limi bor.",
@@ -413,7 +413,7 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "click-api-rasmiy-integratsiya",
-    to: "click-api-avtomatik-tolov-qabul",
+    to: "botga-tolov-api-ulash-qollanma",
     merged: "2026-09-18",
     reason:
       "Bitta integratsiya oqimi ikki maqolaga bo‘lingan edi. Merchant sozlamalari, invoice va imzo tekshiruvi qoladigan maqolaga qadamlar bo‘lib ko‘chdi.",
@@ -441,49 +441,49 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "stars-paketlari-white-label-basic-pro",
-    to: "white-label-telegram-stars-platforma",
+    to: "telegram-reseller-dasturi-qanday-boshlash",
     merged: "2026-09-18",
     reason:
       "Basic/Pro paketlari White Label tanlashning bo‘limi; paket va xarajat tarkibi qoladigan maqolaga yozildi.",
   },
   {
     from: "reseller-bot-narxi-bozor-2026",
-    to: "white-label-telegram-stars-platforma",
+    to: "telegram-reseller-dasturi-qanday-boshlash",
     merged: "2026-09-18",
     reason:
       "Savdo boti narxi — White Label xarajatlari bo‘limining savoli; bir martalik va doimiy xarajat ajratib ko‘rsatildi.",
   },
   {
     from: "ozbek-somida-steam-balansini-toldirish",
-    to: "steam-1-dollardan-toldirish",
+    to: "steam-wallet-nima",
     merged: "2026-09-18",
     reason:
       "So‘mda to‘ldirish — qoladigan qo‘llanmaning asosiy oqimi; kurs, to‘lov usullari va limitlar o‘sha yerda.",
   },
   {
     from: "steam-hisobini-qanday-toldirish-mumkin",
-    to: "steam-1-dollardan-toldirish",
+    to: "steam-wallet-nima",
     merged: "2026-09-18",
     reason:
       "«Qanday to‘ldirish» bir xil savol; qadamlar, login izohi va xatolar qoladigan maqolada.",
   },
   {
     from: "steam-wallet-uzcard-orqali-toldirish",
-    to: "steam-1-dollardan-toldirish",
+    to: "steam-wallet-nima",
     merged: "2026-09-18",
     reason:
       "UzCard — to‘lov usullari ro‘yxatining bir qatori, alohida vazifa emas.",
   },
   {
     from: "steam-wallet-humo-orqali-toldirish",
-    to: "steam-1-dollardan-toldirish",
+    to: "steam-wallet-nima",
     merged: "2026-09-18",
     reason:
       "HUMO ham to‘lov usullari ro‘yxatida; oqim UzCard bilan bir xil.",
   },
   {
     from: "steam-wallet-narxlari",
-    to: "steam-1-dollardan-toldirish",
+    to: "steam-wallet-nima",
     merged: "2026-09-18",
     reason:
       "Narx — qat’iy kurs jadvali orqali beriladi; limit va komissiya bo‘limi qo‘shildi.",
@@ -504,14 +504,14 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "telegram-kanalni-boost-qilish",
-    to: "telegram-premium-boost",
+    to: "telegram-kanalga-boost-sotib-olish",
     merged: "2026-09-18",
     reason:
       "Obunachilar orqali boost berish rasmiy tizim maqolasining mavzusi; strategiya bo‘limi o‘sha yerga ko‘chirildi.",
   },
   {
     from: "telegram-kanal-boost-olish-qollanma",
-    to: "telegram-premium-boost",
+    to: "telegram-kanalga-boost-sotib-olish",
     merged: "2026-09-18",
     reason:
       "81 so‘zlik maqola boshqa sahifalarga yo‘naltirardi; rasmiy boost olish tartibi qoladigan maqolada to‘liq.",
