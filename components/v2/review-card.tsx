@@ -1,14 +1,27 @@
 import type { Review } from "@/lib/reviews";
 
-/** «300 Stars», «Premium · 6 oy» — karta ustidagi tasdiqlangan xarid belgisi. */
+/**
+ * «300 Stars», «Premium · 6 oy», «Virtual raqam» — karta ustidagi tasdiqlangan
+ * xarid belgisi. Bot `orders.order_type` qiymatlari: stars, stars_usdt,
+ * stars_paymee, premium, premium_usdt, gift, nft_buy, nft_market, gift_rent,
+ * boost, tg_number, steam_topup, game_topup, giftcard.
+ */
 export function productLabel(p: Review["product"], locale: string): string | null {
   if (!p) return null;
   const t = p.type.toLowerCase();
-  const mo = locale === "ru" ? "мес" : locale === "en" ? "mo" : "oy";
-  if (t.startsWith("stars")) return p.amount ? `${p.amount.toLocaleString("en-US").replace(/,/g, " ")} Stars` : "Stars";
+  const L = (uz: string, ru: string, en: string) => (locale === "ru" ? ru : locale === "en" ? en : uz);
+  const num = (n: number) => n.toLocaleString("en-US").replace(/,/g, " ");
+  const mo = L("oy", "мес", "mo");
+  if (t.startsWith("stars")) return p.amount ? `${num(p.amount)} Stars` : "Stars";
   if (t.startsWith("premium")) return p.amount ? `Premium · ${p.amount} ${mo}` : "Premium";
-  if (t.startsWith("boost")) return "Boost";
-  if (t.includes("gift")) return locale === "ru" ? "Подарок" : locale === "en" ? "Gift" : "Sovg‘a";
+  if (t.startsWith("boost")) return p.amount ? `Boost · ${num(p.amount)}` : "Boost";
+  if (t === "gift_rent") return L("NFT ijara", "Аренда NFT", "NFT rental");
+  if (t.startsWith("nft")) return L("NFT sovg‘a", "NFT-подарок", "NFT gift");
+  if (t.includes("gift") && t !== "giftcard") return L("Sovg‘a", "Подарок", "Gift");
+  if (t === "giftcard") return "Gift Card";
+  if (t === "tg_number") return L("Virtual raqam", "Виртуальный номер", "Virtual number");
+  if (t.startsWith("steam")) return L("Steam hamyon", "Кошелёк Steam", "Steam wallet");
+  if (t.startsWith("game")) return L("O‘yin to‘ldirish", "Пополнение игры", "Game top-up");
   return null;
 }
 

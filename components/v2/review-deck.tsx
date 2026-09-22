@@ -71,16 +71,25 @@ export function ReviewDeck({
                 </div>
                 <p className="rev-deck-text">{r.text}</p>
                 <div className="rev-deck-foot">
-                  <span className="rev-deck-dot" />
-                  {r.verified ? `${bought ? `${bought} · ` : ""}${verified}` : r.date}
-                  {r.verified ? <time dateTime={r.date}> · {r.date}</time> : null}
+                  {bought ? <span className="rev-deck-chip">{bought}</span> : null}
+                  {r.verified ? (
+                    <span className="rev-deck-ver">
+                      <span className="rev-deck-dot" />
+                      {verified}
+                    </span>
+                  ) : null}
+                  <time dateTime={r.date}>{r.date}</time>
                 </div>
               </button>
             );
           })}
         </div>
       </div>
-      {n > 1 ? (
+      {n > 12 ? (
+        <div className="rev-deck-counter" aria-live="polite">
+          <span>{active + 1}</span> / {n}
+        </div>
+      ) : n > 1 ? (
         <div className="rev-deck-dots" role="tablist" aria-label="reviews">
           {reviews.map((r, i) => (
             <button

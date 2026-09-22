@@ -33,7 +33,7 @@ type Props = {
 /**
  * Mijoz sharhlari — bot backend'idan jonli (`lib/reviews.ts`).
  *
- * `deck` (bosh sahifa): 3D koloda — oxirgi 8 sharh, avtomatik aylanadi;
+ * `deck` (bosh sahifa): 3D koloda — oxirgi 24 sharh, avtomatik aylanadi;
  * ostida «Barcha sharhlar (N)» ro'yxati.
  * `wall`: barcha sharhlar qiya varaqlar devori — hover'da
  * varaq to'g'rilanadi, ko'tariladi, matn to'liq ochiladi (CSS).
@@ -81,7 +81,7 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
           <div className="rev-layout">
             <ReviewStats data={data} locale={locale} labels={labels.stats} />
             <div className="rv">
-              <ReviewDeck reviews={reviews.slice(0, 8)} verified={labels.verified} locale={locale} />
+              <ReviewDeck reviews={reviews.slice(0, 24)} verified={labels.verified} locale={locale} />
             </div>
           </div>
         </div>
