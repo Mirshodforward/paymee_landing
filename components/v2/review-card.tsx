@@ -26,7 +26,8 @@ export function cleanName(raw: string, locale: string): string {
     .join("")
     .replace(/\s+/g, " ")
     .trim();
-  if (!kept) return fallback;
+  // Harfsiz ism («1114», «...») — ism emas.
+  if (!kept || !/\p{L}/u.test(kept)) return fallback;
   return kept.length > 24 ? kept.slice(0, 24).trim() : kept;
 }
 
