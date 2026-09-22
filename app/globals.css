@@ -424,6 +424,205 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.06);
 }
 
+/* ── Mahsulot menyulari: Stars / Premium / NFT ──
+   Har guruhning o'z urg'u rangi bor (`--mc`) — ikonka va sarlavha shundan
+   rang oladi, shunda uchala menyu bir-biridan ajralib turadi. */
+.v2 .nav2-drop {
+  position: relative;
+  --mc: #a855f7;
+}
+.v2 .nav2-drop[data-menu="stars"] {
+  --mc: #fbbf24;
+}
+.v2 .nav2-drop[data-menu="premium"],
+.v2 .nav2-dgroup[data-menu="premium"] {
+  --mc: #c084fc;
+}
+.v2 .nav2-drop[data-menu="nft"],
+.v2 .nav2-dgroup[data-menu="nft"] {
+  --mc: #22d3ee;
+}
+.v2 .nav2-dgroup[data-menu="stars"] {
+  --mc: #fbbf24;
+}
+.v2 .nav2-drop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px 8px 14px;
+  border: none;
+  border-radius: 100px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.22s, background 0.22s;
+}
+.v2 .nav2-drop-btn:hover,
+.v2 .nav2-drop.open .nav2-drop-btn {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+.v2 .nav2-chev {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.v2 .nav2-drop.open .nav2-chev {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+/* Tugma va panel orasidagi ko'rinmas ko'prik: sichqoncha oraliqdan
+   o'tayotganda menyu yopilib qolmaydi. */
+.v2 .nav2-drop::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+.v2 .nav2-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 20;
+  width: max-content;
+  min-width: 268px;
+  max-width: min(320px, 90vw);
+  padding: 8px;
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--line2);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(34, 21, 60, 0.94), rgba(11, 6, 20, 0.97));
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 26px 60px -22px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -8px) scale(0.97);
+  transform-origin: top center;
+  transition: opacity 0.2s ease, transform 0.26s cubic-bezier(0.2, 0.9, 0.3, 1), visibility 0.26s;
+}
+.v2 .nav2-drop.open .nav2-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0) scale(1);
+}
+/* Tugmaga qaragan kichik uchburchak */
+.v2 .nav2-menu-arrow {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 2px;
+  border-top: 1px solid var(--line2);
+  border-left: 1px solid var(--line2);
+  background: rgba(34, 21, 60, 0.97);
+  transform: rotate(45deg);
+}
+.v2 .nav2-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: 14px;
+  color: var(--muted);
+  transition: background 0.2s, transform 0.2s;
+}
+.v2 .nav2-menu-item:hover,
+.v2 .nav2-menu-item:focus-visible,
+.v2 .nav2-menu-item[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.06);
+}
+.v2 .nav2-menu-item[aria-current="page"] .nav2-menu-ic {
+  background: color-mix(in srgb, var(--mc) 18%, transparent);
+  border-color: color-mix(in srgb, var(--mc) 55%, transparent);
+}
+.v2 .nav2-menu-ic {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 12px;
+  border: 1px solid var(--line2);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--mc);
+  transition: background 0.22s, border-color 0.22s, transform 0.22s;
+}
+.v2 .nav2-menu-ic svg {
+  width: 18px;
+  height: 18px;
+}
+.v2 .nav2-menu-item:hover .nav2-menu-ic,
+.v2 .nav2-menu-item:focus-visible .nav2-menu-ic {
+  background: color-mix(in srgb, var(--mc) 18%, transparent);
+  border-color: color-mix(in srgb, var(--mc) 55%, transparent);
+  transform: scale(1.06);
+}
+.v2 .nav2-menu-tx {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.v2 .nav2-menu-tx b {
+  font-family: var(--disp);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.v2 .nav2-menu-tx em {
+  font-style: normal;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--muted);
+}
+/* Menyu ochilganda bandlar ketma-ket jonlanadi */
+.v2 .nav2-drop.open .nav2-menu-item {
+  animation: nav2-item 0.32s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+.v2 .nav2-drop.open .nav2-menu-item:nth-child(2) { animation-delay: 0.02s; }
+.v2 .nav2-drop.open .nav2-menu-item:nth-child(3) { animation-delay: 0.06s; }
+.v2 .nav2-drop.open .nav2-menu-item:nth-child(4) { animation-delay: 0.1s; }
+@keyframes nav2-item {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/* Drawer (mobil): hover yo'q, guruhlar ochiq ro'yxat */
+.v2 .nav2-drawer-groups {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.v2 .nav2-dgroup {
+  display: grid;
+  gap: 2px;
+  --mc: #a855f7;
+}
+.v2 .nav2-dgroup-t {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mc);
+  padding: 0 10px 6px;
+}
+.v2 .nav2-dgroup .nav2-menu-item {
+  padding: 8px 10px;
+}
+
 /* Nav yon amallar: locale + CTA + burger */
 .v2 .nav2-actions {
   display: flex;
@@ -503,10 +702,15 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   gap: 2px;
 }
+/* Guruhlardan keyin keladigan oddiy havolalar — ingichka chiziq bilan ajratiladi. */
+.v2 .nav2-drawer-groups + .nav2-drawer-links {
+  border-top: 1px solid var(--line2);
+  padding-top: 12px;
+}
 .v2 .nav2-drawer-links a {
   display: flex;
   align-items: center;
-  padding: 14px 16px;
+  padding: 12px 16px;
   border-radius: 14px;
   font-family: var(--disp);
   font-weight: 600;
@@ -2113,12 +2317,13 @@ html:not(.v2-js) .v2 .rv {
     width: 44px;
     height: 44px;
   }
-  /* Mobilda faqat Blog havolasi ko‘rinadi (boshqalar drawerda) */
+  /* Mobilda faqat oxirgi havola ko‘rinadi (boshqalar drawerda) */
   .v2 .nav2-links {
     display: flex;
     gap: 0;
   }
-  .v2 .nav2-links a:not(:last-child) {
+  .v2 .nav2-links a:not(:last-child),
+  .v2 .nav2-drop {
     display: none;
   }
   .v2 .nav2-links a:last-child {
@@ -5266,6 +5471,12 @@ html {
    nusxalar `aria-hidden` bo'lgani uchun ular yashiriladi, aks holda har bir
    izoh ikki marta ko'rinardi. */
 @media (prefers-reduced-motion: reduce) {
+  .v2 .nav2-drop.open .nav2-menu-item {
+    animation: none;
+  }
+  .v2 .nav2-menu {
+    transition: opacity 0.15s ease, visibility 0.15s;
+  }
   .v2 .rev-track {
     animation: none;
     flex-wrap: wrap;

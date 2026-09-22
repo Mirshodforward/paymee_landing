@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { TelegramIcon } from "@/components/v2/icons";
 import { V2LocaleSwitcher } from "@/components/v2/v2-locale-switcher";
+import { NAV_MENUS, type NavMenu } from "@/components/v2/v2-nav-menus";
 
 export type V2NavLabels = {
   products: string;
@@ -43,10 +44,13 @@ export function V2Nav({
 }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  /** Ochiq mahsulot menyusi (`NavMenu.id`) — hover, fokus yoki bosishdan. */
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
   const loc = useTranslations("locales");
+  const t = useTranslations("v2");
   const panelId = useId().replace(/:/g, "");
 
   useEffect(() => setMounted(true), []);
@@ -79,6 +83,91 @@ export function V2Nav({
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
+
+  // Escape — ochiq mahsulot menyusini yopadi (drawer yopiq bo'lganda ham).
+  useEffect(() => {
+    if (!openMenu) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpenMenu(null);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [openMenu]);
+
+  /** Bo'limga havola: bosh sahifada `#x`, ichki sahifalarda `/#x`. */
+  const hashHref = (h: string) => (variant === "home" ? h : `/${h}`);
+
+  /**
+   * Mahsulot menyusi (Stars / Premium / NFT). Hover, fokus va bosishda
+   * ochiladi — uchalasi ham bitta holatni boshqaradi, shuning uchun
+   * `aria-expanded` har doim ko'rinadigan holatga mos keladi.
+   */
+  const renderMenu = (m: NavMenu) => {
+    const isOpen = openMenu === m.id;
+    return (
+      <div
+        key={m.id}
+        className={`nav2-drop${isOpen ? " open" : ""}`}
+        data-menu={m.id}
+        onMouseEnter={() => setOpenMenu(m.id)}
+        onMouseLeave={() => setOpenMenu((cur) => (cur === m.id ? null : cur))}
+        onFocus={() => setOpenMenu(m.id)}
+        onBlur={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+            setOpenMenu((cur) => (cur === m.id ? null : cur));
+          }
+        }}
+      >
+        <button
+          type="button"
+          className="nav2-drop-btn"
+          aria-expanded={isOpen}
+          aria-haspopup="true"
+          onClick={() => setOpenMenu((cur) => (cur === m.id ? null : m.id))}
+        >
+          {t(m.key)}
+          <ChevronDown className="nav2-chev" strokeWidth={2.5} aria-hidden />
+        </button>
+        <div className="nav2-menu" role="group" aria-label={t(m.key)}>
+          <span className="nav2-menu-arrow" aria-hidden />
+          {m.items.map(({ key, href, hash, Icon }) => {
+            const body = (
+              <>
+                <span className="nav2-menu-ic" aria-hidden>
+                  <Icon strokeWidth={2} />
+                </span>
+                <span className="nav2-menu-tx">
+                  <b>{t(key)}</b>
+                  <em>{t(`${key}Desc`)}</em>
+                </span>
+              </>
+            );
+            return hash ? (
+              <a
+                key={key}
+                className="nav2-menu-item"
+                href={hashHref(href)}
+                onClick={() => setOpenMenu(null)}
+              >
+                {body}
+              </a>
+            ) : (
+              <Link
+                key={key}
+                className="nav2-menu-item"
+                href={href}
+                // Joriy sahifa bo'lsa belgilanadi (masalan /stars da «Stars olish»).
+                aria-current={pathname === href ? "page" : undefined}
+                onClick={() => setOpenMenu(null)}
+              >
+                {body}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
 
   const sectionLinks: readonly SectionLink[] =
     variant === "home"
@@ -123,17 +212,15 @@ export function V2Nav({
           </Link>
 
           <nav className="nav2-links" aria-label="Asosiy menyu">
-            {sectionLinks.map((l) =>
-              variant === "home" ? (
-                <a key={l.href} href={l.href}>
-                  {l.label}
-                </a>
-              ) : (
-                <Link key={l.href} href={l.href}>
-                  {l.label}
-                </Link>
-              ),
-            )}
+            {NAV_MENUS.map(renderMenu)}
+            {/* Desktopda faqat ikkita bo'lim havolasi — qolgani menyularda
+                va drawerda; aks holda panel to'lib ketadi. */}
+            <a className="nav2-plain" href={hashHref("#qanday")}>
+              {labels.how}
+            </a>
+            <a className="nav2-plain" href={hashHref("#faq")}>
+              {labels.faq}
+            </a>
             <Link href="/blog" aria-current={activeBlog ? "page" : undefined}>
               {labels.blog}
             </Link>
@@ -196,6 +283,47 @@ export function V2Nav({
                 aria-label="Asosiy menyu"
                 className="nav2-drawer"
               >
+                {/* Mobilda hover yo'q — guruhlar ochiq ro'yxat bo'lib turadi. */}
+                <div className="nav2-drawer-groups">
+                  {NAV_MENUS.map((m) => (
+                    <div className="nav2-dgroup" key={m.id} data-menu={m.id}>
+                      <span className="nav2-dgroup-t">{t(m.key)}</span>
+                      {m.items.map(({ key, href, hash, Icon }) => {
+                        const body = (
+                          <>
+                            <span className="nav2-menu-ic" aria-hidden>
+                              <Icon strokeWidth={2} />
+                            </span>
+                            <span className="nav2-menu-tx">
+                              <b>{t(key)}</b>
+                              <em>{t(`${key}Desc`)}</em>
+                            </span>
+                          </>
+                        );
+                        return hash ? (
+                          <a
+                            key={key}
+                            className="nav2-menu-item"
+                            href={hashHref(href)}
+                            onClick={() => setOpen(false)}
+                          >
+                            {body}
+                          </a>
+                        ) : (
+                          <Link
+                            key={key}
+                            className="nav2-menu-item"
+                            href={href}
+                            onClick={() => setOpen(false)}
+                          >
+                            {body}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
+
                 <nav className="nav2-drawer-links" aria-label="Asosiy menyu">
                   {sectionLinks.map((l) =>
                     variant === "home" ? (
