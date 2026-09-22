@@ -83,3 +83,19 @@ export function aggregateRatingLd(r: RatingSummary): Record<string, unknown> | n
     ratingCount: r.count,
   };
 }
+
+/**
+ * `Product.review` — sahifada ko'rinadigan oxirgi sharhlar (Google talabi:
+ * sxemadagi sharh sahifada ham bo'lishi shart — bizda sharhlar bo'limi
+ * o'sha sahifada). `aggregateRating` bilan bir xil shart: 10+ baho.
+ */
+export function reviewsLd(data: ReviewsData, limit = 5): Record<string, unknown>[] {
+  if (!hasRating(data.rating)) return [];
+  return data.reviews.slice(0, limit).map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    datePublished: r.date,
+    reviewBody: r.text,
+    reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5", worstRating: "1" },
+  }));
+}

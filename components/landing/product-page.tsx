@@ -7,7 +7,7 @@ import { V2ReviewsSection } from "@/components/v2/v2-reviews-section";
 import { reviewSectionProps } from "@/components/v2/review-section-props";
 import { getBlogSummaries } from "@/lib/blog/all";
 import { formatStatNumber, getLandingStats } from "@/lib/live-stats";
-import { aggregateRatingLd } from "@/lib/reviews";
+import { aggregateRatingLd, reviewsLd } from "@/lib/reviews";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 
@@ -95,6 +95,7 @@ export async function ProductPage({
     ],
   };
   const rating = aggregateRatingLd(reviews.data.rating);
+  const reviewItems = reviewsLd(reviews.data);
   const productLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -121,6 +122,7 @@ export async function ProductPage({
       })),
     },
     ...(rating ? { aggregateRating: rating } : {}),
+    ...(reviewItems.length ? { review: reviewItems } : {}),
   };
   const howToLd = {
     "@context": "https://schema.org",
