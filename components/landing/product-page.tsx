@@ -65,7 +65,7 @@ export async function ProductPage({
     getTranslations({ locale, namespace: ns }),
     getTranslations({ locale, namespace: "productPage" }),
     getLandingStats(),
-    reviewSectionProps(locale),
+    reviewSectionProps(locale, deepLinkPage),
   ]);
 
   const base = getSiteUrl();
