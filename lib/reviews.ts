@@ -65,10 +65,14 @@ export type ReviewsData = { rating: RatingSummary; reviews: Review[] };
 
 export const REVIEWS_TAG = "reviews";
 /**
- * Zaxira muddati. Asosiy yangilanish — webhook (`revalidateTag`). Bu son
- * faqat webhook ishlamay qolsa sahifa muzlab qolmasligi uchun.
+ * Zaxira muddati. Asosiy yangilanish — webhook (`revalidateTag`), u ishlaganda
+ * yangi sharh darhol chiqadi va bu son ahamiyatsiz bo'ladi.
+ *
+ * ⚠️ 2026-09-22 holatiga ko'ra Vercel'da `REVALIDATE_SECRET` sozlanmagan, ya'ni
+ * webhook 401 qaytaradi va AYNAN shu muddat yagona yangilanish yo'li. Shuning
+ * uchun 1 soat. Sir sozlangach buni bemalol uzaytirish mumkin.
  */
-export const REVALIDATE_SECONDS = 21_600; // 6 soat
+export const REVALIDATE_SECONDS = 3_600; // 1 soat
 /** Backend'dan so'raladigan matnli sharhlar soni (tilga bo'linishidan oldin). */
 const FETCH_LIMIT = 300;
 /** Shundan kam baho bilan AggregateRating schema chiqarilmaydi — 1 ta 5.0 hech narsani anglatmaydi. */
