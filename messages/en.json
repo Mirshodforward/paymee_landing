@@ -691,7 +691,7 @@
     "reviewsTitle": "What customers say",
     "reviewsSub": "Ratings from customers who ordered through the bot — moderated, dated.",
     "reviewsRatingLine": "{value} / 5 · {count} ratings",
-    "reviewsVerified": "Verified buyer",
+    "reviewsVerified": "verified purchase",
     "reviewsEmpty": "No reviews yet — be the first to leave one.",
     "reviewFormTitle": "Leave a review",
     "reviewFormHint": "Your experience helps others",

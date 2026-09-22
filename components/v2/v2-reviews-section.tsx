@@ -1,6 +1,6 @@
 import { StarIcon } from "@/components/v2/icons";
 import { ReviewForm, type ReviewFormLabels } from "@/components/v2/review-form";
-import type { Review, ReviewsData } from "@/lib/reviews";
+import { productLabel, type Review, type ReviewsData } from "@/lib/reviews";
 
 type Labels = {
   /** Tayyor formatlangan: «4,8 / 5 · 57 ta baho». */
@@ -47,7 +47,8 @@ function Stars({ n, small }: { n: number; small?: boolean }) {
   );
 }
 
-function Card({ r, verified, dup }: { r: Review; verified: string; dup?: boolean }) {
+function Card({ r, verified, locale, dup }: { r: Review; verified: string; locale: string; dup?: boolean }) {
+  const bought = productLabel(r.product, locale);
   return (
     <figure className="rev-card" aria-hidden={dup || undefined}>
       <div className="rev-head">
@@ -57,7 +58,12 @@ function Card({ r, verified, dup }: { r: Review; verified: string; dup?: boolean
         <div className="rev-who">
           <b>{r.name}</b>
           <small>
-            {r.verified ? <span className="rev-verified">✓ {verified}</span> : null}
+            {r.verified ? (
+              <span className="rev-verified">
+                ✓ {bought ? `${bought} · ` : ""}
+                {verified}
+              </span>
+            ) : null}
             <time dateTime={r.date}>{r.date}</time>
           </small>
         </div>
@@ -115,10 +121,10 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
             <div className={`rev-row${ri === 1 ? " rev-row-rev" : ""}`} key={ri}>
               <div className="rev-track">
                 {row.map((r) => (
-                  <Card key={r.id} r={r} verified={labels.verified} />
+                  <Card key={r.id} r={r} verified={labels.verified} locale={locale} />
                 ))}
                 {row.map((r) => (
-                  <Card key={`${r.id}-dup`} r={r} verified={labels.verified} dup />
+                  <Card key={`${r.id}-dup`} r={r} verified={labels.verified} locale={locale} dup />
                 ))}
               </div>
             </div>
@@ -128,7 +134,7 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
         <div className="wrap">
           <div className="rev-grid rv">
             {reviews.map((r) => (
-              <Card key={r.id} r={r} verified={labels.verified} />
+              <Card key={r.id} r={r} verified={labels.verified} locale={locale} />
             ))}
           </div>
         </div>

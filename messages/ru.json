@@ -691,7 +691,7 @@
     "reviewsTitle": "Что говорят клиенты",
     "reviewsSub": "Оценки клиентов, заказавших через бота — после модерации, с датой.",
     "reviewsRatingLine": "{value} / 5 · {count} оценок",
-    "reviewsVerified": "Подтверждённый покупатель",
+    "reviewsVerified": "подтверждённая покупка",
     "reviewsEmpty": "Отзывов пока нет — оставьте первый.",
     "reviewFormTitle": "Оставьте отзыв",
     "reviewFormHint": "Ваш опыт поможет другим",
