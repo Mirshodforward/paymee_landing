@@ -23,18 +23,22 @@ type Props = {
   labels: Labels;
   form: ReviewFormLabels;
   botUrl: string;
+  /** `wall` — barcha sharhlar qiya varaqlar devori (bosh sahifa); `marquee` — lenta + ro'yxat. */
+  variant?: "marquee" | "wall";
 };
 
 /**
  * Mijoz sharhlari — bot backend'idan jonli (`lib/reviews.ts`).
  *
- * Tuzilma: sarlavha + o'rtacha baho → lenta (8+: ikki qator qarama-qarshi,
+ * `wall` (bosh sahifa): barcha sharhlar qiya varaqlar devori — hover'da
+ * varaq to'g'rilanadi, ko'tariladi, matn to'liq ochiladi (CSS).
+ * `marquee`: sarlavha + o'rtacha baho → lenta (8+: ikki qator qarama-qarshi,
  * 4–7: bitta, 1–3: to'r) → «Barcha sharhlar (N)» ro'yxati (klient) →
  * forma → «Botga o'tish» CTA. 0 sharh: «birinchi bo'ling» + forma + CTA.
  * Lentada ro'yxat ikki marta chiqadi va aynan yarmiga (-50%) suriladi;
  * nusxa `aria-hidden`.
  */
-export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels, form, botUrl }: Props) {
+export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels, form, botUrl, variant = "marquee" }: Props) {
   const { rating, reviews } = data;
   const rounded = Math.round(rating.value);
 
@@ -67,7 +71,21 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
         </div>
       </div>
 
-      {rows.length ? (
+      {variant === "wall" && reviews.length ? (
+        <div className="wrap">
+          <div className="rev-wall rv">
+            {reviews.map((r, i) => (
+              <div
+                className="rev-tile"
+                key={r.id}
+                style={{ "--rot": `${(((i * 7) % 5) - 2) * 1.5}deg`, "--d": `${Math.min(i, 14) * 0.04}s` } as React.CSSProperties}
+              >
+                <ReviewCard r={r} verified={labels.verified} locale={locale} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : rows.length ? (
         <div className="rev-rows rv">
           {rows.map((row, ri) => (
             <div className={`rev-row${ri === 1 ? " rev-row-rev" : ""}`} key={ri}>
@@ -97,9 +115,11 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
       )}
 
       <div className="wrap">
-        <div className="rv" style={{ textAlign: "center" }}>
-          <ReviewsList reviews={reviews} labels={labels.list} verified={labels.verified} locale={locale} />
-        </div>
+        {variant === "marquee" ? (
+          <div className="rv" style={{ textAlign: "center" }}>
+            <ReviewsList reviews={reviews} labels={labels.list} verified={labels.verified} locale={locale} />
+          </div>
+        ) : null}
 
         <div className="rev-form-wrap rv">
           <ReviewForm labels={form} locale={locale} />

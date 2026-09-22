@@ -4796,6 +4796,100 @@ html {
   }
 }
 
+/* ── Sharhlar devori (bosh sahifa): qiya varaqlar ── */
+.v2 .rev-wall {
+  columns: 3;
+  column-gap: 22px;
+  margin-top: 48px;
+  padding: 10px 6px;
+}
+.v2 .rev-tile {
+  break-inside: avoid;
+  margin-bottom: 22px;
+  position: relative;
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), z-index 0s 0.35s;
+  animation: rev-pop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0s);
+  z-index: 1;
+}
+/* Tepadagi shaffof «skotch» — varaq devorga yopishtirilgandek */
+.v2 .rev-tile::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  width: 78px;
+  height: 18px;
+  transform: translateX(-50%) rotate(calc(var(--rot, 0deg) * -1.6));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 2px;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.v2 .rev-tile .rev-card {
+  width: auto;
+  padding-top: 22px;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 28px -14px rgba(0, 0, 0, 0.7);
+}
+/* Matn 3 qatorga qisqartiriladi, pastki chekkasi so'nadi */
+.v2 .rev-tile .rev-text {
+  max-height: 4.9em;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 60%, transparent);
+  mask-image: linear-gradient(#000 60%, transparent);
+  transition: max-height 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), -webkit-mask-image 0.3s ease;
+}
+/* Hover: to'g'rilanadi, tepaga ko'tariladi, matn to'liq ochiladi */
+.v2 .rev-tile:hover,
+.v2 .rev-tile:focus-within {
+  transform: rotate(0deg) translateY(-8px) scale(1.04);
+  z-index: 20;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), z-index 0s;
+}
+.v2 .rev-tile:hover::before,
+.v2 .rev-tile:focus-within::before {
+  opacity: 0;
+}
+.v2 .rev-tile:hover .rev-card,
+.v2 .rev-tile:focus-within .rev-card {
+  transform: none;
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 30px 60px -20px rgba(139, 92, 246, 0.55), 0 0 0 1px rgba(168, 85, 247, 0.25);
+}
+.v2 .rev-tile:hover .rev-text,
+.v2 .rev-tile:focus-within .rev-text {
+  max-height: 40em;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+@media (max-width: 1100px) {
+  .v2 .rev-wall {
+    columns: 2;
+  }
+}
+@media (max-width: 720px) {
+  .v2 .rev-wall {
+    columns: 1;
+    margin-top: 34px;
+  }
+}
+/* Hover bo'lmagan qurilmalar (telefon): matn to'liq, qiyalik yumshoqroq */
+@media (hover: none) {
+  .v2 .rev-tile .rev-text {
+    max-height: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .v2 .rev-tile {
+    transform: rotate(calc(var(--rot, 0deg) * 0.5));
+  }
+}
+
 /* Pastki CTA — botga */
 .v2 .rev-cta {
   margin-top: 40px;
@@ -4831,8 +4925,10 @@ html {
     display: none;
   }
   .v2 .rev-list-item,
-  .v2 .rev-grid .rev-card {
+  .v2 .rev-grid .rev-card,
+  .v2 .rev-tile {
     animation: none;
+    transform: none;
   }
   .v2 .rev-card:hover {
     transform: none;
@@ -5156,3 +5252,4 @@ html {
     width: max-content;
   }
 }
+
