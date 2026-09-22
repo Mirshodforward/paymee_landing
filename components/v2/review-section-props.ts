@@ -68,6 +68,8 @@ export async function reviewSectionProps(locale: string, page: DeepLinkPage = "h
       errGeneric: t("reviewFormErrGeneric"),
       errRate: t("reviewFormErrRate"),
       errShort: t("reviewFormErrShort"),
+      errLong: t("reviewFormErrLong"),
+      errName: t("reviewFormErrName"),
       note: t("reviewFormNote"),
     },
   };

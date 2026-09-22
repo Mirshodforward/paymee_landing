@@ -525,6 +525,7 @@
     "navUnitWallet": "Hamyon",
     "navGameBot": "Botda",
     "navGameGiftcard": "Gift card",
+    "navReviews": "Izohlar",
     "openBot": "Botni ochish",
     "heroBadge": "Onlayn · 1,5 yildan ortiq uzluksiz xizmatda",
     "heroTitleLead": "Stars, Premium, Sovg‘alar —",
@@ -756,6 +757,8 @@
     "reviewFormErrGeneric": "Yuborib bo‘lmadi. Birozdan keyin qayta urinib ko‘ring.",
     "reviewFormErrRate": "Yaqinda sharh yuborgansiz — bir necha daqiqadan keyin urinib ko‘ring.",
     "reviewFormErrShort": "Sharh kamida 10 belgidan iborat bo‘lsin.",
+    "reviewFormErrLong": "Sharh juda uzun — 600 belgigacha yozing.",
+    "reviewFormErrName": "Ismni kiriting — kamida 2 ta harf.",
     "reviewFormNote": "Sharh moderatsiyadan so‘ng chop etiladi."
   },
   "premiumPage": {

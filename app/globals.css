@@ -2428,17 +2428,18 @@ html:not(.v2-js) .v2 .rv {
 }
 
 /* Planshet va telefon uchun: nav-links yashirin, hamburger ko‘rinadi */
-/* Panel keng, lekin nav markazidan chiqmasin */
-@media (max-width: 1180px) {
+/* Panel keng, lekin nav markazidan chiqmasin.
+   9 ta band 1320px dan tor panelga sig'maydi — CTA tugmasi kesilib qolardi. */
+@media (max-width: 1320px) {
   .v2 .nav2-menu-games {
     min-width: 480px;
   }
   .v2 .nav2-gcols {
     gap: 4px 12px;
   }
-  /* 8 ta band tor panelga sig'maydi: mahsulot menyulari qoladi,
-     «Qanday ishlaydi» va «FAQ» drawerga ko'chadi. */
-  .v2 .nav2-plain {
+  /* Tor panelga hamma band sig'maydi: mahsulot menyulari va «Izohlar»
+     qoladi, «Qanday ishlaydi» bilan «FAQ» drawerga ko'chadi. */
+  .v2 .nav2-plain:not(.nav2-keep) {
     display: none;
   }
   .v2 .nav2-links {
@@ -2451,9 +2452,10 @@ html:not(.v2-js) .v2 .rv {
   }
 }
 
-/* Yanada tor: «Blog» ham drawerga (Ilova oxirgi bo'lib qoladi) */
-@media (max-width: 1020px) {
-  .v2 .nav2-links a[href$="/blog"] {
+/* Yanada tor: «Blog» va «Izohlar» ham drawerga (Ilova oxirgi bo'lib qoladi) */
+@media (max-width: 1120px) {
+  .v2 .nav2-links a[href$="/blog"],
+  .v2 .nav2-keep {
     display: none;
   }
   .v2 .nav2-links a,

@@ -255,12 +255,14 @@ export function V2Nav({
   const sectionLinks: readonly SectionLink[] =
     variant === "home"
       ? [
+          { href: "#izohlar", label: t("navReviews") },
           { href: "#afzallik", label: labels.why },
           { href: "#mahsulotlar", label: labels.products },
           { href: "#qanday", label: labels.how },
           { href: "#faq", label: labels.faq },
         ]
       : [
+          { href: "/#izohlar", label: t("navReviews") },
           { href: "/#afzallik", label: labels.why },
           { href: "/#mahsulotlar", label: labels.products },
           { href: "/#qanday", label: labels.how },
@@ -299,6 +301,11 @@ export function V2Nav({
             {renderGamesMenu()}
             {/* Desktopda faqat ikkita bo'lim havolasi — qolgani menyularda
                 va drawerda; aks holda panel to'lib ketadi. */}
+            {/* Sharhlar — ijtimoiy dalil, shuning uchun anchorlar ichida
+                birinchi va oxirigacha ko'rinadigani. */}
+            <a className="nav2-plain nav2-keep" href={hashHref("#izohlar")}>
+              {t("navReviews")}
+            </a>
             <a className="nav2-plain" href={hashHref("#qanday")}>
               {labels.how}
             </a>

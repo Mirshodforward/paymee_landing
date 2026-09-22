@@ -17,6 +17,8 @@ export type ReviewFormLabels = {
   errGeneric: string;
   errRate: string;
   errShort: string;
+  errLong: string;
+  errName: string;
   note: string;
 };
 
@@ -37,7 +39,17 @@ export function ReviewForm({ labels, locale }: { labels: ReviewFormLabels; local
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (status === "sending") return;
-    const fd = new FormData(e.currentTarget);
+    /**
+     * Forma elementini `await` DAN OLDIN olib qo'yamiz.
+     *
+     * React hodisa tugagach `e.currentTarget` ni `null` qiladi. Avval
+     * `await fetch(...)` dan keyin `e.currentTarget.reset()` chaqirilardi —
+     * u TypeError bergan, xato esa quyidagi `catch` ga tushib, MUVAFFAQIYATLI
+     * yuborilgan sharhni «Yuborib bo'lmadi» deb ko'rsatgan. Jonli saytda
+     * aynan shu holat uchradi: sharh bazaga tushgan, foydalanuvchi xato ko'rgan.
+     */
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const text = String(fd.get("text") || "").trim();
     if (text.length < 10) {
       setError(labels.errShort);
@@ -63,9 +75,22 @@ export function ReviewForm({ labels, locale }: { labels: ReviewFormLabels; local
         setStatus("error");
         return;
       }
+      // Server tekshiruvi (400): qaysi maydon noto'g'ri ekanini aytamiz,
+      // «birozdan keyin urinib ko'ring» bu yerda foydasiz maslahat.
+      if (res.status === 400) {
+        const body = (await res.json().catch(() => null)) as { error?: string } | null;
+        setError(body?.error === "text_long" ? labels.errLong : body?.error === "name" ? labels.errName : labels.errShort);
+        setStatus("error");
+        return;
+      }
       if (!res.ok) throw new Error(String(res.status));
+      // Yuborildi. Formani tozalash ixtiyoriy — u muvaffaqiyatni bekor qilmasin.
       setStatus("ok");
-      e.currentTarget.reset();
+      try {
+        form.reset();
+      } catch {
+        /* forma allaqachon DOMdan chiqib ketgan bo'lishi mumkin */
+      }
     } catch {
       setError(labels.errGeneric);
       setStatus("error");

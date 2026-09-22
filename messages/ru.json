@@ -516,6 +516,7 @@
     "navUnitWallet": "Кошелёк",
     "navGameBot": "В боте",
     "navGameGiftcard": "Гифт-карта",
+    "navReviews": "Отзывы",
     "openBot": "Открыть бота",
     "heroBadge": "Онлайн · более 1,5 лет без перерывов",
     "heroTitleLead": "Stars, Premium, Подарки —",
@@ -747,6 +748,8 @@
     "reviewFormErrGeneric": "Не удалось отправить. Попробуйте чуть позже.",
     "reviewFormErrRate": "Вы недавно отправляли отзыв — попробуйте через несколько минут.",
     "reviewFormErrShort": "Отзыв должен быть не короче 10 символов.",
+    "reviewFormErrLong": "Отзыв слишком длинный — до 600 знаков.",
+    "reviewFormErrName": "Укажите имя — минимум 2 буквы.",
     "reviewFormNote": "Отзыв публикуется после модерации."
   },
   "premiumPage": {

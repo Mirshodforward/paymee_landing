@@ -516,6 +516,7 @@
     "navUnitWallet": "Wallet",
     "navGameBot": "In the bot",
     "navGameGiftcard": "Gift card",
+    "navReviews": "Reviews",
     "openBot": "Open the bot",
     "heroBadge": "Online · over 1.5 years non-stop",
     "heroTitleLead": "Stars, Premium, Gifts —",
@@ -747,6 +748,8 @@
     "reviewFormErrGeneric": "Could not send. Please try again in a moment.",
     "reviewFormErrRate": "You sent a review recently — try again in a few minutes.",
     "reviewFormErrShort": "The review must be at least 10 characters.",
+    "reviewFormErrLong": "The review is too long — up to 600 characters.",
+    "reviewFormErrName": "Enter a name — at least 2 letters.",
     "reviewFormNote": "Reviews are published after moderation."
   },
   "premiumPage": {
