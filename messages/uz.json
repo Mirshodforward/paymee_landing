@@ -1,6 +1,6 @@
 {
   "seo": {
-    "titleDefault": "Telegram Stars va Premium — arzon, 5 soniyada | StarsPaymee",
+    "titleDefault": "Telegram Stars va Premium olish — arzon, so‘mda, 5 soniyada | StarsPaymee",
     "description": "O‘zbekistonda Telegram Stars, Premium va Gift — 5 soniyada avtomatik yetkaziladi. Click, Payme, Paynet, Uzum, UzCard, HUMO orqali to‘lov. Eng arzon narxlar.",
     "ogLocale": "uz_UZ",
     "keywordsList": [
@@ -255,9 +255,9 @@
       "business": "Business"
     },
     "stars": {
-      "metaTitle": "Telegram Stars sotib olish — O‘zbekistonda, so‘mda, 5 soniyada",
+      "metaTitle": "Telegram Stars olish — narxi 220 so‘m, UzCard/HUMO, 5 soniyada",
       "metaDescription": "Telegram Stars donasi 220 so‘m: 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada tushadi.",
-      "h1": "Telegram Stars sotib olish — O‘zbekistonda, so‘mda",
+      "h1": "Telegram Stars (yulduz) sotib olish — O‘zbekistonda, so‘mda",
       "intro": "StarsPaymee orqali Telegram Stars (yulduz) ni O‘zbekistonda eng arzon narxda sotib oling. Yulduz donasi atigi 220 so‘mdan, bazaviy 50 yulduz 11 000 so‘m. Buyurtma @StarsPaymee_bot orqali beriladi va o‘rtacha 5 soniyada avtomatik yetkaziladi.",
       "bullets": [
         "Donasi 220 so‘mdan — 50 yulduz 11 000 so‘m",
@@ -282,9 +282,9 @@
       "noteConfirm": "To‘lovdan oldin bot summani va qabul qiluvchi @username’ni yana bir marta ko‘rsatadi."
     },
     "premium": {
-      "metaTitle": "Telegram Premium sotib olish — O‘zbekistonda, so‘mda, 5 soniyada",
+      "metaTitle": "Telegram Premium olish — narxi 45 000 so‘mdan, UzCard/HUMO, 5 soniyada",
       "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada faollashadi.",
-      "h1": "Telegram Premium sotib olish — O‘zbekistonda, so‘mda",
+      "h1": "Telegram Premium olish — O‘zbekistonda, so‘mda, arzon narxda",
       "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 5 soniyada avtomatik faollashadi. 1 oylik tarif — 45 000 so‘m, u ham username orqali.",
       "bullets": [
         "1 oy 45 000 · 3 oy 160 000 · 6 oy 215 000 · 12 oy 388 000 so‘m",
@@ -718,11 +718,11 @@
     "reviewFormNote": "Sharh moderatsiyadan so‘ng chop etiladi."
   },
   "premiumPage": {
-    "metaTitle": "Telegram Premium sotib olish — O‘zbekistonda, so‘mda, 5 soniyada",
+    "metaTitle": "Telegram Premium olish — narxi 45 000 so‘mdan, UzCard/HUMO, 5 soniyada",
     "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada faollashadi.",
     "kicker": "Telegram Premium",
-    "h1": "Telegram Premium sotib olish — O‘zbekistonda, so‘mda",
-    "lead": "Telegram Premium obunasini UzCard, HUMO, Click, Payme yoki naqd pul bilan so‘mda oling. Faqat @username kerak — akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach obuna 5 soniyada faollashadi.",
+    "h1": "Telegram Premium olish — O‘zbekistonda, so‘mda, arzon narxda",
+    "lead": "Telegram Premium sotib olish uchun @StarsPaymee_bot yetarli: UzCard, HUMO, Click, Payme yoki naqd pul bilan so‘mda, arzon narxda. Faqat @username kerak — akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach obuna 5 soniyada faollashadi.",
     "badges": [
       "5 soniyada faollashadi",
       "9 ta to‘lov usuli, so‘mda",
@@ -732,7 +732,7 @@
     "ctaPrimary": "Premium sotib olish",
     "ctaPrices": "Narxlarni ko‘rish",
     "pricesKicker": "Narxlar",
-    "pricesTitle": "Telegram Premium narxlari",
+    "pricesTitle": "Telegram Premium narxi O‘zbekistonda — 1 oylik, 3, 6 va 1 yillik",
     "pricesSub": "Muddat uzaygani sari oyiga to‘g‘ri keladigan narx pasayadi. Barcha muddatlar username orqali, bir xil tezlikda.",
     "colTerm": "Muddat",
     "colPerMonth": "Oyiga",
@@ -856,6 +856,26 @@
       {
         "q": "StarsPaymee Telegram’ning rasmiy hamkorimi?",
         "a": "Yo‘q, mustaqil reseller. Xizmat Telegram’ning rasmiy Gift Premium mexanizmi orqali ko‘rsatiladi, obuna sizning haqiqiy akkauntingizga rasmiy yo‘l bilan biriktiriladi."
+      },
+      {
+        "q": "Telegram Premium olish uchun qaysi bot ishonchli?",
+        "a": "@StarsPaymee_bot — 1,5 yildan ortiq ishlaydi, bajarilgan buyurtmalar hisoblagichi saytda ochiq, faqat @username so‘raydi. Premium bot orqali to‘lovdan keyin 5 soniyada faollashadi."
+      },
+      {
+        "q": "1 yillik Telegram Premium narxi qancha?",
+        "a": "388 000 so‘m — oyiga ~32 300 so‘m, bu 1 oylik tarifga nisbatan 28% arzon. 12 oy bir martada faollashadi, muddat davomida qayta to‘lov yo‘q."
+      },
+      {
+        "q": "Telegram Premium hadya qilish (sovg‘a) mumkinmi?",
+        "a": "Ha. Buyurtmada do‘stingizning @username’ini yozasiz — Premium unga Telegram’ning rasmiy sovg‘a mexanizmi orqali boradi, sizning akkauntingizga emas. U hech narsa qilishi shart emas."
+      },
+      {
+        "q": "Telegram Premium arzonga olish mumkinmi?",
+        "a": "Eng arzon yo‘l — uzoq muddat: 12 oylik tarifda oyiga ~32 300 so‘m (1 oylikda 45 000). «Bepul Premium» yoki «yarim narx, akkauntga kiring» deb taklif qilgan bot va saytlar — firibgarlik: akkauntni yo‘qotish xavfi bor."
+      },
+      {
+        "q": "Телеграм премиум олиш — кирилл ёзувида қидираётганлар учун",
+        "a": "StarsPaymee орқали Телеграм Премиум сўмда олинади: UzCard, HUMO, Click, Payme, Paynet ёки нақд пул. Фақат @username керак, парол сўралмайди, тўловдан кейин 5 сонияда фаоллашади. Нархлар: 1 ой — 45 000, 3 ой — 160 000, 6 ой — 215 000, 12 ой — 388 000 сўм."
       }
     ],
     "guidesKicker": "Batafsil",
@@ -911,10 +931,10 @@
     "payNote": "Xorijiy karta, Apple ID balansi yoki TON kerak emas. Rasmiy usullar — App Store, Google Play, Fragment, @PremiumBot — aynan shuni talab qiladi va UzCard/HUMO’ni qabul qilmaydi."
   },
   "starsPage": {
-    "metaTitle": "Telegram Stars sotib olish — O‘zbekistonda, so‘mda, 5 soniyada",
+    "metaTitle": "Telegram Stars olish — narxi 220 so‘m, UzCard/HUMO, 5 soniyada",
     "metaDescription": "Telegram Stars donasi 220 so‘m: 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada tushadi.",
     "kicker": "Telegram Stars",
-    "h1": "Telegram Stars sotib olish — O‘zbekistonda, so‘mda",
+    "h1": "Telegram Stars (yulduz) sotib olish — O‘zbekistonda, so‘mda",
     "lead": "Telegram Stars (yulduz) ni UzCard, HUMO, Click, Payme yoki naqd pul bilan so‘mda oling — donasi 220 so‘m, 50 tadan boshlab. Faqat @username kerak: akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach yulduzlar 5 soniyada balansingizga tushadi.",
     "badges": [
       "5 soniyada tushadi",
@@ -925,7 +945,7 @@
     "ctaPrimary": "Stars sotib olish",
     "ctaPrices": "Narxlarni ko‘rish",
     "pricesKicker": "Narxlar",
-    "pricesTitle": "Telegram Stars narxlari",
+    "pricesTitle": "Telegram Stars narxi — 1 ta yulduz necha so‘m (UZS)",
     "pricesSub": "Narx miqdorga to‘g‘ri proporsional — donasi 220 so‘m, yashirin komissiya yo‘q. Tayyor paket yoki botda istalgan miqdor.",
     "colPack": "Paket",
     "colPerStar": "Donasi",
@@ -1048,6 +1068,22 @@
       {
         "q": "StarsPaymee Telegram’ning rasmiy hamkorimi?",
         "a": "Yo‘q, mustaqil reseller. Yulduzlar Telegram’ning rasmiy mexanizmi orqali sizning haqiqiy akkauntingizga yuboriladi."
+      },
+      {
+        "q": "Telegram Stars olish uchun qaysi bot ishonchli?",
+        "a": "@StarsPaymee_bot — 1,5 yildan ortiq ishlaydi, hisoblagich ochiq, faqat @username so‘raydi. Yulduzlar to‘lovdan keyin 5 soniyada balansga tushadi."
+      },
+      {
+        "q": "TG Stars to UZS — 1 ta stars necha so‘m?",
+        "a": "220 so‘m. 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000 so‘m. Kurs qat’iy, komissiya yo‘q — botda istalgan miqdorni kiritganingizda summa shu bo‘yicha chiqadi."
+      },
+      {
+        "q": "Telegram Stars’ni Click yoki Payme orqali olsa bo‘ladimi?",
+        "a": "Ha — Click yoki Payme ilovasidan ko‘rsatilgan karta raqamiga o‘tkazma qilasiz, tizim tushumni avtomatik aniqlaydi. UzCard, HUMO, Paynet, Uzum, Beepul, Alif va naqd pul ham shunday."
+      },
+      {
+        "q": "Телеграм старс (юлдуз) сотиб олиш — кирилл ёзувида",
+        "a": "StarsPaymee орқали Telegram Stars сўмда олинади — донаси 220 сўм, 50 тадан. UzCard, HUMO, Click, Payme ёки нақд пул. Фақат @username керак, юлдузлар 5 сонияда тушади."
       }
     ],
     "guidesKicker": "Batafsil",
