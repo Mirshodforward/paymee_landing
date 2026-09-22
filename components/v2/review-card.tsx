@@ -12,6 +12,30 @@ export function productLabel(p: Review["product"], locale: string): string | nul
   return null;
 }
 
+/**
+ * Telegram ismlari ko'pincha bezakli: «𝙰𝚋𝚍𝚞𝚕𝚊𝚣𝚒𝚣», «꧁𝕬𝖎𝖉𝖊𝖓꧂», «🅑🅔🅖🅘».
+ * NFKC matematik harflarni oddiy harfga qaytaradi, qolgan bezak/emoji
+ * olib tashlanadi. Bo'sh qolsa — «Mijoz». Surrogat juftlik yarmi (buzilgan
+ * belgi) chiqmasligi uchun harflar `Array.from` bilan olinadi.
+ */
+export function cleanName(raw: string, locale: string): string {
+  const fallback = locale === "ru" ? "Клиент" : locale === "en" ? "Customer" : "Mijoz";
+  const norm = (raw || "").normalize("NFKC");
+  const kept = Array.from(norm)
+    .filter((ch) => /[\p{L}\p{N}\s'’\-.]/u.test(ch))
+    .join("")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!kept) return fallback;
+  return kept.length > 24 ? kept.slice(0, 24).trim() : kept;
+}
+
+/** Avatar harfi — birinchi HARF (belgi emas), katta. */
+export function initialOf(name: string): string {
+  const first = Array.from(name).find((ch) => /\p{L}/u.test(ch));
+  return (first || "•").toUpperCase();
+}
+
 /** Avatar fonlari — ism bo'yicha barqaror tanlanadi, tasodifiy emas. */
 const ACCENTS = [
   "linear-gradient(135deg, #8b5cf6, #ec4899)",
@@ -58,14 +82,15 @@ export function ReviewCard({
   style?: React.CSSProperties;
 }) {
   const bought = productLabel(r.product, locale);
+  const name = cleanName(r.name, locale);
   return (
     <figure className="rev-card" aria-hidden={dup || undefined} style={style}>
       <div className="rev-head">
-        <span className="rev-ava" style={{ background: accentFor(r.name) }}>
-          {r.name.slice(0, 1).toUpperCase()}
+        <span className="rev-ava" style={{ background: accentFor(name) }}>
+          {initialOf(name)}
         </span>
         <div className="rev-who">
-          <b>{r.name}</b>
+          <b>{name}</b>
           <small>
             {r.verified ? (
               <span className="rev-verified">
