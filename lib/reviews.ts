@@ -21,9 +21,23 @@ export type Review = {
   source: "bot" | "web";
   /** Bot orqali, yetkazilgan buyurtmaga bog'langan — tasdiqlangan xaridor. */
   verified: boolean;
+  /** Nima sotib olgani — botdagi haqiqiy buyurtmadan (`orders.order_type`, `type_amount`). */
+  product?: { type: string; amount: number | null } | null;
   /** ISO yyyy-mm-dd */
   date: string;
 };
+
+/** «300 Stars», «Premium · 6 oy» — karta ustidagi tasdiqlangan xarid belgisi. */
+export function productLabel(p: Review["product"], locale: string): string | null {
+  if (!p) return null;
+  const t = p.type.toLowerCase();
+  const mo = locale === "ru" ? "мес" : locale === "en" ? "mo" : "oy";
+  if (t.startsWith("stars")) return p.amount ? `${p.amount.toLocaleString("en-US").replace(/,/g, " ")} Stars` : "Stars";
+  if (t.startsWith("premium")) return p.amount ? `Premium · ${p.amount} ${mo}` : "Premium";
+  if (t.startsWith("boost")) return "Boost";
+  if (t.includes("gift")) return locale === "ru" ? "Подарок" : locale === "en" ? "Gift" : "Sovg‘a";
+  return null;
+}
 
 export type RatingSummary = {
   /** O'rtacha, masalan 4.8. */
