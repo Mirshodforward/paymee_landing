@@ -4722,6 +4722,97 @@ html {
   }
 }
 
+/* Karta: hover'da ko'tariladi, chekkasi yonadi. */
+.v2 .rev-card {
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.v2 .rev-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 21px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.55), rgba(236, 72, 153, 0.35), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.v2 .rev-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -18px rgba(139, 92, 246, 0.45);
+}
+.v2 .rev-card:hover::before {
+  opacity: 1;
+}
+/* To'r (1–3 sharh): kartalar ketma-ket paydo bo'ladi. */
+.v2 .rev-grid .rev-card {
+  animation: rev-pop 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0s);
+}
+
+/* «Barcha sharhlar» ro'yxati */
+.v2 .rev-listwrap {
+  margin-top: 28px;
+}
+.v2 .rev-toggle .rev-chev {
+  display: inline-block;
+  margin-left: 2px;
+  transition: transform 0.25s ease;
+}
+.v2 .rev-toggle.open .rev-chev {
+  transform: rotate(180deg);
+}
+.v2 .rev-list {
+  display: grid;
+  gap: 14px;
+  max-width: 760px;
+  margin: 22px auto 0;
+  text-align: left;
+}
+.v2 .rev-list .rev-card {
+  width: 100%;
+}
+.v2 .rev-list-item {
+  animation: rev-pop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0s);
+}
+.v2 .rev-more {
+  justify-self: center;
+  margin-top: 6px;
+}
+@keyframes rev-pop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Pastki CTA — botga */
+.v2 .rev-cta {
+  margin-top: 40px;
+  padding: 28px 24px;
+  border-radius: 22px;
+  text-align: center;
+  border: 1px solid var(--line2);
+  background: radial-gradient(120% 140% at 50% 0%, rgba(168, 85, 247, 0.16), transparent 60%);
+}
+.v2 .rev-cta p {
+  margin: 0 auto 16px;
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
 /* Harakat kamaytirilgan bo'lsa lenta to'xtaydi va kartalar to'rga tushadi:
    nusxalar `aria-hidden` bo'lgani uchun ular yashiriladi, aks holda har bir
    izoh ikki marta ko'rinardi. */
@@ -4738,6 +4829,13 @@ html {
   }
   .v2 .rev-card[aria-hidden="true"] {
     display: none;
+  }
+  .v2 .rev-list-item,
+  .v2 .rev-grid .rev-card {
+    animation: none;
+  }
+  .v2 .rev-card:hover {
+    transform: none;
   }
 }
 

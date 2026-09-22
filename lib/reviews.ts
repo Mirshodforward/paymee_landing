@@ -27,18 +27,6 @@ export type Review = {
   date: string;
 };
 
-/** «300 Stars», «Premium · 6 oy» — karta ustidagi tasdiqlangan xarid belgisi. */
-export function productLabel(p: Review["product"], locale: string): string | null {
-  if (!p) return null;
-  const t = p.type.toLowerCase();
-  const mo = locale === "ru" ? "мес" : locale === "en" ? "mo" : "oy";
-  if (t.startsWith("stars")) return p.amount ? `${p.amount.toLocaleString("en-US").replace(/,/g, " ")} Stars` : "Stars";
-  if (t.startsWith("premium")) return p.amount ? `Premium · ${p.amount} ${mo}` : "Premium";
-  if (t.startsWith("boost")) return "Boost";
-  if (t.includes("gift")) return locale === "ru" ? "Подарок" : locale === "en" ? "Gift" : "Sovg‘a";
-  return null;
-}
-
 export type RatingSummary = {
   /** O'rtacha, masalan 4.8. */
   value: number;
@@ -60,7 +48,7 @@ function apiBase(): string {
   return (process.env.STATS_API_URL || PUBLIC_API_BASE).replace(/\/+$/, "");
 }
 
-export async function getReviews(limit = 24): Promise<ReviewsData> {
+export async function getReviews(limit = 50): Promise<ReviewsData> {
   try {
     const res = await fetch(`${apiBase()}/api/public/reviews?limit=${limit}`, {
       next: { revalidate: REVALIDATE_SECONDS, tags: [REVIEWS_TAG] },

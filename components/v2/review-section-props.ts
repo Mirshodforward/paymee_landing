@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { getReviews, type ReviewsData } from "@/lib/reviews";
 import type { ReviewFormLabels } from "@/components/v2/review-form";
+import type { ReviewsListLabels } from "@/components/v2/reviews-list";
+import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 
 export type ReviewSectionProps = {
   kicker: string;
@@ -8,8 +10,9 @@ export type ReviewSectionProps = {
   subtitle: string;
   data: ReviewsData;
   locale: string;
-  labels: { ratingLine: string; verified: string; empty: string };
+  labels: { ratingLine: string; verified: string; empty: string; list: ReviewsListLabels; botCta: string; botSub: string };
   form: ReviewFormLabels;
+  botUrl: string;
 };
 
 /**
@@ -17,7 +20,7 @@ export type ReviewSectionProps = {
  * sahifasi bir xil ishlatadi. `ratingLine` shu yerda formatlanadi: kasr
  * ajratgich tilga qarab («4,8» / «4.8»).
  */
-export async function reviewSectionProps(locale: string): Promise<ReviewSectionProps> {
+export async function reviewSectionProps(locale: string, page: DeepLinkPage = "home"): Promise<ReviewSectionProps> {
   const [t, data] = await Promise.all([
     getTranslations({ locale, namespace: "v2" }),
     getReviews(),
@@ -36,7 +39,11 @@ export async function reviewSectionProps(locale: string): Promise<ReviewSectionP
       }),
       verified: t("reviewsVerified"),
       empty: t("reviewsEmpty"),
+      list: { all: t("reviewsAll"), hide: t("reviewsHide"), more: t("reviewsMore") },
+      botCta: t("reviewsBotCta"),
+      botSub: t("reviewsBotSub"),
     },
+    botUrl: botDeepLink({ page, placement: "card" }),
     form: {
       title: t("reviewFormTitle"),
       hint: t("reviewFormHint"),

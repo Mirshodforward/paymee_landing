@@ -1,12 +1,17 @@
-import { StarIcon } from "@/components/v2/icons";
+import { StarIcon, ArrowIcon } from "@/components/v2/icons";
 import { ReviewForm, type ReviewFormLabels } from "@/components/v2/review-form";
-import { productLabel, type Review, type ReviewsData } from "@/lib/reviews";
+import { ReviewCard, Stars } from "@/components/v2/review-card";
+import { ReviewsList, type ReviewsListLabels } from "@/components/v2/reviews-list";
+import type { Review, ReviewsData } from "@/lib/reviews";
 
 type Labels = {
   /** Tayyor formatlangan: «4,8 / 5 · 57 ta baho». */
   ratingLine: string;
   verified: string;
   empty: string;
+  list: ReviewsListLabels;
+  botCta: string;
+  botSub: string;
 };
 
 type Props = {
@@ -17,72 +22,19 @@ type Props = {
   locale: string;
   labels: Labels;
   form: ReviewFormLabels;
+  botUrl: string;
 };
-
-/** Avatar fonlari — ism bo'yicha barqaror tanlanadi, tasodifiy emas. */
-const ACCENTS = [
-  "linear-gradient(135deg, #8b5cf6, #ec4899)",
-  "linear-gradient(135deg, #0ea5e9, #22d3ee)",
-  "linear-gradient(135deg, #f59e0b, #ef4444)",
-  "linear-gradient(135deg, #10b981, #84cc16)",
-  "linear-gradient(135deg, #6366f1, #0ea5e9)",
-  "linear-gradient(135deg, #f43f5e, #f59e0b)",
-];
-
-function accentFor(name: string): string {
-  let h = 0;
-  for (const ch of name) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-  return ACCENTS[h % ACCENTS.length];
-}
-
-function Stars({ n, small }: { n: number; small?: boolean }) {
-  return (
-    <span className={`rev-stars${small ? " sm" : ""}`} aria-label={`${n}/5`}>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <span key={i} className={i <= n ? "on" : undefined}>
-          ★
-        </span>
-      ))}
-    </span>
-  );
-}
-
-function Card({ r, verified, locale, dup }: { r: Review; verified: string; locale: string; dup?: boolean }) {
-  const bought = productLabel(r.product, locale);
-  return (
-    <figure className="rev-card" aria-hidden={dup || undefined}>
-      <div className="rev-head">
-        <span className="rev-ava" style={{ background: accentFor(r.name) }}>
-          {r.name.slice(0, 1).toUpperCase()}
-        </span>
-        <div className="rev-who">
-          <b>{r.name}</b>
-          <small>
-            {r.verified ? (
-              <span className="rev-verified">
-                ✓ {bought ? `${bought} · ` : ""}
-                {verified}
-              </span>
-            ) : null}
-            <time dateTime={r.date}>{r.date}</time>
-          </small>
-        </div>
-        <Stars n={r.rating} small />
-      </div>
-      <blockquote className="rev-text">{r.text}</blockquote>
-    </figure>
-  );
-}
 
 /**
  * Mijoz sharhlari — bot backend'idan jonli (`lib/reviews.ts`).
  *
- * 8+ sharh: ikki qator qarama-qarshi lenta; 4–7: bitta lenta; 1–3: oddiy
- * to'r; 0: «birinchi bo'ling» matni. Forma har doim turadi. Lenta ichida
- * ro'yxat ikki marta chiqadi va aynan yarmiga (-50%) suriladi — uzluksiz
- * aylanish uchun; nusxa `aria-hidden`.
+ * Tuzilma: sarlavha + o'rtacha baho → lenta (8+: ikki qator qarama-qarshi,
+ * 4–7: bitta, 1–3: to'r) → «Barcha sharhlar (N)» ro'yxati (klient) →
+ * forma → «Botga o'tish» CTA. 0 sharh: «birinchi bo'ling» + forma + CTA.
+ * Lentada ro'yxat ikki marta chiqadi va aynan yarmiga (-50%) suriladi;
+ * nusxa `aria-hidden`.
  */
-export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels, form }: Props) {
+export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels, form, botUrl }: Props) {
   const { rating, reviews } = data;
   const rounded = Math.round(rating.value);
 
@@ -116,15 +68,15 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
       </div>
 
       {rows.length ? (
-        <div className="rev-rows">
+        <div className="rev-rows rv">
           {rows.map((row, ri) => (
             <div className={`rev-row${ri === 1 ? " rev-row-rev" : ""}`} key={ri}>
               <div className="rev-track">
                 {row.map((r) => (
-                  <Card key={r.id} r={r} verified={labels.verified} locale={locale} />
+                  <ReviewCard key={r.id} r={r} verified={labels.verified} locale={locale} />
                 ))}
                 {row.map((r) => (
-                  <Card key={`${r.id}-dup`} r={r} verified={labels.verified} locale={locale} dup />
+                  <ReviewCard key={`${r.id}-dup`} r={r} verified={labels.verified} locale={locale} dup />
                 ))}
               </div>
             </div>
@@ -133,8 +85,8 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
       ) : reviews.length ? (
         <div className="wrap">
           <div className="rev-grid rv">
-            {reviews.map((r) => (
-              <Card key={r.id} r={r} verified={labels.verified} locale={locale} />
+            {reviews.map((r, i) => (
+              <ReviewCard key={r.id} r={r} verified={labels.verified} locale={locale} style={{ "--d": `${i * 0.08}s` } as React.CSSProperties} />
             ))}
           </div>
         </div>
@@ -145,8 +97,20 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
       )}
 
       <div className="wrap">
+        <div className="rv" style={{ textAlign: "center" }}>
+          <ReviewsList reviews={reviews} labels={labels.list} verified={labels.verified} locale={locale} />
+        </div>
+
         <div className="rev-form-wrap rv">
           <ReviewForm labels={form} locale={locale} />
+        </div>
+
+        <div className="rev-cta rv">
+          <p>{labels.botSub}</p>
+          <a className="btn btn-grad mag" href={botUrl} target="_blank" rel="noopener noreferrer">
+            {labels.botCta}
+            <ArrowIcon style={{ stroke: "#fff" }} />
+          </a>
         </div>
       </div>
     </section>
