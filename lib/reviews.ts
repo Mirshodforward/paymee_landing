@@ -32,7 +32,24 @@ export type RatingSummary = {
   value: number;
   /** Barcha tasdiqlangan baholar (matnsizlar ham). */
   count: number;
+  /** 1–5 yulduz bo'yicha soni — backend beradi; bo'lmasa matnli sharhlardan taxminan. */
+  distribution?: Record<"1" | "2" | "3" | "4" | "5", number>;
 };
+
+export type StarRow = { star: 1 | 2 | 3 | 4 | 5; count: number; pct: number };
+
+/** Play Market uslubidagi taqsimot qatorlari (5 → 1). */
+export function ratingRows(data: ReviewsData): StarRow[] {
+  const dist = data.rating.distribution;
+  const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  if (dist) {
+    for (const k of [1, 2, 3, 4, 5] as const) counts[k] = Number(dist[String(k) as keyof typeof dist]) || 0;
+  } else {
+    for (const r of data.reviews) counts[r.rating] = (counts[r.rating] || 0) + 1;
+  }
+  const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
+  return ([5, 4, 3, 2, 1] as const).map((star) => ({ star, count: counts[star], pct: Math.round((counts[star] / total) * 100) }));
+}
 
 export type ReviewsData = { rating: RatingSummary; reviews: Review[] };
 
@@ -63,7 +80,8 @@ export async function getReviews(limit = 50): Promise<ReviewsData> {
       .map((r) => ({ ...r, rating: Math.round(r.rating) }));
     const value = Number(raw.rating?.value) || 0;
     const count = Number(raw.rating?.count) || 0;
-    return { rating: { value, count }, reviews };
+    const distribution = raw.rating?.distribution;
+    return { rating: { value, count, ...(distribution ? { distribution } : {}) }, reviews };
   } catch {
     // Tarmoq/timeout — bo'lim jimgina yashirinadi; build buzilmaydi.
     return EMPTY;

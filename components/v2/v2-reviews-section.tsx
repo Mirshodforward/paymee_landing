@@ -3,6 +3,7 @@ import { ReviewForm, type ReviewFormLabels } from "@/components/v2/review-form";
 import { ReviewCard, Stars } from "@/components/v2/review-card";
 import { ReviewsList, type ReviewsListLabels } from "@/components/v2/reviews-list";
 import { ReviewDeck } from "@/components/v2/review-deck";
+import { ReviewStats, type ReviewStatsLabels } from "@/components/v2/review-stats";
 import type { Review, ReviewsData } from "@/lib/reviews";
 
 type Labels = {
@@ -13,6 +14,7 @@ type Labels = {
   list: ReviewsListLabels;
   botCta: string;
   botSub: string;
+  stats: ReviewStatsLabels;
 };
 
 type Props = {
@@ -65,7 +67,7 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
           </div>
           <h2 className="h2">{title}</h2>
           <p className="sec-sub">{subtitle}</p>
-          {rating.count > 0 ? (
+          {rating.count > 0 && variant !== "deck" ? (
             <div className="rev-summary">
               <Stars n={rounded} />
               <span>{labels.ratingLine}</span>
@@ -76,8 +78,11 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
 
       {variant === "deck" && reviews.length ? (
         <div className="wrap">
-          <div className="rv">
-            <ReviewDeck reviews={reviews.slice(0, 8)} verified={labels.verified} locale={locale} />
+          <div className="rev-layout">
+            <ReviewStats data={data} locale={locale} labels={labels.stats} />
+            <div className="rv">
+              <ReviewDeck reviews={reviews.slice(0, 8)} verified={labels.verified} locale={locale} />
+            </div>
           </div>
         </div>
       ) : variant === "wall" && reviews.length ? (

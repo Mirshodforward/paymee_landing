@@ -698,6 +698,8 @@
     "reviewsMore": "Show more",
     "reviewsBotCta": "Open the bot",
     "reviewsBotSub": "After an order the bot asks for a rating itself — your review shows up here.",
+    "reviewsStatsCount": "{count} ratings",
+    "reviewsStatsSource": "From orders in the bot",
     "reviewFormTitle": "Leave a review",
     "reviewFormHint": "Your experience helps others",
     "reviewFormName": "Your name",

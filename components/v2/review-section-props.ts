@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { getReviews, type ReviewsData } from "@/lib/reviews";
 import type { ReviewFormLabels } from "@/components/v2/review-form";
 import type { ReviewsListLabels } from "@/components/v2/reviews-list";
+import type { ReviewStatsLabels } from "@/components/v2/review-stats";
 import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 
 export type ReviewSectionProps = {
@@ -10,7 +11,7 @@ export type ReviewSectionProps = {
   subtitle: string;
   data: ReviewsData;
   locale: string;
-  labels: { ratingLine: string; verified: string; empty: string; list: ReviewsListLabels; botCta: string; botSub: string };
+  labels: { ratingLine: string; verified: string; empty: string; list: ReviewsListLabels; botCta: string; botSub: string; stats: ReviewStatsLabels };
   form: ReviewFormLabels;
   botUrl: string;
 };
@@ -42,6 +43,11 @@ export async function reviewSectionProps(locale: string, page: DeepLinkPage = "h
       list: { all: t("reviewsAll"), hide: t("reviewsHide"), more: t("reviewsMore") },
       botCta: t("reviewsBotCta"),
       botSub: t("reviewsBotSub"),
+      stats: {
+        count: t("reviewsStatsCount", { count: data.rating.count }),
+        verified: t("reviewsVerified"),
+        source: t("reviewsStatsSource"),
+      },
     },
     botUrl: botDeepLink({ page, placement: "card" }),
     form: {

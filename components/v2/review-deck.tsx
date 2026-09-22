@@ -4,8 +4,8 @@ import { useEffect, useState, type CSSProperties } from "react";
 import { accentFor, cleanName, initialOf, productLabel, Stars } from "@/components/v2/review-card";
 import type { Review } from "@/lib/reviews";
 
-const CYCLE_MS = 4000;
-const VISIBLE = 5;
+const CYCLE_MS = 3600;
+const VISIBLE = 4;
 
 /**
  * 3D koloda: kartalar bir-birining orqasida, perspektivada. Oldingi karta

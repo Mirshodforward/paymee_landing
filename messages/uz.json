@@ -707,6 +707,8 @@
     "reviewsMore": "Yana ko‘rsatish",
     "reviewsBotCta": "Botga o‘tish",
     "reviewsBotSub": "Buyurtmadan keyin bot o‘zi baholashni so‘raydi — sharhingiz shu yerda chiqadi.",
+    "reviewsStatsCount": "{count} ta baho",
+    "reviewsStatsSource": "Botdagi buyurtmalardan",
     "reviewFormTitle": "Fikringizni qoldiring",
     "reviewFormHint": "Tajribangiz boshqalarga yordam beradi",
     "reviewFormName": "Ismingiz",
