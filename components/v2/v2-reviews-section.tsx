@@ -2,6 +2,7 @@ import { StarIcon, ArrowIcon } from "@/components/v2/icons";
 import { ReviewForm, type ReviewFormLabels } from "@/components/v2/review-form";
 import { ReviewCard, Stars } from "@/components/v2/review-card";
 import { ReviewsList, type ReviewsListLabels } from "@/components/v2/reviews-list";
+import { ReviewDeck } from "@/components/v2/review-deck";
 import type { Review, ReviewsData } from "@/lib/reviews";
 
 type Labels = {
@@ -24,13 +25,15 @@ type Props = {
   form: ReviewFormLabels;
   botUrl: string;
   /** `wall` — barcha sharhlar qiya varaqlar devori (bosh sahifa); `marquee` — lenta + ro'yxat. */
-  variant?: "marquee" | "wall";
+  variant?: "marquee" | "wall" | "deck";
 };
 
 /**
  * Mijoz sharhlari — bot backend'idan jonli (`lib/reviews.ts`).
  *
- * `wall` (bosh sahifa): barcha sharhlar qiya varaqlar devori — hover'da
+ * `deck` (bosh sahifa): 3D koloda — oxirgi 8 sharh, avtomatik aylanadi;
+ * ostida «Barcha sharhlar (N)» ro'yxati.
+ * `wall`: barcha sharhlar qiya varaqlar devori — hover'da
  * varaq to'g'rilanadi, ko'tariladi, matn to'liq ochiladi (CSS).
  * `marquee`: sarlavha + o'rtacha baho → lenta (8+: ikki qator qarama-qarshi,
  * 4–7: bitta, 1–3: to'r) → «Barcha sharhlar (N)» ro'yxati (klient) →
@@ -71,7 +74,13 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
         </div>
       </div>
 
-      {variant === "wall" && reviews.length ? (
+      {variant === "deck" && reviews.length ? (
+        <div className="wrap">
+          <div className="rv">
+            <ReviewDeck reviews={reviews.slice(0, 8)} verified={labels.verified} locale={locale} />
+          </div>
+        </div>
+      ) : variant === "wall" && reviews.length ? (
         <div className="wrap">
           <div className="rev-wall rv">
             {reviews.map((r, i) => (
@@ -115,7 +124,7 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
       )}
 
       <div className="wrap">
-        {variant === "marquee" ? (
+        {variant !== "wall" ? (
           <div className="rv" style={{ textAlign: "center" }}>
             <ReviewsList reviews={reviews} labels={labels.list} verified={labels.verified} locale={locale} />
           </div>

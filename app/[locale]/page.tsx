@@ -825,7 +825,7 @@ export default async function HomePage({ params }: PageProps) {
           </div>
         </section>
 
-        <V2ReviewsSection {...reviews} variant="wall" />
+        <V2ReviewsSection {...reviews} variant="deck" />
 
         {/* ===== Yakuniy CTA ===== */}
         <section className="cta-final" id="boshlash">

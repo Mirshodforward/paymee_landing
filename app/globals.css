@@ -4796,6 +4796,176 @@ html {
   }
 }
 
+/* ── 3D koloda (bosh sahifa) ── */
+.v2 .rev-deck-wrap {
+  max-width: 640px;
+  margin: 56px auto 0;
+}
+.v2 .rev-deck {
+  position: relative;
+  height: 470px;
+  perspective: 1500px;
+  perspective-origin: 60% 40%;
+}
+.v2 .rev-deck-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(8deg) rotateY(-11deg);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.v2 .rev-deck:hover .rev-deck-inner {
+  transform: rotateX(3deg) rotateY(-4deg);
+}
+.v2 .rev-deck-card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 250px;
+  padding: 24px 26px 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(165deg, rgba(48, 48, 58, 0.92), rgba(24, 24, 30, 0.96));
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+  transform: translate3d(calc(var(--depth) * 26px), calc(var(--depth) * -58px), calc(var(--depth) * -40px))
+    scale(calc(1 - var(--depth) * 0.035));
+  opacity: calc(1 - var(--depth) * 0.16);
+  z-index: calc(10 - var(--depth));
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.7s ease, border-color 0.3s ease;
+  /* Kirish animatsiyasi faqat opacity — `rev-pop` ning `transform: none` oxiri
+     koloda siljishini bekor qilib qo'yardi. */
+  animation: rev-fade 0.7s ease both;
+  animation-delay: calc(var(--depth) * 0.06s);
+}
+@keyframes rev-fade {
+  from {
+    opacity: 0;
+  }
+}
+.v2 .rev-deck-card[aria-hidden="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+.v2 .rev-deck-card.front {
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 40px 80px -30px rgba(139, 92, 246, 0.55), 0 0 0 1px rgba(168, 85, 247, 0.2);
+}
+.v2 .rev-deck-card:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.8);
+  outline-offset: 3px;
+}
+/* Orqadagi kartalarda faqat sarlavha ko'rinadi — matn va pastki qator oldingi karta ostida */
+.v2 .rev-deck-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.v2 .rev-deck-ava {
+  width: 56px;
+  height: 56px;
+  flex: none;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-family: var(--disp);
+  font-weight: 800;
+  font-size: 24px;
+  color: #fff;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.7);
+}
+.v2 .rev-deck-title {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.v2 .rev-deck-title b {
+  font-family: var(--disp);
+  font-size: 22px;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.v2 .rev-deck-text {
+  margin: 18px 0 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.v2 .rev-deck-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.v2 .rev-deck-foot time {
+  color: rgba(255, 255, 255, 0.45);
+}
+.v2 .rev-deck-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px #4ade80;
+  flex: none;
+}
+.v2 .rev-deck-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+}
+.v2 .rev-deck-dotbtn {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+.v2 .rev-deck-dotbtn.on {
+  width: 26px;
+  border-radius: 100px;
+  background: var(--grad);
+}
+@media (max-width: 720px) {
+  .v2 .rev-deck {
+    height: 420px;
+  }
+  .v2 .rev-deck-inner {
+    transform: rotateX(5deg) rotateY(-6deg);
+  }
+  .v2 .rev-deck-card {
+    padding: 20px 18px 18px;
+    min-height: 230px;
+    transform: translate3d(calc(var(--depth) * 12px), calc(var(--depth) * -46px), calc(var(--depth) * -30px))
+      scale(calc(1 - var(--depth) * 0.04));
+  }
+  .v2 .rev-deck-ava {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+  .v2 .rev-deck-title b {
+    font-size: 18px;
+  }
+}
+
 /* ── Sharhlar devori (bosh sahifa): qiya varaqlar ── */
 .v2 .rev-wall {
   columns: 3;
@@ -4929,6 +5099,10 @@ html {
   .v2 .rev-tile {
     animation: none;
     transform: none;
+  }
+  .v2 .rev-deck-card {
+    animation: none;
+    transition: none;
   }
   .v2 .rev-card:hover {
     transform: none;
