@@ -33,8 +33,9 @@ type Props = {
 /**
  * Mijoz sharhlari — bot backend'idan jonli (`lib/reviews.ts`).
  *
- * `deck` (bosh sahifa): 3D koloda — oxirgi 24 sharh, avtomatik aylanadi;
- * ostida «Barcha sharhlar (N)» ro'yxati.
+ * `deck` (bosh sahifa): sarlavha ostida markazda keng reyting paneli;
+ * pastda chapda 3D koloda (oxirgi 24 sharh, o'ngga qiya, avtomatik aylanadi),
+ * o'ngda sharh formasi; so'ng «Barcha sharhlar (N)» ro'yxati va «Botga o'tish».
  * `wall`: barcha sharhlar qiya varaqlar devori — hover'da
  * varaq to'g'rilanadi, ko'tariladi, matn to'liq ochiladi (CSS).
  * `marquee`: sarlavha + o'rtacha baho → lenta (8+: ikki qator qarama-qarshi,
@@ -78,10 +79,15 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
 
       {variant === "deck" && reviews.length ? (
         <div className="wrap">
+          <div className="rev-stats-wrap">
+            <ReviewStats data={data} locale={locale} labels={labels.stats} wide />
+          </div>
           <div className="rev-layout">
-            <ReviewStats data={data} locale={locale} labels={labels.stats} />
-            <div className="rv">
+            <div className="rv rev-layout-deck">
               <ReviewDeck reviews={reviews.slice(0, 24)} verified={labels.verified} locale={locale} />
+            </div>
+            <div className="rv rev-layout-side">
+              <ReviewForm labels={form} locale={locale} />
             </div>
           </div>
         </div>
@@ -135,9 +141,11 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
           </div>
         ) : null}
 
-        <div className="rev-form-wrap rv">
-          <ReviewForm labels={form} locale={locale} />
-        </div>
+        {variant !== "deck" || !reviews.length ? (
+          <div className="rev-form-wrap rv">
+            <ReviewForm labels={form} locale={locale} />
+          </div>
+        ) : null}
 
         <div className="rev-cta rv">
           <p>{labels.botSub}</p>

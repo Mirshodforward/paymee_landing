@@ -13,9 +13,21 @@ export type ReviewStatsLabels = {
 /**
  * Play Market uslubidagi reyting paneli: katta o'rtacha, yulduzlar, soni,
  * 5→1 taqsimot chiziqlari (ko'rinishga kelganda o'sadi — `.rv.in`),
- * tasdiqlangan xaridlar ulushi.
+ * tasdiqlangan xaridlar ulushi. `wide` — bosh sahifada sarlavha ostida,
+ * markazda: ≥720px da ikki ustun (o'rtacha | chiziqlar).
  */
-export function ReviewStats({ data, locale, labels }: { data: ReviewsData; locale: string; labels: ReviewStatsLabels }) {
+export function ReviewStats({
+  data,
+  locale,
+  labels,
+  wide = false,
+}: {
+  data: ReviewsData;
+  locale: string;
+  labels: ReviewStatsLabels;
+  /** Keng gorizontal panel (sarlavha ostida, markazda): chapda o'rtacha, o'ngda chiziqlar. */
+  wide?: boolean;
+}) {
   const { rating, reviews } = data;
   const value = rating.value.toFixed(1);
   const shown = locale === "en" ? value : value.replace(".", ",");
@@ -26,7 +38,7 @@ export function ReviewStats({ data, locale, labels }: { data: ReviewsData; local
   const verifiedPct = reviews.length ? Math.round((reviews.filter((r) => r.verified).length / reviews.length) * 100) : 0;
 
   return (
-    <div className="rev-stats rv">
+    <div className={`rev-stats rv${wide ? " rev-stats-wide" : ""}`}>
       <div className="rev-stats-top">
         <div className="rev-stats-num">{shown}</div>
         <div className="rev-stats-meta">
