@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogSlugInfosForLocale } from "@/lib/blog/all";
 import { sitemapChangeFreqForBlog, sitemapPriorityForBlog } from "@/lib/seo/blog-discoverability";
 import { routing } from "@/i18n/routing";
+import { assertBlogSlugFreeze } from "@/lib/blog/slug-freeze";
 import { getSiteUrl } from "@/lib/site";
 
 /**
@@ -12,6 +13,8 @@ import { getSiteUrl } from "@/lib/site";
 const LANDING_LAST_MODIFIED = new Date("2026-08-07");
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // URL muzlatish: mavjud maqola yo'qolsa yoki birlashtirilsa, build shu yerda yiqiladi.
+  assertBlogSlugFreeze();
   const base = getSiteUrl();
   const out: MetadataRoute.Sitemap = [];
 

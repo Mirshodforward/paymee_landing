@@ -530,6 +530,209 @@ export const blogRedirects: BlogRedirect[] = [
     reason:
       "«Arzon boost» narx sahifasining savoli; tanlash mezonlari qoladigan maqolaga qo‘shildi.",
   },
+
+  // ── 2026-09-21: o'chirilgan maqolalar 404 o'rniga eng yaqin mavzuga ──
+  // 21-sentyabrda 33 ta maqola fayli o'chirildi, lekin URL'lari indeksda va
+  // tashqi havolalarda qolgan edi — 404 to'plangan signalni yo'qotadi.
+  // Har biri mavzusi eng yaqin, hozir mavjud maqolaga yo'naltiriladi.
+  {
+    from: "click-api-avtomatik-tolov-qabul",
+    to: "botga-tolov-api-ulash-qollanma",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "click-api-faq-savollar",
+    to: "botga-tolov-api-ulash-qollanma",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "ovozli-xabarni-matnga-aylantirish",
+    to: "telegram-premium-yashirin-funksiyalari",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "payment-api-uzbekistan-tolov-integratsiya",
+    to: "botga-tolov-api-ulash-qollanma",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "portals-mrkt-getgems-soxta-akkauntlar",
+    to: "telegram-gift-havolasini-tekshirish",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "reseller-vs-white-label-farqi",
+    to: "telegram-reseller-dasturi-qanday-boshlash",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "sbp-api-faq-savollar",
+    to: "sbp-tolov-tizimi-qanday-ishlaydi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "sbp-api-rossiya-rubl-tolov",
+    to: "sbp-tolov-tizimi-qanday-ishlaydi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "sbp-vs-click-vs-uzcard-tolov-solishtirish",
+    to: "sbp-tolov-tizimi-qanday-ishlaydi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "steam-1-dollardan-toldirish",
+    to: "steam-wallet-nima",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "steam-gift-card-nima",
+    to: "steam-wallet-nima",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "steam-som-yoki-rubl-hamyon",
+    to: "steam-wallet-nima",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-affiliate-dasturi",
+    to: "telegram-reseller-dasturi-qanday-boshlash",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-boost-ijarasi",
+    to: "telegram-kanalga-boost-sotib-olish",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-business-api-umumiy-faq",
+    to: "telegram-stars-api-nima-ulanish",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-ekotizimi-stars-premium-gifts-ton",
+    to: "nega-telegram-hammasini-stars-ga-otkazmoqda",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-kanal-guruh-reklama-xizmatlari",
+    to: "telegram-kanal-rivojlantirish",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-oyin-mini-app-stars-tolov",
+    to: "telegram-stars-nima-uchun-ishlatiladi-usullar",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-3-6-12-oy-sotib-olish",
+    to: "telegram-premium-narxi-ozbekistonda-2026",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-api-avtomatik-sotuv",
+    to: "telegram-stars-api-nima-ulanish",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-boost",
+    to: "telegram-kanal-boost-nima",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-giveaway-konkurs",
+    to: "telegram-premium-bepul-olish-haqiqat",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-va-oddiy-farqi",
+    to: "telegram-premium-arziydimi-foydalari",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-vs-discord-whatsapp",
+    to: "telegram-premium-arziydimi-foydalari",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-premium-vs-stars-farqi",
+    to: "telegram-premium-kerak",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-sovgani-collectible-upgrade",
+    to: "kolleksion-gift-bot-orqali-olinmaydi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-stars-narxlari-2026-platformalar-taqqoslash",
+    to: "telegram-stars-narxi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-stars-necha-som-kalkulyator",
+    to: "telegram-stars-narxi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-stars-savol-javob-faq",
+    to: "telegram-stars-qanday-ishlaydi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-stars-vs-robux-vbucks-uc",
+    to: "oyin-hisobini-toldirish",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-stars-vs-ton-qaysi-biri",
+    to: "telegram-stars-qanday-ishlaydi",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "telegram-stars-yangilanishlar-tarixi",
+    to: "nega-telegram-hammasini-stars-ga-otkazmoqda",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  {
+    from: "white-label-telegram-stars-platforma",
+    to: "telegram-reseller-dasturi-qanday-boshlash",
+    merged: "2026-09-21",
+    reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
 ];
 
 /** Yo‘naltirilgan (endi ko‘rsatilmaydigan) slug’lar — tez tekshirish uchun. */
