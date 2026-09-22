@@ -33,6 +33,14 @@ export type GameInfo = {
   eta: { uz: string; ru: string; en: string };
   /** Blog maqolasi slug'i (mavjud bo'lsa) */
   blogSlug?: string;
+  /**
+   * gempay.uz dagi sahifa slug'i — `https://www.gempay.uz/oyinlar/<slug>`.
+   * Xarid aynan o'sha yerda bo'ladi, shuning uchun headerdagi «O'yinlar»
+   * menyusi shu havolani ishlatadi. Sahifasi yo'q o'yinda bo'lmaydi.
+   */
+  gempaySlug?: string;
+  /** "app" — o'yin emas, ijitimoiy ilova (Bigo). Menyuda alohida ustunda. */
+  category?: "app";
 };
 
 const eta = (min: string) => ({
@@ -44,6 +52,7 @@ const eta = (min: string) => ({
 export const GAMES: GameInfo[] = [
   {
     code: "pubgm",
+    gempaySlug: "pubg-mobile",
     title: "PUBG Mobile",
     short: "PUBG",
     emoji: "🔫",
@@ -61,6 +70,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "mlbb_global",
+    gempaySlug: "mobile-legends",
     title: "Mobile Legends",
     short: "MLBB",
     emoji: "⚔️",
@@ -78,6 +88,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "freefire_global",
+    gempaySlug: "free-fire",
     title: "Free Fire",
     short: "FF",
     emoji: "🔥",
@@ -95,6 +106,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "codm_sgmy",
+    gempaySlug: "call-of-duty-mobile",
     title: "Call of Duty Mobile",
     short: "CODM",
     emoji: "🎯",
@@ -112,6 +124,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "hok",
+    gempaySlug: "honor-of-kings",
     title: "Honor of Kings",
     short: "HOK",
     emoji: "👑",
@@ -129,6 +142,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "magic_chess_gogo",
+    gempaySlug: "magic-chess-go-go",
     title: "Magic Chess: Go Go",
     short: "MCGG",
     emoji: "♟️",
@@ -146,6 +160,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "deltaforce",
+    gempaySlug: "delta-force",
     title: "Delta Force",
     short: "Delta",
     emoji: "🎖️",
@@ -163,6 +178,7 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "asphalt9",
+    gempaySlug: "asphalt-9",
     title: "Asphalt 9",
     short: "A9",
     emoji: "🏎️",
@@ -180,6 +196,8 @@ export const GAMES: GameInfo[] = [
   },
   {
     code: "bigo",
+    gempaySlug: "bigo-live",
+    category: "app",
     title: "Bigo Live",
     short: "Bigo",
     emoji: "💎",

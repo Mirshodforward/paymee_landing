@@ -351,6 +351,7 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
 .v2 .logo2 {
   display: flex;
   align-items: center;
+  white-space: nowrap;
   gap: 12px;
   font-family: var(--disp);
   font-weight: 700;
@@ -403,6 +404,7 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   position: relative;
   padding: 8px 14px;
   border-radius: 100px;
+  white-space: nowrap;
   transition: color 0.22s, background 0.22s;
 }
 /* Joriy sahifa — kichik gradient nuqta bilan belgilanadi. */
@@ -449,6 +451,7 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
   padding: 8px 12px 8px 14px;
   border: none;
   border-radius: 100px;
@@ -600,6 +603,122 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
   }
 }
 
+/* ── «O'yinlar» — ikki ustunli keng panel ── */
+.v2 .nav2-drop[data-menu="games"],
+.v2 .nav2-dgroup[data-menu="games"] {
+  --mc: #34d399;
+}
+.v2 .nav2-menu-games {
+  min-width: 560px;
+  max-width: min(600px, 94vw);
+  padding: 14px;
+}
+.v2 .nav2-gcols {
+  display: grid;
+  /* minmax(0,…) shart: `1fr` ustunni min-content dan kichraytirmaydi va
+     uzun nomlarda yorliq panel chetidan chiqib ketardi. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4px 18px;
+}
+.v2 .nav2-gcol {
+  display: grid;
+  gap: 1px;
+  align-content: start;
+}
+.v2 .nav2-gcol-t {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mc);
+  padding: 2px 8px 8px;
+}
+/* Ixcham qator — ikki qatorli tavsif yo'q, aks holda 13 ta band panelni
+   cho'zib yuborardi. */
+.v2 .nav2-grow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px;
+  border-radius: 11px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.18s;
+}
+.v2 .nav2-grow:hover,
+.v2 .nav2-grow:focus-visible {
+  background: rgba(255, 255, 255, 0.07);
+}
+.v2 .nav2-gemoji {
+  width: 26px;
+  flex: none;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+}
+.v2 .nav2-gname {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.v2 .nav2-gbadge {
+  flex: none;
+  padding: 3px 8px;
+  border-radius: 100px;
+  border: 1px solid var(--line2);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: color 0.18s, border-color 0.18s;
+}
+.v2 .nav2-grow:hover .nav2-gbadge,
+.v2 .nav2-grow:focus-visible .nav2-gbadge {
+  color: var(--mc);
+  border-color: color-mix(in srgb, var(--mc) 50%, transparent);
+}
+/* Panel ostidagi yig'ma havola */
+.v2 .nav2-gall {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--mc) 32%, transparent);
+  background: color-mix(in srgb, var(--mc) 10%, transparent);
+  transition: background 0.2s, border-color 0.2s;
+}
+.v2 .nav2-gall:hover,
+.v2 .nav2-gall:focus-visible {
+  background: color-mix(in srgb, var(--mc) 18%, transparent);
+  border-color: color-mix(in srgb, var(--mc) 55%, transparent);
+}
+.v2 .nav2-gall span {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.v2 .nav2-gall b {
+  font-family: var(--disp);
+  font-size: 14px;
+  color: var(--text);
+}
+.v2 .nav2-gall em {
+  font-style: normal;
+  font-size: 12px;
+  color: var(--muted);
+}
+.v2 .nav2-gall svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  stroke: var(--mc);
+}
+
 /* Drawer (mobil): hover yo'q, guruhlar ochiq ro'yxat */
 .v2 .nav2-drawer-groups {
   display: grid;
@@ -621,6 +740,22 @@ html:has(.v2)::-webkit-scrollbar-thumb:hover {
 }
 .v2 .nav2-dgroup .nav2-menu-item {
   padding: 8px 10px;
+}
+/* Drawerda o'yinlar ikki ustun (telefon kengligi yetsa) */
+.v2 .nav2-grows {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+}
+/* Ikki ustun faqat keng telefonda — torida nom va yorliq sig'maydi. */
+@media (min-width: 480px) {
+  .v2 .nav2-grows {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 10px;
+  }
+}
+.v2 .nav2-dgroup .nav2-gall {
+  margin-top: 12px;
 }
 
 /* Nav yon amallar: locale + CTA + burger */
@@ -2293,6 +2428,42 @@ html:not(.v2-js) .v2 .rv {
 }
 
 /* Planshet va telefon uchun: nav-links yashirin, hamburger ko‘rinadi */
+/* Panel keng, lekin nav markazidan chiqmasin */
+@media (max-width: 1180px) {
+  .v2 .nav2-menu-games {
+    min-width: 480px;
+  }
+  .v2 .nav2-gcols {
+    gap: 4px 12px;
+  }
+  /* 8 ta band tor panelga sig'maydi: mahsulot menyulari qoladi,
+     «Qanday ishlaydi» va «FAQ» drawerga ko'chadi. */
+  .v2 .nav2-plain {
+    display: none;
+  }
+  .v2 .nav2-links {
+    gap: 0;
+  }
+  .v2 .nav2-links a,
+  .v2 .nav2-drop-btn {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+/* Yanada tor: «Blog» ham drawerga (Ilova oxirgi bo'lib qoladi) */
+@media (max-width: 1020px) {
+  .v2 .nav2-links a[href$="/blog"] {
+    display: none;
+  }
+  .v2 .nav2-links a,
+  .v2 .nav2-drop-btn {
+    font-size: 13.5px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
 @media (max-width: 900px) {
   html:has(.v2) {
     scroll-padding-top: calc(80px + env(safe-area-inset-top));
@@ -4259,8 +4430,17 @@ html {
   min-width: 0;
 }
 .v2 .nav2 .logo2 {
-  min-width: 0;
-  flex: 0 1 auto;
+  /* Desktopda logotip QISQARMAYDI — «StarsPaymee» to'liq ko'rinadi.
+     Joy yetmasa ortiqcha havolalar yashiriladi (max-width: 1180px/1020px). */
+  flex: none;
+}
+@media (max-width: 900px) {
+  /* Mobilda aksincha: logotip birinchi bo'lib qisqaradi, shunda til
+     tanlagich, CTA va burger hech qachon kesilmaydi. */
+  .v2 .nav2 .logo2 {
+    min-width: 0;
+    flex: 0 1 auto;
+  }
 }
 .v2 .nav2 .logo2 > span:last-child {
   min-width: 0;

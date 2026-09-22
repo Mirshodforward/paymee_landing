@@ -7,9 +7,17 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { TelegramIcon } from "@/components/v2/icons";
+import { ArrowIcon, TelegramIcon } from "@/components/v2/icons";
 import { V2LocaleSwitcher } from "@/components/v2/v2-locale-switcher";
-import { NAV_MENUS, type NavMenu } from "@/components/v2/v2-nav-menus";
+import {
+  NAV_GAMES,
+  NAV_GAMES_ALL,
+  NAV_GAMES_ID,
+  NAV_GAME_APPS,
+  NAV_MENUS,
+  type NavGameRow,
+  type NavMenu,
+} from "@/components/v2/v2-nav-menus";
 
 export type V2NavLabels = {
   products: string;
@@ -102,6 +110,88 @@ export function V2Nav({
    * ochiladi — uchalasi ham bitta holatni boshqaradi, shuning uchun
    * `aria-expanded` har doim ko'rinadigan holatga mos keladi.
    */
+  /** Ochilish/yopilish hodisalari — oddiy va keng menyular uchun bir xil. */
+  const groupProps = (id: string) => ({
+    onMouseEnter: () => setOpenMenu(id),
+    onMouseLeave: () => setOpenMenu((cur: string | null) => (cur === id ? null : cur)),
+    onFocus: () => setOpenMenu(id),
+    onBlur: (e: React.FocusEvent<HTMLDivElement>) => {
+      if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+        setOpenMenu((cur) => (cur === id ? null : cur));
+      }
+    },
+  });
+
+  /** Bitta o'yin qatori: emoji, nomi va o'ng tomonda birlik yorlig'i. */
+  const gameRow = (row: NavGameRow) => (
+    <a
+      key={row.title}
+      className="nav2-grow"
+      href={row.bot ? botUrl : row.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => {
+        setOpenMenu(null);
+        setOpen(false);
+      }}
+    >
+      <span className="nav2-gemoji" aria-hidden>
+        {row.emoji}
+      </span>
+      <span className="nav2-gname">{row.title}</span>
+      <span className="nav2-gbadge">{t(row.badgeKey)}</span>
+    </a>
+  );
+
+  /** «O'yinlar» — ikki ustunli keng panel va ostida yig'ma havola. */
+  const renderGamesMenu = () => {
+    const isOpen = openMenu === NAV_GAMES_ID;
+    return (
+      <div
+        className={`nav2-drop${isOpen ? " open" : ""}`}
+        data-menu={NAV_GAMES_ID}
+        {...groupProps(NAV_GAMES_ID)}
+      >
+        <button
+          type="button"
+          className="nav2-drop-btn"
+          aria-expanded={isOpen}
+          aria-haspopup="true"
+          onClick={() => setOpenMenu((cur) => (cur === NAV_GAMES_ID ? null : NAV_GAMES_ID))}
+        >
+          {t("navGames")}
+          <ChevronDown className="nav2-chev" strokeWidth={2.5} aria-hidden />
+        </button>
+        <div className="nav2-menu nav2-menu-games" role="group" aria-label={t("navGames")}>
+          <span className="nav2-menu-arrow" aria-hidden />
+          <div className="nav2-gcols">
+            <div className="nav2-gcol">
+              <span className="nav2-gcol-t">{t("navGamesGames")}</span>
+              {NAV_GAMES.map(gameRow)}
+            </div>
+            <div className="nav2-gcol">
+              <span className="nav2-gcol-t">{t("navGamesApps")}</span>
+              {NAV_GAME_APPS.map(gameRow)}
+            </div>
+          </div>
+          <a
+            className="nav2-gall"
+            href={NAV_GAMES_ALL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpenMenu(null)}
+          >
+            <span>
+              <b>{t("navGamesAll")}</b>
+              <em>{t("navGamesAllDesc")}</em>
+            </span>
+            <ArrowIcon />
+          </a>
+        </div>
+      </div>
+    );
+  };
+
   const renderMenu = (m: NavMenu) => {
     const isOpen = openMenu === m.id;
     return (
@@ -109,14 +199,7 @@ export function V2Nav({
         key={m.id}
         className={`nav2-drop${isOpen ? " open" : ""}`}
         data-menu={m.id}
-        onMouseEnter={() => setOpenMenu(m.id)}
-        onMouseLeave={() => setOpenMenu((cur) => (cur === m.id ? null : cur))}
-        onFocus={() => setOpenMenu(m.id)}
-        onBlur={(e) => {
-          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
-            setOpenMenu((cur) => (cur === m.id ? null : cur));
-          }
-        }}
+        {...groupProps(m.id)}
       >
         <button
           type="button"
@@ -213,6 +296,7 @@ export function V2Nav({
 
           <nav className="nav2-links" aria-label="Asosiy menyu">
             {NAV_MENUS.map(renderMenu)}
+            {renderGamesMenu()}
             {/* Desktopda faqat ikkita bo'lim havolasi — qolgani menyularda
                 va drawerda; aks holda panel to'lib ketadi. */}
             <a className="nav2-plain" href={hashHref("#qanday")}>
@@ -322,6 +406,27 @@ export function V2Nav({
                       })}
                     </div>
                   ))}
+
+                  {/* O'yinlar — drawerda ikki ustun bitta ro'yxatga qo'shiladi. */}
+                  <div className="nav2-dgroup" data-menu="games">
+                    <span className="nav2-dgroup-t">{t("navGames")}</span>
+                    <div className="nav2-grows">
+                      {[...NAV_GAMES, ...NAV_GAME_APPS].map(gameRow)}
+                    </div>
+                    <a
+                      className="nav2-gall"
+                      href={NAV_GAMES_ALL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                    >
+                      <span>
+                        <b>{t("navGamesAll")}</b>
+                        <em>{t("navGamesAllDesc")}</em>
+                      </span>
+                      <ArrowIcon />
+                    </a>
+                  </div>
                 </div>
 
                 <nav className="nav2-drawer-links" aria-label="Asosiy menyu">
