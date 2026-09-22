@@ -20,11 +20,15 @@ export type ReviewSectionProps = {
  * Sharhlar bo'limi uchun tarjima + jonli ma'lumot — bosh sahifa va Premium
  * sahifasi bir xil ishlatadi. `ratingLine` shu yerda formatlanadi: kasr
  * ajratgich tilga qarab («4,8» / «4.8»).
+ *
+ * Sharhlar sahifa tiliga qarab filtrlanadi: `/uz` da o'zbekcha, `/ru` da
+ * ruscha. Reyting (o'rtacha va baholar soni) filtrlanmaydi — u barcha
+ * xaridorlarning bahosi, tilga bog'liq emas.
  */
 export async function reviewSectionProps(locale: string, page: DeepLinkPage = "home"): Promise<ReviewSectionProps> {
   const [t, data] = await Promise.all([
     getTranslations({ locale, namespace: "v2" }),
-    getReviews(),
+    getReviews(locale),
   ]);
   const value = data.rating.value.toFixed(1);
   return {

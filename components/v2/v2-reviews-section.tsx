@@ -17,6 +17,9 @@ type Labels = {
   stats: ReviewStatsLabels;
 };
 
+/** Lentada ko'rsatiladigan eng ko'p sharh (har biri nusxa bilan ikki marta chiziladi). */
+const MARQUEE_MAX = 16;
+
 type Props = {
   kicker: string;
   title: string;
@@ -48,12 +51,15 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
   const { rating, reviews } = data;
   const rounded = Math.round(rating.value);
 
+  // Lentada hamma sharh emas — HTML og'irlashmasligi uchun eng yangi MARQUEE_MAX.
+  // Qolganlari «Barcha sharhlar» ro'yxatida (u faqat bosilganda chiziladi).
+  const marquee = reviews.slice(0, MARQUEE_MAX);
   let rows: Review[][];
-  if (reviews.length >= 8) {
-    const half = Math.ceil(reviews.length / 2);
-    rows = [reviews.slice(0, half), reviews.slice(half)];
-  } else if (reviews.length >= 4) {
-    rows = [reviews];
+  if (marquee.length >= 8) {
+    const half = Math.ceil(marquee.length / 2);
+    rows = [marquee.slice(0, half), marquee.slice(half)];
+  } else if (marquee.length >= 4) {
+    rows = [marquee];
   } else {
     rows = [];
   }
@@ -120,12 +126,20 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
             </div>
           ))}
         </div>
-      ) : reviews.length ? (
+      ) : marquee.length ? (
         <div className="wrap">
           <div className="rev-grid rv">
-            {reviews.map((r, i) => (
+            {marquee.map((r, i) => (
               <ReviewCard key={r.id} r={r} verified={labels.verified} locale={locale} style={{ "--d": `${i * 0.08}s` } as React.CSSProperties} />
             ))}
+          </div>
+        </div>
+      ) : rating.count > 0 ? (
+        // Shu tilda matnli sharh yo'q (masalan /en), lekin baholar bor —
+        // «birinchi bo'ling» yolg'on bo'lardi, shuning uchun reyting paneli.
+        <div className="wrap">
+          <div className="rev-stats-wrap">
+            <ReviewStats data={data} locale={locale} labels={labels.stats} wide />
           </div>
         </div>
       ) : (

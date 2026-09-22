@@ -6,10 +6,18 @@
  * xaridordan, matnlar moderatsiyadan o'tgan. Backend ishlamasa bo'lim
  * yashirinadi, hech qanday «zaxira» sharh ko'rsatilmaydi.
  *
- * Yangilanish: ISR 15 daqiqa + bot tasdiqlaganda `/api/revalidate` webhook
- * (`reviews` tegi) — shunda keyingi tashrifda darhol yangi ro'yxat chiqadi.
+ * Yangilanish WEBHOOK orqali: bot sharhni tasdiqlaganda `/api/revalidate` ni
+ * chaqiradi va `reviews` tegi yangilanadi. Sahifa har tashrifda backend'ga
+ * bormaydi — kesh uzoq (`REVALIDATE_SECONDS`), u faqat webhook ishlamay
+ * qolgan holatga zaxira.
+ *
+ * Til bo'yicha filtr: o'zbekcha sahifada o'zbekcha sharhlar, ruschada —
+ * ruscha. Til matnning o'zidan aniqlanadi (`lib/review-lang.ts`), chunki
+ * botdagi `locale` — foydalanuvchi interfeysi tili, matnning tili emas.
  */
 
+import { detectReviewLang, type ReviewLang } from "@/lib/review-lang";
+import { cleanName } from "@/lib/review-name";
 import { PUBLIC_API_BASE } from "@/lib/site";
 
 export type Review = {
@@ -25,6 +33,8 @@ export type Review = {
   product?: { type: string; amount: number | null } | null;
   /** ISO yyyy-mm-dd */
   date: string;
+  /** Matndan aniqlangan til — sahifa tiliga moslash uchun. */
+  lang?: ReviewLang;
 };
 
 export type RatingSummary = {
@@ -54,7 +64,13 @@ export function ratingRows(data: ReviewsData): StarRow[] {
 export type ReviewsData = { rating: RatingSummary; reviews: Review[] };
 
 export const REVIEWS_TAG = "reviews";
-export const REVALIDATE_SECONDS = 900;
+/**
+ * Zaxira muddati. Asosiy yangilanish — webhook (`revalidateTag`). Bu son
+ * faqat webhook ishlamay qolsa sahifa muzlab qolmasligi uchun.
+ */
+export const REVALIDATE_SECONDS = 21_600; // 6 soat
+/** Backend'dan so'raladigan matnli sharhlar soni (tilga bo'linishidan oldin). */
+const FETCH_LIMIT = 300;
 /** Shundan kam baho bilan AggregateRating schema chiqarilmaydi — 1 ta 5.0 hech narsani anglatmaydi. */
 export const MIN_RATING_COUNT = 10;
 
@@ -65,9 +81,19 @@ function apiBase(): string {
   return (process.env.STATS_API_URL || PUBLIC_API_BASE).replace(/\/+$/, "");
 }
 
-export async function getReviews(limit = 50): Promise<ReviewsData> {
+/**
+ * Sharhlarni o'qiydi va sahifa tiliga mos kelganlarini qaytaradi.
+ *
+ * @param locale sahifa tili. Berilmasa — filtrsiz (hamma til).
+ *
+ * Filtr qoidalari:
+ *  - matnda harf bo'lmasa (faqat emoji) — ko'rsatilmaydi;
+ *  - matn tili sahifa tiliga teng bo'lishi kerak;
+ *  - reyting (o'rtacha va soni) filtrlanmaydi — u barcha xaridorlarniki.
+ */
+export async function getReviews(locale?: string): Promise<ReviewsData> {
   try {
-    const res = await fetch(`${apiBase()}/api/public/reviews?limit=${limit}`, {
+    const res = await fetch(`${apiBase()}/api/public/reviews?limit=${FETCH_LIMIT}`, {
       next: { revalidate: REVALIDATE_SECONDS, tags: [REVIEWS_TAG] },
       signal: AbortSignal.timeout(TIMEOUT_MS),
       headers: { accept: "application/json" },
@@ -77,7 +103,11 @@ export async function getReviews(limit = 50): Promise<ReviewsData> {
     if (raw.ok === false || !Array.isArray(raw.reviews)) return EMPTY;
     const reviews = raw.reviews
       .filter((r) => r && typeof r.text === "string" && r.rating >= 1 && r.rating <= 5)
-      .map((r) => ({ ...r, rating: Math.round(r.rating) }));
+      .map((r) => ({ ...r, rating: Math.round(r.rating), lang: detectReviewLang(r.text, r.locale) ?? undefined }))
+      // Harfsiz matn (faqat emoji/raqam) hech narsa aytmaydi.
+      .filter((r) => r.lang)
+      // Sahifa tiliga mos kelmaganlari boshqa tildagi sahifada chiqadi.
+      .filter((r) => !locale || r.lang === locale);
     const value = Number(raw.rating?.value) || 0;
     const count = Number(raw.rating?.count) || 0;
     const distribution = raw.rating?.distribution;
@@ -109,11 +139,13 @@ export function aggregateRatingLd(r: RatingSummary): Record<string, unknown> | n
  * sxemadagi sharh sahifada ham bo'lishi shart — bizda sharhlar bo'limi
  * o'sha sahifada). `aggregateRating` bilan bir xil shart: 10+ baho.
  */
-export function reviewsLd(data: ReviewsData, limit = 5): Record<string, unknown>[] {
+export function reviewsLd(data: ReviewsData, locale: string, limit = 5): Record<string, unknown>[] {
   if (!hasRating(data.rating)) return [];
   return data.reviews.slice(0, limit).map((r) => ({
     "@type": "Review",
-    author: { "@type": "Person", name: r.name },
+    // Sahifadagi ism bilan bir xil bo'lishi shart: Google sxemadagi qiymat
+    // ekranda ko'rinishini talab qiladi. Tozalanmagan «.» / «-» ism emas.
+    author: { "@type": "Person", name: cleanName(r.name, locale) },
     datePublished: r.date,
     reviewBody: r.text,
     reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5", worstRating: "1" },

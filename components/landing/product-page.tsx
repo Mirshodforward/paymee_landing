@@ -95,7 +95,7 @@ export async function ProductPage({
     ],
   };
   const rating = aggregateRatingLd(reviews.data.rating);
-  const reviewItems = reviewsLd(reviews.data);
+  const reviewItems = reviewsLd(reviews.data, locale);
   const productLd = {
     "@context": "https://schema.org",
     "@type": "Product",
