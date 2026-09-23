@@ -5632,23 +5632,6 @@ html {
   }
 }
 
-/* Pastki CTA — botga */
-.v2 .rev-cta {
-  margin-top: 40px;
-  padding: 28px 24px;
-  border-radius: 22px;
-  text-align: center;
-  border: 1px solid var(--line2);
-  background: radial-gradient(120% 140% at 50% 0%, rgba(168, 85, 247, 0.16), transparent 60%);
-}
-.v2 .rev-cta p {
-  margin: 0 auto 16px;
-  max-width: 520px;
-  color: var(--muted);
-  font-size: 14.5px;
-  line-height: 1.6;
-}
-
 /* Harakat kamaytirilgan bo'lsa lenta to'xtaydi va kartalar to'rga tushadi:
    nusxalar `aria-hidden` bo'lgani uchun ular yashiriladi, aks holda har bir
    izoh ikki marta ko'rinardi. */

@@ -1,4 +1,4 @@
-import { StarIcon, ArrowIcon } from "@/components/v2/icons";
+import { StarIcon } from "@/components/v2/icons";
 import { ReviewForm, type ReviewFormLabels } from "@/components/v2/review-form";
 import { ReviewCard, Stars } from "@/components/v2/review-card";
 import { ReviewsList, type ReviewsListLabels } from "@/components/v2/reviews-list";
@@ -12,8 +12,6 @@ type Labels = {
   verified: string;
   empty: string;
   list: ReviewsListLabels;
-  botCta: string;
-  botSub: string;
   stats: ReviewStatsLabels;
 };
 
@@ -28,7 +26,6 @@ type Props = {
   locale: string;
   labels: Labels;
   form: ReviewFormLabels;
-  botUrl: string;
   /** `wall` — barcha sharhlar qiya varaqlar devori (bosh sahifa); `marquee` — lenta + ro'yxat. */
   variant?: "marquee" | "wall" | "deck";
 };
@@ -38,16 +35,16 @@ type Props = {
  *
  * `deck` (bosh sahifa): sarlavha ostida markazda keng reyting paneli;
  * pastda chapda 3D koloda (oxirgi 24 sharh, o'ngga qiya, avtomatik aylanadi),
- * o'ngda sharh formasi; so'ng «Barcha sharhlar (N)» ro'yxati va «Botga o'tish».
+ * o'ngda sharh formasi; so'ng «Barcha sharhlar (N)» ro'yxati.
  * `wall`: barcha sharhlar qiya varaqlar devori — hover'da
  * varaq to'g'rilanadi, ko'tariladi, matn to'liq ochiladi (CSS).
  * `marquee`: sarlavha + o'rtacha baho → lenta (8+: ikki qator qarama-qarshi,
  * 4–7: bitta, 1–3: to'r) → «Barcha sharhlar (N)» ro'yxati (klient) →
- * forma → «Botga o'tish» CTA. 0 sharh: «birinchi bo'ling» + forma + CTA.
+ * forma. 0 sharh: «birinchi bo'ling» + forma.
  * Lentada ro'yxat ikki marta chiqadi va aynan yarmiga (-50%) suriladi;
  * nusxa `aria-hidden`.
  */
-export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels, form, botUrl, variant = "marquee" }: Props) {
+export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels, form, variant = "marquee" }: Props) {
   const { rating, reviews } = data;
   const rounded = Math.round(rating.value);
 
@@ -161,13 +158,6 @@ export function V2ReviewsSection({ kicker, title, subtitle, data, locale, labels
           </div>
         ) : null}
 
-        <div className="rev-cta rv">
-          <p>{labels.botSub}</p>
-          <a className="btn btn-grad mag" href={botUrl} target="_blank" rel="noopener noreferrer">
-            {labels.botCta}
-            <ArrowIcon style={{ stroke: "#fff" }} />
-          </a>
-        </div>
       </div>
     </section>
   );

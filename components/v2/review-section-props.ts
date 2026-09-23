@@ -3,7 +3,6 @@ import { getReviews, type ReviewsData } from "@/lib/reviews";
 import type { ReviewFormLabels } from "@/components/v2/review-form";
 import type { ReviewsListLabels } from "@/components/v2/reviews-list";
 import type { ReviewStatsLabels } from "@/components/v2/review-stats";
-import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
 
 export type ReviewSectionProps = {
   kicker: string;
@@ -11,21 +10,21 @@ export type ReviewSectionProps = {
   subtitle: string;
   data: ReviewsData;
   locale: string;
-  labels: { ratingLine: string; verified: string; empty: string; list: ReviewsListLabels; botCta: string; botSub: string; stats: ReviewStatsLabels };
+  labels: { ratingLine: string; verified: string; empty: string; list: ReviewsListLabels; stats: ReviewStatsLabels };
   form: ReviewFormLabels;
-  botUrl: string;
 };
 
 /**
  * Sharhlar bo'limi uchun tarjima + jonli ma'lumot — bosh sahifa va Premium
- * sahifasi bir xil ishlatadi. `ratingLine` shu yerda formatlanadi: kasr
+ * sahifasi bir xil ishlatadi. Bo'lim ostidagi «Botga o'tish» CTA olib
+ * tashlangani uchun bu yerda bot havolasi ham kerak emas. `ratingLine` shu yerda formatlanadi: kasr
  * ajratgich tilga qarab («4,8» / «4.8»).
  *
  * Sharhlar sahifa tiliga qarab filtrlanadi: `/uz` da o'zbekcha, `/ru` da
  * ruscha. Reyting (o'rtacha va baholar soni) filtrlanmaydi — u barcha
  * xaridorlarning bahosi, tilga bog'liq emas.
  */
-export async function reviewSectionProps(locale: string, page: DeepLinkPage = "home"): Promise<ReviewSectionProps> {
+export async function reviewSectionProps(locale: string): Promise<ReviewSectionProps> {
   const [t, data] = await Promise.all([
     getTranslations({ locale, namespace: "v2" }),
     getReviews(locale),
@@ -45,15 +44,12 @@ export async function reviewSectionProps(locale: string, page: DeepLinkPage = "h
       verified: t("reviewsVerified"),
       empty: t("reviewsEmpty"),
       list: { all: t("reviewsAll"), hide: t("reviewsHide"), more: t("reviewsMore") },
-      botCta: t("reviewsBotCta"),
-      botSub: t("reviewsBotSub"),
       stats: {
         count: t("reviewsStatsCount", { count: data.rating.count }),
         verified: t("reviewsVerified"),
         source: t("reviewsStatsSource"),
       },
     },
-    botUrl: botDeepLink({ page, placement: "card" }),
     form: {
       title: t("reviewFormTitle"),
       hint: t("reviewFormHint"),
