@@ -106,6 +106,7 @@ import { post as p176 } from "./posts/176-kolleksion-gift-bot-orqali-olinmaydi";
 import { post as p179 } from "./posts/179-payme-orqali-stars-va-premium-sotib-olish";
 import { post as p180 } from "./posts/180-naqd-pul-bilan-telegram-stars-sotib-olish";
 import { post as p181 } from "./posts/181-telegram-stars-sotish-premium-pubg-uc";
+import { post as p182 } from "./posts/182-starspaymee-1-5-yoshda";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -122,7 +123,7 @@ export const aeoPosts: AeoPost[] = [
   p161, p163, p164,
   p165, p166, p167, p168, p169,
   p170, p171, p172, p173, p175, p176,
-  p179, p180, p181,
+  p179, p180, p181, p182,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
