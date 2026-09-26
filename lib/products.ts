@@ -5,6 +5,15 @@
 
 /** Telegram Stars: donasi shu narxdan; bazaviy paket 50 ⭐ = 11 000 so‘m. */
 export const STARS_PER_UNIT_UZS = 220;
+/**
+ * Click va Payme (onlayn shlyuz) orqali 1 Stars narxi. Bot `payment_methods`
+ * jadvalidagi `stars_unit_price` dan: Stars buyurtmasi shlyuzda `dona × 240`
+ * bo'lib narxlanadi (`modules/paymentMethods/pricing.js`). 2026-09-26 da
+ * tekshirildi: oxirgi 14 kunda Click/Payme orqali 451 ta bajarilgan buyurtma,
+ * dona narxi eng ko'pi 240 so'm. `STARS_PER_UNIT_UZS` (220) esa Uzcard/Humo
+ * o'tkazmasi va balansdan to'lov narxi. Bot tarifi o'zgarsa — shu yerni ham.
+ */
+export const STARS_PER_UNIT_GATEWAY_UZS = 240;
 export const STARS_BASE = { amount: 50, priceUzs: 11_000 } as const;
 
 export function starsPrice(amount: number): number {

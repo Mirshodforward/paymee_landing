@@ -75,6 +75,10 @@ function UzBody() {
         </li>
       </KeyFacts>
       <p>
+        Aynan 1000 dona kerakmi? To‘lov usuli bo‘yicha narx va xarid tartibi:{" "}
+        <Link href="/blog/1000-stars-olish-click-payme">1000 Stars olish — Click va Payme orqali</Link>.
+      </p>
+      <p>
         Bir nechta kichik buyurtma o‘rniga bitta yirik paket olish qulayroq: tranzaksiya soni kamayadi, demak bank
         tasdig‘i va xatolik ehtimoli ham kamayadi. Birlik narxi esa barcha paketda bir xil bo‘lgani uchun bunda
         hech narsa yutqazmaysiz.
@@ -158,6 +162,10 @@ function RuBody() {
           <b>Откройте актуальную цену перед покупкой</b> — особенно в дни акций и движения курса.
         </li>
       </KeyFacts>
+      <p>
+        Нужно ровно 1000 штук? Цена по способу оплаты и порядок покупки:{" "}
+        <Link href="/blog/1000-stars-olish-click-payme">купить 1000 Stars через Click и Payme</Link>.
+      </p>
 
       <h2 id="arzon">Как найти самую выгодную цену?</h2>
       <Steps>
@@ -237,6 +245,10 @@ function EnBody() {
           <b>Open the current price before buying</b> — this matters most on promotion days and when the rate moves.
         </li>
       </KeyFacts>
+      <p>
+        Need exactly 1000? The price by payment method and how to buy:{" "}
+        <Link href="/blog/1000-stars-olish-click-payme">buying 1000 Stars with Click or Payme</Link>.
+      </p>
 
       <h2 id="arzon">How to find the best price</h2>
       <Steps>
@@ -316,7 +328,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-09-18",
+  dateModified: "2026-09-26",
   keywords: [
     "telegram stars narxi",
     "stars narxi qancha",

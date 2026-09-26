@@ -621,7 +621,10 @@ const uzFaq = [
     question: "Yulduzlar qancha vaqtda tushadi?",
     answer: "Odatda to‘lov tasdiqlangach deyarli bir zumda hisobga tushadi.",
   },
-  { question: "1 dona Stars necha so‘m?", answer: "220 so‘m; bazaviy paket — 50 ta 11 000 so‘mga." },
+  {
+    question: "1 dona Stars necha so‘m?",
+    answer: "Click orqali 240 so‘m (50 ta — 12 000 so‘m). Uzcard/Humo o‘tkazmasida 220 so‘m (50 ta — 11 000 so‘m).",
+  },
   { question: "Naqd pul bilan to‘lash mumkinmi?", answer: "Ha, Paynet orqali." },
   {
     question: "Akkauntimga kirish uchun parol so‘raladimi?",
@@ -649,7 +652,10 @@ const ruFaq = [
     question: "Сколько времени занимает зачисление звёзд?",
     answer: "Обычно звёзды поступают на аккаунт практически сразу после подтверждения оплаты.",
   },
-  { question: "Сколько стоит одна звезда?", answer: "220 сум; базовый пакет — 50 штук за 11 000 сум." },
+  {
+    question: "Сколько стоит одна звезда?",
+    answer: "Через Click — 240 сум (50 штук — 12 000 сум). Переводом Uzcard/Humo — 220 сум (50 штук — 11 000 сум).",
+  },
   { question: "Можно ли заплатить наличными?", answer: "Да, через Paynet." },
   { question: "Запрашивают ли пароль от аккаунта?", answer: "Нет. Достаточно username или ID в Telegram." },
   {
@@ -674,7 +680,10 @@ const enFaq = [
     question: "How long does delivery take?",
     answer: "Stars normally reach the account almost immediately after the payment is confirmed.",
   },
-  { question: "How much does one Star cost?", answer: "220 UZS; the base pack is 50 Stars for 11,000 UZS." },
+  {
+    question: "How much does one Star cost?",
+    answer: "240 UZS through Click (50 Stars for 12,000 UZS); 220 UZS by Uzcard/Humo transfer (50 Stars for 11,000 UZS).",
+  },
   { question: "Can I pay in cash?", answer: "Yes, through Paynet." },
   { question: "Is my account password requested?", answer: "No. A Telegram username or ID is enough." },
   {
@@ -689,7 +698,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-26",
-  dateModified: "2026-09-16",
+  dateModified: "2026-09-26",
   keywords: [
     "click orqali stars sotib olish",
     "click bilan telegram stars",
