@@ -17,6 +17,22 @@ export const TELEGRAM_SUPPORT_URL_PUBLIC = "https://t.me/StarsPaymeeSupport";
 /** Bot backend (jonli statistika, sharhlar). Klient formasi ham shu manzilga yozadi. */
 export const PUBLIC_API_BASE = "https://starspaymee.starstg.uz";
 
+/**
+ * Ijtimoiy tarmoqlar — `/instagram` sahifasi pastidagi ikonkalar.
+ *
+ * FAQAT TEKSHIRILGAN MANZIL. Bo'sh qiymatli tarmoq sahifada KO'RSATILMAYDI —
+ * to'qilgan havola mijozni begona akkauntga yuborib qo'yishi mumkin.
+ *   - telegram: brend kanali «Starspaymee⚡️», 2026-09-26 da tekshirildi
+ *     (7 084 obunachi, tavsifida @StarsPaymee_bot va @StarsPaymeeSupport).
+ *   - instagram, youtube: kodda, bot repoda va kanal postlarida topilmadi —
+ *     egasidan so'raladi.
+ */
+export const SOCIAL_LINKS = {
+  telegram: "https://t.me/StarsPaymee",
+  instagram: "",
+  youtube: "",
+} as const;
+
 /** Business / API bo‘limi uchun alohida bot. */
 export const TELEGRAM_API_BOT_URL = "https://t.me/starspaymee_api_bot";
 

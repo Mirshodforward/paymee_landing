@@ -22,6 +22,11 @@ export type LandingStats = {
   deliverySeconds: number;
   activeUsers: number;
   orders: number;
+  /**
+   * Jami yetkazilgan Stars. ZAXIRA QIYMATI YO'Q: backend javob bermasa `null`
+   * va sahifa bu raqamni umuman ko'rsatmaydi — to'qilgan son chiqmasin.
+   */
+  starsDelivered: number | null;
   /** Qaysi maydonlar haqiqiy backend'dan kelgani — diagnostika uchun. */
   live: {
     yearsInService: boolean;
@@ -74,6 +79,7 @@ export async function getLandingStats(): Promise<LandingStats> {
     deliverySeconds: STATS.deliverySeconds,
     activeUsers: STATS.activeUsers,
     orders: STATS.orders,
+    starsDelivered: null,
     live: { yearsInService: false, deliverySeconds: false, activeUsers: false, orders: false },
     updatedAt: null,
   };
@@ -100,6 +106,7 @@ export async function getLandingStats(): Promise<LandingStats> {
   const users = acceptNumber(raw.users, 100_000_000);
   const orders = acceptNumber(raw.ordersCompleted, 1_000_000_000);
   const seconds = acceptNumber(raw.avgDeliverySeconds, 3600);
+  const stars = acceptNumber(raw.starsDelivered, 100_000_000_000);
   /**
    * `yearsInService` backendda `users` jadvalidagi eng eski `created_at` dan
    * hisoblanadi. Baza 2026-03-12 da yangilangan, shuning uchun API xizmat
@@ -112,6 +119,7 @@ export async function getLandingStats(): Promise<LandingStats> {
     deliverySeconds: seconds ?? fallback.deliverySeconds,
     activeUsers: users ?? fallback.activeUsers,
     orders: orders ?? fallback.orders,
+    starsDelivered: stars,
     live: {
       yearsInService: false,
       deliverySeconds: seconds !== null,

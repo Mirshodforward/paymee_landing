@@ -57,7 +57,9 @@ export type DeepLinkPage =
   | "gampay"
   | "business"
   | "about"
-  | "blog";
+  | "blog"
+  /** Instagram reklamasi uchun alohida sahifa — `/instagram`. */
+  | "instagram";
 
 /** CTA sahifaning qayerida turgani — manba yorlig'ining ikkinchi qismi. */
 export type DeepLinkPlacement =
