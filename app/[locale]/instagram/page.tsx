@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, Headset, ShieldCheck, Wallet, Zap } from "lucide-react";
+import { ArrowRight, Headset } from "lucide-react";
 import { V2Background } from "@/components/v2/v2-background";
 import { TelegramIcon } from "@/components/v2/icons";
 import { InstagramIcon, YoutubeIcon } from "@/components/insta/insta-icons";
@@ -14,23 +14,26 @@ import { botDeepLink, type DeepLinkPlacement } from "@/lib/telegram-deeplink";
 /**
  * `/instagram` — Instagram reklamasi uchun bitta sahifali landing.
  *
- * NEGA ALOHIDA SAHIFA VA NEGA BUNDAY YENGIL:
- *   - Reklamadan kelgan odam Instagram ichidagi brauzerda, telefonda ochadi va
- *     bir necha soniyada qaror qiladi. Shuning uchun `V2Shell` ISHLATILMAGAN:
- *     undagi foiz hisoblagichli preloader kontentni kechiktiradi, `V2Effects`
- *     esa ortiqcha JS. Bu sahifada mijoz JS'i YO'Q — hamma animatsiya CSS.
- *   - Navigatsiya yo'q: reklama sahifasida chiqish yo'llari kam bo'lgani yaxshi,
- *     yagona maqsad — botni ochish.
- *   - `noindex`: bosh sahifa matnini takrorlaydi; qidiruvda u bilan
- *     raqobatlashmasin. Sitemap'ga ham qo'shilmagan.
+ * ATAYLAB IXCHAM. Reklamadan kelgan odam telefonda, Instagram ichidagi
+ * brauzerda bir necha soniyada qaror qiladi. Sahifada faqat taklif, ishonch
+ * (reyting, raqamlar, to'lov usullari), mahsulotlar va tugma qoladi — uzun
+ * tushuntirishlar yo'q (egasining so'rovi, 2026-09-26).
  *
- * RAQAMLAR FAQAT JONLI. Stars soni, buyurtma va foydalanuvchi — bot
- * backend'idan; javob bo'lmasa o'sha plitka umuman chiqmaydi (zaxiradagi
- * `STATS.orders = 100 000` ni bu yerda ATAYLAB ishlatmaymiz — baza uni
- * tasdiqlamaydi). Sonlar pastga yaxlitlanadi: 8 372 → «8 000+».
+ * NEGA BUNDAY YENGIL:
+ *   - `V2Shell` ishlatilmagan: undagi foizli preloader kontentni kechiktiradi,
+ *     `V2Effects` esa ortiqcha JS. Sahifada mijoz JS'i yo'q, animatsiya — CSS.
+ *   - Navigatsiya yo'q, yagona maqsad — botni ochish.
+ *   - `noindex` va sitemap'da yo'q: bosh sahifa bilan qidiruvda raqobatlashmasin.
+ *   - Ikonkalar oldindan WebP'ga o'girilgan va optimizatorsiz beriladi
+ *     (`unoptimized`): dev optimizatori 96px o'lchamda osilib qolardi, jami
+ *     9 ta ikonka 23 KB.
  *
- * KUZATUV: har bir tugmada `data-cta` bor, `TelegramClickTracker` uni
- * «bot_open» hodisasiga yozadi. Deep-link manbasi — `w_instagram_<joy>`.
+ * RAQAMLAR FAQAT JONLI. Stars, buyurtma va foydalanuvchi soni bot backend'idan;
+ * javob bo'lmasa plitka chiqmaydi (`STATS.orders = 100 000` zaxirasi bu yerda
+ * ATAYLAB ishlatilmaydi). Hammasi pastga yaxlitlanadi.
+ *
+ * KUZATUV: tugmalarda `data-cta` bor, `TelegramClickTracker` uni «bot_open»
+ * hodisasiga yozadi. Deep-link manbasi — `w_instagram_<joy>`.
  */
 
 type Props = { params: Promise<{ locale: string }> };
@@ -73,7 +76,7 @@ const PRODUCTS = [
   { key: "pNft", img: "nft" },
 ] as const;
 
-/** Telefon atrofida suzib yuradigan ikonkalar (joy — CSS klassida). */
+/** Brend belgisi atrofida suzib yuradigan ikonkalar (joy — CSS klassida). */
 const ORBIT = ["stars", "premium", "gift", "nft", "boost", "rent"] as const;
 
 /** Pastga yaxlitlash: haqiqiy sondan oshirib ko'rsatmaslik uchun. */
@@ -97,6 +100,17 @@ function statText(n: number, locale: string): string {
   return `${formatStatNumber(floorNice(n), locale)}+`;
 }
 
+/** Gradient tugma — hero, oxiri va pastki doimiy qatorda bir xil. */
+function BotButton({ href, label, className = "" }: { href: string; label: string; className?: string }) {
+  return (
+    <a className={`ig-cta ${className}`.trim()} href={href} target="_blank" rel="noopener noreferrer">
+      <TelegramIcon className="ig-cta-tg" />
+      <span>{label}</span>
+      <ArrowRight className="ig-cta-arrow" strokeWidth={2.4} />
+    </a>
+  );
+}
+
 export default async function InstagramPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -108,47 +122,27 @@ export default async function InstagramPage({ params }: Props) {
   ]);
 
   const link = (placement: DeepLinkPlacement) => botDeepLink({ page: "instagram", placement });
-  const supportUrl = getTelegramSupportUrl();
 
-  const ratingValue = reviews.rating.value;
-  const ratingCount = reviews.rating.count;
   const showRating = hasRating(reviews.rating);
+  const ratingValue = reviews.rating.value.toFixed(1);
   const ratingText = t("rating", {
-    value: locale === "en" ? ratingValue.toFixed(1) : ratingValue.toFixed(1).replace(".", ","),
-    count: ratingCount,
+    value: locale === "en" ? ratingValue : ratingValue.replace(".", ","),
+    count: reviews.rating.count,
   });
 
   // Faqat backend'dan kelgan raqamlar — zaxira son hech qachon ko'rinmaydi.
   const tiles: { value: string; label: string }[] = [];
-  if (stats.starsDelivered) {
-    tiles.push({ value: statText(stats.starsDelivered, locale), label: t("statStars") });
-  }
-  if (stats.live.orders) {
-    tiles.push({ value: statText(stats.orders, locale), label: t("statOrders") });
-  }
-  if (stats.live.activeUsers) {
-    tiles.push({ value: statText(stats.activeUsers, locale), label: t("statUsers") });
-  }
+  if (stats.starsDelivered) tiles.push({ value: statText(stats.starsDelivered, locale), label: t("statStars") });
+  if (stats.live.orders) tiles.push({ value: statText(stats.orders, locale), label: t("statOrders") });
+  if (stats.live.activeUsers) tiles.push({ value: statText(stats.activeUsers, locale), label: t("statUsers") });
   tiles.push({ value: formatStatNumber(STATS.yearsInService, locale), label: t("statYears") });
-
-  const why = [
-    { Icon: Zap, title: t("w1"), body: t("w1D") },
-    { Icon: Wallet, title: t("w2"), body: t("w2D") },
-    { Icon: ShieldCheck, title: t("w3"), body: t("w3D") },
-    { Icon: Headset, title: t("w4"), body: t("w4D") },
-  ];
-  const steps = [
-    { title: t("s1"), body: t("s1D") },
-    { title: t("s2"), body: t("s2D") },
-    { title: t("s3"), body: t("s3D") },
-  ];
 
   // Bo'sh havolali tarmoq ko'rsatilmaydi (lib/site.ts dagi izohga qarang).
   const social = [
     { href: SOCIAL_LINKS.telegram, label: t("socialTelegram"), Icon: TelegramIcon, cls: "tg" },
     { href: SOCIAL_LINKS.instagram, label: t("socialInstagram"), Icon: InstagramIcon, cls: "ig" },
     { href: SOCIAL_LINKS.youtube, label: t("socialYoutube"), Icon: YoutubeIcon, cls: "yt" },
-    { href: supportUrl, label: t("socialSupport"), Icon: Headset, cls: "sp" },
+    { href: getTelegramSupportUrl(), label: t("socialSupport"), Icon: Headset, cls: "sp" },
   ].filter((s) => s.href);
 
   return (
@@ -156,7 +150,6 @@ export default async function InstagramPage({ params }: Props) {
       <V2Background />
 
       <div className="ig-wrap">
-        {/* ── Yuqori qator: brend ── */}
         <header className="ig-top">
           <span className="ig-brand">
             <Image
@@ -179,166 +172,113 @@ export default async function InstagramPage({ params }: Props) {
         </header>
 
         <main>
-        {/* ── Hero ── */}
-        <section className="ig-hero">
-          <div className="ig-hero-text">
-            {showRating ? (
-              <div className="ig-chip ig-in" style={{ "--d": "0s" } as React.CSSProperties}>
-                <span className="ig-stars" aria-hidden>
-                  ★★★★★
-                </span>
-                {ratingText}
-              </div>
-            ) : null}
-
-            <h1 className="ig-h1">
-              <span className="ig-in" style={{ "--d": ".06s" } as React.CSSProperties}>
-                {t("h1a")}
-              </span>
-              <span className="ig-in" style={{ "--d": ".12s" } as React.CSSProperties}>
-                {t("h1b")}
-              </span>
-              <span className="ig-in gt" style={{ "--d": ".18s" } as React.CSSProperties}>
-                {t("h1c")}
-              </span>
-            </h1>
-
-            <p className="ig-sub ig-in" style={{ "--d": ".26s" } as React.CSSProperties}>
-              {t("sub")}
-            </p>
-
-            <div className="ig-cta-row ig-in" style={{ "--d": ".34s" } as React.CSSProperties} data-cta="ig-hero">
-              <a className="ig-cta" href={link("hero")} target="_blank" rel="noopener noreferrer">
-                <TelegramIcon className="ig-cta-tg" />
-                <span>{t("cta")}</span>
-                <ArrowRight className="ig-cta-arrow" strokeWidth={2.4} />
-              </a>
-              <span className="ig-cta-note">{t("ctaNote")}</span>
-            </div>
-
-            <div className="ig-pay ig-in" style={{ "--d": ".42s" } as React.CSSProperties}>
-              <span className="ig-pay-logo is-click">
-                <Image src="/pay/click.png" alt="Click" width={230} height={72} sizes="72px" />
-              </span>
-              <span className="ig-pay-logo is-payme">
-                <Image src="/pay/payme.png" alt="Payme" width={78} height={72} sizes="26px" />
-              </span>
-              <span className="ig-pay-chip">Uzcard</span>
-              <span className="ig-pay-chip">HUMO</span>
-            </div>
-          </div>
-
-          <div className="ig-hero-visual" aria-hidden>
-            <div className="ig-glow" />
-            <div className="ig-phone">
-              <span className="ig-phone-notch" />
-              <Image
-                src="/app-screen.png"
-                alt=""
-                width={640}
-                height={1387}
-                sizes="(min-width: 900px) 300px, 240px"
-                priority
-                className="ig-phone-img"
-              />
-            </div>
-            {ORBIT.map((k, i) => (
-              <span key={k} className={`ig-orb ig-orb-${i + 1}`}>
-                <Image src={`/insta/${k}.png`} alt="" width={128} height={128} sizes="72px" />
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Jonli raqamlar ── */}
-        <section className="ig-stats">
-          {tiles.map((s, i) => (
-            <div key={s.label} className="ig-stat ig-in" style={{ "--d": `${0.05 * i}s` } as React.CSSProperties}>
-              <b>{s.value}</b>
-              <span>{s.label}</span>
-            </div>
-          ))}
-        </section>
-
-        {/* ── Mahsulotlar ── */}
-        <section className="ig-sec" data-cta="ig-card">
-          <div className="ig-head">
-            <span className="ig-kicker">{t("productsKicker")}</span>
-            <h2 className="ig-h2">{t("productsTitle")}</h2>
-          </div>
-          <div className="ig-grid">
-            {PRODUCTS.map((p, i) => (
-              <a
-                key={p.key}
-                className="ig-card"
-                href={link("card")}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ "--i": i } as React.CSSProperties}
-              >
-                <span className="ig-card-ic">
-                  <Image src={`/insta/${p.img}.png`} alt="" width={128} height={128} sizes="64px" />
-                </span>
-                <b>{t(p.key)}</b>
-                <span>{t(`${p.key}D`)}</span>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Nega biz ── */}
-        <section className="ig-sec">
-          <div className="ig-head">
-            <span className="ig-kicker">{t("whyKicker")}</span>
-            <h2 className="ig-h2">{t("whyTitle")}</h2>
-          </div>
-          <div className="ig-why">
-            {why.map(({ Icon, title, body }) => (
-              <div key={title} className="ig-why-item">
-                <span className="ig-why-ic">
-                  <Icon strokeWidth={2.2} />
-                </span>
-                <div>
-                  <b>{title}</b>
-                  <p>{body}</p>
+          {/* ── Taklif va tugma ── */}
+          <section className="ig-hero">
+            <div className="ig-hero-text">
+              {showRating ? (
+                <div className="ig-chip ig-in" style={{ "--d": "0s" } as React.CSSProperties}>
+                  <span className="ig-stars" aria-hidden>
+                    ★★★★★
+                  </span>
+                  {ratingText}
                 </div>
+              ) : null}
+
+              <h1 className="ig-h1">
+                <span className="ig-in" style={{ "--d": ".06s" } as React.CSSProperties}>
+                  {t("h1a")}
+                </span>
+                <span className="ig-in" style={{ "--d": ".12s" } as React.CSSProperties}>
+                  {t("h1b")}
+                </span>
+                <span className="ig-in gt" style={{ "--d": ".18s" } as React.CSSProperties}>
+                  {t("h1c")}
+                </span>
+              </h1>
+
+              <p className="ig-sub ig-in" style={{ "--d": ".24s" } as React.CSSProperties}>
+                {t("sub")}
+              </p>
+
+              <div className="ig-cta-row ig-in" style={{ "--d": ".3s" } as React.CSSProperties} data-cta="ig-hero">
+                <BotButton href={link("hero")} label={t("cta")} />
+              </div>
+
+              <div className="ig-pay ig-in" style={{ "--d": ".36s" } as React.CSSProperties}>
+                <span className="ig-pay-logo is-click">
+                  <Image src="/pay/click.png" alt="Click" width={230} height={72} sizes="72px" />
+                </span>
+                <span className="ig-pay-logo is-payme">
+                  <Image src="/pay/payme.png" alt="Payme" width={78} height={72} sizes="26px" />
+                </span>
+                <span className="ig-pay-chip">Uzcard</span>
+                <span className="ig-pay-chip">HUMO</span>
+              </div>
+            </div>
+
+            {/* Markazda brend belgisi, atrofida botdagi mahsulotlar suzib yuradi */}
+            <div className="ig-hero-visual" aria-hidden>
+              <div className="ig-glow" />
+              <span className="ig-ring ig-ring-1" />
+              <span className="ig-ring ig-ring-2" />
+              <span className="ig-core">
+                <Image
+                  src="/logo-mark-clear.png"
+                  alt=""
+                  width={512}
+                  height={512}
+                  sizes="(min-width: 900px) 180px, 132px"
+                  priority
+                  className="ig-core-img"
+                />
+              </span>
+              {ORBIT.map((k, i) => (
+                <span key={k} className={`ig-orb ig-orb-${i + 1}`}>
+                  <Image src={`/insta/${k}.webp`} alt="" width={132} height={132} unoptimized />
+                </span>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Jonli raqamlar ── */}
+          <section className="ig-stats" aria-label={t("statsLabel")}>
+            {tiles.map((s, i) => (
+              <div key={s.label} className="ig-stat ig-in" style={{ "--d": `${0.05 * i}s` } as React.CSSProperties}>
+                <b>{s.value}</b>
+                <span>{s.label}</span>
               </div>
             ))}
-          </div>
-        </section>
+          </section>
 
-        {/* ── 3 qadam ── */}
-        <section className="ig-sec">
-          <div className="ig-head">
-            <span className="ig-kicker">{t("stepsKicker")}</span>
-            <h2 className="ig-h2">{t("stepsTitle")}</h2>
-          </div>
-          <ol className="ig-steps">
-            {steps.map((s, i) => (
-              <li key={s.title} className="ig-step">
-                <span className="ig-step-n">{i + 1}</span>
-                <b>{s.title}</b>
-                <p>{s.body}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
+          {/* ── Mahsulotlar: ikonka va nomi, ortiqcha matnsiz ── */}
+          <section className="ig-sec" data-cta="ig-card">
+            <h2 className="ig-h2">{t("productsTitle")}</h2>
+            <div className="ig-grid">
+              {PRODUCTS.map((p, i) => (
+                <a
+                  key={p.key}
+                  className="ig-card"
+                  href={link("card")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ "--i": i } as React.CSSProperties}
+                >
+                  <span className="ig-card-ic">
+                    <Image src={`/insta/${p.img}.webp`} alt="" width={132} height={132} unoptimized />
+                  </span>
+                  <b>{t(p.key)}</b>
+                </a>
+              ))}
+            </div>
+          </section>
 
-        {/* ── Yakuniy CTA ── */}
-        <section className="ig-final" data-cta="ig-final">
-          <h2 className="ig-h2">{t("finalTitle")}</h2>
-          <p>{t("finalSub")}</p>
-          <a className="ig-cta ig-cta-lg" href={link("cta")} target="_blank" rel="noopener noreferrer">
-            <TelegramIcon className="ig-cta-tg" />
-            <span>{t("cta")}</span>
-            <ArrowRight className="ig-cta-arrow" strokeWidth={2.4} />
-          </a>
-        </section>
+          {/* Desktop uchun oxirgi tugma — telefonda pastki doimiy tugma bor */}
+          <div className="ig-final" data-cta="ig-final">
+            <BotButton href={link("cta")} label={t("cta")} className="ig-cta-lg" />
+          </div>
         </main>
 
-        {/* ── Ijtimoiy tarmoqlar va aloqa ── */}
         <footer className="ig-foot" data-cta="ig-social">
-          <span className="ig-foot-t">{t("socialTitle")}</span>
           <nav className="ig-social" aria-label={t("socialTitle")}>
             {social.map(({ href, label, Icon, cls }) => (
               <a key={cls} className={`ig-soc ig-soc-${cls}`} href={href} target="_blank" rel="noopener noreferrer">
@@ -354,13 +294,9 @@ export default async function InstagramPage({ params }: Props) {
         </footer>
       </div>
 
-      {/* Telefonda doim ko'rinadigan pastki tugma — reklama sahifasining asosiy CTA'si */}
+      {/* Telefonda hero tugmasi ko'rinmay qolgach chiqadigan pastki tugma */}
       <div className="ig-sticky" data-cta="ig-sticky">
-        <a className="ig-cta ig-cta-sticky" href={link("sticky")} target="_blank" rel="noopener noreferrer">
-          <TelegramIcon className="ig-cta-tg" />
-          <span>{t("sticky")}</span>
-          <ArrowRight className="ig-cta-arrow" strokeWidth={2.4} />
-        </a>
+        <BotButton href={link("sticky")} label={t("sticky")} className="ig-cta-sticky" />
       </div>
     </div>
   );
