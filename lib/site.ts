@@ -24,13 +24,13 @@ export const PUBLIC_API_BASE = "https://starspaymee.starstg.uz";
  * to'qilgan havola mijozni begona akkauntga yuborib qo'yishi mumkin.
  *   - telegram: brend kanali «Starspaymee⚡️», 2026-09-26 da tekshirildi
  *     (7 084 obunachi, tavsifida @StarsPaymee_bot va @StarsPaymeeSupport).
- *   - instagram, youtube: kodda, bot repoda va kanal postlarida topilmadi —
- *     egasidan so'raladi.
+ *   - instagram, youtube: egasi bergan (2026-09-27), ikkalasi ochilishi va
+ *     «StarsPaymee» nomi tekshirildi.
  */
 export const SOCIAL_LINKS = {
   telegram: "https://t.me/StarsPaymee",
-  instagram: "",
-  youtube: "",
+  instagram: "https://www.instagram.com/starspaymee",
+  youtube: "https://www.youtube.com/@starspaymee",
 } as const;
 
 /** Business / API bo‘limi uchun alohida bot. */

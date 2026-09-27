@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, Headset } from "lucide-react";
+import { ArrowRight, CircleCheck, CreditCard, Headset, LayoutGrid, Play } from "lucide-react";
 import { V2Background } from "@/components/v2/v2-background";
 import { TelegramIcon } from "@/components/v2/icons";
 import { InstagramIcon, YoutubeIcon } from "@/components/insta/insta-icons";
-import { formatStatNumber, getLandingStats } from "@/lib/live-stats";
+import { LiveStats, type LiveStatTile } from "@/components/insta/live-stats";
+import { ReviewCard } from "@/components/v2/review-card";
+import { getLandingStats } from "@/lib/live-stats";
 import { STATS } from "@/lib/products";
-import { getReviews, hasRating } from "@/lib/reviews";
-import { SOCIAL_LINKS, getSiteUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
+import { getReviews, hasRating, ratingRows } from "@/lib/reviews";
+import { PUBLIC_API_BASE, SOCIAL_LINKS, getSiteUrl, getTelegramSupportUrl, siteConfig } from "@/lib/site";
 import { botDeepLink, type DeepLinkPlacement } from "@/lib/telegram-deeplink";
 
 /**
@@ -21,16 +23,18 @@ import { botDeepLink, type DeepLinkPlacement } from "@/lib/telegram-deeplink";
  *
  * NEGA BUNDAY YENGIL:
  *   - `V2Shell` ishlatilmagan: undagi foizli preloader kontentni kechiktiradi,
- *     `V2Effects` esa ortiqcha JS. Sahifada mijoz JS'i yo'q, animatsiya — CSS.
+ *     `V2Effects` esa ortiqcha JS. Mijoz JS'i faqat jonli raqamlarda
+ *     (`LiveStats`), qolgan animatsiya — CSS.
  *   - Navigatsiya yo'q, yagona maqsad — botni ochish.
  *   - `noindex` va sitemap'da yo'q: bosh sahifa bilan qidiruvda raqobatlashmasin.
  *   - Ikonkalar oldindan WebP'ga o'girilgan va optimizatorsiz beriladi
  *     (`unoptimized`): dev optimizatori 96px o'lchamda osilib qolardi, jami
  *     9 ta ikonka 23 KB.
  *
- * RAQAMLAR FAQAT JONLI. Stars, buyurtma va foydalanuvchi soni bot backend'idan;
- * javob bo'lmasa plitka chiqmaydi (`STATS.orders = 100 000` zaxirasi bu yerda
- * ATAYLAB ishlatilmaydi). Hammasi pastga yaxlitlanadi.
+ * RAQAMLAR ANIQ VA JONLI (2026-09-27 dan). Stars, buyurtma va foydalanuvchi soni
+ * bot backend'idan, yaxlitlanmaydi; brauzer har 30 soniyada yangilaydi
+ * (`components/insta/live-stats.tsx`). Javob bo'lmasa plitka chiqmaydi
+ * (`STATS.orders = 100 000` zaxirasi bu yerda ATAYLAB ishlatilmaydi).
  *
  * KUZATUV: tugmalarda `data-cta` bor, `TelegramClickTracker` uni «bot_open»
  * hodisasiga yozadi. Deep-link manbasi — `w_instagram_<joy>`.
@@ -63,42 +67,46 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-/** Botdagi haqiqiy bo'limlar — tartib va ikonkalar ilova ekranidagidek. */
-const PRODUCTS = [
-  { key: "pStars", img: "stars" },
-  { key: "pPremium", img: "premium" },
-  { key: "pGift", img: "gift" },
-  { key: "pNumber", img: "number" },
-  { key: "pScheduled", img: "scheduled" },
-  { key: "pRent", img: "rent" },
-  { key: "pUsername", img: "username" },
-  { key: "pBoost", img: "boost" },
-  { key: "pNft", img: "nft" },
-] as const;
-
-/** Brend belgisi atrofida suzib yuradigan ikonkalar (joy — CSS klassida). */
-const ORBIT = ["stars", "premium", "gift", "nft", "boost", "rent"] as const;
-
-/** Pastga yaxlitlash: haqiqiy sondan oshirib ko'rsatmaslik uchun. */
-function floorNice(n: number): number {
-  if (n >= 1_000) return Math.floor(n / 1_000) * 1_000;
-  return n;
-}
-
 /**
- * Plitkadagi raqam. Million — ixcham («1 mln+»): Syne shrifti juda keng,
- * «1 000 000+» telefonda plitkaga sig'masdi (390px da 177px matn, 142px joy).
- * Doim PASTGA yaxlitlanadi: 1 042 717 → «1 mln+», hech qachon oshirilmaydi.
+ * Botdagi BARCHA mahsulotlar — bosh ekran tartibida, keyin «O'yinlar» (GamPay) bo'limi.
+ * Rasmlar bot Mini App'ining o'zidan (frontend/src/assets): bosh ekran
+ * plitkalaridan faqat illyustratsiya kesib olingan (plitkadagi o'zbekcha matnsiz —
+ * nom kartada o'z tilida yoziladi), o'yinlar — ilovadagi ikonkalar. 2026-09-27.
+ * `emoji` — shaffof ikonka (o'z rangidagi fon beriladi), `cover` — kvadrat rasm, butun katakni
+ * to'ldiradi. Rasmlar 2× (208px) va zich kesilgan: asl ikonkalarning oq yumaloq burchaklari
+ * olib tashlangan, Steam doirasi atrofi o'z gradienti bilan to'ldirilgan.
  */
-function statText(n: number, locale: string): string {
-  if (n >= 1_000_000) {
-    const millions = Math.floor(n / 100_000) / 10;
-    const unit = locale === "ru" ? "млн" : locale === "en" ? "M" : "mln";
-    const num = formatStatNumber(millions, locale);
-    return locale === "en" ? `${num}${unit}+` : `${num} ${unit}+`;
-  }
-  return `${formatStatNumber(floorNice(n), locale)}+`;
-}
+const PRODUCTS: { key?: string; name?: string; img: string; kind: "emoji" | "cover" }[] = [
+  // Stars va Premium — botdagi o'z ikonkasi (stars.gif / premium_gif.gif ning 1-kadri), sovg'a — botdagi ayiq
+  { key: "pStars", img: "p-stars", kind: "emoji" },
+  { key: "pPremium", img: "p-premium", kind: "emoji" },
+  { key: "pGift", img: "p-gift", kind: "emoji" },
+  { key: "pNumber", img: "number", kind: "cover" },
+  { key: "pScheduled", img: "scheduled", kind: "cover" },
+  { key: "pRent", img: "rent", kind: "cover" },
+  { key: "pUsername", img: "username", kind: "cover" },
+  { key: "pBoost", img: "boost", kind: "cover" },
+  { key: "pNft", img: "nft", kind: "cover" },
+  // O'yinlar va Steam — botning «O'yinlar» bo'limi; nomlar lib/games.ts dagidek
+  { name: "PUBG Mobile", img: "g-pubg", kind: "cover" },
+  { name: "Mobile Legends", img: "g-mlbb", kind: "cover" },
+  { name: "Free Fire", img: "g-ff", kind: "cover" },
+  { name: "Call of Duty Mobile", img: "g-codm", kind: "cover" },
+  { name: "Honor of Kings", img: "g-hok", kind: "cover" },
+  { name: "Magic Chess: Go Go", img: "g-mcgg", kind: "cover" },
+  { name: "Delta Force", img: "g-delta", kind: "cover" },
+  { name: "Asphalt 9", img: "g-asphalt", kind: "cover" },
+  { name: "Bigo Live", img: "g-bigo", kind: "cover" },
+  { name: "Steam", img: "g-steam", kind: "cover" },
+];
+
+/** Botda xarid yo'li — to'rt qadam. */
+const STEPS = [
+  { key: "step1", Icon: Play },
+  { key: "step2", Icon: LayoutGrid },
+  { key: "step3", Icon: CreditCard },
+  { key: "step4", Icon: CircleCheck },
+] as const;
 
 /** Gradient tugma — hero, oxiri va pastki doimiy qatorda bir xil. */
 function BotButton({ href, label, className = "" }: { href: string; label: string; className?: string }) {
@@ -115,27 +123,42 @@ export default async function InstagramPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [t, stats, reviews] = await Promise.all([
+  const [t, tv2, stats, reviews] = await Promise.all([
     getTranslations({ locale, namespace: "insta" }),
+    getTranslations({ locale, namespace: "v2" }),
     getLandingStats(),
     getReviews(locale),
   ]);
 
   const link = (placement: DeepLinkPlacement) => botDeepLink({ page: "instagram", placement });
 
+  // Reyting aniq — ikki xona (4,82), yulduzlar ham shu ulushda to'ladi
   const showRating = hasRating(reviews.rating);
-  const ratingValue = reviews.rating.value.toFixed(1);
-  const ratingText = t("rating", {
-    value: locale === "en" ? ratingValue : ratingValue.replace(".", ","),
-    count: reviews.rating.count,
-  });
+  const ratingNum = reviews.rating.value.toFixed(2);
+  const ratingValue = locale === "en" ? ratingNum : ratingNum.replace(".", ",");
+  const ratingFill = `${Math.min(100, (reviews.rating.value / 5) * 100).toFixed(1)}%`;
+  const starRows = ratingRows(reviews);
+  const starMax = Math.max(1, ...starRows.map((r) => r.count));
 
-  // Faqat backend'dan kelgan raqamlar — zaxira son hech qachon ko'rinmaydi.
-  const tiles: { value: string; label: string }[] = [];
-  if (stats.starsDelivered) tiles.push({ value: statText(stats.starsDelivered, locale), label: t("statStars") });
-  if (stats.live.orders) tiles.push({ value: statText(stats.orders, locale), label: t("statOrders") });
-  if (stats.live.activeUsers) tiles.push({ value: statText(stats.activeUsers, locale), label: t("statUsers") });
-  tiles.push({ value: formatStatNumber(STATS.yearsInService, locale), label: t("statYears") });
+  // Sharhlar lentasi: sahifa tilidagi (getReviews shuni filtrlaydi) eng yangi 12 ta
+  // TASDIQLANGAN XARIDLI matnli sharh — reklama sahifasida faqat haqiqiy xaridorlar
+  // (botdagi yetkazilgan buyurtmaga bog'langan). Hech narsa to'qilmaydi yoki
+  // tahrirlanmaydi. Kam bo'lsa takrorlanadi — aks holda lenta ekranni to'ldirmasdi.
+  // «50 Stars olgan mijoz» — botdagi haqiqiy buyurtmadan; «Premium · 6 oy» → «Premium 6 oy»
+  const buyerLabel = (bought: string | null) =>
+    bought ? t("revBought", { product: bought.replace(" · ", " ") }) : t("revBuyer");
+  const revPool = reviews.reviews.filter((r) => r.verified && r.text.trim().length >= 10).slice(0, 12);
+  const revSet =
+    revPool.length && revPool.length < 6
+      ? Array.from({ length: Math.ceil(6 / revPool.length) }, () => revPool).flat()
+      : revPool;
+
+  // Faqat backend'dan kelgan raqamlar, aniq — zaxira son hech qachon ko'rinmaydi.
+  const tiles: LiveStatTile[] = [];
+  if (stats.starsDelivered) tiles.push({ id: "stars", value: stats.starsDelivered, label: t("statStars") });
+  if (stats.live.orders) tiles.push({ id: "orders", value: stats.orders, label: t("statOrders") });
+  if (stats.live.activeUsers) tiles.push({ id: "users", value: stats.activeUsers, label: t("statUsers") });
+  tiles.push({ id: "years", value: STATS.yearsInService, label: t("statYears") });
 
   // Bo'sh havolali tarmoq ko'rsatilmaydi (lib/site.ts dagi izohga qarang).
   const social = [
@@ -172,105 +195,193 @@ export default async function InstagramPage({ params }: Props) {
         </header>
 
         <main>
-          {/* ── Taklif va tugma ── */}
+          {/* ── Taklif: Stars va Premium plitkalari, «5 soniyada», reyting ── */}
           <section className="ig-hero">
-            <div className="ig-hero-text">
-              {showRating ? (
-                <div className="ig-chip ig-in" style={{ "--d": "0s" } as React.CSSProperties}>
-                  <span className="ig-stars" aria-hidden>
-                    ★★★★★
-                  </span>
-                  {ratingText}
-                </div>
-              ) : null}
-
-              <h1 className="ig-h1">
-                <span className="ig-in" style={{ "--d": ".06s" } as React.CSSProperties}>
-                  {t("h1a")}
+            <h1 className="ig-h1">
+              {/* Matn o'rniga ikki ilova-plitka; alt — sarlavhaning o'qiladigan qismi */}
+              <span className="ig-h1-icons ig-in" style={{ "--d": "0s" } as React.CSSProperties}>
+                <span className="ig-tile is-stars">
+                  <Image src="/insta/stars.webp" alt={t("iconStars")} width={132} height={132} unoptimized priority />
                 </span>
-                <span className="ig-in" style={{ "--d": ".12s" } as React.CSSProperties}>
-                  {t("h1b")}
+                <span className="ig-tile is-premium">
+                  <Image src="/insta/premium.webp" alt={t("iconPremium")} width={132} height={132} unoptimized priority />
                 </span>
-                <span className="ig-in gt" style={{ "--d": ".18s" } as React.CSSProperties}>
-                  {t("h1c")}
-                </span>
-              </h1>
+              </span>
+              <span className="ig-in gt" style={{ "--d": ".08s" } as React.CSSProperties}>
+                {t("h1c")}
+              </span>
+            </h1>
+          </section>
 
-              <p className="ig-sub ig-in" style={{ "--d": ".24s" } as React.CSSProperties}>
-                {t("sub")}
-              </p>
-
-              <div className="ig-cta-row ig-in" style={{ "--d": ".3s" } as React.CSSProperties} data-cta="ig-hero">
-                <BotButton href={link("hero")} label={t("cta")} />
+          {/* ── Mahsulotlar: bitta qator, o'ngdan chapga uzluksiz suriladi.
+                 Ikkinchi to'plam — birinchisining nusxasi (halqa choksiz bo'lishi
+                 uchun); ekran o'quvchi va Tab uni o'tkazib yuboradi. ── */}
+          <section className="ig-sec" data-cta="ig-card">
+            <h2 className="ig-h2">{t("productsTitle")}</h2>
+            <div className="ig-marquee">
+              <div className="ig-track" style={{ "--n": PRODUCTS.length } as React.CSSProperties}>
+                {[false, true].map((dup) => (
+                  <div key={String(dup)} className="ig-set" aria-hidden={dup || undefined}>
+                    {PRODUCTS.map((p, i) => (
+                      // Matnsiz: kartaning o'zi — ikonka. Nom faqat ekran o'quvchi va qidiruv uchun.
+                      <a
+                        key={p.img}
+                        className={`ig-card is-${p.kind} t-${p.img}`}
+                        href={link("card")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        tabIndex={dup ? -1 : undefined}
+                        aria-label={p.key ? t(p.key) : p.name}
+                        style={{ "--i": i } as React.CSSProperties}
+                      >
+                        <Image src={`/insta/${p.img}.webp`} alt="" width={132} height={132} unoptimized />
+                      </a>
+                    ))}
+                  </div>
+                ))}
               </div>
+            </div>
+          </section>
 
-              <div className="ig-pay ig-in" style={{ "--d": ".36s" } as React.CSSProperties}>
+          {/* ── Xarid yo'li: sarlavha + to'rt qadam. 1-qadam botni ochadi,
+                 faol belgi 1 → 4 bo'ylab yuradi. ── */}
+          <section className="ig-block ig-in" style={{ "--d": ".2s" } as React.CSSProperties} aria-labelledby="ig-t-how">
+            <h2 className="ig-h2" id="ig-t-how">{t("stepsTitle")}</h2>
+            <div className="ig-panel ig-how">
+              <ol className="ig-steps">
+                {STEPS.map(({ key, Icon }, i) => {
+                  const body = (
+                    <>
+                      <span className="ig-step-ic" aria-hidden>
+                        <Icon strokeWidth={2.2} />
+                        <em>{i + 1}</em>
+                      </span>
+                      <b>{t(key)}</b>
+                    </>
+                  );
+                  return (
+                    <li key={key} className="ig-step" style={{ "--i": i } as React.CSSProperties}>
+                      {i === 0 ? (
+                        <a
+                          className="ig-step-go"
+                          href={link("hero")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-cta="ig-step"
+                        >
+                          {body}
+                        </a>
+                      ) : (
+                        body
+                      )}
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          </section>
+
+          {/* ── To'lov usullari — alohida blok ── */}
+          <section className="ig-block ig-in" style={{ "--d": ".24s" } as React.CSSProperties} aria-labelledby="ig-t-pay">
+            <h2 className="ig-h2" id="ig-t-pay">{t("payTitle")}</h2>
+            <div className="ig-panel ig-paybox">
+              <div className="ig-pay">
                 <span className="ig-pay-logo is-click">
                   <Image src="/pay/click.png" alt="Click" width={230} height={72} sizes="72px" />
                 </span>
                 <span className="ig-pay-logo is-payme">
                   <Image src="/pay/payme.png" alt="Payme" width={78} height={72} sizes="26px" />
                 </span>
+                <span className="ig-pay-logo is-paynet">
+                  <Image src="/pay/paynet.png" alt="Paynet" width={248} height={72} sizes="64px" />
+                </span>
+                <span className="ig-pay-chip is-uzum">
+                  <Image src="/pay/uzum.webp" alt="" width={96} height={96} unoptimized />
+                  Uzum
+                </span>
                 <span className="ig-pay-chip">Uzcard</span>
                 <span className="ig-pay-chip">HUMO</span>
               </div>
             </div>
-
-            {/* Markazda brend belgisi, atrofida botdagi mahsulotlar suzib yuradi */}
-            <div className="ig-hero-visual" aria-hidden>
-              <div className="ig-glow" />
-              <span className="ig-ring ig-ring-1" />
-              <span className="ig-ring ig-ring-2" />
-              <span className="ig-core">
-                <Image
-                  src="/logo-mark-clear.png"
-                  alt=""
-                  width={512}
-                  height={512}
-                  sizes="(min-width: 900px) 180px, 132px"
-                  priority
-                  className="ig-core-img"
-                />
-              </span>
-              {ORBIT.map((k, i) => (
-                <span key={k} className={`ig-orb ig-orb-${i + 1}`}>
-                  <Image src={`/insta/${k}.webp`} alt="" width={132} height={132} unoptimized />
-                </span>
-              ))}
-            </div>
           </section>
 
-          {/* ── Jonli raqamlar ── */}
-          <section className="ig-stats" aria-label={t("statsLabel")}>
-            {tiles.map((s, i) => (
-              <div key={s.label} className="ig-stat ig-in" style={{ "--d": `${0.05 * i}s` } as React.CSSProperties}>
-                <b>{s.value}</b>
-                <span>{s.label}</span>
-              </div>
-            ))}
+          {/* ── Jonli raqamlar — aniq son, brauzer 30 soniyada yangilaydi ── */}
+          <section className="ig-block ig-in" style={{ "--d": ".28s" } as React.CSSProperties} aria-labelledby="ig-t-stats">
+            <h2 className="ig-h2" id="ig-t-stats">
+              <span className="ig-live-dot" aria-hidden />
+              {t("statsTitle")}
+            </h2>
+            <LiveStats
+              tiles={tiles}
+              locale={locale}
+              apiBase={PUBLIC_API_BASE}
+              ariaLabel={t("statsLabel")}
+              className="ig-panel ig-stats"
+            />
           </section>
 
-          {/* ── Mahsulotlar: ikonka va nomi, ortiqcha matnsiz ── */}
-          <section className="ig-sec" data-cta="ig-card">
-            <h2 className="ig-h2">{t("productsTitle")}</h2>
-            <div className="ig-grid">
-              {PRODUCTS.map((p, i) => (
-                <a
-                  key={p.key}
-                  className="ig-card"
-                  href={link("card")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ "--i": i } as React.CSSProperties}
-                >
-                  <span className="ig-card-ic">
-                    <Image src={`/insta/${p.img}.webp`} alt="" width={132} height={132} unoptimized />
+          {/* ── Reyting: aniq ball, ulushda to'lgan yulduzlar va har yulduz bo'yicha soni ── */}
+          {showRating ? (
+            <section className="ig-block" aria-labelledby="ig-t-rate">
+              <h2 className="ig-h2" id="ig-t-rate">{t("ratingTitle")}</h2>
+              <div className="ig-panel ig-rate">
+                <div className="ig-rate-score">
+                  <b>{ratingValue}</b>
+                  <span
+                    className="ig-rate-stars"
+                    role="img"
+                    aria-label={t("ratingOf", { value: ratingValue })}
+                    style={{ "--fill": ratingFill } as React.CSSProperties}
+                  >
+                    <span aria-hidden>★★★★★</span>
+                    <i aria-hidden>★★★★★</i>
                   </span>
-                  <b>{t(p.key)}</b>
-                </a>
-              ))}
-            </div>
-          </section>
+                  <small>{t("ratingCount", { count: reviews.rating.count })}</small>
+                </div>
+                <ul className="ig-rate-rows">
+                  {starRows.map((r, i) => (
+                    <li key={r.star} className="ig-rate-row">
+                      <span className="ig-rate-star">{r.star}★</span>
+                      <span className="ig-bar" aria-hidden>
+                        <i
+                          style={
+                            { "--w": `${((r.count / starMax) * 100).toFixed(1)}%`, "--r": i } as React.CSSProperties
+                          }
+                        />
+                      </span>
+                      <b>{r.count}</b>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          ) : null}
+
+          {/* ── Sharhlar: reytingdan keyin, chapdan o'ngga uzluksiz suriladi (mahsulotlarga
+                 teskari yo'nalish). Ikkinchi to'plam — nusxa, ekran o'quvchidan yashirin. ── */}
+          {revSet.length ? (
+            <section className="ig-block" aria-labelledby="ig-t-revs">
+              <h2 className="ig-h2" id="ig-t-revs">{t("reviewsTitle")}</h2>
+              <div className="ig-revs">
+                <div className="ig-rev-track" style={{ "--n": revSet.length } as React.CSSProperties}>
+                  {[false, true].map((dup) => (
+                    <div key={String(dup)} className="ig-rev-set" aria-hidden={dup || undefined}>
+                      {revSet.map((r, i) => (
+                        <ReviewCard
+                          key={`${r.id}-${i}`}
+                          r={r}
+                          verified={tv2("reviewsVerified")}
+                          locale={locale}
+                          dup={dup}
+                          buyerLabel={buyerLabel}
+                        />
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          ) : null}
 
           {/* Desktop uchun oxirgi tugma — telefonda pastki doimiy tugma bor */}
           <div className="ig-final" data-cta="ig-final">
@@ -289,12 +400,10 @@ export default async function InstagramPage({ params }: Props) {
               </a>
             ))}
           </nav>
-          <p className="ig-disclaimer">{t("disclaimer")}</p>
-          <p className="ig-rights">© {new Date().getFullYear()} StarsPaymee · starstg.uz</p>
         </footer>
       </div>
 
-      {/* Telefonda hero tugmasi ko'rinmay qolgach chiqadigan pastki tugma */}
+      {/* Telefonda doimiy pastki tugma — yuqorida tugma yo'q, shuning uchun darhol chiqadi */}
       <div className="ig-sticky" data-cta="ig-sticky">
         <BotButton href={link("sticky")} label={t("sticky")} className="ig-cta-sticky" />
       </div>

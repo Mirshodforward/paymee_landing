@@ -66,12 +66,19 @@ export function ReviewCard({
   locale,
   dup,
   style,
+  buyerLabel,
 }: {
   r: Review;
   verified: string;
   locale: string;
   dup?: boolean;
   style?: React.CSSProperties;
+  /**
+   * Berilsa, «✓ 300 Stars · tasdiqlangan xarid» o'rniga shu yozuv chiqadi
+   * («50 Stars olgan mijoz»). Argument — xarid nomi yoki `null` (nomi yo'q).
+   * Hozir faqat /instagram ishlatadi; asosiy sayt avvalgidek.
+   */
+  buyerLabel?: (bought: string | null) => string;
 }) {
   const bought = productLabel(r.product, locale);
   const name = cleanName(r.name, locale);
@@ -86,8 +93,15 @@ export function ReviewCard({
           <small>
             {r.verified ? (
               <span className="rev-verified">
-                ✓ {bought ? `${bought} · ` : ""}
-                {verified}
+                ✓{" "}
+                {buyerLabel ? (
+                  buyerLabel(bought)
+                ) : (
+                  <>
+                    {bought ? `${bought} · ` : ""}
+                    {verified}
+                  </>
+                )}
               </span>
             ) : null}
             <time dateTime={r.date}>{r.date}</time>
