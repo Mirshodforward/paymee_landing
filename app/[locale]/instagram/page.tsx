@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, CircleCheck, CreditCard, Headset, LayoutGrid, Play } from "lucide-react";
-import { V2Background } from "@/components/v2/v2-background";
 import { TelegramIcon } from "@/components/v2/icons";
 import { InstagramIcon, YoutubeIcon } from "@/components/insta/insta-icons";
 import { LiveStats, type LiveStatTile } from "@/components/insta/live-stats";
@@ -170,8 +169,6 @@ export default async function InstagramPage({ params }: Props) {
 
   return (
     <div className="v2 ig">
-      <V2Background />
-
       <div className="ig-wrap">
         <header className="ig-top">
           <span className="ig-brand">
@@ -201,10 +198,10 @@ export default async function InstagramPage({ params }: Props) {
               {/* Matn o'rniga ikki ilova-plitka; alt — sarlavhaning o'qiladigan qismi */}
               <span className="ig-h1-icons ig-in" style={{ "--d": "0s" } as React.CSSProperties}>
                 <span className="ig-tile is-stars">
-                  <Image src="/insta/stars.webp" alt={t("iconStars")} width={132} height={132} unoptimized priority />
+                  <Image src="/insta/p-stars.webp" alt={t("iconStars")} width={132} height={132} unoptimized priority />
                 </span>
                 <span className="ig-tile is-premium">
-                  <Image src="/insta/premium.webp" alt={t("iconPremium")} width={132} height={132} unoptimized priority />
+                  <Image src="/insta/p-premium.webp" alt={t("iconPremium")} width={132} height={132} unoptimized priority />
                 </span>
               </span>
               <span className="ig-in gt" style={{ "--d": ".08s" } as React.CSSProperties}>

@@ -5992,20 +5992,26 @@ html {
 /* ═══════════════════════════════════════════════════════════════════════
    /instagram — Instagram reklamasi uchun bitta sahifali landing
    ───────────────────────────────────────────────────────────────────────
-   Mobil birinchi va ATAYLAB IXCHAM. Reklamadan kelgan odam ~390px ekranda,
-   Instagram ichidagi brauzerda ochadi. Tuzilish (2026-09-27 qayta dizayn):
-     1. Taklif — Stars va Premium ilova-plitkalari, «5 soniyada»;
-     2. Mahsulotlar — o'ngdan chapga suriladigan bitta qator;
-     3. Bitta karta — xarid yo'li (4 qadam) va to'lov usullari;
-     4. Jonli raqamlar va reyting kartalari;
-     5. Ijtimoiy tarmoqlar va pastki doimiy tugma.
+   2026-09-28 — «oddiy, sodda, chiroyli» qayta dizayn (egasining so'rovi).
+   Qoidalar:
+     - Fon tekis to'q, tepada bitta xira nur (aurora qatlami yo'q).
+     - Syne faqat brend va «5 soniyada» da; sarlavhalar va raqamlar — Geist,
+       chapga tekislangan, gradientsiz.
+     - Bitta karta uslubi: chegarasiz, yumshoq fon, 20px burchak.
+     - Harakat faqat: ikki qator (mahsulotlar ←, sharhlar →) va hero'dagi
+       ikki yulduzning sekin suzishi. Pulsatsiya, porlash, aylanish yo'q.
+   Tartib: taklif → mahsulotlar → xarid qadamlari → to'lov usullari →
+   jonli ko'rsatkichlar → reyting → sharhlar → ijtimoiy tarmoqlar.
    Desktop — xuddi shu dizayn, 520px ustun markazda.
-   Hamma animatsiya CSS — sahifada mijoz JS'i yo'q; `prefers-reduced-motion`
-   da harakat o'chadi.
    ═══════════════════════════════════════════════════════════════════════ */
 .v2.ig {
+  --card: rgba(255, 255, 255, 0.055);
+  --card2: rgba(255, 255, 255, 0.09);
   /* Pastdagi doimiy tugma oxirgi kontentni yopmasligi uchun */
   padding-bottom: 96px;
+  background:
+    radial-gradient(90% 38% at 50% 0%, rgba(139, 92, 246, 0.2), transparent 70%),
+    var(--void);
 }
 .v2.ig .ig-wrap {
   position: relative;
@@ -6018,20 +6024,17 @@ html {
 @keyframes ig-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(12px);
   }
 }
 .v2.ig .ig-in {
-  animation: ig-up 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: ig-up 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   animation-delay: var(--d, 0s);
 }
-@keyframes ig-bob {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-3deg);
-  }
+/* Faqat hero yulduzlari uchun — sekin, aylanishsiz */
+@keyframes ig-float {
   50% {
-    transform: translateY(-8px) rotate(3deg);
+    transform: translateY(-6px);
   }
 }
 
@@ -6053,18 +6056,16 @@ html {
   white-space: nowrap;
 }
 .v2.ig .ig-brand-mark {
-  width: 32px;
-  height: 32px;
-  filter: drop-shadow(0 4px 14px rgba(168, 85, 247, 0.55));
+  width: 30px;
+  height: 30px;
 }
 .v2.ig .ig-live {
   display: inline-flex;
   align-items: center;
   gap: 7px;
   padding: 6px 11px;
-  border: 1px solid var(--line);
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card);
   font-size: 12px;
   font-weight: 600;
   color: var(--muted);
@@ -6073,26 +6074,16 @@ html {
 .v2.ig .ig-live-dot {
   width: 7px;
   height: 7px;
+  flex: none;
   border-radius: 50%;
   background: #4ade80;
-  animation: ig-ping 1.8s ease-out infinite;
-}
-@keyframes ig-ping {
-  0% {
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
-  }
-  70%,
-  100% {
-    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
-  }
 }
 
 /* ── 1. Taklif ── */
 .v2.ig .ig-hero {
   display: grid;
   justify-items: center;
-  gap: 14px;
-  padding: 30px 0 24px;
+  padding: 30px 0 26px;
   text-align: center;
 }
 .v2.ig .ig-h1 {
@@ -6102,89 +6093,147 @@ html {
   gap: 18px;
   font-family: var(--disp);
   font-weight: 800;
-  /* Syne juda keng: «5 soniyada» ≈ 8,4 × shrift o'lchami. 10,4vw — 360px
-     telefonda ham bir qatorga sig'adi (390px da 41px → ~338px) */
+  /* Syne juda keng: «5 soniyada» ≈ 8,4 × shrift o'lchami — 360px da ham sig'adi */
   font-size: clamp(34px, 10.4vw, 48px);
   line-height: 1;
   letter-spacing: -0.035em;
 }
-/* Sig'masa (inglizcha «in 5 seconds») — ikki teng qatorga bo'linadi, kesilmaydi */
+/* Sig'masa (inglizcha «in 5 seconds») — ikki teng qatorga bo'linadi */
 .v2.ig .ig-h1 .gt {
   text-wrap: balance;
-  animation: ig-up 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both, ig-hue 6s ease-in-out infinite;
-  animation-delay: var(--d, 0s), 0s;
 }
-@keyframes ig-hue {
-  50% {
-    background-position: 100% 0;
-  }
-}
-/* Ikki ilova-plitka bir-biriga qiyshayib, ustma-ust: Premium oldinda, pastroqda.
-   Plitka qiyaligi — plitkada, suzish — ichidagi rasmda (transform to'qnashmaydi). */
+/* Ikki ilova-plitka bir-biriga qiyshayib turadi; suzish — ichidagi rasmda */
 .v2.ig .ig-h1-icons {
   display: flex;
   justify-content: center;
-  padding: 4px 0 10px;
+  padding: 4px 0 8px;
 }
 .v2.ig .ig-tile {
-  position: relative;
   display: grid;
   place-items: center;
-  width: 96px;
-  height: 96px;
-  border-radius: 30px;
-  border: 1px solid var(--tile-line);
-  background: linear-gradient(160deg, var(--tile-bg), rgb(15, 10, 26) 78%);
-  box-shadow: 0 20px 38px -22px var(--tile-glow), inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  width: 92px;
+  height: 92px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, var(--tile), rgb(16, 11, 27) 80%);
 }
 .v2.ig .ig-tile.is-stars {
-  --tile-line: rgba(251, 191, 36, 0.36);
-  --tile-bg: rgba(251, 191, 36, 0.2);
-  --tile-glow: rgba(251, 191, 36, 0.7);
-  transform: rotate(-8deg) translateX(9px);
+  --tile: rgba(251, 191, 36, 0.24);
+  transform: rotate(-7deg) translateX(8px);
 }
 .v2.ig .ig-tile.is-premium {
-  --tile-line: rgba(56, 189, 248, 0.38);
-  --tile-bg: rgba(56, 189, 248, 0.2);
-  --tile-glow: rgba(56, 189, 248, 0.7);
+  --tile: rgba(139, 92, 246, 0.32);
   z-index: 1;
-  transform: rotate(8deg) translate(-9px, 12px);
+  transform: rotate(7deg) translate(-8px, 10px);
 }
+/* Botning o'z Stars/Premium ikonkalari — zich kesilgan, plitkani to'ldiradi */
 .v2.ig .ig-tile img {
-  width: 80px;
-  height: 80px;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
-  animation: ig-bob 5s ease-in-out infinite;
+  animation: ig-float 4.5s ease-in-out infinite;
 }
 .v2.ig .ig-tile.is-premium img {
-  animation-delay: -2.5s;
+  animation-delay: -2.25s;
 }
 
-/* ── Karta — xarid yo'li va raqamlar uchun umumiy sirt ── */
-/* Chegarasiz (2026-09-27) — kartani faqat foni ajratib turadi */
-.v2.ig .ig-panel {
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.022));
-}
-
-/* ── 2. Xarid yo'li: to'rt qadam + to'lov usullari ── */
-/* ── Sarlavhali bloklar (2026-09-27): har blok ustida nima ko'rsatayotgani
-   yoziladi — qadamlar, to'lov usullari, ko'rsatkichlar, reyting, sharhlar ── */
+/* ── Bo'lim sarlavhasi: oddiy, chapga tekislangan ── */
 .v2.ig .ig-block {
-  margin-top: 26px;
+  margin-top: 28px;
 }
-/* «Real vaqtda» sarlavhasidagi jonli nuqta — matn bilan bir qatorda, ikki qatorga
-   bo'linsa ham birinchi so'z oldida qoladi */
+.v2.ig .ig-h2 {
+  margin: 0 0 10px 2px;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
 .v2.ig .ig-h2 .ig-live-dot {
   display: inline-block;
-  margin-right: 9px;
-  vertical-align: 0.16em;
+  margin-right: 8px;
+  vertical-align: 0.12em;
 }
+
+/* ── Karta — bitta uslub ── */
+.v2.ig .ig-panel {
+  border-radius: 20px;
+  background: var(--card);
+}
+
+/* ── 2. Mahsulotlar: bitta qator, o'ngdan chapga.
+   Yo'lda ikkita bir xil to'plam: -50% siljiganda ikkinchisi aynan birinchisining
+   o'rnida — choksiz halqa. Oraliq to'plam ichidagi padding bilan (gap emas),
+   aks holda -50% bitta oraliqqa adashib, har aylanishda sakraydi. ── */
+.v2.ig .ig-marquee {
+  margin: 0 -16px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.v2.ig .ig-track {
+  display: flex;
+  width: max-content;
+  /* Tezlik mahsulot soniga bog'liq emas: ~34px/s */
+  animation: ig-marquee calc(var(--n, 9) * 3.2s) linear infinite;
+}
+.v2.ig .ig-set {
+  display: flex;
+  gap: 10px;
+  padding-right: 10px;
+}
+.v2.ig .ig-marquee:hover .ig-track,
+.v2.ig .ig-marquee:focus-within .ig-track {
+  animation-play-state: paused;
+}
+@keyframes ig-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* Karta — matnsiz, ikonkaning o'zi butun blokni egallaydi */
+.v2.ig .ig-card {
+  flex: none;
+  display: block;
+  width: 96px;
+  height: 96px;
+  overflow: hidden;
+  border-radius: 24px;
+  -webkit-tap-highlight-color: transparent;
+}
+.v2.ig .ig-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Shaffof ikonka (Stars, Premium, sovg'a) — o'z rangidagi yumshoq fonda */
+.v2.ig .ig-card.is-emoji {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, var(--tone, rgba(168, 85, 247, 0.3)), rgb(18, 12, 32) 80%);
+}
+.v2.ig .ig-card.t-p-stars {
+  --tone: rgba(251, 191, 36, 0.36);
+}
+.v2.ig .ig-card.t-p-premium {
+  --tone: rgba(139, 92, 246, 0.42);
+}
+.v2.ig .ig-card.t-p-gift {
+  --tone: rgba(244, 114, 182, 0.34);
+}
+.v2.ig .ig-card.is-emoji img {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+}
+.v2.ig .ig-card:focus-visible {
+  outline: 2px solid var(--vio);
+  outline-offset: 2px;
+}
+
+/* ── 3. Xarid qadamlari: raqamli doiralar, orasida ingichka chiziq ── */
 .v2.ig .ig-how {
-  padding: 20px 10px 16px;
-}
-.v2.ig .ig-paybox {
-  padding: 12px;
+  padding: 18px 8px 16px;
 }
 .v2.ig .ig-steps {
   position: relative;
@@ -6195,17 +6244,14 @@ html {
   padding: 0;
   list-style: none;
 }
-/* Qadamlarni bog'lovchi chiziq — ikonkalar markazi balandligida */
 .v2.ig .ig-steps::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 22px;
   right: 12.5%;
   left: 12.5%;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--grad);
-  opacity: 0.35;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
 }
 .v2.ig .ig-step,
 .v2.ig .ig-step-go {
@@ -6217,71 +6263,57 @@ html {
   text-align: center;
 }
 .v2.ig .ig-step-go {
-  border-radius: 16px;
+  border-radius: 14px;
   -webkit-tap-highlight-color: transparent;
 }
 .v2.ig .ig-step-go:focus-visible {
-  outline: 2px solid rgba(168, 85, 247, 0.9);
+  outline: 2px solid var(--vio);
   outline-offset: 4px;
 }
 .v2.ig .ig-step-ic {
   position: relative;
   display: grid;
   place-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
-  background: rgb(26, 18, 44);
-  color: #e9d5ff;
-  /* Faol holat 1 → 2 → 3 → 4 bo'ylab yuradi: har qadam 1 s kechikadi */
-  animation: ig-step-on 4s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 1s);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* Chiziq doira orqasidan o'tmasin — fon to'liq, shaffof emas */
+  background: rgb(33, 26, 48);
+  color: var(--text);
 }
 .v2.ig .ig-step-ic svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 .v2.ig .ig-step:last-child .ig-step-ic {
+  background: rgba(74, 222, 128, 0.16);
   color: #4ade80;
 }
 .v2.ig .ig-step-ic em {
   position: absolute;
-  top: -7px;
-  right: -7px;
+  top: -4px;
+  right: -6px;
   display: grid;
   place-items: center;
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--grad);
+  background: var(--vio);
   color: #fff;
   font-size: 10.5px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
 }
 .v2.ig .ig-step b {
   font-size: 12px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 600;
+  line-height: 1.25;
 }
-.v2.ig .ig-step-go:hover .ig-step-ic,
-.v2.ig .ig-step-go:active .ig-step-ic {
-  background: rgb(40, 26, 68);
+
+/* ── 4. To'lov usullari: 3×2, teng kataklar ── */
+.v2.ig .ig-paybox {
+  padding: 12px;
 }
-@keyframes ig-step-on {
-  0%,
-  32%,
-  100% {
-    transform: none;
-    box-shadow: none;
-  }
-  8%,
-  22% {
-    transform: translateY(-4px);
-    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.22), 0 12px 28px -8px rgba(217, 70, 239, 0.75);
-  }
-}
-/* To'lov usullari — kartaning pastida, ingichka chiziq ostida; 6 ta, 3×2 teng kataklar */
 .v2.ig .ig-pay {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -6292,31 +6324,33 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 34px;
+  height: 40px;
   padding: 0 6px;
-  border-radius: 11px;
+  border-radius: 12px;
 }
 .v2.ig .ig-pay-logo img {
   width: auto;
   max-width: 100%;
   height: 18px;
 }
-/* Click logosi qora fonda, Payme'niki oq fonda — fonlari shunga mos */
+/* Click logosi qora fonda, Payme/Paynet/Uzum — oq fonda */
 .v2.ig .ig-pay-logo.is-click {
   background: #010101;
 }
-.v2.ig .ig-pay-logo.is-payme {
-  background: #fff;
-}
-/* Payme rasmi deyarli kvadrat — 18px da juda mayda ko'rinardi */
-.v2.ig .ig-pay-logo.is-payme img {
-  height: 26px;
-}
-/* Paynet so'z-logosi oq fonda */
+.v2.ig .ig-pay-logo.is-payme,
 .v2.ig .ig-pay-logo.is-paynet {
   background: #fff;
 }
-/* Uzum Bank — ilova ikonkasi va nomi oq fonda (Payme, Paynet kabi), nom logoning binafsha rangida */
+/* Payme rasmi deyarli kvadrat — 18px da mayda ko'rinardi */
+.v2.ig .ig-pay-logo.is-payme img {
+  height: 26px;
+}
+.v2.ig .ig-pay-chip {
+  background: var(--card2);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
 .v2.ig .ig-pay-chip.is-uzum {
   gap: 6px;
   background: #fff;
@@ -6327,52 +6361,38 @@ html {
   height: 20px;
   border-radius: 6px;
 }
-.v2.ig .ig-pay-chip {
-  background: rgba(255, 255, 255, 0.075);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
 
-/* ── 3. Jonli raqamlar: bitta karta, 2×2, chiziqsiz (2026-09-27).
+/* ── 5. Jonli ko'rsatkichlar: 2×2, oddiy oq raqamlar.
    Raqam soni toq bo'lsa, oxirgisi butun qatorni egallaydi. ── */
 .v2.ig .ig-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  overflow: hidden;
+  padding: 6px;
 }
 .v2.ig .ig-stat {
   display: grid;
-  gap: 3px;
-  padding: 14px 10px 13px;
+  gap: 2px;
+  padding: 12px 8px;
   text-align: center;
 }
 .v2.ig .ig-stat:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
 .v2.ig .ig-stat b {
-  font-family: var(--disp);
-  /* Aniq son kengroq («1 062 260») — 360px telefonda ham katakka sig'sin */
-  font-size: clamp(17px, 5.2vw, 22px);
-  font-weight: 800;
+  font-size: clamp(19px, 5.6vw, 23px);
+  font-weight: 700;
   letter-spacing: -0.02em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text);
 }
-/* Yangi son kelganda bir lahza yonadi */
+/* Yangi son kelganda bir lahza yashil bo'ladi */
 .v2.ig .ig-stat b.is-bump {
   animation: ig-bump 1.4s ease-out;
 }
 @keyframes ig-bump {
   0% {
-    filter: brightness(1.9) drop-shadow(0 0 10px rgba(217, 70, 239, 0.85));
-  }
-  100% {
-    filter: none;
+    color: #4ade80;
   }
 }
 .v2.ig .ig-stat span {
@@ -6381,35 +6401,32 @@ html {
   color: var(--muted);
 }
 
-/* ── Reyting kartasi: chapda aniq ball va ulushda to'lgan yulduzlar,
-   o'ngda har yulduz bo'yicha soni. Ustunlar eng ko'p baho olgan yulduzga
-   nisbatan (5★ to'liq), yonidagi raqam — aniq son. ── */
+/* ── 6. Reyting: chapda aniq ball, o'ngda har yulduz bo'yicha soni ── */
 .v2.ig .ig-rate {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 20px;
-  padding: 18px 18px 16px 20px;
+  padding: 18px 18px 18px 20px;
 }
 .v2.ig .ig-rate-score {
   display: grid;
   justify-items: center;
-  gap: 7px;
+  gap: 6px;
   text-align: center;
 }
 .v2.ig .ig-rate-score b {
-  font-family: var(--disp);
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 0.95;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
   letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
 }
-/* Kulrang yulduzlar ustida oltin qatlam — kengligi aynan reyting ulushi (4,82 → 96,4%) */
+/* Kulrang yulduzlar ustida oltin qatlam — kengligi aynan reyting ulushi */
 .v2.ig .ig-rate-stars {
   position: relative;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.16);
@@ -6450,13 +6467,13 @@ html {
 }
 .v2.ig .ig-rate-row b {
   text-align: right;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
 }
 .v2.ig .ig-bar {
-  height: 7px;
-  border-radius: 7px;
-  background: rgba(255, 255, 255, 0.07);
+  height: 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 .v2.ig .ig-bar i {
@@ -6464,21 +6481,11 @@ html {
   width: var(--w);
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
-  transform-origin: left center;
-  animation: ig-grow 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  animation-delay: calc(0.35s + var(--r) * 0.08s);
-}
-@keyframes ig-grow {
-  from {
-    transform: scaleX(0);
-  }
+  background: #fbbf24;
 }
 
-/* ── Sharhlar: reyting kartasidan keyin, chapdan o'ngga suriladi — mahsulotlar
-   qatoriga teskari. Kartalar asosiy saytdagi ReviewCard, bu yerda chegarasiz,
-   torroq va matni 4 qator bilan cheklangan. Tezlik ~31px/s — o'qib ulgurish uchun
-   sekinroq; barmoq tekkanda (hover) to'xtaydi. ── */
+/* ── 7. Sharhlar: chapdan o'ngga (mahsulotlarga teskari), o'qish uchun sekin.
+   Kartalar asosiy saytdagi ReviewCard — bu yerda soddalashtirilgan. ── */
 .v2.ig .ig-revs {
   margin: 0 -16px;
   overflow: hidden;
@@ -6488,13 +6495,12 @@ html {
 .v2.ig .ig-rev-track {
   display: flex;
   width: max-content;
-  padding: 4px 0 6px;
   animation: ig-marquee-rev calc(var(--n, 12) * 9s) linear infinite;
 }
 .v2.ig .ig-rev-set {
   display: flex;
-  gap: 12px;
-  padding-right: 12px;
+  gap: 10px;
+  padding-right: 10px;
 }
 .v2.ig .ig-revs:hover .ig-rev-track,
 .v2.ig .ig-revs:focus-within .ig-rev-track {
@@ -6509,11 +6515,11 @@ html {
   }
 }
 .v2.ig .ig-revs .rev-card {
-  width: 272px;
-  padding: 16px 16px 17px;
+  width: 268px;
+  padding: 16px;
   border: 0;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.022));
+  border-radius: 20px;
+  background: var(--card);
   backdrop-filter: none;
 }
 .v2.ig .ig-revs .rev-card::before {
@@ -6523,8 +6529,7 @@ html {
   transform: none;
   box-shadow: none;
 }
-/* Bosh qism: avatar + ism/xarid/sana, yulduzlar alohida qatorda — «50 Stars olgan
-   mijoz» yozuvi uzun, yulduzlar yonida bitta qatorga sig'masdi */
+/* Bosh qism: avatar + ism/xarid/sana, yulduzlar alohida qatorda */
 .v2.ig .ig-revs .rev-head {
   flex-wrap: wrap;
   gap: 10px;
@@ -6533,6 +6538,21 @@ html {
 .v2.ig .ig-revs .rev-head .rev-stars {
   order: 3;
   flex-basis: 100%;
+}
+.v2.ig .ig-revs .rev-stars .on {
+  text-shadow: none;
+}
+.v2.ig .ig-revs .rev-ava {
+  width: 36px;
+  height: 36px;
+  font-family: var(--body2);
+  font-size: 15px;
+  font-weight: 700;
+}
+.v2.ig .ig-revs .rev-who b {
+  font-family: var(--body2);
+  font-size: 14px;
+  font-weight: 650;
 }
 .v2.ig .ig-revs .rev-who small {
   display: grid;
@@ -6543,11 +6563,6 @@ html {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.v2.ig .ig-revs .rev-ava {
-  width: 36px;
-  height: 36px;
-  font-size: 15px;
-}
 .v2.ig .ig-revs .rev-text {
   display: -webkit-box;
   overflow: hidden;
@@ -6557,161 +6572,23 @@ html {
   -webkit-box-orient: vertical;
 }
 
-/* ── 4. Mahsulotlar: bitta qator, o'ngdan chapga.
-   Yo'lda ikkita bir xil to'plam: yo'l -50% ga siljiganda ikkinchi to'plam aynan
-   birinchisining o'rnida turadi — choksiz halqa. Oraliq `gap` emas, to'plam
-   ichidagi padding bilan — aks holda -50% bitta oraliqqa adashadi va sakraydi. ── */
-/* Mahsulotlar qatori «5 soniyada» ning darhol ostida (2026-09-27) */
-.v2.ig .ig-sec {
-  padding-top: 0;
-}
-.v2.ig .ig-h2 {
-  margin: 0 0 12px;
-  font-family: var(--disp);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  text-align: center;
-  text-wrap: balance;
-}
-.v2.ig .ig-marquee {
-  margin: 0 -16px;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-}
-.v2.ig .ig-track {
-  display: flex;
-  width: max-content;
-  /* Karta suzganda 8px ko'tariladi va biroz aylanadi — kesilmasin */
-  padding: 14px 0 12px;
-  /* Tezlik mahsulot soniga bog'liq emas: har karta ~3,4 s (~34px/s) */
-  animation: ig-marquee calc(var(--n, 9) * 3.4s) linear infinite;
-}
-.v2.ig .ig-set {
-  display: flex;
-  gap: 10px;
-  padding-right: 10px;
-}
-.v2.ig .ig-marquee:hover .ig-track,
-.v2.ig .ig-marquee:focus-within .ig-track {
-  animation-play-state: paused;
-}
-@keyframes ig-marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-/* Karta — faqat ikonka, butun blokni to'ldiradi, matnsiz (2026-09-27).
-   Suzish (ig-bob) kartaning o'zida: ichki rasmni aylantirsak, burchaklari
-   kesilib bo'sh joy ko'rinardi. Shuning uchun hover'da ko'tarish yo'q —
-   faqat chegara yonadi. */
-.v2.ig .ig-card {
-  flex: none;
-  display: block;
-  width: 104px;
-  height: 104px;
-  overflow: hidden;
-  border-radius: 26px;
-  box-shadow: 0 14px 26px -16px rgba(0, 0, 0, 0.95);
-  -webkit-tap-highlight-color: transparent;
-  transition: box-shadow 0.25s ease;
-  animation: ig-bob 5s ease-in-out infinite;
-  animation-delay: calc(var(--i) * -0.55s);
-}
-.v2.ig .ig-card img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* Shaffof ikonka (Stars, Premium, sovg'a) — o'z rangidagi fon ustida.
-   Rasmda atrofida bo'sh joy (uchqunlar) bor, shuning uchun katakdan kattaroq */
-.v2.ig .ig-card.is-emoji {
-  display: grid;
-  place-items: center;
-  background: linear-gradient(160deg, var(--tone, rgba(168, 85, 247, 0.35)), rgb(18, 12, 32) 78%);
-}
-.v2.ig .ig-card.t-p-stars {
-  --tone: rgba(251, 191, 36, 0.42);
-}
-.v2.ig .ig-card.t-p-premium {
-  --tone: rgba(139, 92, 246, 0.48);
-}
-.v2.ig .ig-card.t-p-gift {
-  --tone: rgba(244, 114, 182, 0.4);
-}
-/* Rasmlar zich kesilgan — katakni deyarli to'liq egallaydi */
-.v2.ig .ig-card.is-emoji img {
-  width: 86%;
-  height: 86%;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.45));
-}
-.v2.ig .ig-card:hover,
-.v2.ig .ig-card:focus-visible {
-  box-shadow: 0 16px 34px -14px rgba(168, 85, 247, 0.85);
-}
-.v2.ig .ig-card:focus-visible {
-  outline: 2px solid rgba(168, 85, 247, 0.9);
-  outline-offset: 2px;
-}
-
-/* ── Tugma: pastki doimiy qatorda (telefon) va oxirida (desktop) bir xil ── */
+/* ── Tugma: pastki doimiy qatorda (telefon) va oxirida (desktop) ── */
 .v2.ig .ig-cta {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
-  min-height: 56px;
-  padding: 0 28px;
-  border-radius: 18px;
+  min-height: 54px;
+  padding: 0 24px;
+  border-radius: 16px;
   background: var(--grad);
   color: #fff;
-  font-family: var(--disp);
-  font-weight: 700;
   font-size: 17px;
+  font-weight: 700;
   letter-spacing: -0.01em;
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.2s ease;
-  /* Elementning o'z soyasi overflow bilan kesilmaydi — puls shunda ko'rinadi */
-  animation: ig-pulse 2.6s ease-out infinite;
-}
-.v2.ig .ig-cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
-  transform: translateX(-100%);
-  animation: ig-shine 3.4s ease-in-out infinite;
-}
-@keyframes ig-shine {
-  0%,
-  55% {
-    transform: translateX(-100%);
-  }
-  85%,
-  100% {
-    transform: translateX(100%);
-  }
-}
-@keyframes ig-pulse {
-  0% {
-    box-shadow: 0 14px 40px -12px rgba(217, 70, 239, 0.75), 0 0 0 0 rgba(217, 70, 239, 0.45);
-  }
-  70%,
-  100% {
-    box-shadow: 0 14px 40px -12px rgba(217, 70, 239, 0.75), 0 0 0 14px rgba(217, 70, 239, 0);
-  }
-}
-.v2.ig .ig-cta:hover {
-  transform: translateY(-2px);
 }
 .v2.ig .ig-cta:active {
   transform: scale(0.98);
@@ -6721,31 +6598,26 @@ html {
   outline-offset: 3px;
 }
 .v2.ig .ig-cta-tg {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   flex: none;
 }
 .v2.ig .ig-cta-arrow {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   flex: none;
-  transition: transform 0.2s ease;
-}
-.v2.ig .ig-cta:hover .ig-cta-arrow {
-  transform: translateX(3px);
 }
 /* Oxirgi tugma faqat desktopda — telefonda pastki doimiy tugma bor */
 .v2.ig .ig-final {
   display: none;
 }
 
-/* ── 5. Ijtimoiy tarmoqlar: telefonda hover yo'q, rang doimiy ── */
+/* ── 8. Ijtimoiy tarmoqlar: bir xil fon, rang faqat ikonkada ── */
 .v2.ig .ig-foot {
   display: grid;
   justify-items: center;
-  padding: 30px 0 14px;
+  padding: 32px 0 14px;
 }
-/* Teng ustunlar: «Telegram kanal» yozuvi uzun — flex'da ikonkalar orasi notekis edi */
 .v2.ig .ig-social {
   display: grid;
   grid-auto-flow: column;
@@ -6765,62 +6637,41 @@ html {
   text-wrap: balance;
   color: var(--muted);
   -webkit-tap-highlight-color: transparent;
-  transition: color 0.2s ease, transform 0.2s ease;
 }
 .v2.ig .ig-soc-ic {
   display: grid;
   place-items: center;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 16px;
-  border: 1px solid var(--line2);
-  background: rgba(255, 255, 255, 0.04);
-  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  background: var(--card);
 }
 .v2.ig .ig-soc-ic svg {
   width: 22px;
   height: 22px;
 }
 .v2.ig .ig-soc-tg .ig-soc-ic {
-  border-color: rgba(34, 158, 217, 0.45);
-  background: rgba(34, 158, 217, 0.16);
   color: #5cc3f5;
 }
 .v2.ig .ig-soc-ig .ig-soc-ic {
-  border-color: rgba(214, 36, 159, 0.45);
-  background: linear-gradient(135deg, rgba(253, 89, 73, 0.22), rgba(214, 36, 159, 0.22), rgba(40, 90, 235, 0.22));
   color: #f472b6;
 }
 .v2.ig .ig-soc-yt .ig-soc-ic {
-  border-color: rgba(255, 0, 0, 0.42);
-  background: rgba(255, 0, 0, 0.14);
   color: #ff5a5a;
 }
 .v2.ig .ig-soc-sp .ig-soc-ic {
-  border-color: rgba(168, 85, 247, 0.45);
-  background: rgba(168, 85, 247, 0.16);
-  color: #d8b4fe;
+  color: #c4b5fd;
 }
 .v2.ig .ig-soc:hover,
 .v2.ig .ig-soc:focus-visible {
   color: var(--text);
-  transform: translateY(-3px);
 }
 .v2.ig .ig-soc:focus-visible .ig-soc-ic {
   outline: 2px solid #fff;
   outline-offset: 3px;
 }
-.v2.ig .ig-soc-tg:hover .ig-soc-ic { background: #229ed9; border-color: #229ed9; color: #fff; }
-.v2.ig .ig-soc-ig:hover .ig-soc-ic {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  border-color: transparent;
-  color: #fff;
-}
-.v2.ig .ig-soc-yt:hover .ig-soc-ic { background: #f00; border-color: #f00; color: #fff; }
-.v2.ig .ig-soc-sp:hover .ig-soc-ic { background: var(--grad); border-color: transparent; color: #fff; }
 
-/* ── Telefonda doimiy pastki tugma. Yuqorida tugma yo'q — darhol ko'rinadi,
-   yuklanganda sirpanib chiqadi ── */
+/* ── Telefonda doimiy pastki tugma — yuqorida tugma yo'q, darhol ko'rinadi ── */
 .v2.ig .ig-sticky {
   position: fixed;
   right: 0;
@@ -6829,38 +6680,12 @@ html {
   z-index: 50;
   padding: 12px 14px calc(12px + env(safe-area-inset-bottom, 0px));
   background: linear-gradient(180deg, rgba(6, 3, 12, 0), rgba(6, 3, 12, 0.94) 40%);
-  animation: ig-sticky-in 0.5s 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-.v2.ig .ig-cta-sticky {
-  min-height: 54px;
+  animation: ig-sticky-in 0.5s 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 @keyframes ig-sticky-in {
   from {
     opacity: 0;
     transform: translateY(100%);
-  }
-}
-
-/* Pastga aylantirganda ochilish — faqat qo'llab-quvvatlaydigan brauzerda.
-   Qatorning o'ziga (overflow:hidden quti kartalar uchun scroll-konteyner
-   bo'lib qolardi va ular yarim holatda qotardi). */
-@supports (animation-timeline: view()) {
-  .v2.ig .ig-marquee {
-    animation: ig-up linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 55%;
-  }
-  .v2.ig .ig-revs {
-    animation: ig-up linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 55%;
-  }
-  /* Reyting ustunlari — karta ekranga kirganda o'sadi */
-  .v2.ig .ig-bar i {
-    animation: ig-grow linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 40%;
-    animation-delay: 0s;
   }
 }
 
@@ -6878,7 +6703,8 @@ html {
   .v2.ig .ig-hero {
     padding-top: 44px;
   }
-  .v2.ig .ig-marquee {
+  .v2.ig .ig-marquee,
+  .v2.ig .ig-revs {
     margin: 0;
   }
   .v2.ig .ig-final {
@@ -6892,31 +6718,20 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .v2.ig .ig-in,
-  .v2.ig .ig-h1 .gt,
   .v2.ig .ig-tile img,
-  .v2.ig .ig-card,
-  .v2.ig .ig-step-ic,
-  .v2.ig .ig-cta,
-  .v2.ig .ig-cta::before,
-  .v2.ig .ig-live-dot,
   .v2.ig .ig-stat b,
-  .v2.ig .ig-bar i,
-  .v2.ig .ig-marquee,
   .v2.ig .ig-track,
-  .v2.ig .ig-revs,
   .v2.ig .ig-rev-track,
   .v2.ig .ig-sticky {
     animation: none !important;
   }
-  /* Harakatsiz: nusxa yashiriladi, qatorni barmoq bilan suriladi */
-  .v2.ig .ig-marquee {
+  /* Harakatsiz: nusxalar yashiriladi, qatorlarni barmoq bilan suriladi */
+  .v2.ig .ig-marquee,
+  .v2.ig .ig-revs {
     overflow-x: auto;
   }
   .v2.ig .ig-set[aria-hidden],
   .v2.ig .ig-rev-set[aria-hidden] {
     display: none;
-  }
-  .v2.ig .ig-revs {
-    overflow-x: auto;
   }
 }
