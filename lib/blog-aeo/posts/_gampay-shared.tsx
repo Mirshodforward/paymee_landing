@@ -19,7 +19,7 @@ import { GEMPAY_URL } from "@/lib/site";
  */
 
 /** So'mda to'lov — barcha o'yinlarda bir xil. */
-const PAYMENT_METHODS = "UzCard, HUMO, Click, Payme, Uzum";
+const PAYMENT_METHODS = "UzCard, HUMO, Click, Payme, Uzum, Paynet";
 
 type Copy = {
   /** Qisqa javob — AnswerBox uchun (40–60 so'z). */

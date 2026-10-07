@@ -120,7 +120,7 @@ function UzBody() {
         ]}
       />
 
-      <KeyFacts label="Qisqa ma‘lumot">
+      <KeyFacts label="Qisqa ma’lumot">
         <li>
           Kurs: <b>1 Stars = 160 so‘m</b> (bugungi holat, o‘zgarishi mumkin).
         </li>
@@ -169,7 +169,7 @@ function UzBody() {
       </Steps>
       <p>
         Bo‘lim nomlari interfeys yangilanishiga qarab farq qilishi mumkin. Tekshiradigan ikki
-        ma‘lumot esa o‘zgarmaydi: <b>qancha Stars sarflanadi</b> va <b>balansga qancha qo‘shiladi</b>.
+        ma’lumot esa o‘zgarmaydi: <b>qancha Stars sarflanadi</b> va <b>balansga qancha qo‘shiladi</b>.
       </p>
 
       <h2 id="kurs">1 Stars necha so‘m? Hisoblash misoli</h2>

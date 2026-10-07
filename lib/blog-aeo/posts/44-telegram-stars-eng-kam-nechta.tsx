@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Toc, KeyFacts, InlineCta, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
+import { formatStarsPrice } from "@/lib/products";
 
 const SLUG = "telegram-stars-eng-kam-nechta";
 
@@ -9,8 +10,9 @@ function UzAnswer() {
     <p>
       Telegram Stars sotib olishning eng kichik rasmiy paketi odatda <strong>15 yoki 50 yulduzcha</strong>dan
       boshlanadi — bu qaysi xizmat (Telegram ilovasi, Fragment yoki mahalliy bot) orqali olinishiga bog‘liq. Mahalliy
-      botlarda eng kichik paket ko‘pincha <strong>50 ⭐ (~11 000 so‘m)</strong>. Kichik miqdorda olish — funksiyani
-      sinab ko‘rish yoki arzon sovg‘a/reaksiya uchun mantiqan to‘g‘ri.
+      botlarda eng kichik paket ko‘pincha <strong>50 ⭐</strong> (karta o‘tkazmasida ~{formatStarsPrice(50, "uz")},
+      Click/Payme orqali ~{formatStarsPrice(50, "uz", "gateway")}). Kichik miqdorda olish — funksiyani sinab ko‘rish
+      yoki arzon sovg‘a/reaksiya uchun mantiqan to‘g‘ri.
     </p>
   );
 }
@@ -36,7 +38,8 @@ function UzBody() {
       </p>
       <KeyFacts label="Odatiy minimal chegaralar">
         <li>
-          <b>Mahalliy bot (masalan, @StarsPaymee_bot):</b> odatda 50 ⭐ dan (~11 000 so‘m).
+          <b>Mahalliy bot (masalan, @StarsPaymee_bot):</b> odatda 50 ⭐ dan: karta o‘tkazmasida{" "}
+          {formatStarsPrice(50, "uz")}, Click/Payme orqali {formatStarsPrice(50, "uz", "gateway")}.
         </li>
         <li>
           <b>Telegram ilovasi (Apple/Google):</b> platforma tomonidan belgilangan minimal paket, odatda biroz
@@ -106,8 +109,9 @@ function RuAnswer() {
       Самый маленький официальный пакет для покупки Telegram Stars обычно начинается с{" "}
       <strong>15 или 50 звёзд</strong> — это зависит от того, через какой сервис покупка совершается (приложение
       Telegram, Fragment или локальный бот). В локальных ботах минимальный пакет чаще всего{" "}
-      <strong>50 ⭐ (~11 000 сум)</strong>. Покупка небольшого количества логична для теста функции или недорогого
-      подарка/реакции.
+      <strong>50 ⭐</strong> (~{formatStarsPrice(50, "ru")} переводом на карту, через Click/Payme —{" "}
+      ~{formatStarsPrice(50, "ru", "gateway")}). Покупка небольшого количества логична для теста функции или
+      недорогого подарка/реакции.
     </p>
   );
 }
@@ -133,7 +137,8 @@ function RuBody() {
       </p>
       <KeyFacts label="Обычные минимальные пороги">
         <li>
-          <b>Локальный бот (например, @StarsPaymee_bot):</b> обычно от 50 ⭐ (~11 000 сум).
+          <b>Локальный бот (например, @StarsPaymee_bot):</b> обычно от 50 ⭐: {formatStarsPrice(50, "ru")} переводом
+          на карту, {formatStarsPrice(50, "ru", "gateway")} через Click/Payme.
         </li>
         <li>
           <b>Приложение Telegram (Apple/Google):</b> минимальный пакет, заданный платформой, обычно чуть выше.
@@ -196,7 +201,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-07-05",
-  dateModified: "2026-07-05",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram stars eng kam nechta",
     "telegram stars minimal miqdor",
@@ -236,7 +241,7 @@ export const post: AeoPost = {
         },
         {
           question: "Eng kichik paket narxi qancha?",
-          answer: "Mahalliy botda odatda 50 ⭐ ≈ 11 000 so‘m atrofida — aniq narx Stars sahifasida ko‘rsatiladi.",
+          answer: `Mahalliy botda odatda 50 ⭐: karta o‘tkazmasida ~${formatStarsPrice(50, "uz")}, Click/Payme orqali ~${formatStarsPrice(50, "uz", "gateway")} — aniq narx Stars sahifasida ko‘rsatiladi.`,
         },
       ],
     },
@@ -271,7 +276,7 @@ export const post: AeoPost = {
         },
         {
           question: "Сколько стоит самый маленький пакет?",
-          answer: "В локальном боте обычно около 50 ⭐ ≈ 11 000 сум — точная цена указана на странице Stars.",
+          answer: `В локальном боте обычно 50 ⭐: ~${formatStarsPrice(50, "ru")} переводом на карту, ~${formatStarsPrice(50, "ru", "gateway")} через Click/Payme — точная цена указана на странице Stars.`,
         },
       ],
     },

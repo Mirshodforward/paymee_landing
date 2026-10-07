@@ -5987,6 +5987,15 @@ html {
     width: max-content;
   }
 }
+/* Juda tor telefon (≤360px): «OMMABOP» belgisi birinchi ustunni kengaytirib,
+   uch ustunli Stars jadvalini ~19px gorizontal aylantirishga majburlardi */
+@media (max-width: 360px) {
+  .v2 .pp-tag {
+    padding: 2px 6px;
+    font-size: 8.5px;
+    letter-spacing: 0.03em;
+  }
+}
 
 
 /* ═══════════════════════════════════════════════════════════════════════

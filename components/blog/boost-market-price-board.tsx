@@ -17,8 +17,8 @@ export function BoostMarketPriceBoard({ locale = "uz" }: { locale?: "uz" | "ru" 
       : ["Boost", "Kun", "Narx"];
   const note =
     locale === "ru"
-      ? "Точная сумма при оформлении в @StarsPaymee_bot → Boost Market."
-      : "Aniq summa @StarsPaymee_bot → Kanal Boost arenda bo‘limida hisoblanadi.";
+      ? "Точная сумма при оформлении в @StarsPaymee_bot → Boost Market. Через Click, Payme, Uzum или Paynet цена немного выше."
+      : "Aniq summa @StarsPaymee_bot → Kanal Boost arenda bo‘limida hisoblanadi. Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq.";
 
   return (
     <div className="boost-blog-board" role="region" aria-label={head}>

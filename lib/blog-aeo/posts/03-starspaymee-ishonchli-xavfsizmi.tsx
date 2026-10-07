@@ -82,7 +82,7 @@ function UzBody() {
 
       <h2 id="tolov">To‘lov va kafolat</h2>
       <p>
-        To‘lov mahalliy va shaffof: Click, Payme, Paynet, UzCard, HUMO yoki istalgan O‘zbekiston bank kartasi orqali
+        To‘lov mahalliy va shaffof: Click, Payme, Paynet, Uzum, UzCard, HUMO yoki istalgan O‘zbekiston bank kartasi orqali
         so‘mda. Har bir buyurtma identifikatori saqlanadi; agar mahsulot texnik sabab bilan yetkazilmasa, to‘lov
         to‘liq qaytariladi. Savol bo‘lsa{" "}
         <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">@StarsPaymeeSupport</a>{" "}
@@ -179,7 +179,7 @@ function RuBody() {
 
       <h2 id="tolov">Оплата и гарантия</h2>
       <p>
-        Оплата локальная и прозрачная: Click, Payme, Paynet, UzCard, HUMO или любая банковская карта Узбекистана в
+        Оплата локальная и прозрачная: Click, Payme, Paynet, Uzum, UzCard, HUMO или любая банковская карта Узбекистана в
         сумах. Хранится ID каждого заказа; если товар не доставлен по техпричине — оплата возвращается полностью.
         По вопросам быстро отвечает{" "}
         <a href="https://t.me/StarsPaymeeSupport" target="_blank" rel="noopener noreferrer">@StarsPaymeeSupport</a>.
@@ -331,7 +331,7 @@ export const post: AeoPost = {
   category: "Xavfsizlik",
   type: "trust",
   datePublished: "2026-06-24",
-  dateModified: "2026-06-24",
+  dateModified: "2026-10-06",
   keywords: [
     "starspaymee ishonchli",
     "starspaymee xavfsizmi",
@@ -381,7 +381,7 @@ export const post: AeoPost = {
         {
           question: "To‘lov usullari xavfsizmi?",
           answer:
-            "Ha. To‘lov rasmiy mahalliy tizimlar — Click, Payme, Paynet, UzCard, HUMO orqali so‘mda, OTP va bank tasdig‘i bilan amalga oshadi.",
+            "Ha. To‘lov rasmiy mahalliy tizimlar — Click, Payme, Paynet, Uzum, UzCard, HUMO orqali so‘mda, OTP va bank tasdig‘i bilan amalga oshadi.",
         },
       ],
     },
@@ -426,7 +426,7 @@ export const post: AeoPost = {
         {
           question: "Безопасны ли способы оплаты?",
           answer:
-            "Да. Оплата идёт через официальные локальные системы — Click, Payme, Paynet, UzCard, HUMO в сумах, с OTP и подтверждением банка.",
+            "Да. Оплата идёт через официальные локальные системы — Click, Payme, Paynet, Uzum, UzCard, HUMO в сумах, с OTP и подтверждением банка.",
         },
       ],
     },

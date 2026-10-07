@@ -81,7 +81,7 @@ function RuBody() {
 const faqUz = [
   { question: "1 boost qancha turadi?", answer: "Paketga bog‘liq — bot kalkulyatorida ko‘ring." },
   { question: "30 kunlik boost narxi?", answer: "Boost soni bilan ko‘payadi; jadvalda namuna bor." },
-  { question: "To‘lov qanday?", answer: "UzCard, HUMO, Click, Payme — so‘mda." },
+  { question: "To‘lov qanday?", answer: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet — so‘mda. Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq." },
   { question: "Narx o‘zgaradimi?", answer: "Ha, zaxira va kampaniyaga qarab — buyurtma oldidan tekshiring." },
   { question: "Arzonroq paket bormi?", answer: "Kam boost va qisqa muddat — pastroq summa." },
   { question: "Rasmiy boost pullikmi?", answer: "Premium obunachi uchun boost bepul; ijarа alohida xizmat." },
@@ -97,7 +97,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "info",
   datePublished: "2026-07-27",
-  dateModified: "2026-07-27",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram boost narxlari",
     "boost narxi",

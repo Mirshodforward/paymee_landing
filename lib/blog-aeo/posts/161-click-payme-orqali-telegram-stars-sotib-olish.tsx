@@ -13,6 +13,7 @@ import {
 } from "@/components/blog/aeo-blocks";
 import { StarsPriceBoard } from "@/components/blog/stars-price-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
+import { formatStarsPrice } from "@/lib/products";
 
 const SLUG = "click-payme-orqali-telegram-stars-sotib-olish";
 
@@ -24,7 +25,7 @@ function WayCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Karta talabi", "Visa yoki Mastercard", "UzCard, HUMO — mahalliy karta"],
         ["Valyuta", "Dollar/evro, keyin konvertatsiya", "To‘g‘ridan-to‘g‘ri so‘m"],
-        ["To‘lov xizmatlari", "Apple Pay, Google Pay", "Click, Payme, Paynet"],
+        ["To‘lov xizmatlari", "Apple Pay, Google Pay", "Click, Payme, Uzum, Paynet"],
         ["Konvertatsiya komissiyasi", "no", "yes"],
         ["Chet el kartasini rasmiylashtirish", "no", "yes"],
         ["Yetkazish vaqti", "Bir zumda", "Odatda bir necha daqiqa"],
@@ -35,7 +36,7 @@ function WayCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Требуемая карта", "Visa или Mastercard", "UzCard, HUMO — местная карта"],
         ["Валюта", "Доллар/евро, затем конвертация", "Напрямую сум"],
-        ["Платёжные сервисы", "Apple Pay, Google Pay", "Click, Payme, Paynet"],
+        ["Платёжные сервисы", "Apple Pay, Google Pay", "Click, Payme, Uzum, Paynet"],
         ["Комиссия за конвертацию", "no", "yes"],
         ["Нужно оформлять зарубежную карту", "no", "yes"],
         ["Время зачисления", "Мгновенно", "Обычно несколько минут"],
@@ -46,7 +47,7 @@ function WayCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Card required", "Visa or Mastercard", "UzCard, HUMO — a local card"],
         ["Currency", "USD/EUR, then conversion", "Directly in so‘m"],
-        ["Payment services", "Apple Pay, Google Pay", "Click, Payme, Paynet"],
+        ["Payment services", "Apple Pay, Google Pay", "Click, Payme, Uzum, Paynet"],
         ["Conversion fee", "no", "yes"],
         ["Foreign card needed", "no", "yes"],
         ["Delivery time", "Instant", "Usually a few minutes"],
@@ -77,9 +78,9 @@ function UzAnswer() {
   return (
     <p>
       Telegram Stars’ni <b>o‘zbek so‘mida</b> sotib olish uchun Visa yoki Mastercard shart emas.{" "}
-      <b>@StarsPaymee_bot</b> to‘lovni <b>Click</b>, <b>HUMO</b>, <b>UzCard</b> va <b>Payme</b> orqali so‘mda
-      qabul qiladi: miqdorni tanlaysiz, username kiritasiz, to‘laysiz — yulduzlar hisobingizga odatda bir necha
-      daqiqada tushadi.
+      <b>@StarsPaymee_bot</b> to‘lovni <b>Click</b>, <b>HUMO</b>, <b>UzCard</b>, <b>Payme</b>, <b>Uzum</b> va{" "}
+      <b>Paynet</b> orqali so‘mda qabul qiladi: miqdorni tanlaysiz, username kiritasiz, to‘laysiz — yulduzlar
+      hisobingizga odatda bir necha daqiqada tushadi.
     </p>
   );
 }
@@ -133,11 +134,20 @@ function UzBody() {
       </InfoGrid>
       <p>
         Bu to‘plam deyarli barcha holatlarni yopadi: qaysi kartadan yoki xizmatdan foydalanishingizdan qat’i
-        nazar, mos variant topiladi. Naqd pul bilan to‘lamoqchi bo‘lganlar uchun <b>Paynet</b> ham mavjud.
+        nazar, mos variant topiladi. Botdagi <b>Paynet</b> usulini Paynet ilovasi yoki terminali orqali to‘lash
+        ham mumkin. Naqd pulni avval kartaga (yoki Click/Payme hamyoniga) solib, keyin botda to‘lash yo‘li ham
+        bor:{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">naqd pul bilan olish</Link>.
       </p>
 
       <h2 id="narx">Narxlar</h2>
-      <StarsPriceBoard locale="uz" />
+      <p>
+        Click orqali (shuningdek Payme, Uzum yoki Paynet tugmasi bilan) to‘laganda Stars donasi{" "}
+        <b>{formatStarsPrice(1, "uz", "gateway")}</b>, 1 000 tasi — <b>{formatStarsPrice(1000, "uz", "gateway")}</b>.
+        Botdagi Uzcard/Humo kartaga o‘tkazmada (Click ilovasidagi «Kartaga o‘tkazma» ham shunga kiradi) yoki
+        balansdan to‘lovda donasi <b>{formatStarsPrice(1, "uz")}</b>. Jadvalda ikkala narx:
+      </p>
+      <StarsPriceBoard locale="uz" first="gateway" />
 
       <InlineCta
         text="Yulduzlarni so‘mda oling — Click, HUMO, UzCard, Payme yoki Uzum bilan."
@@ -155,8 +165,10 @@ function UzBody() {
         </Step>
         <Step title="2. Yulduzlar sonini tanlang">Kerakli miqdorni belgilang — narx darhol so‘mda ko‘rinadi.</Step>
         <Step title="3. Username kiriting">Yulduzlar tushadigan hisobni ko‘rsating — o‘zingiz yoki boshqa odam.</Step>
-        <Step title="4. To‘lov usulini tanlang">Click, HUMO, UzCard, Payme yoki Uzum.</Step>
-        <Step title="5. So‘mda to‘lang">Joriy kurs bo‘yicha, konvertatsiyasiz va yashirin komissiyalarsiz.</Step>
+        <Step title="4. To‘lov usulini tanlang">Click, HUMO, UzCard, Payme, Uzum yoki Paynet.</Step>
+        <Step title="5. So‘mda to‘lang">
+          Bot yakuniy summani to‘lovdan oldin ko‘rsatadi — konvertatsiya va yashirin to‘lov yo‘q.
+        </Step>
         <Step title="6. Yulduzlarni qabul qiling">Odatda bu deyarli bir zumda sodir bo‘ladi.</Step>
       </Steps>
 
@@ -256,9 +268,9 @@ function RuAnswer() {
   return (
     <p>
       Чтобы купить звёзды Telegram <b>за узбекский сум</b>, карта Visa или Mastercard не нужна.{" "}
-      <b>@StarsPaymee_bot</b> принимает оплату в сумах через <b>Click</b>, <b>Humo</b>, <b>Uzcard</b> и{" "}
-      <b>Payme</b>: выбираете количество, указываете username, оплачиваете — звёзды приходят на аккаунт обычно
-      за считаные минуты.
+      <b>@StarsPaymee_bot</b> принимает оплату в сумах через <b>Click</b>, <b>Humo</b>, <b>Uzcard</b>, <b>Payme</b>,{" "}
+      <b>Uzum</b> и <b>Paynet</b>: выбираете количество, указываете username, оплачиваете — звёзды приходят на
+      аккаунт обычно за считаные минуты.
     </p>
   );
 }
@@ -313,11 +325,20 @@ function RuBody() {
       </InfoGrid>
       <p>
         Такой набор способов оплаты закрывает практически все сценарии: не важно, какой картой или сервисом вы
-        обычно пользуетесь, найдётся подходящий вариант. Для оплаты наличными доступен также <b>Paynet</b>.
+        обычно пользуетесь, найдётся подходящий вариант. Способ <b>Paynet</b> в боте можно оплатить через
+        приложение или терминал Paynet. Есть и путь, когда наличные сначала вносятся на карту (или в кошелёк
+        Click/Payme), а затем оплата идёт в боте:{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">оплата наличными</Link>.
       </p>
 
       <h2 id="narx">Цены</h2>
-      <StarsPriceBoard locale="ru" />
+      <p>
+        При оплате через Click (а также кнопками Payme, Uzum или Paynet) звезда стоит{" "}
+        <b>{formatStarsPrice(1, "ru", "gateway")}</b>, 1 000 штук — <b>{formatStarsPrice(1000, "ru", "gateway")}</b>.
+        Переводом на карту Uzcard/Humo из бота (в том числе «Перевод на карту» в приложении Click) или с баланса —{" "}
+        <b>{formatStarsPrice(1, "ru")}</b> за штуку. В таблице обе цены:
+      </p>
+      <StarsPriceBoard locale="ru" first="gateway" />
 
       <InlineCta
         text="Оплатите в сумах — Click, Humo, Uzcard, Payme или Uzum — и получите звёзды."
@@ -335,8 +356,10 @@ function RuBody() {
         </Step>
         <Step title="2. Выберите количество звёзд">Укажите нужное число — цена сразу показывается в сумах.</Step>
         <Step title="3. Введите username">Аккаунт, на который поступят звёзды: свой или чужой.</Step>
-        <Step title="4. Укажите способ оплаты">Click, Humo, Uzcard, Payme или Uzum.</Step>
-        <Step title="5. Оплатите в сумах">По актуальному курсу, без конвертации и скрытых комиссий.</Step>
+        <Step title="4. Укажите способ оплаты">Click, Humo, Uzcard, Payme, Uzum или Paynet.</Step>
+        <Step title="5. Оплатите в сумах">
+          Бот показывает итоговую сумму до оплаты — без конвертации и скрытых платежей.
+        </Step>
         <Step title="6. Получите звёзды">Обычно это происходит практически моментально.</Step>
       </Steps>
 
@@ -435,8 +458,8 @@ function EnAnswer() {
   return (
     <p>
       Buying Telegram Stars <b>in Uzbek so‘m</b> does not require a Visa or Mastercard. <b>@StarsPaymee_bot</b>{" "}
-      accepts payment in so‘m through <b>Click</b>, <b>HUMO</b>, <b>UzCard</b> and <b>Payme</b>: pick the amount,
-      enter a username, pay — the Stars usually land on the account within minutes.
+      accepts payment in so‘m through <b>Click</b>, <b>HUMO</b>, <b>UzCard</b>, <b>Payme</b>, <b>Uzum</b> and{" "}
+      <b>Paynet</b>: pick the amount, enter a username, pay — the Stars usually land on the account within minutes.
     </p>
   );
 }
@@ -490,11 +513,19 @@ function EnBody() {
       </InfoGrid>
       <p>
         This set covers almost every scenario: whichever card or service you normally use, there is a matching
-        option. <b>Paynet</b> is available for cash payments.
+        option. The bot’s <b>Paynet</b> method can also be paid through the Paynet app or a Paynet terminal.
+        Another route is to put cash onto a card (or a Click/Payme wallet) first and then pay in the bot:{" "}
+        <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">buying with cash</Link>.
       </p>
 
       <h2 id="narx">Prices</h2>
-      <StarsPriceBoard locale="en" />
+      <p>
+        Paying through Click (or with the Payme, Uzum or Paynet button), a Star costs{" "}
+        <b>{formatStarsPrice(1, "en", "gateway")}</b> and 1,000 cost <b>{formatStarsPrice(1000, "en", "gateway")}</b>.
+        A transfer to the bot’s Uzcard/Humo card (including “Transfer to card” in the Click app) or paying from your
+        balance costs <b>{formatStarsPrice(1, "en")}</b> per Star. The table shows both prices:
+      </p>
+      <StarsPriceBoard locale="en" first="gateway" />
 
       <InlineCta
         text="Pay in so‘m with Click, HUMO, UzCard, Payme or Uzum and get your Stars."
@@ -512,8 +543,8 @@ function EnBody() {
         </Step>
         <Step title="2. Choose the number of Stars">Set the amount — the price is shown in so‘m right away.</Step>
         <Step title="3. Enter a username">The account the Stars should land on: yours or someone else’s.</Step>
-        <Step title="4. Pick a payment method">Click, HUMO, UzCard, Payme or Uzum.</Step>
-        <Step title="5. Pay in so‘m">At the current rate, with no conversion and no hidden fees.</Step>
+        <Step title="4. Pick a payment method">Click, HUMO, UzCard, Payme, Uzum or Paynet.</Step>
+        <Step title="5. Pay in so‘m">The bot shows the final total before you pay — no conversion, no hidden charges.</Step>
         <Step title="6. Receive the Stars">This usually happens almost instantly.</Step>
       </Steps>
 
@@ -610,7 +641,7 @@ const uzFaq = [
   {
     question: "Visa kartasiz Telegram Stars sotib olsa bo‘ladimi?",
     answer:
-      "Ha. @StarsPaymee_bot kabi xizmatlar to‘lovni so‘mda Click, HUMO, UzCard, Payme va Uzum orqali qabul qiladi.",
+      "Ha. @StarsPaymee_bot kabi xizmatlar to‘lovni so‘mda Click, HUMO, UzCard, Payme, Uzum va Paynet orqali qabul qiladi.",
   },
   {
     question: "Bu xavfsizmi?",
@@ -623,9 +654,13 @@ const uzFaq = [
   },
   {
     question: "1 dona Stars necha so‘m?",
-    answer: "Click orqali 240 so‘m (50 ta — 12 000 so‘m). Uzcard/Humo o‘tkazmasida 220 so‘m (50 ta — 11 000 so‘m).",
+    answer: `Click, Payme, Uzum yoki Paynet orqali ${formatStarsPrice(1, "uz", "gateway")} (50 ta — ${formatStarsPrice(50, "uz", "gateway")}). Uzcard/Humo kartaga o‘tkazma yoki balansdan ${formatStarsPrice(1, "uz")} (50 ta — ${formatStarsPrice(50, "uz")}).`,
   },
-  { question: "Naqd pul bilan to‘lash mumkinmi?", answer: "Ha, Paynet orqali." },
+  {
+    question: "Naqd pul bilan to‘lash mumkinmi?",
+    answer:
+      "Ha. Botdagi Paynet usulini Paynet ilovasi yoki Paynet terminali orqali to‘lash mumkin — qadamlar botdagi to‘lov oynasida ko‘rsatiladi. Yoki naqd pulni terminal yoki bank kassasi orqali kartaga (yoki Click/Payme hamyoniga) solib, keyin botda to‘laysiz.",
+  },
   {
     question: "Akkauntimga kirish uchun parol so‘raladimi?",
     answer: "Yo‘q. Faqat Telegram username yoki ID kifoya.",
@@ -641,7 +676,7 @@ const ruFaq = [
   {
     question: "Можно ли купить звёзды Telegram без карты Visa?",
     answer:
-      "Да, для этого можно воспользоваться сервисами вроде @StarsPaymee_bot, которые принимают оплату в сумах через Click, Humo, Uzcard и Payme.",
+      "Да, для этого можно воспользоваться сервисами вроде @StarsPaymee_bot, которые принимают оплату в сумах через Click, Humo, Uzcard, Payme, Uzum и Paynet.",
   },
   {
     question: "Это безопасно?",
@@ -654,9 +689,13 @@ const ruFaq = [
   },
   {
     question: "Сколько стоит одна звезда?",
-    answer: "Через Click — 240 сум (50 штук — 12 000 сум). Переводом Uzcard/Humo — 220 сум (50 штук — 11 000 сум).",
+    answer: `Через Click, Payme, Uzum или Paynet — ${formatStarsPrice(1, "ru", "gateway")} (50 штук — ${formatStarsPrice(50, "ru", "gateway")}). Переводом на карту Uzcard/Humo или с баланса — ${formatStarsPrice(1, "ru")} (50 штук — ${formatStarsPrice(50, "ru")}).`,
   },
-  { question: "Можно ли заплатить наличными?", answer: "Да, через Paynet." },
+  {
+    question: "Можно ли заплатить наличными?",
+    answer:
+      "Да. Способ Paynet в боте можно оплатить через приложение Paynet или терминал Paynet — шаги показываются в окне оплаты бота. Или внесите наличные через терминал или кассу банка на карту (или в кошелёк Click/Payme), затем оплатите в боте.",
+  },
   { question: "Запрашивают ли пароль от аккаунта?", answer: "Нет. Достаточно username или ID в Telegram." },
   {
     question: "Можно ли подарить звёзды другому человеку?",
@@ -669,7 +708,7 @@ const enFaq = [
   {
     question: "Can I buy Telegram Stars without a Visa card?",
     answer:
-      "Yes. Services such as @StarsPaymee_bot accept payment in so‘m through Click, HUMO, UzCard and Payme.",
+      "Yes. Services such as @StarsPaymee_bot accept payment in so‘m through Click, HUMO, UzCard, Payme, Uzum and Paynet.",
   },
   {
     question: "Is it safe?",
@@ -682,9 +721,13 @@ const enFaq = [
   },
   {
     question: "How much does one Star cost?",
-    answer: "240 UZS through Click (50 Stars for 12,000 UZS); 220 UZS by Uzcard/Humo transfer (50 Stars for 11,000 UZS).",
+    answer: `${formatStarsPrice(1, "en", "gateway")} through Click, Payme, Uzum or Paynet (50 Stars for ${formatStarsPrice(50, "en", "gateway")}); ${formatStarsPrice(1, "en")} by Uzcard/Humo card transfer or from your balance (50 Stars for ${formatStarsPrice(50, "en")}).`,
   },
-  { question: "Can I pay in cash?", answer: "Yes, through Paynet." },
+  {
+    question: "Can I pay in cash?",
+    answer:
+      "Yes. The bot’s Paynet method can be paid through the Paynet app or a Paynet terminal — the steps are shown in the bot’s payment sheet. Or put the cash onto a card (or a Click/Payme wallet) at a terminal or a bank desk, then pay in the bot.",
+  },
   { question: "Is my account password requested?", answer: "No. A Telegram username or ID is enough." },
   {
     question: "Can I send Stars to someone else?",
@@ -698,7 +741,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-26",
-  dateModified: "2026-09-26",
+  dateModified: "2026-10-06",
   keywords: [
     "click orqali stars sotib olish",
     "click bilan telegram stars",
@@ -712,8 +755,8 @@ export const post: AeoPost = {
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring yoki Mini App’ni oching." },
     { name: "Yulduzlar sonini tanlang", text: "Kerakli miqdorni belgilang — narx so‘mda ko‘rinadi." },
     { name: "Username kiriting", text: "Yulduzlar tushadigan Telegram hisobini ko‘rsating." },
-    { name: "To‘lov usulini tanlang", text: "Click, HUMO, UzCard, Payme yoki Uzum." },
-    { name: "So‘mda to‘lang", text: "Joriy kurs bo‘yicha, konvertatsiya va yashirin komissiyalarsiz." },
+    { name: "To‘lov usulini tanlang", text: "Click, HUMO, UzCard, Payme, Uzum yoki Paynet." },
+    { name: "So‘mda to‘lang", text: "Bot yakuniy summani to‘lovdan oldin ko‘rsatadi — konvertatsiya va yashirin to‘lov yo‘q." },
     { name: "Yulduzlarni qabul qiling", text: "Odatda to‘lovdan keyin deyarli bir zumda tushadi." },
   ],
   locales: {
@@ -728,7 +771,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Yulduzlarni so‘mda oling",
-      ctaBody: "@StarsPaymee_bot — Click, HUMO, UzCard, Payme va Uzum. Visa kerak emas, yetkazish bir necha daqiqada.",
+      ctaBody: "@StarsPaymee_bot — Click, HUMO, UzCard, Payme, Uzum va Paynet. Visa kerak emas, yetkazish bir necha daqiqada.",
       faq: uzFaq,
     },
     ru: {
@@ -742,7 +785,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Купите звёзды за сумы",
-      ctaBody: "@StarsPaymee_bot — Click, Humo, Uzcard и Payme. Виза не нужна, зачисление за минуты.",
+      ctaBody: "@StarsPaymee_bot — Click, Humo, Uzcard, Payme, Uzum и Paynet. Виза не нужна, зачисление за минуты.",
       faq: ruFaq,
     },
     en: {
@@ -756,7 +799,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Get your Stars in so‘m",
-      ctaBody: "@StarsPaymee_bot — Click, HUMO, UzCard and Payme. No Visa needed, delivery in minutes.",
+      ctaBody: "@StarsPaymee_bot — Click, HUMO, UzCard, Payme, Uzum and Paynet. No Visa needed, delivery in minutes.",
       faq: enFaq,
     },
   },

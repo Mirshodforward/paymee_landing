@@ -62,8 +62,8 @@ function UzBody() {
           turli kunlarda biroz boshqacha chiqadi.
         </li>
         <li>
-          <b>To‘lov tomoni</b> — tanlangan usul (karta, Click, Payme) bo‘yicha bank tomonidagi komissiya. Botda
-          ko‘rsatilgan yakuniy summa buni allaqachon hisobga olgan bo‘ladi.
+          <b>To‘lov usuli</b> — karta o‘tkazmasida qo‘shimcha ustama yo‘q; Click, Payme, Uzum yoki Paynet orqali
+          narx biroz yuqoriroq. Botda ko‘rsatilgan yakuniy summa buni allaqachon hisobga olgan bo‘ladi.
         </li>
       </ul>
       <p>
@@ -145,8 +145,8 @@ function RuBody() {
           же подарок в разные дни выходит немного иначе.
         </li>
         <li>
-          <b>Сторона оплаты</b> — комиссия банка по выбранному способу (карта, Click, Payme). Итоговая сумма в боте
-          её уже учитывает.
+          <b>Способ оплаты</b> — при переводе на карту наценки нет; через Click, Payme, Uzum или Paynet цена немного
+          выше. Итоговая сумма в боте это уже учитывает.
         </li>
       </ul>
       <p>
@@ -205,7 +205,7 @@ function EnBody() {
         the platform price comparison.
       </p>
 
-      <InlineCta text="Buy a gift in so\u2018m and send it to a friend." />
+      <InlineCta text="Buy a gift in so‘m and send it to a friend." />
 
       <h2 id="sotib-olish">Buying and sending</h2>
       <p>
@@ -226,8 +226,8 @@ function EnBody() {
           the same gift comes out slightly differently on different days.
         </li>
         <li>
-          <b>The payment side</b> — the bank fee for the chosen method (card, Click, Payme). The final total shown in
-          the bot already accounts for it.
+          <b>The payment method</b> — a card transfer adds no markup; through Click, Payme, Uzum or Paynet the price
+          is slightly higher. The final total shown in the bot already accounts for it.
         </li>
       </ul>
       <p>
@@ -262,7 +262,7 @@ const faqEn = [
   {
     question: "What is the so‘m price made of?",
     answer:
-      "Three parts: the Star value Telegram assigns, the current so‘m value of a Star, and the bank fee for the chosen payment method. The final total in the bot already includes them.",
+      "Three parts: the Star value Telegram assigns, the current so‘m value of a Star, and the payment method (slightly higher through Click, Payme, Uzum or Paynet). The final total in the bot already includes them.",
   },
   {
     question: "In what format does a gift arrive?",
@@ -281,7 +281,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-06-12",
-  dateModified: "2026-09-18",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram gifts narxlari",
     "telegram sovga narxi",
@@ -306,7 +306,7 @@ export const post: AeoPost = {
         {
           question: "So‘mdagi narx nimalardan tashkil topadi?",
           answer:
-            "Uch qismdan: Telegram belgilagan yulduz qiymati, yulduzning joriy so‘m kursi va to‘lov usuli bo‘yicha bank komissiyasi. Botda ko‘rsatilgan yakuniy summa buni hisobga olgan bo‘ladi.",
+            "Uch qismdan: Telegram belgilagan yulduz qiymati, yulduzning joriy so‘m kursi va to‘lov usuli (Click, Payme, Uzum yoki Paynet orqali biroz yuqoriroq). Botda ko‘rsatilgan yakuniy summa buni hisobga olgan bo‘ladi.",
         },
         {
           question: "Sovg‘a qanday formatda keladi?",
@@ -324,7 +324,7 @@ export const post: AeoPost = {
         },
         {
           question: "Sovg‘ani so‘mda olsa bo‘ladimi?",
-          answer: "Ha, StarsPaymee’da sovg‘ani UzCard, HUMO, Click yoki Payme bilan so‘mda olasiz.",
+          answer: "Ha, StarsPaymee’da sovg‘ani UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan so‘mda olasiz.",
         },
         {
           question: "Qabul qiluvchi sovg‘ani qaytara oladimi?",
@@ -352,7 +352,7 @@ export const post: AeoPost = {
         {
           question: "Из чего складывается цена в сумах?",
           answer:
-            "Из трёх частей: заданная Telegram стоимость в звёздах, текущий курс звезды в сумах и комиссия банка по выбранному способу оплаты. Итоговая сумма в боте это уже учитывает.",
+            "Из трёх частей: заданная Telegram стоимость в звёздах, текущий курс звезды в сумах и способ оплаты (через Click, Payme, Uzum или Paynet немного дороже). Итоговая сумма в боте это уже учитывает.",
         },
         {
           question: "В каком формате приходит подарок?",
@@ -370,7 +370,7 @@ export const post: AeoPost = {
         },
         {
           question: "Можно ли купить подарок в сумах?",
-          answer: "Да, в StarsPaymee подарок покупается за UzCard, HUMO, Click или Payme в сумах.",
+          answer: "Да, в StarsPaymee подарок покупается за UzCard, HUMO, Click, Payme, Uzum или Paynet в сумах.",
         },
         {
           question: "Может ли получатель вернуть подарок?",

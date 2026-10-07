@@ -136,16 +136,19 @@ function UzBody() {
       <h2 id="tolov">To‘lov usullari va to‘lov qadamlari</h2>
       <KeyFacts label="Qabul qilinadigan usullar">
         <li>
-          <b>UzCard</b>, <b>HUMO</b> — milliy kartalar, to‘g‘ridan-to‘g‘ri karta raqami bilan.
+          <b>UzCard</b>, <b>HUMO</b> — milliy kartalar: bot ko‘rsatgan kartaga o‘tkazma.
         </li>
         <li>
-          <b>Click</b>, <b>Payme</b> — ilova orqali bir bosishda, rekvizit qayta kiritilmaydi.
+          <b>Click</b>, <b>Payme</b>, <b>Uzum</b> — ilova orqali bir bosishda, rekvizit qayta kiritilmaydi.
         </li>
         <li>
-          <b>Paynet</b> — naqd pul bilan to‘lash uchun.
+          <b>Paynet</b> — Paynet ilovasi yoki terminali orqali.
         </li>
         <li>
           Rossiyadan to‘laydiganlar uchun — <b>SBP</b> orqali rublda.
+        </li>
+        <li>
+          <b>Premium narxi</b> to‘lov usuliga bog‘liq emas: karta, Click, Payme, Uzum yoki Paynet — summa bir xil.
         </li>
       </KeyFacts>
       <p>To‘lovning o‘zi qanday kechadi:</p>
@@ -154,7 +157,8 @@ function UzBody() {
           Bot yakuniy summani so‘mda ko‘rsatadi — konvertatsiya va yashirin komissiya qo‘shilmaydi.
         </Step>
         <Step title="2. Usulni tanlang">
-          Karta bilan to‘lasangiz karta raqamini kiritasiz; Click yoki Payme tanlansangiz ilova ochiladi.
+          Karta o‘tkazmasini tanlasangiz, bot ko‘rsatgan kartaga aynan o‘sha summani o‘tkazasiz; Click, Payme
+          yoki Uzum tanlasangiz, ilova tayyor summa bilan ochiladi.
         </Step>
         <Step title="3. Bank tasdig‘ini kiriting">
           Bank SMS yoki o‘z ilovasi orqali kod yuboradi. Kod kechiksa, bank ilovasini ochiq qoldiring.
@@ -342,16 +346,19 @@ function RuBody() {
       <h2 id="tolov">Способы оплаты и шаги платежа</h2>
       <KeyFacts label="Принимаемые способы">
         <li>
-          <b>UzCard</b>, <b>HUMO</b> — национальные карты, напрямую по номеру карты.
+          <b>UzCard</b>, <b>HUMO</b> — национальные карты: перевод на карту, которую показал бот.
         </li>
         <li>
-          <b>Click</b>, <b>Payme</b> — в один клик в приложении, без повторного ввода реквизитов.
+          <b>Click</b>, <b>Payme</b>, <b>Uzum</b> — в один клик в приложении, без повторного ввода реквизитов.
         </li>
         <li>
-          <b>Paynet</b> — для оплаты наличными.
+          <b>Paynet</b> — через приложение или терминал Paynet.
         </li>
         <li>
           Для тех, кто платит из России, — <b>СБП</b> в рублях.
+        </li>
+        <li>
+          <b>Цена Premium</b> не зависит от способа: картой, через Click, Payme, Uzum или Paynet — сумма одинаковая.
         </li>
       </KeyFacts>
       <p>Как проходит сам платёж:</p>
@@ -360,7 +367,8 @@ function RuBody() {
           Бот показывает итоговую сумму в сумах — без конвертации и скрытых комиссий.
         </Step>
         <Step title="2. Выберите способ">
-          При оплате картой вводите номер карты; при выборе Click или Payme открывается приложение.
+          При переводе на карту отправляете ровно указанную сумму на карту, которую показал бот; при выборе
+          Click, Payme или Uzum приложение открывается с готовой суммой.
         </Step>
         <Step title="3. Введите код банка">
           Банк присылает код по SMS или в своём приложении. Если код задерживается, оставьте приложение открытым.
@@ -541,16 +549,20 @@ function EnBody() {
       <h2 id="tolov">Payment methods and payment steps</h2>
       <KeyFacts label="Accepted methods">
         <li>
-          <b>UzCard</b>, <b>HUMO</b> — national cards, straight from the card number.
+          <b>UzCard</b>, <b>HUMO</b> — national cards: a transfer to the card the bot shows.
         </li>
         <li>
-          <b>Click</b>, <b>Payme</b> — one tap in the app, no re-entering details.
+          <b>Click</b>, <b>Payme</b>, <b>Uzum</b> — one tap in the app, no re-entering details.
         </li>
         <li>
-          <b>Paynet</b> — for paying in cash.
+          <b>Paynet</b> — through the Paynet app or a Paynet terminal.
         </li>
         <li>
           For anyone paying from Russia — <b>SBP</b> in roubles.
+        </li>
+        <li>
+          <b>The Premium price</b> does not depend on the method: card, Click, Payme, Uzum or Paynet — the total is
+          the same.
         </li>
       </KeyFacts>
       <p>How the payment itself goes:</p>
@@ -559,7 +571,8 @@ function EnBody() {
           The bot shows the final amount in so‘m — no conversion and no hidden fees.
         </Step>
         <Step title="2. Choose a method">
-          Paying by card means entering the card number; picking Click or Payme opens the app.
+          With a card transfer you send exactly the shown amount to the card the bot displays; picking Click,
+          Payme or Uzum opens the app with the amount filled in.
         </Step>
         <Step title="3. Enter the bank’s code">
           The bank sends a code by SMS or inside its app. If it is slow, leave the banking app open.
@@ -691,7 +704,7 @@ const uzFaq = [
   {
     question: "Narxlar qanday?",
     answer:
-      "Username orqali: 3 oy — 160 000, 6 oy — 215 000, 12 oy — 388 000 so‘m. Barcha muddat username orqali, parolsiz.",
+      "Username orqali: 3 oy — 159 900, 6 oy — 216 000, 12 oy — 388 000 so‘m. Barcha muddat username orqali, parolsiz.",
   },
   {
     question: "Nega 1 oylik tarif username oqimida yo‘q?",
@@ -741,7 +754,7 @@ const ruFaq = [
   {
     question: "Какие цены?",
     answer:
-      "По username: 3 мес — 160 000, 6 мес — 215 000, 12 мес — 388 000 сум. Все сроки — по username, без пароля.",
+      "По username: 3 мес — 159 900, 6 мес — 216 000, 12 мес — 388 000 сум. Все сроки — по username, без пароля.",
   },
   {
     question: "Почему тарифа на 1 месяц нет в потоке по username?",
@@ -791,7 +804,7 @@ const enFaq = [
   {
     question: "What are the prices?",
     answer:
-      "By username: 3 months — 160,000, 6 months — 215,000, 12 months — 388,000 UZS. Every term goes by username, with no password.",
+      "By username: 3 months — 159,900, 6 months — 216,000, 12 months — 388,000 UZS. Every term goes by username, with no password.",
   },
   {
     question: "Why is the 1-month plan missing from the username flow?",
@@ -833,7 +846,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-06-22",
-  dateModified: "2026-09-18",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram premium olish",
     "telegram premium uzbekistan",

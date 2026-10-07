@@ -43,10 +43,10 @@ function UzBody() {
 
       <KeyFacts label="Narx va tejamkorlik (StarsPaymee)">
         <li>
-          <b>3 oy</b> — 160 000 so‘m
+          <b>3 oy</b> — 159 900 so‘m
         </li>
         <li>
-          <b>6 oy</b> — 215 000 so‘m
+          <b>6 oy</b> — 216 000 so‘m
         </li>
         <li>
           <b>12 oy</b> — 388 000 so‘m (oyiga eng arzon)
@@ -110,10 +110,10 @@ function RuBody() {
 
       <KeyFacts label="Цена и экономия (StarsPaymee)">
         <li>
-          <b>3 мес</b> — 160 000 сум
+          <b>3 мес</b> — 159 900 сум
         </li>
         <li>
-          <b>6 мес</b> — 215 000 сум
+          <b>6 мес</b> — 216 000 сум
         </li>
         <li>
           <b>12 мес</b> — 388 000 сум (дешевле всего за месяц)
@@ -180,18 +180,18 @@ function EnBody() {
           <b>1 month</b> — 45,000 UZS
         </li>
         <li>
-          <b>3 months</b> — 160,000 UZS
+          <b>3 months</b> — 159,900 UZS
         </li>
         <li>
-          <b>6 months</b> — 215,000 UZS
+          <b>6 months</b> — 216,000 UZS
         </li>
         <li>
           <b>12 months</b> — 388,000 UZS (the cheapest per month)
         </li>
       </KeyFacts>
       <p>
-        The per-month gap is what decides it: a year works out roughly three times cheaper per month than paying
-        monthly. Full breakdown in{" "}
+        The per-month gap is what decides it: a year works out at about 32,300 UZS a month — the lowest per-month
+        cost of any plan (6 months ≈ 36,000, 3 months ≈ 53,300). Full breakdown in{" "}
         <Link href="/blog/telegram-premium-narxi-ozbekistonda-2026">Premium pricing in Uzbekistan</Link>.
       </p>
 
@@ -216,7 +216,7 @@ function EnBody() {
 
 const faqEn = [
   { question: "Is Telegram Premium worth it?", answer: "Yes if you send large files, run channels or want an ad-free experience. For light use, probably not." },
-  { question: "Which term is cheapest?", answer: "12 months — about 32,300 UZS a month, roughly three times cheaper than paying monthly." },
+  { question: "Which term is cheapest?", answer: "12 months — about 32,300 UZS a month, the lowest per-month cost of any plan." },
   { question: "Can I try it briefly?", answer: "Yes, a 1-month pack costs 45,000 UZS and needs no long commitment." },
   { question: "Is there a free trial?", answer: "Telegram runs occasional promotions, but there is no guaranteed permanent free trial." },
   { question: "Does it remove all ads?", answer: "It removes sponsored messages in public channels — not content posted by the channels themselves." },
@@ -227,7 +227,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "info",
   datePublished: "2026-06-14",
-  dateModified: "2026-06-14",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram premium foydalari",
     "telegram premium nima beradi",

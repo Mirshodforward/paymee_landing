@@ -2,10 +2,9 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
-import { StarsPriceTable } from "@/components/landing/stars-price-table";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import { botDeepLink, type DeepLinkPage } from "@/lib/telegram-deeplink";
-import { PREMIUM_LOGIN_PLANS, PREMIUM_PLANS, STARS_PACKS } from "@/lib/products";
+import { PREMIUM_LOGIN_PLANS, PREMIUM_PLANS } from "@/lib/products";
 
 export type LandingTopic = "stars" | "premium" | "gifts" | "about";
 
@@ -66,52 +65,36 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
   };
 
   // Mahsulot sahifalari uchun Product + AggregateOffer (real narxlar lib/products.ts dan).
+  // Stars bu yerda yo‘q: /stars `StarsPage` (ProductPage) orqali chiqadi va Product
+  // schema’ni o‘zi beradi — har bir paket ikki usul narxi bilan. Bu komponent
+  // hozir faqat /gifts va /about uchun ishlatiladi.
   const productLd =
-    topic === "stars"
+    topic === "premium"
       ? {
           "@context": "https://schema.org",
           "@type": "Product",
-          name: t("stars.h1"),
-          description: t("stars.metaDescription"),
+          name: t("premium.h1"),
+          description: t("premium.metaDescription"),
           brand: { "@type": "Brand", name: siteConfig.name },
-          category: "Telegram Stars",
+          category: "Telegram Premium",
           offers: {
             "@type": "AggregateOffer",
             priceCurrency: "UZS",
-            lowPrice: Math.min(...STARS_PACKS.map((p) => p.priceUzs)),
-            highPrice: Math.max(...STARS_PACKS.map((p) => p.priceUzs)),
-            offerCount: STARS_PACKS.length,
+            lowPrice: Math.min(
+              ...PREMIUM_PLANS.map((p) => p.priceUzs),
+              ...PREMIUM_LOGIN_PLANS.map((p) => p.priceUzs),
+            ),
+            highPrice: Math.max(
+              ...PREMIUM_PLANS.map((p) => p.priceUzs),
+              ...PREMIUM_LOGIN_PLANS.map((p) => p.priceUzs),
+            ),
+            offerCount: PREMIUM_PLANS.length + PREMIUM_LOGIN_PLANS.length,
             availability: "https://schema.org/InStock",
             url: canonical,
             seller: { "@type": "Organization", name: siteConfig.name },
           },
         }
-      : topic === "premium"
-        ? {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: t("premium.h1"),
-            description: t("premium.metaDescription"),
-            brand: { "@type": "Brand", name: siteConfig.name },
-            category: "Telegram Premium",
-            offers: {
-              "@type": "AggregateOffer",
-              priceCurrency: "UZS",
-              lowPrice: Math.min(
-                ...PREMIUM_PLANS.map((p) => p.priceUzs),
-                ...PREMIUM_LOGIN_PLANS.map((p) => p.priceUzs),
-              ),
-              highPrice: Math.max(
-                ...PREMIUM_PLANS.map((p) => p.priceUzs),
-                ...PREMIUM_LOGIN_PLANS.map((p) => p.priceUzs),
-              ),
-              offerCount: PREMIUM_PLANS.length + PREMIUM_LOGIN_PLANS.length,
-              availability: "https://schema.org/InStock",
-              url: canonical,
-              seller: { "@type": "Organization", name: siteConfig.name },
-            },
-          }
-        : null;
+      : null;
 
   const schemas = [webPageLd, breadcrumbLd, ...(productLd ? [productLd] : [])];
 
@@ -146,8 +129,6 @@ export async function LandingTopicArticle({ locale, topic }: Props) {
             ))}
           </ul>
         ) : null}
-
-        {topic === "stars" ? <StarsPriceTable locale={locale} /> : null}
 
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <a

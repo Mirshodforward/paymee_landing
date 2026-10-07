@@ -104,8 +104,6 @@
     "paymentsTitle": "Pay with any card",
     "paymentsNote": "and any Uzbek bank card",
     "starsTitle": "Telegram Stars",
-    "starsLead": "Stars from 220 so‘m each. Pick the amount you need — the bot delivers in 5 seconds.",
-    "starsUnitBadge": "{price} each — standard price, unchanged",
     "starsPerUnitLabel": "each",
     "starsCta": "Buy Stars",
     "starsPopular": "Popular",
@@ -123,7 +121,7 @@
     "unitMonth": "mo",
     "unitYear": "yr",
     "perMonth": "per month",
-    "giftsTitle": "Telegram unique gifts",
+    "giftsTitle": "Telegram gifts and NFTs",
     "giftsLead": "Buy Telegram unique gifts for yourself or send them to friends — easy, convenient and reliable.",
     "giftsBullets": [
       "Gift for yourself or a friend",
@@ -134,32 +132,6 @@
     "giftsCta": "Gifts",
     "whyTitle": "Why StarsPaymee?",
     "whyLead": "Over a year of experience, 100,000+ orders and 4,000+ returning users.",
-    "whyItems": [
-      {
-        "title": "Fastest",
-        "body": "Orders are delivered automatically in about 5 seconds."
-      },
-      {
-        "title": "Cheapest",
-        "body": "Stars from 220 so‘m, Premium 3 months from 160,000 so‘m."
-      },
-      {
-        "title": "Reliable",
-        "body": "Over a year in service, 100,000+ completed orders."
-      },
-      {
-        "title": "No login",
-        "body": "Premium needs only a username — no password or code."
-      },
-      {
-        "title": "Easy payment",
-        "body": "Click, Payme, Paynet, Uzum, UzCard, HUMO and any card."
-      },
-      {
-        "title": "Referral bonus",
-        "body": "Invite friends and collect bonuses."
-      }
-    ],
     "processTitle": "Three simple steps",
     "steps": [
       {
@@ -194,11 +166,11 @@
       },
       {
         "question": "How much does it cost?",
-        "answer": "Telegram Stars from 220 so‘m each; 50 Stars for 11,000 so‘m. Telegram Premium: 3 months 160,000 so‘m, 6 months 215,000 so‘m, 12 months 388,000 so‘m — among the cheapest prices on the market."
+        "answer": "Telegram Stars cost 220 so‘m each by UzCard/HUMO card transfer (50 Stars for 11,000 so‘m) and 240 so‘m via Click, Payme, Uzum or Paynet (50 Stars for 12,000 so‘m). Telegram Premium: 3 months 159,900 so‘m, 6 months 216,000 so‘m, 12 months 388,000 so‘m, the same on every payment method (card, Click, Payme, Uzum, Paynet) — among the cheapest prices on the market."
       },
       {
         "question": "How do I send Telegram gifts?",
-        "answer": "You can buy Telegram unique gifts for yourself or send them to a friend. A gift can be sent anonymously or with a congratulatory comment."
+        "answer": "In the bot’s gifts section you send a regular Telegram gift to yourself or a friend by @username — anonymously or with a note. A collectible (NFT) gift is bought in the NFT Market and transferred to your own Telegram account — this may not be instant."
       },
       {
         "question": "What do I get for inviting friends?",
@@ -226,7 +198,7 @@
       },
       {
         "question": "Can a gift be returned?",
-        "answer": "The recipient can keep a Telegram unique gift in their profile or, in many cases, convert it back into Stars. If a mistake happens before delivery, you can request a cancellation or swap via support."
+        "answer": "The recipient can keep a regular Telegram gift in their profile or, in many cases, convert it into Stars. If a mistake happens before delivery, you can request a cancellation or swap via support."
       },
       {
         "question": "Why is it cheaper than the App Store or the official price?",
@@ -247,38 +219,24 @@
     },
     "stars": {
       "metaTitle": "Buy Telegram Stars in Uzbekistan — in so'm, in 5 seconds",
-      "metaDescription": "Telegram Stars at 220 so'm each: 50 — 11,000, 100 — 22,000, 500 — 110,000 so'm. Pay with UzCard, HUMO, Click, Payme, Paynet or cash. Only your @username — no password, delivered in 5 seconds.",
+      "metaDescription": "Telegram Stars price: 220 so'm each by UzCard/HUMO card transfer (50 — 11,000, 1,000 — 220,000), 240 so'm via Click, Payme, Uzum or Paynet (1,000 — 240,000). Only your @username — no password, delivered in 5 seconds.",
       "h1": "Buy Telegram Stars — in Uzbekistan, in so'm",
-      "intro": "Buy Telegram Stars in Uzbekistan at the lowest price through StarsPaymee. Stars from 220 so‘m each, base pack of 50 for 11,000 so‘m. Orders are placed in @StarsPaymee_bot and delivered automatically in about 5 seconds.",
+      "intro": "Buy Telegram Stars in Uzbekistan at the lowest price through StarsPaymee. A Star costs 220 so‘m by UzCard/HUMO card transfer (50 for 11,000 so‘m) and 240 so‘m via Click, Payme, Uzum or Paynet (50 for 12,000 so‘m). Orders are placed in @StarsPaymee_bot and delivered automatically in about 5 seconds.",
       "bullets": [
-        "From 220 so‘m each — 50 stars for 11,000 so‘m",
+        "220 so‘m each by card transfer (50 stars for 11,000 so‘m), 240 so‘m via Click, Payme, Uzum or Paynet",
         "Click, Payme, Paynet, Uzum, UzCard, HUMO and any card",
         "Auto delivery in 5 seconds, no account login",
         "To yourself or another username"
       ],
-      "footnote": "Price depends on the amount of Stars you choose. You’ll see the exact total in @StarsPaymee_bot or the Mini App."
-    },
-    "starsTable": {
-      "heading": "Telegram Stars prices",
-      "lead": "Pick a package — the price comes from the same source as the bot’s own calculation. The button opens the Stars section in the Mini App with that package.",
-      "colPack": "Package",
-      "colPrice": "Price",
-      "colAction": "Buy",
-      "buy": "Buy",
-      "buyAria": "Buy {amount} Stars",
-      "unit": "stars",
-      "popular": "Popular",
-      "noteFee": "The amount in the table is final — no service fee is added on top.",
-      "notePay": "Payment in so‘m: {methods}.",
-      "noteConfirm": "Before payment the bot shows the total and the recipient’s @username once more."
+      "footnote": "Price depends on the amount of Stars and the payment method. You’ll see the exact total before paying in @StarsPaymee_bot or the Mini App."
     },
     "premium": {
       "metaTitle": "Buy Telegram Premium in Uzbekistan — in so'm, in 5 seconds",
-      "metaDescription": "Telegram Premium: 1 mo 45,000, 3 mo 160,000, 6 mo 215,000, 12 mo 388,000 so'm. Pay with UzCard, HUMO, Click, Payme, Paynet or cash. Only your @username — no password, activates in 5 seconds.",
+      "metaDescription": "Telegram Premium: 1 mo 45,000, 3 mo 159,900, 6 mo 216,000, 12 mo 388,000 so'm. Pay with UzCard, HUMO, Click, Payme, Uzum, Paynet or cash. Only your @username — no password, activates in 5 seconds.",
       "h1": "Buy Telegram Premium — in Uzbekistan, in so'm",
-      "intro": "Get a Telegram Premium subscription in Uzbekistan at a low price: 1 month 45,000, 3 months 160,000, 6 months 215,000, 12 months 388,000 so‘m. Since September 2026 every term runs through the “by username” flow — no account login, and Premium activates automatically in about 5 seconds.",
+      "intro": "Get a Telegram Premium subscription in Uzbekistan at a low price: 1 month 45,000, 3 months 159,900, 6 months 216,000, 12 months 388,000 so‘m. Since September 2026 every term runs through the “by username” flow — no account login, and Premium activates automatically in about 5 seconds.",
       "bullets": [
-        "1 mo 45,000 · 3 mo 160,000 · 6 mo 215,000 · 12 mo 388,000 so‘m",
+        "1 mo 45,000 · 3 mo 159,900 · 6 mo 216,000 · 12 mo 388,000 so‘m",
         "Every term by username — auto activation in 5 seconds",
         "No account login, password or SMS code",
         "Payment in so‘m: Click, Payme, Uzum, UzCard, HUMO"
@@ -287,16 +245,16 @@
     },
     "gifts": {
       "metaTitle": "Send a Telegram gift — in so‘m, anonymously or with a note",
-      "metaDescription": "Buy Telegram gifts in so‘m and send them to friends, anonymously or with a note. A collectible copy is made by upgrading inside Telegram.",
+      "metaDescription": "Buy Telegram gifts in so‘m and send them to friends, anonymously or with a note. A collectible (NFT) gift is in the bot’s NFT Market, in so‘m.",
       "h1": "Send Telegram gifts",
-      "intro": "Buy Telegram gifts for yourself or send them to friends through StarsPaymee — anonymously or with a congratulatory note. Pay in so‘m: Click, Payme, Uzum, UzCard, HUMO. If you need a collectible (NFT) copy, buy Stars first and upgrade the gift to collectible inside Telegram.",
+      "intro": "Buy Telegram gifts for yourself or send them to friends through StarsPaymee — anonymously or with a congratulatory note. Pay in so‘m: Click, Payme, Uzum, Paynet, UzCard, HUMO (slightly dearer through an online payment — the final total is in the bot). If you need a collectible (NFT) gift, buy a ready copy in the bot’s NFT Market in so‘m (by card or balance) or rent one.",
       "bullets": [
         "Buy or send gifts from the permanent catalogue",
         "Send anonymously if you prefer",
         "Add a congratulatory note",
         "Convenient payment in so‘m, reliable delivery"
       ],
-      "footnote": "The available gifts and their prices are shown in @StarsPaymee_bot or the Mini App. Sold-out collectible (NFT) gifts are not delivered through the bot."
+      "footnote": "The available gifts and their prices are shown in @StarsPaymee_bot or the Mini App. Sold-out limited gifts cannot be bought new from Telegram’s store, so the regular catalogue cannot issue them; an existing collectible (NFT) copy can be bought in the bot’s NFT Market (up to 300,000 so‘m) or rented."
     },
     "about": {
       "metaTitle": "About — Telegram Stars & Premium service",
@@ -500,9 +458,9 @@
     "navNftRent": "NFT rental",
     "navNftRentDesc": "An expensive gift at a low price",
     "navNftUsername": "Username",
-    "navNftUsernameDesc": "Buy and sell an @name",
+    "navNftUsernameDesc": "Rent an @name or buy one on Fragment",
     "navNftMarket": "NFT market",
-    "navNftMarketDesc": "How to buy and sell in som",
+    "navNftMarketDesc": "Buy collectible gifts in so‘m",
     "navGames": "Games",
     "navGamesGames": "Games",
     "navGamesApps": "Apps and gift cards",
@@ -587,7 +545,7 @@
     "advSecBody": "Just your @username is enough.",
     "advPayTag": "Payment",
     "advPayTitle": "From any banking app",
-    "advPayBody": "Transfer card to card — the system detects the payment automatically. Everything in so‘m.",
+    "advPayBody": "Confirm in the app with the Click, Payme, Uzum or Paynet button in the bot, or transfer card to card — the system detects the payment automatically. Everything in so‘m.",
     "prodTitle": "What can you buy?",
     "prodSub": "Everything in one bot — choose, pay and receive in seconds.",
     "prodStarsDesc": "Star packs of any size — from a small gift to a large purchase.",
@@ -602,31 +560,31 @@
       "Official activation",
       "Can be gifted to a friend"
     ],
-    "prodGiftsDesc": "Send exclusive Telegram gifts to your friends.",
+    "prodGiftsDesc": "Send regular gifts to friends; buy collectible (NFT) gifts in the NFT Market.",
     "prodGiftsB": [
-      "Exclusive collections",
+      "NFT Market — collectible gifts in so‘m",
       "Anonymous sending option",
       "Perfect for holidays"
     ],
     "prodLink": "View in the bot",
     "nftKicker": "Gifts",
-    "nftTitle": "Telegram gifts — in so‘m, through the bot",
-    "nftSub": "Ordinary gifts, Stars and Premium work as before. Sold-out collectible (NFT) gifts are not delivered through the bot right now — a collectible copy is obtained by upgrading inside Telegram.",
+    "nftTitle": "NFT Market — a collectible gift in so‘m",
+    "nftSub": "Buy a listed collectible (NFT) Telegram gift in so‘m — up to 300,000 so‘m, by card or balance; the NFT is transferred to your @username.",
     "nftBalance": "Your balance",
     "nftMyGifts": "My gifts",
     "nftCtaBot": "Send a gift in the bot",
-    "nftCtaBlog": "Service status and guides",
+    "nftCtaBlog": "NFT Market guide",
     "nftNewBadge": "Updated",
     "nftBullets": [
       "Ordinary gifts — in so‘m, with a local card, in a few minutes",
-      "A collectible: buy Stars in the bot, then upgrade the gift inside Telegram",
-      "Sold-out collectible copies are not delivered through the bot",
+      "NFT Market — a listed collectible copy, up to 300,000 so‘m",
+      "Pay by card or balance; the NFT is transferred to your @username",
       "Guides on the Gift Market and collecting — on the blog"
     ],
     "rentKicker": "NFT rental",
     "rentNewBadge": "New",
     "rentTitle": "Rent an expensive NFT gift for a fraction of its price",
-    "rentSub": "You don't have to buy a collectible Telegram gift outright — take it for as long as you need. From 1 to 30 days, paid in so'm with a local card. When the term ends, the gift returns on its own.",
+    "rentSub": "You don't have to buy a collectible Telegram gift outright — take it for as long as you need. Each listing shows its term range, and you pay in so'm. After payment the gift is linked to your account through your Fragment link; it returns on its own when the term ends.",
     "rentCatalogNote": "Live catalogue · refreshed every 5 minutes",
     "rentDuration": "Term",
     "rentApprox": "(7 days, approx.)",
@@ -637,8 +595,8 @@
     "rentCtaBlog": "NFT rental guide",
     "rentBullets": [
       "Gifts and usernames are rented through the same flow",
-      "1–30 day terms, quick presets (1 / 7 / 30 days) and extension",
-      "Paid in so'm: UzCard, HUMO, Click, Payme, Paynet",
+      "The term depends on the listing — pick it on a slider; extensions available",
+      "Paid in so'm: UzCard, HUMO, Click, Payme, Uzum, Paynet — slightly dearer via online payment",
       "Filter by collection, model, symbol and backdrop"
     ],
     "boostKicker": "Boost Market",
@@ -659,7 +617,10 @@
       "10 SEO guides: pricing and auto delivery"
     ],
     "starsTitle": "Telegram Stars prices",
-    "starsLead": "Stars from just {price} each. Pick the pack you need — the bot delivers to your account in 5 seconds.",
+    "starsLead": "One Star is {card} by card transfer and {gateway} via Click, Payme, Uzum or Paynet. Pick the pack you need — the bot delivers to your account in 5 seconds.",
+    "starsCardTag": "card transfer",
+    "starsGatewayTag": "Click · Payme · Uzum · Paynet",
+    "starsPriceNote": "Card transfer — sending money to the UzCard/HUMO card the bot shows, from any banking app (including “Transfer to card” in Click or Payme), or paying from your balance. Click, Payme, Uzum, Paynet — the online-payment buttons in the bot. The bot shows the final total before you pay.",
     "starsAmountUnit": "stars",
     "starsPopular": "Popular",
     "starsCta": "Buy Stars",
@@ -677,7 +638,7 @@
     "step1Title": "Open the bot",
     "step1Body": "In @StarsPaymee_bot pick the product you need: Stars, Premium or a Gift.",
     "step2Title": "Make the payment",
-    "step2Body": "From any banking app: Click, Payme, Uzum, UzCard, HUMO — in so‘m.",
+    "step2Body": "From any banking app: Click, Payme, Uzum, Paynet, UzCard, HUMO — in so‘m.",
     "step3Title": "Receive in 5 seconds",
     "step3Body": "The system detects the payment automatically and delivers instantly. If delayed — auto-bonus!",
     "trust1Title": "No login or password asked",
@@ -752,10 +713,10 @@
   },
   "premiumPage": {
     "metaTitle": "Buy Telegram Premium in Uzbekistan — in so'm, in 5 seconds",
-    "metaDescription": "Telegram Premium: 1 mo 45,000, 3 mo 160,000, 6 mo 215,000, 12 mo 388,000 so'm. Pay with UzCard, HUMO, Click, Payme, Paynet or cash. Only your @username — no password, activates in 5 seconds.",
+    "metaDescription": "Telegram Premium: 1 mo 45,000, 3 mo 159,900, 6 mo 216,000, 12 mo 388,000 so'm. Pay with UzCard, HUMO, Click, Payme, Uzum, Paynet or cash. Only your @username — no password, activates in 5 seconds.",
     "kicker": "Telegram Premium",
     "h1": "Buy Telegram Premium — in Uzbekistan, in so'm",
-    "lead": "Get a Telegram Premium subscription with UzCard, HUMO, Click, Payme or cash — in so'm. All you need is an @username: no account login, no password, no foreign card. Once the payment is confirmed, the subscription activates in 5 seconds.",
+    "lead": "Get a Telegram Premium subscription with UzCard, HUMO, Click, Payme, Uzum, Paynet or cash — in so'm. All you need is an @username: no account login, no password, no foreign card. Once the payment is confirmed, the subscription activates in 5 seconds.",
     "badges": [
       "Activates in 5 seconds",
       "9 payment methods, in so'm",
@@ -766,14 +727,14 @@
     "ctaPrices": "See prices",
     "pricesKicker": "Prices",
     "pricesTitle": "Telegram Premium prices",
-    "pricesSub": "The longer the term, the lower the price per month. Every term goes by username, at the same speed.",
+    "pricesSub": "From 3 to 12 months, the longer the term, the lower the price per month. Every term goes by username, at the same speed.",
     "colTerm": "Term",
     "colPerMonth": "Per month",
     "colTotal": "Total",
     "monthUnit": "mo",
     "bestValue": "Best value",
     "popular": "Popular",
-    "pricesNote": "All payment methods are included — no hidden fees. On the 12-month plan a month costs about {diff} so'm less than on the monthly one. Live prices are in the bot; this table is for reference.",
+    "pricesNote": "The price is the same on every payment method — card, Click, Payme, Uzum or Paynet; no hidden fees. On the 12-month plan a month costs about {diff} so'm less than on the monthly one. Live prices are in the bot; this table is for reference.",
     "featuresKicker": "Features",
     "featuresTitle": "What does Telegram Premium give you?",
     "featuresSub": "The main features the subscription unlocks",
@@ -852,11 +813,11 @@
     "faq": [
       {
         "q": "How much does Telegram Premium cost in Uzbekistan?",
-        "a": "At StarsPaymee: 1 mo — 45,000, 3 mo — 160,000, 6 mo — 215,000, 12 mo — 388,000 so'm. Longer terms are cheaper per month. Live prices are in the bot."
+        "a": "At StarsPaymee: 1 mo — 45,000, 3 mo — 159,900, 6 mo — 216,000, 12 mo — 388,000 so'm. The cheapest per month is 12 months (~32,300 so'm). Live prices are in the bot."
       },
       {
         "q": "Can I buy with UzCard or HUMO?",
-        "a": "Yes. The bot accepts a transfer to a card number — from UzCard, HUMO, Click, Payme, Paynet, Uzum, Beepul, Alif apps, or with cash via a terminal."
+        "a": "Yes. Transfer to the shown UzCard/HUMO card from any app (Click, Payme, Paynet, Uzum, Beepul, Alif), or pay online with the Click, Payme, Uzum or Paynet button in the bot. The Premium price is the same either way."
       },
       {
         "q": "How fast does Premium activate?",
@@ -902,7 +863,7 @@
   "productPage": {
     "payKicker": "Payment",
     "payTitle": "UzCard, HUMO, Click, Payme, Paynet, Uzum, Beepul, Alif and cash — all in so'm",
-    "paySub": "The bot accepts payment as a transfer to a card number — which app you send from doesn't matter. What matters: exactly the shown amount, to exactly the shown card.",
+    "paySub": "There are two routes. Online payment: pick Click, Payme, Uzum or Paynet in the bot — the amount is pre-filled, you just confirm, and the payment is accepted automatically. Card transfer: from any app, send exactly the shown amount to the UzCard/HUMO card the bot displays. Premium costs the same either way; Stars and other products cost slightly more through online payment — the bot shows the final total before you pay.",
     "payMethods": [
       {
         "t": "UzCard",
@@ -914,19 +875,19 @@
       },
       {
         "t": "Click",
-        "d": "In the Click app: “Transfers → To card”. The payment is usually detected within seconds."
+        "d": "Pick “Click” in the bot — the Click payment page opens with the amount pre-filled and confirms automatically. Or make a card transfer in the Click app: “Transfers → To card”."
       },
       {
         "t": "Payme",
-        "d": "From the “Transfers” section in Payme. Enter the amount exactly — the bot matches your order by that amount."
+        "d": "The “Payme” button in the bot — the amount is pre-filled in the app and confirms automatically. Or a card transfer from “Transfers” in Payme — then enter the amount exactly."
       },
       {
         "t": "Paynet",
-        "d": "Card transfer from the Paynet app or a terminal. At a terminal you can also top up with cash."
+        "d": "The bot’s Paynet method — pay through the Paynet app or a Paynet terminal, confirmed automatically. Or put cash on a card at a terminal and make a card transfer."
       },
       {
         "t": "Uzum Bank",
-        "d": "Card transfer from the Uzum Bank app — the same flow as other apps."
+        "d": "The “Uzum Bank” button in the bot — an online payment in the Uzum Bank app. Or a card transfer from Uzum Bank."
       },
       {
         "t": "Beepul",
@@ -945,13 +906,13 @@
   },
   "starsPage": {
     "metaTitle": "Buy Telegram Stars in Uzbekistan — in so'm, in 5 seconds",
-    "metaDescription": "Telegram Stars at 220 so'm each: 50 — 11,000, 100 — 22,000, 500 — 110,000 so'm. Pay with UzCard, HUMO, Click, Payme, Paynet or cash. Only your @username — no password, delivered in 5 seconds.",
+    "metaDescription": "Telegram Stars price: 220 so'm each by UzCard/HUMO card transfer (50 — 11,000, 1,000 — 220,000), 240 so'm via Click, Payme, Uzum or Paynet (1,000 — 240,000). Only your @username — no password, delivered in 5 seconds.",
     "kicker": "Telegram Stars",
     "h1": "Buy Telegram Stars — in Uzbekistan, in so'm",
-    "lead": "Buy Telegram Stars with UzCard, HUMO, Click, Payme or cash — in so'm, at 220 so'm each, from 50 stars. All you need is an @username: no account login, no password, no foreign card. Once the payment is confirmed, the stars land on your balance in 5 seconds.",
+    "lead": "Buy Telegram Stars in so'm: 220 so'm each by UzCard/HUMO card transfer, 240 so'm via Click, Payme, Uzum or Paynet, from 50 stars. All you need is an @username: no account login, no password, no foreign card. Once the payment is confirmed, the stars land on your balance in 5 seconds.",
     "badges": [
       "Delivered in 5 seconds",
-      "220 so'm each, from 50",
+      "From 220 so'm each (card transfer)",
       "9 payment methods, in so'm",
       "No password asked"
     ],
@@ -959,13 +920,14 @@
     "ctaPrices": "See prices",
     "pricesKicker": "Prices",
     "pricesTitle": "Telegram Stars prices",
-    "pricesSub": "The price is proportional to the amount — 220 so'm per star, no hidden fees. A ready pack, or any amount in the bot.",
+    "pricesSub": "The price is proportional to the amount, and the per-star price depends on how you pay — the table shows both: card transfer (or balance) and online payment via Click, Payme, Uzum or Paynet. The bot shows the final total before you pay.",
     "colPack": "Pack",
-    "colPerStar": "Per star",
-    "colTotal": "Price",
+    "colCard": "Card transfer · {price}/star",
+    "colGateway": "Click · Payme · Uzum · Paynet · {price}/star",
+    "cardMethod": "card transfer",
     "unit": "stars",
     "popular": "Popular",
-    "pricesNote": "The table shows ready packs; in the bot you can enter any amount from 50 to 10,000 — priced at the same {perStar} so'm per star. Live prices are in the bot; this table is for reference.",
+    "pricesNote": "The table shows ready packs; in the bot you can enter any amount from 50 to 10,000 — the total uses the per-star price of the payment method you choose ({card} or {gateway}). For a card transfer, send exactly the amount the bot shows. Live prices are in the bot; this table is for reference.",
     "featuresKicker": "What for",
     "featuresTitle": "What are Telegram Stars for?",
     "featuresSub": "Stars are Telegram's in-app currency. The main uses:",
@@ -1044,15 +1006,15 @@
     "faq": [
       {
         "q": "How much do Telegram Stars cost?",
-        "a": "At StarsPaymee — 220 so'm each: 50 — 11,000, 100 — 22,000, 500 — 110,000, 1,000 — 220,000 so'm. The price is proportional to the amount, no hidden fees. Live prices are in the bot."
+        "a": "It depends on how you pay. UzCard/HUMO card transfer or balance — 220 so'm each: 50 — 11,000, 100 — 22,000, 500 — 110,000, 1,000 — 220,000 so'm. Click, Payme, Uzum or Paynet — 240 so'm each: 50 — 12,000, 100 — 24,000, 500 — 120,000, 1,000 — 240,000 so'm. The bot shows the final total before you pay."
       },
       {
         "q": "What is the minimum amount?",
-        "a": "50 stars (11,000 so'm). Up to 10,000 per order; for more, place several orders."
+        "a": "50 stars: 11,000 so'm by card transfer, 12,000 so'm via Click/Payme/Uzum/Paynet. Up to 10,000 per order; for more, place several orders."
       },
       {
         "q": "Can I buy with UzCard or HUMO?",
-        "a": "Yes. The bot accepts a transfer to a card number — from UzCard, HUMO, Click, Payme, Paynet, Uzum, Beepul, Alif apps, or with cash via a terminal."
+        "a": "Yes. Transfer to the shown UzCard/HUMO card from any app (Click, Payme, Paynet, Uzum, Beepul, Alif), or pay online with the Click, Payme, Uzum or Paynet button in the bot. A card transfer costs 220 so'm per star, online payment 240 so'm."
       },
       {
         "q": "How fast do the stars arrive?",
@@ -1087,13 +1049,13 @@
     "guidesTitle": "More guides on Stars",
     "guidesAll": "All articles",
     "finalTitle": "Ready for Telegram Stars?",
-    "finalSub": "In Uzbekistan, in so'm, 220 so'm each, in 5 seconds",
+    "finalSub": "In Uzbekistan, in so'm, from 220 so'm each (card transfer), in 5 seconds",
     "finalCta": "Buy Stars",
     "crumbHome": "Home"
   },
   "insta": {
     "metaTitle": "StarsPaymee — Telegram Stars and Premium in som, in 5 seconds",
-    "metaDescription": "Telegram Stars, Premium and gifts in som. Pay with Click, Payme, Uzcard or HUMO — only a username is needed, never a password.",
+    "metaDescription": "Telegram Stars, Premium and gifts in som. Pay with Click, Payme, Uzum, Paynet, Uzcard or HUMO — only a username is needed, never a password.",
     "live": "Online · 24/7",
     "ratingLabel": "Customer ratings",
     "ratingCount": "{count, plural, one {# rating} other {# ratings}}",

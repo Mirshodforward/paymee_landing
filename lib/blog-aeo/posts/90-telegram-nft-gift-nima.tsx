@@ -12,8 +12,9 @@ function UzAnswer() {
       <strong>Telegram NFT Gift</strong> — Telegram ichidagi <strong>kolleksion (collectible) raqamli sovg‘a</strong>:
       cheklangan tiraj, noyob model va ba’zan blockchain (TON) bilan bog‘langan aktiv. Oddiy gift faqat profilda
       ko‘rinadi; NFT/collectible versiyasi esa <strong>Limited Edition</strong>, qayta sotish va Gift Market orqali
-      savdo qilish imkonini beradi. O‘zbekistonda <strong>@StarsPaymee_bot Gift Market</strong>da narxlar{" "}
-      <strong>so‘mda</strong> ko‘rsatiladi.
+      savdo qilish imkonini beradi. O‘zbekistonda <strong>@StarsPaymee_bot</strong>’dagi{" "}
+      <strong>NFT Market</strong>da sotuvdagi kolleksion nusxani <strong>so‘mda</strong>, 300 000 so‘mgacha
+      sotib olish mumkin.
     </p>
   );
 }
@@ -26,7 +27,7 @@ function UzBody() {
         items={[
           { href: "#nima", label: "NFT Gift tushunchasi" },
           { href: "#farq", label: "Oddiy gift vs NFT" },
-          { href: "#market", label: "Gift Market (so‘m)" },
+          { href: "#market", label: "NFT Market (so‘m)" },
           { href: "#limited", label: "Limited Edition" },
           { href: "#xavf", label: "Xavfsizlik" },
           { href: "#seriya", label: "10 ta blog" },
@@ -47,7 +48,8 @@ function UzBody() {
           <b>Collectible / NFT Gift</b> — noyob, uzatiladigan, bozorda narxi bo‘ladi
         </li>
         <li>
-          <b>Gift Market</b> — sotib olish/sotish interfeysi (StarsPaymee’da so‘mda)
+          <b>NFT Market</b> — StarsPaymee’da so‘mda sotib olish bo‘limi (o‘z sovg‘angizni sotish — Telegram
+          ichidagi bozor yoki Fragment’da)
         </li>
         <li>
           <b>Limited Edition</b> — cheklangan tirajli chiqarish
@@ -66,19 +68,20 @@ function UzBody() {
       />
       <p>
         Upgrade jarayoni:{" "}
-        collectible upgrade. Kolleksiya mavzusi:{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">collectible upgrade</Link>. Kolleksiya mavzusi:{" "}
         <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">rare sovg‘alar</Link>.
       </p>
 
-      <h2 id="market">Gift Market qanday ko‘rinadi? (so‘mda)</h2>
+      <h2 id="market">NFT Market qanday ko‘rinadi? (so‘mda)</h2>
       <p>
-        StarsPaymee Mini App ichidagi <strong>Gift Market</strong>da kolleksiyalar (masalan, LibertyFigure, MoodPack),
-        «Yangi / Arzon / Qimmat / Sotuvda» saralash va <strong>so‘mdagi narx</strong> ko‘rsatiladi. Masalan, tanlangan
-        Liberty Figure atrofida <strong>220 000 so‘m</strong>, backpack modellari <strong>194 000–195 000 so‘m</strong>{" "}
-        atrofida bo‘lishi mumkin — joriy ro‘yxat botda yangilanadi.
+        StarsPaymee Mini App’dagi <strong>NFT Market</strong>da sotuvdagi kolleksion nusxalar kolleksiya, model,
+        belgi va fon bo‘yicha filtrlanadi, «Arzon / Qimmat / Yangi / Raqam» bo‘yicha saralanadi va narx{" "}
+        <strong>so‘mda</strong> ko‘rsatiladi. 300 000 so‘mgacha bo‘lgan e’lonni sotib olish mumkin; narx TON
+        kursiga qarab o‘zgaradi. Quyidagi kartochkalar — namuna. Xarid tartibi —{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market qo‘llanmasida</Link>.
       </p>
       <NftGiftMarketBoard locale="uz" />
-      <InlineCta text="Yulduz oling va sovg‘ani o‘zingiz collectible darajasiga ko‘taring." product={{ kind: "stars", amount: 100 }} />
+      <InlineCta text="Botdagi NFT Market’da kolleksion sovg‘ani so‘mda oling — 300 000 so‘mgacha." />
 
       <h2 id="limited">Limited Edition nima?</h2>
       <p>
@@ -89,12 +92,13 @@ function UzBody() {
 
       <h2 id="holat">Hozir kolleksion sovg‘a qanday olinadi?</h2>
       <p>
-        Bu yerda aniq bo‘lish muhim: <b>@StarsPaymee_bot orqali sotuvdan tugagan kolleksion sovg‘alar
-        yetkazilmaydi</b>. Botda oddiy sovg‘alar, yulduzlar va Premium avvalgidek ishlaydi. Kolleksion sovg‘aga
-        ega bo‘lishning ishlaydigan yo‘li ikki qadamli: botdan yulduz olasiz, keyin Telegram ichida oddiy sovg‘ani
-        collectible darajasiga ko‘tarasiz. Batafsil —{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgardi</Link> va{" "}
-        upgrade qo‘llanmasi.
+        Uch yo‘l bor. <Link href="/blog/starspaymee-nft-market">NFT Market</Link> — @StarsPaymee_bot’da
+        sotuvdagi kolleksion nusxani 300 000 so‘mgacha sotib olasiz (UzCard/HUMO kartaga o‘tkazma yoki balans;
+        xarid tasdiqlangach admin uni @username’ingizga o‘tkazadi).{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">NFT ijarasi</Link> — kolleksion sovg‘ani muddatga olasiz.{" "}
+        <b>Upgrade</b> — Telegram ichida, kartochkasida shu imkoniyat bor sovg‘ani yulduz evaziga ko‘tarasiz.
+        Faqat Telegram sotuvdan olib tashlagan limited sovg‘ani bot yangi holda yubora olmaydi — batafsil:{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgardi</Link>.
       </p>
 
       <h2 id="xavf">Xavfsizlik va realistik kutish</h2>
@@ -123,7 +127,8 @@ function RuAnswer() {
   return (
     <p>
       <strong>Telegram NFT Gift</strong> — коллекционный цифровой подарок в Telegram с ограниченным тиражом и
-      возможностью перепродажи на Gift Market. В <strong>@StarsPaymee_bot</strong> цены указаны в <strong>сумах</strong>.
+      возможностью перепродажи на Gift Market. В <strong>NFT Market</strong> @StarsPaymee_bot выставленный
+      экземпляр можно купить в <strong>сумах</strong> — до 300 000 сумов.
     </p>
   );
 }
@@ -134,7 +139,10 @@ function RuBody() {
       <h2>Что это такое?</h2>
       <p>
         Отличие обычного подарка и collectible — в{" "}
-        upgrade. Примеры цен в сумах — на доске ниже.
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">upgrade</Link>. Готовый коллекционный экземпляр
+        можно купить в <Link href="/blog/starspaymee-nft-market">NFT Market</Link> бота (до 300 000 сумов, картой
+        или с баланса) или взять в <Link href="/blog/telegram-nft-sovga-ijarasi">аренду</Link> на срок. Примеры
+        цен в сумах — на доске ниже.
       </p>
       <NftGiftMarketBoard locale="ru" />
       <NftGiftSeriesNav locale="ru" />
@@ -147,17 +155,36 @@ const FAQ_UZ = [
   { question: "Oddiy gift va NFT gift farqi nima?", answer: "Oddiy gift odatda qayta sotilmaydi; collectible/NFT versiyasi Gift Market yoki Fragment orqali savdo qilinadi." },
   { question: "NFT gift qimmatlashadimi?", answer: "Talab, tiraj va noyoblikka qarab narx o‘zgarishi mumkin — investitsiya kafolati yo‘q." },
   { question: "Telegram NFT xavfsizmi?", answer: "Rasmiy Telegram va ishonchli bot orqali ishlang; shubhali «arzon NFT» reklamalaridan saqlaning." },
-  { question: "Telegram NFT qanday olinadi?", answer: "Stars bilan gift olish, upgrade yoki Gift Marketdan sotib olish — botda so‘mda." },
+  {
+    question: "Telegram NFT qanday olinadi?",
+    answer:
+      "Uch yo‘l: @StarsPaymee_bot’dagi NFT Market’dan so‘mda sotib olish (300 000 so‘mgacha), NFT ijarasi yoki Telegram ichida upgrade imkoniyati bor sovg‘ani yulduz evaziga ko‘tarish.",
+  },
   { question: "Limited Edition nima?", answer: "Cheklangan sonli chiqarilgan sovg‘a seriyasi — tiraj tugasa qimmatlashishi mumkin." },
-  { question: "Telegram NFT ni sotish mumkinmi?", answer: "Collectible sovg‘alar Gift Market yoki TON bozorlarida qayta sotilishi mumkin." },
-  { question: "StarsPaymee orqali NFT olish mumkinmi?", answer: "Ha — Gift Market bo‘limida kolleksion giftlar so‘mda ro‘yxatda." },
-  { question: "Stars kerakmi?", answer: "Telegram ichida asl xarid ko‘pincha Stars bilan; market balansi botda so‘m bo‘lishi mumkin." },
+  {
+    question: "Telegram NFT ni sotish mumkinmi?",
+    answer:
+      "Collectible sovg‘alar Telegram ichidagi bozorda, Fragment yoki TON marketpleyslarida qayta sotilishi mumkin. @StarsPaymee_bot sovg‘a sotib olmaydi — uning NFT Market’i faqat xarid uchun.",
+  },
+  {
+    question: "StarsPaymee orqali NFT olish mumkinmi?",
+    answer:
+      "Ha — NFT Market bo‘limida sotuvdagi kolleksion nusxani so‘mda, 300 000 so‘mgacha sotib olasiz; to‘lov karta yoki balans orqali.",
+  },
+  {
+    question: "Stars kerakmi?",
+    answer:
+      "NFT Market’da Stars kerak emas — narx so‘mda. Telegram ichida sovg‘a olish yoki upgrade qilish uchun esa Stars kerak.",
+  },
   { question: "Telegram Premium kerakmi?", answer: "NFT gift uchun shart emas; Premium boshqa imtiyozlar uchun." },
 ];
 
 const FAQ_RU = [
   { question: "Что такое Telegram NFT Gift?", answer: "Коллекционный подарок Telegram с ограниченным тиражом." },
-  { question: "Можно ли купить через StarsPaymee?", answer: "Да, в Gift Market в сумах." },
+  {
+    question: "Можно ли купить через StarsPaymee?",
+    answer: "Да — в NFT Market бота, в сумах, до 300 000 сумов; оплата картой или с баланса.",
+  },
   { question: "Это инвестиция?", answer: "Нет гарантии роста цены — только коллекционный интерес." },
 ];
 
@@ -218,14 +245,17 @@ function EnBody() {
       />
       <p>
         How the upgrade works:{" "}
-        the collectible upgrade guide. On collecting:{" "}
-        rare gifts.
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">the collectible upgrade guide</Link>.
       </p>
 
       <h2 id="market">What the market looks like</h2>
       <NftGiftMarketBoard locale="en" />
       <p>
-        Prices shift with demand, so treat any listing as a snapshot. What drives the differences is covered in{" "}
+        In @StarsPaymee_bot, listed copies are bought in the{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> for up to 300,000 so‘m (card transfer or
+        balance), and a collectible can also be taken on{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">rental</Link> for a set term. Prices shift with demand, so
+        treat any listing as a snapshot. What drives the differences is covered in{" "}
         <Link href="/blog/telegram-gift-price">why two similar gifts cost differently</Link>.
       </p>
 
@@ -236,7 +266,7 @@ function EnBody() {
         this as an investment, <Link href="/blog/telegram-nft-investitsiya">the risks</Link>.
       </p>
 
-      <InlineCta text="Buy Stars in so\u2018m and upgrade a gift yourself." product={{ kind: "stars", amount: 100 }} />
+      <InlineCta text="Need Stars to upgrade a gift that offers it? Buy them in so‘m." product={{ kind: "stars", amount: 100 }} />
 
       <h2 id="xavf">Safety</h2>
       <KeyFacts label="Before any deal">
@@ -265,7 +295,11 @@ function EnBody() {
 const faqEn = [
   { question: "What is a Telegram NFT Gift?", answer: "A collectible gift with a capped run, a numbered copy and unique attributes, anchored on TON." },
   { question: "How does it differ from a regular gift?", answer: "A collectible can be transferred, listed and traded; a regular gift cannot." },
-  { question: "How do I get one?", answer: "Upgrade a regular gift with Stars inside Telegram, or buy a copy listed for resale." },
+  {
+    question: "How do I get one?",
+    answer:
+      "Buy a listed copy in the @StarsPaymee_bot NFT Market (in so‘m, up to 300,000 so‘m), rent one for a term, or upgrade a gift that offers it with Stars inside Telegram.",
+  },
   { question: "Does rarity guarantee a price rise?", answer: "No. A capped supply helps only while demand holds; prices fall too." },
   { question: "Is Premium required?", answer: "No, Premium is not needed to own a collectible gift." },
   { question: "What is the biggest risk when buying?", answer: "Paying first outside the official flow. Always verify the gift inside Telegram yourself." },
@@ -275,7 +309,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-07-29",
-  dateModified: "2026-07-29",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram nft",
     "telegram nft gift",
@@ -302,8 +336,8 @@ export const post: AeoPost = {
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
-      ctaHeading: "Yulduzdan boshlang",
-      ctaBody: "@StarsPaymee_bot — Stars va oddiy sovg‘alar so‘mda; kolleksion nusxani Telegram ichida upgrade bilan olasiz.",
+      ctaHeading: "NFT sovg‘ani so‘mda oling",
+      ctaBody: "@StarsPaymee_bot — NFT Market (kolleksion sovg‘a so‘mda, 300 000 so‘mgacha), NFT ijarasi, Stars va oddiy sovg‘alar.",
       faq: FAQ_UZ,
     },
     ru: {
@@ -314,8 +348,8 @@ export const post: AeoPost = {
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
-      ctaHeading: "Начните со звёзд",
-      ctaBody: "@StarsPaymee_bot — Stars и обычные подарки в сумах; коллекционный экземпляр делается через upgrade в Telegram.",
+      ctaHeading: "NFT-подарок в сумах",
+      ctaBody: "@StarsPaymee_bot — NFT Market (коллекционный подарок в сумах, до 300 000 сумов), аренда NFT, Stars и обычные подарки.",
       faq: FAQ_RU,
     },
     en: {
@@ -326,8 +360,8 @@ export const post: AeoPost = {
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
-      ctaHeading: "Start with Stars",
-      ctaBody: "@StarsPaymee_bot — Stars and gifts, paid in so\u2018m.",
+      ctaHeading: "Get an NFT gift in so\u2018m",
+      ctaBody: "@StarsPaymee_bot — NFT Market (collectible gifts in so\u2018m, up to 300,000 so\u2018m), NFT rental, Stars and regular gifts.",
       faq: faqEn,
     },
   },

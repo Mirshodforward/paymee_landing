@@ -4,10 +4,10 @@ import { nftGiftListings, formatGiftPriceUzs } from "@/lib/nft-gift-market";
 export function NftGiftMarketBoard({ locale = "uz" }: { locale?: "uz" | "ru" | "en" }) {
   const note =
     locale === "ru"
-      ? "Цены и список обновляются в @StarsPaymee_bot → Gift Market."
+      ? "Образец (иллюстрация). Актуальные объявления и цены — в @StarsPaymee_bot → NFT Market: цена зависит от курса TON, купить можно NFT стоимостью до 300 000 сумов."
       : locale === "en"
-        ? "Prices and the listing are refreshed in @StarsPaymee_bot → Gift Market."
-        : "Narx va ro‘yxat @StarsPaymee_bot → Gift Market bo‘limida yangilanadi.";
+        ? "Sample (illustration). Live listings and prices are in @StarsPaymee_bot → NFT Market: the price follows the TON rate, and NFTs priced up to 300,000 so‘m can be bought."
+        : "Namuna (illustratsiya). Jonli e’lonlar va narxlar — @StarsPaymee_bot → NFT Market bo‘limida: narx TON kursiga bog‘liq, 300 000 so‘mgacha bo‘lgan NFT sotib olinadi.";
 
   return (
     <div className="nft-blog-board" role="region" aria-label="Gift Market">

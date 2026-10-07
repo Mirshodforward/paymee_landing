@@ -26,8 +26,9 @@ function UzAnswer() {
     <p>
       Telegram uchun raqam sotib olishning eng qulay yo‘li — <strong>@StarsPaymee_bot</strong> yoki Mini App ichidagi
       raqamlar bo‘limi: 100 dan ortiq davlat, arzon variantlar taxminan <strong>6 600 so‘m</strong>dan, qimmatlari{" "}
-      <strong>56 300 so‘m</strong>gacha. To‘lov UzCard, HUMO, Click, Payme yoki Paynet orqali so‘mda; SMS/OTP kodini
-      shu raqam orqali qabul qilib Telegram’da ro‘yxatdan o‘tasiz yoki ikkinchi akkaunt ochasiz.
+      <strong>56 300 so‘m</strong>gacha; Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq. To‘lov
+      UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali so‘mda; SMS/OTP kodini shu raqam orqali qabul qilib
+      Telegram’da ro‘yxatdan o‘tasiz yoki ikkinchi akkaunt ochasiz.
     </p>
   );
 }
@@ -108,7 +109,7 @@ function UzBody() {
           ["Xorijiy SMS-saytlar", "USD / kripto", <No key="1" />, "Ko‘p, lekin konvertatsiya kerak"],
           [
             <>@StarsPaymee_bot / Mini App</>,
-            "UzCard, HUMO, Click, Payme, Paynet",
+            "UzCard, HUMO, Click, Payme, Uzum, Paynet",
             <Yes key="2" />,
             "100+ davlat, joriy zaxira ko‘rinadi",
           ],
@@ -164,9 +165,9 @@ function RuAnswer() {
   return (
     <p>
       Самый удобный способ купить номер для Telegram — раздел номеров в <strong>@StarsPaymee_bot</strong> или Mini App:
-      100+ стран, бюджетные варианты от ~<strong>6 600 сум</strong>, премиум до ~<strong>56 300 сум</strong>. Оплата
-      UzCard, HUMO, Click, Payme или Paynet в сумах; SMS/OTP принимаете на этот номер для регистрации или второго
-      аккаунта.
+      100+ стран, бюджетные варианты от ~<strong>6 600 сум</strong>, премиум до ~<strong>56 300 сум</strong>; через
+      Click, Payme, Uzum или Paynet немного дороже. Оплата UzCard, HUMO, Click, Payme, Uzum или Paynet в сумах;
+      SMS/OTP принимаете на этот номер для регистрации или второго аккаунта.
     </p>
   );
 }
@@ -220,7 +221,7 @@ function RuBody() {
       <Steps>
         <Step title="Откройте бота">@StarsPaymee_bot → раздел номеров.</Step>
         <Step title="Выберите страну">Сортировка A-Z, дешёвые, дорогие, по остатку.</Step>
-        <Step title="Оплатите в сумах">UzCard, HUMO, Click, Payme, Paynet.</Step>
+        <Step title="Оплатите в сумах">UzCard, HUMO, Click, Payme, Uzum, Paynet.</Step>
         <Step title="Введите номер в Telegram">На экране регистрации.</Step>
         <Step title="Скопируйте OTP">Из интерфейса бота в Telegram.</Step>
         <Step title="Включите 2FA">По возможности сразу после входа.</Step>
@@ -263,7 +264,7 @@ const FAQ_UZ = [
   },
   {
     question: "UzCard bilan to‘lash mumkinmi?",
-    answer: "Ha, Click, Payme, Paynet, UzCard va HUMO orqali so‘mda.",
+    answer: "Ha, Click, Payme, Uzum, Paynet, UzCard va HUMO orqali so‘mda; Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq.",
   },
   {
     question: "5sim yoki Grizzly SMS o‘rniga StarsPaymee?",
@@ -306,7 +307,7 @@ const FAQ_RU = [
   },
   {
     question: "Оплата UzCard?",
-    answer: "Да, также HUMO, Click, Payme, Paynet.",
+    answer: "Да, также HUMO, Click, Payme, Uzum, Paynet; через Click, Payme, Uzum или Paynet цена немного выше.",
   },
   {
     question: "Не приходит SMS?",
@@ -327,7 +328,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "howto",
   datePublished: "2026-07-28",
-  dateModified: "2026-07-28",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram raqam",
     "telegram raqam sotib olish",
@@ -353,7 +354,7 @@ export const post: AeoPost = {
   howToSteps: [
     { name: "Botni ochish", text: "@StarsPaymee_bot yoki Mini App → raqamlar." },
     { name: "Davlat tanlash", text: "Narx va zaxiraga qarab mamlakatni tanlang." },
-    { name: "To‘lov", text: "UzCard/HUMO/Click/Payme/Paynet bilan so‘mda." },
+    { name: "To‘lov", text: "UzCard/HUMO/Click/Payme/Uzum/Paynet bilan so‘mda." },
     { name: "Telegram OTP", text: "Kodni qabul qilib ro‘yxatdan o‘ting." },
   ],
   locales: {

@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { InlineCta, Sources, KeyFacts, Steps, Step } from "@/components/blog/aeo-blocks";
 import { StarsPriceBoard } from "@/components/blog/stars-price-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
+import { formatStarsPrice } from "@/lib/products";
 
 const SLUG = "telegram-stars-narxi";
 
@@ -9,9 +10,11 @@ const SLUG = "telegram-stars-narxi";
 function UzAnswer() {
   return (
     <p>
-      StarsPaymee’da 1 dona Stars — <b>220 so‘m</b>, 50 ta — <b>11 000 so‘m</b>. Narx paket hajmi, to‘lov usuli va
-      xizmat turiga qarab farq qilishi mumkin; rasmiy oqimda esa ustiga valyuta konvertatsiyasi va do‘kon komissiyasi
-      qo‘shiladi. Joriy summa buyurtma paytida botda ko‘rsatiladi.
+      StarsPaymee’da 1 dona Stars Uzcard/Humo kartaga o‘tkazmada <b>{formatStarsPrice(1, "uz")}</b> (50 ta —{" "}
+      <b>{formatStarsPrice(50, "uz")}</b>), Click, Payme, Uzum yoki Paynet orqali{" "}
+      <b>{formatStarsPrice(1, "uz", "gateway")}</b> (50 ta — <b>{formatStarsPrice(50, "uz", "gateway")}</b>). Rasmiy
+      oqimda esa ustiga valyuta konvertatsiyasi va do‘kon komissiyasi qo‘shiladi. Joriy summa buyurtma paytida botda
+      ko‘rsatiladi.
     </p>
   );
 }
@@ -22,7 +25,11 @@ function UzBody() {
       <h2 id="omillar">Stars narxiga ta’sir qiluvchi omillar</h2>
       <KeyFacts label="Narx nimaga bog‘liq">
         <li><b>Paket hajmi</b> — qancha ko‘p olsangiz, birlik narxi shuncha barqaror rejalashtiriladi.</li>
-        <li><b>To‘lov usuli</b> — turli tizimlar turlicha komissiya olishi mumkin.</li>
+        <li>
+          <b>To‘lov usuli</b> — StarsPaymee’da karta o‘tkazmasida {formatStarsPrice(1, "uz")}/dona, Click, Payme, Uzum
+          yoki Paynet orqali {formatStarsPrice(1, "uz", "gateway")}/dona; boshqa xizmatlarda ham usullar turlicha
+          komissiya olishi mumkin.
+        </li>
         <li><b>Xizmat turi</b> — rasmiy narx va mahalliy xizmat narxi farq qiladi.</li>
         <li><b>Valyuta kursi</b> — xalqaro to‘lovlarda kurs yakuniy summaga ta’sir qiladi.</li>
       </KeyFacts>
@@ -36,7 +43,8 @@ function UzBody() {
       <h2 id="jadval">Joriy narxlar jadvali</h2>
       <StarsPriceBoard locale="uz" />
       <p>
-        Narxlar shaffof — ko‘rsatilgan summa yakuniy, ustiga yashirin to‘lov qo‘shilmaydi.
+        Jadvalda ikki narx: karta o‘tkazmasi va Click, Payme, Uzum, Paynet orqali onlayn to‘lov. Tanlangan usul
+        bo‘yicha yakuniy summa to‘lovdan oldin botda ko‘rinadi — keyin ustiga hech narsa qo‘shilmaydi.
       </p>
 
       <InlineCta text="Miqdorni kiriting — yakuniy summani darhol ko‘rasiz." />
@@ -50,7 +58,8 @@ function UzBody() {
       <KeyFacts label="Narxni solishtirishda">
         <li>
           <b>Bir yulduzga tushadigan narxni hisoblang</b> — StarsPaymee’da birlik narxi barcha paketlarda bir xil
-          (220 so‘m), boshqa platformalarda esa paket hajmiga qarab farq qilishi mumkin. Solishtirishni paket
+          (karta o‘tkazmasida {formatStarsPrice(1, "uz")}, Click/Payme/Uzum/Paynet orqali{" "}
+          {formatStarsPrice(1, "uz", "gateway")}), boshqa platformalarda esa paket hajmiga qarab farq qilishi mumkin. Solishtirishni paket
           summasi bo‘yicha emas, shu raqam bo‘yicha qiling.
         </li>
         <li>
@@ -113,9 +122,10 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      В StarsPaymee 1 Stars стоит <b>220 сум</b>, 50 штук — <b>11 000 сум</b>. Цена может отличаться в зависимости от
-      размера пакета, способа оплаты и типа сервиса; в официальном сценарии сверху добавляются конвертация валюты и
-      комиссия магазина. Актуальная сумма показывается в боте при заказе.
+      В StarsPaymee 1 Stars стоит <b>{formatStarsPrice(1, "ru")}</b> при переводе на карту Uzcard/Humo (50 штук —{" "}
+      <b>{formatStarsPrice(50, "ru")}</b>) и <b>{formatStarsPrice(1, "ru", "gateway")}</b> через Click, Payme, Uzum или
+      Paynet (50 штук — <b>{formatStarsPrice(50, "ru", "gateway")}</b>). В официальном сценарии сверху добавляются
+      конвертация валюты и комиссия магазина. Актуальная сумма показывается в боте при заказе.
     </p>
   );
 }
@@ -126,7 +136,11 @@ function RuBody() {
       <h2 id="omillar">Факторы, влияющие на цену Stars</h2>
       <KeyFacts label="От чего зависит цена">
         <li><b>Размер пакета</b> — чем больше объём, тем предсказуемее планируется стоимость единицы.</li>
-        <li><b>Способ оплаты</b> — разные системы могут брать разную комиссию.</li>
+        <li>
+          <b>Способ оплаты</b> — в StarsPaymee переводом на карту {formatStarsPrice(1, "ru")} за штуку, через Click,
+          Payme, Uzum или Paynet — {formatStarsPrice(1, "ru", "gateway")}; в других сервисах способы тоже могут
+          различаться по комиссии.
+        </li>
         <li><b>Тип сервиса</b> — официальная цена и цена местного сервиса различаются.</li>
         <li><b>Курс валюты</b> — при международных платежах курс влияет на итог.</li>
       </KeyFacts>
@@ -139,7 +153,10 @@ function RuBody() {
 
       <h2 id="jadval">Таблица актуальных цен</h2>
       <StarsPriceBoard locale="ru" />
-      <p>Цены прозрачны — показанная сумма итоговая, скрытых платежей сверху нет.</p>
+      <p>
+        В таблице две цены: перевод на карту и онлайн-оплата через Click, Payme, Uzum, Paynet. Итоговую сумму по
+        выбранному способу бот показывает до оплаты — потом ничего не добавляется.
+      </p>
 
       <InlineCta text="Введите количество — итоговую сумму увидите сразу." />
 
@@ -151,8 +168,9 @@ function RuBody() {
       </p>
       <KeyFacts label="При сравнении цен">
         <li>
-          <b>Считайте цену одной звезды</b> — в StarsPaymee цена единицы одинакова во всех пакетах (220 сум), а на
-          других площадках может зависеть от объёма. Сравнивайте именно по этому числу, а не по сумме пакета.
+          <b>Считайте цену одной звезды</b> — в StarsPaymee цена единицы одинакова во всех пакетах (
+          {formatStarsPrice(1, "ru")} переводом на карту, {formatStarsPrice(1, "ru", "gateway")} через
+          Click/Payme/Uzum/Paynet), а на других площадках может зависеть от объёма. Сравнивайте именно по этому числу, а не по сумме пакета.
         </li>
         <li>
           <b>Итоговая сумма — в момент заказа</b> — считается число, которое бот показывает после ввода
@@ -196,9 +214,10 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      At StarsPaymee one Star costs <b>220 UZS</b> and fifty cost <b>11,000 UZS</b>. The price can vary with pack
-      size, payment method and service type; the official flow adds currency conversion and a store fee on top. The
-      current total is shown in the bot when you order.
+      At StarsPaymee one Star costs <b>{formatStarsPrice(1, "en")}</b> by Uzcard/Humo card transfer (fifty cost{" "}
+      <b>{formatStarsPrice(50, "en")}</b>) and <b>{formatStarsPrice(1, "en", "gateway")}</b> via Click, Payme, Uzum or
+      Paynet (fifty cost <b>{formatStarsPrice(50, "en", "gateway")}</b>). The official flow adds currency conversion
+      and a store fee on top. The current total is shown in the bot when you order.
     </p>
   );
 }
@@ -209,7 +228,11 @@ function EnBody() {
       <h2 id="omillar">What affects the price of Stars</h2>
       <KeyFacts label="What the price depends on">
         <li><b>Pack size</b> — the larger the volume, the more predictable the per-unit planning.</li>
-        <li><b>Payment method</b> — different systems can charge different fees.</li>
+        <li>
+          <b>Payment method</b> — at StarsPaymee {formatStarsPrice(1, "en")} per star by card transfer and{" "}
+          {formatStarsPrice(1, "en", "gateway")} via Click, Payme, Uzum or Paynet; elsewhere, methods can carry
+          different fees too.
+        </li>
         <li><b>Service type</b> — the official price and a local service’s price differ.</li>
         <li><b>Exchange rate</b> — for international payments the rate shifts the total.</li>
       </KeyFacts>
@@ -222,7 +245,10 @@ function EnBody() {
 
       <h2 id="jadval">Current price table</h2>
       <StarsPriceBoard locale="en" />
-      <p>Prices are transparent — the amount shown is final, with no hidden charges added afterwards.</p>
+      <p>
+        The table shows two prices: card transfer and online payment via Click, Payme, Uzum, Paynet. The bot shows the
+        final total for the method you pick before you pay — nothing is added afterwards.
+      </p>
 
       <InlineCta text="Enter an amount — you see the final total at once." />
 
@@ -234,8 +260,9 @@ function EnBody() {
       </p>
       <KeyFacts label="When comparing prices">
         <li>
-          <b>Work out the price of a single Star</b> — at StarsPaymee the unit price is the same in every pack (220
-          UZS), while on other platforms it can depend on volume. Compare by that figure, not by the package total.
+          <b>Work out the price of a single Star</b> — at StarsPaymee the unit price is the same in every pack (
+          {formatStarsPrice(1, "en")} by card transfer, {formatStarsPrice(1, "en", "gateway")} via
+          Click/Payme/Uzum/Paynet), while on other platforms it can depend on volume. Compare by that figure, not by the package total.
         </li>
         <li>
           <b>The final total is the one at order time</b> — what counts is the number the bot shows after you enter
@@ -276,10 +303,16 @@ function EnBody() {
 }
 
 const uzFaq = [
-  { question: "Telegram Stars narxi qancha?", answer: "1 dona — 220 so‘m, 50 ta — 11 000 so‘m." },
+  {
+    question: "Telegram Stars narxi qancha?",
+    answer: `Karta o‘tkazmasida 1 dona — ${formatStarsPrice(1, "uz")}, 50 ta — ${formatStarsPrice(50, "uz")}; Click, Payme, Uzum yoki Paynet orqali 1 dona — ${formatStarsPrice(1, "uz", "gateway")}, 50 ta — ${formatStarsPrice(50, "uz", "gateway")}.`,
+  },
   { question: "Narx nimaga bog‘liq?", answer: "Paket hajmi, to‘lov usuli, xizmat turi va valyuta kursiga." },
   { question: "Rasmiy narx nega qimmatroq chiqadi?", answer: "App Store/Google Play komissiyasi va valyuta konvertatsiyasi qo‘shilgani uchun." },
-  { question: "Yashirin komissiya bormi?", answer: "Yo‘q. Botda ko‘rsatilgan summa yakuniy." },
+  {
+    question: "Yashirin komissiya bormi?",
+    answer: `Yo‘q. Tanlangan to‘lov usuli bo‘yicha yakuniy summa to‘lovdan oldin botda ko‘rsatiladi: Click, Payme, Uzum yoki Paynet orqali dona narxi ${formatStarsPrice(1, "uz", "gateway")}, karta o‘tkazmasida — ${formatStarsPrice(1, "uz")}.`,
+  },
   { question: "Narx o‘zgaradimi?", answer: "Bozor sharoitiga qarab yangilanishi mumkin — botda joriy narxni tekshiring." },
   { question: "Katta paket arzonroqmi?", answer: "Birlik narxi bir xil, lekin bitta buyurtmada ko‘p olish qulayroq." },
   { question: "Qaysi valyutada to‘layman?", answer: "So‘mda (UZS)." },
@@ -292,10 +325,16 @@ const uzFaq = [
 ];
 
 const ruFaq = [
-  { question: "Сколько стоят Telegram Stars?", answer: "1 штука — 220 сум, 50 штук — 11 000 сум." },
+  {
+    question: "Сколько стоят Telegram Stars?",
+    answer: `Переводом на карту 1 штука — ${formatStarsPrice(1, "ru")}, 50 штук — ${formatStarsPrice(50, "ru")}; через Click, Payme, Uzum или Paynet 1 штука — ${formatStarsPrice(1, "ru", "gateway")}, 50 штук — ${formatStarsPrice(50, "ru", "gateway")}.`,
+  },
   { question: "От чего зависит цена?", answer: "От размера пакета, способа оплаты, типа сервиса и курса валюты." },
   { question: "Почему официальная цена выше?", answer: "Из-за комиссии App Store/Google Play и конвертации валюты." },
-  { question: "Есть ли скрытые комиссии?", answer: "Нет. Показанная в боте сумма итоговая." },
+  {
+    question: "Есть ли скрытые комиссии?",
+    answer: `Нет. Итоговую сумму по выбранному способу оплаты бот показывает до оплаты: через Click, Payme, Uzum или Paynet — ${formatStarsPrice(1, "ru", "gateway")} за штуку, переводом на карту — ${formatStarsPrice(1, "ru")}.`,
+  },
   { question: "Меняется ли цена?", answer: "Может обновляться по рыночным условиям — проверяйте актуальную цену в боте." },
   { question: "Дешевле ли крупный пакет?", answer: "Цена за единицу одинакова, но одним заказом брать больше удобнее." },
   { question: "В какой валюте оплата?", answer: "В сумах (UZS)." },
@@ -308,10 +347,16 @@ const ruFaq = [
 ];
 
 const enFaq = [
-  { question: "How much do Telegram Stars cost?", answer: "220 UZS each; 11,000 UZS for fifty." },
+  {
+    question: "How much do Telegram Stars cost?",
+    answer: `By card transfer ${formatStarsPrice(1, "en")} each and ${formatStarsPrice(50, "en")} for fifty; via Click, Payme, Uzum or Paynet ${formatStarsPrice(1, "en", "gateway")} each and ${formatStarsPrice(50, "en", "gateway")} for fifty.`,
+  },
   { question: "What does the price depend on?", answer: "Pack size, payment method, service type and the exchange rate." },
   { question: "Why is the official price higher?", answer: "Because of the App Store/Google Play fee and currency conversion." },
-  { question: "Are there hidden fees?", answer: "No. The amount shown in the bot is final." },
+  {
+    question: "Are there hidden fees?",
+    answer: `No. The bot shows the final total for the method you pick before you pay: ${formatStarsPrice(1, "en", "gateway")} per star via Click, Payme, Uzum or Paynet, ${formatStarsPrice(1, "en")} by card transfer.`,
+  },
   { question: "Do prices change?", answer: "They can update with market conditions — check the current price in the bot." },
   { question: "Is a bigger pack cheaper?", answer: "The per-unit price is the same, but buying more in one order is more convenient." },
   { question: "Which currency do I pay in?", answer: "In so‘m (UZS)." },
@@ -328,7 +373,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-09-26",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram stars narxi",
     "stars narxi qancha",
@@ -347,7 +392,7 @@ export const post: AeoPost = {
         "Telegram Stars narxi qanday shakllanadi: paket hajmi, to‘lov usuli va kurs ta’siri. Joriy narx jadvali va eng qulay narxni topish yo‘llari.",
       metaTitle: "Telegram Stars narxi (2026) — to‘liq jadval",
       metaDescription:
-        "Telegram Stars narxi qancha? 1 dona 220 so‘m, 50 ta 11 000 so‘m. Narxga ta’sir qiluvchi omillar va joriy narx jadvali.",
+        `Telegram Stars narxi qancha? 1 dona ${formatStarsPrice(1, "uz")} (karta o‘tkazmasi) yoki ${formatStarsPrice(1, "uz", "gateway")} (Click, Payme, Uzum, Paynet). Narxga ta’sir qiluvchi omillar va joriy narx jadvali.`,
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -361,7 +406,7 @@ export const post: AeoPost = {
         "Как формируется цена Telegram Stars: размер пакета, способ оплаты и влияние курса. Актуальная таблица цен и как найти выгодный вариант.",
       metaTitle: "Цена Telegram Stars (2026) — полная таблица",
       metaDescription:
-        "Сколько стоят Telegram Stars? 1 штука 220 сум, 50 штук 11 000 сум. Факторы, влияющие на цену, и актуальная таблица.",
+        `Сколько стоят Telegram Stars? 1 штука ${formatStarsPrice(1, "ru")} (перевод на карту) или ${formatStarsPrice(1, "ru", "gateway")} (Click, Payme, Uzum, Paynet). Факторы, влияющие на цену, и актуальная таблица.`,
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -375,7 +420,7 @@ export const post: AeoPost = {
         "How the price of Telegram Stars is formed: pack size, payment method and the exchange rate. A current price table and how to find the best deal.",
       metaTitle: "Telegram Stars price (2026) — full table",
       metaDescription:
-        "How much do Telegram Stars cost? 220 UZS each, 11,000 UZS for fifty. The factors that affect the price and a current table.",
+        `How much do Telegram Stars cost? ${formatStarsPrice(1, "en")} each by card transfer or ${formatStarsPrice(1, "en", "gateway")} via Click, Payme, Uzum or Paynet. The factors that affect the price and a current table.`,
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

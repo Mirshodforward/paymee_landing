@@ -28,8 +28,8 @@ function TermCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       headers: ["Muddat", "Narx", "Oyiga", "Kimga mos"],
       rows: [
         ["1 oy", "45 000 so‘m", "45 000 so‘m", "Sinab ko‘rish, bir martalik ehtiyoj"],
-        ["3 oy", "160 000 so‘m", "~53 300 so‘m", "Qisqa muddat, majburiyatsiz"],
-        ["6 oy", "215 000 so‘m", "~35 800 so‘m", "Narx va muddat muvozanati"],
+        ["3 oy", "159 900 so‘m", "~53 300 so‘m", "Qisqa muddat, majburiyatsiz"],
+        ["6 oy", "216 000 so‘m", "~36 000 so‘m", "Narx va muddat muvozanati"],
         ["12 oy", "388 000 so‘m", "~32 300 so‘m", "Doimiy foydalanish"],
       ],
     },
@@ -37,8 +37,8 @@ function TermCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       headers: ["Срок", "Цена", "В месяц", "Кому подходит"],
       rows: [
         ["1 месяц", "45 000 сум", "45 000 сум", "Попробовать, разовая задача"],
-        ["3 месяца", "160 000 сум", "~53 300 сум", "Короткий срок без обязательств"],
-        ["6 месяцев", "215 000 сум", "~35 800 сум", "Баланс цены и срока"],
+        ["3 месяца", "159 900 сум", "~53 300 сум", "Короткий срок без обязательств"],
+        ["6 месяцев", "216 000 сум", "~36 000 сум", "Баланс цены и срока"],
         ["12 месяцев", "388 000 сум", "~32 300 сум", "Постоянное использование"],
       ],
     },
@@ -46,8 +46,8 @@ function TermCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
       headers: ["Term", "Price", "Per month", "Who it suits"],
       rows: [
         ["1 month", "45,000 UZS", "45,000 UZS", "Trying it, a one-off need"],
-        ["3 months", "160,000 UZS", "~53,300 UZS", "A short term, no commitment"],
-        ["6 months", "215,000 UZS", "~35,800 UZS", "The balance of price and term"],
+        ["3 months", "159,900 UZS", "~53,300 UZS", "A short term, no commitment"],
+        ["6 months", "216,000 UZS", "~36,000 UZS", "The balance of price and term"],
         ["12 months", "388,000 UZS", "~32,300 UZS", "Permanent use"],
       ],
     },
@@ -85,7 +85,7 @@ function UzBody() {
       <p>
         Jadvaldan ikkita xulosa chiqadi. Birinchisi: 1 oylik tarifning asosiy afzalligi — <b>eng kam boshlang‘ich
         to‘lov</b>, ya’ni bir martada atigi 45 000 so‘m berasiz. Ikkinchisi: oyiga hisoblaganda eng tejamkori —
-        12 oylik (~32 300 so‘m), undan keyin 6 oylik (~35 800 so‘m). 3 oylik esa oyiga ~53 300 so‘mga tushadi,
+        12 oylik (~32 300 so‘m), undan keyin 6 oylik (~36 000 so‘m). 3 oylik esa oyiga ~53 300 so‘mga tushadi,
         ya’ni 1 oylikdan ham qimmat — u aynan uch oy kerak bo‘lgandagina mantiqiy.
       </p>
 
@@ -124,13 +124,13 @@ function UzBody() {
       </p>
       <InfoGrid>
         <InfoCard emoji="💳" title="UzCard / HUMO">
-          To‘g‘ridan-to‘g‘ri karta raqami bilan; bank SMS yoki ilova orqali tasdiq kodi yuboradi.
+          Bot ko‘rsatgan kartaga aynan ko‘rsatilgan summani bank ilovangizdan o‘tkazasiz.
         </InfoCard>
-        <InfoCard emoji="🟢" title="Click / Payme">
+        <InfoCard emoji="🟢" title="Click / Payme / Uzum">
           Ilovada bir bosishda — karta rekvizitlarini qayta kiritmasdan.
         </InfoCard>
         <InfoCard emoji="🏧" title="Paynet">
-          Naqd pul bilan to‘lamoqchi bo‘lganlar uchun.
+          Paynet ilovasi yoki terminali orqali.
         </InfoCard>
         <InfoCard emoji="🚫" title="Visa kerak emas">
           Narx so‘mda ko‘rsatiladi, bank konvertatsiya komissiyasi qo‘shilmaydi.
@@ -230,7 +230,7 @@ function RuBody() {
       <p>
         Из таблицы следуют два вывода. Первый: главное преимущество месячного тарифа — <b>самый маленький
         стартовый платёж</b>, всего 45 000 сум за раз. Второй: в пересчёте на месяц выгоднее всего годовой
-        (~32 300 сум), затем полугодовой (~35 800 сум). А трёхмесячный выходит ~53 300 сум в месяц — дороже
+        (~32 300 сум), затем полугодовой (~36 000 сум). А трёхмесячный выходит ~53 300 сум в месяц — дороже
         месячного, поэтому он оправдан, только если нужны ровно три месяца.
       </p>
 
@@ -263,13 +263,13 @@ function RuBody() {
       </p>
       <InfoGrid>
         <InfoCard emoji="💳" title="UzCard / Humo">
-          Напрямую по номеру карты; банк присылает код подтверждения по SMS или в приложении.
+          Переводите ровно указанную сумму на карту, которую показал бот, из своего банковского приложения.
         </InfoCard>
-        <InfoCard emoji="🟢" title="Click / Payme">
+        <InfoCard emoji="🟢" title="Click / Payme / Uzum">
           В один клик в приложении — без повторного ввода реквизитов.
         </InfoCard>
         <InfoCard emoji="🏧" title="Paynet">
-          Для тех, кто платит наличными.
+          Через приложение или терминал Paynet.
         </InfoCard>
         <InfoCard emoji="🚫" title="Виза не нужна">
           Цена показывается в сумах, комиссия банка за конвертацию не добавляется.
@@ -296,7 +296,7 @@ function RuBody() {
         <Step title="3. Передайте данные, которые запросит бот">
           Бот последовательно объяснит шаги, нужные для официальной активации.
         </Step>
-        <Step title="4. Оплатите в сумах">UzCard, Humo, Click, Payme или Paynet — сумма 45 000 сум.</Step>
+        <Step title="4. Оплатите в сумах">UzCard, Humo, Click, Payme, Uzum или Paynet — сумма 45 000 сум.</Step>
         <Step title="5. Подтвердите активацию">Пройдите три проверки из раздела ниже.</Step>
       </Steps>
 
@@ -366,7 +366,7 @@ function EnBody() {
       <p>
         Two things follow from the table. First, the monthly plan&rsquo;s real advantage is the <b>smallest upfront
         payment</b> — 45,000 UZS in one go. Second, per month the best value is the yearly plan (~32,300 UZS),
-        then six months (~35,800 UZS). Three months works out at ~53,300 UZS per month — more than the monthly
+        then six months (~36,000 UZS). Three months works out at ~53,300 UZS per month — more than the monthly
         plan — so it only makes sense when you need exactly three months.
       </p>
 
@@ -400,13 +400,13 @@ function EnBody() {
       </p>
       <InfoGrid>
         <InfoCard emoji="💳" title="UzCard / HUMO">
-          Straight from the card number; the bank sends a confirmation code by SMS or in its app.
+          Send exactly the shown amount to the card the bot displays, from your banking app.
         </InfoCard>
-        <InfoCard emoji="🟢" title="Click / Payme">
+        <InfoCard emoji="🟢" title="Click / Payme / Uzum">
           One tap in the app — no re-entering card details.
         </InfoCard>
         <InfoCard emoji="🏧" title="Paynet">
-          For anyone who prefers to pay in cash.
+          Through the Paynet app or a Paynet terminal.
         </InfoCard>
         <InfoCard emoji="🚫" title="No Visa needed">
           The price is shown in so‘m and no bank conversion fee is added.
@@ -522,7 +522,7 @@ const ruFaq = [
   {
     question: "Можно ли оформить Premium на месяц картой UzCard или Humo?",
     answer:
-      "Да. Платёж проходит в сумах внутри местной системы — UzCard, Humo, Click, Payme или Paynet. Международная карта не нужна.",
+      "Да. Платёж проходит в сумах внутри местной системы — UzCard, Humo, Click, Payme, Uzum или Paynet. Международная карта не нужна.",
   },
   { question: "Сколько стоит месячный тариф?", answer: "45 000 сум." },
   {
@@ -595,7 +595,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-04-07",
-  dateModified: "2026-09-20",
+  dateModified: "2026-10-06",
   keywords: [
     "1 oylik telegram premium",
     "bir oylik premium olish",
@@ -638,7 +638,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Оформите Premium на месяц",
-      ctaBody: "@StarsPaymee_bot — 45 000 сум, оплата в сумах через UzCard, Humo, Click, Payme и Paynet.",
+      ctaBody: "@StarsPaymee_bot — 45 000 сум, оплата в сумах через UzCard, Humo, Click, Payme, Uzum и Paynet.",
       faq: ruFaq,
     },
     en: {

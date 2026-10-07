@@ -153,7 +153,7 @@ function UzBody() {
         ]}
       />
 
-      <KeyFacts label="Qisqa ma‘lumot">
+      <KeyFacts label="Qisqa ma’lumot">
         <li>
           Click yoki Payme: <b>{fmt(GATEWAY, "uz")} so‘m</b> (240 so‘m/dona).
         </li>

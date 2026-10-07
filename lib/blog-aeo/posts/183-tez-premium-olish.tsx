@@ -101,7 +101,7 @@ function UzBody() {
         ]}
       />
 
-      <KeyFacts label="Qisqa ma‘lumot">
+      <KeyFacts label="Qisqa ma’lumot">
         <li>
           Xarid <b>username orqali</b> — parol yoki kirish kodi so‘ralmaydi.
         </li>
@@ -111,7 +111,7 @@ function UzBody() {
         <li>
           To‘rt muddat: <b>1, 3, 6</b> va <b>12</b> oy.
         </li>
-        <li>To‘lov so‘mda: Click, Payme, Uzcard va HUMO.</li>
+        <li>To‘lov so‘mda: Click, Payme, Uzum, Paynet, Uzcard va HUMO — Premium narxi hammasida bir xil.</li>
       </KeyFacts>
 
       <h2 id="nega">Premium’ni tez olish nimaga qulay?</h2>
@@ -148,7 +148,7 @@ function UzBody() {
       <p>
         Buyurtmani tezroq yakunlash o‘zingizga ham bog‘liq: username’ni oldindan tayyorlab qo‘ying,
         kerakli muddatni bilib oling va yakuniy summani to‘lovdan oldin tekshiring. To‘g‘ri kiritilgan
-        ma‘lumot qayta tuzatishga ketadigan vaqtni butunlay olib tashlaydi.
+        ma’lumot qayta tuzatishga ketadigan vaqtni butunlay olib tashlaydi.
       </p>
 
       <h2 id="narx">Arzon Premium: qaysi muddat sizga mos?</h2>
@@ -183,7 +183,7 @@ function UzBody() {
       </p>
       <InfoGrid>
         <InfoCard title="Onlayn to‘lov" emoji="⚡">
-          Click va Payme orqali to‘lov avtomatik tasdiqlanadi — buyurtma qo‘lda tekshiruvsiz davom
+          Click, Payme, Uzum va Paynet orqali to‘lov avtomatik tasdiqlanadi — buyurtma qo‘lda tekshiruvsiz davom
           etadi.
         </InfoCard>
         <InfoCard title="Karta o‘tkazmasi" emoji="💳">
@@ -193,7 +193,7 @@ function UzBody() {
       </InfoGrid>
       <p>
         Username orqali xaridda <b>xorijiy karta</b> tayyorlash ham, akkauntga <b>kirish
-        ma‘lumotlarini berish</b> ham talab qilinmaydi.
+        ma’lumotlarini berish</b> ham talab qilinmaydi.
       </p>
 
       <InlineCta text="Premium kerakmi? Botni oching — muddat, narx va shartlar to‘lovdan oldin ko‘rinadi." />
@@ -211,7 +211,7 @@ function UzBody() {
           adashtirmang — buyurtma aynan username bo‘yicha ketadi.
         </Step>
         <Step title="To‘lovni yakunlang">
-          Summa va buyurtma ma‘lumotlari to‘g‘ri bo‘lsa, mavjud usuldan foydalaning.
+          Summa va buyurtma ma’lumotlari to‘g‘ri bo‘lsa, mavjud usuldan foydalaning.
         </Step>
         <Step title="Holatni tekshiring">
           Tasdiqni kuting va qabul qiluvchi akkauntda Premium faollashganini ko‘ring.
@@ -294,7 +294,7 @@ const uzFaq = [
   {
     question: "Telegram Premium narxi qancha?",
     answer:
-      "1 oy — 45 000, 3 oy — 160 000, 6 oy — 215 000, 12 oy — 388 000 so‘m. Amaldagi yakuniy narx botda ko‘rsatiladi.",
+      "1 oy — 45 000, 3 oy — 159 900, 6 oy — 216 000, 12 oy — 388 000 so‘m. Amaldagi yakuniy narx botda ko‘rsatiladi.",
   },
   {
     question: "Premium uchun akkaunt paroli kerakmi?",
@@ -351,7 +351,7 @@ function RuBody() {
         <li>
           Четыре срока: <b>1, 3, 6</b> и <b>12</b> месяцев.
         </li>
-        <li>Оплата в сумах: Click, Payme, Uzcard и HUMO.</li>
+        <li>Оплата в сумах: Click, Payme, Uzum, Paynet, Uzcard и HUMO — цена Premium везде одинаковая.</li>
       </KeyFacts>
 
       <h2 id="nega">Зачем быстрая покупка Premium?</h2>
@@ -418,7 +418,7 @@ function RuBody() {
       </p>
       <InfoGrid>
         <InfoCard title="Онлайн-оплата" emoji="⚡">
-          Через Click и Payme оплата подтверждается автоматически — заказ идёт дальше без ручной
+          Через Click, Payme, Uzum и Paynet оплата подтверждается автоматически — заказ идёт дальше без ручной
           проверки.
         </InfoCard>
         <InfoCard title="Перевод с карты" emoji="💳">
@@ -525,7 +525,7 @@ const ruFaq = [
   {
     question: "Сколько стоит Telegram Premium?",
     answer:
-      "1 месяц — 45 000, 3 месяца — 160 000, 6 месяцев — 215 000, 12 месяцев — 388 000 сум. Итоговая цена показывается в боте.",
+      "1 месяц — 45 000, 3 месяца — 159 900, 6 месяцев — 216 000, 12 месяцев — 388 000 сум. Итоговая цена показывается в боте.",
   },
   {
     question: "Нужен ли пароль от аккаунта?",
@@ -582,7 +582,7 @@ function EnBody() {
         <li>
           Four lengths: <b>1, 3, 6</b> and <b>12</b> months.
         </li>
-        <li>Payment in som: Click, Payme, Uzcard and HUMO.</li>
+        <li>Payment in som: Click, Payme, Uzum, Paynet, Uzcard and HUMO — the Premium price is the same on all of them.</li>
       </KeyFacts>
 
       <h2 id="nega">Why speed matters here</h2>
@@ -648,7 +648,7 @@ function EnBody() {
       </p>
       <InfoGrid>
         <InfoCard title="Online payment" emoji="⚡">
-          Through Click and Payme the payment is confirmed automatically, so the order continues
+          Through Click, Payme, Uzum and Paynet the payment is confirmed automatically, so the order continues
           without a manual check.
         </InfoCard>
         <InfoCard title="Card transfer" emoji="💳">
@@ -755,7 +755,7 @@ const enFaq = [
   {
     question: "How much does Telegram Premium cost?",
     answer:
-      "1 month is 45,000, 3 months 160,000, 6 months 215,000 and 12 months 388,000 som. The final price is shown in the bot.",
+      "1 month is 45,000, 3 months 159,900, 6 months 216,000 and 12 months 388,000 som. The final price is shown in the bot.",
   },
   {
     question: "Is an account password required?",
@@ -779,7 +779,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-09-24",
-  dateModified: "2026-09-24",
+  dateModified: "2026-10-06",
   keywords: [
     "tez premium olish",
     "telegram premium tez olish",
@@ -797,7 +797,7 @@ export const post: AeoPost = {
     { name: "Botga kiring", text: "@StarsPaymee_bot ni oching va Premium bo‘limini tanlang." },
     { name: "Paketni tanlang", text: "1, 3, 6 yoki 12 oylik muddatdan keraklisini belgilang." },
     { name: "Username kiriting", text: "Qabul qiluvchining username’ini yozing va tekshiring." },
-    { name: "To‘lang", text: "Click, Payme yoki karta o‘tkazmasi bilan summani to‘lang." },
+    { name: "To‘lang", text: "Click, Payme, Uzum, Paynet yoki karta o‘tkazmasi bilan summani to‘lang." },
     { name: "Holatni tekshiring", text: "Tasdiqni kuting va akkauntda Premium faollashganini ko‘ring." },
   ],
   locales: {

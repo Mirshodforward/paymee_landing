@@ -9,7 +9,7 @@ function UzAnswer() {
   return (
     <p>
       Ha. Xalqaro bank kartasi bo‘lmasa ham Stars sotib olish mumkin: <b>@StarsPaymee_bot</b> mahalliy to‘lov
-      usullarini qabul qiladi — UzCard, HUMO, Click, Payme va Uzum. <b>Naqd pul</b> ham ishlaydi: uni
+      usullarini qabul qiladi — UzCard, HUMO, Click, Payme, Uzum va Paynet. <b>Naqd pul</b> ham ishlaydi: uni
       terminalda kartaga yoki hamyonga solasiz. Xalqaro karta yoki qo‘shimcha
       hisob ochish shart emas.
     </p>
@@ -32,7 +32,7 @@ function UzBody() {
           UzCard va HUMO — to‘g‘ridan-to‘g‘ri.
         </InfoCard>
         <InfoCard emoji="📱" title="Elektron hamyon">
-          Click va Payme ilovalari orqali.
+          Click, Payme, Uzum va Paynet ilovalari orqali.
         </InfoCard>
         <InfoCard emoji="🏧" title="Naqd to‘lov">
           Naqd pul bilan — terminalda kartaga yoki Click/Payme hamyoniga solib.
@@ -91,7 +91,7 @@ function RuAnswer() {
   return (
     <p>
       Да. Stars можно купить и без международной банковской карты: <b>@StarsPaymee_bot</b> принимает местные способы
-      оплаты — UzCard, HUMO, Click, Payme и Uzum. <b>Наличные</b> тоже подходят: их вносят в терминале
+      оплаты — UzCard, HUMO, Click, Payme, Uzum и Paynet. <b>Наличные</b> тоже подходят: их вносят в терминале
       на карту или в кошелёк. Международная карта или дополнительный счёт не
       нужны.
     </p>
@@ -113,7 +113,7 @@ function RuBody() {
           UzCard и HUMO — напрямую.
         </InfoCard>
         <InfoCard emoji="📱" title="Электронный кошелёк">
-          Через приложения Click и Payme.
+          Через приложения Click, Payme, Uzum и Paynet.
         </InfoCard>
         <InfoCard emoji="🏧" title="Наличные">
           Наличными — внося их в терминале на карту или в кошелёк Click/Payme.
@@ -170,7 +170,7 @@ function EnAnswer() {
   return (
     <p>
       Yes. You can buy Stars without an international bank card: <b>@StarsPaymee_bot</b> accepts local payment
-      methods — UzCard, HUMO, Click, Payme and Uzum. <b>Cash</b> works too: you feed it into a terminal,
+      methods — UzCard, HUMO, Click, Payme, Uzum and Paynet. <b>Cash</b> works too: you feed it into a terminal,
       onto a card or a wallet. No international card and no extra account are
       needed.
     </p>
@@ -192,7 +192,7 @@ function EnBody() {
           UzCard and HUMO — directly.
         </InfoCard>
         <InfoCard emoji="📱" title="E-wallets">
-          Through the Click and Payme apps.
+          Through the Click, Payme, Uzum and Paynet apps.
         </InfoCard>
         <InfoCard emoji="🏧" title="Cash">
           In cash — fed into a terminal, onto a card or a Click/Payme wallet.
@@ -252,7 +252,7 @@ const uzFaq = [
   { question: "Xalqaro karta shartmi?", answer: "Yo‘q, umuman kerak emas." },
   {
     question: "Naqd pul bilan qanday to‘layman?",
-    answer: "Botda «naqd» tugmasi yo‘q. Naqd pulni terminalda, bank kassasida yoki cash-in bankomatda kartaga yoki Click/Payme hamyoniga solasiz, keyin botda shu usulni tanlaysiz.",
+    answer: "Botdagi Paynet usulini Paynet terminalida ham to‘lash mumkin. Yoki naqd pulni terminalda, bank kassasida yoki cash-in bankomatda kartaga yoki Click/Payme hamyoniga solasiz, keyin botda shu usulni tanlaysiz.",
   },
   { question: "Qo‘shimcha hisob ochish kerakmi?", answer: "Yo‘q, hech qanday qo‘shimcha ro‘yxatdan o‘tish talab qilinmaydi." },
   { question: "Konvertatsiya bo‘ladimi?", answer: "Yo‘q — to‘lov to‘g‘ridan-to‘g‘ri so‘mda." },
@@ -269,7 +269,7 @@ const ruFaq = [
   { question: "Обязательна ли международная карта?", answer: "Нет, она вообще не нужна." },
   {
     question: "Как заплатить наличными?",
-    answer: "Кнопки «наличные» в боте нет. Деньги вносят в терминале, кассе банка или банкомате с cash-in на карту либо в кошелёк Click/Payme, а затем выбирают этот способ в боте.",
+    answer: "Способ Paynet в боте можно оплатить и в терминале Paynet. Либо деньги вносят в терминале, кассе банка или банкомате с cash-in на карту либо в кошелёк Click/Payme, а затем выбирают этот способ в боте.",
   },
   { question: "Нужно ли открывать дополнительный счёт?", answer: "Нет, никакой дополнительной регистрации не требуется." },
   { question: "Будет ли конвертация?", answer: "Нет — оплата сразу в сумах." },
@@ -286,7 +286,7 @@ const enFaq = [
   { question: "Is an international card required?", answer: "No, it is not needed at all." },
   {
     question: "How do I pay in cash?",
-    answer: "There is no “cash” button in the bot. You put the money onto a card or into a Click/Payme wallet at a terminal, a bank desk or a cash-in ATM, then pick that method in the bot.",
+    answer: "The bot’s Paynet method can also be paid at a Paynet terminal. Or you put the money onto a card or into a Click/Payme wallet at a terminal, a bank desk or a cash-in ATM, then pick that method in the bot.",
   },
   { question: "Do I need to open an extra account?", answer: "No, no additional registration is required." },
   { question: "Will there be conversion?", answer: "No — payment is directly in so‘m." },
@@ -300,7 +300,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "problem",
   datePublished: "2026-08-02",
-  dateModified: "2026-08-02",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram stars kartasiz sotib olish",
     "kartasiz stars olish",

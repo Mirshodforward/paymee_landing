@@ -1,3 +1,4 @@
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowIcon } from "@/components/v2/icons";
 import {
@@ -25,6 +26,16 @@ type Props = {
 };
 
 /**
+ * Mockupdagi summa — karta narxi. Click/Payme/Uzum/Paynet orqali bot ustama
+ * qo'shadi (2026-10-06 holati), shuning uchun summa ostida qisqa izoh turadi.
+ */
+const GATEWAY_NOTE: Record<string, string> = {
+  uz: "Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq",
+  ru: "Через Click, Payme, Uzum или Paynet цена немного выше",
+  en: "Slightly higher via Click, Payme, Uzum or Paynet",
+};
+
+/**
  * Bosh sahifa: Kanal Boost arenda (1–30 kun, avtomatik).
  *
  * Sarlavha bloki alohida `sec-head` emas, o‘ng ustun ichida: telefon baland
@@ -49,6 +60,8 @@ export function V2BoostMarketSection({
 }: Props) {
   const sampleTotal = estimateBoostTotalUzs(1, 30);
   const ch = boostMarketDemoChannel;
+  const locale = useLocale();
+  const gatewayNote = GATEWAY_NOTE[locale] ?? GATEWAY_NOTE.uz;
 
   return (
     <section className="sec boost-market-sec" id="boost-market">
@@ -105,6 +118,7 @@ export function V2BoostMarketSection({
                 </div>
                 <div className="boost-total">
                   ~{formatBoostUzs(sampleTotal)} <small>(1×30 kun, taxminiy)</small>
+                  <small>{gatewayNote}</small>
                 </div>
               </div>
             </div>

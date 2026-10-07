@@ -24,8 +24,14 @@ function WhatChanged({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Oddiy sovg‘alar", "Ha, ishlaydi", "Ha"],
         ["Yulduzlar (Stars)", "Ha, ishlaydi", "Ha"],
         ["Telegram Premium", "Ha, ishlaydi", "Ha"],
-        ["Sotuvdan tugagan kolleksion sovg‘alar", "Hozir yo‘q", "Ha, bozorda mavjud bo‘lsa"],
-        ["Oddiy sovg‘ani collectible’ga ko‘tarish", "Yo‘q", "Ha, yulduz evaziga"],
+        [
+          "Sotuvdan olib tashlangan limited sovg‘ani yangi holda olish",
+          "Yo‘q — 14-sentabrdan botlarga berilmaydi",
+          "Yo‘q — Telegram do‘konida ham sotilmaydi",
+        ],
+        ["Sotuvdagi kolleksion (NFT) nusxani sotib olish", "Ha — NFT Market, 300 000 so‘mgacha", "Ha, bozorda mavjud bo‘lsa"],
+        ["NFT sovg‘ani muddatga olish (ijara)", "Ha — NFT ijarasi", "Yo‘q"],
+        ["Sovg‘ani collectible’ga ko‘tarish (upgrade)", "Yo‘q", "Ha, yulduz evaziga — sovg‘ada shu imkoniyat bo‘lsa"],
       ],
     },
     ru: {
@@ -34,8 +40,14 @@ function WhatChanged({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Обычные подарки", "Да, работает", "Да"],
         ["Звёзды (Stars)", "Да, работает", "Да"],
         ["Telegram Premium", "Да, работает", "Да"],
-        ["Распроданные коллекционные подарки", "Сейчас нет", "Да, если есть на рынке"],
-        ["Апгрейд обычного подарка до collectible", "Нет", "Да, за звёзды"],
+        [
+          "Снятый с продажи limited-подарок как новый",
+          "Нет — с 14 сентября ботам недоступен",
+          "Нет — в магазине Telegram его тоже нет",
+        ],
+        ["Покупка выставленного коллекционного (NFT) экземпляра", "Да — NFT Market, до 300 000 сумов", "Да, если есть на рынке"],
+        ["NFT-подарок на срок (аренда)", "Да — аренда NFT", "Нет"],
+        ["Апгрейд подарка до collectible", "Нет", "Да, за звёзды — если у подарка есть такая опция"],
       ],
     },
     en: {
@@ -44,8 +56,14 @@ function WhatChanged({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Regular gifts", "Yes, works", "Yes"],
         ["Stars", "Yes, works", "Yes"],
         ["Telegram Premium", "Yes, works", "Yes"],
-        ["Sold-out collectible gifts", "Not at the moment", "Yes, if listed on the market"],
-        ["Upgrading a regular gift to collectible", "No", "Yes, for Stars"],
+        [
+          "A limited gift Telegram took off sale, bought new",
+          "No — not offered to bots since 14 September",
+          "No — not on sale in Telegram either",
+        ],
+        ["Buying a listed collectible (NFT) copy", "Yes — NFT Market, up to 300,000 so‘m", "Yes, if listed on the market"],
+        ["An NFT gift for a set term (rental)", "Yes — NFT rental", "No"],
+        ["Upgrading a gift to collectible", "No", "Yes, for Stars — if the gift offers it"],
       ],
     },
   }[locale];
@@ -62,9 +80,11 @@ function WhatChanged({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      Hozirda <b>@StarsPaymee_bot</b> orqali faqat <b>oddiy sovg‘alar</b>, yulduzlar va Premium sotib olish
-      mumkin. Sotuvdan tugagan <b>kolleksion (NFT) sovg‘alar</b> bot orqali yetkazilmaydi. Lekin yo‘l butunlay
-      yopilgani yo‘q: oddiy sovg‘ani Telegram ichida <b>o‘zingiz collectible darajasiga ko‘tarishingiz</b> mumkin.
+      Bu yerda ikki xil sovg‘ani farqlash kerak. Telegram sotuvdan olib tashlagan <b>limited sovg‘alarni</b>{" "}
+      2026-yil 14-sentabrdan botlar yangi holda yubora olmaydi — shuning uchun ular @StarsPaymee_bot’ning oddiy
+      sovg‘alar katalogida yo‘q. <b>Kolleksion (NFT) sovg‘alar</b> esa botda bor: <b>NFT Market</b> bo‘limida
+      sotuvdagi nusxani 300 000 so‘mgacha sotib olasiz (egalik sizga o‘tadi) yoki <b>NFT ijarasida</b> muddatga
+      olasiz.
     </p>
   );
 }
@@ -72,10 +92,12 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
-      <Notice label="Xizmatdagi o‘zgarish">
+      <Notice label="Yangilandi — 2026-yil oktabr">
         <p>
-          Sotuvdan tugagan kolleksion sovg‘alarni bot orqali yetkazish <b>to‘xtatildi</b>. Botning qolgan barcha
-          bo‘limlari — oddiy sovg‘alar, yulduzlar, Premium, o‘yin to‘ldirish va Steam — avvalgidek ishlaydi.
+          2026-yil 14-sentabrdan Telegram sotuvdan olib tashlagan limited sovg‘alar botlar orqali yuborilmaydi —
+          ular oddiy sovg‘alar katalogidan olib tashlandi. 21-sentabrdan botda <b>NFT Market</b> ishlaydi:
+          sotuvdagi kolleksion (NFT) sovg‘ani 300 000 so‘mgacha sotib olish mumkin. <b>NFT ijarasi</b>, oddiy
+          sovg‘alar, Stars, Premium, o‘yin to‘ldirish va Steam ham ishlaydi.
         </p>
       </Notice>
 
@@ -84,57 +106,62 @@ function UzBody() {
         items={[
           { href: "#nima", label: "Aniq nima o‘zgardi" },
           { href: "#nega", label: "Nega shunday bo‘ldi" },
-          { href: "#qoldi", label: "Nima ishlashda qoldi" },
-          { href: "#yol", label: "Kolleksion sovg‘a olishning yo‘li" },
-          { href: "#ehtiyot", label: "Nimaga ehtiyot bo‘lish kerak" },
+          { href: "#qoldi", label: "Botda hozir nima bor" },
+          { href: "#yol", label: "Kolleksion sovg‘ani olishning uch yo‘li" },
+          { href: "#ehtiyot", label: "Boshqa joydan olayotganda" },
         ]}
       />
 
       <h2 id="nima">Aniq nima o‘zgardi</h2>
       <p>
-        Ilgari xizmat orqali <b>sotuvdan tugagan</b> kolleksion sovg‘alarni ham buyurtma qilish mumkin edi — ya’ni
-        Telegramning o‘zida allaqachon tarqab bo‘lgan, faqat qo‘ldan-qo‘lga o‘tadigan nusxalarni. Hozir bu
-        imkoniyat mavjud emas.
+        Ilgari botning oddiy sovg‘alar katalogida 11 ta <b>limited sovg‘a</b> ham bor edi — Telegram sotuvdan
+        olib tashlagan nusxalar. 2026-yil 14-sentabrdan Telegram ularni botlarga bermay qo‘ydi: botlar uchun
+        sovg‘alar ro‘yxatida endi faqat oddiy sovg‘alar qoldi. Shuning uchun bu sovg‘alar katalogdan olib
+        tashlandi.
       </p>
       <WhatChanged locale="uz" />
       <p>
-        Ya’ni chegara <b>sovg‘a turida</b>: doimiy katalogdagi oddiy sovg‘alar ishlayveradi, kolleksion va
-        tugagan nusxalar esa yo‘q.
+        Ya’ni cheklov faqat <b>yangi limited nusxaga</b> tegishli. Tayyor kolleksion (NFT) nusxa — NFT Market’da,
+        muddatga — NFT ijarasida.
       </p>
 
       <h2 id="nega">Nega shunday bo‘ldi</h2>
       <p>
-        Bu yerda aniq bo‘lish kerak, chunki internetda turli gaplar yuribdi. Telegramning ochiq hujjatlarida
-        botlarga kolleksion sovg‘a sotib olishni <b>alohida taqiqlovchi</b> e’lon biz tekshirgan paytda
-        topilmadi. Aslida rasm biroz boshqacha:
+        Bu yerda aniq bo‘lish kerak, chunki internetda turli gaplar yuribdi. Biz tekshirgan narsalar:
       </p>
-      <KeyFacts label="Hujjatlarda nima yozilgan">
+      <KeyFacts label="Nimani aniq bilamiz">
         <li>
-          <b>Bot API’dagi sovg‘a yuborish</b> rasmiy katalogdagi sovg‘alar bilan ishlaydi — ya’ni oddiy
-          sovg‘alar bilan.
+          <b>Bot API’dagi sovg‘a yuborish</b> faqat Telegram botlarga bergan ro‘yxatdagi sovg‘alar bilan
+          ishlaydi; 2026-yil 14-sentabrdan bu ro‘yxatda limited sovg‘alar yo‘q — faqat oddiy sovg‘alar.
         </li>
         <li>
-          <b>Kolleksion sovg‘alarni sotib olish</b> hech qachon botlar uchun hujjatlashtirilgan imkoniyat
-          bo‘lmagan. Ular Telegram ichida, foydalanuvchi tomonidan olinadi.
+          <b>Rasmiy e’lon</b> — botlarga limited sovg‘alarni alohida taqiqlovchi e’lon biz tekshirgan paytda
+          topilmadi; biz o‘zgarishning o‘zini ko‘rdik.
         </li>
         <li>
-          <b>Upgrade, transfer va konvertatsiya</b> kabi amallar hujjatda biznes-akkaunt oqimi sifatida
-          tasvirlangan, oddiy «botdan sotib olish» sifatida emas.
+          <b>Kolleksion (NFT) sovg‘alar</b> bu yo‘ldan yurmaydi: NFT Market’dagi nusxa TON’dagi ochiq gift
+          bozoridan sotib olinadi va Telegram akkauntingizga o‘tkaziladi; ijara ham shu bozor orqali ishlaydi.
+          Shuning uchun bu cheklov ularga ta’sir qilmaydi.
         </li>
       </KeyFacts>
       <p>
-        Shuning uchun to‘g‘ri ta’rif shunday: kolleksion sovg‘alarni yetkazish hujjatlashtirilgan bot
-        imkoniyatlaridan tashqarida ishlagan va endi u ishlamay qo‘ydi. Biz «Telegram falon sanada taqiqladi»
-        deb aytmaymiz — buni tasdiqlovchi rasmiy e’lonni topmadik.
+        Demak to‘g‘ri ta’rif: bot yangi limited sovg‘ani yubora olmaydi, lekin tayyor kolleksion nusxani sotib
+        olib bera oladi. Rasmiy e’lon topilmagani uchun «Telegram falon sanada taqiqladi» deb aytmaymiz.
       </p>
 
-      <h2 id="qoldi">Nima ishlashda qoldi</h2>
+      <h2 id="qoldi">Botda hozir nima bor</h2>
       <InfoGrid>
+        <InfoCard emoji="🖼️" title="NFT Market">
+          Sotuvdagi kolleksion (NFT) nusxa — 300 000 so‘mgacha; egalik sizga o‘tadi.
+        </InfoCard>
+        <InfoCard emoji="⏳" title="NFT ijarasi">
+          Kolleksion sovg‘ani tanlangan muddatga olib turish; muddat tugagach u qaytariladi.
+        </InfoCard>
         <InfoCard emoji="🎁" title="Oddiy sovg‘alar">
-          Doimiy katalogdagi sovg‘alar — avvalgidek, so‘mda va bir necha daqiqada.
+          Doimiy katalogdagi sovg‘alar (15–100 ⭐) — avvalgidek, so‘mda va bir necha daqiqada.
         </InfoCard>
         <InfoCard emoji="⭐" title="Yulduzlar">
-          Stars xaridi to‘liq ishlaydi — kolleksion sovg‘a uchun ham aynan shular kerak bo‘ladi.
+          Stars xaridi to‘liq ishlaydi — sovg‘ani upgrade qilish uchun ham aynan shular kerak bo‘ladi.
         </InfoCard>
         <InfoCard emoji="💎" title="Premium">
           3, 6, 12 oylik obuna va sovg‘a qilish o‘zgarmadi.
@@ -144,21 +171,45 @@ function UzBody() {
         </InfoCard>
       </InfoGrid>
 
-      <h2 id="yol">Kolleksion sovg‘a olishning ishlaydigan yo‘li</h2>
+      <h2 id="yol">Kolleksion sovg‘ani olishning uch yo‘li</h2>
       <p>
-        Eng muhim qismi shu: kolleksion sovg‘a olish imkoniyati yo‘qolgani yo‘q — u{" "}
-        <b>bir qadam uzunroq</b> bo‘ldi. Telegram hujjatiga ko‘ra, oddiy sovg‘ani collectible darajasiga
-        ko‘tarish mumkin va bu yulduzlar evaziga bajariladi.
+        Kolleksion sovg‘a olish imkoniyati yo‘qolgani yo‘q. Qaysi yo‘l mos kelishi sovg‘a sizga qancha muddatga
+        kerakligiga va qo‘lingizda qanday sovg‘a borligiga bog‘liq.
+      </p>
+
+      <h3>1. NFT Market — tayyor nusxani sotib olish</h3>
+      <p>
+        Botning <b>NFT Market</b> bo‘limida sotuvdagi kolleksion nusxani <b>300 000 so‘mgacha</b> sotib olasiz —
+        egalik sizga o‘tadi. To‘lov faqat UzCard/HUMO kartaga o‘tkazma yoki balans orqali. Xarid zanjirda
+        tasdiqlangach NFT StarsPaymee saqlovida turadi: bot @StarsPaymeeSupport’ga yozishni so‘raydi va admin
+        sovg‘ani Telegram’dagi @username’ingizga o‘tkazadi — shuning uchun bu darhol emas. Xarid tartibi —{" "}
+        <Link href="/blog/starspaymee-nft-market">StarsPaymee NFT Market</Link> maqolasida.
+      </p>
+
+      <InlineCta text="NFT Market’ni botda oching — kolleksion sovg‘a so‘mda." />
+
+      <h3>2. NFT ijarasi — muddatga olish</h3>
+      <p>
+        Sovg‘a qisqa muddatga kerak bo‘lsa (bayram, sinov), uni to‘liq sotib olmasdan <b>NFT ijarasida</b>{" "}
+        tanlangan kunlarga olasiz; muddat tugagach u qaytariladi. Batafsil —{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">NFT sovg‘a ijarasi</Link>.
+      </p>
+
+      <h3>3. Upgrade — Telegram ichida, yulduz evaziga</h3>
+      <p>
+        Telegram’da ba’zi sovg‘alarni yulduz evaziga kolleksion nusxaga ko‘tarish mumkin — lekin faqat
+        kartochkasida upgrade imkoniyati bor sovg‘ani. Tartibi:
       </p>
       <Steps>
         <Step title="1. Botdan yulduz oling">
           Kerakli miqdordagi Stars’ni so‘mda sotib oling — bu bo‘lim ishlashda davom etmoqda.
         </Step>
-        <Step title="2. Ko‘tarilishi mumkin bo‘lgan oddiy sovg‘ani tanlang">
+        <Step title="2. Ko‘tarilishi mumkin bo‘lgan sovg‘ani tanlang">
           Hamma sovg‘a ham collectible’ga ko‘tarilmaydi — sovg‘a kartochkasida shu imkoniyat borligiga qarang.
         </Step>
         <Step title="3. Sovg‘ani oling yoki yuboring">
-          Oddiy sovg‘a xaridi bot orqali avvalgidek ishlaydi.
+          Botdagi oddiy sovg‘alar hozir — doimiy sovg‘alar (15–100 ⭐). Upgrade uchun olayotgan bo‘lsangiz, avval
+          Telegram’da shu sovg‘ada bu imkoniyat borligini tekshiring.
         </Step>
         <Step title="4. Telegram ichida upgrade qiling">
           Sovg‘a kartochkasidan ko‘tarish tugmasini bosing — yulduz yechiladi va sovg‘a kolleksion nusxaga
@@ -166,25 +217,20 @@ function UzBody() {
         </Step>
       </Steps>
       <p>
-        To‘liq tartib —{" "}
-        collectible’ga upgrade qilish qo‘llanmasida.
         Yulduz kerak bo‘lsa —{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">so‘mda Stars sotib olish</Link>.
       </p>
 
-      <InlineCta text="Yulduz oling va sovg‘ani o‘zingiz collectible’ga ko‘taring." product={{ kind: "stars", amount: 100 }} />
-
-      <h2 id="ehtiyot">Nimaga ehtiyot bo‘lish kerak</h2>
-      <p>
-        Bunday o‘zgarishlardan keyin har doim «bizda hali ham ishlaydi» deydiganlar paydo bo‘ladi. Shuning uchun
-        oddiy qoidalarni eslatib o‘tamiz:
-      </p>
+      <h2 id="ehtiyot">Kolleksion sovg‘ani boshqa joydan olayotganda</h2>
+      <p>NFT sovg‘a savdosida firibgarlar ko‘p. Oddiy qoidalar:</p>
       <KeyFacts label="Ogohlantiruvchi belgilar">
         <li>
           <b>Parol yoki kirish kodi so‘ralsa</b> — to‘xtang. Sovg‘a uchun Telegram hech qachon buni so‘ramaydi.
         </li>
         <li>
-          <b>«Avval pul o‘tkazing, keyin beramiz»</b> — kolleksion sovg‘a savdosidagi eng keng tarqalgan aldov.
+          <b>Shaxsiy yozishmada notanish odamga oldindan pul o‘tkazish</b> — eng keng tarqalgan aldov.
+          StarsPaymee NFT Market’da to‘lov faqat botdagi buyurtma oynasi orqali: u yerda ko‘rsatilgan kartaga
+          aniq summani o‘tkazasiz yoki balansdan to‘laysiz. Parol yoki kod so‘ralmaydi.
         </li>
         <li>
           <b>Bozordan keskin past narx</b> — noyob nusxa arzonlashib qolmaydi.
@@ -213,6 +259,11 @@ function UzBody() {
             note: "kolleksion sovg‘alar e’loni — upgrade yulduz evaziga",
           },
           { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "sovg‘alar hujjati" },
+          {
+            href: "https://core.telegram.org/bots/api#getavailablegifts",
+            label: "Bot API — getAvailableGifts",
+            note: "botlar yubora oladigan sovg‘alar ro‘yxati",
+          },
           { href: "https://core.telegram.org/bots/api-changelog", label: "Bot API changelog", note: "botlar uchun sovg‘a imkoniyatlari tarixi" },
         ]}
       />
@@ -224,9 +275,10 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      Сейчас через <b>@StarsPaymee_bot</b> можно купить только <b>обычные подарки</b>, звёзды и Premium.
-      Распроданные <b>коллекционные (NFT) подарки</b> бот больше не выдаёт. Но путь не закрыт полностью: обычный
-      подарок можно <b>самому апгрейднуть до collectible</b> прямо в Telegram.
+      Здесь важно различать два вида подарков. <b>Limited-подарки</b>, снятые Telegram с продажи, с 14 сентября
+      2026 года боты не могут отправлять как новые — поэтому их нет в каталоге обычных подарков @StarsPaymee_bot.
+      А <b>коллекционные (NFT) подарки</b> в боте есть: в разделе <b>NFT Market</b> можно купить выставленный
+      экземпляр до 300 000 сумов (он переходит в вашу собственность) или взять NFT <b>в аренду</b> на срок.
     </p>
   );
 }
@@ -234,10 +286,12 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
-      <Notice label="Изменение в сервисе">
+      <Notice label="Обновлено — октябрь 2026">
         <p>
-          Выдача распроданных коллекционных подарков через бота <b>остановлена</b>. Все остальные разделы —
-          обычные подарки, звёзды, Premium, пополнение игр и Steam — работают как прежде.
+          С 14 сентября 2026 года limited-подарки, снятые Telegram с продажи, через ботов не отправляются — они
+          убраны из каталога обычных подарков. С 21 сентября в боте работает <b>NFT Market</b>: выставленный на
+          продажу коллекционный (NFT) подарок можно купить за сумму до 300 000 сумов. <b>Аренда NFT</b>, обычные
+          подарки, Stars, Premium, пополнение игр и Steam тоже работают.
         </p>
       </Notice>
 
@@ -246,56 +300,62 @@ function RuBody() {
         items={[
           { href: "#nima", label: "Что именно изменилось" },
           { href: "#nega", label: "Почему так вышло" },
-          { href: "#qoldi", label: "Что продолжает работать" },
-          { href: "#yol", label: "Рабочий путь к коллекционному" },
-          { href: "#ehtiyot", label: "На что обратить внимание" },
+          { href: "#qoldi", label: "Что есть в боте сейчас" },
+          { href: "#yol", label: "Три способа получить коллекционный" },
+          { href: "#ehtiyot", label: "Если покупаете в другом месте" },
         ]}
       />
 
       <h2 id="nima">Что именно изменилось</h2>
       <p>
-        Раньше через сервис можно было заказать и <b>распроданные</b> коллекционные подарки — то есть экземпляры,
-        которых в самом Telegram уже нет в продаже и которые переходят только из рук в руки. Сейчас такой
-        возможности нет.
+        Раньше в каталоге обычных подарков бота было и 11 <b>limited-подарков</b>, которые Telegram уже снял с
+        продажи. С 14 сентября 2026 года Telegram перестал отдавать их ботам: в списке подарков для ботов остались
+        только обычные. Поэтому эти подарки убраны из каталога.
       </p>
       <WhatChanged locale="ru" />
       <p>
-        То есть граница проходит по <b>типу подарка</b>: обычные из постоянного каталога работают, коллекционные
-        и распроданные — нет.
+        То есть ограничение касается только <b>нового limited-экземпляра</b>. Готовый коллекционный (NFT)
+        экземпляр — в NFT Market, на срок — в аренде NFT.
       </p>
 
       <h2 id="nega">Почему так вышло</h2>
       <p>
-        Здесь стоит быть точными, потому что в интернете ходят разные версии. Официального объявления Telegram,{" "}
-        <b>отдельно запрещающего</b> ботам покупать коллекционные подарки, на момент проверки мы не нашли.
-        Картина немного другая:
+        Здесь стоит быть точными, потому что в интернете ходят разные версии. Вот что мы проверили:
       </p>
-      <KeyFacts label="Что написано в документации">
+      <KeyFacts label="Что известно точно">
         <li>
-          <b>Отправка подарков в Bot API</b> работает с подарками из официального каталога — то есть с обычными.
+          <b>Отправка подарков в Bot API</b> работает только с подарками из списка, который Telegram отдаёт ботам;
+          с 14 сентября 2026 года limited-подарков в нём нет — только обычные.
         </li>
         <li>
-          <b>Покупка коллекционных подарков</b> никогда не была задокументированной возможностью для ботов. Их
-          получает пользователь внутри Telegram.
+          <b>Официального объявления</b>, отдельно запрещающего ботам limited-подарки, на момент проверки мы не
+          нашли — мы увидели само изменение.
         </li>
         <li>
-          <b>Апгрейд, передача и конвертация</b> описаны в документации как сценарий бизнес-аккаунта, а не как
-          «покупка через бота».
+          <b>Коллекционные (NFT) подарки</b> идут другим путём: экземпляр из NFT Market покупается на открытом
+          рынке подарков в TON и переводится на ваш аккаунт Telegram; аренда работает через тот же рынок. Поэтому
+          это ограничение их не касается.
         </li>
       </KeyFacts>
       <p>
-        Поэтому корректная формулировка такая: выдача коллекционных подарков работала за пределами
-        задокументированных возможностей ботов и теперь перестала работать. Утверждать «Telegram запретил такого-то
-        числа» мы не будем — подтверждающего официального объявления не нашли.
+        Корректная формулировка: бот не может отправить новый limited-подарок, но может купить для вас готовый
+        коллекционный экземпляр. Раз официального объявления нет, утверждать «Telegram запретил такого-то числа»
+        мы не будем.
       </p>
 
-      <h2 id="qoldi">Что продолжает работать</h2>
+      <h2 id="qoldi">Что есть в боте сейчас</h2>
       <InfoGrid>
+        <InfoCard emoji="🖼️" title="NFT Market">
+          Выставленный коллекционный (NFT) экземпляр до 300 000 сумов; он становится вашим.
+        </InfoCard>
+        <InfoCard emoji="⏳" title="Аренда NFT">
+          Коллекционный подарок на выбранный срок; по окончании он возвращается.
+        </InfoCard>
         <InfoCard emoji="🎁" title="Обычные подарки">
-          Из постоянного каталога — как и раньше, в сумах и за считаные минуты.
+          Из постоянного каталога (15–100 ⭐) — как и раньше, в сумах и за считаные минуты.
         </InfoCard>
         <InfoCard emoji="⭐" title="Звёзды">
-          Покупка Stars работает полностью — именно они и нужны для коллекционного.
+          Покупка Stars работает полностью — именно они нужны и для апгрейда подарка.
         </InfoCard>
         <InfoCard emoji="💎" title="Premium">
           Подписка на 3, 6, 12 месяцев и подарок — без изменений.
@@ -305,46 +365,66 @@ function RuBody() {
         </InfoCard>
       </InfoGrid>
 
-      <h2 id="yol">Рабочий путь к коллекционному подарку</h2>
+      <h2 id="yol">Три способа получить коллекционный подарок</h2>
       <p>
-        Самое важное: возможность получить коллекционный подарок не исчезла — она стала{" "}
-        <b>на один шаг длиннее</b>. По документации Telegram обычный подарок можно поднять до уровня collectible,
-        и делается это за звёзды.
+        Возможность получить коллекционный подарок никуда не делась. Какой путь подойдёт, зависит от того, на
+        какой срок нужен подарок и какой подарок у вас уже есть.
+      </p>
+
+      <h3>1. NFT Market — купить готовый экземпляр</h3>
+      <p>
+        В разделе <b>NFT Market</b> бота вы покупаете выставленный коллекционный экземпляр{" "}
+        <b>до 300 000 сумов</b> — он переходит в вашу собственность. Оплата только переводом на карту UzCard/HUMO
+        или с баланса. После подтверждения покупки в блокчейне NFT хранится у StarsPaymee: бот попросит написать в
+        @StarsPaymeeSupport, и администратор переведёт подарок на ваш @username в Telegram — поэтому это не
+        мгновенно. Порядок покупки — в статье{" "}
+        <Link href="/blog/starspaymee-nft-market">StarsPaymee NFT Market</Link>.
+      </p>
+
+      <InlineCta text="Откройте NFT Market в боте — коллекционный подарок в сумах." />
+
+      <h3>2. Аренда NFT — на срок</h3>
+      <p>
+        Если подарок нужен ненадолго (праздник, проба), его можно не покупать целиком, а взять <b>в аренду</b> на
+        выбранное число дней; по окончании срока он возвращается. Подробнее —{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">аренда NFT-подарков</Link>.
+      </p>
+
+      <h3>3. Апгрейд — внутри Telegram, за звёзды</h3>
+      <p>
+        Некоторые подарки в Telegram можно за звёзды превратить в коллекционный экземпляр — но только те, у
+        которых в карточке есть опция апгрейда. Порядок:
       </p>
       <Steps>
         <Step title="1. Купите звёзды в боте">
           Нужное количество Stars в сумах — этот раздел работает.
         </Step>
-        <Step title="2. Выберите обычный подарок, который можно апгрейднуть">
+        <Step title="2. Выберите подарок, который можно апгрейднуть">
           Апгрейд доступен не для всех — смотрите карточку подарка.
         </Step>
         <Step title="3. Получите или отправьте подарок">
-          Покупка обычных подарков через бота работает как прежде.
+          Обычные подарки в боте сейчас — постоянные подарки (15–100 ⭐). Если берёте подарок ради апгрейда,
+          сначала проверьте в Telegram, есть ли у него такая опция.
         </Step>
         <Step title="4. Сделайте апгрейд внутри Telegram">
           В карточке подарка нажмите апгрейд — спишутся звёзды, и подарок станет коллекционным.
         </Step>
       </Steps>
       <p>
-        Полный порядок —{" "}
-        в руководстве по апгрейду до collectible.
         Нужны звёзды —{" "}
         <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">покупка Stars в сумах</Link>.
       </p>
 
-      <InlineCta text="Купите звёзды и апгрейдните подарок сами." product={{ kind: "stars", amount: 100 }} />
-
-      <h2 id="ehtiyot">На что обратить внимание</h2>
-      <p>
-        После таких изменений всегда появляются те, кто говорит «а у нас всё ещё работает». Поэтому напомним
-        простые правила:
-      </p>
+      <h2 id="ehtiyot">Если покупаете коллекционный подарок в другом месте</h2>
+      <p>В торговле NFT-подарками много мошенников. Простые правила:</p>
       <KeyFacts label="Тревожные признаки">
         <li>
           <b>Просят пароль или код входа</b> — остановитесь. Ради подарка Telegram этого не запрашивает.
         </li>
         <li>
-          <b>«Сначала переведите, потом выдадим»</b> — самая частая схема обмана в торговле коллекционными.
+          <b>Предоплата незнакомцу в личных сообщениях</b> — самая частая схема обмана. В NFT Market StarsPaymee
+          оплата — только через окно заказа в боте: точную сумму переводите на указанную там карту или
+          платите с баланса. Пароль или код не запрашиваются.
         </li>
         <li>
           <b>Цена заметно ниже рынка</b> — редкий экземпляр не дешевеет просто так.
@@ -373,6 +453,11 @@ function RuBody() {
             note: "анонс коллекционных подарков — апгрейд за звёзды",
           },
           { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "документация подарков" },
+          {
+            href: "https://core.telegram.org/bots/api#getavailablegifts",
+            label: "Bot API — getAvailableGifts",
+            note: "список подарков, которые может отправить бот",
+          },
           { href: "https://core.telegram.org/bots/api-changelog", label: "Bot API changelog", note: "история возможностей ботов" },
         ]}
       />
@@ -384,9 +469,10 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      Right now <b>@StarsPaymee_bot</b> can supply only <b>regular gifts</b>, Stars and Premium. Sold-out{" "}
-      <b>collectible (NFT) gifts</b> are no longer delivered through the bot. The route is not closed entirely
-      though: a regular gift can be <b>upgraded to collectible by you</b>, inside Telegram.
+      Two kinds of gift need telling apart. Since 14 September 2026 bots cannot send the <b>limited gifts</b>{" "}
+      Telegram took off sale, so they are gone from @StarsPaymee_bot’s regular gift catalogue.{" "}
+      <b>Collectible (NFT) gifts</b> are still in the bot: in the <b>NFT Market</b> you buy a listed copy for up
+      to 300,000 so‘m and it becomes yours, or you <b>rent</b> one for a set term.
     </p>
   );
 }
@@ -394,10 +480,12 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
-      <Notice label="A change in the service">
+      <Notice label="Updated — October 2026">
         <p>
-          Delivering sold-out collectible gifts through the bot has <b>stopped</b>. Everything else — regular
-          gifts, Stars, Premium, game top-ups and Steam — works exactly as before.
+          Since 14 September 2026 the limited gifts Telegram took off sale cannot be sent by bots — they were
+          removed from the regular gift catalogue. Since 21 September the bot runs an <b>NFT Market</b>: a listed
+          collectible (NFT) gift can be bought for up to 300,000 so‘m. <b>NFT rental</b>, regular gifts, Stars,
+          Premium, game top-ups and Steam all work too.
         </p>
       </Notice>
 
@@ -406,56 +494,61 @@ function EnBody() {
         items={[
           { href: "#nima", label: "What exactly changed" },
           { href: "#nega", label: "Why it happened" },
-          { href: "#qoldi", label: "What still works" },
-          { href: "#yol", label: "The route that does work" },
-          { href: "#ehtiyot", label: "What to watch for" },
+          { href: "#qoldi", label: "What the bot offers now" },
+          { href: "#yol", label: "Three ways to get a collectible" },
+          { href: "#ehtiyot", label: "If you buy elsewhere" },
         ]}
       />
 
       <h2 id="nima">What exactly changed</h2>
       <p>
-        Previously the service could also order <b>sold-out</b> collectible gifts — copies no longer on sale
-        inside Telegram itself, which only pass from owner to owner. That option is not available now.
+        The bot’s regular catalogue used to include 11 <b>limited gifts</b> that Telegram had taken off sale.
+        Since 14 September 2026 Telegram no longer offers them to bots — the gift list bots receive now holds
+        regular gifts only — so they were removed from the catalogue.
       </p>
       <WhatChanged locale="en" />
       <p>
-        So the line runs along the <b>type of gift</b>: regular gifts from the permanent catalogue still work,
-        collectible and sold-out ones do not.
+        So the limit applies only to a <b>new limited copy</b>. A ready collectible (NFT) copy is in the NFT
+        Market; one for a set term is in NFT rental.
       </p>
 
       <h2 id="nega">Why it happened</h2>
       <p>
-        It is worth being precise here, because different versions circulate online. At the time of checking we
-        found no official Telegram announcement <b>specifically banning</b> bots from buying collectible gifts.
-        The picture is slightly different:
+        It is worth being precise here, because different versions circulate online. Here is what we checked:
       </p>
-      <KeyFacts label="What the documentation says">
+      <KeyFacts label="What we know for certain">
         <li>
-          <b>Gift sending in the Bot API</b> works with gifts from the official catalogue — that is, regular
-          ones.
+          <b>Gift sending in the Bot API</b> works only with gifts from the list Telegram gives bots; since 14
+          September 2026 that list holds no limited gifts — regular ones only.
         </li>
         <li>
-          <b>Buying collectible gifts</b> was never a documented bot capability. They are acquired by a user
-          inside Telegram.
+          <b>No official announcement</b> specifically banning limited gifts for bots was found when we checked —
+          we saw the change itself.
         </li>
         <li>
-          <b>Upgrading, transferring and converting</b> are described in the docs as a business-account flow, not
-          as “buying through a bot”.
+          <b>Collectible (NFT) gifts</b> take a different path: an NFT Market copy is bought on an open TON gift
+          marketplace and transferred to your Telegram account; rental runs through the same marketplace. So this
+          limit does not touch them.
         </li>
       </KeyFacts>
       <p>
-        So the accurate wording is this: delivering collectible gifts operated outside the documented bot
-        capabilities, and it has now stopped working. We will not claim “Telegram banned it on such-and-such a
-        date” — we found no official announcement confirming that.
+        The accurate wording: the bot cannot send a new limited gift, but it can buy you a ready collectible
+        copy. With no official announcement, we will not claim “Telegram banned it on such-and-such a date”.
       </p>
 
-      <h2 id="qoldi">What still works</h2>
+      <h2 id="qoldi">What the bot offers now</h2>
       <InfoGrid>
+        <InfoCard emoji="🖼️" title="NFT Market">
+          A listed collectible (NFT) copy for up to 300,000 so‘m; it becomes yours.
+        </InfoCard>
+        <InfoCard emoji="⏳" title="NFT rental">
+          A collectible gift for the term you choose; it goes back when the term ends.
+        </InfoCard>
         <InfoCard emoji="🎁" title="Regular gifts">
-          From the permanent catalogue — as before, in so‘m and within minutes.
+          From the permanent catalogue (15–100 ⭐) — as before, in so‘m and within minutes.
         </InfoCard>
         <InfoCard emoji="⭐" title="Stars">
-          Buying Stars works fully — and those are exactly what a collectible needs.
+          Buying Stars works fully — and those are exactly what an upgrade needs.
         </InfoCard>
         <InfoCard emoji="💎" title="Premium">
           The 3, 6 and 12-month subscription and gifting are unchanged.
@@ -465,41 +558,62 @@ function EnBody() {
         </InfoCard>
       </InfoGrid>
 
-      <h2 id="yol">The route to a collectible that does work</h2>
+      <h2 id="yol">Three ways to get a collectible gift</h2>
       <p>
-        Here is the important part: getting a collectible gift has not become impossible — it became{" "}
-        <b>one step longer</b>. Per Telegram’s documentation a regular gift can be raised to collectible status,
-        and that is paid for with Stars.
+        Getting a collectible gift has not become impossible. Which route fits depends on how long you need the
+        gift and which gift you already have.
+      </p>
+
+      <h3>1. The NFT Market — buy a ready copy</h3>
+      <p>
+        In the bot’s <b>NFT Market</b> you buy a listed collectible copy for <b>up to 300,000 so‘m</b>, and
+        ownership passes to you. Payment is by UzCard/HUMO card transfer or from the balance only. Once the
+        purchase is confirmed on-chain, the NFT is held by StarsPaymee: the bot asks you to message
+        @StarsPaymeeSupport, and an admin transfers the gift to your Telegram @username — so it is not instant.
+      </p>
+
+      <InlineCta text="Open the NFT Market in the bot — collectible gifts in so‘m." />
+
+      <h3>2. NFT rental — for a set term</h3>
+      <p>
+        If you need the gift only for a while (a holiday, a trial), you can <b>rent</b> it for the number of days
+        you choose instead of buying it outright; it goes back when the term ends. More in{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">renting NFT gifts</Link>.
+      </p>
+
+      <h3>3. Upgrade — inside Telegram, for Stars</h3>
+      <p>
+        Some gifts in Telegram can be turned into a collectible copy for Stars — but only those whose card offers
+        the upgrade option. The order:
       </p>
       <Steps>
         <Step title="1. Buy Stars in the bot">The amount you need, in so‘m — this section works.</Step>
-        <Step title="2. Pick a regular gift that can be upgraded">
+        <Step title="2. Pick a gift that can be upgraded">
           Not every gift can — check the gift’s card for that option.
         </Step>
-        <Step title="3. Receive or send the gift">Buying regular gifts through the bot works as before.</Step>
+        <Step title="3. Receive or send the gift">
+          The bot’s regular gifts are currently the permanent ones (15–100 ⭐). If you are getting one to
+          upgrade, first check in Telegram that it offers the option.
+        </Step>
         <Step title="4. Upgrade it inside Telegram">
           Press upgrade on the gift’s card — Stars are spent and the gift becomes a collectible.
         </Step>
       </Steps>
       <p>
-        The full procedure is in{" "}
-        the collectible upgrade guide. If you need
-        Stars, see <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">buying Stars in so‘m</Link>.
+        If you need Stars, see{" "}
+        <Link href="/blog/click-payme-orqali-telegram-stars-sotib-olish">buying Stars in so‘m</Link>.
       </p>
 
-      <InlineCta text="Buy Stars and upgrade the gift yourself." product={{ kind: "stars", amount: 100 }} />
-
-      <h2 id="ehtiyot">What to watch for</h2>
-      <p>
-        After changes like this, people claiming “ours still works” always appear. So a reminder of the simple
-        rules:
-      </p>
+      <h2 id="ehtiyot">If you buy a collectible elsewhere</h2>
+      <p>There are plenty of scammers in NFT gift trading. The simple rules:</p>
       <KeyFacts label="Warning signs">
         <li>
           <b>A password or login code is requested</b> — stop. Telegram never asks for that over a gift.
         </li>
         <li>
-          <b>“Send the money first, we deliver after”</b> — the most common scam in collectible trading.
+          <b>Prepaying a stranger in direct messages</b> — the most common scam. In the StarsPaymee NFT Market
+          you pay only through the order screen in the bot: transfer the exact amount to the card shown there,
+          or pay from your balance. No password or code is asked.
         </li>
         <li>
           <b>A price far below the market</b> — a rare copy does not simply get cheap.
@@ -528,6 +642,11 @@ function EnBody() {
             note: "the collectible gifts announcement — upgrading costs Stars",
           },
           { href: "https://core.telegram.org/api/gifts", label: "core.telegram.org/api/gifts", note: "gifts documentation" },
+          {
+            href: "https://core.telegram.org/bots/api#getavailablegifts",
+            label: "Bot API — getAvailableGifts",
+            note: "the list of gifts a bot can send",
+          },
           { href: "https://core.telegram.org/bots/api-changelog", label: "Bot API changelog", note: "history of bot gift capabilities" },
         ]}
       />
@@ -538,17 +657,18 @@ function EnBody() {
 const uzFaq = [
   {
     question: "Bot orqali kolleksion (NFT) sovg‘a sotib olsa bo‘ladimi?",
-    answer: "Hozirda yo‘q. Bot orqali oddiy sovg‘alar, yulduzlar va Premium ishlaydi.",
+    answer:
+      "Ha. NFT Market bo‘limida sotuvdagi kolleksion nusxani 300 000 so‘mgacha sotib olasiz — u sizniki bo‘ladi. To‘lov UzCard/HUMO kartaga o‘tkazma yoki balans orqali. Faqat Telegram sotuvdan olib tashlagan limited sovg‘ani yangi holda olib bo‘lmaydi.",
   },
   {
-    question: "Telegram buni rasman taqiqladimi?",
+    question: "Limited sovg‘alarni Telegram rasman taqiqladimi?",
     answer:
-      "Biz tekshirgan paytda botlarga kolleksion sovg‘a sotib olishni alohida taqiqlovchi rasmiy e’lon topilmadi. Aniq bo‘lgani — bu imkoniyat hujjatlashtirilgan bot funksiyalaridan tashqarida ishlagan va endi ishlamayapti.",
+      "Biz tekshirgan paytda bu haqda rasmiy e’lon topilmadi. Aniq kuzatilgani: 2026-yil 14-sentabrdan Telegram botlarga beradigan sovg‘alar ro‘yxatida limited sovg‘alar yo‘q — faqat oddiy sovg‘alar. NFT Market va ijaraga bu ta’sir qilmaydi.",
   },
   {
     question: "Unda kolleksion sovg‘ani qanday olaman?",
     answer:
-      "Botdan yulduz oling, ko‘tarilishi mumkin bo‘lgan oddiy sovg‘ani oling va Telegram ichida uni o‘zingiz collectible darajasiga ko‘taring.",
+      "Uch yo‘l bor: NFT Market’dan tayyor nusxa (300 000 so‘mgacha), NFT ijarasida muddatga yoki upgrade imkoniyati bor sovg‘ani Telegram ichida yulduz evaziga o‘zingiz ko‘tarasiz.",
   },
   {
     question: "Har qanday oddiy sovg‘ani ko‘tarish mumkinmi?",
@@ -561,34 +681,40 @@ const uzFaq = [
   },
   {
     question: "Botning boshqa bo‘limlari ishlayaptimi?",
-    answer: "Ha. Oddiy sovg‘alar, Stars, Premium, o‘yin to‘ldirish va Steam hamyoni o‘zgarishsiz.",
+    answer: "Ha. NFT Market, NFT ijarasi, oddiy sovg‘alar, Stars, Premium, o‘yin to‘ldirish va Steam hamyoni ishlaydi.",
   },
   {
-    question: "Kimdir «bizda hali ham ishlaydi» desa-chi?",
+    question: "NFT Market’dan olingan sovg‘a qachon keladi?",
     answer:
-      "Ehtiyot bo‘ling. Parol yoki kirish kodi so‘ralsa, oldindan to‘lov talab qilinsa yoki narx bozordan keskin past bo‘lsa — bu firibgarlik belgisi.",
+      "Darhol emas. To‘lovdan keyin xarid TON zanjirida tasdiqlanadi va NFT StarsPaymee saqlovida turadi; so‘ng admin uni Telegram’dagi @username’ingizga o‘tkazadi — bot @StarsPaymeeSupport’ga yozishni so‘raydi.",
   },
   {
-    question: "Bu imkoniyat qaytadimi?",
+    question: "Kimdir kolleksion sovg‘ani arzonga taklif qilsa-chi?",
     answer:
-      "Buni oldindan aytib bo‘lmaydi. Hozircha ishlaydigan yo‘l — yulduz olib, sovg‘ani o‘zingiz ko‘tarish.",
+      "Ehtiyot bo‘ling: parol yoki kirish kodi so‘ralsa, shaxsiy yozishmada notanish odam oldindan pul so‘rasa yoki narx bozordan keskin past bo‘lsa — bu firibgarlik belgisi.",
+  },
+  {
+    question: "Limited sovg‘alar botga qaytadimi?",
+    answer:
+      "Bu Telegram’ga bog‘liq — oldindan aytib bo‘lmaydi. Sotuvdagi kolleksion nusxalarni esa hozir ham NFT Market’da sotib olish mumkin.",
   },
 ];
 
 const ruFaq = [
   {
     question: "Можно ли купить коллекционный (NFT) подарок через бота?",
-    answer: "Сейчас нет. Через бота работают обычные подарки, звёзды и Premium.",
+    answer:
+      "Да. В разделе NFT Market можно купить выставленный коллекционный экземпляр до 300 000 сумов — он станет вашим. Оплата переводом на карту UzCard/HUMO или с баланса. Нельзя только получить как новый limited-подарок, который Telegram снял с продажи.",
   },
   {
-    question: "Telegram официально это запретил?",
+    question: "Telegram официально запретил limited-подарки для ботов?",
     answer:
-      "На момент проверки официального объявления, отдельно запрещающего ботам покупать коллекционные подарки, мы не нашли. Достоверно известно другое: эта возможность работала за пределами задокументированных функций ботов и теперь не работает.",
+      "На момент проверки официального объявления мы не нашли. Достоверно известно: с 14 сентября 2026 года в списке подарков, который Telegram отдаёт ботам, limited-подарков нет — только обычные. На NFT Market и аренду это не влияет.",
   },
   {
     question: "Как тогда получить коллекционный подарок?",
     answer:
-      "Купите звёзды в боте, возьмите обычный подарок с возможностью апгрейда и сами поднимите его до collectible внутри Telegram.",
+      "Три пути: готовый экземпляр в NFT Market (до 300 000 сумов), аренда NFT на срок или апгрейд подарка с такой опцией внутри Telegram за звёзды.",
   },
   {
     question: "Любой обычный подарок можно апгрейднуть?",
@@ -601,34 +727,40 @@ const ruFaq = [
   },
   {
     question: "Остальные разделы бота работают?",
-    answer: "Да. Обычные подарки, Stars, Premium, пополнение игр и кошелёк Steam — без изменений.",
+    answer: "Да. NFT Market, аренда NFT, обычные подарки, Stars, Premium, пополнение игр и кошелёк Steam работают.",
   },
   {
-    question: "А если кто-то говорит «у нас всё ещё работает»?",
+    question: "Когда приходит подарок, купленный в NFT Market?",
     answer:
-      "Будьте осторожны. Просят пароль или код входа, требуют предоплату, цена заметно ниже рынка — это признаки мошенничества.",
+      "Не мгновенно. После оплаты покупка подтверждается в блокчейне TON, и NFT хранится у StarsPaymee; затем администратор переводит его на ваш @username в Telegram — бот попросит написать в @StarsPaymeeSupport.",
   },
   {
-    question: "Вернётся ли эта возможность?",
+    question: "Что если кто-то предлагает коллекционный подарок дёшево?",
     answer:
-      "Заранее сказать нельзя. Рабочий путь сейчас — купить звёзды и апгрейднуть подарок самому.",
+      "Будьте осторожны: просят пароль или код входа, незнакомец в личке требует предоплату или цена заметно ниже рынка — это признаки мошенничества.",
+  },
+  {
+    question: "Вернутся ли limited-подарки в бот?",
+    answer:
+      "Это зависит от Telegram — заранее сказать нельзя. Выставленные коллекционные экземпляры уже сейчас можно купить в NFT Market.",
   },
 ];
 
 const enFaq = [
   {
     question: "Can I buy a collectible (NFT) gift through the bot?",
-    answer: "Not at the moment. Regular gifts, Stars and Premium work through the bot.",
+    answer:
+      "Yes. In the NFT Market you can buy a listed collectible for up to 300,000 so‘m — it becomes yours. Payment is by UzCard/HUMO card transfer or from the balance. Only a limited gift Telegram took off sale cannot be had new.",
   },
   {
-    question: "Did Telegram officially ban this?",
+    question: "Did Telegram officially ban limited gifts for bots?",
     answer:
-      "At the time of checking we found no official announcement specifically banning bots from buying collectible gifts. What is certain is that the capability operated outside documented bot functionality and has now stopped working.",
+      "We found no official announcement when we checked. What is certain: since 14 September 2026 the gift list Telegram gives bots holds no limited gifts — regular ones only. The NFT Market and rental are not affected.",
   },
   {
     question: "So how do I get a collectible gift?",
     answer:
-      "Buy Stars in the bot, get a regular gift that supports upgrading, and raise it to collectible yourself inside Telegram.",
+      "Three routes: a ready copy from the NFT Market (up to 300,000 so‘m), NFT rental for a set term, or upgrading a gift that offers it inside Telegram for Stars.",
   },
   {
     question: "Can any regular gift be upgraded?",
@@ -641,16 +773,22 @@ const enFaq = [
   },
   {
     question: "Do the bot's other sections still work?",
-    answer: "Yes. Regular gifts, Stars, Premium, game top-ups and the Steam wallet are unchanged.",
+    answer: "Yes. The NFT Market, NFT rental, regular gifts, Stars, Premium, game top-ups and the Steam wallet all work.",
   },
   {
-    question: "What if someone says “ours still works”?",
+    question: "How soon does a gift bought in the NFT Market arrive?",
     answer:
-      "Be careful. A password or login code request, an upfront payment demand, or a price far below the market are all scam signals.",
+      "Not instantly. After payment the purchase is confirmed on the TON blockchain and the NFT is held by StarsPaymee; then an admin transfers it to your Telegram @username — the bot asks you to message @StarsPaymeeSupport.",
   },
   {
-    question: "Will the option come back?",
-    answer: "That cannot be promised in advance. The working route today is to buy Stars and upgrade the gift yourself.",
+    question: "What if someone offers a collectible cheaply?",
+    answer:
+      "Be careful: a password or login-code request, a stranger in DMs demanding prepayment, or a price far below the market are all scam signals.",
+  },
+  {
+    question: "Will limited gifts come back to the bot?",
+    answer:
+      "That depends on Telegram and cannot be promised. Listed collectible copies can already be bought in the NFT Market.",
   },
 ];
 
@@ -659,7 +797,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-09-14",
-  dateModified: "2026-09-14",
+  dateModified: "2026-10-06",
   keywords: [
     "kolleksion gift bot orqali olinmaydi",
     "nft gift bot orqali sotib olish",
@@ -667,48 +805,53 @@ export const post: AeoPost = {
     "oddiy sovgani collectible qilish",
     "коллекционные подарки telegram бот",
     "распроданные подарки telegram",
+    "limited sovga bot orqali yuborilmaydi",
+    "коллекционный подарок через бота",
   ],
   locales: {
     uz: {
-      title: "Kolleksion Telegram sovg‘alari endi bot orqali olinmaydi — nima qilish kerak?",
+      title: "Kolleksion gift bot orqali olinmaydimi? Limited sovg‘alar, NFT Market va ijara",
       excerpt:
-        "Sotuvdan tugagan kolleksion sovg‘alar bot orqali yetkazilmaydi. Nima ishlashda qolgani, hujjatlarda nima yozilgani va kolleksion sovg‘a olishning ishlaydigan yo‘li.",
-      metaTitle: "Kolleksion gift bot orqali olinmaydi — yechim bor",
+        "2026-yil 14-sentabrdan botlar Telegram sotuvdan olib tashlagan limited sovg‘alarni yubora olmaydi. Tayyor kolleksion (NFT) sovg‘ani esa @StarsPaymee_bot’dagi NFT Market’da 300 000 so‘mgacha sotib olish yoki NFT ijarasida muddatga olish mumkin.",
+      metaTitle: "Kolleksion gift bot orqali olinmaydimi? NFT Market bor",
       metaDescription:
-        "Sotuvdan tugagan kolleksion sovg‘alar bot orqali yetkazilmaydi. Nima ishlaydi, nega shunday bo‘ldi va sovg‘ani o‘zingiz collectible’ga ko‘tarish yo‘li.",
+        "Limited sovg‘alar bot katalogidan nega yo‘qoldi va kolleksion (NFT) sovg‘ani qanday olish mumkin: NFT Market (300 000 so‘mgacha), NFT ijarasi yoki upgrade.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
-      ctaHeading: "Botning ishlaydigan bo‘limlari",
-      ctaBody: "@StarsPaymee_bot — oddiy sovg‘alar, Stars, Premium, o‘yin va Steam. Hammasi so‘mda.",
+      ctaHeading: "NFT Market va boshqa bo‘limlar",
+      ctaBody:
+        "@StarsPaymee_bot — NFT Market (300 000 so‘mgacha), NFT ijarasi, oddiy sovg‘alar, Stars va Premium. Hammasi so‘mda.",
       faq: uzFaq,
     },
     ru: {
-      title: "Коллекционные подарки Telegram больше не выдаются через бота — что делать?",
+      title: "Коллекционный подарок через бота: limited-подарки, NFT Market и аренда",
       excerpt:
-        "Распроданные коллекционные подарки бот не выдаёт. Что продолжает работать, что написано в документации и рабочий путь к коллекционному подарку.",
-      metaTitle: "Коллекционные подарки и бот — что изменилось",
+        "С 14 сентября 2026 года боты не могут отправлять limited-подарки, снятые Telegram с продажи. Готовый коллекционный (NFT) подарок можно купить в NFT Market @StarsPaymee_bot — до 300 000 сумов — или взять в аренду.",
+      metaTitle: "Коллекционные подарки в боте: NFT Market и аренда",
       metaDescription:
-        "Распроданные коллекционные подарки через бота недоступны. Что работает, почему так вышло и как самому поднять подарок до collectible.",
+        "Почему limited-подарки пропали из каталога бота и как получить коллекционный (NFT) подарок: NFT Market (до 300 000 сумов), аренда NFT или апгрейд.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
-      ctaHeading: "Рабочие разделы бота",
-      ctaBody: "@StarsPaymee_bot — обычные подарки, Stars, Premium, игры и Steam. Всё в сумах.",
+      ctaHeading: "NFT Market и другие разделы",
+      ctaBody:
+        "@StarsPaymee_bot — NFT Market (до 300 000 сумов), аренда NFT, обычные подарки, Stars и Premium. Всё в сумах.",
       faq: ruFaq,
     },
     en: {
-      title: "Collectible Telegram gifts are no longer delivered by the bot — what now?",
+      title: "Can you get a collectible gift through the bot? Limited gifts, the NFT Market and rental",
       excerpt:
-        "Sold-out collectible gifts are no longer supplied through the bot. What still works, what the documentation actually says, and the route that does work.",
-      metaTitle: "Collectible gifts and the bot — what changed",
+        "Since 14 September 2026 bots cannot send the limited gifts Telegram took off sale. A ready collectible (NFT) gift can still be bought in @StarsPaymee_bot’s NFT Market — up to 300,000 so‘m — or rented.",
+      metaTitle: "Collectible gifts in the bot: NFT Market and rental",
       metaDescription:
-        "Sold-out collectible gifts are unavailable through the bot. What still works, why it happened, and how to upgrade a gift to collectible yourself.",
+        "Why limited gifts left the bot’s catalogue and how to get a collectible (NFT) gift: the NFT Market (up to 300,000 so‘m), NFT rental or an upgrade.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
-      ctaHeading: "The bot's working sections",
-      ctaBody: "@StarsPaymee_bot — regular gifts, Stars, Premium, games and Steam. All in so‘m.",
+      ctaHeading: "The NFT Market and the rest",
+      ctaBody:
+        "@StarsPaymee_bot — the NFT Market (up to 300,000 so‘m), NFT rental, regular gifts, Stars and Premium. All in so‘m.",
       faq: enFaq,
     },
   },

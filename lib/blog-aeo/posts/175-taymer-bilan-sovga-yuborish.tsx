@@ -22,8 +22,6 @@ function ProductTable({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Telegram Premium", "Obuna belgilangan vaqtda faollashadi", "Muddat aynan yetkazilgan kundan boshlanadi"],
         ["Telegram Stars", "Yulduzlar belgilangan vaqtda tushadi", "Qabul qiluvchi username to‘g‘ri bo‘lsin"],
-        ["Oddiy sovg‘a (Gift)", "Sovg‘a o‘sha daqiqada yuboriladi", "Katalogda mavjudligi tekshiriladi"],
-        ["NFT sovg‘a", "Kolleksion sovg‘a rejaga muvofiq beriladi", "Kolleksion sovg‘alarda o‘tkazish qoidalari bor"],
       ],
     },
     ru: {
@@ -31,8 +29,6 @@ function ProductTable({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Telegram Premium", "Подписка активируется в заданное время", "Срок начинается со дня вручения"],
         ["Telegram Stars", "Звёзды приходят в заданное время", "Username получателя должен быть верным"],
-        ["Обычный подарок (Gift)", "Подарок отправляется в ту же минуту", "Проверяется наличие в каталоге"],
-        ["NFT-подарок", "Коллекционный подарок вручается по расписанию", "У коллекционных есть правила передачи"],
       ],
     },
     en: {
@@ -40,8 +36,6 @@ function ProductTable({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Telegram Premium", "The subscription activates at the set time", "The term starts on the delivery day"],
         ["Telegram Stars", "The Stars arrive at the set time", "The recipient's username must be right"],
-        ["A regular gift", "The gift is sent at that exact minute", "Availability in the catalogue is checked"],
-        ["An NFT gift", "The collectible is delivered on schedule", "Collectibles carry transfer rules"],
       ],
     },
   }[locale];
@@ -60,7 +54,7 @@ function UzAnswer() {
     <p>
       Taymerli sovg‘a — sovg‘ani <b>oldindan to‘lab qo‘yib</b>, yetkazish sanasi va vaqtini o‘zingiz
       belgilashingiz. Belgilangan daqiqada bot uni qabul qiluvchiga avtomatik yuboradi — siz o‘sha payt band
-      bo‘lsangiz ham. Premium, Stars, oddiy va NFT sovg‘alar bilan ishlaydi.
+      bo‘lsangiz ham. Hozir Stars va Premium bilan ishlaydi.
     </p>
   );
 }
@@ -87,7 +81,7 @@ function UzBody() {
 
       <h2 id="nima">Taymerli sovg‘a nima degani</h2>
       <p>
-        Siz sovg‘ani oldindan to‘laysiz — Premium, Stars, oddiy gift yoki NFT sovg‘a — so‘ng yetkazish uchun{" "}
+        Siz sovg‘ani oldindan to‘laysiz — Stars yoki Premium — so‘ng yetkazish uchun{" "}
         <b>aniq sana va vaqtni</b> ko‘rsatasiz. Qolganini bot bajaradi: sovg‘a siz uchun band qilinadi va
         belgilangan daqiqada avtomatik yuboriladi.
       </p>
@@ -104,7 +98,7 @@ function UzBody() {
       </p>
       <Steps>
         <Step title="1. Oldindan to‘laysiz">Hatto bir hafta oldin — botda sovg‘ani rasmiylashtirasiz.</Step>
-        <Step title="2. Nimani sovg‘a qilishni tanlaysiz">Premium, Stars, oddiy gift yoki NFT sovg‘a.</Step>
+        <Step title="2. Nimani sovg‘a qilishni tanlaysiz">Stars yoki Premium.</Step>
         <Step title="3. Taymerni qo‘yasiz">12-sentabr, 00:00.</Step>
         <Step title="4. Unutasiz">Va o‘z ishingiz bilan shug‘ullanaverasiz.</Step>
       </Steps>
@@ -116,10 +110,8 @@ function UzBody() {
       <h2 id="mahsulot">Qaysi mahsulotlarga taymer qo‘yish mumkin</h2>
       <ProductTable locale="uz" />
       <p>
-        Ya’ni taymer faqat Premium uchun emas — u barcha asosiy mahsulotlar bilan ishlaydi. Sovg‘a turini
-        tanlashda{" "}
-        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">oddiy va NFT sovg‘alar farqi</Link> yordam
-        beradi.
+        Ya’ni taymer hozir Stars va Premium bilan ishlaydi; oddiy va NFT sovg‘alarni taymer bilan yuborib
+        bo‘lmaydi.
       </p>
 
       <InlineCta text="Sovg‘ani hozir to‘lang — kerakli daqiqada yetib boradi." />
@@ -133,7 +125,7 @@ function UzBody() {
           </a>{" "}
           ni ishga tushiring.
         </Step>
-        <Step title="2. Mahsulotni tanlang">Premium, Stars, oddiy gift yoki NFT sovg‘a.</Step>
+        <Step title="2. Mahsulotni tanlang">Stars yoki Premium.</Step>
         <Step title="3. Qabul qiluvchini ko‘rsating">
           Username’ni profildan nusxa oling — qo‘lda yozganda harf almashib ketadi.
         </Step>
@@ -161,7 +153,7 @@ function UzBody() {
       </InfoGrid>
 
       <h2 id="bilish">Rejalashtirishdan oldin bilib qo‘yish kerak</h2>
-      <KeyFacts label="To‘rt nuqta">
+      <KeyFacts label="Uch nuqta">
         <li>
           <b>Username’ni tekshiring.</b> Sovg‘a rejalashtirilgan vaqtda o‘sha username’ga ketadi. Odam
           username’ini o‘zgartirsa, buni oldindan aytib qo‘ygani ma’qul.
@@ -169,10 +161,6 @@ function UzBody() {
         <li>
           <b>Vaqt mintaqasiga e’tibor bering.</b> «00:00» qaysi vaqt bo‘yicha ekanini botda tasdiqlang —
           ayniqsa qabul qiluvchi boshqa mamlakatda bo‘lsa.
-        </li>
-        <li>
-          <b>Katalog o‘zgarishi mumkin.</b> Oddiy va NFT sovg‘alarda tiraj tugashi mumkin; uzoq muddatga
-          rejalashtirsangiz, shuni hisobga oling.
         </li>
         <li>
           <b>Premium muddati yetkazilgandan boshlanadi.</b> Ya’ni 3 oylik obuna to‘lagan kuningizdan emas,
@@ -203,7 +191,7 @@ function RuAnswer() {
     <p>
       Подарок по таймеру — это возможность <b>оплатить подарок заранее</b> и самому задать дату и время
       вручения. В назначенную минуту бот отправит его получателю автоматически — даже если вы в этот момент
-      заняты. Работает с Premium, Stars, обычными и NFT-подарками.
+      заняты. Сейчас работает со Stars и Premium.
     </p>
   );
 }
@@ -230,7 +218,7 @@ function RuBody() {
 
       <h2 id="nima">Что такое подарок по таймеру</h2>
       <p>
-        Вы оплачиваете подарок заранее — Premium, Stars, обычный гифт или NFT-подарок — а затем указываете{" "}
+        Вы оплачиваете подарок заранее — Stars или Premium — а затем указываете{" "}
         <b>точную дату и время</b> вручения. Остальное делает бот: подарок бронируется за вами и автоматически
         отправляется в назначенный момент.
       </p>
@@ -247,7 +235,7 @@ function RuBody() {
       </p>
       <Steps>
         <Step title="1. Оплачиваете заранее">Хоть за неделю — оформляете подарок в боте.</Step>
-        <Step title="2. Выбираете, что подарить">Premium, звёзды, обычный гифт или NFT-подарок.</Step>
+        <Step title="2. Выбираете, что подарить">Stars или Premium.</Step>
         <Step title="3. Ставите таймер">12 сентября, 00:00.</Step>
         <Step title="4. Забываете об этом">И спокойно занимаетесь своими делами.</Step>
       </Steps>
@@ -259,9 +247,7 @@ function RuBody() {
       <h2 id="mahsulot">На какие продукты можно поставить таймер</h2>
       <ProductTable locale="ru" />
       <p>
-        То есть таймер работает не только с Premium — он доступен для всех основных продуктов. Выбрать вид
-        подарка поможет статья{" "}
-        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">об обычных и NFT-подарках</Link>.
+        То есть таймер сейчас работает со Stars и Premium; обычные и NFT-подарки по таймеру отправить нельзя.
       </p>
 
       <InlineCta text="Оплатите подарок сейчас — придёт точно в нужную минуту." />
@@ -275,7 +261,7 @@ function RuBody() {
           </a>{" "}
           в Telegram.
         </Step>
-        <Step title="2. Выберите продукт">Premium, звёзды, обычный гифт или NFT-подарок.</Step>
+        <Step title="2. Выберите продукт">Stars или Premium.</Step>
         <Step title="3. Укажите получателя">
           Скопируйте username из профиля — при ручном наборе легко перепутать буквы.
         </Step>
@@ -303,7 +289,7 @@ function RuBody() {
       </InfoGrid>
 
       <h2 id="bilish">Что учесть до планирования</h2>
-      <KeyFacts label="Четыре момента">
+      <KeyFacts label="Три момента">
         <li>
           <b>Проверьте username.</b> Подарок уйдёт на него в запланированное время. Если человек сменит
           username, об этом лучше знать заранее.
@@ -311,10 +297,6 @@ function RuBody() {
         <li>
           <b>Обратите внимание на часовой пояс.</b> Уточните в боте, по какому времени указано «00:00», —
           особенно если получатель в другой стране.
-        </li>
-        <li>
-          <b>Каталог может измениться.</b> У обычных и NFT-подарков тираж может закончиться; при планировании
-          надолго это стоит учитывать.
         </li>
         <li>
           <b>Срок Premium идёт со дня вручения.</b> То есть три месяца считаются не с даты оплаты, а с момента
@@ -344,8 +326,8 @@ function EnAnswer() {
   return (
     <p>
       A scheduled gift lets you <b>pay for it now</b> and set the exact date and time it should be handed over.
-      At that minute the bot sends it to the recipient automatically — even if you are busy or asleep. It works
-      with Premium, Stars, regular gifts and NFT gifts.
+      At that minute the bot sends it to the recipient automatically — even if you are busy or asleep. It
+      currently works with Stars and Premium.
     </p>
   );
 }
@@ -372,7 +354,7 @@ function EnBody() {
 
       <h2 id="nima">What a scheduled gift means</h2>
       <p>
-        You pay for the gift in advance — Premium, Stars, a regular gift or an NFT gift — and then set the{" "}
+        You pay for the gift in advance — Stars or Premium — and then set the{" "}
         <b>exact date and time</b> for delivery. The bot handles the rest: the gift is reserved for you and sent
         automatically at the appointed moment.
       </p>
@@ -389,7 +371,7 @@ function EnBody() {
       </p>
       <Steps>
         <Step title="1. Pay in advance">Even a week ahead — place the order in the bot.</Step>
-        <Step title="2. Choose what to give">Premium, Stars, a regular gift or an NFT gift.</Step>
+        <Step title="2. Choose what to give">Stars or Premium.</Step>
         <Step title="3. Set the timer">12 September, 00:00.</Step>
         <Step title="4. Forget about it">And get on with your day.</Step>
       </Steps>
@@ -401,8 +383,7 @@ function EnBody() {
       <h2 id="mahsulot">Which products the timer covers</h2>
       <ProductTable locale="en" />
       <p>
-        So the timer is not only for Premium — it is available across the main products. To pick a gift type, see{" "}
-        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">regular versus NFT gifts</Link>.
+        So the timer currently covers Stars and Premium; regular and NFT gifts cannot be scheduled.
       </p>
 
       <InlineCta text="Pay for the gift now — it arrives at exactly the right minute." />
@@ -416,7 +397,7 @@ function EnBody() {
           </a>{" "}
           in Telegram.
         </Step>
-        <Step title="2. Choose the product">Premium, Stars, a regular gift or an NFT gift.</Step>
+        <Step title="2. Choose the product">Stars or Premium.</Step>
         <Step title="3. Name the recipient">
           Copy the username from their profile — typing it by hand is how letters get swapped.
         </Step>
@@ -444,7 +425,7 @@ function EnBody() {
       </InfoGrid>
 
       <h2 id="bilish">What to settle before scheduling</h2>
-      <KeyFacts label="Four points">
+      <KeyFacts label="Three points">
         <li>
           <b>Check the username.</b> The gift goes to that username at the scheduled time. If the person changes
           it, it is better to know in advance.
@@ -452,10 +433,6 @@ function EnBody() {
         <li>
           <b>Mind the time zone.</b> Confirm in the bot which time “00:00” refers to — especially if the
           recipient is in another country.
-        </li>
-        <li>
-          <b>The catalogue can change.</b> Regular and NFT gifts can sell out; worth bearing in mind when
-          scheduling far ahead.
         </li>
         <li>
           <b>Premium’s term starts on delivery.</b> Three months are counted from the moment it arrives, not from
@@ -488,7 +465,7 @@ const uzFaq = [
   },
   {
     question: "Qaysi mahsulotlarga taymer qo‘yish mumkin?",
-    answer: "Telegram Premium, Stars, oddiy sovg‘alar va NFT sovg‘alarga.",
+    answer: "Hozircha Telegram Stars va Premium’ga. Oddiy va NFT sovg‘alarni taymer bilan yuborib bo‘lmaydi.",
   },
   {
     question: "Yuborilish uchun onlayn bo‘lishim kerakmi?",
@@ -525,7 +502,7 @@ const ruFaq = [
   },
   {
     question: "На какие продукты можно поставить таймер?",
-    answer: "На Telegram Premium, звёзды, обычные подарки и NFT-подарки.",
+    answer: "Пока на Telegram Stars и Premium. Обычные и NFT-подарки по таймеру отправить нельзя.",
   },
   {
     question: "Нужно ли быть онлайн в момент отправки?",
@@ -560,7 +537,10 @@ const enFaq = [
     answer:
       "Paying for a gift in advance and setting the delivery date and time. At that minute the bot sends it automatically.",
   },
-  { question: "Which products support the timer?", answer: "Telegram Premium, Stars, regular gifts and NFT gifts." },
+  {
+    question: "Which products support the timer?",
+    answer: "Telegram Stars and Premium for now. Regular and NFT gifts cannot be scheduled.",
+  },
   {
     question: "Do I need to be online when it sends?",
     answer: "No. The gift goes out by itself at the set time, even if you are asleep.",
@@ -592,7 +572,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "howto",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-06",
   keywords: [
     "taymer bilan sovga yuborish",
     "telegram sovgani rejalashtirish",
@@ -603,7 +583,7 @@ export const post: AeoPost = {
   ],
   howToSteps: [
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
-    { name: "Mahsulotni tanlang", text: "Premium, Stars, oddiy gift yoki NFT sovg‘a." },
+    { name: "Mahsulotni tanlang", text: "Stars yoki Premium." },
     { name: "Qabul qiluvchini ko‘rsating", text: "Username’ni profildan nusxa olib kiriting." },
     { name: "Sana va vaqtni belgilang", text: "Masalan, 12-sentabr, 00:00." },
     { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet." },
@@ -613,10 +593,10 @@ export const post: AeoPost = {
     uz: {
       title: "Taymer bilan sovg‘a: hozir to‘lang, aynan vaqtida yetkazamiz",
       excerpt:
-        "Sovg‘ani oldindan to‘lab, yetkazish sanasi va vaqtini belgilash. Premium, Stars, oddiy va NFT sovg‘alar bilan ishlaydi — qadamlar va e’tibor beriladigan nuqtalar.",
+        "Sovg‘ani oldindan to‘lab, yetkazish sanasi va vaqtini belgilash. Stars va Premium bilan ishlaydi — qadamlar va e’tibor beriladigan nuqtalar.",
       metaTitle: "Taymer bilan sovg‘a yuborish — aynan vaqtida",
       metaDescription:
-        "Telegramda taymerli sovg‘a: oldindan to‘lab, sana va vaqtni belgilaysiz. Premium, Stars, oddiy va NFT sovg‘alar; qadamlar, vaqt mintaqasi va muddat.",
+        "Telegramda taymerli sovg‘a: oldindan to‘lab, sana va vaqtni belgilaysiz. Stars va Premium; qadamlar, vaqt mintaqasi va muddat.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -627,10 +607,10 @@ export const post: AeoPost = {
     ru: {
       title: "Подарок по таймеру: оплатите сейчас — вручим точно в срок",
       excerpt:
-        "Оплата заранее с указанием даты и времени вручения. Работает с Premium, звёздами, обычными и NFT-подарками — шаги и важные моменты.",
+        "Оплата заранее с указанием даты и времени вручения. Работает со Stars и Premium — шаги и важные моменты.",
       metaTitle: "Подарок по таймеру в Telegram — точно в срок",
       metaDescription:
-        "Подарок по таймеру в Telegram: оплачиваете заранее, указываете дату и время. Premium, звёзды, обычные и NFT-подарки; шаги, часовой пояс и срок.",
+        "Подарок по таймеру в Telegram: оплачиваете заранее, указываете дату и время. Stars и Premium; шаги, часовой пояс и срок.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -641,10 +621,10 @@ export const post: AeoPost = {
     en: {
       title: "Scheduled gifts: pay now, delivered exactly on time",
       excerpt:
-        "Pay in advance and set the delivery date and time. Works with Premium, Stars, regular and NFT gifts — the steps and the points worth checking.",
+        "Pay in advance and set the delivery date and time. Works with Stars and Premium — the steps and the points worth checking.",
       metaTitle: "Scheduled gifts in Telegram — delivered on time",
       metaDescription:
-        "Scheduled gifts in Telegram: pay in advance and set the date and time. Premium, Stars, regular and NFT gifts; steps, time zone and term.",
+        "Scheduled gifts in Telegram: pay in advance and set the date and time. Stars and Premium; steps, time zone and term.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

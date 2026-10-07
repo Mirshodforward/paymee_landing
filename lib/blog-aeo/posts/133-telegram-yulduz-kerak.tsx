@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { InlineCta, Sources, KeyFacts, Steps, Step } from "@/components/blog/aeo-blocks";
 import { StarsPriceBoard } from "@/components/blog/stars-price-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
+import { formatStarsPrice } from "@/lib/products";
 
 const SLUG = "telegram-yulduz-kerak";
 
@@ -232,7 +233,10 @@ const uzFaq = [
   { question: "Telegram yulduzi nima?", answer: "Telegram ichidagi raqamli valyuta — Stars. Faqat platforma ekotizimida ishlaydi." },
   { question: "Yulduz kerak bo‘lsa qayerdan olaman?", answer: "Rasmiy ilova sozlamalaridan yoki @StarsPaymee_bot orqali." },
   { question: "Rasmiy usul nega qulay emas?", answer: "Bank kartasi cheklovlari va qo‘shimcha to‘lov tizimlari talab qilinishi sababli." },
-  { question: "Yulduz narxi qancha?", answer: "1 dona — 220 so‘m, 50 ta — 11 000 so‘m." },
+  {
+    question: "Yulduz narxi qancha?",
+    answer: `Karta o‘tkazmasida 1 dona — ${formatStarsPrice(1, "uz")}, 50 ta — ${formatStarsPrice(50, "uz")}; Click, Payme, Uzum yoki Paynet orqali 1 dona — ${formatStarsPrice(1, "uz", "gateway")}, 50 ta — ${formatStarsPrice(50, "uz", "gateway")}.`,
+  },
   { question: "Qancha vaqt oladi?", answer: "Odatda ~5 soniya." },
   { question: "Parol so‘raladimi?", answer: "Yo‘q. Faqat username yoki ID kerak." },
   { question: "Qanday xizmatni tanlash kerak?", answer: "Tekshirilgan, sharhlari bor va rasmiy to‘lov tizimlaridan foydalanadigan xizmatni." },
@@ -243,7 +247,10 @@ const ruFaq = [
   { question: "Что такое звезда Telegram?", answer: "Цифровая валюта внутри Telegram — Stars. Работает только в экосистеме платформы." },
   { question: "Где получить звёзды, если они нужны?", answer: "В настройках официального приложения или через @StarsPaymee_bot." },
   { question: "Почему официальный способ неудобен?", answer: "Из-за ограничений банковских карт и требования дополнительных платёжных систем." },
-  { question: "Сколько стоит звезда?", answer: "1 штука — 220 сум, 50 штук — 11 000 сум." },
+  {
+    question: "Сколько стоит звезда?",
+    answer: `Переводом на карту 1 штука — ${formatStarsPrice(1, "ru")}, 50 штук — ${formatStarsPrice(50, "ru")}; через Click, Payme, Uzum или Paynet 1 штука — ${formatStarsPrice(1, "ru", "gateway")}, 50 штук — ${formatStarsPrice(50, "ru", "gateway")}.`,
+  },
   { question: "Сколько это занимает?", answer: "Обычно ~5 секунд." },
   { question: "Спрашивают ли пароль?", answer: "Нет. Нужен только username или ID." },
   { question: "Какой сервис выбрать?", answer: "Проверенный, с отзывами и официальными платёжными системами." },
@@ -254,7 +261,10 @@ const enFaq = [
   { question: "What is a Telegram star?", answer: "A digital currency inside Telegram — Stars. It only works within the platform’s ecosystem." },
   { question: "Where do I get stars when I need them?", answer: "In the official app’s settings or through @StarsPaymee_bot." },
   { question: "Why is the official route inconvenient?", answer: "Because of bank card restrictions and the need for additional payment systems." },
-  { question: "How much does a star cost?", answer: "220 UZS each; 11,000 UZS for fifty." },
+  {
+    question: "How much does a star cost?",
+    answer: `By card transfer ${formatStarsPrice(1, "en")} each and ${formatStarsPrice(50, "en")} for fifty; via Click, Payme, Uzum or Paynet ${formatStarsPrice(1, "en", "gateway")} each and ${formatStarsPrice(50, "en", "gateway")} for fifty.`,
+  },
   { question: "How long does it take?", answer: "Usually about 5 seconds." },
   { question: "Is a password requested?", answer: "No. Only a username or ID is needed." },
   { question: "Which service should I choose?", answer: "A verified one with reviews that uses official payment systems." },
@@ -266,7 +276,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-08-02",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram yulduz kerak",
     "yulduz kerak",
@@ -289,7 +299,7 @@ export const post: AeoPost = {
         "Telegram yulduzi nima, u nimaga ishlatiladi va qayerdan olish mumkin? Rasmiy va mahalliy yo‘l, narxlar hamda xavfsizlik maslahatlari.",
       metaTitle: "Telegram yulduz kerak — qayerdan olish mumkin",
       metaDescription:
-        "Telegram yulduz kerakmi? Yulduz nima, qayerdan sotib olinadi, narxi qancha (220 so‘m/dona) va qanday qilib xavfsiz xarid qilish kerak.",
+        `Telegram yulduz kerakmi? Yulduz nima, qayerdan sotib olinadi, narxi qancha (karta o‘tkazmasida ${formatStarsPrice(1, "uz")}/dona, Click/Payme orqali ${formatStarsPrice(1, "uz", "gateway")}) va qanday qilib xavfsiz xarid qilish kerak.`,
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -303,7 +313,7 @@ export const post: AeoPost = {
         "Что такое звезда Telegram, для чего она нужна и где её получить? Официальный и местный путь, цены и советы по безопасности.",
       metaTitle: "Нужны звёзды Telegram — где их купить",
       metaDescription:
-        "Нужны звёзды Telegram? Что это такое, где купить, сколько стоит (220 сум за штуку) и как совершить покупку безопасно.",
+        `Нужны звёзды Telegram? Что это такое, где купить, сколько стоит (${formatStarsPrice(1, "ru")} за штуку переводом на карту, ${formatStarsPrice(1, "ru", "gateway")} — через Click/Payme) и как совершить покупку безопасно.`,
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -317,7 +327,7 @@ export const post: AeoPost = {
         "What a Telegram star is, what it is used for and where to get it: the official and local routes, prices and safety advice.",
       metaTitle: "Need Telegram stars — where to buy them",
       metaDescription:
-        "Need Telegram stars? What they are, where to buy them, how much they cost (220 UZS each) and how to buy safely.",
+        `Need Telegram stars? What they are, where to buy them, how much they cost (${formatStarsPrice(1, "en")} each by card transfer, ${formatStarsPrice(1, "en", "gateway")} via Click/Payme) and how to buy safely.`,
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

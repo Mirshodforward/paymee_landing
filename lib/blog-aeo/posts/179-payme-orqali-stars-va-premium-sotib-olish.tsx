@@ -11,14 +11,16 @@ import {
   Steps,
   Toc,
 } from "@/components/blog/aeo-blocks";
-import { PREMIUM_PLANS, STARS_PER_UNIT_UZS, formatUzs } from "@/lib/products";
+import { PREMIUM_PLANS, STARS_PER_UNIT_GATEWAY_UZS, STARS_PER_UNIT_UZS, formatUzs } from "@/lib/products";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
 const SLUG = "payme-orqali-stars-va-premium-sotib-olish";
 
 /**
  * Payme bilan nimalarni olish mumkin — buyurtma turlari `describeOrder()` da
- * belgilangan: stars, premium, gift, NFT, raqam, balans.
+ * belgilangan: stars, premium, gift, NFT, raqam, balans. NFT ijarasi shlyuzni
+ * qabul qiladi; NFT Market esa faqat karta yoki balans (bot:
+ * `nftMarket/orderCreate.js`, `ALLOWED_METHODS`).
  */
 function WhatTable({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
@@ -28,6 +30,8 @@ function WhatTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Telegram Stars", "Ha", "50 dan 10 000 donagacha"],
         ["Telegram Premium", "Ha", "1, 3, 6 va 12 oy"],
         ["Oddiy sovg‘alar", "Ha", "Stars hisobidan yuboriladi"],
+        ["NFT ijarasi", "Ha", "Kolleksion sovg‘a muddatga"],
+        ["NFT Market", "Yo‘q", "Faqat karta yoki balans"],
         ["Telegram raqam", "Ha", "Alohida buyurtma sifatida"],
         ["Balansni to‘ldirish", "Ha", "Keyin balansdan to‘laysiz"],
       ],
@@ -38,6 +42,8 @@ function WhatTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Telegram Stars", "Да", "От 50 до 10 000 штук"],
         ["Telegram Premium", "Да", "1, 3, 6 и 12 месяцев"],
         ["Обычные подарки", "Да", "Отправляются за звёзды"],
+        ["Аренда NFT", "Да", "Коллекционный подарок на срок"],
+        ["NFT Market", "Нет", "Только карта или баланс"],
         ["Telegram-номер", "Да", "Отдельным заказом"],
         ["Пополнение баланса", "Да", "Потом платите с баланса"],
       ],
@@ -48,6 +54,8 @@ function WhatTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Telegram Stars", "Yes", "From 50 to 10,000 units"],
         ["Telegram Premium", "Yes", "1, 3, 6 and 12 months"],
         ["Regular gifts", "Yes", "Sent from a Stars balance"],
+        ["NFT rental", "Yes", "A collectible for a set term"],
+        ["NFT Market", "No", "Card or balance only"],
         ["Telegram number", "Yes", "As a separate order"],
         ["Balance top-up", "Yes", "Then you pay from the balance"],
       ],
@@ -70,7 +78,12 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Tasdiqlash", "Avtomatik", "Avtomatik", "SMS bo‘yicha avtomatik"],
         ["Chek yuborish", "Kerak emas", "Kerak emas", "Kerak emas"],
-        ["Komissiya", "Shlyuz komissiyasi bor", "Shlyuz komissiyasi bor", "Yo‘q"],
+        [
+          "Narx",
+          "Stars va boshqa mahsulotlarda biroz yuqori; Premium’da farq yo‘q",
+          "Stars va boshqa mahsulotlarda biroz yuqori; Premium’da farq yo‘q",
+          "Eng past; Premium’da bir xil",
+        ],
         ["Aniq summa muhimmi", "Yo‘q — summa tayyor", "Yo‘q — summa tayyor", "Ha, tiyinigacha"],
         ["Nima kerak", "Payme ilovasi", "Click ilovasi", "Istalgan UzCard/HUMO"],
       ],
@@ -80,7 +93,12 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Подтверждение", "Автоматически", "Автоматически", "Автоматически по SMS"],
         ["Отправлять чек", "Не нужно", "Не нужно", "Не нужно"],
-        ["Комиссия", "Есть комиссия шлюза", "Есть комиссия шлюза", "Нет"],
+        [
+          "Цена",
+          "Для Stars и других товаров немного выше; для Premium без разницы",
+          "Для Stars и других товаров немного выше; для Premium без разницы",
+          "Самая низкая; Premium — та же",
+        ],
         ["Важна ли точная сумма", "Нет — сумма готова", "Нет — сумма готова", "Да, до копейки"],
         ["Что нужно", "Приложение Payme", "Приложение Click", "Любая UzCard/Humo"],
       ],
@@ -90,7 +108,12 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
       rows: [
         ["Confirmation", "Automatic", "Automatic", "Automatic, via SMS"],
         ["Sending a receipt", "Not needed", "Not needed", "Not needed"],
-        ["Commission", "Gateway commission applies", "Gateway commission applies", "None"],
+        [
+          "Price",
+          "Slightly higher for Stars and other products; no difference for Premium",
+          "Slightly higher for Stars and other products; no difference for Premium",
+          "Lowest; same for Premium",
+        ],
         ["Does the exact amount matter", "No — the amount is set", "No — the amount is set", "Yes, to the last so‘m"],
         ["What you need", "The Payme app", "The Click app", "Any UzCard/HUMO"],
       ],
@@ -162,9 +185,12 @@ function UzBody() {
         Payme faqat Stars uchun emas — botdagi to‘lovli mahsulotlarning barchasi uchun ishlaydi.
       </p>
       <WhatTable locale="uz" />
-      <Notice label="Kolleksion (sotuvdan olingan) sovg‘alar">
-        To‘lov usulidan qat’i nazar, kolleksion sovg‘alar bot orqali yetkazilmaydi. Batafsil:{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nega kolleksion giftlar endi olinmaydi</Link>.
+      <Notice label="NFT sovg‘alar va limited sovg‘alar">
+        Payme bilan NFT ijarasini ham to‘lash mumkin. NFT Market’da (tayyor kolleksion nusxa xaridi, 300 000
+        so‘mgacha) esa Payme yo‘q — u yerda faqat UzCard/HUMO kartaga o‘tkazma yoki balans. Sotuvdan tugagan
+        limited sovg‘alarni Telegram do‘konidan yangi olib bo‘lmaydi, shuning uchun oddiy katalog ularni bermaydi —
+        mavjud NFT nusxasini esa NFT Market’da sotib olish yoki ijaraga olish mumkin. Batafsil:{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">limited sovg‘alar va NFT Market</Link>.
       </Notice>
 
       <h2 id="stars">Payme orqali Telegram Stars sotib olish</h2>
@@ -258,19 +284,25 @@ function UzBody() {
 
       <h2 id="komissiya">Komissiya va yakuniy summa</h2>
       <p>
-        Ochig‘ini aytamiz: shlyuz orqali to‘lash <b>kartaga to‘g‘ridan-to‘g‘ri o‘tkazishdan biroz
-        qimmatroq</b>. Sababi — to‘lov tizimi o‘z komissiyasini oladi va u yakuniy summaga qo‘shiladi.
+        Ochig‘ini aytamiz: <b>Stars va boshqa mahsulotlarda</b> shlyuz orqali to‘lash kartaga
+        to‘g‘ridan-to‘g‘ri o‘tkazishdan biroz qimmatroq — to‘lov tizimi o‘z komissiyasini oladi va u yakuniy
+        summaga qo‘shiladi. <b>Premium’da farq yo‘q</b> — narx Payme, Click, Uzum, Paynet va karta o‘tkazmasida
+        bir xil (yuqoridagi jadval).
       </p>
       <KeyFacts label="Nimaga e’tibor berish kerak">
         <li>
           Bot <b>yakuniy summani to‘lovdan oldin</b> ko‘rsatadi — «keyin qo‘shimcha» degani yo‘q.
         </li>
         <li>
-          Bazaviy narx — <b>{formatUzs(STARS_PER_UNIT_UZS, "uz")} / yulduz</b>; shlyuz bilan to‘laganda
-          yakuniy summa shundan yuqoriroq chiqadi.
+          Stars narxi usulga bog‘liq: kartaga o‘tkazmada <b>{formatUzs(STARS_PER_UNIT_UZS, "uz")} / yulduz</b>,
+          Payme (Click, Uzum, Paynet ham) orqali <b>{formatUzs(STARS_PER_UNIT_GATEWAY_UZS, "uz")} / yulduz</b>.
         </li>
         <li>
-          Eng arzon yo‘l — <b>kartaga o‘tkazma</b>, lekin unda summani tiyinigacha to‘g‘ri kiritish shart.
+          <b>Premium</b> — barcha to‘lov usulida bir xil narx, ustama yo‘q.
+        </li>
+        <li>
+          Stars va boshqa mahsulotlarda eng arzon yo‘l — <b>kartaga o‘tkazma</b>, lekin unda summani tiyinigacha
+          to‘g‘ri kiritish shart.
         </li>
         <li>
           Farq kichik summalarda deyarli sezilmaydi; katta buyurtmada kartaga o‘tkazma foydaliroq.
@@ -280,8 +312,9 @@ function UzBody() {
       <h2 id="taqqoslash">Payme, Click yoki kartaga o‘tkazma — qaysi biri</h2>
       <MethodTable locale="uz" />
       <p>
-        Qisqasi: <b>tezlik va xotirjamlik</b> kerak bo‘lsa — Payme yoki Click;{" "}
-        <b>eng arzon narx</b> kerak bo‘lsa — kartaga o‘tkazma. Kartangiz umuman bo‘lmasa,{" "}
+        Qisqasi: <b>tezlik va xotirjamlik</b> kerak bo‘lsa — Payme yoki Click; Stars va boshqa mahsulotlarda{" "}
+        <b>eng arzon narx</b> kerak bo‘lsa — kartaga o‘tkazma (Premium narxi hamma usulda bir xil). Kartangiz
+        umuman bo‘lmasa,{" "}
         <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">naqd pul bilan to‘lash</Link>{" "}
         yo‘li ham bor.
       </p>
@@ -289,8 +322,10 @@ function UzBody() {
       <h2 id="xato">Tez-tez uchraydigan holatlar</h2>
       <InfoGrid>
         <InfoCard emoji="❌" title="Payme ro‘yxatda yo‘q">
-          Ba’zan usul vaqtincha o‘chirilgan bo‘ladi (texnik ishlar). Click yoki kartaga o‘tkazmani
-          tanlang — mahsulot va narx o‘zgarmaydi.
+          Ba’zan usul vaqtincha o‘chirilgan bo‘ladi (texnik ishlar). Click, Uzum yoki Paynet’ni tanlang — narx
+          Payme bilan bir xil. Kartaga o‘tkazmada Stars va boshqa mahsulotlar hatto arzonroq (Stars —{" "}
+          {formatUzs(STARS_PER_UNIT_UZS, "uz")}/dona; Premium narxi bir xil), faqat summani tiyinigacha to‘g‘ri
+          kiriting.
         </InfoCard>
         <InfoCard emoji="💳" title="Payme’da mablag‘ yetmadi">
           Ilovada kartani almashtiring yoki hisobni to‘ldiring, so‘ng o‘sha havolaga qayting.
@@ -370,12 +405,12 @@ function RuBody() {
       <h2 id="nima-olinadi">Что можно купить через Payme</h2>
       <p>Payme работает не только для звёзд, а для всех платных товаров бота.</p>
       <WhatTable locale="ru" />
-      <Notice label="Коллекционные (снятые с продажи) подарки">
-        Независимо от способа оплаты коллекционные подарки через бота не доставляются. Подробнее:{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">
-          почему коллекционные подарки больше не купить
-        </Link>
-        .
+      <Notice label="NFT-подарки и limited-подарки">
+        Payme подходит и для аренды NFT. В NFT Market (покупка готового коллекционного экземпляра, до 300 000 сум)
+        Payme нет — там только перевод на карту UzCard/HUMO или баланс. Распроданные limited-подарки нельзя купить
+        новыми в магазине Telegram, поэтому обычный каталог их не выдаёт — существующий NFT-экземпляр можно купить
+        в NFT Market или взять в аренду. Подробнее:{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">limited-подарки и NFT Market</Link>.
       </Notice>
 
       <h2 id="stars">Покупка Telegram Stars через Payme</h2>
@@ -464,19 +499,25 @@ function RuBody() {
 
       <h2 id="komissiya">Комиссия и итоговая сумма</h2>
       <p>
-        Скажем прямо: оплата через шлюз <b>немного дороже прямого перевода на карту</b>. Причина в том,
-        что платёжная система берёт свою комиссию, и она входит в итоговую сумму.
+        Скажем прямо: <b>для Stars и других товаров</b> оплата через шлюз немного дороже прямого перевода на
+        карту — платёжная система берёт свою комиссию, и она входит в итоговую сумму. <b>Для Premium разницы
+        нет</b> — цена одинакова через Payme, Click, Uzum, Paynet и перевод на карту (таблица выше).
       </p>
       <KeyFacts label="На что обратить внимание">
         <li>
           Бот показывает <b>итоговую сумму до оплаты</b> — никаких «доплатите потом».
         </li>
         <li>
-          Базовая цена — <b>{formatUzs(STARS_PER_UNIT_UZS, "ru")} за звезду</b>; при оплате через шлюз
-          итог выходит выше.
+          Цена Stars зависит от способа: переводом на карту <b>{formatUzs(STARS_PER_UNIT_UZS, "ru")} за
+          звезду</b>, через Payme (а также Click, Uzum, Paynet) —{" "}
+          <b>{formatUzs(STARS_PER_UNIT_GATEWAY_UZS, "ru")} за звезду</b>.
         </li>
         <li>
-          Самый дешёвый путь — <b>перевод на карту</b>, но там сумму нужно ввести точь-в-точь.
+          <b>Premium</b> — одна цена при любом способе оплаты, без наценки.
+        </li>
+        <li>
+          Для Stars и других товаров самый дешёвый путь — <b>перевод на карту</b>, но там сумму нужно ввести
+          точь-в-точь.
         </li>
         <li>
           На маленьких суммах разница почти незаметна; на крупном заказе перевод на карту выгоднее.
@@ -486,16 +527,19 @@ function RuBody() {
       <h2 id="taqqoslash">Payme, Click или перевод на карту</h2>
       <MethodTable locale="ru" />
       <p>
-        Коротко: нужна <b>скорость и спокойствие</b> — Payme или Click; нужна <b>минимальная цена</b> —
-        перевод на карту. Если карты нет вообще, есть путь{" "}
+        Коротко: нужна <b>скорость и спокойствие</b> — Payme или Click; для Stars и других товаров нужна{" "}
+        <b>минимальная цена</b> — перевод на карту (цена Premium одинакова при любом способе). Если карты нет
+        вообще, есть путь{" "}
         <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">оплаты наличными</Link>.
       </p>
 
       <h2 id="xato">Частые ситуации</h2>
       <InfoGrid>
         <InfoCard emoji="❌" title="Payme нет в списке">
-          Иногда способ временно отключён (технические работы). Выберите Click или перевод на карту —
-          товар и цена не меняются.
+          Иногда способ временно отключён (технические работы). Выберите Click, Uzum или Paynet — цена та же,
+          что в Payme. Переводом на карту Stars и другие товары даже дешевле (Stars —{" "}
+          {formatUzs(STARS_PER_UNIT_UZS, "ru")} за штуку; цена Premium та же), только введите сумму точно до
+          тийина.
         </InfoCard>
         <InfoCard emoji="💳" title="В Payme не хватило средств">
           Смените карту в приложении или пополните счёт, затем вернитесь по той же ссылке.
@@ -575,12 +619,12 @@ function EnBody() {
       <h2 id="nima-olinadi">What you can buy with Payme</h2>
       <p>Payme is not limited to Stars — it works for every paid product in the bot.</p>
       <WhatTable locale="en" />
-      <Notice label="Collectible (sold-out) gifts">
-        Whatever the payment method, collectible gifts are not delivered through the bot. More on that:{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">
-          why collectible gifts can no longer be bought
-        </Link>
-        .
+      <Notice label="NFT gifts and limited gifts">
+        Payme also works for NFT rental. The NFT Market (buying a ready collectible, up to 300,000 so‘m) does not
+        take Payme — only a UzCard/HUMO card transfer or the balance. Sold-out limited gifts cannot be bought new
+        from Telegram’s store, so the regular catalogue cannot issue them — an existing NFT copy can be bought in
+        the NFT Market or rented. More on that:{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">limited gifts and the NFT Market</Link>.
       </Notice>
 
       <h2 id="stars">Buying Telegram Stars with Payme</h2>
@@ -670,20 +714,26 @@ function EnBody() {
 
       <h2 id="komissiya">Commission and the final amount</h2>
       <p>
-        To be straightforward about it: paying through a gateway is <b>slightly more expensive than a
-        direct card transfer</b>, because the payment system takes its commission and that is included in
-        the final figure.
+        To be straightforward about it: <b>for Stars and other products</b> paying through a gateway is
+        slightly more expensive than a direct card transfer, because the payment system takes its commission
+        and that is included in the final figure. <b>For Premium there is no difference</b> — the price is the
+        same via Payme, Click, Uzum, Paynet or a card transfer (see the table above).
       </p>
       <KeyFacts label="What to keep in mind">
         <li>
           The bot shows the <b>final amount before you pay</b> — there is never a “pay the rest later”.
         </li>
         <li>
-          The base price is <b>{formatUzs(STARS_PER_UNIT_UZS, "en")} per star</b>; paying through a gateway
-          puts the total above that.
+          The Stars price depends on the method: <b>{formatUzs(STARS_PER_UNIT_UZS, "en")} per star</b> by card
+          transfer, <b>{formatUzs(STARS_PER_UNIT_GATEWAY_UZS, "en")} per star</b> via Payme (and Click, Uzum,
+          Paynet).
         </li>
         <li>
-          The cheapest route is a <b>card transfer</b>, but there the amount has to be exact.
+          <b>Premium</b> — the same price on every payment method, no markup.
+        </li>
+        <li>
+          For Stars and other products the cheapest route is a <b>card transfer</b>, but there the amount has
+          to be exact.
         </li>
         <li>
           On small amounts the difference is barely noticeable; on a large order a card transfer pays off.
@@ -693,16 +743,19 @@ function EnBody() {
       <h2 id="taqqoslash">Payme, Click or a card transfer</h2>
       <MethodTable locale="en" />
       <p>
-        In short: for <b>speed and peace of mind</b>, Payme or Click; for the <b>lowest price</b>, a card
-        transfer. If you have no card at all, there is also the{" "}
+        In short: for <b>speed and peace of mind</b>, Payme or Click; for the <b>lowest price</b> on Stars and
+        other products, a card transfer (Premium costs the same either way). If you have no card at all, there
+        is also the{" "}
         <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">cash route</Link>.
       </p>
 
       <h2 id="xato">Common situations</h2>
       <InfoGrid>
         <InfoCard emoji="❌" title="Payme is not in the list">
-          The method is sometimes switched off for maintenance. Choose Click or a card transfer — the
-          product and the price do not change.
+          The method is sometimes switched off for maintenance. Choose Click, Uzum or Paynet — the price is
+          the same as with Payme. A card transfer makes Stars and other products even cheaper (Stars —{" "}
+          {formatUzs(STARS_PER_UNIT_UZS, "en")} per star; Premium costs the same), just enter the amount
+          exactly.
         </InfoCard>
         <InfoCard emoji="💳" title="Not enough funds in Payme">
           Switch cards in the app or top up, then return to the same link.
@@ -748,7 +801,7 @@ const uzFaq = [
   {
     question: "Payme bilan to‘lash qimmatroqmi?",
     answer:
-      "Biroz. Shlyuz o‘z komissiyasini oladi, shuning uchun yakuniy summa kartaga to‘g‘ridan-to‘g‘ri o‘tkazishdan yuqoriroq. Bot yakuniy summani to‘lovdan oldin ko‘rsatadi.",
+      `Stars va boshqa mahsulotlarda — biroz: Payme orqali Stars donasi ${formatUzs(STARS_PER_UNIT_GATEWAY_UZS, "uz")}, kartaga o‘tkazmada ${formatUzs(STARS_PER_UNIT_UZS, "uz")}. Premium’da — yo‘q, narx barcha usulda bir xil. Bot yakuniy summani to‘lovdan oldin ko‘rsatadi.`,
   },
   {
     question: "Payme’da Telegram hisobimga kirish so‘raladimi?",
@@ -795,7 +848,7 @@ const ruFaq = [
   {
     question: "Оплата через Payme дороже?",
     answer:
-      "Немного. Шлюз берёт свою комиссию, поэтому итог выше прямого перевода на карту. Бот показывает итоговую сумму до оплаты.",
+      `Для Stars и других товаров — немного: через Payme звезда стоит ${formatUzs(STARS_PER_UNIT_GATEWAY_UZS, "ru")}, переводом на карту — ${formatUzs(STARS_PER_UNIT_UZS, "ru")}. Для Premium — нет, цена одинакова при любом способе. Бот показывает итоговую сумму до оплаты.`,
   },
   {
     question: "Запрашивается ли доступ к моему Telegram-аккаунту?",
@@ -842,7 +895,7 @@ const enFaq = [
   {
     question: "Is paying with Payme more expensive?",
     answer:
-      "Slightly. The gateway takes its commission, so the total comes out above a direct card transfer. The bot shows the final amount before you pay.",
+      `For Stars and other products, slightly: a Star costs ${formatUzs(STARS_PER_UNIT_GATEWAY_UZS, "en")} through Payme and ${formatUzs(STARS_PER_UNIT_UZS, "en")} by card transfer. For Premium, no — the price is the same whichever method you use. The bot shows the final amount before you pay.`,
   },
   {
     question: "Is access to my Telegram account requested?",
@@ -873,7 +926,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-09-16",
-  dateModified: "2026-09-16",
+  dateModified: "2026-10-06",
   keywords: [
     "payme orqali stars sotib olish",
     "payme orqali telegram premium",

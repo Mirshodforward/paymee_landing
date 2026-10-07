@@ -25,10 +25,10 @@ type Props = {
  * Bosh sahifadagi sovg‘alar bloki.
  *
  * MUHIM: telefon mockup'idagi kolleksion nusxalar va narxlar — bot
- * interfeysining NAMUNASI, sotuvdagi taklif emas. Sotuvdan tugagan
- * kolleksion (NFT) sovg‘alar hozir bot orqali yetkazilmaydi, shuning uchun
- * mockup ostida buni aytadigan izoh chiqadi va matn faqat ishlayotgan
- * xizmatni va’da qiladi.
+ * interfeysining NAMUNASI, sotuvdagi taklif emas. 2026-09-21 dan botda
+ * NFT Market ishlaydi (sotuvdagi NFT, 300 000 so‘mgacha, karta yoki balans);
+ * 14-sentabrdan faqat Telegram sotuvdan olgan limited sovg‘alar botlarga
+ * berilmaydi. Komponent hozir hech qayerda ishlatilmaydi.
  */
 export function V2NftMarketSection({
   kicker,

@@ -20,10 +20,12 @@ const SLUG = "naqd-pul-bilan-telegram-stars-sotib-olish";
 /**
  * Naqd pulni botga yetkazishning uchta yo'li.
  *
- * MUHIM: bot ichida «Paynet» degan alohida to'lov tugmasi yo'q. Naqd pul
- * har doim avval kartaga yoki hamyonga tushadi, keyin oddiy to'lov bo'ladi.
- * Shuning uchun jadval «qayerda naqd topshirasiz → botda nima tanlaysiz»
- * mantiqida tuzilgan.
+ * MUHIM (2026-10-06): botda «Paynet» to'lov usuli BOR — prod API tavsifi
+ * «Paynet ilovasi yoki terminali orqali», mini-app'da «Paynet bankomat» ham
+ * ko'rinadi. Bu jadvaldagi yo'llar esa boshqa: naqd pul avval kartaga yoki
+ * hamyonga tushadi, keyin oddiy to'lov bo'ladi — «qayerda naqd topshirasiz →
+ * botda nima tanlaysiz» mantiqida. Paynet terminali oqimi tasdiqlansa,
+ * maqolani shu oqim bilan qayta yozish kerak.
  */
 function RouteTable({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
@@ -68,10 +70,10 @@ function RouteTable({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      Naqd pul bilan Telegram Stars va Premium olish <b>mumkin</b>, lekin bitta nuance bor:{" "}
-      <b>@StarsPaymee_bot</b> ichida «naqd» yoki «Paynet» degan alohida tugma <b>yo‘q</b>. Naqd pul avval{" "}
+      Naqd pul bilan Telegram Stars va Premium olish <b>mumkin</b>. Bu maqoladagi yo‘l: naqd pul avval{" "}
       <b>kartaga yoki Click/Payme hamyoniga</b> tushadi — terminalda, bank kassasida yoki cash-in
-      bankomatda — keyin botda oddiy to‘lovni tanlaysiz. Ya’ni <b>o‘z kartangiz bo‘lmasa ham bo‘ladi</b>.
+      bankomatda — keyin <b>@StarsPaymee_bot</b> da oddiy to‘lovni tanlaysiz. Ya’ni <b>o‘z kartangiz bo‘lmasa
+      ham bo‘ladi</b>. Botdagi <b>Paynet</b> usulini esa Paynet ilovasi yoki terminali orqali to‘lash mumkin.
     </p>
   );
 }
@@ -98,13 +100,14 @@ function UzBody() {
         deb yoziladi va odam terminalga borib, u yerda «StarsPaymee» degan xizmatni qidiradi.
       </p>
       <Notice label="Aniq holat">
-        Botda to‘lov usullari ro‘yxatida <b>Paynet alohida turmaydi</b>. Paynet va boshqa terminallar —
-        bu <b>naqd pulni kartaga yoki hamyonga aylantiradigan vosita</b>, bot bilan bevosita bog‘liq
-        emas. Naqd pul kartaga tushgandan keyin to‘lov oddiy tarzda kechadi.
+        Botda <b>Paynet</b> to‘lov usuli bor — uni Paynet ilovasi yoki terminali orqali to‘lash mumkin,
+        qadamlar botdagi to‘lov oynasida ko‘rsatiladi. Quyidagi to‘rt yo‘lda esa terminal —{" "}
+        <b>naqd pulni kartaga yoki hamyonga aylantiradigan vosita</b>: naqd pul kartaga tushgandan keyin
+        to‘lov oddiy tarzda kechadi.
       </Notice>
       <p>
-        Bu yomon xabar emas — aksincha, shu sababli <b>bank kartangiz umuman bo‘lmasa ham</b> xarid
-        qilishingiz mumkin. Faqat yo‘lni to‘g‘ri tanlash kerak.
+        Ya’ni <b>bank kartangiz umuman bo‘lmasa ham</b> xarid qilishingiz mumkin. Faqat yo‘lni to‘g‘ri
+        tanlash kerak.
       </p>
 
       <h2 id="yollar">Naqd puldan yulduzgacha: to‘rt yo‘l</h2>
@@ -267,11 +270,11 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      Купить Telegram Stars и Premium за наличные <b>можно</b>, но есть нюанс: внутри{" "}
-      <b>@StarsPaymee_bot</b> отдельной кнопки «наличные» или «Paynet» <b>нет</b>. Наличные сначала
+      Купить Telegram Stars и Premium за наличные <b>можно</b>. Путь в этой статье: наличные сначала
       попадают <b>на карту или в кошелёк Click/Payme</b> — через терминал, кассу банка или банкомат с
-      cash-in, — а уже потом вы выбираете в боте обычный способ оплаты. То есть{" "}
-      <b>своя карта не обязательна</b>.
+      cash-in, — а уже потом вы выбираете в <b>@StarsPaymee_bot</b> обычный способ оплаты. То есть{" "}
+      <b>своя карта не обязательна</b>. А способ <b>Paynet</b> в боте можно оплатить через приложение или
+      терминал Paynet.
     </p>
   );
 }
@@ -298,13 +301,14 @@ function RuBody() {
         человек идёт к терминалу и ищет там услугу «StarsPaymee».
       </p>
       <Notice label="Как на самом деле">
-        В списке способов оплаты бота <b>Paynet отдельно не стоит</b>. Paynet и другие терминалы — это{" "}
-        <b>способ превратить наличные в деньги на карте или в кошельке</b>, с ботом они напрямую не
-        связаны. Как только наличные оказались на карте, оплата идёт обычным порядком.
+        В боте есть способ оплаты <b>Paynet</b> — его можно оплатить через приложение или терминал Paynet,
+        шаги показываются в окне оплаты бота. А в четырёх путях ниже терминал — это{" "}
+        <b>способ превратить наличные в деньги на карте или в кошельке</b>: как только наличные оказались на
+        карте, оплата идёт обычным порядком.
       </Notice>
       <p>
-        Это не плохая новость — наоборот, именно поэтому покупка возможна, даже если{" "}
-        <b>банковской карты у вас нет совсем</b>. Нужно лишь выбрать правильный путь.
+        То есть покупка возможна, даже если <b>банковской карты у вас нет совсем</b>. Нужно лишь выбрать
+        правильный путь.
       </p>
 
       <h2 id="yollar">От наличных до звёзд: четыре пути</h2>
@@ -465,10 +469,11 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      You <b>can</b> buy Telegram Stars and Premium with cash, with one caveat: there is <b>no</b> separate
-      “cash” or “Paynet” button inside <b>@StarsPaymee_bot</b>. Cash first goes <b>onto a card or into a
-      Click/Payme wallet</b> — at a terminal, a bank desk or a cash-in ATM — and only then do you pick an
-      ordinary payment method in the bot. Which means <b>you do not need a card of your own</b>.
+      You <b>can</b> buy Telegram Stars and Premium with cash. The route in this article: cash first goes{" "}
+      <b>onto a card or into a Click/Payme wallet</b> — at a terminal, a bank desk or a cash-in ATM — and only
+      then do you pick an ordinary payment method in <b>@StarsPaymee_bot</b>. Which means <b>you do not need a
+      card of your own</b>. The bot’s <b>Paynet</b> method, meanwhile, can be paid through the Paynet app or a
+      Paynet terminal.
     </p>
   );
 }
@@ -495,13 +500,13 @@ function EnBody() {
         people then go to a terminal and look for a “StarsPaymee” service on the screen.
       </p>
       <Notice label="How it actually works">
-        <b>Paynet is not listed separately</b> among the bot’s payment methods. Paynet and other terminals
-        are a <b>way of turning cash into money on a card or in a wallet</b>; they are not connected to the
-        bot directly. Once the cash is on a card, the payment proceeds in the ordinary way.
+        The bot does have a <b>Paynet</b> payment method — it can be paid through the Paynet app or a Paynet
+        terminal, and the steps are shown in the bot’s payment sheet. In the four routes below, a terminal is
+        a <b>way of turning cash into money on a card or in a wallet</b>: once the cash is on a card, the
+        payment proceeds in the ordinary way.
       </Notice>
       <p>
-        That is not bad news — it is precisely why a purchase is possible <b>even with no bank card at
-        all</b>. You only have to pick the right route.
+        So a purchase is possible <b>even with no bank card at all</b>. You only have to pick the right route.
       </p>
 
       <h2 id="yollar">From cash to Stars: four routes</h2>
@@ -669,7 +674,7 @@ const uzFaq = [
   {
     question: "Botda Paynet degan to‘lov tugmasi bormi?",
     answer:
-      "Yo‘q. Paynet va boshqa terminallar naqd pulni kartaga yoki hamyonga o‘tkazish uchun ishlatiladi; bot ichida ular alohida usul sifatida turmaydi.",
+      "Ha. Botda «Paynet» to‘lov usuli bor — uni Paynet ilovasi yoki terminali orqali to‘lash mumkin, qadamlar to‘lov oynasida ko‘rsatiladi. Naqd pulni kartaga yoki hamyonga solib, keyin botda oddiy to‘lovni tanlash ham mumkin.",
   },
   {
     question: "Terminalda «StarsPaymee» xizmatini topa olmadim.",
@@ -720,7 +725,7 @@ const ruFaq = [
   {
     question: "Есть ли в боте кнопка оплаты Paynet?",
     answer:
-      "Нет. Paynet и другие терминалы служат для перевода наличных на карту или в кошелёк; отдельным способом оплаты в боте они не стоят.",
+      "Да. В боте есть способ оплаты «Paynet» — его можно оплатить через приложение или терминал Paynet, шаги показываются в окне оплаты. Можно и внести наличные на карту или в кошелёк, а затем выбрать в боте обычную оплату.",
   },
   {
     question: "Не нашёл в терминале услугу «StarsPaymee».",
@@ -771,7 +776,7 @@ const enFaq = [
   {
     question: "Is there a Paynet payment button in the bot?",
     answer:
-      "No. Paynet and other terminals are used to move cash onto a card or into a wallet; they are not listed as a payment method inside the bot.",
+      "Yes. The bot has a “Paynet” payment method — it can be paid through the Paynet app or a Paynet terminal, and the steps are shown in the payment sheet. You can also put cash onto a card or into a wallet and then pick an ordinary payment in the bot.",
   },
   {
     question: "I could not find a “StarsPaymee” service at the terminal.",
@@ -818,7 +823,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-09-16",
-  dateModified: "2026-09-16",
+  dateModified: "2026-10-06",
   keywords: [
     "naqd pul bilan stars olish",
     "naqd pul bilan telegram premium",

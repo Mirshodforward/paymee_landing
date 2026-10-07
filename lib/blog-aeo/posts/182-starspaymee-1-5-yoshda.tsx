@@ -23,7 +23,9 @@ const SLUG = "starspaymee-1-5-yoshda";
  *   - buyurtmalar 15 375, bajarilgani 8 059 (`orders`);
  *   - ro'yxatdan o'tgan 12 201, xarid qilgan 2 303, oxirgi 30 kunda 1 667;
  *   - sharhlar 513 ta baho, o'rtacha 4,66, matnli 121 ta, 5 yulduz 422 ta;
- *   - to'lov usullari `payment_methods` jadvalidan, sanalari bilan;
+ *   - to'lov usullari `payment_methods` jadvalidan, sanalari bilan
+ *     (2026-10-06: Uzum Bank va Paynet maqoladan keyin qo'shilgan — hozir
+ *     7 ta usul, shundan 5 tasi onlayn shlyuz);
  *   - mahsulot sanalari — har bir `order_type` ning ILK buyurtmasi.
  *
  * MUHIM: `orders` jadvali 2026-03-12 dan boshlanadi (hozirgi tizim shunda
@@ -136,6 +138,8 @@ function PaymentTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Balansdan to‘lash", "Ichki balans", "2026-yil 15-iyul"],
         ["СБП (rubl)", "Onlayn shlyuz, avtomatik tasdiq", "2026-yil 20-iyul"],
         ["Payme", "Onlayn shlyuz, avtomatik tasdiq", "2026-yil 16-sentabr"],
+        ["Uzum Bank", "Onlayn shlyuz, avtomatik tasdiq", "Maqola chiqqandan keyin"],
+        ["Paynet", "Onlayn shlyuz, avtomatik tasdiq", "Maqola chiqqandan keyin"],
       ],
     },
     ru: {
@@ -146,6 +150,8 @@ function PaymentTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Оплата с баланса", "Внутренний баланс", "15 июля 2026"],
         ["СБП (рубли)", "Онлайн-шлюз, автоподтверждение", "20 июля 2026"],
         ["Payme", "Онлайн-шлюз, автоподтверждение", "16 сентября 2026"],
+        ["Uzum Bank", "Онлайн-шлюз, автоподтверждение", "После выхода статьи"],
+        ["Paynet", "Онлайн-шлюз, автоподтверждение", "После выхода статьи"],
       ],
     },
     en: {
@@ -156,6 +162,8 @@ function PaymentTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Pay from balance", "Internal balance", "15 July 2026"],
         ["SBP (rubles)", "Online gateway, auto-confirmed", "20 July 2026"],
         ["Payme", "Online gateway, auto-confirmed", "16 September 2026"],
+        ["Uzum Bank", "Online gateway, auto-confirmed", "After this article"],
+        ["Paynet", "Online gateway, auto-confirmed", "After this article"],
       ],
     },
   }[locale];
@@ -195,7 +203,7 @@ function UzBody() {
         ]}
       />
 
-      <KeyFacts label="Qisqa ma‘lumot">
+      <KeyFacts label="Qisqa ma’lumot">
         <li>
           Xizmat <b>1,5 yildan ortiq</b> ishlaydi, hozirgi tizim <b>2026-yil martidan</b> beri.
         </li>
@@ -206,7 +214,7 @@ function UzBody() {
           <b>13</b> xil mahsulot: Stars va Premium’dan NFT ijarasi va gift cardgacha.
         </li>
         <li>
-          <b>5</b> ta to‘lov usuli, shundan <b>3</b> tasi avtomatik tasdiqlanadigan onlayn shlyuz.
+          <b>7</b> ta to‘lov usuli, shundan <b>5</b> tasi avtomatik tasdiqlanadigan onlayn shlyuz.
         </li>
       </KeyFacts>
 
@@ -236,7 +244,7 @@ function UzBody() {
         ko‘rsatamiz: birinchisi qiziqishni, ikkinchisi haqiqiy xizmatni bildiradi.
       </p>
       <p>
-        Oxirgi uch oyda sur‘at sezilarli o‘sdi: iyul, avgust va sentabrning har birida{" "}
+        Oxirgi uch oyda sur’at sezilarli o‘sdi: iyul, avgust va sentabrning har birida{" "}
         <b>4 000 dan ortiq</b> buyurtma qabul qilindi. Bu bahorgi oylardan bir necha barobar ko‘p.
       </p>
 
@@ -264,15 +272,16 @@ function UzBody() {
 
       <h2 id="tolov">To‘lov usullari</h2>
       <p>
-        To‘lov qismi biz uchun eng mas‘uliyatli joy. Bugun botda beshta usul ishlaydi va shundan
-        uchtasi <b>avtomatik tasdiqlanadigan onlayn shlyuz</b>: to‘lovdan keyin buyurtma qo‘lda
-        tekshiruvsiz davom etadi.
+        To‘lov qismi biz uchun eng mas’uliyatli joy. Maqola chiqqan kuni botda beshta usul ishlardi;
+        keyin Uzum Bank va Paynet qo‘shildi va hozir yettita usul bor, shundan beshtasi{" "}
+        <b>avtomatik tasdiqlanadigan onlayn shlyuz</b>: to‘lovdan keyin buyurtma qo‘lda tekshiruvsiz
+        davom etadi.
       </p>
       <PaymentTable locale="uz" />
       <p>
-        Click va Payme to‘lovlari <b>rasmiy to‘lov shlyuzi orqali</b> o‘tadi, СБП esa rubl bilan
-        to‘laydiganlar uchun. Uzcard va Humo kartasidan oddiy o‘tkazma ham qoladi — kartadan boshqa
-        imkoni yo‘q foydalanuvchilar uchun.
+        Click, Payme, Uzum Bank va Paynet to‘lovlari <b>rasmiy to‘lov shlyuzi orqali</b> o‘tadi, СБП
+        esa rubl bilan to‘laydiganlar uchun. Uzcard va Humo kartasidan oddiy o‘tkazma ham qoladi —
+        kartadan boshqa imkoni yo‘q foydalanuvchilar uchun.
       </p>
       <Notice label="Diqqat">
         To‘lov oynasida har doim <b>oluvchi</b> va <b>summa</b>ni tekshiring. Kartaga o‘tkazmada
@@ -299,7 +308,7 @@ function UzBody() {
           Telegram’da <b>@StarsPaymee_bot</b> yoki starstg.uz saytidagi havola orqali.
         </Step>
         <Step title="Bo‘limni tanlang">Stars, Premium, sovg‘a yoki boshqa yo‘nalish.</Step>
-        <Step title="Ma‘lumotni kiriting">
+        <Step title="Ma’lumotni kiriting">
           Qabul qiluvchi username yoki ID’ni yozing va qayta o‘qib tekshiring.
         </Step>
         <Step title="Narxni ko‘ring">Yakuniy summa va shartlar to‘lovdan oldin ko‘rinadi.</Step>
@@ -315,7 +324,7 @@ function UzBody() {
       <h2 id="oldinda">Oldinda nima bor</h2>
       <p>
         Keyingi bosqichda ham e‘tiborimiz o‘sha to‘rt narsada qoladi: <b>tezlik</b>,{" "}
-        <b>mas‘uliyat</b>, <b>qulaylik</b> va <b>soddalik</b>. Yangi mahsulotlar qo‘shilaveradi,
+        <b>mas’uliyat</b>, <b>qulaylik</b> va <b>soddalik</b>. Yangi mahsulotlar qo‘shilaveradi,
         lekin asosiy o‘lchov o‘zgarmaydi — foydalanuvchi buyurtmani ortiqcha savolsiz bera olishi
         kerak.
       </p>
@@ -350,7 +359,7 @@ const uzFaq = [
   {
     question: "Qanday to‘lov usullari bor?",
     answer:
-      "Beshta: Click SuperApp, Payme, СБП (rubl), Uzcard/Humo o‘tkazmasi va ichki balans. Birinchi uchtasi avtomatik tasdiqlanadigan onlayn shlyuz.",
+      "Yettita: Uzcard/Humo o‘tkazmasi, Click SuperApp, Payme, Uzum Bank, Paynet, СБП (rubl) va ichki balans. Click, Payme, Uzum Bank, Paynet va СБП — avtomatik tasdiqlanadigan onlayn shlyuz.",
   },
   {
     question: "Botda qanday mahsulotlar bor?",
@@ -407,7 +416,7 @@ function RuBody() {
           <b>13</b> продуктов: от Stars и Premium до аренды NFT и гифт-карт.
         </li>
         <li>
-          <b>5</b> способов оплаты, из них <b>3</b> — онлайн-шлюзы с автоподтверждением.
+          <b>7</b> способов оплаты, из них <b>5</b> — онлайн-шлюзы с автоподтверждением.
         </li>
       </KeyFacts>
 
@@ -464,14 +473,15 @@ function RuBody() {
 
       <h2 id="tolov">Способы оплаты</h2>
       <p>
-        Оплата — самая ответственная часть. Сейчас в боте работают пять способов, и три из них —{" "}
+        Оплата — самая ответственная часть. В день выхода статьи в боте работали пять способов; затем
+        добавились Uzum Bank и Paynet, и сейчас их семь, из них пять —{" "}
         <b>онлайн-шлюзы с автоподтверждением</b>: после оплаты заказ идёт дальше без ручной проверки.
       </p>
       <PaymentTable locale="ru" />
       <p>
-        Платежи Click и Payme проходят <b>через официальный платёжный шлюз</b>, СБП — для тех, кто
-        платит рублями. Обычный перевод с карты Uzcard или Humo тоже остаётся: для тех, у кого нет
-        другого варианта.
+        Платежи Click, Payme, Uzum Bank и Paynet проходят <b>через официальный платёжный шлюз</b>, СБП —
+        для тех, кто платит рублями. Обычный перевод с карты Uzcard или Humo тоже остаётся: для тех, у
+        кого нет другого варианта.
       </p>
       <Notice label="Важно">
         В окне оплаты всегда сверяйте <b>получателя</b> и <b>сумму</b>. При переводе на карту сумма
@@ -545,7 +555,7 @@ const ruFaq = [
   {
     question: "Какие есть способы оплаты?",
     answer:
-      "Пять: Click SuperApp, Payme, СБП (рубли), перевод на Uzcard/Humo и внутренний баланс. Первые три — онлайн-шлюзы с автоподтверждением.",
+      "Семь: перевод на Uzcard/Humo, Click SuperApp, Payme, Uzum Bank, Paynet, СБП (рубли) и внутренний баланс. Click, Payme, Uzum Bank, Paynet и СБП — онлайн-шлюзы с автоподтверждением.",
   },
   {
     question: "Какие продукты есть в боте?",
@@ -603,7 +613,7 @@ function EnBody() {
           <b>13</b> products, from Stars and Premium to NFT rental and gift cards.
         </li>
         <li>
-          <b>5</b> payment methods, <b>3</b> of them auto-confirmed online gateways.
+          <b>7</b> payment methods, <b>5</b> of them auto-confirmed online gateways.
         </li>
       </KeyFacts>
 
@@ -659,13 +669,15 @@ function EnBody() {
 
       <h2 id="tolov">Payment methods</h2>
       <p>
-        Payment is the part we treat most carefully. Five methods work today, and three of them are{" "}
+        Payment is the part we treat most carefully. Five methods worked when this article came out;
+        Uzum Bank and Paynet have been added since, so there are now seven, and five of them are{" "}
         <b>auto-confirmed online gateways</b>: once paid, the order continues without a manual check.
       </p>
       <PaymentTable locale="en" />
       <p>
-        Click and Payme run <b>through an official payment gateway</b>, and SBP serves those paying
-        in rubles. A plain Uzcard or Humo transfer stays available for people who have no other way.
+        Click, Payme, Uzum Bank and Paynet run <b>through an official payment gateway</b>, and SBP
+        serves those paying in rubles. A plain Uzcard or Humo transfer stays available for people who
+        have no other way.
       </p>
       <Notice label="Worth checking">
         In the payment sheet, always verify the <b>payee</b> and the <b>amount</b>. For a card
@@ -740,7 +752,7 @@ const enFaq = [
   {
     question: "What payment methods are available?",
     answer:
-      "Five: Click SuperApp, Payme, SBP (rubles), an Uzcard/Humo transfer and the internal balance. The first three are auto-confirmed online gateways.",
+      "Seven: an Uzcard/Humo transfer, Click SuperApp, Payme, Uzum Bank, Paynet, SBP (rubles) and the internal balance. Click, Payme, Uzum Bank, Paynet and SBP are auto-confirmed online gateways.",
   },
   {
     question: "What products does the bot carry?",
@@ -764,7 +776,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "trust",
   datePublished: "2026-09-23",
-  dateModified: "2026-09-23",
+  dateModified: "2026-10-06",
   keywords: [
     "starspaymee",
     "starspaymee bot",
@@ -784,7 +796,7 @@ export const post: AeoPost = {
         "StarsPaymee 1,5 yoshda. Bot bazasidan olingan haqiqiy raqamlar: nechta buyurtma bajarildi, qaysi mahsulotlar qachon qo‘shildi, qanday to‘lov usullari ishlaydi va mijozlar nima deydi.",
       metaTitle: "StarsPaymee 1,5 yoshda — 18 oy siz bilan",
       metaDescription:
-        "StarsPaymee 1,5 yoshda. 15 375 buyurtma, 13 mahsulot, 5 to‘lov usuli va 513 ta mijoz bahosi — bot bazasidan olingan haqiqiy raqamlar bilan hisobot.",
+        "StarsPaymee 1,5 yoshda. 15 375 buyurtma, 13 mahsulot, 7 to‘lov usuli va 513 ta mijoz bahosi — bot bazasidan olingan haqiqiy raqamlar bilan hisobot.",
       answerTitle: "Qisqacha",
       Answer: UzAnswer,
       Body: UzBody,
@@ -799,7 +811,7 @@ export const post: AeoPost = {
         "StarsPaymee исполнилось 1,5 года. Реальные цифры из базы бота: сколько заказов выполнено, когда появлялись продукты, какие способы оплаты работают и что говорят клиенты.",
       metaTitle: "StarsPaymee — 1,5 года вместе с вами",
       metaDescription:
-        "StarsPaymee — 1,5 года. 15 375 заказов, 13 продуктов, 5 способов оплаты и 513 оценок клиентов: отчёт с реальными цифрами из базы бота.",
+        "StarsPaymee — 1,5 года. 15 375 заказов, 13 продуктов, 7 способов оплаты и 513 оценок клиентов: отчёт с реальными цифрами из базы бота.",
       answerTitle: "Коротко",
       Answer: RuAnswer,
       Body: RuBody,
@@ -814,7 +826,7 @@ export const post: AeoPost = {
         "StarsPaymee has turned 1.5 years old. Real figures from the bot's database: how many orders were completed, when each product arrived, which payment methods run, and what customers say.",
       metaTitle: "StarsPaymee turns 1.5 years old",
       metaDescription:
-        "StarsPaymee turns 1.5. A report with real numbers from the bot's database: 15,375 orders, 13 products, 5 payment methods and 513 customer ratings.",
+        "StarsPaymee turns 1.5. A report with real numbers from the bot's database: 15,375 orders, 13 products, 7 payment methods and 513 customer ratings.",
       answerTitle: "In brief",
       Answer: EnAnswer,
       Body: EnBody,

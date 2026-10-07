@@ -77,12 +77,15 @@ function UzBody() {
         <Link href="/blog/telegram-gifts-narxlari-royxati">«Gifts narxlari ro‘yxati»</Link> maqolasida ko‘rasiz.
       </p>
 
-      <h2 id="holat">Kolleksiyani qanday to‘ldirish mumkin (2026-yil sentabr holati)</h2>
+      <h2 id="holat">Kolleksiyani qanday to‘ldirish mumkin (2026-yil oktabr holati)</h2>
       <p>
-        Sotuvdan tugagan kolleksion nusxalar <b>bot orqali yetkazilmaydi</b> — ularni Telegram ichidagi bozordan
-        yoki boshqa foydalanuvchidan olasiz. Yangi collectible esa o‘zingizda hosil bo‘ladi: yulduz olib, oddiy
-        sovg‘ani upgrade qilasiz. Xizmat holati
-        bo‘yicha batafsil — <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">shu maqolada</Link>.
+        Tayyor kolleksion nusxani @StarsPaymee_bot’dagi{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link>’dan (300 000 so‘mgacha, karta yoki balans
+        orqali), Telegram ichidagi bozordan yoki boshqa foydalanuvchidan olasiz; vaqtincha kerak bo‘lsa —{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">NFT ijarasi</Link>. Yangi collectible’ni o‘zingiz ham hosil
+        qilishingiz mumkin: kartochkasida upgrade imkoniyati bor sovg‘ani yulduz evaziga ko‘tarasiz. Telegram
+        sotuvdan olib tashlagan limited sovg‘ani esa bot yangi holda yubora olmaydi — batafsil{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">shu maqolada</Link>.
       </p>
 
       <h2 id="qiymat">Nega noyob sovg‘alar qadrli?</h2>
@@ -199,6 +202,17 @@ function RuBody() {
         <Link href="/blog/telegram-gifts-narxlari-royxati">«Список цен на Gifts»</Link>.
       </p>
 
+      <h2 id="holat">Как пополнить коллекцию (октябрь 2026)</h2>
+      <p>
+        Готовый коллекционный экземпляр можно купить в{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> @StarsPaymee_bot (до 300 000 сумов, картой
+        или с баланса), на рынке внутри Telegram или у другого пользователя; на время —{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">аренда NFT</Link>. Новый collectible можно получить и
+        самому: подарок, в карточке которого есть опция upgrade, улучшается за звёзды. А limited-подарок, снятый
+        Telegram с продажи, бот как новый отправить не может — подробнее{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">в этой статье</Link>.
+      </p>
+
       <h2 id="qiymat">Почему редкие подарки ценны?</h2>
       <p>
         Ценность идёт от <strong>ограниченности</strong>: чем меньше тираж, тем подарок особеннее. Collectible-подарки
@@ -244,7 +258,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-06-30",
-  dateModified: "2026-06-30",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram gifts kolleksiya",
     "top telegram rare gifts",

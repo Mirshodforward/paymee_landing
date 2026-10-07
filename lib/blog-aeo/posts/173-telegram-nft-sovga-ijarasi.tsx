@@ -19,7 +19,7 @@ const SLUG = "telegram-nft-sovga-ijarasi";
 function RentVsBuy({ locale }: { locale: "uz" | "ru" | "en" }) {
   const copy = {
     uz: {
-      headers: ["Mezon", "Ijara", "To‘liq xarid"],
+      headers: ["Mezon", "Ijara", "Xarid (NFT Market)"],
       rows: [
         ["Xarajat", "Faqat foydalanish vaqti uchun", "Aktivning to‘liq narxi"],
         ["Muddat", "Siz tanlagan kunlar soni", "Cheklanmagan — sizda qoladi"],
@@ -29,7 +29,7 @@ function RentVsBuy({ locale }: { locale: "uz" | "ru" | "en" }) {
       ],
     },
     ru: {
-      headers: ["Критерий", "Аренда", "Полная покупка"],
+      headers: ["Критерий", "Аренда", "Покупка (NFT Market)"],
       rows: [
         ["Затраты", "Только за время использования", "Полная стоимость актива"],
         ["Срок", "Выбранное вами количество дней", "Не ограничен — остаётся у вас"],
@@ -39,7 +39,7 @@ function RentVsBuy({ locale }: { locale: "uz" | "ru" | "en" }) {
       ],
     },
     en: {
-      headers: ["Criterion", "Renting", "Buying outright"],
+      headers: ["Criterion", "Renting", "Buying (NFT Market)"],
       rows: [
         ["Cost", "Only for the time you use it", "The asset's full price"],
         ["Term", "However many days you choose", "Unlimited — it stays yours"],
@@ -72,11 +72,10 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
-      <Notice label="Yangilandi — 2026-yil sentabr">
+      <Notice label="Holat — 2026-yil oktabr">
         <p>
-          Kolleksion (NFT) sovg‘alar bo‘yicha xizmat o‘zgardi: ular hozir bot orqali yetkazilmaydi. Ijara
-          bo‘limining joriy holatini botda tekshiring. Batafsil —{" "}
-          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgargani haqida</Link>.
+          NFT ijarasi ishlaydi. Sovg‘ani butunlay o‘zingizniki qilmoqchi bo‘lsangiz — botdagi{" "}
+          <Link href="/blog/starspaymee-nft-market">NFT Market</Link> (300 000 so‘mgacha).
         </p>
       </Notice>
 
@@ -115,8 +114,8 @@ function UzBody() {
       <RentVsBuy locale="uz" />
       <p>
         Asosiy farq egalikda: ijarada sovg‘a <b>sizniki bo‘lmaydi</b>, shuning uchun uni sotish, boshqa odamga
-        o‘tkazish yoki blokcheynga chiqarish mumkin emas. Agar sizga aynan egalik kerak bo‘lsa —{" "}
-        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">to‘liq xarid</Link> to‘g‘ri yo‘l.
+        o‘tkazish yoki blokcheynga chiqarish mumkin emas. Agar sizga aynan egalik kerak bo‘lsa — botdagi{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> (300 000 so‘mgacha) to‘g‘ri yo‘l.
       </p>
 
       <h2 id="kimga">Kimga mos keladi</h2>
@@ -148,9 +147,18 @@ function UzBody() {
         <Step title="3. Katalogdan sovg‘ani tanlang">
           Mavjud gift’lar ro‘yxatini ko‘rib chiqing — kolleksiya va xususiyatlariga qarang.
         </Step>
-        <Step title="4. Ijara muddatini belgilang">Necha kunga kerakligini ko‘rsating.</Step>
-        <Step title="5. So‘mda to‘lang">Qulay usulni tanlang.</Step>
-        <Step title="6. Sovg‘ani qabul qiling">To‘lovdan keyin u belgilangan muddatga sizda paydo bo‘ladi.</Step>
+        <Step title="4. Ijara muddatini belgilang">
+          Har bir e’londa eng kam va eng ko‘p kun ko‘rsatiladi — muddatni shu oraliqda slayder bilan tanlaysiz.
+        </Step>
+        <Step title="5. To‘lang">Qulay usulni tanlang — so‘mda yoki rublda (SBP).</Step>
+        <Step title="6. Fragment’ga ulang">
+          Ijara faollashgach bot Fragment havolasini so‘raydi: brauzerda fragment.com → Connect Wallet → TON
+          Connect, chiqqan havolani to‘liq nusxalab botga joylaysiz. Havola bir necha daqiqada eskiradi.
+        </Step>
+        <Step title="7. Sovg‘a hisobingizda">
+          Fragment sahifasini yangilang — sovg‘a muddat tugaguncha hisobingizda ko‘rinadi, so‘ng avtomatik
+          qaytariladi.
+        </Step>
       </Steps>
 
       <InlineCta text="Noyob sovg‘ani muddatga oling — to‘liq narxsiz." />
@@ -164,9 +172,12 @@ function UzBody() {
           <b>Click</b>, <b>Payme</b> va <b>Uzum</b> — ilova orqali bir bosishda.
         </li>
         <li>
-          <b>Paynet</b>, terminal va bankomatlar — naqd to‘lash uchun.
+          <b>Paynet</b> — onlayn to‘lov.
         </li>
-        <li>Hammasi so‘mda; xalqaro karta talab qilinmaydi.</li>
+        <li>
+          <b>SBP</b> — rublda to‘lash uchun.
+        </li>
+        <li>Xalqaro karta talab qilinmaydi.</li>
       </KeyFacts>
 
       <h2 id="bilish">Buyurtmadan oldin bilib qo‘yish kerak</h2>
@@ -221,11 +232,10 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
-      <Notice label="Обновлено — сентябрь 2026">
+      <Notice label="Статус — октябрь 2026">
         <p>
-          По коллекционным (NFT) подаркам сервис изменился: сейчас они через бота не выдаются. Актуальное
-          состояние раздела аренды уточняйте в боте. Подробнее —{" "}
-          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">о том, что изменилось</Link>.
+          Аренда NFT работает. Если подарок нужен насовсем —{" "}
+          <Link href="/blog/starspaymee-nft-market">NFT Market</Link> в боте (до 300 000 сумов).
         </p>
       </Notice>
 
@@ -265,7 +275,8 @@ function RuBody() {
       <p>
         Главное отличие во владении: при аренде подарок <b>вам не принадлежит</b>, поэтому продать, передать
         или вывести его в блокчейн нельзя. Если нужно именно владение —{" "}
-        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">полная покупка</Link> будет правильным путём.
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> в боте (до 300 000 сумов) будет правильным
+        путём.
       </p>
 
       <h2 id="kimga">Кому подойдёт</h2>
@@ -297,9 +308,18 @@ function RuBody() {
         <Step title="3. Выберите подарок из каталога">
           Посмотрите доступные гифты — обратите внимание на коллекцию и свойства.
         </Step>
-        <Step title="4. Укажите срок аренды">Отметьте, на сколько дней он вам нужен.</Step>
-        <Step title="5. Оплатите в сумах">Выберите удобный способ.</Step>
-        <Step title="6. Получите подарок">После оплаты он появляется у вас на указанный срок.</Step>
+        <Step title="4. Укажите срок аренды">
+          В каждом лоте указаны минимум и максимум дней — срок выбирается ползунком в этих пределах.
+        </Step>
+        <Step title="5. Оплатите">Выберите удобный способ — в сумах или в рублях (СБП).</Step>
+        <Step title="6. Подключите к Fragment">
+          После активации аренды бот попросит ссылку: откройте fragment.com в браузере → Connect Wallet → TON
+          Connect, скопируйте ссылку целиком и вставьте в бот. Ссылка устаревает за несколько минут.
+        </Step>
+        <Step title="7. Подарок на вашем аккаунте">
+          Обновите страницу Fragment — подарок будет на вашем аккаунте до конца срока, затем вернётся
+          автоматически.
+        </Step>
       </Steps>
 
       <InlineCta text="Возьмите редкий подарок на срок — без полной стоимости." />
@@ -313,9 +333,12 @@ function RuBody() {
           <b>Click</b>, <b>Payme</b> и <b>Uzum</b> — в одно нажатие в приложении.
         </li>
         <li>
-          <b>Paynet</b>, терминалы и банкоматы — для оплаты наличными.
+          <b>Paynet</b> — онлайн-оплата.
         </li>
-        <li>Всё в сумах; иностранная карта не требуется.</li>
+        <li>
+          <b>СБП</b> — для оплаты в рублях.
+        </li>
+        <li>Иностранная карта не требуется.</li>
       </KeyFacts>
 
       <h2 id="bilish">Что стоит знать до заказа</h2>
@@ -369,11 +392,10 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
-      <Notice label="Updated — September 2026">
+      <Notice label="Status — October 2026">
         <p>
-          The service around collectible (NFT) gifts has changed: they are not delivered through the bot at the
-          moment. Check the rental section's current state in the bot. More detail in{" "}
-          <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">what changed</Link>.
+          NFT rental is live. If you want to own the gift outright, use the bot’s{" "}
+          <Link href="/blog/starspaymee-nft-market">NFT Market</Link> (up to 300,000 so‘m).
         </p>
       </Notice>
 
@@ -412,8 +434,8 @@ function EnBody() {
       <RentVsBuy locale="en" />
       <p>
         The key difference is ownership: with a rental the gift <b>is not yours</b>, so it cannot be sold,
-        transferred or withdrawn to the blockchain. If ownership is what you actually want,{" "}
-        <Link href="/blog/telegram-sovga-va-nft-sovga-sotib-olish">buying outright</Link> is the right route.
+        transferred or withdrawn to the blockchain. If ownership is what you actually want, the bot’s{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> (up to 300,000 so‘m) is the right route.
       </p>
 
       <h2 id="kimga">Who it suits</h2>
@@ -445,9 +467,19 @@ function EnBody() {
         <Step title="3. Choose a gift from the catalogue">
           Look through what is available — check the collection and its properties.
         </Step>
-        <Step title="4. Set the rental period">Say how many days you need it for.</Step>
-        <Step title="5. Pay in so‘m">Choose whichever method suits you.</Step>
-        <Step title="6. Receive the gift">After payment it appears on your account for the chosen term.</Step>
+        <Step title="4. Set the rental period">
+          Each listing shows a minimum and maximum number of days — pick the term within that range with the
+          slider.
+        </Step>
+        <Step title="5. Pay">Choose whichever method suits you — in so‘m or in roubles (SBP).</Step>
+        <Step title="6. Connect to Fragment">
+          Once the rental is active the bot asks for a link: open fragment.com in a browser → Connect Wallet → TON
+          Connect, copy the whole link and paste it into the bot. The link expires within minutes.
+        </Step>
+        <Step title="7. The gift is on your account">
+          Refresh the Fragment page — the gift stays on your account until the term ends, then returns
+          automatically.
+        </Step>
       </Steps>
 
       <InlineCta text="Take a rare gift for a period — without the full price." />
@@ -461,9 +493,12 @@ function EnBody() {
           <b>Click</b>, <b>Payme</b> and <b>Uzum</b> — one tap in the app.
         </li>
         <li>
-          <b>Paynet</b>, terminals and ATMs — for paying in cash.
+          <b>Paynet</b> — online payment.
         </li>
-        <li>Everything in so‘m; no international card required.</li>
+        <li>
+          <b>SBP</b> — for paying in roubles.
+        </li>
+        <li>No international card required.</li>
       </KeyFacts>
 
       <h2 id="bilish">What to know before ordering</h2>
@@ -529,7 +564,12 @@ const uzFaq = [
   },
   {
     question: "To‘lov qanday usullarda qabul qilinadi?",
-    answer: "UzCard, HUMO, Click, Payme, Uzum, Paynet hamda terminal va bankomatlar orqali — hammasi so‘mda.",
+    answer: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali so‘mda; rublda SBP ham bor.",
+  },
+  {
+    question: "Ijaradagi sovg‘a qachon ko‘rinadi?",
+    answer:
+      "To‘lovdan keyin ijara zanjirda faollashadi, so‘ng uni Fragment’ga ulaysiz: brauzerda fragment.com → Connect Wallet → TON Connect, chiqqan havolani botga joylaysiz. Shundan keyin sovg‘a hisobingizda ko‘rinadi.",
   },
   {
     question: "Ijaraga olgan sovg‘amni uzaytirsam bo‘ladimi?",
@@ -567,7 +607,12 @@ const ruFaq = [
   },
   {
     question: "Какие способы оплаты принимаются?",
-    answer: "UzCard, Humo, Click, Payme, Uzum, Paynet, а также терминалы и банкоматы — всё в сумах.",
+    answer: "UzCard, Humo, Click, Payme, Uzum или Paynet — в сумах; в рублях есть СБП.",
+  },
+  {
+    question: "Когда арендованный подарок появится?",
+    answer:
+      "После оплаты аренда активируется в блокчейне, затем вы подключаете её к Fragment: fragment.com в браузере → Connect Wallet → TON Connect, полученную ссылку вставляете в бот. После этого подарок отображается на вашем аккаунте.",
   },
   {
     question: "Можно ли продлить аренду?",
@@ -602,7 +647,12 @@ const enFaq = [
   },
   {
     question: "Which payment methods are accepted?",
-    answer: "UzCard, HUMO, Click, Payme, Uzum, Paynet, plus terminals and ATMs — all in so‘m.",
+    answer: "UzCard, HUMO, Click, Payme, Uzum or Paynet in so‘m; SBP in roubles.",
+  },
+  {
+    question: "When does the rented gift appear?",
+    answer:
+      "After payment the rental activates on-chain; then you connect it to Fragment: fragment.com in a browser → Connect Wallet → TON Connect, and paste the link into the bot. After that the gift shows on your account.",
   },
   {
     question: "Can a rental be extended?",
@@ -619,7 +669,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram nft sovga ijarasi",
     "nft gift ijaraga olish",
@@ -632,9 +682,13 @@ export const post: AeoPost = {
     { name: "Botni oching", text: "Telegramda @StarsPaymee_bot ni ishga tushiring." },
     { name: "Ijara bo‘limini tanlang", text: "NFT sovg‘alar ijarasi bo‘limiga o‘ting." },
     { name: "Sovg‘ani tanlang", text: "Katalogdan kerakli gift’ni belgilang." },
-    { name: "Muddatni belgilang", text: "Necha kunga kerakligini ko‘rsating." },
-    { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali." },
-    { name: "Sovg‘ani qabul qiling", text: "To‘lovdan keyin u belgilangan muddatga hisobingizda paydo bo‘ladi." },
+    { name: "Muddatni belgilang", text: "E’londagi eng kam va eng ko‘p kun oralig‘ida slayder bilan tanlang." },
+    { name: "To‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali so‘mda yoki SBP orqali rublda." },
+    {
+      name: "Fragment’ga ulang",
+      text: "Ijara faollashgach brauzerda fragment.com → Connect Wallet → TON Connect; chiqqan havolani to‘liq nusxalab botga joylang. Havola bir necha daqiqada eskiradi.",
+    },
+    { name: "Sovg‘ani ko‘ring", text: "Fragment sahifasini yangilang — sovg‘a muddat tugaguncha hisobingizda ko‘rinadi." },
   ],
   locales: {
     uz: {

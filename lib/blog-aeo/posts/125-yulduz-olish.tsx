@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { InlineCta, Sources, KeyFacts, Steps, Step } from "@/components/blog/aeo-blocks";
 import { StarsPriceBoard } from "@/components/blog/stars-price-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
+import { STARS_PER_UNIT_GATEWAY_UZS, STARS_PER_UNIT_UZS, formatStarsPrice } from "@/lib/products";
 
 const SLUG = "yulduz-olish";
 
@@ -10,8 +11,10 @@ function UzAnswer() {
   return (
     <p>
       Yulduz olish — to‘rt qadam: <b>@StarsPaymee_bot</b> ga o‘tish, miqdorni tanlash, username kiritish va so‘mda
-      to‘lash. Narx — <b>220 so‘m</b> dan bir dona, 50 ta — <b>11 000 so‘m</b>. Yulduzlar ~5 soniyada hisobingizga
-      tushadi, parol so‘ralmaydi.
+      to‘lash. Narx: karta o‘tkazmasida donasi <b>{formatStarsPrice(1, "uz")}</b> (50 ta —{" "}
+      <b>{formatStarsPrice(50, "uz")}</b>), Click, Payme, Uzum yoki Paynet orqali donasi{" "}
+      <b>{formatStarsPrice(1, "uz", "gateway")}</b> (50 ta — <b>{formatStarsPrice(50, "uz", "gateway")}</b>).
+      Yulduzlar ~5 soniyada hisobingizga tushadi, parol so‘ralmaydi.
     </p>
   );
 }
@@ -31,7 +34,7 @@ function UzBody() {
       <Steps>
         <Step title="1. Botga o‘ting">@StarsPaymee_bot ni oching.</Step>
         <Step title="2. Miqdorni tanlang">Masalan 50, 100, 250 yoki 500.</Step>
-        <Step title="3. To‘lovni bajaring">UzCard, HUMO, Click, Payme yoki Paynet.</Step>
+        <Step title="3. To‘lovni bajaring">UzCard, HUMO, Click, Payme, Uzum yoki Paynet.</Step>
         <Step title="4. Qabul qiling">Yulduzlar bir necha soniyada hisobingizga tushadi.</Step>
       </Steps>
 
@@ -69,8 +72,10 @@ function RuAnswer() {
   return (
     <p>
       Покупка звёзд — четыре шага: открыть <b>@StarsPaymee_bot</b>, выбрать количество, указать username и оплатить в
-      сумах. Цена — от <b>220 сум</b> за штуку, 50 штук — <b>11 000 сум</b>. Звёзды поступают за ~5 секунд, пароль не
-      запрашивается.
+      сумах. Цена: переводом на карту — <b>{formatStarsPrice(1, "ru")}</b> за штуку (50 штук —{" "}
+      <b>{formatStarsPrice(50, "ru")}</b>), через Click, Payme, Uzum или Paynet —{" "}
+      <b>{formatStarsPrice(1, "ru", "gateway")}</b> (50 штук — <b>{formatStarsPrice(50, "ru", "gateway")}</b>). Звёзды
+      поступают за ~5 секунд, пароль не запрашивается.
     </p>
   );
 }
@@ -90,7 +95,7 @@ function RuBody() {
       <Steps>
         <Step title="1. Откройте бота">Откройте @StarsPaymee_bot.</Step>
         <Step title="2. Выберите количество">Например 50, 100, 250 или 500.</Step>
-        <Step title="3. Оплатите">UzCard, HUMO, Click, Payme или Paynet.</Step>
+        <Step title="3. Оплатите">UzCard, HUMO, Click, Payme, Uzum или Paynet.</Step>
         <Step title="4. Получите">Звёзды поступят на счёт за несколько секунд.</Step>
       </Steps>
 
@@ -128,8 +133,10 @@ function EnAnswer() {
   return (
     <p>
       Getting Stars takes four steps: open <b>@StarsPaymee_bot</b>, choose an amount, enter a username and pay in
-      so‘m. The price starts at <b>220 UZS</b> each; fifty cost <b>11,000 UZS</b>. Stars arrive in about 5 seconds
-      and no password is requested.
+      so‘m. The price is <b>{formatStarsPrice(1, "en")}</b> each by card transfer (fifty cost{" "}
+      <b>{formatStarsPrice(50, "en")}</b>) and <b>{formatStarsPrice(1, "en", "gateway")}</b> via Click, Payme, Uzum or
+      Paynet (fifty cost <b>{formatStarsPrice(50, "en", "gateway")}</b>). Stars arrive in about 5 seconds and no
+      password is requested.
     </p>
   );
 }
@@ -149,7 +156,7 @@ function EnBody() {
       <Steps>
         <Step title="1. Open the bot">Open @StarsPaymee_bot.</Step>
         <Step title="2. Choose an amount">For example 50, 100, 250 or 500.</Step>
-        <Step title="3. Pay">UzCard, HUMO, Click, Payme or Paynet.</Step>
+        <Step title="3. Pay">UzCard, HUMO, Click, Payme, Uzum or Paynet.</Step>
         <Step title="4. Receive">Stars land on the account within seconds.</Step>
       </Steps>
 
@@ -183,41 +190,62 @@ function EnBody() {
 }
 
 const uzFaq = [
-  { question: "Yulduz olish uchun nima kerak?", answer: "Telegram hisobi, username va mahalliy to‘lov usuli (UzCard, HUMO, Click, Payme yoki Paynet)." },
-  { question: "Narxi qancha?", answer: "1 dona — 220 so‘m, 50 ta — 11 000 so‘m." },
+  { question: "Yulduz olish uchun nima kerak?", answer: "Telegram hisobi, username va mahalliy to‘lov usuli (UzCard, HUMO, Click, Payme, Uzum yoki Paynet)." },
+  {
+    question: "Narxi qancha?",
+    answer: `Karta o‘tkazmasida 1 dona — ${formatStarsPrice(1, "uz")}, 50 ta — ${formatStarsPrice(50, "uz")}; Click, Payme, Uzum yoki Paynet orqali 1 dona — ${formatStarsPrice(1, "uz", "gateway")}, 50 ta — ${formatStarsPrice(50, "uz", "gateway")}.`,
+  },
   { question: "Qancha vaqt oladi?", answer: "Odatda ~5 soniya — jarayon avtomatik." },
   { question: "Parol so‘raladimi?", answer: "Yo‘q, hech qachon. Faqat username yoki ID." },
   { question: "Username’ni xato yozsam nima bo‘ladi?", answer: "Yulduzlar o‘sha hisobga tushadi, shuning uchun to‘lovdan oldin tekshiring." },
   { question: "Sovg‘a qilish mumkinmi?", answer: "Ha, buyurtmada oluvchining username’ini ko‘rsating." },
   { question: "Eng kam nechta?", answer: "Bazaviy paket — 50 ta." },
   { question: "Yulduz muddati bormi?", answer: "Yo‘q, hisobda saqlanib turadi." },
-  { question: "Naqd to‘lov bormi?", answer: "Paynet orqali naqd to‘lash mumkin." },
+  {
+    question: "Naqd to‘lov bormi?",
+    answer:
+      "Ha. Botdagi Paynet usulini Paynet ilovasi yoki Paynet terminali orqali to‘lash mumkin — qadamlar botdagi to‘lov oynasida ko‘rsatiladi. Yoki naqd pulni terminal yoki bank kassasi orqali kartaga (yoki Click/Payme hamyoniga) solib, keyin botda to‘laysiz.",
+  },
   { question: "Yordam qayerdan olaman?", answer: "@StarsPaymeeSupport kanalidan." },
 ];
 
 const ruFaq = [
-  { question: "Что нужно для покупки звёзд?", answer: "Аккаунт Telegram, username и местный способ оплаты (UzCard, HUMO, Click, Payme или Paynet)." },
-  { question: "Сколько это стоит?", answer: "1 штука — 220 сум, 50 штук — 11 000 сум." },
+  { question: "Что нужно для покупки звёзд?", answer: "Аккаунт Telegram, username и местный способ оплаты (UzCard, HUMO, Click, Payme, Uzum или Paynet)." },
+  {
+    question: "Сколько это стоит?",
+    answer: `Переводом на карту 1 штука — ${formatStarsPrice(1, "ru")}, 50 штук — ${formatStarsPrice(50, "ru")}; через Click, Payme, Uzum или Paynet 1 штука — ${formatStarsPrice(1, "ru", "gateway")}, 50 штук — ${formatStarsPrice(50, "ru", "gateway")}.`,
+  },
   { question: "Сколько времени занимает?", answer: "Обычно ~5 секунд — процесс автоматический." },
   { question: "Спрашивают ли пароль?", answer: "Нет, никогда. Только username или ID." },
   { question: "Что если ошибиться в username?", answer: "Звёзды поступят на указанный аккаунт, поэтому проверяйте до оплаты." },
   { question: "Можно ли подарить?", answer: "Да, укажите в заказе username получателя." },
   { question: "Какое минимальное количество?", answer: "Базовый пакет — 50 штук." },
   { question: "Есть ли срок действия у звёзд?", answer: "Нет, они хранятся на аккаунте." },
-  { question: "Есть ли оплата наличными?", answer: "Да, наличными можно заплатить через Paynet." },
+  {
+    question: "Есть ли оплата наличными?",
+    answer:
+      "Да. Способ Paynet в боте можно оплатить через приложение Paynet или терминал Paynet — шаги показываются в окне оплаты бота. Или внесите наличные через терминал или кассу банка на карту (или в кошелёк Click/Payme), затем оплатите в боте.",
+  },
   { question: "Где получить помощь?", answer: "В канале @StarsPaymeeSupport." },
 ];
 
 const enFaq = [
-  { question: "What do I need to get Stars?", answer: "A Telegram account, a username and a local payment method (UzCard, HUMO, Click, Payme or Paynet)." },
-  { question: "How much does it cost?", answer: "220 UZS each; 11,000 UZS for fifty." },
+  { question: "What do I need to get Stars?", answer: "A Telegram account, a username and a local payment method (UzCard, HUMO, Click, Payme, Uzum or Paynet)." },
+  {
+    question: "How much does it cost?",
+    answer: `By card transfer ${formatStarsPrice(1, "en")} each and ${formatStarsPrice(50, "en")} for fifty; via Click, Payme, Uzum or Paynet ${formatStarsPrice(1, "en", "gateway")} each and ${formatStarsPrice(50, "en", "gateway")} for fifty.`,
+  },
   { question: "How long does it take?", answer: "Usually about 5 seconds — the process is automatic." },
   { question: "Will I be asked for a password?", answer: "No, never. Only a username or ID." },
   { question: "What if I mistype the username?", answer: "Stars go to the account you entered, so check it before paying." },
   { question: "Can I send them as a gift?", answer: "Yes — give the recipient’s username when ordering." },
   { question: "What is the minimum amount?", answer: "The base pack is 50." },
   { question: "Do Stars have an expiry date?", answer: "No, they stay on the account." },
-  { question: "Is cash payment available?", answer: "Yes, you can pay cash through Paynet." },
+  {
+    question: "Is cash payment available?",
+    answer:
+      "Yes. The bot’s Paynet method can be paid through the Paynet app or a Paynet terminal — the steps are shown in the bot’s payment sheet. Or put the cash onto a card (or a Click/Payme wallet) at a terminal or a bank desk, then pay in the bot.",
+  },
   { question: "Where can I get help?", answer: "In the @StarsPaymeeSupport channel." },
 ];
 
@@ -226,7 +254,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-01",
-  dateModified: "2026-08-01",
+  dateModified: "2026-10-06",
   keywords: [
     "yulduz olish",
     "telegram yulduz olish",
@@ -238,17 +266,17 @@ export const post: AeoPost = {
   howToSteps: [
     { name: "Botga o‘ting", text: "@StarsPaymee_bot ni oching." },
     { name: "Miqdorni tanlang", text: "Masalan 50, 100, 250 yoki 500 ta." },
-    { name: "To‘lovni bajaring", text: "UzCard, HUMO, Click, Payme yoki Paynet orqali." },
+    { name: "To‘lovni bajaring", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali." },
     { name: "Qabul qiling", text: "Yulduzlar bir necha soniyada hisobga tushadi." },
   ],
   locales: {
     uz: {
       title: "Yulduz olish — Telegramda Stars xaridi bo‘yicha qisqa qo‘llanma",
       excerpt:
-        "Yulduz olishning 4 qadami, narxlar jadvali (220 so‘m/dona) va birinchi marta olayotganlar uchun xavfsizlik eslatmasi.",
+        `Yulduz olishning 4 qadami, narxlar jadvali (karta o‘tkazmasida ${STARS_PER_UNIT_UZS}, Click/Payme orqali ${STARS_PER_UNIT_GATEWAY_UZS} so‘m/dona) va birinchi marta olayotganlar uchun xavfsizlik eslatmasi.`,
       metaTitle: "Yulduz olish — qisqa va aniq qo‘llanma",
       metaDescription:
-        "Yulduz olish bo‘yicha qisqa qo‘llanma: 4 qadam, narxlar (1 dona 220 so‘m, 50 ta 11 000 so‘m) va so‘mda to‘lov usullari.",
+        `Yulduz olish bo‘yicha qisqa qo‘llanma: 4 qadam, narxlar (karta o‘tkazmasida 1 dona ${formatStarsPrice(1, "uz")}, 50 ta ${formatStarsPrice(50, "uz")}; Click/Payme orqali 1 dona ${formatStarsPrice(1, "uz", "gateway")}) va so‘mda to‘lov usullari.`,
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -259,10 +287,10 @@ export const post: AeoPost = {
     ru: {
       title: "Yulduz olish — краткое руководство по покупке Stars в Telegram",
       excerpt:
-        "Четыре шага покупки звёзд, таблица цен (220 сум за штуку) и памятка по безопасности для тех, кто покупает впервые.",
+        `Четыре шага покупки звёзд, таблица цен (${STARS_PER_UNIT_UZS} сум за штуку переводом на карту, ${STARS_PER_UNIT_GATEWAY_UZS} — через Click/Payme) и памятка по безопасности для тех, кто покупает впервые.`,
       metaTitle: "Yulduz olish — краткое и понятное руководство",
       metaDescription:
-        "Краткое руководство по покупке звёзд: 4 шага, цены (1 штука 220 сум, 50 штук 11 000 сум) и способы оплаты в сумах.",
+        `Краткое руководство по покупке звёзд: 4 шага, цены (переводом на карту 1 штука ${formatStarsPrice(1, "ru")}, 50 штук ${formatStarsPrice(50, "ru")}; через Click/Payme — ${formatStarsPrice(1, "ru", "gateway")}) и способы оплаты в сумах.`,
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -273,10 +301,10 @@ export const post: AeoPost = {
     en: {
       title: "Yulduz olish — a short guide to buying Stars in Telegram",
       excerpt:
-        "The four steps to getting Stars, a price table (220 UZS each) and a safety note for first-time buyers.",
+        `The four steps to getting Stars, a price table (${STARS_PER_UNIT_UZS} UZS each by card transfer, ${STARS_PER_UNIT_GATEWAY_UZS} via Click/Payme) and a safety note for first-time buyers.`,
       metaTitle: "Yulduz olish — a short, clear guide",
       metaDescription:
-        "A short guide to getting Stars: 4 steps, prices (220 UZS each, 11,000 UZS for fifty) and the so‘m payment methods.",
+        `A short guide to getting Stars: 4 steps, prices (by card transfer ${formatStarsPrice(1, "en")} each, ${formatStarsPrice(50, "en")} for fifty; via Click/Payme ${formatStarsPrice(1, "en", "gateway")}) and the so‘m payment methods.`,
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,

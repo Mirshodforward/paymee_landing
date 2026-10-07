@@ -56,8 +56,8 @@ export function TelegramNumberPriceBoard({
 
   const note =
     locale === "ru"
-      ? "Цены и остатки меняются в реальном времени — актуальный каталог в @StarsPaymee_bot → раздел номеров."
-      : "Narx va zaxira real vaqtda o‘zgaradi — joriy katalog @StarsPaymee_bot → raqamlar bo‘limida.";
+      ? "Цены и остатки меняются в реальном времени — актуальный каталог в @StarsPaymee_bot → раздел номеров. Через Click, Payme, Uzum или Paynet цена немного выше."
+      : "Narx va zaxira real vaqtda o‘zgaradi — joriy katalog @StarsPaymee_bot → raqamlar bo‘limida. Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq.";
 
   return (
     <div className="tn-board" role="region" aria-label={title}>

@@ -31,6 +31,7 @@ import { botDeepLink } from "@/lib/telegram-deeplink";
 import {
   PREMIUM_LOGIN_PLANS,
   PREMIUM_PLANS,
+  STARS_PER_UNIT_GATEWAY_UZS,
   STARS_PER_UNIT_UZS,
   STARS_PACKS,
   formatUzs,
@@ -149,10 +150,18 @@ export default async function HomePage({ params }: PageProps) {
     areaServed: { "@type": "Country", name: "Uzbekistan" },
     provider: { "@type": "Organization", name: siteConfig.name },
     offers: [
+      // Stars narxi to'lov usuliga bog'liq — ikkala usul alohida Offer.
       {
         "@type": "Offer",
-        name: `${th("starsTitle")} — ${grp(STARS_PACKS[0].amount)} ${t("starsAmountUnit")}`,
+        name: `${th("starsTitle")} — ${grp(STARS_PACKS[0].amount)} ${t("starsAmountUnit")} (${t("starsCardTag")})`,
         price: STARS_PACKS[0].priceUzs,
+        priceCurrency: "UZS",
+        category: th("starsTitle"),
+      },
+      {
+        "@type": "Offer",
+        name: `${th("starsTitle")} — ${grp(STARS_PACKS[0].amount)} ${t("starsAmountUnit")} (${t("starsGatewayTag")})`,
+        price: STARS_PACKS[0].gatewayPriceUzs,
         priceCurrency: "UZS",
         category: th("starsTitle"),
       },
@@ -516,7 +525,9 @@ export default async function HomePage({ params }: PageProps) {
             <div className="sec-head rv">
               <div className="kicker">{t("kickerPricesStars")}</div>
               <h2 className="h2">{t("starsTitle")}</h2>
-              <p className="sec-sub">{t("starsLead", { price: money(STARS_PER_UNIT_UZS) })}</p>
+              <p className="sec-sub">
+                {t("starsLead", { card: money(STARS_PER_UNIT_UZS), gateway: money(STARS_PER_UNIT_GATEWAY_UZS) })}
+              </p>
             </div>
             <div className="rv price-pack-grid">
               {STARS_PACKS.map((p, i) => (
@@ -543,12 +554,30 @@ export default async function HomePage({ params }: PageProps) {
                   >
                     {t("starsAmountUnit")}
                   </span>
+                  {/* Ikkala narx — har biri usuli bilan (karta o'tkazmasi / onlayn to'lov). */}
                   <span style={{ marginTop: 4, fontWeight: 700, color: "#FBBF24" }}>
                     {money(p.priceUzs)}
                   </span>
+                  <small style={{ fontSize: 10.5, lineHeight: 1.25, color: "var(--muted)" }}>
+                    {t("starsCardTag")}
+                  </small>
+                  <span
+                    style={{
+                      marginTop: 4,
+                      fontSize: 12.5,
+                      fontWeight: 600,
+                      fontVariantNumeric: "tabular-nums",
+                    }}
+                  >
+                    {money(p.gatewayPriceUzs)}
+                  </span>
+                  <small style={{ fontSize: 10.5, lineHeight: 1.25, color: "var(--muted)" }}>
+                    {t("starsGatewayTag")}
+                  </small>
                 </a>
               ))}
             </div>
+            <p className="pp-note rv">{t("starsPriceNote")}</p>
             <a
               className="btn btn-grad mag rv"
               href={link("cta")}

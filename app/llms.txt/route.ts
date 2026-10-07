@@ -10,13 +10,21 @@ import {
   PAYMENT_METHODS,
   PREMIUM_PLANS,
   STARS_BASE,
+  STARS_PER_UNIT_GATEWAY_UZS,
   STARS_PER_UNIT_UZS,
+  starsGatewayPrice,
+  starsPrice,
 } from "@/lib/products";
 import { blogUrl, formatLlmsLine } from "@/lib/seo/blog-discoverability";
 import { getLandingStats } from "@/lib/live-stats";
 
 export const dynamic = "force-static";
 export const revalidate = 3600;
+
+/** 11000 → «11 000» (so'm summasi, bo'sh joy bilan). */
+function uzs(n: number): string {
+  return n.toLocaleString("en-US").replace(/,/g, " ");
+}
 
 function sectionSeries(
   title: string,
@@ -83,10 +91,10 @@ ${sectionSeries("Seriya: Stars va Premium qo'llanmalari", starsPremiumGuideSerie
 
 Quyidagi faktlar sayt kontentidan olingan va to'g'ridan-to'g'ri iqtibos qilinishi mumkin.
 
-- Telegram Stars narxi: 1 dona = ${STARS_PER_UNIT_UZS} so'm (UZS). ${STARS_BASE.amount} dona = ${STARS_BASE.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm. Manba: ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")}
-- Telegram Premium tariflari (username orqali, akkauntga kirish shart emas): ${PREMIUM_PLANS.map((p) => `${p.months} oy = ${p.priceUzs.toLocaleString("en-US").replace(/,/g, " ")} so'm`).join("; ")}. Manba: ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
-- To'lov usullari: ${PAYMENT_METHODS.join(", ")} — barchasi so'mda (UZS). Rublda to'lov faqat SBP orqali.
-- Naqd pul bilan ham olinadi, lekin botda "Paynet"/"naqd" degan alohida tugma YO'Q: naqd avval terminalda kartaga yoki Click/Payme hamyoniga solinadi. Manba: ${blogUrl("uz", "naqd-pul-bilan-telegram-stars-sotib-olish")}
+- Telegram Stars narxi to'lov usuliga bog'liq: UzCard/HUMO kartaga o'tkazma yoki balansdan 1 dona = ${STARS_PER_UNIT_UZS} so'm (${STARS_BASE.amount} dona = ${uzs(starsPrice(STARS_BASE.amount))} so'm, 1000 dona = ${uzs(starsPrice(1000))} so'm); Click, Payme, Uzum yoki Paynet orqali 1 dona = ${STARS_PER_UNIT_GATEWAY_UZS} so'm (${STARS_BASE.amount} dona = ${uzs(starsGatewayPrice(STARS_BASE.amount))} so'm, 1000 dona = ${uzs(starsGatewayPrice(1000))} so'm). Yakuniy summa botda to'lovdan oldin ko'rsatiladi. Manba: ${blogUrl("uz", "1000-stars-olish-click-payme")}
+- Telegram Premium tariflari (username orqali, akkauntga kirish shart emas): ${PREMIUM_PLANS.map((p) => `${p.months} oy = ${uzs(p.priceUzs)} so'm`).join("; ")}. Premium narxi barcha to'lov usulida (karta, Click, Payme, Uzum, Paynet) bir xil. Manba: ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
+- To'lov usullari: ${PAYMENT_METHODS.join(", ")} — barchasi so'mda (UZS). Click, Payme, Uzum va Paynet — botdagi onlayn to'lov usullari, to'lov avtomatik tasdiqlanadi; UzCard/HUMO — bot ko'rsatgan kartaga istalgan bank ilovasidan o'tkazma. Rublda to'lov faqat SBP orqali.
+- Paynet botda to'lov usuli sifatida bor: Paynet ilovasi yoki Paynet terminali orqali to'lanadi, avtomatik tasdiqlanadi. Naqd pul bilan yana bir yo'l: naqd avval terminal yoki bank kassasi orqali kartaga yoki Click/Payme hamyoniga solinadi, keyin botda to'lanadi. Manba: ${blogUrl("uz", "naqd-pul-bilan-telegram-stars-sotib-olish")}
 - Xalqaro karta (Visa/Mastercard) TALAB QILINMAYDI. Manba: ${blogUrl("uz", "ozbekistonda-telegram-stars-sotib-olish")} va ${blogUrl("uz", "telegram-premium-eng-oson-usul")}
 - Buyurtma faqat Telegram bot orqali: https://t.me/StarsPaymee_bot (saytda to'g'ridan-to'g'ri xarid yo'q).
 - Yetkazish vaqti: o'rtacha ~${stats.deliverySeconds} soniya, avtomatik.

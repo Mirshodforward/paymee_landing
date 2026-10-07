@@ -64,9 +64,11 @@ function GiftCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      Telegramning <b>oddiy</b> va <b>NFT sovg‘alarini</b> <b>@StarsPaymee_bot</b> orqali ikki valyutada sotib
-      olish mumkin: O‘zbekistonda so‘mda — Click, UzCard, HUMO va Payme bilan, Rossiyada rublda — SBP orqali.
-      Visa yoki Mastercard talab qilinmaydi, sovg‘a to‘lovdan keyin deyarli darhol qabul qiluvchiga yetib boradi.
+      Telegramning <b>oddiy</b> va <b>NFT sovg‘alarini</b> <b>@StarsPaymee_bot</b> orqali sotib olish mumkin,
+      lekin ular har xil bo‘limda. Oddiy sovg‘a — so‘mda (Click, UzCard, HUMO, Payme) yoki rublda (SBP), istalgan
+      @username’ga, to‘lovdan keyin deyarli darhol. NFT sovg‘a — NFT Market’da: 300 000 so‘mgacha, faqat
+      UzCard/HUMO kartaga o‘tkazma yoki balans bilan; xarid tasdiqlangach admin uni o‘z @username’ingizga
+      o‘tkazadi. Visa yoki Mastercard talab qilinmaydi.
     </p>
   );
 }
@@ -74,11 +76,13 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
-      <Notice label="Yangilandi — 2026-yil sentabr">
+      <Notice label="Yangilandi — 2026-yil oktabr">
         <p>
-          Sotuvdan tugagan <b>kolleksion (NFT) sovg‘alar</b> hozir bot orqali yetkazilmaydi — oddiy sovg‘alar,
-          Stars va Premium ishlashda davom etmoqda. Nima o‘zgargani va kolleksion sovg‘a olishning ishlaydigan
-          yo‘li —{" "}
+          Kolleksion (NFT) sovg‘alar botda bor: 21-sentabrdan{" "}
+          <Link href="/blog/starspaymee-nft-market">NFT Market</Link> bo‘limida sotuvdagi nusxani 300 000
+          so‘mgacha sotib olasiz (to‘lov — UzCard/HUMO kartaga o‘tkazma yoki balans), muddatga kerak bo‘lsa —{" "}
+          <Link href="/blog/telegram-nft-sovga-ijarasi">NFT ijarasi</Link>. Faqat Telegram sotuvdan olib tashlagan
+          limited sovg‘alarni botlar yangi holda yubora olmaydi — batafsil{" "}
           <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">alohida maqolada</Link>.
         </p>
       </Notice>
@@ -177,8 +181,9 @@ function UzBody() {
 
       <h2 id="tolov">To‘lov: so‘m va rubl</h2>
       <p>
-        Botning asosiy afzalligi — oddiy va NFT sovg‘alarni siz uchun qulay valyutada to‘liq to‘lab olish
-        imkoniyati. Xalqaro karta ham, ilova ichida yulduz sotib olish bilan bog‘liq murakkabliklar ham kerak emas.
+        Botning asosiy afzalligi — oddiy sovg‘ani siz uchun qulay valyutada to‘liq to‘lash imkoniyati. Xalqaro
+        karta ham, ilova ichida yulduz sotib olish bilan bog‘liq murakkabliklar ham kerak emas. NFT Market’da esa
+        to‘lov faqat UzCard/HUMO kartaga o‘tkazma yoki StarsPaymee balansi orqali.
       </p>
       <InfoGrid>
         <InfoCard emoji="🇺🇿" title="O‘zbek so‘mida">
@@ -191,16 +196,16 @@ function UzBody() {
           Xarid to‘liq mahalliy, xalqaro to‘lov tizimlarisiz.
         </InfoCard>
         <InfoCard emoji="⚡" title="Tez yetkazish">
-          Sovg‘a to‘lovdan keyin deyarli bir zumda qabul qiluvchiga tushadi.
+          Oddiy sovg‘a to‘lovdan keyin deyarli darhol yetadi; NFT zanjirda tasdiqlangach admin orqali o‘tkaziladi.
         </InfoCard>
       </InfoGrid>
       <p>
-        Ya’ni qayerda bo‘lishingizdan qat’i nazar — O‘zbekistondami yoki Rossiyadami — sovg‘alarni odatiy valyuta
-        va odatiy to‘lov usuli bilan sotib olish mumkin. To‘lov usullarini taqqoslash:{" "}
+        Ya’ni qayerda bo‘lishingizdan qat’i nazar — O‘zbekistondami yoki Rossiyadami — oddiy sovg‘alarni odatiy
+        valyuta va odatiy to‘lov usuli bilan sotib olish mumkin. To‘lov usullarini taqqoslash:{" "}
         SBP, Click va UzCard.
       </p>
 
-      <InlineCta text="Sovg‘ani so‘mda yoki rublda tanlang — Gift Market botda ochiq." />
+      <InlineCta text="Oddiy sovg‘ani so‘mda yoki rublda, NFT’ni NFT Market’da so‘mda oling." />
 
       <h2 id="tanlash">Qaysi turini tanlash kerak</h2>
       <p>
@@ -225,13 +230,16 @@ function UzBody() {
         </li>
       </KeyFacts>
       <p>
-        Xarid tartibi ikkala tur uchun bir xil: botning sovg‘alar bo‘limini oching, sovg‘ani tanlang, qabul
-        qiluvchining @username’ini kiriting va to‘lov usulini belgilang — so‘m uchun Click, UzCard, HUMO yoki
-        Payme, rubl uchun SBP. To‘liq qadamlar, anonim yuborish, izoh qoldirish va ko‘p uchraydigan xatolar —{" "}
+        Xarid tartibi ikki tur uchun har xil. <b>Oddiy sovg‘a:</b> sovg‘alar bo‘limi → sovg‘a → qabul
+        qiluvchining @username’i → to‘lov usuli (so‘m uchun Click, UzCard, HUMO, Payme yoki Uzum; rubl uchun SBP).{" "}
+        <b>NFT sovg‘a:</b> NFT Market → nusxa (300 000 so‘mgacha) → UzCard/HUMO kartaga o‘tkazma yoki balans;
+        qabul qiluvchi kiritilmaydi — NFT o‘z @username’ingizga o‘tkaziladi. Oddiy sovg‘a bo‘yicha to‘liq qadamlar,
+        anonim yuborish, izoh qoldirish va ko‘p uchraydigan xatolar —{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
           «Telegram Gifts qanday yuboriladi» qo‘llanmasida
         </Link>
-        .
+        , NFT xaridi esa —{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market qo‘llanmasida</Link>.
       </p>
 
       <h2 id="bepul">Do‘st taklif qilib bepul sovg‘a olish</h2>
@@ -242,8 +250,8 @@ function UzBody() {
       </p>
       <KeyFacts label="Mexanika qanday ishlaydi">
         <li>
-          <b>5 ta do‘st taklif qilsangiz</b> — kafolatlangan sovg‘a, masalan Minuscule (Telegram Gifts
-          liniyasidagi miniatyura sovg‘a).
+          <b>5 ta do‘st taklif qilsangiz</b> — kafolatlangan oddiy sovg‘a; aniq sovg‘a botdagi do‘st taklif
+          qilish bo‘limida ko‘rsatiladi.
         </li>
         <li>
           <b>Ko‘proq do‘st taklif qilsangiz</b> — boshqa toifalardan qimmatroq va qiziqarliroq sovg‘alar ochiladi.
@@ -259,13 +267,13 @@ function UzBody() {
           <b>Oddiy ham, NFT sovg‘alar ham</b> — turli xizmatlarni qidirish shart emas, hammasi bir joyda.
         </li>
         <li>
-          <b>Ikki valyutada to‘lov</b> — so‘m (Click, UzCard, HUMO, Payme) va rubl (SBP).
+          <b>Ikki valyutada to‘lov</b> — oddiy sovg‘alar uchun: so‘m (Click, UzCard, HUMO, Payme) va rubl (SBP).
         </li>
         <li>
           <b>Visa yoki Mastercard kerak emas</b> — xarid to‘liq mahalliy.
         </li>
         <li>
-          <b>Tez yetkazish</b> — sovg‘a to‘lovdan keyin deyarli bir zumda tushadi.
+          <b>Tez yetkazish</b> — oddiy sovg‘a to‘lovdan keyin deyarli bir zumda tushadi.
         </li>
         <li>
           <b>Do‘st uchun bonus dasturi</b> — taklif evaziga bepul sovg‘alar.
@@ -299,9 +307,11 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      И <b>обычные</b>, и <b>NFT-подарки</b> Telegram можно купить через <b>@StarsPaymee_bot</b> в двух валютах:
-      в Узбекистане — в сумах через Click, Uzcard, Humo и Payme, в России — в рублях через СБП. Карта Visa или
-      Mastercard не нужна, подарок доходит до получателя практически сразу после оплаты.
+      И <b>обычные</b>, и <b>NFT-подарки</b> Telegram можно купить через <b>@StarsPaymee_bot</b>, но в разных
+      разделах. Обычный подарок — в сумах (Click, Uzcard, Humo, Payme) или рублях (СБП), на любой @username,
+      практически сразу после оплаты. NFT-подарок — в NFT Market: до 300 000 сумов, только переводом на карту
+      UzCard/Humo или с баланса; после подтверждения покупки администратор переводит его на ваш собственный
+      @username. Карта Visa или Mastercard не нужна.
     </p>
   );
 }
@@ -309,10 +319,13 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
-      <Notice label="Обновлено — сентябрь 2026">
+      <Notice label="Обновлено — октябрь 2026">
         <p>
-          Распроданные <b>коллекционные (NFT) подарки</b> сейчас через бота не выдаются — обычные подарки,
-          Stars и Premium продолжают работать. Что изменилось и как всё же получить коллекционный подарок —{" "}
+          Коллекционные (NFT) подарки в боте есть: с 21 сентября в разделе{" "}
+          <Link href="/blog/starspaymee-nft-market">NFT Market</Link> можно купить выставленный экземпляр до 300 000
+          сумов (оплата — перевод на карту UzCard/Humo или баланс), а на срок — взять в{" "}
+          <Link href="/blog/telegram-nft-sovga-ijarasi">аренду</Link>. Не отправляются только limited-подарки,
+          снятые Telegram с продажи, — подробнее{" "}
           <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">в отдельной статье</Link>.
         </p>
       </Notice>
@@ -414,9 +427,9 @@ function RuBody() {
 
       <h2 id="tolov">Оплата: сумы и рубли</h2>
       <p>
-        Главное преимущество бота в том, что он позволяет купить и обычные, и NFT-подарки, полностью оплатив
-        покупку в удобной для вас валюте — без карты Visa или Mastercard и без сложностей с покупкой звёзд
-        напрямую в приложении.
+        Главное преимущество бота в том, что обычный подарок можно полностью оплатить в удобной для вас валюте —
+        без карты Visa или Mastercard и без сложностей с покупкой звёзд напрямую в приложении. В NFT Market оплата
+        только переводом на карту UzCard/Humo или с баланса StarsPaymee.
       </p>
       <InfoGrid>
         <InfoCard emoji="🇺🇿" title="В узбекских сумах">
@@ -429,16 +442,17 @@ function RuBody() {
           Покупка полностью локальная, без международных платёжных систем.
         </InfoCard>
         <InfoCard emoji="⚡" title="Быстрая доставка">
-          Подарок поступает получателю практически моментально после оплаты.
+          Обычный подарок приходит практически сразу; NFT переводится администратором после подтверждения в
+          блокчейне.
         </InfoCard>
       </InfoGrid>
       <p>
-        Таким образом, независимо от того, где вы находитесь — в Узбекистане или в России — купить подарки можно
-        быстро, в привычной валюте и привычным способом оплаты. Сравнение методов:{" "}
+        Таким образом, независимо от того, где вы находитесь — в Узбекистане или в России — купить обычные подарки
+        можно быстро, в привычной валюте и привычным способом оплаты. Сравнение методов:{" "}
         СБП, Click и Uzcard.
       </p>
 
-      <InlineCta text="Выберите подарок и оплатите в сумах или рублях — Gift Market открыт в боте." />
+      <InlineCta text="Обычный подарок — в сумах или рублях, NFT — в NFT Market в сумах." />
 
       <h2 id="tanlash">Какой вид подарка выбрать</h2>
       <p>
@@ -463,13 +477,16 @@ function RuBody() {
         </li>
       </KeyFacts>
       <p>
-        Порядок покупки одинаков для обоих видов: откройте раздел подарков в боте, выберите подарок, введите
-        @username получателя и способ оплаты — для сумов Click, Uzcard, Humo, Payme или Uzum, для рублей СБП. Полные
-        шаги, анонимная отправка, комментарий и частые ошибки —{" "}
+        Порядок покупки у двух видов разный. <b>Обычный подарок:</b> раздел подарков → подарок → @username
+        получателя → способ оплаты (для сумов Click, Uzcard, Humo, Payme или Uzum, для рублей СБП).{" "}
+        <b>NFT-подарок:</b> NFT Market → экземпляр (до 300 000 сумов) → перевод на карту UzCard/Humo или баланс;
+        получатель не указывается — NFT переводится на ваш @username. Полные шаги для обычного подарка, анонимная
+        отправка, комментарий и частые ошибки —{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
           в руководстве «Как отправить подарок в Telegram»
         </Link>
-        .
+        , покупка NFT —{" "}
+        <Link href="/blog/starspaymee-nft-market">в руководстве по NFT Market</Link>.
       </p>
 
       <h2 id="bepul">Бесплатные подарки за приглашение друзей</h2>
@@ -480,8 +497,8 @@ function RuBody() {
       </p>
       <KeyFacts label="Как работает механика">
         <li>
-          <b>За приглашение 5 друзей</b> — гарантированный подарок, например Minuscule, миниатюрный подарок из
-          линейки Telegram Gifts.
+          <b>За приглашение 5 друзей</b> — гарантированный обычный подарок; какой именно, показано в разделе
+          приглашений в боте.
         </li>
         <li>
           <b>За приглашение большего числа друзей</b> — доступны более ценные и интересные подарки из других
@@ -498,13 +515,13 @@ function RuBody() {
           <b>Работает и с обычными, и с NFT-подарками</b> — не нужно искать разные сервисы, всё в одном месте.
         </li>
         <li>
-          <b>Оплата в двух валютах</b> — сум (Click, Uzcard, Humo, Payme) и рубль (СБП).
+          <b>Оплата в двух валютах</b> — для обычных подарков: сум (Click, Uzcard, Humo, Payme) и рубль (СБП).
         </li>
         <li>
           <b>Не нужна карта Visa или Mastercard</b> — покупка полностью локальная.
         </li>
         <li>
-          <b>Быстрая доставка</b> — подарок поступает получателю практически моментально.
+          <b>Быстрая доставка</b> — обычный подарок поступает получателю практически моментально.
         </li>
         <li>
           <b>Бонусная программа за друзей</b> — подарки бесплатно за приглашения.
@@ -538,9 +555,11 @@ function RuBody() {
 function EnAnswer() {
   return (
     <p>
-      Both <b>regular</b> and <b>NFT gifts</b> on Telegram can be bought through <b>@StarsPaymee_bot</b> in two
-      currencies: in Uzbek so‘m via Click, UzCard, HUMO and Payme, or in Russian roubles via SBP. No Visa or
-      Mastercard is required, and the gift reaches the recipient almost immediately after payment.
+      Both <b>regular</b> and <b>NFT gifts</b> on Telegram can be bought through <b>@StarsPaymee_bot</b>, but in
+      different sections. A regular gift is paid in so‘m (Click, UzCard, HUMO, Payme) or roubles (SBP), goes to
+      any @username and arrives almost immediately. An NFT gift is bought in the NFT Market: up to 300,000 so‘m,
+      by UzCard/HUMO card transfer or balance only; once the purchase is confirmed an admin transfers it to your
+      own @username. No Visa or Mastercard is required.
     </p>
   );
 }
@@ -548,10 +567,13 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
-      <Notice label="Updated — September 2026">
+      <Notice label="Updated — October 2026">
         <p>
-          Sold-out <b>collectible (NFT) gifts</b> are not delivered through the bot at the moment — regular
-          gifts, Stars and Premium keep working. What changed, and the route that does still work, is in{" "}
+          Collectible (NFT) gifts are in the bot: since 21 September the{" "}
+          <Link href="/blog/starspaymee-nft-market">NFT Market</Link> sells listed copies for up to 300,000 so‘m
+          (payment by UzCard/HUMO card transfer or balance), and{" "}
+          <Link href="/blog/telegram-nft-sovga-ijarasi">NFT rental</Link> covers a set term. Only limited gifts
+          that Telegram took off sale cannot be sent — more in{" "}
           <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">a separate article</Link>.
         </p>
       </Notice>
@@ -632,9 +654,8 @@ function EnBody() {
         </li>
       </KeyFacts>
       <p>
-        More on this: <Link href="/blog/telegram-nft-gift-nima">what an NFT Gift is</Link>,{" "}
-        <Link href="/blog/telegram-nft-investitsiya">the NFT gift as an investment</Link>,{" "}
-        <Link href="/blog/telegram-gifts-kolleksiya-rare-sovgalar">collections and rare gifts</Link>.
+        More on this: <Link href="/blog/telegram-nft-gift-nima">what an NFT Gift is</Link> and{" "}
+        <Link href="/blog/telegram-nft-investitsiya">the NFT gift as an investment</Link>.
       </p>
 
       <h2 id="farq">Regular versus NFT gifts</h2>
@@ -645,8 +666,9 @@ function EnBody() {
 
       <h2 id="tolov">Payment: so‘m and roubles</h2>
       <p>
-        The bot’s main advantage is that both regular and NFT gifts can be paid for entirely in the currency that
-        suits you — with no Visa or Mastercard, and none of the friction of buying Stars inside the app.
+        The bot’s main advantage is that a regular gift can be paid for entirely in the currency that suits you —
+        with no Visa or Mastercard, and none of the friction of buying Stars inside the app. The NFT Market takes
+        only a UzCard/HUMO card transfer or the StarsPaymee balance.
       </p>
       <InfoGrid>
         <InfoCard emoji="🇺🇿" title="In Uzbek so‘m">
@@ -659,16 +681,16 @@ function EnBody() {
           The purchase is entirely local, without international payment systems.
         </InfoCard>
         <InfoCard emoji="⚡" title="Fast delivery">
-          The gift reaches the recipient almost instantly after payment.
+          A regular gift arrives almost instantly; an NFT is transferred by an admin after on-chain confirmation.
         </InfoCard>
       </InfoGrid>
       <p>
-        So wherever you are — in Uzbekistan or in Russia — gifts can be bought quickly, in a familiar currency and
-        with a familiar payment method. Comparing the methods:{" "}
+        So wherever you are — in Uzbekistan or in Russia — regular gifts can be bought quickly, in a familiar
+        currency and with a familiar payment method. Comparing the methods:{" "}
         SBP, Click and UzCard.
       </p>
 
-      <InlineCta text="Pick a gift and pay in so‘m or roubles — the Gift Market is open in the bot." />
+      <InlineCta text="Regular gifts in so‘m or roubles; NFTs in the NFT Market, in so‘m." />
 
       <h2 id="tanlash">Which type of gift to choose</h2>
       <p>
@@ -692,13 +714,16 @@ function EnBody() {
         </li>
       </KeyFacts>
       <p>
-        The buying flow is the same for both: open the gifts section in the bot, pick a gift, enter the
-        recipient’s @username and choose a payment method — Click, UzCard, HUMO, Payme or Uzum for so‘m, SBP for
-        roubles. The full steps, anonymous sending, notes and the usual mistakes live in{" "}
+        The buying flow differs between the two. <b>Regular gift:</b> gifts section → gift → recipient’s
+        @username → payment method (Click, UzCard, HUMO, Payme or Uzum for so‘m, SBP for roubles).{" "}
+        <b>NFT gift:</b> NFT Market → copy (up to 300,000 so‘m) → UzCard/HUMO card transfer or balance; there is
+        no recipient field — the NFT goes to your own @username. The full steps for a regular gift, anonymous
+        sending, notes and the usual mistakes live in{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">
           the “How to send a Telegram gift” guide
         </Link>
-        .
+        ; buying an NFT is covered in{" "}
+        <Link href="/blog/starspaymee-nft-market">the NFT Market guide</Link>.
       </p>
 
       <h2 id="bepul">Free gifts for inviting friends</h2>
@@ -708,8 +733,7 @@ function EnBody() {
       </p>
       <KeyFacts label="How the mechanic works">
         <li>
-          <b>Invite 5 friends</b> — a guaranteed gift, for example Minuscule, a miniature item from the Telegram
-          Gifts line-up.
+          <b>Invite 5 friends</b> — a guaranteed regular gift; the exact one is shown in the bot’s invite section.
         </li>
         <li>
           <b>Invite more friends</b> — pricier and more interesting gifts from other categories unlock.
@@ -725,13 +749,13 @@ function EnBody() {
           <b>Both regular and NFT gifts</b> — no need to hunt for separate services, it is all in one place.
         </li>
         <li>
-          <b>Two payment currencies</b> — so‘m (Click, UzCard, HUMO, Payme) and roubles (SBP).
+          <b>Two payment currencies</b> — for regular gifts: so‘m (Click, UzCard, HUMO, Payme) and roubles (SBP).
         </li>
         <li>
           <b>No Visa or Mastercard required</b> — the purchase is fully local.
         </li>
         <li>
-          <b>Fast delivery</b> — the gift lands with the recipient almost instantly.
+          <b>Fast delivery</b> — a regular gift lands with the recipient almost instantly.
         </li>
         <li>
           <b>A referral bonus programme</b> — free gifts for invites.
@@ -769,11 +793,13 @@ const uzFaq = [
   },
   {
     question: "NFT sovg‘ani o‘zbek so‘mida sotib olsa bo‘ladimi?",
-    answer: "Ha, @StarsPaymee_bot da NFT sovg‘alarni ham, oddiylarini ham Click, UzCard, HUMO, Payme yoki Uzum bilan so‘mda to‘lash mumkin.",
+    answer:
+      "Ha. NFT sovg‘a NFT Market’da so‘mda sotib olinadi — 300 000 so‘mgacha, faqat UzCard/HUMO kartaga o‘tkazma yoki StarsPaymee balansi orqali. Click, Payme va Uzum oddiy sovg‘alar uchun ishlaydi.",
   },
   {
     question: "Rublda qanday to‘lanadi?",
-    answer: "Rubl uchun botda SBP — tezkor to‘lovlar tizimi mavjud, karta rekvizitlarini kiritish shart emas.",
+    answer:
+      "Rubl uchun botda SBP — tezkor to‘lovlar tizimi mavjud, karta rekvizitlarini kiritish shart emas. Bu oddiy sovg‘alarga tegishli: NFT Market’da rublda to‘lab bo‘lmaydi.",
   },
   {
     question: "Sovg‘ani bepul qanday olaman?",
@@ -782,12 +808,13 @@ const uzFaq = [
   },
   {
     question: "Sovg‘a qabul qiluvchiga qancha tez yetib boradi?",
-    answer: "Odatda to‘lov tasdiqlangach deyarli darhol.",
+    answer:
+      "Oddiy sovg‘a — odatda to‘lov tasdiqlangach deyarli darhol. NFT — darhol emas: xarid zanjirda tasdiqlanadi, so‘ng admin uni @username’ingizga o‘tkazadi.",
   },
   { question: "NFT sovg‘a uchun Telegram Premium kerakmi?", answer: "Yo‘q, NFT sovg‘a olish uchun Premium shart emas." },
   {
     question: "Sovg‘ani anonim yuborsam bo‘ladimi?",
-    answer: "Ha, sovg‘ani anonim yoki tabrik izohi bilan yuborish mumkin.",
+    answer: "Ha, oddiy sovg‘ani anonim yoki tabrik izohi bilan yuborish mumkin.",
   },
   {
     question: "NFT sovg‘ani keyin sotish mumkinmi?",
@@ -803,11 +830,13 @@ const ruFaq = [
   },
   {
     question: "Можно ли купить NFT-подарок за узбекский сум?",
-    answer: "Да, в @StarsPaymee_bot NFT-подарки, как и обычные, можно оплатить в сумах через Click, Uzcard, Humo, Payme или Uzum.",
+    answer:
+      "Да. NFT-подарок покупается в NFT Market в сумах — до 300 000 сумов, только переводом на карту UzCard/Humo или с баланса StarsPaymee. Click, Payme и Uzum работают для обычных подарков.",
   },
   {
     question: "Как оплатить покупку в рублях?",
-    answer: "Для оплаты в рублях в боте доступна система быстрых платежей — СБП, без необходимости вводить данные банковской карты.",
+    answer:
+      "Для оплаты в рублях в боте доступна система быстрых платежей — СБП, без необходимости вводить данные банковской карты. Это касается обычных подарков: в NFT Market оплатить рублями нельзя.",
   },
   {
     question: "Как получить подарок бесплатно?",
@@ -816,10 +845,11 @@ const ruFaq = [
   },
   {
     question: "Насколько быстро подарок доходит до получателя?",
-    answer: "Обычно подарок зачисляется получателю практически сразу после подтверждения оплаты.",
+    answer:
+      "Обычный подарок — обычно практически сразу после подтверждения оплаты. NFT — не мгновенно: покупка подтверждается в блокчейне, затем администратор переводит его на ваш @username.",
   },
   { question: "Нужен ли Telegram Premium для NFT-подарка?", answer: "Нет, Premium для покупки NFT-подарка не требуется." },
-  { question: "Можно ли отправить подарок анонимно?", answer: "Да, подарок можно отправить анонимно или с поздравительным комментарием." },
+  { question: "Можно ли отправить подарок анонимно?", answer: "Да, обычный подарок можно отправить анонимно или с поздравительным комментарием." },
   {
     question: "Можно ли потом продать NFT-подарок?",
     answer: "Да, он закреплён в блокчейне как отдельный токен, поэтому его можно выставить на продажу на маркетплейсах.",
@@ -834,11 +864,13 @@ const enFaq = [
   },
   {
     question: "Can an NFT gift be bought with Uzbek so‘m?",
-    answer: "Yes. In @StarsPaymee_bot both NFT and regular gifts can be paid for in so‘m via Click, UzCard, HUMO, Payme or Uzum.",
+    answer:
+      "Yes. An NFT gift is bought in the NFT Market in so‘m — up to 300,000 so‘m, by UzCard/HUMO card transfer or the StarsPaymee balance only. Click, Payme and Uzum work for regular gifts.",
   },
   {
     question: "How do I pay in roubles?",
-    answer: "For roubles the bot supports SBP, the fast payments system, with no card details to enter.",
+    answer:
+      "For roubles the bot supports SBP, the fast payments system, with no card details to enter. This applies to regular gifts: the NFT Market does not take roubles.",
   },
   {
     question: "How do I get a gift for free?",
@@ -847,10 +879,11 @@ const enFaq = [
   },
   {
     question: "How fast does the gift reach the recipient?",
-    answer: "Normally almost immediately after the payment is confirmed.",
+    answer:
+      "A regular gift — normally almost immediately after the payment is confirmed. An NFT — not instantly: the purchase is confirmed on-chain, then an admin transfers it to your @username.",
   },
   { question: "Is Telegram Premium needed for an NFT gift?", answer: "No, Premium is not required to buy an NFT gift." },
-  { question: "Can a gift be sent anonymously?", answer: "Yes, a gift can be sent anonymously or with a greeting note." },
+  { question: "Can a gift be sent anonymously?", answer: "Yes, a regular gift can be sent anonymously or with a greeting note." },
   {
     question: "Can an NFT gift be resold later?",
     answer: "Yes. It is anchored on-chain as a separate token, so it can be listed for sale on marketplaces.",
@@ -862,7 +895,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-08-28",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram sovga sotib olish",
     "telegram nft sovga somda",
@@ -870,49 +903,49 @@ export const post: AeoPost = {
     "nft sovga sotib olish ozbekiston",
     "bepul telegram sovga dost taklif",
     "купить подарки telegram за сум",
-    "купить nft подарок telegram за рубли",
+    "купить nft подарок telegram в сумах",
   ],
   locales: {
     uz: {
-      title: "Telegram sovg‘alari va NFT sovg‘alar: so‘m va rublda sotib olish",
+      title: "Telegram sovg‘alari va NFT sovg‘alar: so‘mda sotib olish (oddiy sovg‘a — rublda ham)",
       excerpt:
-        "Oddiy va NFT sovg‘alar o‘rtasidagi farq, ular nimaga kerak, so‘m (Click, UzCard, HUMO, Payme) va rubl (SBP) orqali xarid hamda do‘st taklif qilib bepul sovg‘a olish.",
+        "Oddiy va NFT sovg‘alar farqi, ular nimaga kerak, oddiy sovg‘ani so‘mda (Click, UzCard, HUMO, Payme) yoki rublda (SBP), NFT’ni esa NFT Market’da so‘mda olish hamda do‘st taklif qilib bepul sovg‘a.",
       metaTitle: "Telegram sovg‘a va NFT sovg‘a sotib olish",
       metaDescription:
-        "Telegram oddiy va NFT sovg‘alarini so‘m yoki rublda sotib olish: Click, UzCard, HUMO, Payme va SBP, Visa kerak emas, bepul sovg‘a dasturi.",
+        "Oddiy Telegram sovg‘asini so‘m yoki rublda (Click, UzCard, HUMO, Payme, SBP), NFT sovg‘ani NFT Market’da so‘mda (karta yoki balans, 300 000 so‘mgacha) sotib olish; Visa kerak emas.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Sovg‘ani hozir tanlang",
-      ctaBody: "@StarsPaymee_bot — oddiy va NFT sovg‘alar, so‘m va rublda to‘lov, tezkor yetkazish.",
+      ctaBody: "@StarsPaymee_bot — oddiy sovg‘alar (so‘m yoki rubl) va NFT Market (so‘mda, 300 000 so‘mgacha).",
       faq: uzFaq,
     },
     ru: {
-      title: "Купить подарки Telegram и NFT-подарки за сум и рубль: полный гид",
+      title: "Купить подарки Telegram и NFT-подарки за сумы (обычные — и за рубли): полный гид",
       excerpt:
-        "Чем обычные подарки отличаются от NFT, зачем они нужны, как оплатить в сумах (Click, Uzcard, Humo, Payme) и в рублях (СБП) и как получить подарок бесплатно за друзей.",
-      metaTitle: "Купить подарки Telegram и NFT за сум и рубль",
+        "Чем обычные подарки отличаются от NFT, зачем они нужны, как оплатить обычный подарок в сумах (Click, Uzcard, Humo, Payme) или рублях (СБП), NFT — в NFT Market в сумах, и как получить подарок бесплатно за друзей.",
+      metaTitle: "Купить подарки Telegram и NFT за сумы",
       metaDescription:
-        "Как купить обычные и NFT-подарки Telegram за узбекский сум или российский рубль: Click, Uzcard, Humo, Payme и СБП, без Visa, плюс бесплатные подарки за друзей.",
+        "Обычный подарок Telegram — в сумах или рублях (Click, Uzcard, Humo, Payme, СБП), NFT-подарок — в NFT Market в сумах (карта или баланс, до 300 000 сумов); без Visa.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Выберите подарок прямо сейчас",
-      ctaBody: "@StarsPaymee_bot — обычные и NFT-подарки, оплата в сумах и рублях, быстрая доставка.",
+      ctaBody: "@StarsPaymee_bot — обычные подарки (сумы или рубли) и NFT Market (в сумах, до 300 000 сумов).",
       faq: ruFaq,
     },
     en: {
-      title: "Buying Telegram gifts and NFT gifts with so‘m and roubles",
+      title: "Buying Telegram gifts and NFT gifts in so‘m (regular gifts in roubles too)",
       excerpt:
-        "How regular gifts differ from NFT ones, what each is for, how to pay in so‘m (Click, UzCard, HUMO, Payme) or roubles (SBP), and how invites earn free gifts.",
+        "How regular gifts differ from NFT ones, what each is for, how to pay for a regular gift in so‘m (Click, UzCard, HUMO, Payme) or roubles (SBP), buying NFTs in the NFT Market, and free gifts for invites.",
       metaTitle: "Buy Telegram gifts and NFT gifts for so‘m",
       metaDescription:
-        "Buy regular and NFT Telegram gifts with Uzbek so‘m or Russian roubles: Click, UzCard, HUMO, Payme and SBP, no Visa needed, plus free gifts for invites.",
+        "Regular Telegram gifts in so‘m or roubles (Click, UzCard, HUMO, Payme, SBP); NFT gifts in the NFT Market in so‘m (card or balance, up to 300,000 so‘m); no Visa needed.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Pick a gift now",
-      ctaBody: "@StarsPaymee_bot — regular and NFT gifts, payment in so‘m and roubles, fast delivery.",
+      ctaBody: "@StarsPaymee_bot — regular gifts (so‘m or roubles) and the NFT Market (so‘m, up to 300,000 so‘m).",
       faq: enFaq,
     },
   },

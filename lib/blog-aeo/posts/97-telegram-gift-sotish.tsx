@@ -19,10 +19,12 @@ function UzAnswer() {
 function UzBody() {
   return (
     <>
-      <Notice label="Xizmat holati — yangilandi 2026-yil sentabr">
-        @StarsPaymee_bot orqali sotuvdan tugagan kolleksion sovg‘alar yetkazilmaydi, demak bot sotuvchi balansini
-        ham yuritmaydi. Sotish Telegram ichidagi bozorda yoki Fragment’da amalga oshiriladi. Batafsil:{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">nima o‘zgardi</Link>.
+      <Notice label="Xizmat holati — yangilandi 2026-yil oktabr">
+        Telegram akkauntingizdagi sovg‘ani @StarsPaymee_bot orqali sota olmaysiz — o‘z kolleksion sovg‘angizni
+        Telegram ichidagi bozorda yoki Fragment’da sotasiz. Bot teskari yo‘nalishda ishlaydi: uning{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> bo‘limida sotuvdagi kolleksion sovg‘ani
+        300 000 so‘mgacha sotib olish, <Link href="/blog/telegram-nft-sovga-ijarasi">NFT ijarasi</Link> bo‘limida
+        esa kolleksion sovg‘ani muddatga ijaraga olish mumkin.
       </Notice>
 
       <h2 id="qaysi">Qaysi sovg‘ani sotish mumkin?</h2>
@@ -31,8 +33,8 @@ function UzBody() {
         atributlarga ega, shuning uchun boshqa akkauntga uzatilishi mumkin. Oddiy sovg‘ani to‘g‘ridan-to‘g‘ri sotish
         odatiy emas: uni Stars’ga qaytarish (convert) mumkin — farqi{" "}
         <Link href="/blog/telegram-gift-stars-ga-aylantirish">«Gift’ni Stars’ga aylantirish»</Link> maqolasida.
-        Sovg‘ani collectible darajasiga qanday ko‘tarish esa{" "}
-        upgrade qo‘llanmasida.
+        Sovg‘ani collectible darajasiga qanday ko‘tarish (upgrade) esa{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">alohida maqolada</Link>.
       </p>
 
       <h2 id="qayerda">Qayerda sotiladi?</h2>
@@ -105,10 +107,12 @@ function RuAnswer() {
 function RuBody() {
   return (
     <>
-      <Notice label="Статус услуги — обновлено в сентябре 2026">
-        Через @StarsPaymee_bot коллекционные подарки больше не доставляются, поэтому бот не ведёт и баланс продавца.
-        Продажа происходит на рынке внутри Telegram или на Fragment. Подробнее:{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">что изменилось</Link>.
+      <Notice label="Статус услуги — обновлено в октябре 2026">
+        Продать подарок со своего аккаунта Telegram через @StarsPaymee_bot нельзя — свой коллекционный подарок вы
+        продаёте на рынке внутри Telegram или на Fragment. Бот работает в обратную сторону: в разделе{" "}
+        <Link href="/blog/starspaymee-nft-market">NFT Market</Link> можно купить выставленный коллекционный подарок
+        до 300 000 сумов, а в разделе <Link href="/blog/telegram-nft-sovga-ijarasi">аренды NFT</Link> — взять
+        коллекционный подарок в аренду на срок.
       </Notice>
 
       <h2 id="qaysi">Какой подарок можно продать?</h2>
@@ -117,8 +121,8 @@ function RuBody() {
         передать другому аккаунту. Обычный подарок напрямую не продают: его можно конвертировать обратно в Stars —
         разница описана в{" "}
         <Link href="/blog/telegram-gift-stars-ga-aylantirish">«Конвертация подарка в Stars»</Link>. Как поднять
-        подарок до collectible — в{" "}
-        руководстве по upgrade.
+        подарок до collectible (upgrade) — в{" "}
+        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">отдельной статье</Link>.
       </p>
 
       <h2 id="qayerda">Где продают?</h2>
@@ -190,10 +194,11 @@ function EnAnswer() {
 function EnBody() {
   return (
     <>
-      <Notice label="Service status — updated September 2026">
-        @StarsPaymee_bot no longer delivers sold-out collectible gifts, so it does not keep a seller balance either.
-        Selling happens on the market inside Telegram or on Fragment. More:{" "}
-        <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">what changed</Link>.
+      <Notice label="Service status — updated October 2026">
+        You cannot sell a gift from your Telegram account through @StarsPaymee_bot — your own collectible is sold on
+        the market inside Telegram or on Fragment. The bot works the other way round: its NFT Market lets you buy a
+        listed collectible for up to 300,000 so‘m, and its{" "}
+        <Link href="/blog/telegram-nft-sovga-ijarasi">NFT rental</Link> lets you take a collectible for a set term.
       </Notice>
 
       <h2 id="qaysi">Which gifts can be sold?</h2>
@@ -201,7 +206,7 @@ function EnBody() {
         Only <b>upgraded (collectible)</b> gifts can be sold — they carry a number and attributes, so they can move
         to another account. Ordinary gifts are not resold; they can be converted back into Stars, as described in{" "}
         <Link href="/blog/telegram-gift-stars-ga-aylantirish">converting a gift to Stars</Link>. Upgrading is covered
-        in the upgrade guide.
+        in <Link href="/blog/kolleksion-gift-bot-orqali-olinmaydi">a separate article</Link>.
       </p>
 
       <h2 id="bosqichlar">How to sell</h2>
@@ -239,7 +244,7 @@ const faqUz = [
   {
     question: "Sovg‘ani qayerda sotaman?",
     answer:
-      "Fragment’da yoki Telegram ichidagi gift bozorida. @StarsPaymee_bot kolleksion sovg‘a savdosini yuritmaydi.",
+      "Fragment’da yoki Telegram ichidagi gift bozorida. @StarsPaymee_bot Telegram akkauntingizdagi sovg‘ani sotib olmaydi va sotuvga qo‘ymaydi; botdagi NFT Market’da esa kolleksion sovg‘a sotib olinadi.",
   },
   {
     question: "Pul qanday ko‘rinishda keladi?",
@@ -265,7 +270,8 @@ const faqRu = [
   },
   {
     question: "Где продать подарок?",
-    answer: "На Fragment или на рынке подарков внутри Telegram. @StarsPaymee_bot продажу коллекционных подарков не ведёт.",
+    answer:
+      "На Fragment или на рынке подарков внутри Telegram. @StarsPaymee_bot не выкупает и не выставляет на продажу подарки с вашего аккаунта Telegram; в NFT Market бота коллекционные подарки покупают.",
   },
   { question: "В чём приходят деньги?", answer: "Обычно в TON, на ваш TON-кошелёк — его стоит завести заранее." },
   {
@@ -280,7 +286,11 @@ const faqRu = [
 ];
 
 const faqEn = [
-  { question: "How do I sell a gift?", answer: "List the collectible on a gift market, or transfer it over TON." },
+  {
+    question: "How do I sell a gift?",
+    answer:
+      "List the collectible on a gift market, or transfer it over TON. @StarsPaymee_bot does not buy or list gifts from your Telegram account; its NFT Market is where you buy collectibles.",
+  },
   { question: "Can ordinary gifts be sold?", answer: "No. They can only be converted back into Stars." },
   { question: "Is there a commission?", answer: "Yes, resale carries a fee, so you receive less than the listed price." },
   { question: "Why can I not list my gift?", answer: "There may be an earliest resale date, or a price limit — check the gift card." },
@@ -292,7 +302,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "howto",
   datePublished: "2026-07-26",
-  dateModified: "2026-09-18",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram gift sell",
     "telegram nft sell",

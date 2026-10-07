@@ -1,3 +1,4 @@
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowIcon } from "@/components/v2/icons";
 import {
@@ -25,6 +26,16 @@ type Props = {
   blogHref: string;
   botUrl: string;
   bullets: string[];
+};
+
+/**
+ * Mockupdagi summa — karta narxi. Click/Payme/Uzum/Paynet orqali bot ustama
+ * qo'shadi (2026-10-06 holati), shuning uchun summa ostida qisqa izoh turadi.
+ */
+const GATEWAY_NOTE: Record<string, string> = {
+  uz: "Click, Payme, Uzum yoki Paynet orqali narx biroz yuqoriroq",
+  ru: "Через Click, Payme, Uzum или Paynet цена немного выше",
+  en: "Slightly higher via Click, Payme, Uzum or Paynet",
 };
 
 /**
@@ -58,6 +69,8 @@ export function V2NftRentSection({
   const sampleDays = 7;
   const picked = rentGiftSamples[0];
   const total = estimateRentTotalUzs(picked.perDayUzs, sampleDays);
+  const locale = useLocale();
+  const gatewayNote = GATEWAY_NOTE[locale] ?? GATEWAY_NOTE.uz;
 
   return (
     <section className="sec rent-sec" id="nft-rent">
@@ -147,6 +160,7 @@ export function V2NftRentSection({
 
                 <div className="rent-total">
                   ~{formatRentUzs(total)} <small>{approxNote}</small>
+                  <small>{gatewayNote}</small>
                 </div>
               </div>
 

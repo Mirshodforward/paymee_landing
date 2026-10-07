@@ -60,12 +60,20 @@ function RuBody() {
 const faqUz = [
   { question: "Username bepulmi?", answer: "Ko‘p nomlar bepul; band bo‘lsa boshqa variant tanlang." },
   { question: "Fragment nima?", answer: "Rasmiy TON bozori — username va aktivlar." },
-  { question: "StarsPaymee username sotadimi?", answer: "Yo‘q — Stars, Premium, Gifts; @nom Fragment orqali." },
+  {
+    question: "StarsPaymee username sotadimi?",
+    answer:
+      "Sotmaydi, lekin @StarsPaymee_bot’da username ijarasi bor — chiroyli @nomni muddatga olasiz. Butunlay sotib olish — Fragment’da.",
+  },
   { question: "Qisqa @nom qancha?", answer: "Bozorga bog‘liq, TON da." },
 ];
 
 const faqRu = [
   { question: "Где купить @имя?", answer: "Официально — Fragment." },
+  {
+    question: "Продаёт ли StarsPaymee username?",
+    answer: "Нет, но в @StarsPaymee_bot есть аренда username — красивое @имя на срок. Купить насовсем — на Fragment.",
+  },
 ];
 
 export const post: AeoPost = {
@@ -73,7 +81,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "info",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-10-06",
   keywords: ["telegram username sotib olish", "fragment username", "qisqa username telegram"],
   locales: {
     uz: {

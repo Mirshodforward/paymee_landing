@@ -99,7 +99,7 @@ import { post as p172 } from "./posts/172-telegram-gift-sotilmayapti";
 // Yangi xizmatlar: NFT ijara, qat'iy kursda Steam, taymerli sovg'a
 import { post as p173 } from "./posts/173-telegram-nft-sovga-ijarasi";
 import { post as p175 } from "./posts/175-taymer-bilan-sovga-yuborish";
-// Mahsulot o'zgarishi: kolleksion giftlar bot orqali yetkazilmaydi
+// Limited sovg'alar botlarga berilmaydi (14-sentabr); kolleksion NFT — NFT Market'da (21-sentabrdan)
 import { post as p176 } from "./posts/176-kolleksion-gift-bot-orqali-olinmaydi";
 // Yangi narxlar va to'lov usullari (naqd Paynet, rubl SBP) + Steam hamyon valyutasi
 // To'lov usullari bo'yicha alohida qo'llanmalar (Payme, naqd pul)

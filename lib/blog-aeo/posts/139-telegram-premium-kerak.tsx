@@ -290,7 +290,7 @@ function EnBody() {
 const uzFaq = [
   { question: "Menga Premium kerakmi?", answer: "Agar katta fayl, ko‘p kanal yoki reklamasiz tajriba kerak bo‘lsa — ha. Kamdan-kam foydalansangiz, shart emas." },
   { question: "Premium nima beradi?", answer: "4 GB fayl, tezroq yuklash, reklamasiz kanal, maxsus emoji va boshqalar." },
-  { question: "Qaysi muddat foydali?", answer: "Uzoqroq muddat oyiga tushadigan xarajatni kamaytiradi." },
+  { question: "Qaysi muddat foydali?", answer: "Oyiga eng arzoni — 12 oylik (~32 300 so‘m); 6 oylik ~36 000, 3 oylik ~53 300 so‘m." },
   { question: "Xalqaro karta kerakmi?", answer: "Yo‘q, mahalliy to‘lov usullari yetarli." },
   { question: "Faollashtirish qancha vaqt oladi?", answer: "Odatda bir necha daqiqa." },
   { question: "Obuna avtomatik uzayadimi?", answer: "Yo‘q, muddat tugagach qayta buyurtma berasiz." },
@@ -305,7 +305,7 @@ const uzFaq = [
 const ruFaq = [
   { question: "Нужен ли мне Premium?", answer: "Если нужны крупные файлы, много каналов или отсутствие рекламы — да. При редком использовании необязательно." },
   { question: "Что даёт Premium?", answer: "Файлы 4 ГБ, быстрая загрузка, каналы без рекламы, особые эмодзи и другое." },
-  { question: "Какой срок выгоднее?", answer: "Более длительный снижает стоимость в пересчёте на месяц." },
+  { question: "Какой срок выгоднее?", answer: "Дешевле всего в месяц — 12 месяцев (~32 300 сум); 6 месяцев ~36 000, 3 месяца ~53 300 сум." },
   { question: "Нужна ли международная карта?", answer: "Нет, достаточно местных способов оплаты." },
   { question: "Сколько занимает активация?", answer: "Обычно несколько минут." },
   { question: "Продлевается ли автоматически?", answer: "Нет, после окончания срока оформляется новый заказ." },
@@ -320,7 +320,7 @@ const ruFaq = [
 const enFaq = [
   { question: "Do I need Premium?", answer: "If you need large files, many channels or no ads — yes. For light use it is optional." },
   { question: "What does Premium give?", answer: "4 GB files, faster downloads, ad-free channels, exclusive emoji and more." },
-  { question: "Which term is best value?", answer: "A longer term lowers the effective monthly cost." },
+  { question: "Which term is best value?", answer: "The cheapest per month is 12 months (~32,300 UZS); 6 months ~36,000, 3 months ~53,300 UZS." },
   { question: "Do I need an international card?", answer: "No, local payment methods are enough." },
   { question: "How long does activation take?", answer: "Usually a few minutes." },
   {
@@ -342,7 +342,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-06",
   keywords: [
     "telegram premium kerak",
     "telegram premium imkoniyatlari",

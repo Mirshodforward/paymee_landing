@@ -113,8 +113,6 @@
     "paymentsTitle": "Istalgan karta bilan to‘lov",
     "paymentsNote": "va istalgan O‘zbekiston bank kartasi",
     "starsTitle": "Telegram Stars",
-    "starsLead": "Yulduz donasi atigi 220 so‘mdan. Kerakli miqdorni tanlang — bot 5 soniyada hisobingizga yetkazadi.",
-    "starsUnitBadge": "Donasi {price} — narx standart!",
     "starsPerUnitLabel": "donasi",
     "starsCta": "Stars sotib olish",
     "starsPopular": "Ommabop",
@@ -132,7 +130,7 @@
     "unitMonth": "oy",
     "unitYear": "yil",
     "perMonth": "oyiga",
-    "giftsTitle": "Telegram noyob sovg‘alar",
+    "giftsTitle": "Telegram sovg‘alari va NFT",
     "giftsLead": "Telegramning noyob sovg‘alarini o‘zingizga sotib oling yoki do‘stlaringizga yuboring — oson, qulay va ishonchli.",
     "giftsBullets": [
       "Sovg‘ani o‘zingizga yoki do‘stingizga yuboring",
@@ -143,32 +141,6 @@
     "giftsCta": "Sovg‘alar",
     "whyTitle": "Nega StarsPaymee?",
     "whyLead": "1,5 yildan ortiq tajriba, 100 000 dan ortiq buyurtma va 4000 dan ortiq doimiy foydalanuvchi.",
-    "whyItems": [
-      {
-        "title": "Eng tezkor",
-        "body": "Buyurtma o‘rtacha 5 soniyada avtomatik yetkaziladi."
-      },
-      {
-        "title": "Eng arzon",
-        "body": "Yulduz 220 so‘mdan, Premium 3 oy 160 000 so‘mdan."
-      },
-      {
-        "title": "Ishonchli",
-        "body": "1,5 yildan ortiq xizmat, 100 000+ bajarilgan buyurtma."
-      },
-      {
-        "title": "Login shart emas",
-        "body": "Premium uchun faqat username — parol yoki kod kerak emas."
-      },
-      {
-        "title": "Qulay to‘lov",
-        "body": "Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan karta."
-      },
-      {
-        "title": "Referral bonus",
-        "body": "Do‘st taklif qiling va bonuslar yig‘ing."
-      }
-    ],
     "processTitle": "Uch bosqichda",
     "steps": [
       {
@@ -203,11 +175,11 @@
       },
       {
         "question": "Narxlar qancha?",
-        "answer": "Telegram Stars donasi atigi 220 so‘mdan — 50 yulduz 11 000 so‘m. Telegram Premium: 3 oy 160 000 so‘m, 6 oy 215 000 so‘m, 12 oy 388 000 so‘m. Bu bozordagi eng arzon narxlardan biri."
+        "answer": "Telegram Stars donasi UzCard/HUMO kartaga o‘tkazmada 220 so‘m (50 yulduz — 11 000 so‘m), Click, Payme, Uzum yoki Paynet orqali 240 so‘m (50 yulduz — 12 000 so‘m). Telegram Premium: 3 oy 159 900 so‘m, 6 oy 216 000 so‘m, 12 oy 388 000 so‘m — Premium narxi barcha to‘lov usulida (karta, Click, Payme, Uzum, Paynet) bir xil. Bu bozordagi eng arzon narxlardan biri."
       },
       {
         "question": "Telegram sovg‘alarini qanday yuboraman?",
-        "answer": "Telegram noyob (unique) sovg‘alarini o‘zingiz uchun sotib olishingiz yoki do‘stingizga yuborishingiz mumkin. Sovg‘ani anonim tarzda yoki tabrik so‘zi (izoh) bilan jo‘natish ham mumkin."
+        "answer": "Botning sovg‘alar bo‘limida oddiy Telegram sovg‘asini o‘zingizga yoki do‘stingizga @username orqali yuborasiz — anonim yoki tabrik izohi bilan. Kolleksion (NFT) sovg‘a esa NFT Market bo‘limida sotib olinadi va o‘z Telegram akkauntingizga o‘tkaziladi — bu darhol bo‘lmasligi mumkin."
       },
       {
         "question": "Do‘st taklif qilsam nima bo‘ladi?",
@@ -235,7 +207,7 @@
       },
       {
         "question": "Telegram sovg‘asi (Gift) qaytariladimi?",
-        "answer": "Telegram noyob sovg‘asini qabul qiluvchi o‘z profilida saqlashi yoki ko‘p hollarda qayta Stars’ga aylantirishi mumkin. Yetkazishdan oldin xatolik yuz bersa, support orqali bekor qilish yoki almashtirishni so‘rashingiz mumkin."
+        "answer": "Oddiy Telegram sovg‘asini qabul qiluvchi o‘z profilida saqlashi yoki ko‘p hollarda Stars’ga aylantirishi mumkin. Yetkazishdan oldin xatolik yuz bersa, support orqali bekor qilish yoki almashtirishni so‘rashingiz mumkin."
       },
       {
         "question": "Nega App Store yoki rasmiy narxdan arzon?",
@@ -255,39 +227,25 @@
       "business": "Business"
     },
     "stars": {
-      "metaTitle": "Telegram Stars olish — narxi 220 so‘m, UzCard/HUMO, 5 soniyada",
-      "metaDescription": "Telegram Stars donasi 220 so‘m: 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada tushadi.",
+      "metaTitle": "Telegram Stars olish — narxi 220 so‘mdan (UzCard/HUMO), 5 soniyada",
+      "metaDescription": "Telegram Stars narxi: UzCard/HUMO kartaga o‘tkazmada donasi 220 so‘m (50 ta — 11 000, 1 000 ta — 220 000), Click, Payme, Uzum yoki Paynet orqali 240 so‘m (1 000 ta — 240 000). Faqat @username — parol so‘ralmaydi, 5 soniyada tushadi.",
       "h1": "Telegram Stars (yulduz) sotib olish — O‘zbekistonda, so‘mda",
-      "intro": "StarsPaymee orqali Telegram Stars (yulduz) ni O‘zbekistonda eng arzon narxda sotib oling. Yulduz donasi atigi 220 so‘mdan, bazaviy 50 yulduz 11 000 so‘m. Buyurtma @StarsPaymee_bot orqali beriladi va o‘rtacha 5 soniyada avtomatik yetkaziladi.",
+      "intro": "StarsPaymee orqali Telegram Stars (yulduz) ni O‘zbekistonda eng arzon narxda sotib oling. Yulduz donasi UzCard/HUMO kartaga o‘tkazmada 220 so‘m (50 yulduz — 11 000 so‘m), Click, Payme, Uzum yoki Paynet orqali 240 so‘m (50 yulduz — 12 000 so‘m). Buyurtma @StarsPaymee_bot orqali beriladi va o‘rtacha 5 soniyada avtomatik yetkaziladi.",
       "bullets": [
-        "Donasi 220 so‘mdan — 50 yulduz 11 000 so‘m",
+        "Karta o‘tkazmasida donasi 220 so‘m (50 yulduz — 11 000 so‘m), Click, Payme, Uzum yoki Paynet orqali 240 so‘m",
         "Click, Payme, Paynet, Uzum, UzCard, HUMO va istalgan karta",
         "5 soniyada avtomatik yetkazish, akkauntga kirish shart emas",
         "O‘zingizga yoki boshqa username’ga yuborish"
       ],
-      "footnote": "Narx tanlangan yulduz miqdoriga qarab hisoblanadi. Aniq summani @StarsPaymee_bot yoki Mini App da ko‘rasiz."
-    },
-    "starsTable": {
-      "heading": "Telegram Stars narxlari",
-      "lead": "Paketni tanlang — narx botdagi hisob bilan bir xil manbadan olinadi. Tugma Mini App’dagi Stars bo‘limini o‘sha paket bilan ochadi.",
-      "colPack": "Paket",
-      "colPrice": "Narx",
-      "colAction": "Xarid",
-      "buy": "Sotib olish",
-      "buyAria": "{amount} Stars sotib olish",
-      "unit": "yulduz",
-      "popular": "Ommabop",
-      "noteFee": "Jadvaldagi summa yakuniy — ustiga xizmat haqi qo‘shilmaydi.",
-      "notePay": "To‘lov so‘mda: {methods}.",
-      "noteConfirm": "To‘lovdan oldin bot summani va qabul qiluvchi @username’ni yana bir marta ko‘rsatadi."
+      "footnote": "Narx yulduz miqdori va to‘lov usuliga qarab hisoblanadi. Aniq summani to‘lovdan oldin @StarsPaymee_bot yoki Mini App da ko‘rasiz."
     },
     "premium": {
       "metaTitle": "Telegram Premium olish — narxi 45 000 so‘mdan, UzCard/HUMO, 5 soniyada",
-      "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada faollashadi.",
+      "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 159 900, 6 oy 216 000, 12 oy 388 000 so‘m. UzCard, HUMO, Click, Payme, Uzum, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada faollashadi.",
       "h1": "Telegram Premium olish — O‘zbekistonda, so‘mda, arzon narxda",
-      "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 5 soniyada avtomatik faollashadi. 1 oylik tarif — 45 000 so‘m, u ham username orqali.",
+      "intro": "Telegram Premium obunasini O‘zbekistonda arzon narxda oling: 3 oy 159 900, 6 oy 216 000, 12 oy 388 000 so‘m. «Username bilan» oqimida akkauntga kirish shart emas — Premium 5 soniyada avtomatik faollashadi. 1 oylik tarif — 45 000 so‘m, u ham username orqali.",
       "bullets": [
-        "1 oy 45 000 · 3 oy 160 000 · 6 oy 215 000 · 12 oy 388 000 so‘m",
+        "1 oy 45 000 · 3 oy 159 900 · 6 oy 216 000 · 12 oy 388 000 so‘m",
         "Barcha muddat username orqali — 5 soniyada avtomatik faollashish",
         "Akkauntga kirish, parol yoki SMS-kod talab qilinmaydi",
         "To‘lov so‘mda: Click, Payme, Uzum, UzCard, HUMO"
@@ -296,16 +254,16 @@
     },
     "gifts": {
       "metaTitle": "Telegram sovg‘a yuborish — so‘mda, anonim yoki izoh bilan",
-      "metaDescription": "Telegram sovg‘alarini so‘mda sotib oling va do‘stingizga yuboring: anonim yoki tabrik izohi bilan. Kolleksion nusxa Telegram ichida upgrade orqali olinadi.",
+      "metaDescription": "Telegram sovg‘alarini so‘mda sotib oling va do‘stingizga yuboring: anonim yoki tabrik izohi bilan. Kolleksion (NFT) sovg‘a — botdagi NFT Market’da, so‘mda.",
       "h1": "Telegram sovg‘alari yuborish",
-      "intro": "Telegram sovg‘alarini StarsPaymee orqali o‘zingizga oling yoki do‘stlaringizga yuboring — anonim tarzda yoki tabrik so‘zi bilan. To‘lov so‘mda: Click, Payme, Uzum, UzCard, HUMO. Kolleksion (NFT) nusxa kerak bo‘lsa, avval yulduz olasiz va sovg‘ani Telegram ichida collectible darajasiga ko‘tarasiz.",
+      "intro": "Telegram sovg‘alarini StarsPaymee orqali o‘zingizga oling yoki do‘stlaringizga yuboring — anonim tarzda yoki tabrik so‘zi bilan. To‘lov so‘mda: Click, Payme, Uzum, Paynet, UzCard, HUMO (onlayn to‘lovda narx biroz yuqoriroq — yakuniy summa botda). Kolleksion (NFT) sovg‘a kerak bo‘lsa — botdagi NFT Market’da tayyor nusxani so‘mda sotib olasiz (karta yoki balans orqali) yoki NFT ijarasida muddatga olasiz.",
       "bullets": [
         "Doimiy katalogdagi sovg‘alarni sotib olish yoki yuborish",
         "Anonim yuborish imkoniyati",
         "Tabrik so‘zini (izoh) qo‘shish",
         "So‘mda qulay to‘lov, ishonchli yetkazish"
       ],
-      "footnote": "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi. Sotuvdan tugagan kolleksion (NFT) sovg‘alar bot orqali yetkazilmaydi."
+      "footnote": "Mavjud sovg‘alar ro‘yxati va narxlari @StarsPaymee_bot yoki Mini App ichida ko‘rsatiladi. Sotuvdan tugagan limited sovg‘alarni Telegram do‘konidan yangi olib bo‘lmaydi, shuning uchun oddiy katalog ularni bermaydi; ularning mavjud kolleksion (NFT) nusxasini botdagi NFT Market’da (300 000 so‘mgacha) sotib olish yoki ijaraga olish mumkin."
     },
     "about": {
       "metaTitle": "Biz haqimizda — Telegram Stars va Premium xizmati",
@@ -464,7 +422,7 @@
     "b1Title": "Hamma xizmat bir joyda",
     "b1Body": "Stars, Premium, sovg'alar, kanal boost, username va gift ijarasi, GamPay — bitta ekranda.",
     "b2Title": "So'mda to'lov",
-    "b2Body": "UzCard, HUMO, Click, Payme, Paynet, Uzum Bank, Beepul, Alif va naqt pul. Xorijiy karta kerak emas.",
+    "b2Body": "UzCard, HUMO, Click, Payme, Paynet, Uzum Bank, Beepul, Alif va naqd pul. Xorijiy karta kerak emas.",
     "b3Title": "Parol o'ylab topilmaydi",
     "b3Body": "Telegram orqali kirasiz. Ilova login yoki parolingizni so'ramaydi.",
     "stepsTitle": "Qanday o'rnatiladi",
@@ -509,9 +467,9 @@
     "navNftRent": "NFT ijara",
     "navNftRentDesc": "Qimmat sovg‘ani arzon narxda ijaraga",
     "navNftUsername": "Username",
-    "navNftUsernameDesc": "@nom sotib olish va sotish",
+    "navNftUsernameDesc": "@nom ijarasi va Fragment’da xarid",
     "navNftMarket": "NFT market",
-    "navNftMarketDesc": "So‘mda olish va sotish qo‘llanmasi",
+    "navNftMarketDesc": "Kolleksion sovg‘a xaridi — so‘mda",
     "navGames": "O‘yinlar",
     "navGamesGames": "O‘yinlar",
     "navGamesApps": "Ilova va gift card",
@@ -544,7 +502,7 @@
     "phoneDeliveredSub": "Xaridingiz uchun rahmat 🚀",
     "phoneAvg": "O‘rtacha: 9.4 s",
     "phoneMode": "24/7 · avto",
-    "chipCash": "Naqt pul",
+    "chipCash": "Naqd pul",
     "appLead": "StarsPaymee ilovasini o‘rnating",
     "appStoreSmall": "Yuklab oling",
     "playStoreSmall": "Yuklab oling",
@@ -596,7 +554,7 @@
     "advSecBody": "Faqat @username yetarli.",
     "advPayTag": "To‘lov",
     "advPayTitle": "Istalgan bank ilovasidan",
-    "advPayBody": "Kartadan kartaga o‘tkazing — tizim tushumni avtomatik aniqlaydi. Hammasi so‘mda.",
+    "advPayBody": "Botdagi Click, Payme, Uzum yoki Paynet tugmasi bilan ilovada tasdiqlang yoki kartadan kartaga o‘tkazing — tizim to‘lovni avtomatik aniqlaydi. Hammasi so‘mda.",
     "prodTitle": "Nimalarni xarid qilish mumkin?",
     "prodSub": "Barchasi bitta botda — tanlang, to‘lang va soniyalarda qabul qiling.",
     "prodStarsDesc": "Istalgan miqdordagi Star paketlari — kichik sovg‘adan yirik xaridgacha.",
@@ -611,31 +569,31 @@
       "Rasmiy faollashtirish",
       "Do‘stga sovg‘a qilish mumkin"
     ],
-    "prodGiftsDesc": "Do‘stlaringizga eksklyuziv Telegram sovg‘alarini yuboring.",
+    "prodGiftsDesc": "Oddiy sovg‘ani do‘stingizga yuboring, kolleksion (NFT) sovg‘ani NFT Market’da oling.",
     "prodGiftsB": [
-      "Eksklyuziv kolleksiyalar",
+      "NFT Market — kolleksion sovg‘alar so‘mda",
       "Anonim yuborish imkoni",
       "Bayramlar uchun ideal"
     ],
     "prodLink": "Botda ko‘rish",
     "nftKicker": "Sovg‘alar",
-    "nftTitle": "Telegram sovg‘alari — so‘mda, bot orqali",
-    "nftSub": "Oddiy sovg‘alar, Stars va Premium avvalgidek ishlaydi. Sotuvdan tugagan kolleksion (NFT) sovg‘alar esa hozir bot orqali yetkazilmaydi — kolleksion nusxa Telegram ichida upgrade orqali olinadi.",
+    "nftTitle": "NFT Market — kolleksion sovg‘a so‘mda",
+    "nftSub": "Sotuvdagi kolleksion (NFT) Telegram sovg‘asini so‘mda sotib oling — 300 000 so‘mgacha, karta yoki balans orqali; NFT @username’ingizga o‘tkaziladi.",
     "nftBalance": "Balansingiz",
     "nftMyGifts": "Mening giftlarim",
     "nftCtaBot": "Botda sovg‘a yuborish",
-    "nftCtaBlog": "Xizmat holati va qo‘llanmalar",
+    "nftCtaBlog": "NFT Market qo‘llanmasi",
     "nftNewBadge": "Yangilandi",
     "nftBullets": [
       "Oddiy sovg‘alar — so‘mda, mahalliy karta bilan, bir necha daqiqada",
-      "Kolleksion sovg‘a: botdan yulduz olasiz, keyin Telegram ichida upgrade qilasiz",
-      "Sotuvdan tugagan kolleksion nusxalar bot orqali yetkazilmaydi",
+      "NFT Market — sotuvdagi kolleksion nusxa, 300 000 so‘mgacha",
+      "To‘lov karta yoki balans orqali; NFT @username’ingizga o‘tkaziladi",
       "Gift Market va kolleksiya bo‘yicha o‘zbekcha qo‘llanmalar — blogda"
     ],
     "rentKicker": "NFT ijara",
     "rentNewBadge": "Yangi",
     "rentTitle": "Qimmat NFT sovg‘ani arzonga — ijaraga oling",
-    "rentSub": "Kolleksion Telegram sovg‘asini butunlay sotib olish shart emas: kerakli muddatga oling. 1 kundan 30 kungacha, to‘lov so‘mda, mahalliy karta bilan. Muddat tugagach sovg‘a o‘zi qaytadi.",
+    "rentSub": "Kolleksion Telegram sovg‘asini butunlay sotib olish shart emas: kerakli muddatga oling. Muddat har bir e’londa ko‘rsatiladi, to‘lov so‘mda. To‘lovdan keyin gift Fragment havolangiz orqali hisobingizga ulanadi; muddat tugagach u o‘zi qaytadi.",
     "rentCatalogNote": "Jonli katalog · har 5 daqiqada yangilanadi",
     "rentDuration": "Muddat",
     "rentApprox": "(7 kun, taxminiy)",
@@ -646,8 +604,8 @@
     "rentCtaBlog": "NFT ijara qo‘llanmasi",
     "rentBullets": [
       "Gift ham, username ham bir xil oqim bilan ijaraga olinadi",
-      "1–30 kun muddat, tez tugmalar (1 / 7 / 30 kun) va uzaytirish imkoni",
-      "To‘lov so‘mda: UzCard, HUMO, Click, Payme, Paynet",
+      "Muddat e’longa bog‘liq — slayder bilan tanlanadi, uzaytirish mumkin",
+      "To‘lov so‘mda: UzCard, HUMO, Click, Payme, Uzum, Paynet — onlayn to‘lovda narx biroz yuqoriroq",
       "Kolleksiya, model, symbol va backdrop bo‘yicha filtr"
     ],
     "boostKicker": "Boost Market",
@@ -668,7 +626,10 @@
       "10 ta SEO qo‘llanma: narxlar, avtomatik yetkazish, arzon boost"
     ],
     "starsTitle": "Telegram Stars narxlari",
-    "starsLead": "Yulduz donasi atigi {price} dan. Kerakli paketni tanlang — bot 5 soniyada hisobingizga yetkazadi.",
+    "starsLead": "Yulduz donasi: karta o‘tkazmasida {card}, Click, Payme, Uzum yoki Paynet orqali {gateway}. Kerakli paketni tanlang — bot 5 soniyada hisobingizga yetkazadi.",
+    "starsCardTag": "karta o‘tkazmasi",
+    "starsGatewayTag": "Click · Payme · Uzum · Paynet",
+    "starsPriceNote": "Karta o‘tkazmasi — bot ko‘rsatgan UzCard/HUMO kartaga istalgan bank ilovasidan (Click yoki Payme ilovasidagi «Kartaga o‘tkazma» ham) yoki balansdan to‘lov. Click, Payme, Uzum, Paynet — botdagi onlayn to‘lov tugmalari. Yakuniy summa to‘lovdan oldin botda ko‘rsatiladi.",
     "starsAmountUnit": "yulduz",
     "starsPopular": "Ommabop",
     "starsCta": "Stars sotib olish",
@@ -686,7 +647,7 @@
     "step1Title": "Botni oching",
     "step1Body": "@StarsPaymee_bot da kerakli mahsulotni tanlang: Stars, Premium yoki Gift.",
     "step2Title": "To‘lovni qiling",
-    "step2Body": "Istalgan bank ilovasidan: Click, Payme, Uzum, UzCard, HUMO orqali so‘mda.",
+    "step2Body": "Istalgan bank ilovasidan: Click, Payme, Uzum, Paynet, UzCard, HUMO orqali so‘mda.",
     "step3Title": "5 soniyada qabul qiling",
     "step3Body": "Tizim to‘lovni avtomatik aniqlaydi va darhol yetkazadi. Kechiksa — avto-bonus!",
     "trust1Title": "Login va parol so‘ralmaydi",
@@ -761,10 +722,10 @@
   },
   "premiumPage": {
     "metaTitle": "Telegram Premium olish — narxi 45 000 so‘mdan, UzCard/HUMO, 5 soniyada",
-    "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada faollashadi.",
+    "metaDescription": "Telegram Premium: 1 oy 45 000, 3 oy 159 900, 6 oy 216 000, 12 oy 388 000 so‘m. UzCard, HUMO, Click, Payme, Uzum, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada faollashadi.",
     "kicker": "Telegram Premium",
     "h1": "Telegram Premium olish — O‘zbekistonda, so‘mda, arzon narxda",
-    "lead": "Telegram Premium sotib olish uchun @StarsPaymee_bot yetarli: UzCard, HUMO, Click, Payme yoki naqd pul bilan so‘mda, arzon narxda. Faqat @username kerak — akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach obuna 5 soniyada faollashadi.",
+    "lead": "Telegram Premium sotib olish uchun @StarsPaymee_bot yetarli: UzCard, HUMO, Click, Payme, Uzum, Paynet yoki naqd pul bilan so‘mda, arzon narxda. Faqat @username kerak — akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach obuna 5 soniyada faollashadi.",
     "badges": [
       "5 soniyada faollashadi",
       "9 ta to‘lov usuli, so‘mda",
@@ -775,14 +736,14 @@
     "ctaPrices": "Narxlarni ko‘rish",
     "pricesKicker": "Narxlar",
     "pricesTitle": "Telegram Premium narxi O‘zbekistonda — 1 oylik, 3, 6 va 1 yillik",
-    "pricesSub": "Muddat uzaygani sari oyiga to‘g‘ri keladigan narx pasayadi. Barcha muddatlar username orqali, bir xil tezlikda.",
+    "pricesSub": "3 oydan 12 oygacha muddat uzaygani sari oyiga to‘g‘ri keladigan narx pasayadi. Barcha muddatlar username orqali, bir xil tezlikda.",
     "colTerm": "Muddat",
     "colPerMonth": "Oyiga",
     "colTotal": "Umumiy narx",
     "monthUnit": "oy",
     "bestValue": "Eng foydali",
     "popular": "Ommabop",
-    "pricesNote": "Narxga barcha to‘lov usullari kiradi — yashirin komissiya yo‘q. 12 oylik tarifda bir oy 1 oylikka nisbatan taxminan {diff} so‘mga arzon tushadi. Jonli narx — botda; bu jadval ma’lumot uchun.",
+    "pricesNote": "Narx barcha to‘lov usulida bir xil — karta, Click, Payme, Uzum yoki Paynet; yashirin komissiya yo‘q. 12 oylik tarifda bir oy 1 oylikka nisbatan taxminan {diff} so‘mga arzon tushadi. Jonli narx — botda; bu jadval ma’lumot uchun.",
     "featuresKicker": "Afzalliklar",
     "featuresTitle": "Telegram Premium nima beradi?",
     "featuresSub": "Obuna bilan ochiladigan asosiy imkoniyatlar",
@@ -861,11 +822,11 @@
     "faq": [
       {
         "q": "Telegram Premium narxi O‘zbekistonda qancha?",
-        "a": "StarsPaymee’da: 1 oy — 45 000, 3 oy — 160 000, 6 oy — 215 000, 12 oy — 388 000 so‘m. Uzoq muddat oyiga arzonroq tushadi. Jonli narx botda."
+        "a": "StarsPaymee’da: 1 oy — 45 000, 3 oy — 159 900, 6 oy — 216 000, 12 oy — 388 000 so‘m. Oyiga eng arzoni — 12 oylik (~32 300 so‘m). Jonli narx botda."
       },
       {
         "q": "UzCard yoki HUMO bilan sotib olish mumkinmi?",
-        "a": "Ha. Bot karta raqamiga o‘tkazma qabul qiladi — UzCard, HUMO, Click, Payme, Paynet, Uzum, Beepul, Alif ilovalaridan yoki naqd pul bilan terminal orqali."
+        "a": "Ha. Ko‘rsatilgan UzCard/HUMO kartaga istalgan ilovadan (Click, Payme, Paynet, Uzum, Beepul, Alif) o‘tkazma qilasiz yoki botdagi Click, Payme, Uzum, Paynet tugmasi bilan ilovada onlayn to‘laysiz. Premium narxi ikkala yo‘lda bir xil."
       },
       {
         "q": "Premium qancha vaqtda faollashadi?",
@@ -917,7 +878,7 @@
       },
       {
         "q": "Телеграм премиум олиш — кирилл ёзувида қидираётганлар учун",
-        "a": "StarsPaymee орқали Телеграм Премиум сўмда олинади: UzCard, HUMO, Click, Payme, Paynet ёки нақд пул. Фақат @username керак, парол сўралмайди, тўловдан кейин 5 сонияда фаоллашади. Нархлар: 1 ой — 45 000, 3 ой — 160 000, 6 ой — 215 000, 12 ой — 388 000 сўм."
+        "a": "StarsPaymee орқали Телеграм Премиум сўмда олинади: UzCard, HUMO, Click, Payme, Paynet ёки нақд пул. Фақат @username керак, парол сўралмайди, тўловдан кейин 5 сонияда фаоллашади. Нархлар: 1 ой — 45 000, 3 ой — 159 900, 6 ой — 216 000, 12 ой — 388 000 сўм."
       }
     ],
     "guidesKicker": "Batafsil",
@@ -931,7 +892,7 @@
   "productPage": {
     "payKicker": "To‘lov",
     "payTitle": "UzCard, HUMO, Click, Payme, Paynet, Uzum, Beepul, Alif va naqd pul — hammasi so‘mda",
-    "paySub": "Bot to‘lovni karta raqamiga o‘tkazma sifatida qabul qiladi — pulni qaysi ilovadan yuborishingiz farq qilmaydi. Muhimi: aynan ko‘rsatilgan summa, aynan ko‘rsatilgan kartaga.",
+    "paySub": "Ikki yo‘l bor. Onlayn to‘lov: botda Click, Payme, Uzum yoki Paynet tugmasini tanlaysiz — summa tayyor turadi, faqat tasdiqlaysiz va to‘lov avtomatik qabul qilinadi. Karta o‘tkazmasi: bot ko‘rsatgan UzCard/HUMO kartaga istalgan ilovadan aynan ko‘rsatilgan summani yuborasiz. Premium narxi ikkala yo‘lda bir xil; Stars va boshqa mahsulotlar onlayn to‘lovda biroz qimmatroq — yakuniy summa to‘lovdan oldin botda ko‘rsatiladi.",
     "payMethods": [
       {
         "t": "UzCard",
@@ -943,19 +904,19 @@
       },
       {
         "t": "Click",
-        "d": "Click ilovasida «O‘tkazmalar → Kartaga». Tushum odatda bir necha soniyada aniqlanadi."
+        "d": "Botda «Click» tugmasini tanlasangiz — Click to‘lov sahifasi tayyor summa bilan ochiladi, to‘lov avtomatik tasdiqlanadi. Yoki Click ilovasida «O‘tkazmalar → Kartaga» orqali karta o‘tkazmasi qilasiz."
       },
       {
         "t": "Payme",
-        "d": "Payme’dagi «O‘tkazmalar» bo‘limidan. Summani tiyinigacha aniq kiriting — bot aynan shu summa bo‘yicha buyurtmangizni topadi."
+        "d": "Botda «Payme» tugmasi — summa ilovada tayyor, to‘lov avtomatik tasdiqlanadi. Yoki Payme’dagi «O‘tkazmalar» bo‘limidan karta o‘tkazmasi — unda summani tiyinigacha aniq kiriting."
       },
       {
         "t": "Paynet",
-        "d": "Paynet ilovasi yoki terminalidan kartaga o‘tkazma. Terminalda naqd pul bilan to‘ldirish ham mumkin."
+        "d": "Botdagi Paynet usuli — Paynet ilovasi yoki Paynet terminali orqali to‘lov, avtomatik tasdiqlanadi. Yoki terminalda naqd pulni kartaga tushirib, karta o‘tkazmasi qilasiz."
       },
       {
         "t": "Uzum Bank",
-        "d": "Uzum Bank ilovasidan kartaga o‘tkazma — boshqa ilovalar bilan bir xil oqim."
+        "d": "Botda «Uzum Bank» tugmasi — Uzum Bank ilovasida onlayn to‘lov. Yoki Uzum Bank ilovasidan kartaga o‘tkazma."
       },
       {
         "t": "Beepul",
@@ -973,14 +934,14 @@
     "payNote": "Xorijiy karta, Apple ID balansi yoki TON kerak emas. Rasmiy usullar — App Store, Google Play, Fragment, @PremiumBot — aynan shuni talab qiladi va UzCard/HUMO’ni qabul qilmaydi."
   },
   "starsPage": {
-    "metaTitle": "Telegram Stars olish — narxi 220 so‘m, UzCard/HUMO, 5 soniyada",
-    "metaDescription": "Telegram Stars donasi 220 so‘m: 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000 so‘m. UzCard, HUMO, Click, Payme, Paynet yoki naqd pul bilan. Faqat @username — parol so‘ralmaydi, 5 soniyada tushadi.",
+    "metaTitle": "Telegram Stars olish — narxi 220 so‘mdan (UzCard/HUMO), 5 soniyada",
+    "metaDescription": "Telegram Stars narxi: UzCard/HUMO kartaga o‘tkazmada donasi 220 so‘m (50 ta — 11 000, 1 000 ta — 220 000), Click, Payme, Uzum yoki Paynet orqali 240 so‘m (1 000 ta — 240 000). Faqat @username — parol so‘ralmaydi, 5 soniyada tushadi.",
     "kicker": "Telegram Stars",
     "h1": "Telegram Stars (yulduz) sotib olish — O‘zbekistonda, so‘mda",
-    "lead": "Telegram Stars (yulduz) ni UzCard, HUMO, Click, Payme yoki naqd pul bilan so‘mda oling — donasi 220 so‘m, 50 tadan boshlab. Faqat @username kerak: akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach yulduzlar 5 soniyada balansingizga tushadi.",
+    "lead": "Telegram Stars (yulduz) ni so‘mda oling: UzCard/HUMO kartaga o‘tkazmada donasi 220 so‘m, Click, Payme, Uzum yoki Paynet orqali 240 so‘m, 50 tadan boshlab. Faqat @username kerak: akkauntga kirish, parol yoki xorijiy karta talab qilinmaydi. To‘lov tasdiqlangach yulduzlar 5 soniyada balansingizga tushadi.",
     "badges": [
       "5 soniyada tushadi",
-      "Donasi 220 so‘m, 50 tadan",
+      "Donasi 220 so‘mdan (karta o‘tkazmasi)",
       "9 ta to‘lov usuli, so‘mda",
       "Parol so‘ralmaydi"
     ],
@@ -988,13 +949,14 @@
     "ctaPrices": "Narxlarni ko‘rish",
     "pricesKicker": "Narxlar",
     "pricesTitle": "Telegram Stars narxi — 1 ta yulduz necha so‘m (UZS)",
-    "pricesSub": "Narx miqdorga to‘g‘ri proporsional — donasi 220 so‘m, yashirin komissiya yo‘q. Tayyor paket yoki botda istalgan miqdor.",
+    "pricesSub": "Narx miqdorga proporsional, dona narxi esa to‘lov usuliga bog‘liq — jadvalda ikkalasi: karta o‘tkazmasi (balans ham) va Click, Payme, Uzum yoki Paynet orqali onlayn to‘lov. Yakuniy summa to‘lovdan oldin botda ko‘rinadi.",
     "colPack": "Paket",
-    "colPerStar": "Donasi",
-    "colTotal": "Narx",
+    "colCard": "Karta o‘tkazmasi · {price}/dona",
+    "colGateway": "Click · Payme · Uzum · Paynet · {price}/dona",
+    "cardMethod": "karta o‘tkazmasi",
     "unit": "yulduz",
     "popular": "Ommabop",
-    "pricesNote": "Jadvalda tayyor paketlar; botda 50 dan 10 000 gacha istalgan sonni kiritasiz — narx o‘sha {perStar} so‘m/dona bo‘yicha hisoblanadi. Jonli narx — botda; bu jadval ma’lumot uchun.",
+    "pricesNote": "Jadvalda tayyor paketlar; botda 50 dan 10 000 gacha istalgan sonni kiritasiz — summa tanlangan to‘lov usulining dona narxi bo‘yicha hisoblanadi ({card} yoki {gateway}). Karta o‘tkazmasida aynan bot ko‘rsatgan summani o‘tkazing. Jonli narx — botda; bu jadval ma’lumot uchun.",
     "featuresKicker": "Nimaga kerak",
     "featuresTitle": "Telegram Stars nima uchun kerak?",
     "featuresSub": "Yulduzlar — Telegram ichida sarflanadigan valyuta. Asosiy ishlatilish joylari:",
@@ -1073,15 +1035,15 @@
     "faq": [
       {
         "q": "Telegram Stars narxi qancha?",
-        "a": "StarsPaymee’da donasi 220 so‘m: 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000, 1 000 ta — 220 000 so‘m. Narx miqdorga proporsional, yashirin komissiya yo‘q. Jonli narx botda."
+        "a": "Narx to‘lov usuliga bog‘liq. UzCard/HUMO kartaga o‘tkazma yoki balansdan — donasi 220 so‘m: 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000, 1 000 ta — 220 000 so‘m. Click, Payme, Uzum yoki Paynet orqali — donasi 240 so‘m: 50 ta — 12 000, 100 ta — 24 000, 500 ta — 120 000, 1 000 ta — 240 000 so‘m. Yakuniy summa to‘lovdan oldin botda ko‘rsatiladi."
       },
       {
         "q": "Eng kam nechta yulduz olsa bo‘ladi?",
-        "a": "50 ta (11 000 so‘m). Bir buyurtmada 10 000 tagacha; ko‘proq kerak bo‘lsa — bir nechta buyurtma berasiz."
+        "a": "50 ta: karta o‘tkazmasida 11 000 so‘m, Click/Payme/Uzum/Paynet orqali 12 000 so‘m. Bir buyurtmada 10 000 tagacha; ko‘proq kerak bo‘lsa — bir nechta buyurtma berasiz."
       },
       {
         "q": "UzCard yoki HUMO bilan sotib olish mumkinmi?",
-        "a": "Ha. Bot karta raqamiga o‘tkazma qabul qiladi — UzCard, HUMO, Click, Payme, Paynet, Uzum, Beepul, Alif ilovalaridan yoki naqd pul bilan terminal orqali."
+        "a": "Ha. Ko‘rsatilgan UzCard/HUMO kartaga istalgan ilovadan (Click, Payme, Paynet, Uzum, Beepul, Alif) o‘tkazma qilasiz yoki botdagi Click, Payme, Uzum, Paynet tugmasi bilan ilovada onlayn to‘laysiz. Karta o‘tkazmasida donasi 220 so‘m, onlayn to‘lovda — 240 so‘m."
       },
       {
         "q": "Yulduzlar qancha vaqtda tushadi?",
@@ -1117,28 +1079,28 @@
       },
       {
         "q": "TG Stars to UZS — 1 ta stars necha so‘m?",
-        "a": "220 so‘m. 50 ta — 11 000, 100 ta — 22 000, 500 ta — 110 000 so‘m. Kurs qat’iy, komissiya yo‘q — botda istalgan miqdorni kiritganingizda summa shu bo‘yicha chiqadi."
+        "a": "Karta o‘tkazmasida (UzCard/HUMO yoki balans) 220 so‘m, Click, Payme, Uzum yoki Paynet orqali 240 so‘m. 50 ta — 11 000 / 12 000, 100 ta — 22 000 / 24 000, 500 ta — 110 000 / 120 000 so‘m. Narx miqdorga proporsional — botda istalgan miqdorni kiritsangiz, summa tanlangan usul bo‘yicha chiqadi."
       },
       {
         "q": "Telegram Stars’ni Click yoki Payme orqali olsa bo‘ladimi?",
-        "a": "Ha — Click yoki Payme ilovasidan ko‘rsatilgan karta raqamiga o‘tkazma qilasiz, tizim tushumni avtomatik aniqlaydi. UzCard, HUMO, Paynet, Uzum, Beepul, Alif va naqd pul ham shunday."
+        "a": "Ha, ikki yo‘l bilan. Botda Click, Payme, Uzum yoki Paynet tugmasini tanlasangiz — summa tayyor chiqadi, to‘lov avtomatik tasdiqlanadi, dona narxi 240 so‘m. Karta o‘tkazmasini tanlab, Click yoki Payme ilovasidan ko‘rsatilgan kartaga aynan ko‘rsatilgan summani o‘tkazsangiz — 220 so‘m. Kartaga o‘tkazmani UzCard, HUMO, Beepul yoki Alif ilovasidan ham qilish mumkin."
       },
       {
         "q": "Телеграм старс (юлдуз) сотиб олиш — кирилл ёзувида",
-        "a": "StarsPaymee орқали Telegram Stars сўмда олинади — донаси 220 сўм, 50 тадан. UzCard, HUMO, Click, Payme ёки нақд пул. Фақат @username керак, юлдузлар 5 сонияда тушади."
+        "a": "StarsPaymee орқали Telegram Stars сўмда олинади — UzCard/HUMO картага ўтказмада донаси 220 сўм, Click, Payme, Uzum ёки Paynet орқали 240 сўм, 50 тадан. Фақат @username керак, юлдузлар 5 сонияда тушади."
       }
     ],
     "guidesKicker": "Batafsil",
     "guidesTitle": "Stars haqida qo‘shimcha qo‘llanmalar",
     "guidesAll": "Barcha maqolalar",
     "finalTitle": "Telegram Stars’ga tayyormisiz?",
-    "finalSub": "O‘zbekistonda so‘mda, donasi 220 so‘m, 5 soniyada",
+    "finalSub": "O‘zbekistonda so‘mda, donasi 220 so‘mdan (karta o‘tkazmasi), 5 soniyada",
     "finalCta": "Stars sotib olish",
     "crumbHome": "Bosh sahifa"
   },
   "insta": {
     "metaTitle": "StarsPaymee — Telegram Stars va Premium so‘mda, 5 soniyada",
-    "metaDescription": "Telegram Stars, Premium va sovg‘alar so‘mda. Click, Payme, Uzcard va HUMO bilan to‘lang — faqat username kerak, parol so‘ralmaydi.",
+    "metaDescription": "Telegram Stars, Premium va sovg‘alar so‘mda. Click, Payme, Uzum, Paynet, Uzcard va HUMO bilan to‘lang — faqat username kerak, parol so‘ralmaydi.",
     "live": "Onlayn · 24/7",
     "ratingLabel": "Mijozlar bahosi",
     "ratingCount": "{count} ta baho",

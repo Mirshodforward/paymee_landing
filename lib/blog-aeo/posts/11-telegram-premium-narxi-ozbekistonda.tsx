@@ -6,7 +6,7 @@ import type { AeoPost } from "@/lib/blog-aeo/types";
 const SLUG = "telegram-premium-narxi-ozbekistonda-2026";
 
 /** Narx maqolasi oxirgi marta qachon tekshirilgani — matnda ochiq ko‘rsatiladi. */
-const PRICE_CHECKED = "2026-09-08";
+const PRICE_CHECKED = "2026-10-06";
 
 /**
  * Narx jadvali `lib/products.ts` dan hisoblanadi.
@@ -60,8 +60,8 @@ function PriceTable({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      O‘zbekistonda Telegram Premium narxi (StarsPaymee’da, so‘mda): <b>1 oy — 45 000</b>, <b>3 oy — 160 000</b>,{" "}
-      <b>6 oy — 215 000</b>, <b>12 oy — 388 000 so‘m</b> — to‘rtalasi ham username bilan, ~5 soniyada
+      O‘zbekistonda Telegram Premium narxi (StarsPaymee’da, so‘mda): <b>1 oy — 45 000</b>, <b>3 oy — 159 900</b>,{" "}
+      <b>6 oy — 216 000</b>, <b>12 oy — 388 000 so‘m</b> — to‘rtalasi ham username bilan, ~5 soniyada
       avtomatik. To‘lov UzCard, HUMO, Click, Payme, Uzum yoki Paynet bilan; xorijiy karta shart emas.
     </p>
   );
@@ -91,11 +91,11 @@ function UzBody() {
           <b>1 oy</b> — 45 000 so‘m, ya’ni oyiga 45 000.
         </li>
         <li>
-          <b>3 oy</b> — 160 000 so‘m, ya’ni oyiga ~53 300. Bu 1 oylikdan qimmatroq: qisqa muddatga majburiyatsiz
+          <b>3 oy</b> — 159 900 so‘m, ya’ni oyiga ~53 300. Bu 1 oylikdan qimmatroq: qisqa muddatga majburiyatsiz
           variant sifatida tanlanadi.
         </li>
         <li>
-          <b>6 oy</b> — 215 000 so‘m, oyiga ~35 800. Narx va muddat muvozanati.
+          <b>6 oy</b> — 216 000 so‘m, oyiga ~36 000. Narx va muddat muvozanati.
         </li>
         <li>
           <b>12 oy</b> — 388 000 so‘m, oyiga ~32 300. Eng tejamkor variant.
@@ -114,7 +114,7 @@ function UzBody() {
       </p>
       <ul>
         <li>
-          <b>UzCard va HUMO</b> — karta raqami bilan to‘g‘ridan-to‘g‘ri.
+          <b>UzCard va HUMO</b> — bot ko‘rsatgan kartaga o‘tkazma.
         </li>
         <li>
           <b>Click</b> va <b>Payme</b> — ilova orqali bir bosishda:{" "}
@@ -122,9 +122,12 @@ function UzBody() {
           <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">Payme qo‘llanmasi</Link>.
         </li>
         <li>
-          <b>Naqd pul</b> — botda «naqd» yoki «Paynet» degan alohida tugma <b>yo‘q</b>: naqd pul avval terminal,
-          bank kassasi yoki cash-in bankomat orqali kartaga yoki Click/Payme hamyoniga tushadi, keyin botda oddiy
-          to‘lov tanlanadi.{" "}
+          <b>Uzum</b> va <b>Paynet</b> — botdagi alohida to‘lov usullari, to‘lov avtomatik tasdiqlanadi. Uzum —
+          Uzum Bank ilovasi orqali, Paynet — Paynet ilovasi yoki terminali orqali.
+        </li>
+        <li>
+          <b>Naqd pul</b> — naqd pulni terminal, bank kassasi yoki cash-in bankomat orqali kartaga yoki Click/Payme
+          hamyoniga solib, keyin botda oddiy to‘lovni tanlash ham mumkin.{" "}
           <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Batafsil qo‘llanma</Link>.
         </li>
         <li>
@@ -132,8 +135,9 @@ function UzBody() {
         </li>
       </ul>
       <p>
-        Narx aksiya davrlarida o‘zgarishi mumkin, shuning uchun yakuniy summani buyurtma paytida botda ko‘rib oling —
-        ko‘rsatilgan raqam yakuniy bo‘ladi.
+        Premium narxi to‘lov usuliga bog‘liq emas: karta, Click, Payme, Uzum yoki Paynet bilan to‘lasangiz ham summa
+        bir xil. Narx aksiya davrlarida o‘zgarishi mumkin, shuning uchun yakuniy summani buyurtma paytida botda ko‘rib
+        oling — ko‘rsatilgan raqam yakuniy bo‘ladi.
       </p>
 
       <h2 id="nega-arzon">Nega bu narx App Store’dan arzon?</h2>
@@ -179,8 +183,8 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      Цена Telegram Premium в Узбекистане (в StarsPaymee, в сумах): <b>1 мес — 45 000</b>, <b>3 мес — 160 000</b>,{" "}
-      <b>6 мес — 215 000</b>, <b>12 мес — 388 000 сум</b> — все четыре по username, активация ~5 секунд.
+      Цена Telegram Premium в Узбекистане (в StarsPaymee, в сумах): <b>1 мес — 45 000</b>, <b>3 мес — 159 900</b>,{" "}
+      <b>6 мес — 216 000</b>, <b>12 мес — 388 000 сум</b> — все четыре по username, активация ~5 секунд.
       Оплата UzCard, HUMO, Click, Payme, Uzum или Paynet; иностранная карта не нужна.
     </p>
   );
@@ -209,11 +213,11 @@ function RuBody() {
           <b>1 месяц</b> — 45 000 сум, то есть 45 000 в месяц.
         </li>
         <li>
-          <b>3 месяца</b> — 160 000 сум, то есть около 53 300 в месяц. Это дороже месячного тарифа: вариант для
+          <b>3 месяца</b> — 159 900 сум, то есть около 53 300 в месяц. Это дороже месячного тарифа: вариант для
           короткого срока без обязательств.
         </li>
         <li>
-          <b>6 месяцев</b> — 215 000 сум, около 35 800 в месяц. Баланс цены и срока.
+          <b>6 месяцев</b> — 216 000 сум, около 36 000 в месяц. Баланс цены и срока.
         </li>
         <li>
           <b>12 месяцев</b> — 388 000 сум, около 32 300 в месяц. Самый выгодный вариант.
@@ -233,7 +237,7 @@ function RuBody() {
       </p>
       <ul>
         <li>
-          <b>UzCard и HUMO</b> — напрямую по номеру карты.
+          <b>UzCard и HUMO</b> — перевод на карту, которую показал бот.
         </li>
         <li>
           <b>Click</b> и <b>Payme</b> — в одно касание через приложение:{" "}
@@ -241,9 +245,12 @@ function RuBody() {
           <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">руководство по Payme</Link>.
         </li>
         <li>
-          <b>Наличные</b> — отдельной кнопки «наличные» или «Paynet» в боте <b>нет</b>: наличные сначала вносятся
-          через терминал, кассу банка или cash-in банкомат на карту либо в кошелёк Click/Payme, а в боте затем
-          выбирается обычная оплата.{" "}
+          <b>Uzum</b> и <b>Paynet</b> — отдельные способы оплаты в боте, платёж подтверждается автоматически.
+          Uzum — через приложение Uzum Bank, Paynet — через приложение или терминал Paynet.
+        </li>
+        <li>
+          <b>Наличные</b> — можно также внести их через терминал, кассу банка или cash-in банкомат на карту либо в
+          кошелёк Click/Payme, а затем выбрать в боте обычную оплату.{" "}
           <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Подробное руководство</Link>.
         </li>
         <li>
@@ -251,6 +258,7 @@ function RuBody() {
         </li>
       </ul>
       <p>
+        Цена Premium не зависит от способа оплаты: картой, через Click, Payme, Uzum или Paynet — сумма одинаковая.
         В периоды акций цена может меняться, поэтому итоговую сумму смотрите в боте при заказе — показанное число и
         есть окончательное.
       </p>
@@ -299,7 +307,7 @@ function EnAnswer() {
   return (
     <p>
       Telegram Premium pricing in Uzbekistan (at StarsPaymee, in so‘m): <b>1 month — 45,000</b>,{" "}
-      <b>3 months — 160,000</b>, <b>6 months — 215,000</b>, <b>12 months — 388,000 UZS</b> — all four by
+      <b>3 months — 159,900</b>, <b>6 months — 216,000</b>, <b>12 months — 388,000 UZS</b> — all four by
       username, activated automatically in about 5 seconds. Payment goes through UzCard, HUMO, Click, Payme,
       Uzum or Paynet; no foreign card is needed.
     </p>
@@ -329,11 +337,11 @@ function EnBody() {
           <b>1 month</b> — 45,000 UZS, i.e. 45,000 per month.
         </li>
         <li>
-          <b>3 months</b> — 160,000 UZS, i.e. about 53,300 per month. That is more than the monthly plan: it suits a
+          <b>3 months</b> — 159,900 UZS, i.e. about 53,300 per month. That is more than the monthly plan: it suits a
           short term with no commitment.
         </li>
         <li>
-          <b>6 months</b> — 215,000 UZS, about 35,800 per month. The balance of price and term.
+          <b>6 months</b> — 216,000 UZS, about 36,000 per month. The balance of price and term.
         </li>
         <li>
           <b>12 months</b> — 388,000 UZS, about 32,300 per month. The best value.
@@ -352,7 +360,7 @@ function EnBody() {
       </p>
       <ul>
         <li>
-          <b>UzCard and HUMO</b> — straight from the card number.
+          <b>UzCard and HUMO</b> — a transfer to the card the bot shows.
         </li>
         <li>
           <b>Click</b> and <b>Payme</b> — one tap in the app:{" "}
@@ -360,17 +368,22 @@ function EnBody() {
           <Link href="/blog/payme-orqali-stars-va-premium-sotib-olish">the Payme guide</Link>.
         </li>
         <li>
-          <b>Cash</b> — there is <b>no</b> separate “cash” or “Paynet” button in the bot: cash first goes onto a card
-          or into a Click/Payme wallet at a terminal, a bank desk or a cash-in ATM, and then you pick the ordinary
-          payment in the bot. <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Full guide</Link>.
+          <b>Uzum</b> and <b>Paynet</b> — separate payment methods in the bot, confirmed automatically. Uzum goes
+          through the Uzum Bank app, Paynet through the Paynet app or a Paynet terminal.
+        </li>
+        <li>
+          <b>Cash</b> — you can also put cash onto a card or into a Click/Payme wallet at a terminal, a bank desk or a
+          cash-in ATM, and then pick the ordinary payment in the bot.{" "}
+          <Link href="/blog/naqd-pul-bilan-telegram-stars-sotib-olish">Full guide</Link>.
         </li>
         <li>
           <b>Roubles (SBP)</b> — paying from Russia by phone number or QR, with no card details.
         </li>
       </ul>
       <p>
-        Prices can move during promotions, so check the final total in the bot when you order — the number shown is
-        the one you pay.
+        The Premium price does not depend on the payment method: card, Click, Payme, Uzum or Paynet — the total is the
+        same. Prices can move during promotions, so check the final total in the bot when you order — the number shown
+        is the one you pay.
       </p>
 
       <h2 id="nega-arzon">Why is this cheaper than the App Store?</h2>
@@ -415,7 +428,7 @@ const uzFaq = [
   {
     question: "Telegram Premium O‘zbekistonda qancha turadi?",
     answer:
-      "Username orqali: 3 oy — 160 000, 6 oy — 215 000, 12 oy — 388 000 so‘m. Barcha muddat username orqali, parolsiz.",
+      "Username orqali: 3 oy — 159 900, 6 oy — 216 000, 12 oy — 388 000 so‘m. Barcha muddat username orqali, parolsiz.",
   },
   { question: "Qaysi muddat oyiga eng arzon?", answer: "Username oqimida 12 oylik — oyiga ~32 300 so‘m." },
   {
@@ -441,7 +454,7 @@ const ruFaq = [
   {
     question: "Сколько стоит Telegram Premium в Узбекистане?",
     answer:
-      "По username: 3 мес — 160 000, 6 мес — 215 000, 12 мес — 388 000 сум. Все сроки — по username, без пароля.",
+      "По username: 3 мес — 159 900, 6 мес — 216 000, 12 мес — 388 000 сум. Все сроки — по username, без пароля.",
   },
   { question: "Какой срок выгоднее в месяц?", answer: "В потоке по username — 12 месяцев, около 32 300 сум в месяц." },
   {
@@ -468,7 +481,7 @@ const enFaq = [
   {
     question: "How much does Telegram Premium cost in Uzbekistan?",
     answer:
-      "By username: 3 months — 160,000, 6 months — 215,000, 12 months — 388,000 UZS. Every term goes by username, with no password.",
+      "By username: 3 months — 159,900, 6 months — 216,000, 12 months — 388,000 UZS. Every term goes by username, with no password.",
   },
   { question: "Which term is cheapest per month?", answer: "In the username flow, 12 months — about 32,300 UZS a month." },
   {
@@ -516,7 +529,7 @@ export const post: AeoPost = {
         "Barcha amaldagi tariflar bir joyda: 1, 3, 6 va 12 oy — hammasi username orqali, oyiga tushadigan hisob va oxirgi tekshirilgan sana.",
       metaTitle: "Telegram Premium narxi O‘zbekistonda — 2026",
       metaDescription:
-        "Telegram Premium narxi O‘zbekistonda: 1 oy 45 000, 3 oy 160 000, 6 oy 215 000, 12 oy 388 000 so‘m. Oyiga hisob va to‘lov usullari.",
+        "Telegram Premium narxi O‘zbekistonda: 1 oy 45 000, 3 oy 159 900, 6 oy 216 000, 12 oy 388 000 so‘m. Oyiga hisob va to‘lov usullari.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -530,7 +543,7 @@ export const post: AeoPost = {
         "Все действующие тарифы в одном месте: 1, 3, 6 и 12 месяцев по username, стоимость месяца и дата последней сверки.",
       metaTitle: "Цена Telegram Premium в Узбекистане — 2026",
       metaDescription:
-        "Цена Telegram Premium в Узбекистане: 1 мес 45 000, 3 мес 160 000, 6 мес 215 000, 12 мес 388 000 сум — все по username. Стоимость месяца и способы оплаты.",
+        "Цена Telegram Premium в Узбекистане: 1 мес 45 000, 3 мес 159 900, 6 мес 216 000, 12 мес 388 000 сум — все по username. Стоимость месяца и способы оплаты.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -544,7 +557,7 @@ export const post: AeoPost = {
         "Every current plan in one place: 1, 3, 6 and 12 months by username, the cost per month and the last verification date.",
       metaTitle: "Telegram Premium pricing in Uzbekistan — 2026",
       metaDescription:
-        "Telegram Premium prices in Uzbekistan: 1 month 45,000, 3 months 160,000, 6 months 215,000, 12 months 388,000 UZS — all by username. Monthly cost and payment methods.",
+        "Telegram Premium prices in Uzbekistan: 1 month 45,000, 3 months 159,900, 6 months 216,000, 12 months 388,000 UZS — all by username. Monthly cost and payment methods.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
