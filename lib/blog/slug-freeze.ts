@@ -23,8 +23,11 @@ import { blogRedirects, redirectedBlogSlugs } from "@/lib/blog/redirects";
  */
 export const FREEZE_UNTIL = "2026-11-20";
 
-/** Bugungi holat: 104 ta redirect. Yangi birlashtirish = ongli ravishda shu sonni oshirish. */
-export const FROZEN_REDIRECT_COUNT = 104;
+/**
+ * Bugungi holat: 108 ta redirect. Yangi birlashtirish = ongli ravishda shu sonni oshirish.
+ * 2026-10-20: +4 — 404/500 qaytargan eski Stars URL'lari (redirects.ts oxiri).
+ */
+export const FROZEN_REDIRECT_COUNT = 108;
 
 /** 2026-09-21 dagi barcha jonli blog slug'lari (101). */
 export const FROZEN_BLOG_SLUGS: readonly string[] = [

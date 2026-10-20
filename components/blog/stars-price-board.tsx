@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { Link } from "@/i18n/navigation";
 import {
   STARS_PACKS,
   STARS_PER_UNIT_GATEWAY_UZS,
@@ -14,21 +15,24 @@ type Method = "card" | "gateway";
 /** Onlayn to‘lov ustuni — tugma nomlari, uchala tilda bir xil. */
 const GATEWAY_COL = "Click · Payme · Uzum · Paynet";
 
-const COPY: Record<Loc, { head: string; stars: string; card: string; note: string }> = {
+const COPY: Record<Loc, { head: string; stars: string; card: string; note: string; all: string }> = {
   uz: {
     head: "Stars narxlari — to‘lov usuli bo‘yicha (so‘m)",
+    all: "Barcha paketlar va xarid — Telegram Stars sotib olish →",
     stars: "Yulduz",
     card: "Karta o‘tkazmasi",
     note: `Karta o‘tkazmasi — botdagi Uzcard/Humo kartaga istalgan ilovadan yoki balansdan: ${STARS_PER_UNIT_UZS} so‘m/dona. Click, Payme, Uzum, Paynet — botdagi onlayn to‘lov: ${STARS_PER_UNIT_GATEWAY_UZS} so‘m/dona. Yakuniy summa @StarsPaymee_bot da to‘lovdan oldin ko‘rsatiladi.`,
   },
   ru: {
     head: "Цены Stars по способу оплаты (сум)",
+    all: "Все пакеты и покупка — купить Telegram Stars →",
     stars: "Звёзды",
     card: "Перевод на карту",
     note: `Перевод на карту — на карту Uzcard/Humo, которую показывает бот, из любого приложения или оплата с баланса: ${STARS_PER_UNIT_UZS} сум за штуку. Click, Payme, Uzum, Paynet — онлайн-оплата в боте: ${STARS_PER_UNIT_GATEWAY_UZS} сум за штуку. Итоговая сумма показывается в @StarsPaymee_bot до оплаты.`,
   },
   en: {
     head: "Stars prices by payment method (UZS)",
+    all: "All packs and checkout — buy Telegram Stars →",
     stars: "Stars",
     card: "Card transfer",
     note: `Card transfer — to the bot’s Uzcard/Humo card from any app, or from your balance: ${STARS_PER_UNIT_UZS} UZS per star. Click, Payme, Uzum, Paynet — online payment in the bot: ${STARS_PER_UNIT_GATEWAY_UZS} UZS per star. The final total is shown in @StarsPaymee_bot before you pay.`,
@@ -87,6 +91,10 @@ export function StarsPriceBoard({ locale = "uz", first = "card" }: { locale?: Lo
         </div>
       ))}
       <p className="tn-note">{t.note}</p>
+      {/* Mahsulot sahifasiga havola — blogdagi narx jadvali /stars bilan raqobatlashmasin, unga kuch bersin (2026-10-20) */}
+      <p className="tn-note">
+        <Link href="/stars">{t.all}</Link>
+      </p>
     </div>
   );
 }

@@ -26,6 +26,12 @@ export type BlogRedirect = {
   from: string;
   /** Qoladigan slug — /{locale}/blog/{to} */
   to: string;
+  /**
+   * Blog EMAS sahifa (masalan "/stars") — berilsa yo‘naltirish shu yerga boradi, `to` esa faqat
+   * audit/tekshiruv uchun qoladi. Tijoriy so‘rov ("… sotib olish") mahsulot sahifasiga tushsin
+   * (2026-10-20: blog qo‘llanma /stars bilan bitta so‘rov uchun raqobatlashardi).
+   */
+  toPath?: string;
   /** Qachon birlashtirilgani (ISO yyyy-mm-dd) — audit uchun. */
   merged: string;
   /** Nega birlashtirildi — keyingi tekshiruvlarda kontekst bo‘lsin. */
@@ -141,6 +147,7 @@ export const blogRedirects: BlogRedirect[] = [
   {
     from: "stars-olish",
     to: "ozbekistonda-telegram-stars-sotib-olish",
+    toPath: "/stars",
     merged: "2026-09-18",
     reason:
       "Bir xil so‘rov va bir xil matn skeleti. Foydali qismi — nega rasmiy oqim noqulay — qoladigan maqolada bor.",
@@ -148,6 +155,7 @@ export const blogRedirects: BlogRedirect[] = [
   {
     from: "som-evaziga-stars-olish",
     to: "ozbekistonda-telegram-stars-sotib-olish",
+    toPath: "/stars",
     merged: "2026-09-18",
     reason:
       "«So‘m evaziga» — xaridning sharti, alohida vazifa emas. So‘mda to‘lashning afzalliklari qoladigan maqolaga KeyFacts bo‘lib qo‘shildi.",
@@ -155,6 +163,7 @@ export const blogRedirects: BlogRedirect[] = [
   {
     from: "telegram-yulduz-sotib-olish",
     to: "ozbekistonda-telegram-stars-sotib-olish",
+    toPath: "/stars",
     merged: "2026-09-18",
     reason:
       "«Yulduz» va «Stars» bitta valyuta. Atama farqi qoladigan maqolada FAQ sifatida izohlandi.",
@@ -245,9 +254,11 @@ export const blogRedirects: BlogRedirect[] = [
   },
   {
     from: "stars-sotib-olish",
-    to: "telegram-stars-eng-yaxshi-botlar-2026",
+    to: "ozbekistonda-telegram-stars-sotib-olish",
+    toPath: "/stars",
     merged: "2026-09-18",
     reason:
+      "2026-10-20: «bot tanlash» maqolasiga yo‘naltirish noto‘g‘ri mavzu edi — «Stars sotib olish» tijoriy so‘rovi /stars ga. Avvalgi sabab: " +
       "Ishonchli xizmatni tanlash mezonlari takror edi: narx, parol so‘ralmasligi, to‘lov, oferta va support. Firibgarlik belgilari jadvali qoladigan maqolaga ko‘chirildi.",
   },
   {
@@ -732,6 +743,31 @@ export const blogRedirects: BlogRedirect[] = [
     to: "telegram-reseller-dasturi-qanday-boshlash",
     merged: "2026-09-21",
     reason: "O'chirilgan maqola — 404 o'rniga eng yaqin mavzudagi sahifaga.",
+  },
+  // 2026-10-20: jonli tekshiruvda 404/500 qaytargan eski Stars URL'lari — eng yaqin mavzuga 308
+  {
+    from: "telegram-stars-dostga-otkazish",
+    to: "ozbekistonda-telegram-stars-sotib-olish",
+    merged: "2026-10-20",
+    reason: "Eski URL 404 edi — do‘stga Stars olish qo‘llanmasi asosiy maqolada.",
+  },
+  {
+    from: "telegram-stars-cash-out-2026",
+    to: "telegram-stars-daromad-qilish-mumkinmi",
+    merged: "2026-10-20",
+    reason: "Eski URL 404 edi — Stars'dan daromad/yechish mavzusi shu maqolada.",
+  },
+  {
+    from: "fragment-muqosidida-stars-ozbekiston",
+    to: "ozbekistonda-telegram-stars-sotib-olish",
+    merged: "2026-10-20",
+    reason: "Eski URL 404 edi — Fragment o‘rniga so‘mda olish asosiy maqolada.",
+  },
+  {
+    from: "telegram-stars-nima-toʻliq",
+    to: "telegram-stars-qanday-ishlaydi",
+    merged: "2026-10-20",
+    reason: "Eski URL (ʻ belgili) 500 qaytarardi — Stars nima ekani shu maqolada.",
   },
 ];
 

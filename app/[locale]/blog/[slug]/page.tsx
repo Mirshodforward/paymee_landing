@@ -19,6 +19,11 @@ type Props = { params: Promise<{ locale: string; slug: string }> };
 
 /** Statik prerender — maqola tarkibi so‘rovga bog‘liq emas, CDN keshlay oladi. */
 export const dynamic = "force-static";
+/**
+ * Ro'yxatda yo'q slug — darhol 404. Ilgari lotin bo'lmagan belgili slug (ʻ, ‘, kirill) render
+ * paytida yiqilib 500 qaytarardi (2026-10-20 audit) — Google uchun 404 to'g'ri javob.
+ */
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>

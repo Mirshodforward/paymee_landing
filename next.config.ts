@@ -41,9 +41,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       ...routing.locales.flatMap((locale) =>
-        blogRedirects.map(({ from, to }) => ({
-          source: `/${locale}/blog/${from}`,
-          destination: `/${locale}/blog/${to}`,
+        blogRedirects.map(({ from, to, toPath }) => ({
+          // ⚠️ Next `source` — path-to-regexp: lotin bo'lmagan belgili slug (masalan ʻ) kodlangan holda
+          source: `/${locale}/blog/${encodeURI(from)}`,
+          destination: toPath ? `/${locale}${toPath}` : `/${locale}/blog/${to}`,
           permanent: true,
         })),
       ),

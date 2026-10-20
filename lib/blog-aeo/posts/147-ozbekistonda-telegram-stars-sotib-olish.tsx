@@ -11,7 +11,6 @@ import {
   Yes,
   No,
 } from "@/components/blog/aeo-blocks";
-import { StarsPriceBoard } from "@/components/blog/stars-price-board";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 import { formatStarsPrice } from "@/lib/products";
 
@@ -23,7 +22,8 @@ function UzAnswer() {
     <p>
       O‘zbekistonda Stars sotib olishning eng qulay yo‘li — <b>@StarsPaymee_bot</b>: mahalliy to‘lov tizimlari
       (UzCard, HUMO, Click, Payme, Uzum, Paynet), o‘zbek tilida qo‘llab-quvvatlash va so‘mdagi narx. Xalqaro karta yoki
-      qo‘shimcha hisob kerak emas.
+      qo‘shimcha hisob kerak emas. Paket va narxni tanlab darhol olish — <Link href="/stars">Telegram Stars sotib olish</Link>{" "}
+      sahifasida; bu maqola esa to‘rtta yo‘lni taqqoslaydi.
     </p>
   );
 }
@@ -106,7 +106,11 @@ function UzBody() {
       </KeyFacts>
 
       <h2 id="narx">Narxlar</h2>
-      <StarsPriceBoard locale="uz" />
+      <p>
+        Bir dona yulduz karta o‘tkazmasida {formatStarsPrice(1, "uz")}, onlayn to‘lovda (Click, Payme, Uzum, Paynet)
+        esa {formatStarsPrice(1, "uz", "gateway")}. Barcha paketlar (50 dan 10 000 gacha) va joriy narxlar —{" "}
+        <Link href="/stars">Telegram Stars sotib olish</Link> sahifasida.
+      </p>
       <KeyFacts label="Nega so‘mda to‘lash qulay">
         <li>Valyuta ayirboshlash xarajati yo‘q — kurs farqi summaga qo‘shilmaydi.</li>
         <li>Visa yoki Mastercard talab qilinmaydi.</li>
@@ -279,7 +283,11 @@ function RuBody() {
       </KeyFacts>
 
       <h2 id="narx">Цены</h2>
-      <StarsPriceBoard locale="ru" />
+      <p>
+        Одна звезда — {formatStarsPrice(1, "ru")} при переводе на карту и {formatStarsPrice(1, "ru", "gateway")} при
+        онлайн-оплате (Click, Payme, Uzum, Paynet). Все пакеты (от 50 до 10 000) и актуальные цены — на странице{" "}
+        <Link href="/stars">купить Telegram Stars</Link>.
+      </p>
       <KeyFacts label="Почему удобно платить в сумах">
         <li>Нет расходов на обмен валюты — курсовая разница не добавляется к сумме.</li>
         <li>Visa или Mastercard не требуются.</li>
@@ -451,7 +459,11 @@ function EnBody() {
       </KeyFacts>
 
       <h2 id="narx">Prices</h2>
-      <StarsPriceBoard locale="en" />
+      <p>
+        One star costs {formatStarsPrice(1, "en")} by card transfer and {formatStarsPrice(1, "en", "gateway")} with
+        online payment (Click, Payme, Uzum, Paynet). Every pack (50 to 10,000) and current prices are on the{" "}
+        <Link href="/stars">buy Telegram Stars</Link> page.
+      </p>
       <KeyFacts label="Why paying in so&lsquo;m is convenient">
         <li>No currency-exchange cost — no rate spread is added to the total.</li>
         <li>No Visa or Mastercard required.</li>
@@ -697,7 +709,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-02",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-20",
   keywords: [
     "ozbekistonda telegram stars sotib olish",
     "uzbekistanda stars olish",
@@ -728,12 +740,12 @@ export const post: AeoPost = {
   ],
   locales: {
     uz: {
-      title: "O‘zbekistonda Telegram Stars sotib olish — to‘liq qo‘llanma",
+      title: "Telegram Stars qanday sotib olinadi: O‘zbekistonda 4 yo‘l taqqoslovi",
       excerpt:
         "Telegram Stars (yulduz) sotib olishning barcha yo‘llari: nega rasmiy oqim ishlamaydi, qaysi to‘lov usullari qabul qilinadi, narxlar, username orqali yetkazish va xariddan oldingi tekshiruv.",
-      metaTitle: "Telegram Stars sotib olish — O‘zbekiston qo‘llanmasi",
+      metaTitle: "Telegram Stars qanday sotib olinadi — 4 yo‘l taqqoslovi",
       metaDescription:
-        "O‘zbekistonda Telegram Stars sotib olish: barcha yo‘llar taqqoslandi, UzCard/HUMO/Click/Payme bilan so‘mda to‘lov, narxlar va username orqali 5 soniyada yetkazish.",
+        "Telegram Stars qanday sotib olinadi: App Store, Fragment, @PremiumBot va so‘mda to‘lov taqqoslandi — qaysi yo‘l O‘zbekiston kartasi bilan ishlaydi.",
       answerTitle: "Qisqa javob",
       Answer: UzAnswer,
       Body: UzBody,
@@ -742,12 +754,12 @@ export const post: AeoPost = {
       faq: uzFaq,
     },
     ru: {
-      title: "Как купить Telegram Stars в Узбекистане — полное руководство",
+      title: "Как купить Telegram Stars в Узбекистане: сравнение 4 способов",
       excerpt:
         "Все способы купить Telegram Stars: почему не работает официальный путь, какие способы оплаты принимаются, цены, доставка по username и проверка перед покупкой.",
-      metaTitle: "Как купить Telegram Stars в Узбекистане",
+      metaTitle: "Как купить Telegram Stars в Узбекистане: 4 способа",
       metaDescription:
-        "Покупка Telegram Stars в Узбекистане: сравнение всех способов, оплата в сумах через UzCard/HUMO/Click/Payme, цены и доставка по username за 5 секунд.",
+        "Как купить звёзды Телеграм в Узбекистане: App Store, Fragment, @PremiumBot и оплата в сумах — какой способ работает с местной картой.",
       answerTitle: "Краткий ответ",
       Answer: RuAnswer,
       Body: RuBody,
@@ -756,12 +768,12 @@ export const post: AeoPost = {
       faq: ruFaq,
     },
     en: {
-      title: "How to buy Telegram Stars in Uzbekistan — the full guide",
+      title: "How to buy Telegram Stars in Uzbekistan: 4 ways compared",
       excerpt:
         "Every way to buy Telegram Stars: why the official route fails, which payment methods are accepted, prices, delivery by username and a pre-purchase checklist.",
-      metaTitle: "How to buy Telegram Stars in Uzbekistan",
+      metaTitle: "How to buy Telegram Stars in Uzbekistan: 4 ways compared",
       metaDescription:
-        "Buying Telegram Stars in Uzbekistan: all routes compared, payment in so‘m via UzCard/HUMO/Click/Payme, prices and delivery by username in 5 seconds.",
+        "How to buy Telegram Stars in Uzbekistan: App Store, Fragment, @PremiumBot and paying in so‘m compared — which route works with a local card.",
       answerTitle: "Short answer",
       Answer: EnAnswer,
       Body: EnBody,
