@@ -109,6 +109,13 @@ import { post as p181 } from "./posts/181-telegram-stars-sotish-premium-pubg-uc"
 import { post as p182 } from "./posts/182-starspaymee-1-5-yoshda";
 import { post as p183 } from "./posts/183-tez-premium-olish";
 import { post as p184 } from "./posts/184-1000-stars-olish-click-payme";
+// 2026-10-15: tor niyatli qo'llanmalar — username, boshqa odamga Stars,
+// balansni tekshirish, Premium muddati, Stars va Premium taqqosi
+import { post as p185 } from "./posts/185-telegram-stars-username-qanday-topiladi";
+import { post as p186 } from "./posts/186-boshqa-odamga-telegram-stars-sotib-olish";
+import { post as p187 } from "./posts/187-telegram-stars-balansini-tekshirish";
+import { post as p188 } from "./posts/188-telegram-premium-tugash-sanasini-tekshirish";
+import { post as p189 } from "./posts/189-telegram-stars-yoki-premium";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -125,7 +132,7 @@ export const aeoPosts: AeoPost[] = [
   p161, p163, p164,
   p165, p166, p167, p168, p169,
   p170, p171, p172, p173, p175, p176,
-  p179, p180, p181, p182, p183, p184,
+  p179, p180, p181, p182, p183, p184, p185, p186, p187, p188, p189,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
