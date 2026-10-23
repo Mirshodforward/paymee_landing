@@ -87,12 +87,11 @@ function UzBody() {
         Premium imtiyozlari to‘xtaydi. Uzaytirish har safar yangi buyurtma orqali amalga oshiriladi.
       </p>
       <p>
-        Muddat tugashini kutish shart emas: barcha muddat — 1, 3, 6 va 12 oy — username orqali beriladi, ya’ni
-        buyurtma tartibi bir xil. Lekin amaldagi Premium <b>ustiga</b> buyurtma berilganda muddat qo‘shiladimi —
-        bu tanlangan usulga bog‘liq va hamma holatda bir xil emas. Shuning uchun buyurtmadan oldin holatni
-        tekshiring:{" "}
-        <Link href="/blog/premium-bor-odamga-premium-sovga">«Premium bor odamga yana Premium»</Link> maqolasida
-        har bir usul uchun nima bo‘lishi yozilgan; aniq sana muhim bo‘lsa, qo‘llab-quvvatlash bilan tasdiqlang.
+        Buyurtma tartibi barcha muddatlar uchun bir xil — username orqali. Lekin amaldagi Premium <b>ustiga</b> buyurtma
+        berib bo‘lmaydi: akkauntda Premium faol bo‘lsa, bot buyurtmani ochmaydi — joriy obuna tugagach yangi muddat
+        olinadi. Batafsil —{" "}
+        <Link href="/blog/telegram-premium-muddatini-uzaytirish">Premium muddatini uzaytirish mumkinmi</Link>; boshqa odamga sovg‘a holatlari —{" "}
+        <Link href="/blog/premium-bor-odamga-premium-sovga">Premium bor odamga yana Premium</Link>.
       </p>
 
       <p>
@@ -175,11 +174,11 @@ function RuBody() {
         отключатся только привилегии Premium. Продление каждый раз оформляется новым заказом.
       </p>
       <p>
-        Дожидаться конца срока не обязательно: все сроки — 1, 3, 6 и 12 месяцев — оформляются по username, порядок
-        заказа одинаковый. Но добавится ли срок к уже <b>действующей</b> подписке, зависит от выбранного способа и
-        одинаково не работает везде. Поэтому перед заказом проверьте ситуацию:{" "}
-        <Link href="/blog/premium-bor-odamga-premium-sovga">«Premium тому, у кого он уже есть»</Link> разбирает
-        каждый способ; если важна точная дата — подтвердите её в поддержке.
+        Порядок заказа одинаков для всех сроков — по username. Но заказать <b>поверх</b> действующего Premium нельзя:
+        если на аккаунте Premium активен, бот не открывает заказ — новый срок покупается после окончания текущей
+        подписки. Подробнее —{" "}
+        <Link href="/blog/telegram-premium-muddatini-uzaytirish">можно ли продлить Premium заранее</Link>; подарок другому человеку —{" "}
+        <Link href="/blog/premium-bor-odamga-premium-sovga">Premium тому, у кого он уже есть</Link>.
       </p>
 
       <p>
@@ -262,12 +261,11 @@ function EnBody() {
         the Premium perks switch off. Renewing is always a new order.
       </p>
       <p>
-        There is no need to wait for the term to run out: every term — 1, 3, 6 and 12 months — runs through the
-        username flow, so ordering works the same way. Whether a new term is <b>added on top</b> of an active
-        subscription, however, depends on the method and does not work identically everywhere. Check the situation
-        before ordering:{" "}
-        <Link href="/blog/premium-bor-odamga-premium-sovga">“Premium for someone who already has it”</Link> goes
-        through each route; if an exact date matters, confirm it with support.
+        Ordering works the same way for every term — through the username flow. But you cannot order <b>on top</b> of
+        an active Premium: if Premium is active on the account, the bot does not open the order — a new term is bought
+        once the current subscription ends. Details —{" "}
+        <Link href="/blog/telegram-premium-muddatini-uzaytirish">can Premium be extended early</Link>; gifting to someone else —{" "}
+        <Link href="/blog/premium-bor-odamga-premium-sovga">Premium for someone who already has it</Link>.
       </p>
 
       <p>
@@ -297,7 +295,7 @@ const uzFaq = [
   {
     question: "Oldindan uzaytirsam bo‘ladimi?",
     answer:
-      "Muddat tugashini kutish shart emas — buyurtma istalgan vaqtda beriladi. Amaldagi Premium ustiga muddat qo‘shiladimi, bu tanlangan usulga bog‘liq; «Premium bor odamga yana Premium» maqolasida har bir holat yozilgan, aniq sana kerak bo‘lsa supportda tasdiqlang.",
+      "Yo‘q. Akkauntda Premium faol bo‘lsa, bot buyurtmani ochmaydi — joriy obuna tugagach yangi muddat olinadi; qolgan kunlar yangi paketga qo‘shilmaydi. Batafsil — «Premium muddatini uzaytirish mumkinmi» maqolasida.",
   },
   { question: "Boshqa hisobga olsam bo‘ladimi?", answer: "Ha, buyurtmada o‘sha hisob username’ini ko‘rsating." },
 ];
@@ -312,7 +310,7 @@ const ruFaq = [
   {
     question: "Можно ли продлить заранее?",
     answer:
-      "Ждать окончания срока не нужно — заказ оформляется в любой момент. Добавится ли срок к действующей подписке, зависит от способа; разбор всех случаев — в статье «Premium тому, у кого он уже есть», а точную дату подтвердят в поддержке.",
+      "Нет. Если на аккаунте Premium активен, бот не открывает заказ — новый срок покупается после окончания текущей подписки; оставшиеся дни к новому пакету не добавляются. Подробнее — в статье «Можно ли продлить Telegram Premium заранее».",
   },
   { question: "Можно ли оформить на другой аккаунт?", answer: "Да, укажите в заказе его username." },
 ];
@@ -332,7 +330,7 @@ const enFaq = [
   {
     question: "Can I renew in advance?",
     answer:
-      "You do not have to wait for the term to end — an order can be placed at any time. Whether the term is added on top of an active subscription depends on the method; “Premium for someone who already has it” covers each case, and support can confirm the exact date.",
+      "No. If Premium is active on the account, the bot does not open an order — a new term is bought after the current subscription ends; remaining days are not added to the new plan. Details are in “Can Telegram Premium be extended early”.",
   },
   { question: "Can I buy it for another account?", answer: "Yes — give that account’s username when ordering." },
 ];
@@ -342,7 +340,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "info",
   datePublished: "2026-08-02",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram premium kerak",
     "telegram premium imkoniyatlari",

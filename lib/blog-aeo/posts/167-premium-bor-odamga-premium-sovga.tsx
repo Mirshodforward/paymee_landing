@@ -24,7 +24,7 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ],
         [
           "StarsPaymee — username oqimi (1/3/6/12 oy)",
-          "Xizmat yangi muddatni joriysining ustiga qo‘shadi",
+          "Buyurtma qabul qilinmaydi — bot «allaqachon Premium mavjud» deb to‘xtaydi; obuna tugagach yuboriladi",
           "Buyurtmadan oldin botda username va holatni tasdiqlang",
         ],
         [
@@ -49,7 +49,7 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ],
         [
           "StarsPaymee — поток по username (1/3/6/12 мес)",
-          "Сервис добавляет новый срок к действующему",
+          "Заказ не принимается — бот останавливается: «Premium уже есть»; отправляйте после окончания подписки",
           "Перед заказом подтвердите username и статус в боте",
         ],
         [
@@ -74,7 +74,7 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
         ],
         [
           "StarsPaymee — username flow (1/3/6/12 mo)",
-          "The service adds the new term on top of the current one",
+          "The order is not accepted — the bot stops: Premium is already active; send it once the subscription ends",
           "Confirm the username and status in the bot before ordering",
         ],
         [
@@ -103,9 +103,9 @@ function MethodTable({ locale }: { locale: "uz" | "ru" | "en" }) {
 function UzAnswer() {
   return (
     <p>
-      Ha, ko‘p holatda mumkin — lekin natija <b>qaysi usul bilan olayotganingizga bog‘liq</b>, shuning uchun
-      «hamma joyda muddat qo‘shiladi» deb aytib bo‘lmaydi. Buyurtmadan oldin ikkita narsani tekshiring: qabul
-      qiluvchida Premium haqiqatan faolmi va siz tanlagan usul shu holatda qanday ishlaydi.
+      Mumkin, lekin <b>faol obuna ustiga muddat darhol qo‘shilmaydi</b>: StarsPaymee Premium bor akkauntga buyurtma
+      ochmaydi (obuna tugashini kutish kerak), Telegram sovg‘a kodi esa faol obuna paytida faollashtirilmaydi — u
+      saqlanib, muddat tugagach ishlatiladi. Buyurtmadan oldin qabul qiluvchida Premium haqiqatan faolmi, tekshiring.
     </p>
   );
 }
@@ -267,9 +267,10 @@ function UzBody() {
 function RuAnswer() {
   return (
     <p>
-      Да, чаще всего можно — но результат <b>зависит от способа покупки</b>, поэтому универсального ответа «срок
-      везде добавится» не существует. Перед заказом проверьте две вещи: действительно ли у получателя активен
-      Premium и как выбранный вами способ ведёт себя в этой ситуации.
+      Можно, но <b>срок не добавляется поверх активной подписки сразу</b>: StarsPaymee не открывает заказ для
+      аккаунта с Premium (нужно дождаться окончания), а подарочный код Telegram при активной подписке не
+      активируется — он сохраняется и используется после окончания срока. Перед заказом проверьте, действительно ли
+      у получателя активен Premium.
     </p>
   );
 }
@@ -425,7 +426,7 @@ const uzFaq = [
   {
     question: "Muddat mavjud obuna ustiga qo‘shiladimi?",
     answer:
-      "StarsPaymee’ning username oqimida yangi muddat joriysining ustiga qo‘shiladi. Telegramning ochiq FAQ’ida bu holat alohida yozilmagan, shuning uchun boshqa usullarda oldindan tekshirish kerak.",
+      "StarsPaymee’ning username oqimida qo‘shilmaydi: akkauntda Premium faol bo‘lsa, bot buyurtmani ochmaydi — obuna tugashini kutish kerak. Telegram sovg‘a kodi ham faol obuna paytida faollashtirilmaydi (API: PREMIUM_SUB_ACTIVE_UNTIL), kod keyinroq ishlatiladi.",
   },
   {
     question: "Odamda Premium borligini qanday bilaman?",
@@ -460,7 +461,7 @@ const ruFaq = [
   {
     question: "Добавится ли срок к действующей подписке?",
     answer:
-      "В потоке по username в StarsPaymee новый срок добавляется к текущему. В открытом FAQ Telegram этот случай отдельно не описан, поэтому для других способов стоит проверить заранее.",
+      "В потоке по username в StarsPaymee не добавляется: если на аккаунте Premium активен, бот не открывает заказ — нужно дождаться окончания подписки. Подарочный код Telegram при активной подписке тоже не активируется (API: PREMIUM_SUB_ACTIVE_UNTIL), код используют позже.",
   },
   {
     question: "Как узнать, есть ли у человека Premium?",
@@ -489,9 +490,10 @@ const ruFaq = [
 function EnAnswer() {
   return (
     <p>
-      In most cases yes — but the outcome <b>depends on how you buy it</b>, so there is no universal &laquo;the term
-      always stacks&raquo; answer. Before ordering, check two things: whether Premium is genuinely active on the
-      recipient&rsquo;s account, and how your chosen route behaves in that situation.
+      You can, but <b>a term is not added on top of an active subscription right away</b>: StarsPaymee does not open
+      an order for an account that has Premium (you wait for it to end), and a Telegram gift code cannot be applied
+      during an active subscription — it is kept and used after the term ends. Before ordering, check whether Premium
+      is genuinely active on the recipient.
     </p>
   );
 }
@@ -642,7 +644,7 @@ const enFaq = [
   {
     question: "Will the term stack on the existing subscription?",
     answer:
-      "In the StarsPaymee username flow the new term is added to the current one. Telegram's public FAQ does not document this case, so check first on other routes.",
+      "In the StarsPaymee username flow it does not stack: if Premium is active on the account, the bot does not open an order — you have to wait for the subscription to end. A Telegram gift code cannot be applied during an active subscription either (API: PREMIUM_SUB_ACTIVE_UNTIL); the code is used later.",
   },
   { question: "How do I know if they have Premium?", answer: "Open their profile — an active subscription shows a star badge next to the name." },
   { question: "Can I see when it expires?", answer: "No. The badge only shows that a subscription exists; the owner sees the date in their settings." },
@@ -661,7 +663,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "problem",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-23",
   keywords: [
     "premium bor odamga premium sovg‘a qilish",
     "telegram premium ustiga premium olish",

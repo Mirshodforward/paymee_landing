@@ -169,7 +169,7 @@ function UzBody() {
         tartibi esa <Link href="/blog/telegram-premium-eng-oson-usul">eng oson usul</Link> qo‘llanmasida.
       </p>
 
-      <InlineCta text="Muddat tugashidan oldin uzaytiring." product={{ kind: "premium", months: 6 }} />
+      <InlineCta text="Muddat tugagach yangi muddatga oling — so‘mda, username bilan." product={{ kind: "premium", months: 6 }} />
 
       <Sources
         label="Manbalar"
@@ -296,7 +296,7 @@ function RuBody() {
         <Link href="/blog/telegram-premium-eng-oson-usul">самый простой способ</Link>.
       </p>
 
-      <InlineCta text="Продлите до окончания срока." product={{ kind: "premium", months: 6 }} />
+      <InlineCta text="После окончания срока возьмите новый — в сумах, по username." product={{ kind: "premium", months: 6 }} />
 
       <Sources
         label="Источники"
@@ -383,7 +383,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "info",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram premium tugasa nima bo‘ladi",
     "premium tugasa fayllar o‘chadimi",

@@ -113,9 +113,9 @@ function UzBody() {
         ]}
       />
       <Notice label="Bitta istisno">
-        Buyurtma paytida Premium allaqachon faol bo‘lgan bo‘lsa, yangi muddat eskisining <b>ustiga
-        qo‘shilishi hamma holatda bir xil emas</b> — bu usulga bog‘liq. Qaysi holatda qo‘shiladi —{" "}
-        <Link href="/blog/premium-bor-odamga-premium-sovga">Premium bor odamga yana Premium</Link> maqolasida.
+        Buyurtma paytida Premium allaqachon faol bo‘lsa, StarsPaymee buyurtmani ochmaydi — yangi muddat eskisining
+        ustiga qo‘shilmaydi, joriy obuna tugagach olinadi. Batafsil —{" "}
+        <Link href="/blog/telegram-premium-muddatini-uzaytirish">Premium muddatini uzaytirish mumkinmi</Link>.
       </Notice>
 
       <h2 id="avto">Tugash sanasi va «keyingi to‘lov» — farqi</h2>
@@ -148,8 +148,8 @@ function UzBody() {
           deyarli sezilmaydi.
         </InfoCard>
         <InfoCard emoji="⏰" title="Oldinroq olsangiz">
-          Muddat tugashiga 1–2 kun qolganda ham bo‘ladi, lekin yangi muddat eskisiga qo‘shilishi usulga
-          bog‘liq — yuqoridagi istisnoga qarang.
+          Oldindan olib bo‘lmaydi: Premium faol ekan, bot buyurtmani ochmaydi. Tugagan kuni buyurtma bering —
+          faollashuv bir necha soniya, uzilish deyarli yo‘q.
         </InfoCard>
         <InfoCard emoji="🔁" title="Uzoq muddat — oyiga arzon">
           12 oylik oyiga eng arzon tushadi; muddatlar va narxlar quyida.
@@ -192,7 +192,7 @@ function UzBody() {
           <b>Avtoto‘lov yo‘q</b> — kutilmagan yechim bo‘lmaydi.
         </li>
         <li>
-          <b>Uzaytirish</b> — yangi buyurtma; oldindan olganda qo‘shilish usulga bog‘liq.
+          <b>Uzaytirish</b> — yangi buyurtma, faqat joriy obuna tugagach; oldindan olib bo‘lmaydi.
         </li>
       </KeyFacts>
 
@@ -266,9 +266,9 @@ function RuBody() {
         ]}
       />
       <Notice label="Одно исключение">
-        Если в момент заказа Premium уже был активен, новый срок <b>прибавляется к старому не во всех
-        случаях</b> — это зависит от способа. Когда прибавляется —{" "}
-        <Link href="/blog/premium-bor-odamga-premium-sovga">в статье про Premium для того, у кого он уже есть</Link>.
+        Если в момент заказа Premium уже активен, StarsPaymee заказ не откроет — новый срок к старому не прибавляется,
+        его покупают после окончания текущей подписки. Подробнее —{" "}
+        <Link href="/blog/telegram-premium-muddatini-uzaytirish">можно ли продлить Premium заранее</Link>.
       </Notice>
 
       <h2 id="avto">Дата окончания и «следующий платёж» — разница</h2>
@@ -301,8 +301,8 @@ function RuBody() {
           незаметен.
         </InfoCard>
         <InfoCard emoji="⏰" title="Если заранее">
-          Можно и за 1–2 дня до конца, но прибавится ли новый срок к старому — зависит от способа, см.
-          исключение выше.
+          Заранее купить нельзя: пока Premium активен, бот не откроет заказ. Оформите заказ в день окончания —
+          активация за несколько секунд, перерыва почти нет.
         </InfoCard>
         <InfoCard emoji="🔁" title="Длинный срок — дешевле в месяц">
           12 месяцев выходят дешевле всего в пересчёте на месяц; сроки и цены ниже.
@@ -346,7 +346,7 @@ function RuBody() {
           <b>Автоплатежа нет</b> — неожиданных списаний не будет.
         </li>
         <li>
-          <b>Продление</b> — новый заказ; при покупке заранее прибавление зависит от способа.
+          <b>Продление</b> — новый заказ, только после окончания текущей подписки; заранее купить нельзя.
         </li>
       </KeyFacts>
 
@@ -420,9 +420,9 @@ function EnBody() {
         ]}
       />
       <Notice label="One exception">
-        If Premium was already active when you ordered, the new term is <b>not added on top of the old one
-        in every case</b> — it depends on the method. When it is added —{" "}
-        <Link href="/blog/premium-bor-odamga-premium-sovga">in the article on Premium for someone who already has it</Link>.
+        If Premium is already active when you order, StarsPaymee does not open the order — the new term is not added on
+        top of the old one; it is bought once the current subscription ends. Details —{" "}
+        <Link href="/blog/telegram-premium-muddatini-uzaytirish">can Premium be extended early</Link>.
       </Notice>
 
       <h2 id="avto">End date vs “next payment” — the difference</h2>
@@ -455,8 +455,8 @@ function EnBody() {
           noticeable.
         </InfoCard>
         <InfoCard emoji="⏰" title="If you buy early">
-          1–2 days before the end works too, but whether the new term stacks on the old one depends on the
-          method — see the exception above.
+          You cannot buy early: while Premium is active, the bot will not open the order. Order on the end day —
+          activation takes seconds, so there is almost no gap.
         </InfoCard>
         <InfoCard emoji="🔁" title="A longer term is cheaper per month">
           12 months costs the least per month; terms and prices are below.
@@ -501,7 +501,7 @@ function EnBody() {
           <b>No auto-payment</b> — no surprise charges.
         </li>
         <li>
-          <b>Extending</b> is a new order; when bought early, stacking depends on the method.
+          <b>Extending</b> is a new order, only after the current subscription ends; it cannot be bought early.
         </li>
       </KeyFacts>
 
@@ -534,7 +534,7 @@ const uzFaq = [
   {
     question: "Muddat tugashidan oldin uzaytirsam, kunlar qo‘shiladimi?",
     answer:
-      "Hamma holatda bir xil emas — bu usulga bog‘liq. Eng oddiy yo‘l: tugagan kuni yoki undan keyin yangi buyurtma berish. Batafsil — «Premium bor odamga yana Premium» maqolasida.",
+      "Yo‘q — StarsPaymee’da faol Premium ustiga kunlar qo‘shilmaydi, bot buyurtmani ochmaydi. Tugagan kuni yoki undan keyin yangi buyurtma bering. Batafsil — «Premium muddatini uzaytirish mumkinmi» maqolasida.",
   },
   {
     question: "Premium tugasa, chatlar yoki fayllar yo‘qoladimi?",
@@ -568,7 +568,7 @@ const ruFaq = [
   {
     question: "Если продлить до окончания, дни прибавятся?",
     answer:
-      "Не во всех случаях — зависит от способа. Самый простой путь: новый заказ в день окончания или после. Подробнее — в статье «Premium тому, у кого он уже есть».",
+      "Нет — в StarsPaymee дни поверх активного Premium не добавляются, бот не открывает заказ. Оформите новый заказ в день окончания или после. Подробнее — в статье «Можно ли продлить Telegram Premium заранее».",
   },
   {
     question: "Пропадут ли чаты или файлы, когда Premium закончится?",
@@ -602,7 +602,7 @@ const enFaq = [
   {
     question: "If I extend before the end, are the days added?",
     answer:
-      "Not in every case — it depends on the method. The simplest path: a new order on the end day or after. Details are in the article on Premium for someone who already has it.",
+      "No — at StarsPaymee days are not added on top of active Premium; the bot does not open the order. Place a new order on the end day or after. Details are in “Can Telegram Premium be extended early”.",
   },
   {
     question: "Will chats or files disappear when Premium ends?",
@@ -623,7 +623,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-10-15",
-  dateModified: "2026-10-15",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram premium qachon tugaydi",
     "premium muddatini tekshirish",

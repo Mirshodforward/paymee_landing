@@ -845,7 +845,7 @@
       },
       {
         "q": "What happens when Premium expires?",
-        "a": "The subscription doesn't auto-renew and nothing is charged. When the term ends you return to a regular account; buy again whenever you like — even before it ends, the term stacks."
+        "a": "The subscription doesn't auto-renew and nothing is charged. When the term ends you return to a regular account; buy a new term whenever you like after that. A term is not added on top of an active Premium — the bot does not open an order for an account that already has Premium, so wait for the current subscription to end."
       },
       {
         "q": "Is StarsPaymee an official Telegram partner?",

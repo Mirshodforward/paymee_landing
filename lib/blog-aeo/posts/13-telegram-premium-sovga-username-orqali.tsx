@@ -116,9 +116,9 @@ function UzBody() {
 
       <h2 id="holat">Odamda allaqachon Premium bo‘lsa nima bo‘ladi</h2>
       <p>
-        Bu holatda sovg‘a yo‘qolmaydi: <b>yangi muddat mavjud obuna ustiga qo‘shiladi</b>, ya’ni Premium uzayadi.
-        Shunga qaramay, sovg‘a qilishdan oldin holatni bilib olish foydali — masalan, odam yaqinda o‘zi 12 oylik
-        obuna olgan bo‘lsa, siz boshqa sovg‘ani tanlashingiz mumkin.
+        Bu holatda StarsPaymee buyurtmani <b>qabul qilmaydi</b>: username kiritilganda bot «Bu foydalanuvchida allaqachon
+        Telegram Premium mavjud» deb to‘xtaydi — faol obuna ustiga muddat qo‘shilmaydi. Odamning obunasi tugagach
+        yuboring yoki boshqa sovg‘a tanlang; batafsil — <Link href="/blog/telegram-premium-muddatini-uzaytirish">Premium muddatini uzaytirish mumkinmi</Link>.
       </p>
       <p>
         Buni bilishning eng oson yo‘li — odamning profilini ochish: Premium faol bo‘lsa, ism yonida yulduzcha
@@ -265,9 +265,9 @@ function RuBody() {
 
       <h2 id="holat">Что если у человека уже есть Premium</h2>
       <p>
-        Подарок не пропадёт: <b>новый срок добавится к действующей подписке</b>, то есть Premium продлится. И всё
-        же перед покупкой полезно знать статус — например, если человек недавно сам оформил годовую подписку, вы
-        можете выбрать другой подарок.
+        В этом случае StarsPaymee заказ <b>не примет</b>: при вводе username бот остановится с сообщением, что у
+        пользователя уже есть Telegram Premium — срок поверх активной подписки не добавляется. Отправьте подарок,
+        когда подписка закончится, или выберите другой; подробнее — <Link href="/blog/telegram-premium-muddatini-uzaytirish">можно ли продлить Premium заранее</Link>.
       </p>
       <p>
         Проще всего посмотреть профиль: если Premium активен, рядом с именем стоит значок-звёздочка. Нет значка —
@@ -411,9 +411,9 @@ function EnBody() {
 
       <h2 id="holat">What happens if they already have Premium</h2>
       <p>
-        Nothing is lost: <b>the new term is added on top of the existing subscription</b>, so Premium simply runs
-        longer. Even so, it is worth knowing the status first — if the person recently bought a year themselves, you
-        might prefer a different gift.
+        In that case StarsPaymee <b>does not accept the order</b>: when you enter the username, the bot stops with a
+        message that the user already has Telegram Premium — a term is not added on top of an active subscription.
+        Send the gift once their subscription ends, or pick a different gift; details — <Link href="/blog/telegram-premium-muddatini-uzaytirish">can Premium be extended early</Link>.
       </p>
       <p>
         The easiest way to check is their profile: when Premium is active, a star badge sits next to the name. No
@@ -476,7 +476,7 @@ const uzFaq = [
   },
   {
     question: "Odamda allaqachon Premium bo‘lsa-chi?",
-    answer: "Sovg‘a yo‘qolmaydi — yangi muddat mavjud obuna ustiga qo‘shiladi, ya’ni Premium uzayadi.",
+    answer: "StarsPaymee buyurtmani qabul qilmaydi — bot «allaqachon Premium mavjud» deb to‘xtaydi; faol obuna ustiga muddat qo‘shilmaydi. Obuna tugagach yuboring yoki boshqa sovg‘a tanlang.",
   },
   {
     question: "Sovg‘a yetkazilganini qanday bilaman?",
@@ -515,7 +515,7 @@ const ruFaq = [
   },
   {
     question: "Что если у человека уже есть Premium?",
-    answer: "Подарок не пропадёт — новый срок добавится к действующей подписке, то есть Premium продлится.",
+    answer: "StarsPaymee заказ не примет — бот остановится с сообщением, что Premium уже есть; срок поверх активной подписки не добавляется. Отправьте подарок после окончания подписки или выберите другой.",
   },
   {
     question: "Как понять, что подарок дошёл?",
@@ -553,7 +553,7 @@ const enFaq = [
   },
   {
     question: "What if they already have Premium?",
-    answer: "Nothing is lost — the new term is added to the existing subscription, so Premium simply runs longer.",
+    answer: "StarsPaymee does not accept the order — the bot stops with a message that Premium is already active; a term is not added on top. Send the gift once their subscription ends, or pick a different gift.",
   },
   {
     question: "How do I know the gift was delivered?",
@@ -580,7 +580,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-06-13",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram premium sovga qilish",
     "telegram premium username orqali",

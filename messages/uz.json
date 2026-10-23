@@ -854,7 +854,7 @@
       },
       {
         "q": "Premium muddati tugasa nima bo‘ladi?",
-        "a": "Obuna o‘z-o‘zidan uzaymaydi va pul yechilmaydi. Muddat tugagach oddiy akkauntga qaytasiz; xohlasangiz qayta sotib olasiz — hatto tugashidan oldin ham, muddat ustiga qo‘shiladi."
+        "a": "Obuna o‘z-o‘zidan uzaymaydi va pul yechilmaydi. Muddat tugagach oddiy akkauntga qaytasiz; xohlasangiz yangi muddatga qayta sotib olasiz. Faol Premium ustiga muddat qo‘shilmaydi — bot Premium bor akkauntga buyurtma ochmaydi, shuning uchun amaldagi obuna tugashini kuting."
       },
       {
         "q": "StarsPaymee Telegram’ning rasmiy hamkorimi?",

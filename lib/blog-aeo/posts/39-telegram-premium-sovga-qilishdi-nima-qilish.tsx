@@ -66,8 +66,9 @@ function UzBody() {
 
       <h2 id="eski">Sizda avvaldan Premium bo‘lsa nima bo‘ladi?</h2>
       <p>
-        Agar sizda allaqachon faol Premium obuna bo‘lsa, yangi sovg‘a qilingan muddat odatda joriy obunangiz
-        <strong> ustiga qo‘shiladi</strong> (muddat uzayadi), obuna to‘xtab qolmaydi yoki bekor qilinmaydi. Premium
+        Agar sizda allaqachon faol Premium obuna bo‘lsa, sovg‘a muddati joriy obunangiz ustiga darhol qo‘shilmaydi:
+        Telegram API’sida sovg‘a kodini faol obuna paytida ishlatish «PREMIUM_SUB_ACTIVE_UNTIL» xatosi bilan rad
+        etiladi — kod saqlanadi va joriy muddat tugagach faollashtiriladi. Amaldagi obunangiz to‘xtamaydi. Premium
         umuman nima berishini{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Premium arziydimi»</Link> maqolasida ko‘rishingiz
         mumkin.
@@ -155,9 +156,10 @@ function RuBody() {
 
       <h2 id="eski">Что будет, если у вас уже был Premium?</h2>
       <p>
-        Если у вас уже есть активная подписка Premium, новый подаренный срок обычно{" "}
-        <strong>добавляется к текущей</strong> подписке (срок продлевается), подписка не прерывается и не
-        отменяется. Что вообще даёт Premium — можно посмотреть в статье{" "}
+        Если у вас уже есть активная подписка Premium, подаренный срок не добавляется к ней сразу: в API Telegram
+        активация подарочного кода при действующей подписке отклоняется с ошибкой «PREMIUM_SUB_ACTIVE_UNTIL» — код
+        сохраняется и активируется после окончания текущего срока. Действующая подписка не прерывается. Что вообще
+        даёт Premium — можно посмотреть в статье{" "}
         <Link href="/blog/telegram-premium-arziydimi-foydalari">«Стоит ли Premium»</Link>.
       </p>
 
@@ -184,7 +186,7 @@ export const post: AeoPost = {
   category: "Premium",
   type: "howto",
   datePublished: "2026-07-05",
-  dateModified: "2026-07-05",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram premium sovga qilishdi",
     "telegram premium sovga keldi",
@@ -220,7 +222,7 @@ export const post: AeoPost = {
         },
         {
           question: "Menda avvaldan Premium bo‘lsa, sovg‘a nima bo‘ladi?",
-          answer: "Odatda yangi muddat joriy obunangiz ustiga qo‘shiladi — obuna to‘xtamaydi, faqat muddati uzayadi.",
+          answer: "Darhol qo‘shilmaydi: faol obuna paytida sovg‘a kodi faollashtirilmaydi (Telegram API xatosi PREMIUM_SUB_ACTIVE_UNTIL), kod saqlanadi — joriy muddat tugagach faollashtirasiz. Obunangiz to‘xtamaydi.",
         },
         {
           question: "Sovg‘a qilingan Premium’ni bekor qilib bo‘ladimi?",
@@ -255,7 +257,7 @@ export const post: AeoPost = {
         },
         {
           question: "Что будет, если у меня уже был Premium?",
-          answer: "Обычно новый срок добавляется к текущей подписке — она не прерывается, просто продлевается.",
+          answer: "Не сразу: при действующей подписке подарочный код не активируется (ошибка Telegram API PREMIUM_SUB_ACTIVE_UNTIL), код сохраняется — активируете его после окончания текущего срока. Подписка не прерывается.",
         },
         {
           question: "Можно ли отменить подаренный Premium?",
