@@ -10,8 +10,8 @@ function UzAnswer() {
     <p>
       Telegram kanalni Stars yordamida monetizatsiya qilish — bu obunachilardan Telegram’ning rasmiy yulduzlari orqali
       daromad olish demak: pulli postlar (paid media), Stars asosidagi obuna, Star Reactions, pulli xabarlar va sovg‘alar.
-      Ishlab topilgan Stars keyin Fragment orqali TON’ga, undan pulga chiqariladi. Kanal monetizatsiyasi uchun eng kami
-      odatda <strong>1000 obunachi</strong> talab qilinadi.
+      Ishlab topilgan Stars keyin Fragment orqali Gram’ga (sobiq TON), undan pulga chiqariladi. Stars obuna va pullik
+      postlar uchun obunachi chegarasi yo‘q; <strong>1000 obunachi</strong> faqat reklama daromadini bo‘lishish uchun kerak.
     </p>
   );
 }
@@ -45,7 +45,8 @@ function UzBody() {
           Post, video yoki fayllarni Stars evaziga «qulflaysiz» — faqat to‘lagan obunachi ko‘radi.
         </InfoCard>
         <InfoCard emoji="🔁" title="2. Stars obuna">
-          Yopiq kanalga oylik Stars-obuna qo‘yasiz; har oy avtomatik yangilanadigan barqaror daromad.
+          Yopiq kanalga oylik Stars-obuna qo‘yasiz; har oy avtomatik yangilanadigan barqaror daromad. Sozlash qadamlari —{" "}
+          <Link href="/blog/telegram-pullik-kanal-stars-obuna">pullik kanal qo‘llanmasi</Link>.
         </InfoCard>
         <InfoCard emoji="👍" title="3. Star Reactions">
           Obunachi postingizga yulduzli reaksiya bosadi — har bir reaksiya to‘g‘ridan-to‘g‘ri daromad.
@@ -66,7 +67,8 @@ function UzBody() {
       <h2 id="bosqichlar">Kanal monetizatsiyasini bosqichma-bosqich yoqish</h2>
       <Steps>
         <Step title="Talablarni tekshiring">
-          Kanalda odatda kamida 1000 obunachi va Telegram qoidalariga rioya bo‘lishi kerak.
+          Stars obuna, pullik post va reaksiyalar uchun obunachi chegarasi yo‘q; 1000 obunachi faqat reklama daromadi
+          (Telegram Ads) uchun kerak. Telegram qoidalariga rioya shart.
         </Step>
         <Step title="Kanal sozlamalarini oching">
           Kanal → «Statistika / Monetizatsiya» bo‘limiga o‘ting (mavjud bo‘lsa).
@@ -84,7 +86,7 @@ function UzBody() {
 
       <KeyFacts label="Muhim raqamlar">
         <li>
-          <b>1000+</b> obunachi — monetizatsiya uchun odatiy minimal chegara
+          <b>1000+</b> obunachi — faqat reklama daromadini bo‘lishish uchun; Stars funksiyalarida chegara yo‘q
         </li>
         <li>
           <b>~0,013 $</b> — bitta yulduzning taxminiy bozor qiymati
@@ -161,8 +163,8 @@ function RuAnswer() {
     <p>
       Монетизация Telegram-канала через Stars — это доход от подписчиков в официальной валюте Telegram: платные посты
       (paid media), подписка на основе Stars, Star Reactions, платные сообщения и подарки. Заработанные Stars затем
-      выводятся через Fragment в TON, а оттуда в деньги. Обычный порог для монетизации канала —{" "}
-      <strong>1000 подписчиков</strong>.
+      выводятся через Fragment в Gram (бывший TON), а оттуда в деньги. Для Stars-подписки и платных постов порога по
+      подписчикам нет; <strong>1000 подписчиков</strong> нужны только для доли рекламного дохода.
     </p>
   );
 }
@@ -195,7 +197,8 @@ function RuBody() {
           Пост, видео или файлы «закрываются» за Stars — видит только оплативший подписчик.
         </InfoCard>
         <InfoCard emoji="🔁" title="2. Подписка на Stars">
-          Закрытый канал с ежемесячной Stars-подпиской — стабильный автопродлеваемый доход.
+          Закрытый канал с ежемесячной Stars-подпиской — стабильный автопродлеваемый доход. Как настроить —{" "}
+          <Link href="/blog/telegram-pullik-kanal-stars-obuna">руководство по платному каналу</Link>.
         </InfoCard>
         <InfoCard emoji="👍" title="3. Star Reactions">
           Подписчик ставит звёздную реакцию на пост — каждая реакция это прямой доход.
@@ -216,7 +219,8 @@ function RuBody() {
       <h2 id="bosqichlar">Пошаговое включение монетизации канала</h2>
       <Steps>
         <Step title="Проверьте требования">
-          Обычно нужно минимум 1000 подписчиков и соответствие правилам Telegram.
+          Для Stars-подписки, платных постов и реакций порога по подписчикам нет; 1000 подписчиков нужны только для
+          рекламного дохода (Telegram Ads). Соблюдение правил Telegram обязательно.
         </Step>
         <Step title="Откройте настройки канала">
           Канал → раздел «Статистика / Монетизация» (если доступен).
@@ -234,7 +238,7 @@ function RuBody() {
 
       <KeyFacts label="Важные цифры">
         <li>
-          <b>1000+</b> подписчиков — типичный минимальный порог монетизации
+          <b>1000+</b> подписчиков — только для доли рекламного дохода; у Stars-функций порога нет
         </li>
         <li>
           <b>~0,013 $</b> — примерная рыночная стоимость одной звезды
@@ -294,7 +298,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "howto",
   datePublished: "2026-06-29",
-  dateModified: "2026-10-22",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram kanal monetizatsiya",
     "telegram stars monetizatsiya",
@@ -304,7 +308,7 @@ export const post: AeoPost = {
     "kanalni pullik qilish",
   ],
   howToSteps: [
-    { name: "Talablarni tekshiring", text: "Kanalda kamida 1000 obunachi va Telegram qoidalariga rioya bo‘lishi kerak." },
+    { name: "Talablarni tekshiring", text: "Stars funksiyalari uchun obunachi chegarasi yo‘q (1000 obunachi — faqat reklama daromadi uchun); Telegram qoidalariga rioya shart." },
     { name: "Kanal sozlamalarini oching", text: "Kanal → Statistika/Monetizatsiya bo‘limiga o‘ting." },
     { name: "Stars monetizatsiyasini ulang", text: "Star Reactions va pulli kontentni yoqing, TON hamyonini bog‘lang." },
     { name: "Pulli kontent joylang", text: "Pulli post yoki obuna darajasini sinab, narxni auditoriyaga moslang." },
@@ -327,7 +331,7 @@ export const post: AeoPost = {
         {
           question: "Telegram kanalni monetizatsiya qilish uchun nechta obunachi kerak?",
           answer:
-            "Odatda kamida 1000 obunachi va Telegram qoidalariga rioya talab qilinadi. Aniq chegaralar mintaqa va funksiyaga qarab o‘zgarishi mumkin.",
+            "Stars obuna, pullik post va Star Reactions uchun obunachi chegarasi yo‘q — ular istalgan kanalda ishlaydi. 1000 obunachi faqat Telegram Ads reklama daromadini bo‘lishish uchun talab qilinadi.",
         },
         {
           question: "Ishlab topilgan Stars’ni pulga aylantirsa bo‘ladimi?",
@@ -367,7 +371,7 @@ export const post: AeoPost = {
         {
           question: "Сколько подписчиков нужно для монетизации Telegram-канала?",
           answer:
-            "Обычно требуется минимум 1000 подписчиков и соответствие правилам Telegram. Точные пороги зависят от региона и функции.",
+            "Для Stars-подписки, платных постов и Star Reactions порога по подписчикам нет — они работают в любом канале. 1000 подписчиков требуются только для доли дохода от Telegram Ads.",
         },
         {
           question: "Можно ли вывести заработанные Stars в деньги?",
