@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { NftGiftMarketBoard } from "@/components/blog/nft-gift-market-board";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
 import { InlineCta, KeyFacts, Notice, Toc } from "@/components/blog/aeo-blocks";
@@ -71,7 +72,7 @@ function UzBody() {
         </li>
       </ol>
       <p>
-        Narx so‘mda ko‘rsatiladi va TON kursiga qarab o‘zgaradi; yakuniy summa buyurtma yaratilganda belgilanadi.
+        Narx so‘mda ko‘rsatiladi va Gram (TON) kursiga qarab o‘zgaradi; yakuniy summa buyurtma yaratilganda belgilanadi.
         Click, Payme, Uzum, Paynet va SBP bu bo‘limda yo‘q. Sovg‘a faqat vaqtincha kerak bo‘lsa —{" "}
         <Link href="/blog/telegram-nft-sovga-ijarasi">NFT ijarasi</Link>.
       </p>
@@ -83,6 +84,7 @@ function UzBody() {
         <Link href="/blog/telegram-gifts-narxlari-royxati">«Gifts narxlari»</Link> da.
       </p>
       <NftGiftSeriesNav locale="uz" />
+      <GramNote locale="uz" />
     </>
   );
 }
@@ -145,12 +147,13 @@ function RuBody() {
         </li>
       </ol>
       <p>
-        Цена показывается в сумах и зависит от курса TON; итоговая сумма фиксируется при создании заказа. Click,
+        Цена показывается в сумах и зависит от курса Gram (TON); итоговая сумма фиксируется при создании заказа. Click,
         Payme, Uzum, Paynet и СБП в этом разделе недоступны. Если подарок нужен только на время —{" "}
         <Link href="/blog/telegram-nft-sovga-ijarasi">аренда NFT</Link>.
       </p>
       <InlineCta text="NFT Market в боте — коллекционный подарок в сумах, до 300 000 сумов." />
       <NftGiftSeriesNav locale="ru" />
+      <GramNote locale="ru" />
     </>
   );
 }
@@ -212,12 +215,13 @@ function EnBody() {
         </li>
       </ol>
       <p>
-        The price is shown in so‘m and follows the TON rate; the final amount is fixed when the order is created.
+        The price is shown in so‘m and follows the Gram (TON) rate; the final amount is fixed when the order is created.
         Click, Payme, Uzum, Paynet and SBP are not available in this section. If you only need the gift for a
         while, see <Link href="/blog/telegram-nft-sovga-ijarasi">NFT rental</Link>.
       </p>
       <InlineCta text="NFT Market in the bot — collectible gifts in so‘m, up to 300,000 so‘m." />
       <NftGiftSeriesNav locale="en" />
+      <GramNote locale="en" />
     </>
   );
 }
@@ -333,7 +337,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "cta",
   datePublished: "2026-07-29",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-22",
   keywords: [
     "StarsPaymee NFT",
     "StarsPaymee NFT Market",

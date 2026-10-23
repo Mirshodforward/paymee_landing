@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { CompareTable, InlineCta, KeyFacts, Sources, Yes, No } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -69,7 +70,7 @@ function UzBody() {
         headers={["Yo‘l", "O‘zbek kartasi", "Parolsiz", "Tezlik"]}
         rows={[
           ["Telegram ichida (Apple/Google)", <No key="1" />, <Yes key="2" />, "Tez, lekin xorijiy karta"],
-          ["Fragment (TON)", <No key="3" />, <Yes key="4" />, "Kripto hamyon kerak"],
+          ["Fragment (Gram/TON)", <No key="3" />, <Yes key="4" />, "Kripto hamyon kerak"],
           ["Mahalliy bot/Mini App", <Yes key="5" />, <Yes key="6" />, "~5 s, avtomatik"],
         ]}
       />
@@ -106,6 +107,7 @@ function UzBody() {
         <Link href="/blog/starspaymee-ishonchli-xavfsizmi">«StarsPaymee ishonchlimi»</Link> maqolasida.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
@@ -182,7 +184,7 @@ function RuBody() {
         headers={["Способ", "Карта Узбекистана", "Без пароля", "Скорость"]}
         rows={[
           ["В Telegram (Apple/Google)", <No key="1" />, <Yes key="2" />, "Быстро, но иностранная карта"],
-          ["Fragment (TON)", <No key="3" />, <Yes key="4" />, "Нужен крипто-кошелёк"],
+          ["Fragment (Gram/TON)", <No key="3" />, <Yes key="4" />, "Нужен крипто-кошелёк"],
           ["Локальный бот/Mini App", <Yes key="5" />, <Yes key="6" />, "~5 с, автоматически"],
         ]}
       />
@@ -222,6 +224,7 @@ function RuBody() {
         Актуальные цены — на <Link href="/stars">странице Stars</Link>.
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
@@ -238,7 +241,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "comparison",
   datePublished: "2026-06-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram stars bot",
     "telegram stars eng yaxshi bot",

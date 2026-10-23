@@ -914,7 +914,7 @@
         "d": "Если карты нет: внесите наличные через терминал Paynet или кассу банка на любую карту (например, близкого человека) и сделайте перевод с неё."
       }
     ],
-    "payNote": "Иностранная карта, баланс Apple ID или TON не нужны. Официальные способы — App Store, Google Play, Fragment, @PremiumBot — требуют именно этого и не принимают UzCard/HUMO."
+    "payNote": "Иностранная карта, баланс Apple ID или криптовалюта Gram (TON) не нужны. Официальные способы — App Store, Google Play, Fragment, @PremiumBot — требуют именно этого и не принимают UzCard/HUMO."
   },
   "starsPage": {
     "metaTitle": "Купить Telegram Stars (звёзды Телеграм) — от 220 сум",

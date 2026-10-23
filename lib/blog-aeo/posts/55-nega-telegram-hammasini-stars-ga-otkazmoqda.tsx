@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { Toc, InfoGrid, InfoCard, InlineCta, KeyFacts, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -71,8 +72,8 @@ function UzBody() {
         </li>
       </KeyFacts>
       <p>
-        Stars va TON o‘rtasidagi to‘liq bog‘liqlikni{" "}
-        «Stars vs TON» maqolasida ko‘ring.
+        Stars va Gram (TON) o‘rtasidagi bog‘liqlikni{" "}
+        <Link href="/blog/toncoin-endi-gram">«Toncoin endi Gram» maqolasida</Link> ko‘ring.
       </p>
 
       <h2 id="falsafa">Durov strategiyasi va falsafasi</h2>
@@ -93,12 +94,13 @@ function UzBody() {
         ko‘rishingiz mumkin.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "Stars rasmiy e’loni" },
           { href: "https://ton.org", label: "ton.org", note: "TON tarmog‘i" },
-          { href: "https://fragment.com", label: "fragment.com", note: "Stars ↔ TON chiqarish" },
+          { href: "https://fragment.com", label: "fragment.com", note: "Stars ↔ Gram (TON) chiqarish" },
         ]}
       />
     </>
@@ -170,8 +172,8 @@ function RuBody() {
         </li>
       </KeyFacts>
       <p>
-        Полную связь между Stars и TON смотрите в статье{" "}
-        «Stars vs TON».
+        Связь между Stars и Gram (TON) смотрите в статье{" "}
+        <Link href="/blog/toncoin-endi-gram">«Toncoin теперь Gram»</Link>.
       </p>
 
       <h2 id="falsafa">Стратегия и философия Дурова</h2>
@@ -191,12 +193,13 @@ function RuBody() {
         «Экосистема Telegram».
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "официальный анонс Stars" },
           { href: "https://ton.org", label: "ton.org", note: "сеть TON" },
-          { href: "https://fragment.com", label: "fragment.com", note: "вывод Stars ↔ TON" },
+          { href: "https://fragment.com", label: "fragment.com", note: "вывод Stars ↔ Gram (TON)" },
         ]}
       />
     </>
@@ -208,7 +211,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "info",
   datePublished: "2026-07-05",
-  dateModified: "2026-07-05",
+  dateModified: "2026-10-22",
   keywords: [
     "nega telegram stars ga otkazmoqda",
     "telegram stars strategiya",

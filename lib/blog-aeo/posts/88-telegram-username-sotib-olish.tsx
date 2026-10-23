@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { InlineCta, Toc } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 import { GrowthSeriesAside } from "./_growth-shared";
@@ -36,6 +37,7 @@ function UzBody() {
       </ul>
       <InlineCta text="Premium yoki Stars — username orqali, so‘mda: @StarsPaymee_bot." />
       <GrowthSeriesAside locale="uz" />
+      <GramNote locale="uz" />
     </>
   );
 }
@@ -53,6 +55,7 @@ function RuBody() {
   return (
     <>
       <GrowthSeriesAside locale="ru" />
+      <GramNote locale="ru" />
     </>
   );
 }
@@ -81,7 +84,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "info",
   datePublished: "2026-07-24",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-22",
   keywords: ["telegram username sotib olish", "fragment username", "qisqa username telegram"],
   locales: {
     uz: {

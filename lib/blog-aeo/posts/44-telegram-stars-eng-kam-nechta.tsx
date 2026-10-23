@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { Toc, KeyFacts, InlineCta, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 import { formatStarsPrice } from "@/lib/products";
@@ -46,7 +47,7 @@ function UzBody() {
           yuqoriroq.
         </li>
         <li>
-          <b>Fragment (TON):</b> kripto tranzaksiya minimal miqdoriga bog‘liq.
+          <b>Fragment (Gram/TON):</b> kripto tranzaksiya minimal miqdoriga bog‘liq.
         </li>
       </KeyFacts>
       <p>
@@ -92,6 +93,7 @@ function UzBody() {
         ko‘ring.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
@@ -144,7 +146,7 @@ function RuBody() {
           <b>Приложение Telegram (Apple/Google):</b> минимальный пакет, заданный платформой, обычно чуть выше.
         </li>
         <li>
-          <b>Fragment (TON):</b> зависит от минимальной суммы криптотранзакции.
+          <b>Fragment (Gram/TON):</b> зависит от минимальной суммы криптотранзакции.
         </li>
       </KeyFacts>
       <p>
@@ -185,6 +187,7 @@ function RuBody() {
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
@@ -201,7 +204,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-07-05",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram stars eng kam nechta",
     "telegram stars minimal miqdor",

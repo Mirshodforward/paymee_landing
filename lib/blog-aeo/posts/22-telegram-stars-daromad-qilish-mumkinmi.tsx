@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { Toc, CompareTable, InlineCta, KeyFacts, Yes, No, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -107,8 +108,8 @@ function UzBody() {
       <p>
         Jamlangan Stars belgilangan minimal chegaradan oshgach, ular <strong>Fragment</strong> platformasi orqali TON
         kriptovalyutasiga aylantiriladi, TON esa hamyon orqali pulga chiqariladi. Jarayon vaqt va TON hamyonini talab
-        qiladi. Stars va TON farqini{" "}
-        «Stars vs TON» maqolasida ko‘ring.
+        qiladi. Stars va Gram (TON) farqini{" "}
+        <Link href="/blog/toncoin-endi-gram">«Toncoin endi Gram» maqolasida</Link> ko‘ring.
       </p>
 
       <h2 id="xato">Keng tarqalgan tushunmovchiliklar</h2>
@@ -129,11 +130,12 @@ function UzBody() {
         maqolasida topasiz.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "Stars va monetizatsiya" },
-          { href: "https://fragment.com", label: "fragment.com", note: "Stars ↔ TON chiqarish" },
+          { href: "https://fragment.com", label: "fragment.com", note: "Stars ↔ Gram (TON) chiqarish" },
           { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "texnik hujjat" },
         ]}
       />
@@ -230,8 +232,8 @@ function RuBody() {
       <p>
         Когда накопленные Stars превысят установленный минимум, они конвертируются в криптовалюту TON через{" "}
         <strong>Fragment</strong>, а TON выводится в деньги через кошелёк. Процесс требует времени и TON-кошелька.
-        Разницу Stars и TON смотрите в статье{" "}
-        «Stars vs TON».
+        Разницу Stars и Gram (TON) смотрите в статье{" "}
+        <Link href="/blog/toncoin-endi-gram">«Toncoin теперь Gram»</Link>.
       </p>
 
       <h2 id="xato">Частые заблуждения</h2>
@@ -251,11 +253,12 @@ function RuBody() {
         <Link href="/blog/telegram-stars-nima-uchun-ishlatiladi-usullar">«Что можно купить за Stars»</Link>.
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "Stars и монетизация" },
-          { href: "https://fragment.com", label: "fragment.com", note: "вывод Stars ↔ TON" },
+          { href: "https://fragment.com", label: "fragment.com", note: "вывод Stars ↔ Gram (TON)" },
           { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "техническая документация" },
         ]}
       />
@@ -268,7 +271,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "info",
   datePublished: "2026-06-29",
-  dateModified: "2026-06-29",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram stars daromad",
     "telegram stars orqali pul ishlash",

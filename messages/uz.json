@@ -931,7 +931,7 @@
         "d": "Kartangiz bo‘lmasa: naqd pulni Paynet terminali yoki bank kassasi orqali istalgan kartaga (masalan, yaqiningiznikiga) tushiring va o‘sha kartadan o‘tkazma qiling."
       }
     ],
-    "payNote": "Xorijiy karta, Apple ID balansi yoki TON kerak emas. Rasmiy usullar — App Store, Google Play, Fragment, @PremiumBot — aynan shuni talab qiladi va UzCard/HUMO’ni qabul qilmaydi."
+    "payNote": "Xorijiy karta, Apple ID balansi yoki Gram (TON) kriptovalyutasi kerak emas. Rasmiy usullar — App Store, Google Play, Fragment, @PremiumBot — aynan shuni talab qiladi va UzCard/HUMO’ni qabul qilmaydi."
   },
   "starsPage": {
     "metaTitle": "Telegram Stars sotib olish — 220 so‘mdan, 5 soniyada",

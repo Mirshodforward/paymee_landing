@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { Toc, CompareTable, InlineCta, KeyFacts, Yes, No, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -9,7 +10,7 @@ function UzAnswer() {
     <p>
       Telegram Stars’ni iPhone (App Store) orqali sotib olganda narx odatda qimmatroq, chunki Apple har bir ilova ichidagi
       xariddan <strong>~30% komissiya</strong> oladi va Telegram bu farqni narxga qo‘shadi. Android (Google Play) ham
-      shunga o‘xshash. <strong>Fragment (TON)</strong> va <strong>mahalliy botlar</strong> bu komissiyani chetlab o‘tadi,
+      shunga o‘xshash. <strong>Fragment (Gram/TON)</strong> va <strong>mahalliy botlar</strong> bu komissiyani chetlab o‘tadi,
       shuning uchun Stars ularda arzonroq bo‘lishi mumkin. O‘zbekistonda eng qulayi — so‘mda, mahalliy karta bilan bot.
     </p>
   );
@@ -42,7 +43,7 @@ function UzBody() {
         rows={[
           ["iPhone / App Store", "~30% (Apple)", <No key="1" />, "Eng yuqori"],
           ["Android / Google Play", "~komissiya bor", <No key="2" />, "Yuqori"],
-          ["Fragment (TON)", "Minimal", <No key="3" />, "Past, lekin kripto kerak"],
+          ["Fragment (Gram/TON)", "Minimal", <No key="3" />, "Past, lekin kripto kerak"],
           [<>Mahalliy bot / Mini App</>, "Yo‘q (Apple/Google)", <Yes key="4" />, "So‘mda, qulay"],
         ]}
       />
@@ -77,7 +78,7 @@ function UzBody() {
 
       <h2 id="arzon">Eng arzon yo‘l qaysi?</h2>
       <p>
-        Sof narx bo‘yicha Fragment (TON) odatda arzonroq, lekin u kripto hamyon va TON talab qiladi — O‘zbekiston kartasi
+        Sof narx bo‘yicha Fragment (Gram/TON) odatda arzonroq, lekin u kripto hamyon va TON talab qiladi — O‘zbekiston kartasi
         ishlamaydi. Shu sabab mahalliy foydalanuvchi uchun amaliy jihatdan eng qulayi — so‘mda, UzCard/HUMO/Click/Payme
         bilan ishlaydigan mahalliy bot. Qayerdan sotib olishning to‘liq qo‘llanmasi —{" "}
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Stars qayerdan sotib olish»</Link>.
@@ -90,12 +91,13 @@ function UzBody() {
         <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Eng yaxshi botlar»</Link> maqolasida ko‘rasiz.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "Stars rasmiy e’loni" },
           { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "texnik hujjat" },
-          { href: "https://fragment.com", label: "fragment.com", note: "TON asosidagi narx" },
+          { href: "https://fragment.com", label: "fragment.com", note: "Gram (TON) asosidagi narx" },
         ]}
       />
     </>
@@ -107,7 +109,7 @@ function RuAnswer() {
     <p>
       При покупке Telegram Stars через iPhone (App Store) цена обычно выше, потому что Apple берёт{" "}
       <strong>~30% комиссии</strong> с каждой внутриигровой покупки, и Telegram закладывает это в цену. В Android (Google
-      Play) похоже. <strong>Fragment (TON)</strong> и <strong>локальные боты</strong> обходят эту комиссию, поэтому Stars
+      Play) похоже. <strong>Fragment (Gram/TON)</strong> и <strong>локальные боты</strong> обходят эту комиссию, поэтому Stars
       там могут быть дешевле. В Узбекистане удобнее всего — в сумах локальной картой через бота.
     </p>
   );
@@ -139,7 +141,7 @@ function RuBody() {
         rows={[
           ["iPhone / App Store", "~30% (Apple)", <No key="1" />, "Самый высокий"],
           ["Android / Google Play", "~есть комиссия", <No key="2" />, "Высокий"],
-          ["Fragment (TON)", "Минимальная", <No key="3" />, "Низкий, но нужна крипта"],
+          ["Fragment (Gram/TON)", "Минимальная", <No key="3" />, "Низкий, но нужна крипта"],
           [<>Локальный бот / Mini App</>, "Нет (Apple/Google)", <Yes key="4" />, "В сумах, удобно"],
         ]}
       />
@@ -172,7 +174,7 @@ function RuBody() {
 
       <h2 id="arzon">Какой способ самый дешёвый?</h2>
       <p>
-        По чистой цене обычно дешевле Fragment (TON), но он требует крипто-кошелёк и TON — карта Узбекистана не работает.
+        По чистой цене обычно дешевле Fragment (Gram/TON), но он требует крипто-кошелёк и TON — карта Узбекистана не работает.
         Поэтому на практике для местного пользователя удобнее всего локальный бот с оплатой UzCard/HUMO/Click/Payme в
         сумах. Полное руководство по покупке — в статье{" "}
         <Link href="/blog/ozbekistonda-telegram-stars-sotib-olish">«Где купить Stars»</Link>.
@@ -185,12 +187,13 @@ function RuBody() {
         <Link href="/blog/telegram-stars-eng-yaxshi-botlar-2026">«Лучшие боты»</Link>.
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "официальный анонс Stars" },
           { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "техническая документация" },
-          { href: "https://fragment.com", label: "fragment.com", note: "цена на основе TON" },
+          { href: "https://fragment.com", label: "fragment.com", note: "цена на основе Gram (TON)" },
         ]}
       />
     </>
@@ -202,7 +205,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "comparison",
   datePublished: "2026-06-30",
-  dateModified: "2026-06-30",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram stars app store narxi",
     "telegram stars google play",
@@ -238,7 +241,7 @@ export const post: AeoPost = {
         {
           question: "Eng arzon yo‘l qaysi?",
           answer:
-            "Sof narxda Fragment (TON) arzonroq, lekin kripto talab qiladi. O‘zbekiston uchun amaliy eng qulayi — so‘mda ishlaydigan mahalliy bot.",
+            "Sof narxda Fragment (Gram/TON) arzonroq, lekin kripto talab qiladi. O‘zbekiston uchun amaliy eng qulayi — so‘mda ishlaydigan mahalliy bot.",
         },
         {
           question: "Yulduzning qiymati platformaga qarab o‘zgaradimi?",
@@ -278,7 +281,7 @@ export const post: AeoPost = {
         {
           question: "Какой способ самый дешёвый?",
           answer:
-            "По чистой цене дешевле Fragment (TON), но нужна крипта. Для Узбекистана практичнее всего локальный бот с оплатой в сумах.",
+            "По чистой цене дешевле Fragment (Gram/TON), но нужна крипта. Для Узбекистана практичнее всего локальный бот с оплатой в сумах.",
         },
         {
           question: "Меняется ли ценность звезды в зависимости от платформы?",

@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import {
   CompareTable,
   InlineCta,
@@ -40,7 +41,7 @@ function UzBody() {
         headers={["Yo‘l", "To‘lov", "O‘zbekiston kartasi", "Tezlik"]}
         rows={[
           ["Telegram ichida (Apple/Google)", "App Store / Google Play", <No key="1" />, "Xorijiy karta kerak"],
-          ["Fragment.com", "TON kripto", <No key="2" />, "Hamyon va kripto kerak"],
+          ["Fragment.com", "Gram (TON) kripto", <No key="2" />, "Hamyon va kripto kerak"],
           ["@PremiumBot (rasmiy)", "Visa / Mastercard", <No key="3" />, "Karta qabul qilinmaydi"],
           [
             <>@StarsPaymee_bot / Mini App</>,
@@ -58,7 +59,7 @@ function UzBody() {
         ishlatish qulay emas.
       </p>
       <p>
-        Fragment.com ham muqobil emas: u TON kriptovalyutasi va tashqi hamyon talab qiladi, ya’ni texnik jihatdan
+        Fragment.com ham muqobil emas: u Gram (TON) kriptovalyutasi va tashqi hamyon talab qiladi, ya’ni texnik jihatdan
         butunlay boshqa auditoriyaga mo‘ljallangan. Rasmiy @PremiumBot esa faqat Visa/Mastercard qabul qiladi. Aynan
         shu bo‘shliqni mahalliy to‘lovni qabul qiladigan vositachi bot to‘ldiradi.
       </p>
@@ -183,6 +184,7 @@ function UzBody() {
         <Link href="/blog/telegram-stars-xavfsizmi">xavfsizlik mezonlari</Link>.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
@@ -217,7 +219,7 @@ function RuBody() {
         headers={["Способ", "Оплата", "Узбекская карта", "Скорость"]}
         rows={[
           ["Внутри Telegram (Apple/Google)", "App Store / Google Play", <No key="1" />, "Нужна зарубежная карта"],
-          ["Fragment.com", "Криптовалюта TON", <No key="2" />, "Нужны кошелёк и крипта"],
+          ["Fragment.com", "Криптовалюта Gram (TON)", <No key="2" />, "Нужны кошелёк и крипта"],
           ["@PremiumBot (официальный)", "Visa / Mastercard", <No key="3" />, "Карта не принимается"],
           [
             <>@StarsPaymee_bot / Mini App</>,
@@ -235,7 +237,7 @@ function RuBody() {
         пользоваться ею неудобно.
       </p>
       <p>
-        Fragment.com тоже не выход: он требует криптовалюту TON и внешний кошелёк, то есть технически рассчитан на
+        Fragment.com тоже не выход: он требует криптовалюту Gram (TON) и внешний кошелёк, то есть технически рассчитан на
         совсем другую аудиторию. Официальный @PremiumBot принимает только Visa/Mastercard. Именно этот пробел
         закрывает бот, принимающий местную оплату.
       </p>
@@ -360,6 +362,7 @@ function RuBody() {
         <Link href="/blog/telegram-stars-xavfsizmi">критерии безопасности</Link>.
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
@@ -394,7 +397,7 @@ function EnBody() {
         headers={["Route", "Payment", "Uzbek card", "Speed"]}
         rows={[
           ["Inside Telegram (Apple/Google)", "App Store / Google Play", <No key="1" />, "Needs a foreign card"],
-          ["Fragment.com", "TON crypto", <No key="2" />, "Needs a wallet and crypto"],
+          ["Fragment.com", "Gram (TON) crypto", <No key="2" />, "Needs a wallet and crypto"],
           ["@PremiumBot (official)", "Visa / Mastercard", <No key="3" />, "Card not accepted"],
           [
             <>@StarsPaymee_bot / Mini App</>,
@@ -411,7 +414,7 @@ function EnBody() {
         card connected to international payment systems. Many users do not have one, or find it inconvenient.
       </p>
       <p>
-        Fragment.com is not a way around it either: it needs TON crypto and an external wallet, so technically it
+        Fragment.com is not a way around it either: it needs Gram (TON) crypto and an external wallet, so technically it
         targets a completely different audience. The official @PremiumBot accepts only Visa/Mastercard. A bot that
         takes local payment is what fills that gap.
       </p>
@@ -537,6 +540,7 @@ function EnBody() {
         <Link href="/blog/telegram-stars-xavfsizmi">safety criteria</Link>.
       </p>
 
+      <GramNote locale="en" />
       <Sources
         label="Sources"
         items={[
@@ -582,7 +586,7 @@ const uzFaq = [
   {
     question: "Fragment orqali olsam bo‘ladimi?",
     answer:
-      "Texnik jihatdan mumkin, lekin Fragment TON kriptovalyutasi va tashqi hamyon talab qiladi. O‘zbekiston kartasi bilan to‘lamoqchi bo‘lsangiz, bu yo‘l ishlamaydi.",
+      "Texnik jihatdan mumkin, lekin Fragment Gram (TON) kriptovalyutasi va tashqi hamyon talab qiladi. O‘zbekiston kartasi bilan to‘lamoqchi bo‘lsangiz, bu yo‘l ishlamaydi.",
   },
   {
     question: "Eng kichik paket qancha?",
@@ -634,7 +638,7 @@ const ruFaq = [
   {
     question: "Можно ли купить через Fragment?",
     answer:
-      "Технически да, но Fragment требует криптовалюту TON и внешний кошелёк. Если вы платите узбекской картой, этот путь не сработает.",
+      "Технически да, но Fragment требует криптовалюту Gram (TON) и внешний кошелёк. Если вы платите узбекской картой, этот путь не сработает.",
   },
   {
     question: "Какой минимальный пакет?",
@@ -686,7 +690,7 @@ const enFaq = [
   {
     question: "Can I buy through Fragment?",
     answer:
-      "Technically yes, but Fragment requires TON crypto and an external wallet. If you are paying with an Uzbek card, that route does not work.",
+      "Technically yes, but Fragment requires Gram (TON) crypto and an external wallet. If you are paying with an Uzbek card, that route does not work.",
   },
   {
     question: "What is the smallest package?",
@@ -709,7 +713,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-08-02",
-  dateModified: "2026-10-20",
+  dateModified: "2026-10-22",
   keywords: [
     "ozbekistonda telegram stars sotib olish",
     "uzbekistanda stars olish",

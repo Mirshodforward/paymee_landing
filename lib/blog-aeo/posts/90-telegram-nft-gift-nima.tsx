@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { NftGiftMarketBoard } from "@/components/blog/nft-gift-market-board";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
 import { CompareTable, InlineCta, KeyFacts, No, Sources, Toc, Yes } from "@/components/blog/aeo-blocks";
@@ -112,6 +113,7 @@ function UzBody() {
       <h2 id="seriya">10 ta NFT blog seriyasi</h2>
       <NftGiftSeriesNav locale="uz" />
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
@@ -146,6 +148,7 @@ function RuBody() {
       </p>
       <NftGiftMarketBoard locale="ru" />
       <NftGiftSeriesNav locale="ru" />
+      <GramNote locale="ru" />
     </>
   );
 }
@@ -280,6 +283,7 @@ function EnBody() {
         <Link href="/blog/telegram-gift-havolasini-tekshirish">checking a gift link before buying</Link>.
       </p>
 
+      <GramNote locale="en" />
       <Sources
         label="Sources"
         items={[
@@ -309,7 +313,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-07-29",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram nft",
     "telegram nft gift",

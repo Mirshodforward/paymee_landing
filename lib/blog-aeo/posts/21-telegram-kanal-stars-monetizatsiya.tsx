@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { Toc, InfoGrid, InfoCard, InlineCta, KeyFacts, Steps, Step, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -142,12 +143,13 @@ function UzBody() {
         «Telegram ekotizimi» maqolasida yoritilgan.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "Stars va monetizatsiya" },
           { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "texnik hujjat" },
-          { href: "https://fragment.com", label: "fragment.com", note: "Stars ↔ TON chiqarish" },
+          { href: "https://fragment.com", label: "fragment.com", note: "Stars ↔ Gram (TON) chiqarish" },
         ]}
       />
     </>
@@ -274,12 +276,13 @@ function RuBody() {
         «Экосистема Telegram».
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
           { href: "https://telegram.org/blog/telegram-stars", label: "telegram.org/blog/telegram-stars", note: "Stars и монетизация" },
           { href: "https://core.telegram.org/api/stars", label: "core.telegram.org/api/stars", note: "техническая документация" },
-          { href: "https://fragment.com", label: "fragment.com", note: "вывод Stars ↔ TON" },
+          { href: "https://fragment.com", label: "fragment.com", note: "вывод Stars ↔ Gram (TON)" },
         ]}
       />
     </>
@@ -291,7 +294,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "howto",
   datePublished: "2026-06-29",
-  dateModified: "2026-06-29",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram kanal monetizatsiya",
     "telegram stars monetizatsiya",

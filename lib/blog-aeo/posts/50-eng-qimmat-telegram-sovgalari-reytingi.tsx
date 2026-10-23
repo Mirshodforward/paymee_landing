@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { Toc, InfoGrid, InfoCard, InlineCta, KeyFacts, Sources } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
 
@@ -87,6 +88,7 @@ function UzBody() {
         <Link href="/blog/telegram-gift-sotish">«Sovg‘ani sotish mumkinmi»</Link> maqolasida.
       </p>
 
+      <GramNote locale="uz" />
       <Sources
         label="Manbalar"
         items={[
@@ -179,6 +181,7 @@ function RuBody() {
         <Link href="/blog/telegram-gift-sotish">«Можно ли продать подарок»</Link>.
       </p>
 
+      <GramNote locale="ru" />
       <Sources
         label="Источники"
         items={[
@@ -195,7 +198,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-07-05",
-  dateModified: "2026-07-05",
+  dateModified: "2026-10-22",
   keywords: [
     "eng qimmat telegram sovgalari",
     "telegram gift narxi rekord",

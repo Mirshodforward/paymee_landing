@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { GramNote } from "./_gram-note";
 import { NftGiftSeriesNav } from "@/components/blog/nft-gift-series-nav";
 import { KeyFacts, Notice, Step, Steps } from "@/components/blog/aeo-blocks";
 import type { AeoPost } from "@/lib/blog-aeo/types";
@@ -89,6 +90,7 @@ function UzBody() {
       </ul>
 
       <NftGiftSeriesNav locale="uz" />
+      <GramNote locale="uz" />
     </>
   );
 }
@@ -176,6 +178,7 @@ function RuBody() {
       </ul>
 
       <NftGiftSeriesNav locale="ru" />
+      <GramNote locale="ru" />
     </>
   );
 }
@@ -231,6 +234,7 @@ function EnBody() {
       </p>
 
       <NftGiftSeriesNav locale="en" />
+      <GramNote locale="en" />
     </>
   );
 }
@@ -302,7 +306,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "howto",
   datePublished: "2026-07-26",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-22",
   keywords: [
     "telegram gift sell",
     "telegram nft sell",
