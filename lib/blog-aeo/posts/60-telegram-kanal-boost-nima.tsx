@@ -65,8 +65,8 @@ function UzBody() {
         </li>
       </KeyFacts>
       <p>
-        Giveaway’ning o‘zi qanday ishlashi haqida{" "}
-        «Premium giveaway» maqolasida batafsil.
+        Giveaway’ning o‘zi qanday ishlashi haqida — <Link href="/blog/telegram-premium-bepul-olish-haqiqat#giveaway">rasmiy boost giveaway</Link> bo‘limida; har bir daraja
+        aniq nimani ochishi — <Link href="/blog/telegram-boost-darajalari">boost darajalari jadvalida</Link>.
       </p>
 
       <h2 id="kimga">Kanal boost kimga foydali?</h2>
@@ -162,8 +162,8 @@ function RuBody() {
         </li>
       </KeyFacts>
       <p>
-        Как работает сам giveaway — подробно в статье{" "}
-        «Premium giveaway».
+        Как работает сам giveaway — в разделе <Link href="/blog/telegram-premium-bepul-olish-haqiqat#giveaway">официальный boost-giveaway</Link>; что именно открывает
+        каждый уровень — в <Link href="/blog/telegram-boost-darajalari">таблице уровней буста</Link>.
       </p>
 
       <h2 id="kimga">Кому полезен буст канала?</h2>
@@ -202,7 +202,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "howto",
   datePublished: "2026-07-05",
-  dateModified: "2026-07-05",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram boost nima",
     "kanal boost qilish",

@@ -37,6 +37,10 @@ function UzBody() {
         <li>Giveaway o‘tkazish huquqi (ma’lum darajadan)</li>
         <li>Vizual ajratish (rang, belgilar)</li>
       </KeyFacts>
+      <p>
+        Har bir daraja aniq nimani ochishi (story, reaksiya, rang, emoji status, fon) —{" "}
+        <Link href="/blog/telegram-boost-darajalari">boost darajalari jadvali</Link>.
+      </p>
       <h2 id="oshirish">Reytingni tez oshirish</h2>
       <ul>
         <li>
@@ -70,7 +74,7 @@ function RuBody() {
 
 const faqUz = [
   { question: "Kanal reytingi nima?", answer: "Boost asosidagi level — Telegram kanal profilidagi daraja." },
-  { question: "Level nima beradi?", answer: "Stories, giveaway, qo‘shimcha limitlar — darajaga qarab." },
+  { question: "Level nima beradi?", answer: "Darajaga teng miqdorda kuniga story va maxsus reaksiya, keyin ranglar, logotip, emoji status va fon — to‘liq jadval «boost darajalari» maqolasida." },
   { question: "Reyting qanday oshadi?", answer: "Ko‘proq boost: rasmiy yoki ijarа orqali." },
   { question: "Boost tugasa level tushadimi?", answer: "Ha, faol boost kamayganda daraja pasayishi mumkin." },
   { question: "Obunachi soni levelga ta’sir qiladimi?", answer: "Asosiy ko‘rsatkich — boost; obunachi alohida metrika." },
@@ -86,7 +90,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "info",
   datePublished: "2026-07-28",
-  dateModified: "2026-07-28",
+  dateModified: "2026-10-23",
   keywords: ["telegram kanal reytingi", "kanal level telegram", "telegram boost level", "kanal darajasi"],
   locales: {
     uz: {
