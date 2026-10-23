@@ -136,7 +136,7 @@ function UzBody() {
       <p>
         Rasmiy e’londa aytilishicha, <b>qabul qiluvchi</b> yulduzlarni bir bosishda qaytarib berishi mumkin. Ya’ni
         qaytarish qarori ham o‘shaning ixtiyorida — Telegram uni majburlamaydi va uchinchi tomon xizmatlari bu
-        pulni qaytara olmaydi.
+        pulni qaytara olmaydi. Boshqa holatlarda Stars qaytadimi — <Link href="/blog/telegram-stars-qaytarib-olish">Telegram Stars refund qoidalari</Link>.
       </p>
       <KeyFacts label="Shuning uchun">
         <li>Katta summali pulli xabarni yuborishdan oldin javob sizga qanchalik zarurligini o‘ylab ko‘ring.</li>
@@ -294,7 +294,8 @@ function RuBody() {
       </p>
       <p>
         В официальном анонсе сказано, что <b>получатель</b> может вернуть звёзды одним нажатием. То есть решение о
-        возврате тоже за ним — Telegram его не обязывает, и сторонние сервисы эти деньги вернуть не могут.
+        возврате тоже за ним — Telegram его не обязывает, и сторонние сервисы эти деньги вернуть не могут. В каких ещё
+        случаях Stars возвращаются — <Link href="/blog/telegram-stars-qaytarib-olish">правила возврата Telegram Stars</Link>.
       </p>
       <KeyFacts label="Поэтому">
         <li>Перед дорогим платным сообщением подумайте, насколько вам нужен ответ.</li>
@@ -417,7 +418,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "problem",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram xabar yuborish uchun stars so‘rayapti",
     "telegramda yozish pullikmi",

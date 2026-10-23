@@ -63,7 +63,8 @@ function UzBody() {
         Diqqat: Telegram qoidalariga ko‘ra Stars va ular orqali sotib olingan mahsulotlar Telegram tomonidan
         qaytarilmaydi (final sale). Lekin vositachi xizmat — masalan StarsPaymee — texnik sabab bilan yetkazib
         berolmasa, o‘z navbatida to‘lovni to‘liq qaytaradi. Ishonchlilik belgilarini{" "}
-        <Link href="/blog/starspaymee-ishonchli-xavfsizmi">«StarsPaymee ishonchlimi?»</Link> maqolasida ko‘ring.
+        <Link href="/blog/starspaymee-ishonchli-xavfsizmi">«StarsPaymee ishonchlimi?»</Link> maqolasida ko‘ring. Telegram ichida
+        sarflangan Stars (bot, pullik xabar, auksion) qaytariladimi — <Link href="/blog/telegram-stars-qaytarib-olish">Stars refund qoidalari</Link>.
       </p>
 
       <Sources
@@ -135,7 +136,8 @@ function RuBody() {
         Важно: по правилам Telegram сами Stars и купленные через них товары не возвращаются Telegram (final sale). Но
         сервис-посредник, например StarsPaymee, при невозможности доставки по техпричине возвращает оплату полностью.
         Признаки надёжности — в статье{" "}
-        <Link href="/blog/starspaymee-ishonchli-xavfsizmi">«Надёжен ли StarsPaymee?»</Link>.
+        <Link href="/blog/starspaymee-ishonchli-xavfsizmi">«Надёжен ли StarsPaymee?»</Link>. Возвращаются ли Stars, потраченные
+        внутри Telegram (бот, платное сообщение, аукцион) — <Link href="/blog/telegram-stars-qaytarib-olish">правила возврата Stars</Link>.
       </p>
 
       <Sources
@@ -154,7 +156,7 @@ export const post: AeoPost = {
   category: "Telegram",
   type: "problem",
   datePublished: "2026-06-12",
-  dateModified: "2026-06-12",
+  dateModified: "2026-10-23",
   keywords: [
     "telegram stars kelmadi",
     "stars kelmadi nima qilish",
