@@ -29,7 +29,10 @@ function UzBody() {
         <InfoCard emoji="📱" title="4. Mini App xaridlari">Mini App’lardagi ichki kontent va funksiyalar uchun to‘lov.</InfoCard>
         <InfoCard emoji="✉️" title="5. Paid messages">Kontaktda bo‘lmaganlardan keladigan xabarlar uchun narx belgilash.</InfoCard>
         <InfoCard emoji="😀" title="6. Premium emoji">Maxsus animatsiyali emoji’lardan foydalanish.</InfoCard>
-        <InfoCard emoji="👍" title="7. Star Reactions">Postga yulduzli reaksiya — muallifga to‘g‘ridan-to‘g‘ri daromad.</InfoCard>
+        <InfoCard emoji="👍" title="7. Star Reactions">
+          Postga yulduzli reaksiya — muallifga to‘g‘ridan-to‘g‘ri daromad. Batafsil —{" "}
+          <Link href="/blog/telegram-star-reaksiyalari">Star reaksiyalari</Link>.
+        </InfoCard>
         <InfoCard emoji="📺" title="8. Pulli kontent (paid media)">Kanal post, video yoki fayllarni pulli qilish.</InfoCard>
         <InfoCard emoji="🔁" title="9. Pulli obuna">Kanal yoki kontentga Stars asosidagi obuna.</InfoCard>
         <InfoCard emoji="🚀" title="10. Kanalni boost qilish">Kanal darajasini oshirishga hissa qo‘shish.</InfoCard>
@@ -117,7 +120,10 @@ function RuBody() {
         <InfoCard emoji="📱" title="4. Покупки в Mini App">Оплата контента и функций внутри Mini App.</InfoCard>
         <InfoCard emoji="✉️" title="5. Paid messages">Плата за сообщения от тех, кого нет в контактах.</InfoCard>
         <InfoCard emoji="😀" title="6. Премиум-эмодзи">Использование эксклюзивных анимированных эмодзи.</InfoCard>
-        <InfoCard emoji="👍" title="7. Star Reactions">Звёздная реакция на пост — прямой доход автору.</InfoCard>
+        <InfoCard emoji="👍" title="7. Star Reactions">
+          Звёздная реакция на пост — прямой доход автору. Подробнее —{" "}
+          <Link href="/blog/telegram-star-reaksiyalari">Star-реакции</Link>.
+        </InfoCard>
         <InfoCard emoji="📺" title="8. Платный контент (paid media)">Сделать посты, видео или файлы платными.</InfoCard>
         <InfoCard emoji="🔁" title="9. Платная подписка">Подписка на канал/контент на основе Stars.</InfoCard>
         <InfoCard emoji="🚀" title="10. Буст канала">Вклад в повышение уровня канала.</InfoCard>
@@ -170,7 +176,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "info",
   datePublished: "2026-06-18",
-  dateModified: "2026-06-18",
+  dateModified: "2026-10-25",
   keywords: [
     "telegram stars bilan nima qilish",
     "telegram stars nima uchun kerak",

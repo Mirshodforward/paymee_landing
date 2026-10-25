@@ -49,7 +49,8 @@ function UzBody() {
           <Link href="/blog/telegram-pullik-kanal-stars-obuna">pullik kanal qo‘llanmasi</Link>.
         </InfoCard>
         <InfoCard emoji="👍" title="3. Star Reactions">
-          Obunachi postingizga yulduzli reaksiya bosadi — har bir reaksiya to‘g‘ridan-to‘g‘ri daromad.
+          Obunachi postingizga yulduzli reaksiya bosadi — har bir reaksiya to‘g‘ridan-to‘g‘ri daromad. Yoqish va qoidalar —{" "}
+          <Link href="/blog/telegram-star-reaksiyalari">Star reaksiyalari qo‘llanmasi</Link>.
         </InfoCard>
         <InfoCard emoji="✉️" title="4. Pulli xabarlar">
           Bot yoki shaxsiy hisobda kelgan xabarlar uchun Stars’da narx belgilaysiz.
@@ -201,7 +202,8 @@ function RuBody() {
           <Link href="/blog/telegram-pullik-kanal-stars-obuna">руководство по платному каналу</Link>.
         </InfoCard>
         <InfoCard emoji="👍" title="3. Star Reactions">
-          Подписчик ставит звёздную реакцию на пост — каждая реакция это прямой доход.
+          Подписчик ставит звёздную реакцию на пост — каждая реакция это прямой доход. Как включить и правила —{" "}
+          <Link href="/blog/telegram-star-reaksiyalari">руководство по Star-реакциям</Link>.
         </InfoCard>
         <InfoCard emoji="✉️" title="4. Платные сообщения">
           В боте или личке задаёте цену в Stars за входящие сообщения.
@@ -298,7 +300,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "howto",
   datePublished: "2026-06-29",
-  dateModified: "2026-10-23",
+  dateModified: "2026-10-25",
   keywords: [
     "telegram kanal monetizatsiya",
     "telegram stars monetizatsiya",

@@ -126,6 +126,8 @@ import { post as p192 } from "./posts/192-telegram-stars-qaytarib-olish";
 import { post as p193 } from "./posts/193-telegram-boost-darajalari";
 // 2026-10-23: Premium muddatini uzaytirish — faol obuna ustiga qo'shilmaydi (bot qoidasi)
 import { post as p194 } from "./posts/194-telegram-premium-muddatini-uzaytirish";
+// 2026-10-25: Star reaksiyalari — yoqish, daromad, maxfiylik, so'mdagi narx
+import { post as p195 } from "./posts/195-telegram-star-reaksiyalari";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -142,7 +144,7 @@ export const aeoPosts: AeoPost[] = [
   p161, p163, p164,
   p165, p166, p167, p168, p169,
   p170, p171, p172, p173, p175, p176,
-  p179, p180, p181, p182, p183, p184, p185, p186, p187, p188, p189, p190, p191, p192, p193, p194,
+  p179, p180, p181, p182, p183, p184, p185, p186, p187, p188, p189, p190, p191, p192, p193, p194, p195,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
