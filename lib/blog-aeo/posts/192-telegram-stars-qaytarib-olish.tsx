@@ -119,7 +119,7 @@ function UzBody() {
           [<strong key="d">Sovg‘a auksionida yutqazdingiz yoki chetlatildingiz</strong>, "Ha, avtomatik", "Telegram — bid chetlatilganda yoki barcha sovg‘alar tarqatilgach"],
           [<strong key="e">Sovg‘a xarid taklifi rad etildi yoki muddati tugadi</strong>, "Ha, darhol", "Telegram — rezerv qilingan Stars avtomatik qaytadi"],
           [<strong key="f">Kanal yoki bot obunasi</strong>, "Yo‘q", "Bekor qilish faqat keyingi yangilanishni to‘xtatadi"],
-          [<strong key="g">Sovg‘a yubordingiz</strong>, "Yo‘q", "Qabul qiluvchi uni Stars’ga convert qilishi mumkin — asl narxdan kam"],
+          [<strong key="g">Sovg‘a yubordingiz</strong>, "Yo‘q", "Qabul qiluvchi 7 kun ichida Stars’ga aylantirishi mumkin — narxga teng yoki kam"],
           [<strong key="h">Stars sotib oldingiz (App Store, Google Play, Fragment, reseller)</strong>, "Yo‘q", "Yetkazilgach yakuniy; do‘kon refundi — xavfli (quyida)"],
           [<strong key="i">Reseller’ga to‘ladingiz, Stars kelmadi</strong>, "Ha — texnik sabab bo‘lsa", "Sotuvchi — StarsPaymee’da to‘liq, to‘lagan usulingizda"],
         ]}
@@ -181,7 +181,7 @@ function UzBody() {
           etilsa yoki muddati tugasa — «your full payment is instantly refunded». Qabul qilinsa, sovg‘a sizga o‘tadi.
         </InfoCard>
         <InfoCard emoji="🎁" title="Yuborilgan sovg‘a">
-          Qaytarilmaydi. Qabul qiluvchi oddiy sovg‘ani Stars’ga convert qilishi mumkin — asl narxdan kam summa;
+          Qaytarilmaydi. Qabul qiluvchi oddiy sovg‘ani 7 kun ichida Stars’ga aylantirishi mumkin — narxga teng yoki kamroq summa;
           qanday qilinadi — <Link href="/blog/telegram-gift-stars-ga-aylantirish">sovg‘ani Stars’ga qaytarish</Link>.
           Auksionda olingan sovg‘alar convert qilinmaydi.
         </InfoCard>
@@ -331,7 +331,7 @@ function RuBody() {
           [<strong key="d">Проиграли или выбыли на аукционе подарков</strong>, "Да, автоматически", "Telegram — при выбывании ставки или после раздачи всех подарков"],
           [<strong key="e">Предложение о покупке подарка отклонено или истекло</strong>, "Да, сразу", "Telegram — зарезервированные Stars возвращаются автоматически"],
           [<strong key="f">Подписка на канал или бота</strong>, "Нет", "Отмена лишь останавливает следующее продление"],
-          [<strong key="g">Отправили подарок</strong>, "Нет", "Получатель может конвертировать его в Stars — меньше исходной цены"],
+          [<strong key="g">Отправили подарок</strong>, "Нет", "Получатель может за 7 дней конвертировать его в Stars — по цене или дешевле"],
           [<strong key="h">Купили Stars (App Store, Google Play, Fragment, реселлер)</strong>, "Нет", "После доставки окончательно; возврат через магазин — рискованно (ниже)"],
           [<strong key="i">Заплатили реселлеру, Stars не пришли</strong>, "Да — при технической причине", "Продавец — в StarsPaymee полностью, тем же способом"],
         ]}
@@ -392,7 +392,7 @@ function RuBody() {
           переходит к вам.
         </InfoCard>
         <InfoCard emoji="🎁" title="Отправленный подарок">
-          Не возвращается. Получатель может конвертировать обычный подарок в Stars — на сумму меньше исходной цены;
+          Не возвращается. Получатель может за 7 дней конвертировать обычный подарок в Stars — на сумму, равную цене или меньше;
           как это сделать — <Link href="/blog/telegram-gift-stars-ga-aylantirish">вернуть подарок в Stars</Link>.
           Подарки с аукциона не конвертируются.
         </InfoCard>
@@ -544,7 +544,7 @@ function EnBody() {
           [<strong key="d">You lost or were knocked out in a gift auction</strong>, "Yes, automatically", "Telegram — when the bid is removed or after all gifts are awarded"],
           [<strong key="e">A gift purchase offer was declined or expired</strong>, "Yes, instantly", "Telegram — the reserved Stars come back automatically"],
           [<strong key="f">A channel or bot subscription</strong>, "No", "Cancelling only stops the next renewal"],
-          [<strong key="g">You sent a gift</strong>, "No", "The recipient can convert it to Stars — for less than the original price"],
+          [<strong key="g">You sent a gift</strong>, "No", "The recipient can convert it to Stars within 7 days — for the price or less"],
           [<strong key="h">You bought Stars (App Store, Google Play, Fragment, a reseller)</strong>, "No", "Final once delivered; a store refund is risky (below)"],
           [<strong key="i">You paid a reseller and the Stars did not arrive</strong>, "Yes — for a technical reason", "The seller — at StarsPaymee in full, by the same method"],
         ]}
@@ -607,7 +607,7 @@ function EnBody() {
           transferred to you.
         </InfoCard>
         <InfoCard emoji="🎁" title="A gift you sent">
-          Not refundable. The recipient can convert a regular gift into Stars — for less than the original price; how
+          Not refundable. The recipient can convert a regular gift into Stars within 7 days — for the price or less; how
           — <Link href="/blog/telegram-gift-stars-ga-aylantirish">converting a gift to Stars</Link>. Gifts won at
           auction cannot be converted.
         </InfoCard>
@@ -856,7 +856,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "problem",
   datePublished: "2026-10-23",
-  dateModified: "2026-10-23",
+  dateModified: "2026-10-26",
   keywords: [
     "telegram stars qaytarib olish",
     "telegram stars refund",
