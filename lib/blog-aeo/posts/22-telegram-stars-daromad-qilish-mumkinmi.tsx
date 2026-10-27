@@ -112,6 +112,11 @@ function UzBody() {
         <Link href="/blog/toncoin-endi-gram">«Toncoin endi Gram» maqolasida</Link> ko‘ring.
       </p>
 
+      <p>
+        Kanal topgan Stars’ni shu kanal reklamasiga ham sarflash mumkin — reklamada 1 Star = 0,02 USD kredit; qachon
+        foydali — <Link href="/blog/telegram-ads-stars-sarflash">Stars’ni Telegram Ads’ga sarflash yoki yechib olish</Link>.
+      </p>
+
       <h2 id="xato">Keng tarqalgan tushunmovchiliklar</h2>
       <ul>
         <li>
@@ -236,6 +241,11 @@ function RuBody() {
         <Link href="/blog/toncoin-endi-gram">«Toncoin теперь Gram»</Link>.
       </p>
 
+      <p>
+        Заработанные каналом Stars можно потратить и на рекламу этого канала — в рекламе 1 Star = 0,02 USD кредита;
+        когда это выгоднее — <Link href="/blog/telegram-ads-stars-sarflash">Stars канала на Telegram Ads: вывести или в рекламу</Link>.
+      </p>
+
       <h2 id="xato">Частые заблуждения</h2>
       <ul>
         <li>
@@ -271,7 +281,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "info",
   datePublished: "2026-06-29",
-  dateModified: "2026-10-22",
+  dateModified: "2026-10-27",
   keywords: [
     "telegram stars daromad",
     "telegram stars orqali pul ishlash",

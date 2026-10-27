@@ -270,6 +270,11 @@ function UzBody() {
         </li>
       </KeyFacts>
 
+      <p>
+        Kanal topgan Stars’ni shu kanal reklamasiga ham sarflash mumkin — reklamada 1 Star = 0,02 USD kredit; qachon
+        foydali — <Link href="/blog/telegram-ads-stars-sarflash">Stars’ni Telegram Ads’ga sarflash yoki yechib olish</Link>.
+      </p>
+
       <h2 id="stars-yoq">Obunachida Stars bo‘lmasa</h2>
       <p>
         Obunachilaringizning bir qismida Stars bo‘lmaydi — va O‘zbekiston kartasi bilan Telegram ichida olish qiyin.
@@ -491,6 +496,11 @@ function RuBody() {
           <b>Срок и налоги:</b> заработанные Stars действуют 3 года; налоги — на авторе.
         </li>
       </KeyFacts>
+
+      <p>
+        Заработанные каналом Stars можно потратить и на рекламу этого канала — в рекламе 1 Star = 0,02 USD кредита;
+        когда это выгоднее — <Link href="/blog/telegram-ads-stars-sarflash">Stars канала на Telegram Ads: вывести или в рекламу</Link>.
+      </p>
 
       <h2 id="stars-yoq">Если у подписчика нет Stars</h2>
       <p>
@@ -714,6 +724,11 @@ function EnBody() {
         </li>
       </KeyFacts>
 
+      <p>
+        Stars your channel earned can also pay for ads for that channel — 1 Star = $0.02 of ad credit; when it pays off —{" "}
+        <Link href="/blog/telegram-ads-stars-sarflash">channel Stars on Telegram Ads: withdraw or reinvest</Link>.
+      </p>
+
       <h2 id="stars-yoq">If a subscriber has no Stars</h2>
       <p>
         Some of your subscribers will not have Stars — and buying them inside Telegram with an Uzbek card is hard.
@@ -908,7 +923,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "howto",
   datePublished: "2026-10-23",
-  dateModified: "2026-10-23",
+  dateModified: "2026-10-27",
   keywords: [
     "telegram pullik kanal",
     "pullik kanal ochish",

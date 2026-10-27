@@ -187,6 +187,11 @@ function UzBody() {
         <Link href="/blog/telegram-kanal-stars-monetizatsiya">kanalni Stars bilan monetizatsiya qilish</Link>.
       </p>
 
+      <p>
+        Kanal topgan Stars’ni shu kanal reklamasiga ham sarflash mumkin — reklamada 1 Star = 0,02 USD kredit; qachon
+        foydali — <Link href="/blog/telegram-ads-stars-sarflash">Stars’ni Telegram Ads’ga sarflash yoki yechib olish</Link>.
+      </p>
+
       <h2 id="maslahat">Reaksiyalarni ko‘paytirish — 4 maslahat</h2>
       <KeyFacts label="Amaliy">
         <li>
@@ -381,6 +386,11 @@ function RuBody() {
         <Link href="/blog/telegram-kanal-stars-monetizatsiya">монетизация канала через Stars</Link>.
       </p>
 
+      <p>
+        Заработанные каналом Stars можно потратить и на рекламу этого канала — в рекламе 1 Star = 0,02 USD кредита;
+        когда это выгоднее — <Link href="/blog/telegram-ads-stars-sarflash">Stars канала на Telegram Ads: вывести или в рекламу</Link>.
+      </p>
+
       <h2 id="maslahat">Как получать больше реакций — 4 совета</h2>
       <KeyFacts label="Практика">
         <li>
@@ -570,6 +580,11 @@ function EnBody() {
         <Link href="/blog/telegram-pullik-kanal-stars-obuna#daromad">the “Income” section of the paid-channel article</Link>;
         reactions alongside other income methods —{" "}
         <Link href="/blog/telegram-kanal-stars-monetizatsiya">monetising a channel with Stars</Link>.
+      </p>
+
+      <p>
+        Stars your channel earned can also pay for ads for that channel — 1 Star = $0.02 of ad credit; when it pays off —{" "}
+        <Link href="/blog/telegram-ads-stars-sarflash">channel Stars on Telegram Ads: withdraw or reinvest</Link>.
       </p>
 
       <h2 id="maslahat">Getting more reactions — 4 tips</h2>
@@ -796,7 +811,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-10-25",
-  dateModified: "2026-10-25",
+  dateModified: "2026-10-27",
   keywords: [
     "telegram star reaksiya",
     "star reactions qanday yoqiladi",

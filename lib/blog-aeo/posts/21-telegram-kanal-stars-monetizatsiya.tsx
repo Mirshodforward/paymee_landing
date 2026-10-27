@@ -114,6 +114,11 @@ function UzBody() {
         moliyaviy aloqa ochadi.
       </p>
 
+      <p>
+        Kanal topgan Stars’ni shu kanal reklamasiga ham sarflash mumkin — reklamada 1 Star = 0,02 USD kredit; qachon
+        foydali — <Link href="/blog/telegram-ads-stars-sarflash">Stars’ni Telegram Ads’ga sarflash yoki yechib olish</Link>.
+      </p>
+
       <h2 id="pulga">Ishlab topilgan Stars’ni pulga qanday chiqariladi?</h2>
       <p>
         Kreator jamlagan Stars belgilangan chegaradan oshgach, ularni <strong>Fragment</strong> orqali TON
@@ -250,6 +255,11 @@ function RuBody() {
         </li>
       </KeyFacts>
 
+      <p>
+        Заработанные каналом Stars можно потратить и на рекламу этого канала — в рекламе 1 Star = 0,02 USD кредита;
+        когда это выгоднее — <Link href="/blog/telegram-ads-stars-sarflash">Stars канала на Telegram Ads: вывести или в рекламу</Link>.
+      </p>
+
       <h2 id="pulga">Как вывести заработанные Stars в деньги?</h2>
       <p>
         Когда автор накопит Stars сверх установленного порога, он конвертирует их в криптовалюту TON через{" "}
@@ -300,7 +310,7 @@ export const post: AeoPost = {
   category: "Biznes",
   type: "howto",
   datePublished: "2026-06-29",
-  dateModified: "2026-10-25",
+  dateModified: "2026-10-27",
   keywords: [
     "telegram kanal monetizatsiya",
     "telegram stars monetizatsiya",
