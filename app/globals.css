@@ -2868,6 +2868,37 @@ html:not(.v2-js) .v2 .rv {
   border-top: 1px solid var(--line);
   margin: 2em 0;
 }
+/* Kod bloklari (2026-10-29, 72-post curl namunasi): blok o‘z ichida aylanadi, sahifa siljimaydi */
+.v2 .prose-v2 pre {
+  margin: 1.2em 0;
+  padding: 14px 16px;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--mono2);
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.v2 .prose-v2 code {
+  font-family: var(--mono2);
+  font-size: 0.88em;
+  padding: 1px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  overflow-wrap: anywhere;
+}
+.v2 .prose-v2 pre code {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: inherit;
+  white-space: pre;
+  overflow-wrap: normal;
+}
 
 /* Qisqa javob (AnswerBox) — AEO uchun eng muhim blok */
 .v2 .answer-box {
