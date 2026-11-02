@@ -24,6 +24,7 @@ function RouteCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Avval Stars kerakmi", "Ha — balansda bo‘lishi shart", "Yo‘q — to‘g‘ridan-to‘g‘ri sovg‘a olinadi"],
         ["Karta talabi", "Stars xaridi uchun xorijiy karta", "UzCard, HUMO, Click, Payme, Uzum"],
         ["Anonim yuborish", "Ha", "Ha"],
+        ["Username’i yo‘q oluvchi", "Ha — profili orqali", "Ha — Telegram ID bilan"],
         ["Izoh qoldirish", "Ha", "Ha"],
         ["Qachon qulay", "Stars allaqachon bo‘lsa", "Stars yo‘q yoki so‘mda to‘lamoqchi bo‘lsangiz"],
       ],
@@ -35,6 +36,7 @@ function RouteCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Нужны ли Stars заранее", "Да — должны быть на балансе", "Нет — подарок берётся напрямую"],
         ["Требование к карте", "Для покупки Stars нужна зарубежная", "UzCard, HUMO, Click, Payme, Uzum"],
         ["Анонимная отправка", "Да", "Да"],
+        ["Получатель без username", "Да — через его профиль", "Да — по Telegram ID"],
         ["Комментарий", "Да", "Да"],
         ["Когда удобнее", "Если Stars уже есть", "Если Stars нет или платите в сумах"],
       ],
@@ -46,6 +48,7 @@ function RouteCompare({ locale }: { locale: "uz" | "ru" | "en" }) {
         ["Stars needed first", "Yes — they must be on the balance", "No — the gift is bought directly"],
         ["Card requirement", "A foreign card, to buy the Stars", "UzCard, HUMO, Click, Payme, Uzum"],
         ["Anonymous sending", "Yes", "Yes"],
+        ["Recipient with no username", "Yes — from their profile", "Yes — by Telegram ID"],
         ["Leaving a note", "Yes", "Yes"],
         ["When it suits", "When you already hold Stars", "When you have none or want to pay in so‘m"],
       ],
@@ -66,7 +69,7 @@ function UzAnswer() {
     <p>
       Telegram sovg‘asini yuborishning <b>ikki yo‘li</b> bor. <b>Telegram ichidan</b>: odamning profilini oching →
       «Sovg‘a yuborish» → sovg‘ani tanlang → hisobingizdagi Stars bilan to‘lang. <b>@StarsPaymee_bot orqali</b>:
-      Gifts bo‘limidan sovg‘ani tanlang, @username kiriting va so‘mda to‘lang — Stars’ni oldindan sotib olish shart
+      Gifts bo‘limidan sovg‘ani tanlang, @username (u bo‘lmasa — Telegram ID) kiriting va so‘mda to‘lang — Stars’ni oldindan sotib olish shart
       emas.
     </p>
   );
@@ -108,7 +111,9 @@ function UzBody() {
           Profil menyusida yoki chat oynasidagi sovg‘a belgisi orqali.
         </Step>
         <Step title="3. Katalogdan sovg‘ani tanlang">Har bir sovg‘aning yonida yulduz qiymati ko‘rsatilgan.</Step>
-        <Step title="4. Izoh yoki anonimlikni belgilang">Tabrik yozing yoki ismingizni yashiring.</Step>
+        <Step title="4. Izoh yoki anonimlikni belgilang">
+          Tabrik yozing yoki ismingizni yashiring — u profil mehmonlaridan yashiriladi, oluvchining o‘zi baribir ko‘radi.
+        </Step>
         <Step title="5. Stars bilan to‘lang">
           Balansda yetarli yulduz bo‘lishi kerak; yetmasa Telegram qo‘shimcha sotib olishni taklif qiladi.
         </Step>
@@ -130,6 +135,8 @@ function UzBody() {
         <Step title="2. Sovg‘ani tanlang">Katalogda TGS animatsiyasi va yulduz qiymati ko‘rinadi.</Step>
         <Step title="3. Qabul qiluvchini kiriting">
           Do‘stingizning @username’ini profildan nusxa olib qo‘ying — qo‘lda yozganda harf almashib ketadi.
+          Username’i yo‘q bo‘lsa, raqamli Telegram ID’sini yozing —{" "}
+          <Link href="/blog/telegram-id-orqali-sovga-yuborish">ID orqali sovg‘a yuborish</Link>.
         </Step>
         <Step title="4. Izoh yoki anonimlik">Tabrik izohi qoldiring yoki anonim yuborishni belgilang.</Step>
         <Step title="5. So‘mda to‘lang">UzCard, HUMO, Click, Payme, Uzum yoki Paynet.</Step>
@@ -152,7 +159,8 @@ function UzBody() {
           Upgrade qilingan, TON blokcheynidagi sovg‘alar. Narx shaffofligiga e’tibor bering.
         </InfoCard>
         <InfoCard emoji="🕵️" title="Anonim yuborish">
-          Ismingizni ko‘rsatmasdan yuborish — sirli tabrik uchun.
+          Yuboruvchi nomi profildagi sovg‘alar ro‘yxatida begonalarga ko‘rinmaydi; Telegram qoidasiga ko‘ra oluvchining
+          o‘zi kimdan kelganini ko‘radi.
         </InfoCard>
       </InfoGrid>
       <p>
@@ -179,7 +187,8 @@ function UzBody() {
       <h2 id="xatolar">Ko‘p uchraydigan xatolar</h2>
       <KeyFacts label="Yuborishdan oldin tekshiring">
         <li>
-          <b>Username xatosi</b> — sovg‘a aynan username bo‘yicha ketadi. Profildan nusxa oling, qo‘lda yozmang.
+          <b>Username yoki ID xatosi</b> — sovg‘a aynan siz yozgan username yoki Telegram ID bo‘yicha ketadi.
+          Username’ni profildan nusxa oling, ID raqamlarini bittalab tekshiring.
         </li>
         <li>
           <b>Balans yetmasligi</b> — Telegram ichidan yuborsangiz, avval Stars balansini tekshiring.
@@ -220,7 +229,7 @@ function RuAnswer() {
     <p>
       Подарок в Telegram можно отправить <b>двумя способами</b>. <b>Внутри Telegram</b>: откройте профиль человека
       → «Отправить подарок» → выберите подарок → оплатите звёздами с баланса. <b>Через @StarsPaymee_bot</b>:
-      выберите подарок в разделе Gifts, введите @username и оплатите в сумах — покупать Stars заранее не нужно.
+      выберите подарок в разделе Gifts, введите @username (или Telegram ID, если username нет) и оплатите в сумах — покупать Stars заранее не нужно.
     </p>
   );
 }
@@ -259,7 +268,9 @@ function RuBody() {
         <Step title="1. Откройте профиль человека">Через чат или список контактов.</Step>
         <Step title="2. Выберите «Отправить подарок»">В меню профиля или по значку подарка в чате.</Step>
         <Step title="3. Выберите подарок из каталога">Рядом с каждым указана стоимость в звёздах.</Step>
-        <Step title="4. Укажите комментарий или анонимность">Напишите поздравление или скройте своё имя.</Step>
+        <Step title="4. Укажите комментарий или анонимность">
+          Напишите поздравление или скройте своё имя — его не увидят посетители профиля, но получатель увидит.
+        </Step>
         <Step title="5. Оплатите звёздами">
           На балансе должно хватать Stars; если не хватает, Telegram предложит докупить.
         </Step>
@@ -280,7 +291,8 @@ function RuBody() {
         </Step>
         <Step title="2. Выберите подарок">В каталоге видно TGS-анимацию и стоимость в звёздах.</Step>
         <Step title="3. Введите получателя">
-          Скопируйте @username из профиля — при ручном наборе легко перепутать буквы.
+          Скопируйте @username из профиля — при ручном наборе легко перепутать буквы. Нет username —
+          введите числовой Telegram ID: <Link href="/blog/telegram-id-orqali-sovga-yuborish">подарок по ID</Link>.
         </Step>
         <Step title="4. Комментарий или анонимность">Оставьте поздравление или отправьте анонимно.</Step>
         <Step title="5. Оплатите в сумах">UzCard, HUMO, Click, Payme, Uzum или Paynet.</Step>
@@ -303,7 +315,8 @@ function RuBody() {
           Улучшенные подарки в блокчейне TON. Обращайте внимание на прозрачность цены.
         </InfoCard>
         <InfoCard emoji="🕵️" title="Анонимная отправка">
-          Без указания вашего имени — для загадочного поздравления.
+          Имя отправителя скрыто от посетителей профиля; по правилам Telegram сам получатель видит, от кого
+          подарок.
         </InfoCard>
       </InfoGrid>
       <p>
@@ -314,7 +327,8 @@ function RuBody() {
       <h2 id="xatolar">Частые ошибки</h2>
       <KeyFacts label="Проверьте перед отправкой">
         <li>
-          <b>Ошибка в username</b> — подарок уходит именно по нему. Копируйте из профиля, не набирайте вручную.
+          <b>Ошибка в username или ID</b> — подарок уходит именно по тому, что вы ввели. Username копируйте
+          из профиля, цифры ID сверяйте по одной.
         </li>
         <li>
           <b>Не хватает баланса</b> — при отправке внутри Telegram сначала проверьте баланс Stars.
@@ -354,7 +368,7 @@ function EnAnswer() {
     <p>
       There are <b>two ways</b> to send a Telegram gift. <b>Inside Telegram</b>: open the person’s profile → “Send
       a Gift” → pick one → pay with Stars from your balance. <b>Through @StarsPaymee_bot</b>: choose a gift in the
-      Gifts section, enter the @username and pay in so‘m — no need to buy Stars first.
+      Gifts section, enter the @username (or a Telegram ID if there is none) and pay in so‘m — no need to buy Stars first.
     </p>
   );
 }
@@ -394,7 +408,9 @@ function EnBody() {
         <Step title="1. Open the person’s profile">Through the chat or your contacts.</Step>
         <Step title="2. Choose “Send a Gift”">From the profile menu or the gift icon in the chat.</Step>
         <Step title="3. Pick a gift from the catalogue">Each one shows its price in Stars.</Step>
-        <Step title="4. Add a note or go anonymous">Write a greeting or hide your name.</Step>
+        <Step title="4. Add a note or go anonymous">
+          Write a greeting or hide your name — profile visitors won’t see it, but the recipient will.
+        </Step>
         <Step title="5. Pay with Stars">
           Your balance must cover it; if it does not, Telegram offers to top up.
         </Step>
@@ -415,7 +431,8 @@ function EnBody() {
         </Step>
         <Step title="2. Choose a gift">The catalogue shows the TGS animation and the price in Stars.</Step>
         <Step title="3. Enter the recipient">
-          Copy the @username from their profile — typing it by hand is how letters get swapped.
+          Copy the @username from their profile — typing it by hand is how letters get swapped. No username?
+          Enter their numeric Telegram ID — see <Link href="/blog/telegram-id-orqali-sovga-yuborish">sending a gift by ID</Link>.
         </Step>
         <Step title="4. Note or anonymity">Leave a greeting or send it anonymously.</Step>
         <Step title="5. Pay in so‘m">UzCard, HUMO, Click, Payme, Uzum or Paynet.</Step>
@@ -438,7 +455,8 @@ function EnBody() {
           Upgraded gifts on the TON blockchain. Watch the price transparency here.
         </InfoCard>
         <InfoCard emoji="🕵️" title="Anonymous sending">
-          Without showing your name — for a mystery greeting.
+          The sender’s name is hidden from profile visitors; under Telegram’s rules the recipient still sees who sent
+          it.
         </InfoCard>
       </InfoGrid>
       <p>
@@ -449,7 +467,8 @@ function EnBody() {
       <h2 id="xatolar">Common mistakes</h2>
       <KeyFacts label="Check before sending">
         <li>
-          <b>A wrong username</b> — the gift travels by username alone. Copy it from the profile; never type it.
+          <b>A wrong username or ID</b> — the gift goes exactly where you typed. Copy the username from the profile;
+          check the ID digits one by one.
         </li>
         <li>
           <b>Not enough balance</b> — when sending inside Telegram, check the Stars balance first.
@@ -493,7 +512,7 @@ const uzFaq = [
     question: "Sovg‘a yuborish uchun avval Stars sotib olish kerakmi?",
     answer: "Telegram ichidan yuborsangiz — ha. Bot orqali sovg‘a to‘g‘ridan-to‘g‘ri so‘mda olinadi, Stars kerak emas.",
   },
-  { question: "Anonim yuborish mumkinmi?", answer: "Ha, ikkala yo‘lda ham anonimlikni to‘lovdan oldin belgilaysiz." },
+  { question: "Anonim yuborish mumkinmi?", answer: "Ha, ikkala yo‘lda ham to‘lovdan oldin belgilanadi. Anonimlik yuboruvchi nomini profil mehmonlaridan yashiradi — oluvchining o‘zi kimdan kelganini ko‘radi." },
   {
     question: "Sovg‘aga tabrik izohi qo‘shsam bo‘ladimi?",
     answer: "Ha, izoh maydoni ikkala yo‘lda ham mavjud va u qabul qiluvchiga ko‘rinadi.",
@@ -523,7 +542,7 @@ const ruFaq = [
     question: "Нужно ли сначала купить Stars?",
     answer: "При отправке внутри Telegram — да. Через бота подарок покупается сразу в сумах, Stars не нужны.",
   },
-  { question: "Можно ли отправить анонимно?", answer: "Да, в обоих способах анонимность выбирается до оплаты." },
+  { question: "Можно ли отправить анонимно?", answer: "Да, в обоих способах — до оплаты. Анонимность скрывает имя отправителя от посетителей профиля; сам получатель видит, от кого подарок." },
   {
     question: "Можно ли добавить поздравление?",
     answer: "Да, поле комментария есть в обоих способах, и получатель его видит.",
@@ -553,7 +572,7 @@ const enFaq = [
     question: "Do I have to buy Stars first?",
     answer: "When sending inside Telegram, yes. Through the bot the gift is bought directly in so‘m, with no Stars needed.",
   },
-  { question: "Can it be sent anonymously?", answer: "Yes, anonymity is chosen before payment on both routes." },
+  { question: "Can it be sent anonymously?", answer: "Yes, on both routes it is chosen before payment. It hides the sender’s name from profile visitors; the recipient still sees who sent it." },
   {
     question: "Can I add a greeting?",
     answer: "Yes, both routes have a note field and the recipient sees it.",
@@ -578,7 +597,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "howto",
   datePublished: "2026-06-20",
-  dateModified: "2026-09-08",
+  dateModified: "2026-11-01",
   keywords: [
     "telegram gift",
     "telegram gift yuborish",
@@ -591,7 +610,7 @@ export const post: AeoPost = {
   howToSteps: [
     { name: "Botni oching", text: "@StarsPaymee_bot yoki Mini App’da «Gifts» bo‘limiga o‘ting." },
     { name: "Sovg‘ani tanlang", text: "Katalogdan sovg‘ani va uning yulduz qiymatini tanlang." },
-    { name: "Qabul qiluvchini kiriting", text: "Do‘stingizning @username’ini profildan nusxa olib kiriting." },
+    { name: "Qabul qiluvchini kiriting", text: "Do‘stingizning @username’ini profildan nusxa oling; username bo‘lmasa — Telegram ID raqamini yozing." },
     { name: "Izoh yoki anonimlik", text: "Tabrik izohi qoldiring yoki anonim yuborishni belgilang." },
     { name: "So‘mda to‘lang", text: "UzCard, HUMO, Click, Payme, Uzum yoki Paynet orqali." },
     { name: "Yetkazilganini tekshiring", text: "Buyurtma «bajarildi» holatiga o‘tadi va bildirishnoma keladi." },
@@ -608,7 +627,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Sovg‘a yuborasizmi?",
-      ctaBody: "@StarsPaymee_bot — katalogdan tanlang, @username kiriting va so‘mda to‘lang.",
+      ctaBody: "@StarsPaymee_bot — katalogdan tanlang, @username yoki Telegram ID kiriting va so‘mda to‘lang.",
       faq: uzFaq,
     },
     ru: {
@@ -622,7 +641,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Отправляете подарок?",
-      ctaBody: "@StarsPaymee_bot — выберите из каталога, введите @username и оплатите в сумах.",
+      ctaBody: "@StarsPaymee_bot — выберите из каталога, введите @username или Telegram ID и оплатите в сумах.",
       faq: ruFaq,
     },
     en: {
@@ -636,7 +655,7 @@ export const post: AeoPost = {
       Answer: EnAnswer,
       Body: EnBody,
       ctaHeading: "Sending a gift?",
-      ctaBody: "@StarsPaymee_bot — pick from the catalogue, enter an @username and pay in so‘m.",
+      ctaBody: "@StarsPaymee_bot — pick from the catalogue, enter an @username or a Telegram ID and pay in so‘m.",
       faq: enFaq,
     },
   },

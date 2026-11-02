@@ -151,7 +151,8 @@ function UzBody() {
       </Steps>
       <Notice label="Boshqa odamga olib berayotgan bo‘lsangiz">
         Username’ni o‘sha odamning o‘zi qo‘yishi kerak — siz uning akkauntini sozlay olmaysiz. Unga shu
-        maqolani yuboring; qo‘ygach, nomini sizga aytadi.
+        maqolani yuboring; qo‘ygach, nomini sizga aytadi. Stars emas, sovg‘a (gift) yubormoqchi bo‘lsangiz,
+        username shart emas — <Link href="/blog/telegram-id-orqali-sovga-yuborish">Telegram ID orqali yuborish</Link> mumkin.
       </Notice>
 
       <h2 id="botda">Botda username qanday tekshiriladi</h2>
@@ -331,7 +332,8 @@ function RuBody() {
       </Steps>
       <Notice label="Если покупаете другому человеку">
         Username должен задать он сам — настроить чужой аккаунт вы не можете. Отправьте ему эту статью;
-        когда задаст, пусть пришлёт имя.
+        когда задаст, пусть пришлёт имя. Если вы дарите не Stars, а подарок (gift), username не нужен —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">можно отправить по Telegram ID</Link>.
       </Notice>
 
       <h2 id="botda">Как бот проверяет username</h2>
@@ -513,7 +515,8 @@ function EnBody() {
       </Steps>
       <Notice label="If you are buying for someone else">
         The username has to be set by that person — you cannot change someone else’s account. Send them
-        this article; once set, they can tell you the name.
+        this article; once set, they can tell you the name. If you are sending a gift rather than Stars, no username
+        is needed — <Link href="/blog/telegram-id-orqali-sovga-yuborish">it can go by Telegram ID</Link>.
       </Notice>
 
       <h2 id="botda">How the bot checks the username</h2>
@@ -690,7 +693,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-10-15",
-  dateModified: "2026-10-15",
+  dateModified: "2026-11-01",
   keywords: [
     "telegram username qayerdan topiladi",
     "telegram username qanday qo‘yiladi",

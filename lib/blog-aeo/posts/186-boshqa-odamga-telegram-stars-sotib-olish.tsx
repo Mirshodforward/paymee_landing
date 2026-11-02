@@ -102,7 +102,8 @@ function UzBody() {
       <p>
         Qabul qiluvchidan kerak bo‘ladigan yagona narsa — uning <b>@username’i</b>. U yo‘q bo‘lsa,
         avval qo‘yishi kerak: <Link href="/blog/telegram-stars-username-qanday-topiladi">username qayerdan
-        topiladi va qanday qo‘yiladi</Link>.
+        topiladi va qanday qo‘yiladi</Link>. Sovg‘a (gift) uchun esa username shart emas —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">Telegram ID ham bo‘ladi</Link>.
       </p>
 
       <h2 id="qadamlar">Qadam-baqadam</h2>
@@ -263,7 +264,8 @@ function RuBody() {
       </InfoGrid>
       <p>
         От получателя нужно одно — его <b>@username</b>. Если его нет, сначала нужно задать:{" "}
-        <Link href="/blog/telegram-stars-username-qanday-topiladi">где найти и как задать username</Link>.
+        <Link href="/blog/telegram-stars-username-qanday-topiladi">где найти и как задать username</Link>. Для
+        подарка (gift) username не обязателен — <Link href="/blog/telegram-id-orqali-sovga-yuborish">подойдёт и Telegram ID</Link>.
       </p>
 
       <h2 id="qadamlar">Пошагово</h2>
@@ -422,7 +424,7 @@ function EnBody() {
       <p>
         The only thing you need from the recipient is their <b>@username</b>. If they have none, they set
         one first: <Link href="/blog/telegram-stars-username-qanday-topiladi">where to find and how to set a
-        username</Link>.
+        username</Link>. For a gift, no username is needed — <Link href="/blog/telegram-id-orqali-sovga-yuborish">a Telegram ID works too</Link>.
       </p>
 
       <h2 id="qadamlar">Step by step</h2>
@@ -654,7 +656,7 @@ export const post: AeoPost = {
   category: "Stars",
   type: "howto",
   datePublished: "2026-10-15",
-  dateModified: "2026-10-15",
+  dateModified: "2026-11-01",
   keywords: [
     "boshqa odamga stars olib berish",
     "do‘stga telegram stars sovg‘a qilish",

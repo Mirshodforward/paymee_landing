@@ -249,6 +249,10 @@ function UzBody() {
           Sovg‘a Premium talab qiladigan turdan bo‘lsa, uning profilida rozetka bo‘lishi shart.
         </Step>
       </Steps>
+      <p>
+        Oluvchida username yo‘qligi esa to‘siq emas: sovg‘ani uning raqamli Telegram ID’si bilan ham yuborish mumkin —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">ID orqali sovg‘a yuborish</Link>.
+      </p>
 
       <h2 id="otkazish">Mavjud kolleksion sovg‘ani o‘tkazishdagi cheklovlar</h2>
       <p>
@@ -450,6 +454,10 @@ function RuBody() {
           Если подарок из тех, что требуют Premium, значок в его профиле обязателен.
         </Step>
       </Steps>
+      <p>
+        А отсутствие username у получателя — не препятствие: подарок можно отправить и по его числовому Telegram ID —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">подарок по ID</Link>.
+      </p>
 
       <h2 id="otkazish">Ограничения при передаче коллекционного подарка</h2>
       <p>
@@ -611,7 +619,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "problem",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-11-01",
   keywords: [
     "telegram gift yuborilmayapti",
     "telegram sovg‘a yuborib bo‘lmayapti",

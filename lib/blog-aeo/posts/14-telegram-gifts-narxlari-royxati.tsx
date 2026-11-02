@@ -42,8 +42,9 @@ function UzBody() {
 
       <h2 id="sotib-olish">Sovg‘ani qanday sotib olish/yuborish mumkin?</h2>
       <p>
-        Sovg‘ani o‘zingizga sotib olishingiz yoki boshqa @username’ga yuborishingiz mumkin — anonim yoki tabrik izohi
-        bilan. Bosqichma-bosqich jarayon{" "}
+        Sovg‘ani o‘zingizga sotib olishingiz yoki boshqa odamga @username yoki{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">Telegram ID</Link> orqali yuborishingiz mumkin — anonim yoki
+        tabrik izohi bilan. Bosqichma-bosqich jarayon{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">«Gifts qanday yuboriladi» qo‘llanmasida</Link>{" "}
         yozilgan.
       </p>
@@ -126,7 +127,8 @@ function RuBody() {
 
       <h2 id="sotib-olish">Как купить/отправить подарок?</h2>
       <p>
-        Подарок можно купить себе или отправить на другой @username — анонимно или с поздравлением. Пошаговый процесс
+        Подарок можно купить себе или отправить другому человеку по @username или по{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">Telegram ID</Link> — анонимно или с поздравлением. Пошаговый процесс
         описан в{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">руководстве «Как отправить Gifts»</Link>.
       </p>
@@ -209,7 +211,8 @@ function EnBody() {
 
       <h2 id="sotib-olish">Buying and sending</h2>
       <p>
-        A gift can be bought for yourself or sent to another @username, anonymously or with a note. The step-by-step
+        A gift can be bought for yourself or sent to someone else by @username or{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish">Telegram ID</Link>, anonymously or with a note. The step-by-step
         process is in{" "}
         <Link href="/blog/telegram-gifts-qanday-yuboriladi-qollanma">the gift-sending guide</Link>.
       </p>
@@ -281,7 +284,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "info",
   datePublished: "2026-06-12",
-  dateModified: "2026-10-06",
+  dateModified: "2026-11-01",
   keywords: [
     "telegram gifts narxlari",
     "telegram sovga narxi",
@@ -301,7 +304,7 @@ export const post: AeoPost = {
       Answer: UzAnswer,
       Body: UzBody,
       ctaHeading: "Sovg‘a yubormoqchimisiz?",
-      ctaBody: "Botda katalogdan tanlang, so‘mda to‘lang — sovg‘a @username’ga yetkaziladi.",
+      ctaBody: "Botda katalogdan tanlang, so‘mda to‘lang — sovg‘a @username yoki Telegram ID bo‘yicha yetkaziladi.",
       faq: [
         {
           question: "So‘mdagi narx nimalardan tashkil topadi?",
@@ -347,7 +350,7 @@ export const post: AeoPost = {
       Answer: RuAnswer,
       Body: RuBody,
       ctaHeading: "Хотите отправить подарок?",
-      ctaBody: "Выберите в каталоге бота, оплатите в сумах — подарок доставится на @username.",
+      ctaBody: "Выберите в каталоге бота, оплатите в сумах — подарок доставится по @username или Telegram ID.",
       faq: [
         {
           question: "Из чего складывается цена в сумах?",

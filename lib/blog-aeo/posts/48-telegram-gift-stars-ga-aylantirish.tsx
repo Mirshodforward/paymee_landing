@@ -316,6 +316,11 @@ function UzBody() {
         Telegram’ni yangilab, sovg‘ani profildan ham, kelgan chatdan ham ochib ko‘ring — lekin bu yuqoridagi cheklovlarni
         olib tashlamaydi.
       </p>
+      <p>
+        Yana bir holat — sovg‘a <b>botdan</b> kelgan: Telegram Bot API qoidasiga ko‘ra bunday sovg‘ani oluvchi Stars’ga
+        aylantira olmaydi. StarsPaymee’da username’siz, Telegram ID orqali yuborilgan sovg‘a shunday kelishi mumkin —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish#yetkazish">qachon va nega</Link>.
+      </p>
 
       <h2 id="kolleksion">Kolleksion sovg‘a: sotish va komissiya</h2>
       <p>
@@ -530,6 +535,11 @@ function RuBody() {
         Обновите Telegram и откройте подарок и из профиля, и из чата, где он пришёл, — но эти ограничения так не
         снимаются.
       </p>
+      <p>
+        Ещё один случай — подарок пришёл <b>от бота</b>: по правилу Telegram Bot API такой подарок получатель не может
+        обменять на Stars. В StarsPaymee так может прийти подарок, отправленный по Telegram ID без username, —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish#yetkazish">когда и почему</Link>.
+      </p>
 
       <h2 id="kolleksion">Коллекционный подарок: продажа и комиссия</h2>
       <p>
@@ -740,6 +750,11 @@ function EnBody() {
       <p>
         Update Telegram and open the gift both from your profile and from the chat it came to — but that does not lift the
         limits above.
+      </p>
+      <p>
+        One more case — the gift came <b>from a bot</b>: under the Telegram Bot API rule, the receiver cannot convert such a
+        gift to Stars. At StarsPaymee a gift sent by Telegram ID, without a username, can arrive this way —{" "}
+        <Link href="/blog/telegram-id-orqali-sovga-yuborish#yetkazish">when and why</Link>.
       </p>
 
       <h2 id="kolleksion">Collectible gifts: selling and the fee</h2>
@@ -959,7 +974,7 @@ export const post: AeoPost = {
   category: "Gifts",
   type: "howto",
   datePublished: "2026-07-05",
-  dateModified: "2026-10-26",
+  dateModified: "2026-11-01",
   keywords: [
     "telegram gift stars ga aylantirish",
     "telegram sovg‘asini stars’ga aylantirish",
