@@ -145,6 +145,8 @@ import { post as p202 } from "./posts/202-telegram-stiker-xatosi-stars-akkaunt-h
 import { post as p203 } from "./posts/203-nft-sovgadan-imzoni-olib-tashlash";
 // 2026-11-06 (Avtoblogyoz): Telegram nomimdan xabar yuborilyapti: seans va botlarni tekshirish
 import { post as p204 } from "./posts/204-telegram-nomimdan-xabar-yuborilyapti";
+// 2026-11-06 (Avtoblogyoz): Telegram proksi ulash: qo‘shish, o‘chirish va operator nimani ko‘radi
+import { post as p205 } from "./posts/205-telegram-proksi-ulash-xavfsizmi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -169,6 +171,7 @@ export const aeoPosts: AeoPost[] = [
   p202,
   p203,
   p204,
+  p205,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
