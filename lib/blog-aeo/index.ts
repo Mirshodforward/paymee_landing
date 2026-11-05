@@ -139,6 +139,8 @@ import { post as p199 } from "./posts/199-fragment-verifikatsiya-shartmi-akkaunt
 import { post as p200 } from "./posts/200-auksiondan-olingan-raqamda-telegram-akkaunt";
 // 2026-11-06 (Avtoblogyoz): Telegram gift xarid taklifi kelmayapti: sabab va xaridor topish yo‘llari
 import { post as p201 } from "./posts/201-nft-gift-xarid-taklifi-kelmayapti";
+// 2026-11-06 (Avtoblogyoz): Telegram stiker xatosi: Stars balansi, Premium va sovg‘alarga xavf bormi?
+import { post as p202 } from "./posts/202-telegram-stiker-xatosi-stars-akkaunt-himoyasi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -160,6 +162,7 @@ export const aeoPosts: AeoPost[] = [
   p199,
   p200,
   p201,
+  p202,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
