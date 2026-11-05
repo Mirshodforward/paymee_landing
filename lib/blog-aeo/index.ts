@@ -135,6 +135,8 @@ import { post as p197 } from "./posts/197-telegram-id-orqali-sovga-yuborish";
 import { post as p198 } from "./posts/198-telegram-wallet-va-stars-farqi";
 // 2026-11-06 (Avtoblogyoz): Fragment’da verifikatsiya endi shart emasmi va nechta akkaunt ulash mumkin?
 import { post as p199 } from "./posts/199-fragment-verifikatsiya-shartmi-akkaunt-ulash";
+// 2026-11-06 (Avtoblogyoz): Sotib olingan raqamda eski Telegram akkaunt chiqdi: nima qilish kerak?
+import { post as p200 } from "./posts/200-auksiondan-olingan-raqamda-telegram-akkaunt";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -154,6 +156,7 @@ export const aeoPosts: AeoPost[] = [
   p179, p180, p181, p182, p183, p184, p185, p186, p187, p188, p189, p190, p191, p192, p193, p194, p195, p196, p197,
   p198,
   p199,
+  p200,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
