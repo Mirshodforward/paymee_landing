@@ -143,6 +143,8 @@ import { post as p201 } from "./posts/201-nft-gift-xarid-taklifi-kelmayapti";
 import { post as p202 } from "./posts/202-telegram-stiker-xatosi-stars-akkaunt-himoyasi";
 // 2026-11-06 (Avtoblogyoz): Sotishdan oldin NFT sovg‘adan imzoni olib tashlash: kim qiladi, necha Stars?
 import { post as p203 } from "./posts/203-nft-sovgadan-imzoni-olib-tashlash";
+// 2026-11-06 (Avtoblogyoz): Telegram nomimdan xabar yuborilyapti: seans va botlarni tekshirish
+import { post as p204 } from "./posts/204-telegram-nomimdan-xabar-yuborilyapti";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -166,6 +168,7 @@ export const aeoPosts: AeoPost[] = [
   p201,
   p202,
   p203,
+  p204,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
