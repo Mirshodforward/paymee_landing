@@ -161,6 +161,8 @@ import { post as p210 } from "./posts/210-gram-hamyon-kartasi-nft-sovga-dizayn";
 import { post as p211 } from "./posts/211-stars-yechish-gram-eksplorerda-tekshirish";
 // 2026-11-07 (Avtoblogyoz): Telegram «Money» bo‘limi va GRAM Wallet: Stars balansiga aloqasi bormi?
 import { post as p212 } from "./posts/212-telegram-money-bolimi-gram-wallet";
+// 2026-11-07 (Avtoblogyoz): +888 akkauntga kirishga urinishyapti: Stars va Premium’ni qanday asrayman
+import { post as p213 } from "./posts/213-888-akkauntga-kirish-urinishlari-himoya";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -193,6 +195,7 @@ export const aeoPosts: AeoPost[] = [
   p210,
   p211,
   p212,
+  p213,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
