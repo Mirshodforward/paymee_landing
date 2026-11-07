@@ -157,6 +157,8 @@ import { post as p208 } from "./posts/208-telegram-profil-balans-tugmasi-qr-kod"
 import { post as p209 } from "./posts/209-telegram-ai-bot-nomi-qoshimcha-tanlash";
 // 2026-11-07 (Avtoblogyoz): Gram hamyon kartasini bezash: NFT sovg‘ani hozir hamyonga chiqarish kerakmi?
 import { post as p210 } from "./posts/210-gram-hamyon-kartasi-nft-sovga-dizayn";
+// 2026-11-07 (Avtoblogyoz): Stars yechib oldim: gram.org eksplorerda Gram tushganini qanday ko‘raman?
+import { post as p211 } from "./posts/211-stars-yechish-gram-eksplorerda-tekshirish";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -187,6 +189,7 @@ export const aeoPosts: AeoPost[] = [
   p208,
   p209,
   p210,
+  p211,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
