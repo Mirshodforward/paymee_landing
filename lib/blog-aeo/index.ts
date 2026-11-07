@@ -155,6 +155,8 @@ import { post as p207 } from "./posts/207-nft-sovgani-blokcheynga-otkazish-fragm
 import { post as p208 } from "./posts/208-telegram-profil-balans-tugmasi-qr-kod";
 // 2026-11-06 (Avtoblogyoz): Telegram bot nomi «ai» bilan tugashi mumkinmi? AI bot uchun nom tanlash
 import { post as p209 } from "./posts/209-telegram-ai-bot-nomi-qoshimcha-tanlash";
+// 2026-11-07 (Avtoblogyoz): Gram hamyon kartasini bezash: NFT sovg‘ani hozir hamyonga chiqarish kerakmi?
+import { post as p210 } from "./posts/210-gram-hamyon-kartasi-nft-sovga-dizayn";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -184,6 +186,7 @@ export const aeoPosts: AeoPost[] = [
   p207,
   p208,
   p209,
+  p210,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
