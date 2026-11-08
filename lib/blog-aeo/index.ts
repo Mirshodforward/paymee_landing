@@ -165,6 +165,8 @@ import { post as p212 } from "./posts/212-telegram-money-bolimi-gram-wallet";
 import { post as p213 } from "./posts/213-888-akkauntga-kirish-urinishlari-himoya";
 // 2026-11-08 (Avtoblogyoz): Tug‘ilgan kunga Telegram sovg‘a: gift, NFT, Premium yoki Stars tanlash
 import { post as p214 } from "./posts/214-tugilgan-kunga-telegram-sovga-tanlash";
+// 2026-11-08 (Avtoblogyoz): NFT sovg‘a tarixini xariddan oldin qanday tekshirish mumkin?
+import { post as p215 } from "./posts/215-nft-sovga-tarixini-xariddan-oldin-tekshirish";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -199,6 +201,7 @@ export const aeoPosts: AeoPost[] = [
   p212,
   p213,
   p214,
+  p215,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
