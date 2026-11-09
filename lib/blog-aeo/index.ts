@@ -171,6 +171,8 @@ import { post as p215 } from "./posts/215-nft-sovga-tarixini-xariddan-oldin-teks
 import { post as p216 } from "./posts/216-durovga-telegram-sovga-yuborish";
 // 2026-11-09 (Avtoblogyoz): Telegram Desktop’da @wallet havolasi hamyon ochsa: Stars va Premium olinadimi?
 import { post as p217 } from "./posts/217-telegram-desktop-wallet-havolasi-ichki-hamyon";
+// 2026-11-09 (Avtoblogyoz): Tonnel Cash Out 80 foiz: kanal qoldig‘ini rasmiy yechishdan foydalimi?
+import { post as p218 } from "./posts/218-gram-earnings-qoldigi-tonnel-cash-out";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -208,6 +210,7 @@ export const aeoPosts: AeoPost[] = [
   p215,
   p216,
   p217,
+  p218,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
