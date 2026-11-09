@@ -169,6 +169,8 @@ import { post as p214 } from "./posts/214-tugilgan-kunga-telegram-sovga-tanlash"
 import { post as p215 } from "./posts/215-nft-sovga-tarixini-xariddan-oldin-tekshirish";
 // 2026-11-08 (Avtoblogyoz): Durovga sovg‘a yuborish mumkinmi: mashhur akkauntga gift qanday boradi
 import { post as p216 } from "./posts/216-durovga-telegram-sovga-yuborish";
+// 2026-11-09 (Avtoblogyoz): Telegram Desktop’da @wallet havolasi hamyon ochsa: Stars va Premium olinadimi?
+import { post as p217 } from "./posts/217-telegram-desktop-wallet-havolasi-ichki-hamyon";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -205,6 +207,7 @@ export const aeoPosts: AeoPost[] = [
   p214,
   p215,
   p216,
+  p217,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
