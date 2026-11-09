@@ -175,6 +175,8 @@ import { post as p217 } from "./posts/217-telegram-desktop-wallet-havolasi-ichki
 import { post as p218 } from "./posts/218-gram-earnings-qoldigi-tonnel-cash-out";
 // 2026-11-09 (Avtoblogyoz): Stars bilan Telegram reytingi qanday oshadi: to‘ldirish, Premium va refund
 import { post as p219 } from "./posts/219-telegram-reyting-stars-sarfi-hisoblash";
+// 2026-11-09 (Avtoblogyoz): Walt Telegram Stars: @wallet o‘rniga Stars va Premium’ni so‘mda qanday olish
+import { post as p220 } from "./posts/220-walt-wallet-stars-premium-xaridi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -214,6 +216,7 @@ export const aeoPosts: AeoPost[] = [
   p217,
   p218,
   p219,
+  p220,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
