@@ -177,6 +177,8 @@ import { post as p218 } from "./posts/218-gram-earnings-qoldigi-tonnel-cash-out"
 import { post as p219 } from "./posts/219-telegram-reyting-stars-sarfi-hisoblash";
 // 2026-11-09 (Avtoblogyoz): Walt Telegram Stars: @wallet o‘rniga Stars va Premium’ni so‘mda qanday olish
 import { post as p220 } from "./posts/220-walt-wallet-stars-premium-xaridi";
+// 2026-11-11 (Avtoblogyoz): Getgems muqobili: NFT sovg‘ani VPN’siz, so‘mda qaysi bozordan olsa bo‘ladi?
+import { post as p221 } from "./posts/221-getgems-muqobili-nft-sovga-bozori";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -217,6 +219,7 @@ export const aeoPosts: AeoPost[] = [
   p218,
   p219,
   p220,
+  p221,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
