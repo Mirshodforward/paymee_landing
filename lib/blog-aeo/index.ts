@@ -183,6 +183,8 @@ import { post as p221 } from "./posts/221-getgems-muqobili-nft-sovga-bozori";
 import { post as p222 } from "./posts/222-fragment-hamyon-ulanishi-stars-xavfi";
 // 2026-11-12 (Avtoblogyoz): .tg domenga pul tikish arziydimi: qayta sotib foyda qilsa bo‘ladimi?
 import { post as p223 } from "./posts/223-tg-domen-investitsiya-arziydimi";
+// 2026-11-12 (Avtoblogyoz): macOS Telegram hamyonidagi Gram bilan Stars olaymi yoki so‘mda olgan qulaymi?
+import { post as p224 } from "./posts/224-macos-telegram-hamyoni-stars-gram-yoki-som";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -226,6 +228,7 @@ export const aeoPosts: AeoPost[] = [
   p221,
   p222,
   p223,
+  p224,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
