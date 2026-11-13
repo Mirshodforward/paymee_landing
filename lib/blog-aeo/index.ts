@@ -189,6 +189,8 @@ import { post as p224 } from "./posts/224-macos-telegram-hamyoni-stars-gram-yoki
 import { post as p225 } from "./posts/225-hamyonni-telegram-akkauntga-boglash-username";
 // 2026-11-12 (Avtoblogyoz): Gram hamyon zaxira so‘zlari: kalitni kim saqlaydi va yo‘qolsa nima bo‘ladi?
 import { post as p226 } from "./posts/226-non-custodial-gram-hamyon-zaxira-sozlari";
+// 2026-11-13 (Avtoblogyoz): Qora fonli NFT sovg‘a: Black fonni topish, narxini baholash va so‘mda olish
+import { post as p227 } from "./posts/227-qora-fonli-nft-sovga-topish-olish";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -235,6 +237,7 @@ export const aeoPosts: AeoPost[] = [
   p224,
   p225,
   p226,
+  p227,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
