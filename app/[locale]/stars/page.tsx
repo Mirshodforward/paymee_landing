@@ -6,7 +6,8 @@ import { buildLandingMetadata } from "@/lib/landing-metadata";
 type Props = { params: Promise<{ locale: string }> };
 
 /** Bosh sahifa bilan bir xil: 15 daqiqada bir qayta quriladi. */
-export const revalidate = 900;
+// 6 soat (2026-11-14): Vercel ISR yozish limiti — 15 daqiqa juda tez-tez edi
+export const revalidate = 21600;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

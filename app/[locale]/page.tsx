@@ -46,7 +46,8 @@ type PageProps = { params: Promise<{ locale: string }> };
  * qayta generatsiya qilinadi: 15 daqiqada bir marta yangi raqam olinadi,
  * qolgan vaqtda statik HTML beriladi. Deploy qilish shart emas.
  */
-export const revalidate = 900;
+// 6 soat (2026-11-14): 15 daqiqa Vercel bepul ISR yozish limitini (200K/oy) oshirib yubordi; narx/statistika kam o'zgaradi
+export const revalidate = 21600;
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;

@@ -42,7 +42,9 @@ export type LandingStats = {
 const API_BASE = (process.env.STATS_API_URL || PUBLIC_API_BASE).replace(/\/+$/, "");
 
 /** Next keshi: 15 daqiqa. Backend o'zi ham 10 daqiqa keshlaydi. */
-const REVALIDATE_SECONDS = 900;
+// 6 soat (2026-11-14): sahifa ISR muddati shu fetch'ning eng qisqasiga teng bo'ladi — 15 daqiqa
+// Vercel bepul ISR yozish limitini oshirib yubordi.
+const REVALIDATE_SECONDS = 21_600;
 
 /** Backend sekinlashsa, build yoki sahifa render'i muddatsiz kutib turmasin. */
 const TIMEOUT_MS = 4000;

@@ -19,7 +19,8 @@ import { blogUrl, formatLlmsLine } from "@/lib/seo/blog-discoverability";
 import { getLandingStats } from "@/lib/live-stats";
 
 export const dynamic = "force-static";
-export const revalidate = 3600;
+// 1 kun (2026-11-14): Vercel ISR yozish limiti
+export const revalidate = 86400;
 
 /** 11000 → «11 000» (so'm summasi, bo'sh joy bilan). */
 function uzs(n: number): string {

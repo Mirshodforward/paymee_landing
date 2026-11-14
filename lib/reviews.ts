@@ -72,7 +72,8 @@ export const REVIEWS_TAG = "reviews";
  * webhook 401 qaytaradi va AYNAN shu muddat yagona yangilanish yo'li. Shuning
  * uchun 1 soat. Sir sozlangach buni bemalol uzaytirish mumkin.
  */
-export const REVALIDATE_SECONDS = 3_600; // 1 soat
+// 6 soat (2026-11-14): Vercel ISR yozish limiti. Yangi sharh tasdiqlansa webhook (`/api/revalidate`) tegni o'zi eskirtiradi.
+export const REVALIDATE_SECONDS = 21_600; // 6 soat
 /** Backend'dan so'raladigan matnli sharhlar soni (tilga bo'linishidan oldin). */
 const FETCH_LIMIT = 300;
 /** Shundan kam baho bilan AggregateRating schema chiqarilmaydi — 1 ta 5.0 hech narsani anglatmaydi. */

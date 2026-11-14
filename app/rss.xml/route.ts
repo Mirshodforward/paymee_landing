@@ -7,7 +7,8 @@ import { getSiteUrl, siteConfig } from "@/lib/site";
  * AEO/qidiruv va kontent-agregatorlar uchun qo‘shimcha kanal.
  */
 export const dynamic = "force-static";
-export const revalidate = 3600;
+// 1 kun (2026-11-14): Vercel ISR yozish limiti
+export const revalidate = 86400;
 
 const LOCALE = "uz";
 /** Barcha bloglar RSSda (AI agregatorlar uchun to‘liq ro‘yxat). */

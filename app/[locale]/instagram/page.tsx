@@ -41,7 +41,8 @@ import { botDeepLink, type DeepLinkPlacement } from "@/lib/telegram-deeplink";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export const revalidate = 3600;
+// 6 soat (2026-11-14): Vercel ISR yozish limiti
+export const revalidate = 21600;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
