@@ -197,6 +197,8 @@ import { post as p228 } from "./posts/228-bag-stars-bilan-sotilgan-nft-sovga";
 import { post as p229 } from "./posts/229-nft-sovgani-dostga-otkazish-tartibi";
 // 2026-11-14 (Avtoblogyoz): ton.org Telegram mahsulotlari: qaysi biriga TON hamyon kerak?
 import { post as p230 } from "./posts/230-ton-org-telegram-mahsulotlari-hamyon-kerakmi";
+// 2026-11-14 (Avtoblogyoz): Spam NFT sovg‘alarimga xavflimi: hamyondagi gift, Stars va Premium
+import { post as p231 } from "./posts/231-spam-nft-hamyonda-telegram-sovga-xavfi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -247,6 +249,7 @@ export const aeoPosts: AeoPost[] = [
   p228,
   p229,
   p230,
+  p231,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
