@@ -195,6 +195,8 @@ import { post as p227 } from "./posts/227-qora-fonli-nft-sovga-topish-olish";
 import { post as p228 } from "./posts/228-bag-stars-bilan-sotilgan-nft-sovga";
 // 2026-11-13 (Avtoblogyoz): NFT sovg‘ani do‘stga o‘tkazish: tartib, Stars narxi va oluvchiga nima kerak
 import { post as p229 } from "./posts/229-nft-sovgani-dostga-otkazish-tartibi";
+// 2026-11-14 (Avtoblogyoz): ton.org Telegram mahsulotlari: qaysi biriga TON hamyon kerak?
+import { post as p230 } from "./posts/230-ton-org-telegram-mahsulotlari-hamyon-kerakmi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -244,6 +246,7 @@ export const aeoPosts: AeoPost[] = [
   p227,
   p228,
   p229,
+  p230,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
