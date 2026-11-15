@@ -201,6 +201,8 @@ import { post as p230 } from "./posts/230-ton-org-telegram-mahsulotlari-hamyon-k
 import { post as p231 } from "./posts/231-spam-nft-hamyonda-telegram-sovga-xavfi";
 // 2026-11-14 (Avtoblogyoz): Plush Pepe narxi oshadimi: «kit qaytdi» postidan keyin hozir olish kerakmi?
 import { post as p232 } from "./posts/232-plush-pepe-kit-xaridi-narx-oshadimi";
+// 2026-11-15 (Avtoblogyoz): Fragment’dagi «Telegram Messenger» hamyoni: Stars uchun qaysini tanlaysiz?
+import { post as p233 } from "./posts/233-fragment-telegram-messenger-hamyon-stars-xaridi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -253,6 +255,7 @@ export const aeoPosts: AeoPost[] = [
   p230,
   p231,
   p232,
+  p233,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
