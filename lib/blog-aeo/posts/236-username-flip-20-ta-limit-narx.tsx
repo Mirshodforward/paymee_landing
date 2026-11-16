@@ -9,7 +9,7 @@ const SLUG = "username-flip-20-ta-limit-narx";
  * Username flip qilish: «endi 20 ta» limiti rostmi va nom narxini oshiradimi?
  *
  * Avtoblogyoz yasagan maqola (2026-11-16): kanal postidan yoki g'oyadan, faktlar rasmiy manbalardan.
- * Niyat: Fragment’dan kolleksion username’larni qayta sotish uchun yig‘ayotgan foydalanuvchi «@villageton» kanalidagi «endi 20 ta» postini ko‘rgach, «username flip qilish 20 ta limit» deb qidiradi. U limit rasman oshganini, bitta akkauntda nechta nomni faol saqlay olishini va bu o‘zgarish username narxini ko‘tarish-ko‘tarmasligini bilmoqchi.
+ * Niyat: Fragment’dan kolleksion username’larni qayta sotish uchun yig‘ayotgan foydalanuvchi Telegram kanallaridagi «endi 20 ta» postini ko‘rgach, «username flip qilish 20 ta limit» deb qidiradi. U limit rasman oshganini, bitta akkauntda nechta nomni faol saqlay olishini va bu o‘zgarish username narxini ko‘tarish-ko‘tarmasligini bilmoqchi.
  *
  * FAKTLAR TEKSHIRILGAN (2026-11-16):
  *   https://core.telegram.org/api/fragment
@@ -49,7 +49,7 @@ function UzBody() {
         ]}
       />
       <h2 id="endi-20-ta-posti-nimani">«Endi 20 ta» posti nimani da’vo qiladi?</h2>
-      <p>@villageton kanalidagi postda endi profil yoki kanalga 20 tagacha username ulash mumkinligi, oldin esa limit 10 ta bo‘lgani aytilgan. Fragment’dan nom yig‘ib, keyin qayta sotadigan odam buni «bozor kengaydi, nomlarga talab oshadi» degan ishora deb tushunishi mumkin.</p>
+      <p>Telegram kanallarida tarqalgan postda endi profil yoki kanalga 20 tagacha username ulash mumkinligi, oldin esa limit 10 ta bo‘lgani aytilgan. Fragment’dan nom yig‘ib, keyin qayta sotadigan odam buni «bozor kengaydi, nomlarga talab oshadi» degan ishora deb tushunishi mumkin.</p>
       <p>Biroq bu oddiy kanal posti. Limit 10 dan 20 ga oshirilgani haqida rasmiy manbalarda e’lon topilmadi.</p>
       <p>10 va 20 raqamlari Telegram hujjatlarida haqiqatan bor, faqat boshqa ma’noda. <a href={"https://core.telegram.org/api/config"} target="_blank" rel="noopener noreferrer">Client configuration</a> sahifasida bu bir foydalanuvchi yarata oladigan ochiq kanal va superguruhlarning eng ko‘p soni: Premium’siz akkauntda 10 ta, Premium’da 20 ta. Post shu ikki raqamni olib, ularni username limiti deb ko‘rsatgan.</p>
       <p>Flipper uchun amaliy xulosa: shu postga ishonib portfelga yangi nomlar qo‘shsangiz yoki e’lonlardagi narxni ko‘tarsangiz, tasdiqlanmagan xabarga pul tikkan bo‘lasiz.</p>
@@ -178,7 +178,7 @@ function RuBody() {
         ]}
       />
       <h2 id="endi-20-ta-posti-nimani">Что утверждает пост «теперь 20»?</h2>
-      <p>В посте канала @villageton говорится, что к профилю или каналу теперь можно привязать до 20 юзернеймов, а раньше лимит был 10. Тот, кто собирает имена на Fragment и потом перепродаёт их, может принять это за сигнал: рынок расширился, спрос на имена вырастет.</p>
+      <p>В посте, который разошёлся по Telegram-каналам, говорится, что к профилю или каналу теперь можно привязать до 20 юзернеймов, а раньше лимит был 10. Тот, кто собирает имена на Fragment и потом перепродаёт их, может принять это за сигнал: рынок расширился, спрос на имена вырастет.</p>
       <p>Но это обычный пост в канале. Официального объявления о том, что лимит подняли с 10 до 20, найти не удалось.</p>
       <p>Числа 10 и 20 в документации Telegram действительно есть, только смысл у них другой. На странице <a href={"https://core.telegram.org/api/config"} target="_blank" rel="noopener noreferrer">Client configuration</a> это максимальное число публичных каналов и супергрупп, которое может создать один пользователь: 10 без Premium и 20 с Premium. Пост взял эти два числа и выдал их за лимит юзернеймов.</p>
       <p>Практический вывод для флиппера: если вы из-за этого поста докупаете имена в портфель или поднимаете цену в объявлениях, вы ставите деньги на непроверенную новость.</p>
@@ -307,7 +307,7 @@ function EnBody() {
         ]}
       />
       <h2 id="endi-20-ta-posti-nimani">What does the “now 20” post claim?</h2>
-      <p>A post on the @villageton channel says you can now attach up to 20 usernames to a profile or channel, up from 10. If you collect names on Fragment and resell them, it’s easy to read that as “the market just got bigger, demand for names will rise.”</p>
+      <p>A post circulating in Telegram channels says you can now attach up to 20 usernames to a profile or channel, up from 10. If you collect names on Fragment and resell them, it’s easy to read that as “the market just got bigger, demand for names will rise.”</p>
       <p>But it’s an ordinary channel post. We couldn’t find any announcement in official sources about the limit going from 10 to 20.</p>
       <p>The numbers 10 and 20 are real. They just mean something else. On the <a href={"https://core.telegram.org/api/config"} target="_blank" rel="noopener noreferrer">Client configuration</a> page, they set the maximum number of public channels and supergroups one user can create. That’s 10 without Premium and 20 with Premium. The post took those two numbers and called them a username limit.</p>
       <p>What this means for a flipper: if you add names to your portfolio or raise your listing prices because of this post, you’re betting money on an unconfirmed claim.</p>

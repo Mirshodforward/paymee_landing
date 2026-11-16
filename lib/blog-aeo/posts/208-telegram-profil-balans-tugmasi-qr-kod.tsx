@@ -50,7 +50,7 @@ function UzBody() {
         ]}
       />
       <h2 id="balans-tugmasi-karta-va-qr">Balans tugmasi, karta va QR-kod: rasmiy manbada nima bor?</h2>
-      <p>Hech narsa yo‘q. Bu funksiyalar haqidagi xabar Telegram’ning test versiyalarini kuzatadigan TBetaLeak loyihasidan chiqqan va @villageton kanalida tarqalgan. Telegram blogida ham, dasturchilar uchun hujjatlarda ham profildagi balans tugmasi, foydalanuvchi kartasi va uning bezagi yoki shaxsiy QR-kodni sozlash haqida yozuv topilmadi.</p>
+      <p>Hech narsa yo‘q. Bu funksiyalar haqidagi xabar Telegram’ning test versiyalarini kuzatadigan kanallardan chiqqan va boshqa Telegram kanallarida tarqalgan. Telegram blogida ham, dasturchilar uchun hujjatlarda ham profildagi balans tugmasi, foydalanuvchi kartasi va uning bezagi yoki shaxsiy QR-kodni sozlash haqida yozuv topilmadi.</p>
       <p>Demak, ular haqida aytish mumkin bo‘lgan yagona gap — «beta kuzatuvchilari shunday deyapti». Tugma qanday ishlashi, kimga nimani ko‘rsatishi va qachon chiqishi bu maqolada tasdiqlanmagan.</p>
       <p>Beta — sinov bosqichi. U yerda ko‘ringan narsa barqaror ilovaga o‘zgarishsiz kelishi shart emas. Tugmaning nomi, joyi va vazifasi o‘zgarishi mumkin, funksiya umuman chiqmasligi ham mumkin.</p>
       <Notice label={"Muhim"}>Yangi tugmani tezroq ko‘rish uchun notanish saytdan «beta APK» yoki «mod» ilova yuklamang. Bunday fayllar orqali akkauntga kirish ma’lumotlari o‘g‘irlanishi mumkin. Rasmiy ilovani do‘kondan yangilab turish yetarli.</Notice>
@@ -189,7 +189,7 @@ function RuBody() {
         ]}
       />
       <h2 id="balans-tugmasi-karta-va-qr">Кнопка баланса, карточка и QR-код: что есть в официальных источниках?</h2>
-      <p>Ничего. Сообщение об этих функциях появилось в проекте TBetaLeak, который отслеживает тестовые версии Telegram, и разошлось через канал @villageton. Ни в блоге Telegram, ни в документации для разработчиков не нашлось упоминаний о кнопке баланса в профиле, карточке пользователя и её оформлении или о настройке личного QR-кода.</p>
+      <p>Ничего. Сообщение об этих функциях появилось в каналах, которые отслеживают тестовые версии Telegram, и разошлось по другим Telegram-каналам. Ни в блоге Telegram, ни в документации для разработчиков не нашлось упоминаний о кнопке баланса в профиле, карточке пользователя и её оформлении или о настройке личного QR-кода.</p>
       <p>Поэтому единственное, что о них можно сказать, — «так утверждают наблюдатели за бетой». Как работает кнопка, что и кому она показывает и когда выйдет, в этой статье не подтверждено.</p>
       <p>Бета — это этап тестирования. То, что там появилось, не обязательно попадёт в стабильную версию без изменений. Название, место и назначение кнопки могут поменяться, а функция может и вовсе не выйти.</p>
       <Notice label={"Важно"}>Не скачивайте «бета-APK» или «мод» с незнакомых сайтов, чтобы увидеть новую кнопку раньше других. Через такие файлы крадут данные для входа в аккаунт. Достаточно вовремя обновлять официальное приложение из магазина.</Notice>
@@ -328,7 +328,7 @@ function EnBody() {
         ]}
       />
       <h2 id="balans-tugmasi-karta-va-qr">Balance button, card and QR code: what do official sources say?</h2>
-      <p>Nothing. The reports come from TBetaLeak, a project that follows Telegram’s test builds, and spread through the @villageton channel. Neither the Telegram blog nor the developer documentation mentions a profile balance button, a user card or its decoration, or personal QR code customization.</p>
+      <p>Nothing. The reports come from channels that follow Telegram’s test builds and spread through other Telegram channels. Neither the Telegram blog nor the developer documentation mentions a profile balance button, a user card or its decoration, or personal QR code customization.</p>
       <p>So the only accurate statement is “beta watchers say so.” How the button would work, what it would show and to whom, and when it might ship are not confirmed in this article.</p>
       <p>A beta is a testing stage. Things seen there don’t have to reach the stable app unchanged. The button’s name, location and purpose may change, and the feature may never ship at all.</p>
       <Notice label={"Important"}>Don’t download a “beta APK” or a “modded” app from an unknown site just to see the new button sooner. Files like these can be used to steal your login details. Updating the official app from the store is enough.</Notice>
