@@ -17,6 +17,12 @@ import { blogHreflangAlternates } from "@/lib/hreflang-alternates";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+/**
+ * Sahifa o'z openGraph'ini bersa, layout'dagi og:image meros bo'lmaydi (Next.js metadata
+ * ustma-ust yoziladi) — Telegram/ijtimoiy tarmoqda havola rasmsiz chiqardi. Sayt rasmi.
+ */
+const OG_IMAGES = [{ url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name }];
+
 /** Statik prerender — maqola tarkibi so‘rovga bog‘liq emas, CDN keshlay oladi. */
 export const dynamic = "force-static";
 /**
@@ -69,6 +75,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `${c.title} — ${siteConfig.name}`,
         description: c.metaDescription,
         url: `${siteUrl}/${locale}/blog/${slug}`,
+        images: OG_IMAGES,
       },
     };
   }
@@ -102,6 +109,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${ui.title} — ${siteConfig.name}`,
       description: ui.excerpt,
       url: `${siteUrl}/${locale}/blog/${slug}`,
+      images: OG_IMAGES,
     },
   };
 }

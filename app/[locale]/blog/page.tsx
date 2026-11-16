@@ -41,6 +41,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: desc,
       url: `${siteUrl}/${locale}/blog`,
       locale: tSeo("ogLocale"),
+      // O'z openGraph'i bo'lgani uchun layout'dagi rasm meros bo'lmaydi — aniq beriladi
+      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name }],
     },
   };
 }
