@@ -203,6 +203,8 @@ import { post as p231 } from "./posts/231-spam-nft-hamyonda-telegram-sovga-xavfi
 import { post as p232 } from "./posts/232-plush-pepe-kit-xaridi-narx-oshadimi";
 // 2026-11-15 (Avtoblogyoz): Fragment’dagi «Telegram Messenger» hamyoni: Stars uchun qaysini tanlaysiz?
 import { post as p233 } from "./posts/233-fragment-telegram-messenger-hamyon-stars-xaridi";
+// 2026-11-16 (Avtoblogyoz): Sotuvdan yashirilgan Telegram sovg‘ani sotib olsa bo‘ladimi: o‘rniga nima?
+import { post as p234 } from "./posts/234-yashirilgan-telegram-sovgani-sotib-olish";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -256,6 +258,7 @@ export const aeoPosts: AeoPost[] = [
   p231,
   p232,
   p233,
+  p234,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
