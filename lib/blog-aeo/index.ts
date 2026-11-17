@@ -209,6 +209,8 @@ import { post as p234 } from "./posts/234-yashirilgan-telegram-sovgani-sotib-oli
 import { post as p235 } from "./posts/235-888-raqam-narxi-fragment-floor-tushadimi";
 // 2026-11-16 (Avtoblogyoz): Username flip qilish: «endi 20 ta» limiti rostmi va nom narxini oshiradimi?
 import { post as p236 } from "./posts/236-username-flip-20-ta-limit-narx";
+// 2026-11-17 (Avtoblogyoz): «Durov qidiruvda» xabari: Stars balansi va Premium’ni saqlaymi yoki sarflaymi?
+import { post as p237 } from "./posts/237-durov-qidiruv-stars-balansi-premium";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -265,6 +267,7 @@ export const aeoPosts: AeoPost[] = [
   p234,
   p235,
   p236,
+  p237,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
