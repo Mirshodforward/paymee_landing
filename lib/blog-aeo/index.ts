@@ -213,6 +213,8 @@ import { post as p236 } from "./posts/236-username-flip-20-ta-limit-narx";
 import { post as p237 } from "./posts/237-durov-qidiruv-stars-balansi-premium";
 // 2026-11-17 (Avtoblogyoz): Guruhga spam akkauntlar kirishini to‘xtatish: AI qo‘riqchimi yoki Stars?
 import { post as p238 } from "./posts/238-guruhga-spam-akkauntlar-kirishini-toxtatish";
+// 2026-11-18 (Avtoblogyoz): Telegram Rich Messages nima: boy xabar Telegraph o‘rnini bosadimi?
+import { post as p239 } from "./posts/239-telegram-rich-messages-boy-xabar-nima";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -271,6 +273,7 @@ export const aeoPosts: AeoPost[] = [
   p236,
   p237,
   p238,
+  p239,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
