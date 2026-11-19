@@ -219,6 +219,8 @@ import { post as p239 } from "./posts/239-telegram-rich-messages-boy-xabar-nima"
 import { post as p240 } from "./posts/240-bot-rich-xabar-stars-tolov-katalog";
 // 2026-11-18 (Avtoblogyoz): Telegram bot bloklanishi: «faqat Stars» qoidasi va endi qanday to‘lanadi?
 import { post as p241 } from "./posts/241-telegram-bot-bloklanishi-stars-qoidasi";
+// 2026-11-19 (Avtoblogyoz): Gram Wallet chiqdi: Stars va Premium uchun MyTonWallet’dan ko‘chish kerakmi?
+import { post as p242 } from "./posts/242-gram-wallet-mytonwallet-stars-premium-xaridi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -280,6 +282,7 @@ export const aeoPosts: AeoPost[] = [
   p239,
   p240,
   p241,
+  p242,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
