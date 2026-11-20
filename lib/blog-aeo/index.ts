@@ -223,6 +223,8 @@ import { post as p241 } from "./posts/241-telegram-bot-bloklanishi-stars-qoidasi
 import { post as p242 } from "./posts/242-gram-wallet-mytonwallet-stars-premium-xaridi";
 // 2026-11-19 (Avtoblogyoz): Fragment’da stablecoin to‘lov: Stars va Premium uchun kutish kerakmi?
 import { post as p243 } from "./posts/243-fragment-stablecoin-tolov-stars-kutish-kerakmi";
+// 2026-11-20 (Avtoblogyoz): Telegram reklamasidagi do‘kon aldadi: pulni qaytarsa bo‘ladimi?
+import { post as p244 } from "./posts/244-telegram-reklama-dokoni-aldasa-pul-qaytarish";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -286,6 +288,7 @@ export const aeoPosts: AeoPost[] = [
   p241,
   p242,
   p243,
+  p244,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
