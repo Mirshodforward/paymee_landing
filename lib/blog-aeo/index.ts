@@ -229,6 +229,8 @@ import { post as p244 } from "./posts/244-telegram-reklama-dokoni-aldasa-pul-qay
 import { post as p245 } from "./posts/245-bot-html-vidjet-stars-tolov-dokon";
 // 2026-11-20 (Avtoblogyoz): Telegram Desktop orqali story qo‘yish: kanal admini hozir nima qila oladi
 import { post as p246 } from "./posts/246-telegram-desktop-kanalga-story-qoyish";
+// 2026-11-22 (Avtoblogyoz): Telegram kanalga sovg‘a yuborish: tugma qayerda, ismni yashirish va upgrade
+import { post as p247 } from "./posts/247-telegram-kanalga-sovga-yuborish";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -295,6 +297,7 @@ export const aeoPosts: AeoPost[] = [
   p244,
   p245,
   p246,
+  p247,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
