@@ -233,6 +233,8 @@ import { post as p246 } from "./posts/246-telegram-desktop-kanalga-story-qoyish"
 import { post as p247 } from "./posts/247-bot-mini-ilova-stars-obuna-biznes-model";
 // 2026-11-23 (Avtoblogyoz): Biznes uchun Telegram Stars ko‘p miqdorda: byudjetdan hisobotgacha
 import { post as p248 } from "./posts/248-biznes-uchun-stars-kop-miqdorda-tarqatish";
+// 2026-11-24 (Avtoblogyoz): Telegram kanalda direct messages: qanday yoqiladi va xabarga qancha Stars?
+import { post as p249 } from "./posts/249-kanal-direct-messages-stars-narxi";
 // Gift marketlar nomidan yozadigan soxta akkauntlar (Telegram ogohlantirishi)
 
 /** Barcha AEO-optimized maqolalar (sana bo‘yicha yangidan eskiga). */
@@ -301,6 +303,7 @@ export const aeoPosts: AeoPost[] = [
   p246,
   p247,
   p248,
+  p249,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 
 const bySlug = new Map(aeoPosts.map((p) => [p.slug, p]));
