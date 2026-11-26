@@ -7,6 +7,12 @@ import { GEMPAY_URL } from "./lib/site";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  // O'z serverimizda (nginx + pm2) ishlaydi: build natijasi .next/standalone — o'zi ishlaydigan server
+  output: "standalone",
+  // Sahifa keshi RAM'da emas, diskda (.next/server): jarayon xotirasi o'smaydi
+  cacheMaxMemorySize: 0,
+  // gzip nginx'da
+  compress: false,
   // Rasm optimizatsiyasi: AVIF/WebP (kichikroq hajm), uzoq muddatli kesh.
   images: {
     formats: ["image/avif", "image/webp"],
