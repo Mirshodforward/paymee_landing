@@ -33,9 +33,6 @@
 
 import { getTelegramBotUrl } from "@/lib/site";
 
-/** Mini App qisqa nomi — bot backend'idagi TELEGRAM_MINI_APP_REFERRAL_BASE bilan bir xil. */
-const MINI_APP_SHORT_NAME = "starspaymee";
-
 /** Payloadda bo'sh qismni belgilash uchun. */
 const EMPTY = "0";
 
@@ -113,7 +110,7 @@ export function deepLinkSource(page: DeepLinkPage, placement: DeepLinkPlacement)
   return `w_${page}_${placement}`;
 }
 
-/** `startapp` payloadini yig'adi. */
+/** Havola payloadini yig'adi (bot `/start` va eski Mini App `startapp` uchun bir xil format). */
 export function buildStartPayload(options: DeepLinkOptions): string {
   const product = encodeProduct(options.product);
   const recipient = options.recipient ? sanitize(options.recipient.replace(/^@/, "")) : "";
@@ -129,14 +126,17 @@ export function buildStartPayload(options: DeepLinkOptions): string {
 }
 
 /**
- * Mini App deep-link'i.
+ * Bot deep-link'i: `t.me/<bot>?start=<payload>`.
  *
- * Nega `t.me/<bot>` emas, `t.me/<bot>/<app>`: birinchisi shunchaki chat
- * ochadi va odam bo'limni qaytadan qidiradi; ikkinchisi kerakli ekranni
- * to'ldirilgan holda ochadi. Har ikkalasi ham `start_param` ni uzatadi.
+ * 2026-11-27 gacha `t.me/<bot>/starspaymee?startapp=…` (Mini App) edi. Do'kon
+ * endi faqat saytda (bot Mini App ko'rsatmaydi) va 2026-11-19 dan Telegram bu
+ * havolada Mini App'ni ochmay qo'ydi — bosganlar botga payloadsiz tushib,
+ * manba ham, tanlangan mahsulot ham yo'qolardi. `?start=` da Telegram payloadni
+ * `/start` bilan botga uzatadi: bot manbani yozadi (yangi mijoz) va mahsulot
+ * havolasida (s50, p3, g<slug>) saytdagi o'sha sahifaga kirish havolasini beradi.
  */
 export function botDeepLink(options: DeepLinkOptions): string {
   const base = getTelegramBotUrl();
   const payload = buildStartPayload(options);
-  return `${base}/${MINI_APP_SHORT_NAME}?startapp=${encodeURIComponent(payload)}`;
+  return `${base}?start=${encodeURIComponent(payload)}`;
 }
